@@ -24,6 +24,8 @@ const usersSchema = new mongoose.Schema({
     required: true,
     minlength: 8,
   },
+  following: [{ type: mongoose.Schema.Types.ObjectId, ref: "User" }],
+  followers: [{ type: mongoose.Schema.Types.ObjectId, ref: "User" }],
 });
 
 usersSchema.pre("save", async function (next) {
