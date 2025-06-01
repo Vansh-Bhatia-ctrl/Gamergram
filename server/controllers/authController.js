@@ -1,5 +1,7 @@
 const User = require("../models/users");
 const bcrypt = require("bcrypt");
+const jwt = require("jsonwebtoken");
+require("dotenv").config();
 
 const signup = async (req, res) => {
   try {
@@ -36,15 +38,31 @@ const login = async (req, res) => {
         .json({ message: "Incorrect password. Please try again." });
     }
 
-    res.status(200).json({
-      message: "Logged-in successfully",
-      user: {
-        id: existingUser._id,
-        firstName: existingUser.firstName,
-        lastName: existingUser.lastName,
-        userName: existingUser.userName,
-      },
-    });
+    const payload = {
+      id: existingUser._id,
+      firstName: existingUser.firstName,
+      lastName: existingUser.lastName,
+      userName: existingUser.userName,
+    };
+
+    jwt.sign(
+      payload,
+      process.env.JWT_SECRET,
+      { expiresIn: "1h" },
+      (err, token) => {
+        if (err) throw err;
+        res.status(200).json({
+          message: "Logged-in successfully",
+          token,
+          user: {
+            id: existingUser._id,
+            firstName: existingUser.firstName,
+            lastName: existingUser.lastName,
+            userName: existingUser.userName,
+          },
+        });
+      }
+    );
   } catch (error) {
     res.status(500).json({
       message: "Error logging in, please try again.",
