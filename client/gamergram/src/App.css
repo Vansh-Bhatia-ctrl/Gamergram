@@ -1,11 +1,19 @@
 @import "tailwindcss";
 
 @theme {
-  --color-customblue-100: #0b2e92;
-  --color-customblack-100: #000000;
-  --color-customwhite-100: #ffffff;
-  --color-customgray-100: #282828;
-  --color-customgray-200: #202020;
+  --color-custompurple-100:#070910; 
+  --color-customblue-100:#0A101B;
+  --color-customgreen-100:#00f5c0;
+  --color-customgray-100:#1A3C5E;
+  --color-customgray-200:#0A1A2F;
+  --color-customgreen-200:#34C759;
+  --color-customgreen-300:#2CA94C;
+  
+}
+
+
+.orbitron {
+  font-family: 'Orbitron', sans-serif;
 }
 
 
