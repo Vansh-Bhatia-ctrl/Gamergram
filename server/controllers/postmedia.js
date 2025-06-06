@@ -1,6 +1,8 @@
+require("dotenv").config();
+
 const Post = require("../models/posts");
 const streamifier = require("streamifier");
-const cloudinary = require("cloudinary").v2;
+const cloudinary = require("../config/cloudinary");
 
 const postToCloudinary = async (req, res) => {
   try {
@@ -40,7 +42,7 @@ const postToCloudinary = async (req, res) => {
       publicId: result.public_id,
       mediaType: mediaType,
       caption: req.body.caption,
-      postedBy: req.user.id,
+      userId: req.user.id,
       createdAt: new Date(),
     });
 
@@ -48,9 +50,12 @@ const postToCloudinary = async (req, res) => {
 
     res.status(200).json({ message: "Post uploaded successfully." });
   } catch (error) {
-    res
-      .status(500)
-      .json({ message: "Something went wrong, please try again." });
+    console.log("error: ", error.message);
+    console.log("API_KEY: ", process.env.CLOUDINARY_API_KEY);
+    res.status(500).json({
+      message: "Something went wrong, please try again.",
+      error: error.message,
+    });
   }
 };
 
