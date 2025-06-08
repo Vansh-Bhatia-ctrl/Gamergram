@@ -8,12 +8,23 @@
   --color-customgray-200:#0A1A2F;
   --color-customgreen-200:#34C759;
   --color-customgreen-300:#2CA94C;
+  --color-customgreen-400:#23903F;
+  --color-customgreen-500:#1F7F37
   
 }
 
 
 .orbitron {
   font-family: 'Orbitron', sans-serif;
+}
+
+@media (min-width: 370px) and (max-width: 639px) {
+  .center-auth-fields {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 
