@@ -1,9 +1,9 @@
 const User = require("../models/users");
 
 const validateUserSignUp = async (req, res, next) => {
-  const { firstName, lastName, email, password, userName } = req.body;
+  const { Name, email, password, userName } = req.body;
 
-  if (!firstName || !lastName || !email || !password || !userName) {
+  if (!Name || !email || !password || !userName) {
     return res.status(400).json({ message: "Required fields are empty" });
   }
 

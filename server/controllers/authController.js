@@ -5,9 +5,9 @@ require("dotenv").config();
 
 const signup = async (req, res) => {
   try {
-    const { firstName, lastName, email, password, userName } = req.body;
+    const { Name, email, password, userName } = req.body;
 
-    const user = new User({ firstName, lastName, email, password, userName });
+    const user = new User({ Name, email, password, userName });
     await user.save();
     res.status(201).json({ message: "User registered successfully" });
   } catch (error) {
@@ -40,8 +40,7 @@ const login = async (req, res) => {
 
     const payload = {
       id: existingUser._id,
-      firstName: existingUser.firstName,
-      lastName: existingUser.lastName,
+      Name: existingUser.Name,
       userName: existingUser.userName,
     };
 
@@ -56,8 +55,7 @@ const login = async (req, res) => {
           token,
           user: {
             id: existingUser._id,
-            firstName: existingUser.firstName,
-            lastName: existingUser.lastName,
+            Name: existingUser.Name,
             userName: existingUser.userName,
           },
         });
