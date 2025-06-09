@@ -8,6 +8,8 @@ const upload = require("../middleware/mutlerConfig");
 const { postToCloudinary } = require("../controllers/postmedia");
 const { validiateComment } = require("../middleware/commentmiddleware");
 const { postCommentToDB } = require("../controllers/commentController");
+const { validateLikes } = require("../middleware/likesmiddleware");
+const { saveLikesToDB } = require("../controllers/likesController");
 
 router.post("/signup", validateUserSignUp, signup);
 router.post("/login", login);
@@ -20,5 +22,6 @@ router.post(
   postToCloudinary
 );
 router.post("/comments", validateAuth, validiateComment, postCommentToDB);
+router.post("/likes", validateAuth, validateLikes, saveLikesToDB);
 
 module.exports = router;
