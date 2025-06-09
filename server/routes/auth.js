@@ -6,6 +6,8 @@ const { validateAuth } = require("../middleware/followmiddleware");
 const { follow, unfollow } = require("../controllers/followunfollowController");
 const upload = require("../middleware/mutlerConfig");
 const { postToCloudinary } = require("../controllers/postmedia");
+const { validiateComment } = require("../middleware/commentmiddleware");
+const { postCommentToDB } = require("../controllers/commentController");
 
 router.post("/signup", validateUserSignUp, signup);
 router.post("/login", login);
@@ -17,5 +19,6 @@ router.post(
   upload.single("file"),
   postToCloudinary
 );
+router.post("/comments", validateAuth, validiateComment, postCommentToDB);
 
 module.exports = router;
