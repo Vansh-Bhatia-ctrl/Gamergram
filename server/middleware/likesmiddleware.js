@@ -2,14 +2,14 @@ const Post = require("../models/posts");
 
 const validateLikes = async (req, res, next) => {
   try {
-    const { postId } = req.body;
+    const { postID } = req.body;
     const userID = req.user?.id;
 
     if (!userID) {
       return res.status(401).json({ message: "User not authenticated." });
     }
 
-    const post = await Post.findById(postId);
+    const post = await Post.findById(postID);
 
     if (!post) {
       return res.status(404).json({ message: "Post not found" });

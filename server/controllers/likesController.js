@@ -2,10 +2,10 @@ const Post = require("../models/posts");
 
 const saveLikesToDB = async (req, res) => {
   try {
-    const { postId } = req.body;
+    const { postID } = req.body;
     const userID = req.user?.id;
 
-    const post = await Post.findById(postId);
+    const post = await Post.findById(postID);
 
     if (!userID) {
       return res.status(401).json({ message: "User not authenticated." });
