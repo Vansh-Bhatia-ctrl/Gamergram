@@ -1,21 +1,21 @@
 @import "tailwindcss";
 
 @theme {
-  --color-custompurple-100:#070910; 
-  --color-customblue-100:#0A101B;
-  --color-customgreen-100:#00f5c0;
-  --color-customgray-100:#1A3C5E;
-  --color-customgray-200:#0A1A2F;
-  --color-customgreen-200:#34C759;
-  --color-customgreen-300:#2CA94C;
-  --color-customgreen-400:#23903F;
-  --color-customgreen-500:#1F7F37
-  
+  --color-custompurple-100: #070910;
+  --color-customblue-100: #0a101b;
+  --color-customgreen-100: #00f5c0;
+  --color-customgray-100: #1a3c5e;
+  --color-customgray-200: #0a1a2f;
+  --color-customgreen-200: #34c759;
+  --color-customgreen-300: #2ca94c;
+  --color-customgreen-400: #23903f;
+  --color-customgreen-500: #1f7f37;
+  --color-customgray-300: #0e1620;
+  --color-customblue-200: #121824;
 }
 
-
 .orbitron {
-  font-family: 'Orbitron', sans-serif;
+  font-family: "Orbitron", sans-serif;
 }
 
 @media (min-width: 370px) and (max-width: 639px) {
@@ -26,5 +26,3 @@
     justify-content: center;
   }
 }
-
-

@@ -15,7 +15,7 @@ const HomePage = () => {
         <div className="flex justify-between items-center p-5">
           <div className="flex gap-2 items-center cursor-pointer">
             <Gamepad2 size={32} color="#00f5c0" className="" />
-            <h1 className="text-customgreen-100 orbitron text-lg font-semibold">
+            <h1 className="text-customgreen-100 orbitron text-xl font-semibold">
               Gamergram
             </h1>
           </div>
