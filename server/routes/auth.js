@@ -10,6 +10,7 @@ const { validiateComment } = require("../middleware/commentmiddleware");
 const { postCommentToDB } = require("../controllers/commentController");
 const { validateLikes } = require("../middleware/likesmiddleware");
 const { saveLikesToDB } = require("../controllers/likesController");
+const { getFeedPost } = require("../controllers/getFeedPosts");
 
 router.post("/signup", validateUserSignUp, signup);
 router.post("/login", login);
@@ -23,5 +24,6 @@ router.post(
 );
 router.post("/comments", validateAuth, validiateComment, postCommentToDB);
 router.post("/likes", validateAuth, validateLikes, saveLikesToDB);
+router.post("/feed", validateAuth, getFeedPost);
 
 module.exports = router;

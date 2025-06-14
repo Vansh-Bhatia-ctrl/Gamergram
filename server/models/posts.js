@@ -10,16 +10,6 @@ const postSchema = new mongoose.Schema(
     caption: { type: String, required: true },
     mediaURL: { type: String, required: true },
     mediaType: { type: String, enum: ["image", "video"] },
-    comments: [
-      {
-        userId: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
-        commentText: String,
-        timestamp: {
-          type: Date,
-          default: Date.now,
-        },
-      },
-    ],
     likes: [{ type: mongoose.Schema.Types.ObjectId, ref: "User" }],
   },
   { timestamps: true }
