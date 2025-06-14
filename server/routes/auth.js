@@ -24,6 +24,6 @@ router.post(
 );
 router.post("/comments", validateAuth, validiateComment, postCommentToDB);
 router.post("/likes", validateAuth, validateLikes, saveLikesToDB);
-router.post("/feed", validateAuth, getFeedPost);
+router.get("/feed", validateAuth, getFeedPost);
 
 module.exports = router;
