@@ -8,8 +8,34 @@ import {
 } from "lucide-react";
 import Stories from "../components/Stories";
 import MiniDiscussionPage from "../components/MiniDiscussionPage";
+import { useEffect } from "react";
+import { useState } from "react";
 
 const FeedPage = () => {
+  const [feedData, setFeedData] = useState([]);
+  useEffect(() => {
+    const getFeedPost = async () => {
+      try {
+        const token = localStorage.getItem("token");
+        const req = await fetch("http://localhost:3000/users/feed", {
+          method: "GET",
+          headers: { Authorization: `Bearer ${token}` },
+        });
+
+        const resp = await req.json();
+        console.log(resp);
+        setFeedData(resp);
+      } catch (error) {
+        console.log("Error loading feed.");
+        throw Error("Something went wrong please try later.");
+      }
+    };
+
+    getFeedPost();
+
+    return () => getFeedPost();
+  }, []);
+
   return (
     <>
       <div className="h-full w-full bg-gradient-to-b from-custompurple-100 to-customblue-100">
@@ -39,37 +65,57 @@ const FeedPage = () => {
             <p className="text-white text-[15px] orbitron">Kratos</p>
           </div>
 
-          <div className="w-full h-[470px] overflow-hidden">
-            <img src="/kratos.png" className="w-full h-full object-cover" />
-          </div>
-
-          <div className="flex gap-7 mt-3 ml-3">
-            <div className="flex items-center gap-[3px]">
-              <Heart size={28} color="#00f5c0" />
-              <p className="text-white text-[14px] font-semibold">120</p>
-            </div>
-            <div className="flex items-center gap-[3px]">
-              <MessageSquare size={28} color="#00f5c0" />
-              <p className="text-white text-[14px] font-semibold">120</p>
-            </div>
-            <div className="flex items-center gap-[3px]">
-              <Bookmark size={28} color="#00f5c0" />
-            </div>
-          </div>
-
-          <div className="mt-2 flex gap-2 ml-4">
-            <p className="text-white text-[15px] orbitron font-semibold">
-              Kratos
+          {feedData.length > 0 ? (
+            feedData.map((data, index) => (
+              <>
+                <div
+                  key={index}
+                  className="w-full flex justify-center items-center bg-black"
+                >
+                  <img
+                    src={data.mediaURL}
+                    alt="Post media"
+                    loading="lazy"
+                    className="w-full h-auto max-h-[600px] object-contain"
+                  />
+                </div>
+                <div className="flex gap-7 mt-3 ml-3">
+                  <div className="flex items-center gap-[3px]">
+                    <Heart size={28} color="#00f5c0" />
+                    <p className="text-white text-[14px] font-semibold">
+                      {data.likes.length}
+                    </p>
+                  </div>
+                  <div className="flex items-center gap-[3px]">
+                    <MessageSquare size={28} color="#00f5c0" />
+                    <p className="text-white text-[14px] font-semibold">
+                      {data.comments.length}
+                    </p>
+                  </div>
+                  <div className="flex items-center gap-[3px]">
+                    <Bookmark size={28} color="#00f5c0" />
+                  </div>
+                </div>
+                <div className="mt-2 flex gap-2 ml-4">
+                  <p className="text-white text-[15px] orbitron font-semibold">
+                    Kratos
+                  </p>
+                  <p className="text-white text-[15px]">{data.caption}</p>
+                </div>
+                <div className="ml-4">
+                  <p className="text-gray-600 text-[11px]">{data.createdAt}</p>
+                </div>{" "}
+              </>
+            ))
+          ) : (
+            <p className="text-white orbitron font-semibold">
+              Start following fellow gamers to see their posts.
             </p>
-            <p className="text-white text-[15px]">This is me.</p>
-          </div>
-          <div className="ml-4">
-            <p className="text-gray-600 text-[11px]">7th December 2025</p>
-          </div>
+          )}
         </div>
         <div className="flex overflow-hidden mt-4">
-        <MiniDiscussionPage />
-        <MiniDiscussionPage />
+          <MiniDiscussionPage />
+          <MiniDiscussionPage />
         </div>
       </div>
     </>

@@ -21,6 +21,11 @@ export default function LoginPage() {
 
       const resp = await req.json();
       console.log("Logged-in successfully", resp);
+      if(resp.token){
+        localStorage.setItem("token", resp.token);
+      }else{
+        console.log("Log-in failed. Please try again.")
+      }
     } catch (error) {
       throw Error("Error logging-in, please try again.", error.message);
     }
