@@ -33,7 +33,7 @@ export default function LoginPage() {
 
   return (
     <>
-      <div className="h-screen w-screen bg-gradient-to-b from-custompurple-100 to-customblue-100 flex justify-center items-center p-5">
+      <div className="h-screen w-screen bg-gradient-to-b from-custompurple-100 to-customblue-100 flex justify-center p-5">
         <div
           className="bg-transparent h-[480px] w-[400px] border-2 border-gray-900 
         rounded-2xl mt-[60px] flex flex-col p-8 gap-2 shadow-2xl center-auth-fields sm:flex sm:justify-center sm:items-center md:flex md:justify-center md:items-center lg:flex lg:justify-center lg:items-center"
