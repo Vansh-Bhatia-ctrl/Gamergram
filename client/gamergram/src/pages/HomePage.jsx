@@ -1,4 +1,5 @@
 import { Heart, MessageSquare, Gamepad2 } from "lucide-react";
+import { useEffect, useState } from "react";
 import { Typewriter } from "react-simple-typewriter";
 
 let images = [
@@ -10,60 +11,79 @@ let images = [
 ];
 
 const HomePage = () => {
+  const [iconSize, setIconSize] = useState(22);
+  useEffect(() => {
+    const adjustIconSize = () => {
+      if (window.innerWidth >= 640) {
+        setIconSize(30);
+      } else {
+        setIconSize(22);
+      }
+    };
+
+    adjustIconSize();
+
+    window.addEventListener("resize", adjustIconSize);
+
+    return () => window.removeEventListener("resize", adjustIconSize);
+  }, []);
   return (
     <>
       <div className="h-auto w-screen bg-gradient-to-b from-custompurple-100 to-customblue-100 flex flex-col justify-between">
         <div className="flex justify-between items-center p-5">
           <div className="flex gap-2 items-center cursor-pointer">
-            <Gamepad2 size={32} color="#00f5c0" className="" />
-            <h1 className="text-customgreen-100 orbitron text-xl font-semibold">
+            <Gamepad2 size={35} color="#00f5c0" className="" />
+            <h1 className="text-customgreen-100 orbitron text-xl font-semibold sm:text-2xl">
               Gamergram
             </h1>
           </div>
 
           <div className="flex gap-4 items-center">
-            <button className="bg-customgray-200 text-white text-sm orbitron p-2 h-auto w-auto rounded-lg hover:bg-customgreen-100 hover:text-custompurple-100 transition cursor-pointer">
+            <button className="bg-customgray-200 text-white text-sm orbitron p-2 h-auto w-auto rounded-lg hover:bg-customgreen-100 hover:text-custompurple-100 transition cursor-pointer sm:text-md">
               Sign up
             </button>
           </div>
         </div>
 
         <div className="flex-1">
-          <div className="p-7 flex flex-col gap-4 min-h-[120px]">
-            <div className="h-[230px]">
-            <h1 className="text-white text-5xl font-extrabold orbitron leading-tight h-[60px]">
-              <Typewriter
-                words={[
-                  "Connect with gamers.",
-                  "Create discussion rooms.",
-                  "Chat with iconic characters.",
-                  "Go live with your friends and game.",
-                ]}
-                loop={0}
-                cursor
-                cursorStyle=""
-                typeSpeed={50}
-                deleteSpeed={30}
-                delaySpeed={2000}
-              />
-            </h1>
+          {/*Typing animation and brief about the app*/}
+          <div className="p-7 flex flex-col gap-4 min-h-[120px] overflow-hidden">
+            <div className="h-[180px] sm:h-[140px] custom-box custom-box-2">
+              <h1 className="text-white text-5xl font-extrabold orbitron leading-tight h-[60px] sm:text-6xl">
+                <Typewriter
+                  words={[
+                    "Connect with gamers.",
+                    "Create discussion rooms.",
+                    "Chat with iconic characters.",
+                    "Go live with other gamers.",
+                  ]}
+                  loop={0}
+                  cursor
+                  cursorStyle=""
+                  typeSpeed={50}
+                  deleteSpeed={30}
+                  delaySpeed={2000}
+                />
+              </h1>
             </div>
-            <p className="text-gray-400 text-md">
+            <p className="text-gray-400 text-md sm:text-lg">
               Join the community and chat with fellow gamers
             </p>
           </div>
+
           <div className="p-7 -mt-[35px]">
             <button className="bg-customgreen-200 text-black font-semibold p-2 w-[130px] rounded-lg cursor-pointer hover:bg-customgreen-300">
               Get Started
             </button>
           </div>
 
+          {/*Stories for showcase purpose*/}
           <div className="p-7">
             {images.map((image, index) => (
               <div key={index} className="-mt-[10px] inline-block ml-2">
                 <img
                   src={image.src}
-                  className="border-2 border-customgreen-100 rounded-full w-[50px] h-[50px] object-contain"
+                  className="border-2 border-customgreen-100 rounded-full w-[50px] h-[50px] object-contain sm:w-[60px] sm:h-[60px]"
                 />
               </div>
             ))}
@@ -71,22 +91,26 @@ const HomePage = () => {
 
           <div className="p-x-5 flex gap-2 overflow-hidden">
             {/*Discussion room section*/}
-            <div className="p-3 bg-transparent border-[1px] border-gray-900 shadow-2xl w-[250px] h-auto rounded-xl ml-3">
+            <div className="p-3 bg-transparent border-[1px] border-gray-900 shadow-2xl w-[250px] h-auto rounded-xl ml-3 sm:w-[480px]">
               <div className="flex gap-1">
                 <div>
                   <img
                     src="gamer.png"
-                    className="rounded-full h-[40px] w-[40px] object-cover"
+                    className="rounded-full h-[40px] w-[40px] object-cover sm:h-[47px] sm:w-[47px]"
                   />
                 </div>
                 <div>
-                  <p className="text-white text-[13px] orbitron">Alex</p>
-                  <p className="text-gray-500 text-[12px] orbitron">2h</p>
+                  <p className="text-white text-[13px] orbitron sm:text-[15px]">
+                    Alex
+                  </p>
+                  <p className="text-gray-500 text-[12px] orbitron sm:text-[15px]">
+                    2h
+                  </p>
                 </div>
               </div>
               <div>
                 <div className="mt-2">
-                  <p className="text-white orbitron font-semibold text-[15px]">
+                  <p className="text-white orbitron font-semibold text-[15px] sm:text-[17px]">
                     What do you think of the new level in Elden Ring?
                   </p>
                 </div>
@@ -94,17 +118,21 @@ const HomePage = () => {
                   <div className="w-full mt-2">
                     <img
                       src="elden_ring.png"
-                      className="h-full max-h-[200px] w-[300px] object-cover rounded-xl"
+                      className="h-full max-h-[200px] w-[300px] object-cover rounded-xl sm:w-[460px] sm:min-h-[450px]"
                     />
                   </div>
                   <div className="flex gap-7 mt-2">
                     <div className="flex items-center gap-1">
-                      <Heart size={22} color="#00f5c0" />
-                      <p className="text-white orbitron text-[12px]">120</p>
+                      <Heart size={iconSize} color="#00f5c0" />
+                      <p className="text-white orbitron text-[12px] sm:text-[14px]">
+                        120
+                      </p>
                     </div>
                     <div className="flex items-center gap-1">
-                      <MessageSquare size={22} color="#00f5c0" />
-                      <p className="text-white orbitron text-[12px]">20</p>
+                      <MessageSquare size={iconSize} color="#00f5c0" />
+                      <p className="text-white orbitron text-[12px] sm:text-[14px]">
+                        20
+                      </p>
                     </div>
                   </div>
                 </div>

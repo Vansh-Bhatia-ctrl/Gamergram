@@ -27,3 +27,15 @@
     justify-content: center;
   }
 }
+
+@media (min-width: 640px) and (max-width: 642px) {
+  .custom-box {
+    height: 220px;
+  }
+}
+
+@media (min-width: 465px) and (max-width: 639px) {
+  .custom-box-2 {
+    height: 120px;
+  }
+}
