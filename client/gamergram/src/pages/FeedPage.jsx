@@ -120,8 +120,8 @@ const FeedPage = () => {
           <MiniDiscussionPage />
         </div>
 
-        {/*Comments Section*/}
-        {/* <CommentsSection /> */}
+    
+        <CommentsSection />
       </div>
     </>
   );
