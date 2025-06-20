@@ -3,9 +3,10 @@ import {
   Bell,
   MessageCircleMore,
   Heart,
-  MessageSquare,
+  MessageCircle,
   Bookmark,
 } from "lucide-react";
+import { motion } from "motion/react";
 import Stories from "../components/Stories";
 import MiniDiscussionPage from "../components/MiniDiscussionPage";
 import { useEffect } from "react";
@@ -14,6 +15,8 @@ import CommentsSection from "../components/CommentsSection";
 
 const FeedPage = () => {
   const [feedData, setFeedData] = useState([]);
+  const [selectedPost, setSelectedPost] = useState(null);
+
   useEffect(() => {
     const getFeedPost = async () => {
       try {
@@ -37,9 +40,38 @@ const FeedPage = () => {
     return () => getFeedPost();
   }, []);
 
+  const renderCommentSection = (index) => {
+    if (selectedPost === index) {
+      setSelectedPost(null);
+    } else {
+      setSelectedPost(index);
+    }
+  };
+
+  const likePost = async (postID) => {
+    const token = localStorage.getItem("token");
+    try {
+      await fetch("http://localhost:3000/users/likes", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+        body: JSON.stringify({
+          postID: postID,
+        }),
+      });
+
+      console.log("Post liked Successfully.");
+    } catch (error) {
+      console.log("Error loading feed.");
+      throw Error("Something went wrong please try later.");
+    }
+  };
+
   return (
     <>
-      <div className="h-full w-full bg-gradient-to-b from-custompurple-100 to-customblue-100">
+      <div className="h-full w-full bg-gradient-to-b from-custompurple-100 to-customblue-100 ">
         <div className="text-white">
           <div className="p-3 flex justify-between items-center">
             <div className="flex gap-2 items-center cursor-pointer">
@@ -79,13 +111,21 @@ const FeedPage = () => {
               </div>
               <div className="flex gap-7 mt-1 ml-1">
                 <div className="flex items-center gap-[3px]">
-                  <Heart size={28} color="#00f5c0" />
+                  <Heart
+                    size={28}
+                    color="#00f5c0"
+                    onClick={() => likePost(data._id)}
+                  />
                   <p className="text-white text-[14px] font-semibold">
                     {data.likes.length}
                   </p>
                 </div>
                 <div className="flex items-center gap-[3px]">
-                  <MessageSquare size={28} color="#00f5c0" />
+                  <MessageCircle
+                    size={28}
+                    color="#00f5c0"
+                    onClick={() => renderCommentSection(index)}
+                  />
                   <p className="text-white text-[14px] font-semibold">
                     {data.comments.length}
                   </p>
@@ -94,6 +134,23 @@ const FeedPage = () => {
                   <Bookmark size={28} color="#00f5c0" />
                 </div>
               </div>
+              {selectedPost === index && (
+                <div
+                  className="fixed inset-0 bg-opacity-60 z-40"
+                  onClick={() => setSelectedPost(null)}
+                >
+                  <motion.div
+                    initial={{ y: "100%" }}
+                    animate={{ y: 0 }}
+                    exit={{ y: "0%" }}
+                    transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                    className="fixed bottom-0 left-0 w-full h-[70%] bg-gradient-to-b from-customblue-200 to-custompurple-100 rounded-t-2xl z-50 overflow-y-auto"
+                    onClick={(e) => e.stopPropagation()} 
+                  >
+                    <CommentsSection commentData={data} />
+                  </motion.div>
+                </div>
+              )}
               <div className="flex gap-2 ml-2 mt-1">
                 <p className="text-white text-[15px] orbitron font-semibold">
                   {data.userId.userName}
@@ -119,9 +176,6 @@ const FeedPage = () => {
           <MiniDiscussionPage />
           <MiniDiscussionPage />
         </div>
-
-    
-        <CommentsSection />
       </div>
     </>
   );

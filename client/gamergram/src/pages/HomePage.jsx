@@ -48,7 +48,7 @@ const HomePage = () => {
         <div className="flex-1">
           {/*Typing animation and brief about the app*/}
           <div className="p-7 flex flex-col gap-4 min-h-[120px] overflow-hidden">
-            <div className="h-[180px] sm:h-[140px] custom-box custom-box-2">
+            <div className="h-[180px] sm:h-[140px] custom-box custom-box-2 custom-box-3 custom-box-4 custom-box-5">
               <h1 className="text-white text-5xl font-extrabold orbitron leading-tight h-[60px] sm:text-6xl">
                 <Typewriter
                   words={[
