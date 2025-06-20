@@ -2,7 +2,8 @@ const Comment = require("../models/comments");
 
 const postCommentToDB = async (req, res) => {
   try {
-    const { userID, postID, text, userName } = req.body;
+    const { postID, text, userName } = req.body;
+    const userID = req.user.id;
     const newComment = new Comment({ userID, postID, text, userName });
     await newComment.save();
 
