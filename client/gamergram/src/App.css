@@ -2,7 +2,7 @@
 
 @theme {
   --color-custompurple-100: #070910;
-  --color-custompurple-200:#2b2f3d;
+  --color-custompurple-200: #2b2f3d;
   --color-customblue-100: #0a101b;
   --color-customgreen-100: #00f5c0;
   --color-customgray-100: #1a3c5e;
@@ -52,10 +52,100 @@
   }
 }
 
-
-@media (min-width: 485px) and (max-width: 527px){
+@media (min-width: 485px) and (max-width: 527px) {
   .custom-box-5 {
     height: 180px;
   }
 }
 
+@media (min-width: 640px) and (max-width: 695px) {
+  .custom-height-1 {
+    height: 380px;
+  }
+}
+
+@media (min-width: 431px) and (max-width: 639px) {
+  .custom-styles-1 {
+    height: 365px;
+  }
+}
+
+@media (min-width: 431px) and (max-width: 639px) {
+  .custom-styles-2 {
+    font-size: 14.5px;
+  }
+}
+
+@media (min-width: 431px) and (max-width: 639px) {
+  .custom-styles-3 {
+    margin-top: 10px;
+  }
+}
+
+@media (min-width: 431px) and (max-width: 639px) {
+  .custom-styles-4 {
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 467px) and (max-width: 516px) {
+  .custom-styles-5 {
+    width: 300px;
+  }
+}
+
+@media (min-width: 517px) and (max-width: 579px) {
+  .custom-styles-6 {
+    width: 400px;
+  }
+}
+
+@media (min-width: 517px) and (max-width: 579px) {
+  .custom-styles-7 {
+    width: 210px;
+  }
+}
+
+@media (min-width: 517px) and (max-width: 579px) {
+  .custom-styles-8 {
+    width: 100%;
+  }
+}
+
+@media (min-width: 517px) and (max-width: 579px) {
+  .custom-styles-9 {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 580px) and (max-width: 639px) {
+  .custom-styles-10 {
+    width: 420px;
+    height: 365px;
+  }
+}
+
+@media (min-width: 580px) and (max-width: 639px) {
+  .custom-styles-11 {
+    width: 100%;
+  }
+}
+
+@media (min-width: 580px) and (max-width: 639px) {
+  .custom-styles-12 {
+    height: 340px;
+  }
+}
+
+@media (min-width: 580px) and (max-width: 639px) {
+  .custom-styles-13 {
+    font-size: 17px;
+  }
+}
+
+
+@media (min-width: 657px) and (max-width: 695px) {
+  .custom-styles-14 {
+    height: 360px;
+  }
+}

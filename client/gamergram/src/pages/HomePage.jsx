@@ -83,7 +83,7 @@ const HomePage = () => {
               <div key={index} className="-mt-[10px] inline-block ml-2">
                 <img
                   src={image.src}
-                  className="border-2 border-customgreen-100 rounded-full w-[50px] h-[50px] object-contain sm:w-[60px] sm:h-[60px]"
+                  className="border-2 border-customgreen-100 rounded-full w-[50px] h-[50px] object-contain sm:w-[70px] sm:h-[70px]"
                 />
               </div>
             ))}
@@ -91,7 +91,7 @@ const HomePage = () => {
 
           <div className="p-x-5 flex gap-2 overflow-hidden">
             {/*Discussion room section*/}
-            <div className="p-3 bg-transparent border-[1px] border-gray-900 shadow-2xl w-[250px] h-auto rounded-xl ml-3 sm:w-[480px]">
+            <div className="p-3 bg-transparent border-[1px] border-gray-900 shadow-2xl w-[250px] h-auto rounded-xl ml-3 sm:w-[670px] sm:h-[360px] custom-height-1 custom-styles-5 custom-styles-6 custom-styles-10 custom-styles-14">
               <div className="flex gap-1">
                 <div>
                   <img
@@ -100,7 +100,7 @@ const HomePage = () => {
                   />
                 </div>
                 <div>
-                  <p className="text-white text-[13px] orbitron sm:text-[15px]">
+                  <p className="text-white text-[13px] orbitron sm:text-[15px] font-semibold custom-styles-2">
                     Alex
                   </p>
                   <p className="text-gray-500 text-[12px] orbitron sm:text-[15px]">
@@ -110,7 +110,7 @@ const HomePage = () => {
               </div>
               <div>
                 <div className="mt-2">
-                  <p className="text-white orbitron font-semibold text-[15px] sm:text-[17px]">
+                  <p className="text-white orbitron font-semibold text-[15px] sm:text-[17px] custom-styles-9 custom-styles-13">
                     What do you think of the new level in Elden Ring?
                   </p>
                 </div>
@@ -118,19 +118,19 @@ const HomePage = () => {
                   <div className="w-full mt-2">
                     <img
                       src="elden_ring.png"
-                      className="h-full max-h-[200px] w-[300px] object-cover rounded-xl sm:w-[460px] sm:min-h-[450px]"
+                      className="h-[190px] max-h-[200px] w-[300px] object-cover rounded-xl sm:max-w-2xl sm:w-full sm:max-h-[200px] sm:h-auto sm:object-cover custom-styles-8 custom-styles-11"
                     />
                   </div>
-                  <div className="flex gap-7 mt-2">
-                    <div className="flex items-center gap-1">
+                  <div className="flex gap-7 mt-2 sm:mt-3">
+                    <div className="flex items-center gap-1 custom-styles-3">
                       <Heart size={iconSize} color="#00f5c0" />
-                      <p className="text-white orbitron text-[12px] sm:text-[14px]">
+                      <p className="text-white orbitron text-[12px] sm:text-[14px] custom-styles-4">
                         120
                       </p>
                     </div>
-                    <div className="flex items-center gap-1">
+                    <div className="flex items-center gap-1 custom-styles-3">
                       <MessageSquare size={iconSize} color="#00f5c0" />
-                      <p className="text-white orbitron text-[12px] sm:text-[14px]">
+                      <p className="text-white orbitron text-[12px] sm:text-[14px] custom-styles-4">
                         20
                       </p>
                     </div>
@@ -140,27 +140,29 @@ const HomePage = () => {
             </div>
 
             {/*Streamer section*/}
-            <div className="h-[340px] w-auto rounded-xl border-[1px] border-gray-900 shadow-xl mr-2">
-              <div className="px-2 py-2">
+            <div className="h-[340px] w-auto rounded-xl border-[1px] border-gray-900 shadow-xl mr-2 sm:h-[360px] sm:w-[270px] custom-styles-1 custom-styles-7 ">
+              <div className="px-2 py-2 sm:p-3">
                 <h1 className="text-white font-bold bg-red-600 h-[30px] w-[45px] px-1 py-1 rounded-lg">
                   LIVE
                 </h1>
               </div>
-              <div className="p-2">
+              <div className="p-2 sm:max-w-[240px] sm:max-h-[300px]">
                 <img
-                  src="streamer.png"
-                  className="w-[170px] h-full rounded-xl"
+                  src="/streamer.png"
+                  className="w-[170px] h-full rounded-xl sm:w-full sm:h-[240px] sm:object-fill"
                 />
               </div>
               <div className="flex items-center gap-1">
                 <div>
                   <img
                     src="/streamer_profile_pic.png"
-                    className="rounded-full w-[35px] h-[35px] object-contain ml-2 bg-black border-[1px] border-gray-900"
+                    className="rounded-full w-[37px] h-[37px] object-contain ml-2 bg-customblue-100 border-[2px] border-gray-900"
                   />
                 </div>
                 <div>
-                  <p className="text-white text-[13px] orbitron mt-2">Sarah</p>
+                  <p className="text-white text-[13px] orbitron mt-2 sm:text-[15px] custom-styles-2 font-semibold">
+                    Sarah
+                  </p>
                 </div>
               </div>
             </div>
