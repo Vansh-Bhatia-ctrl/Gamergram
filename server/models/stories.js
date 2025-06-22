@@ -9,7 +9,7 @@ const storiesSchema = new mongoose.Schema(
     },
     mediaURL: { type: String, required: true },
     mediaType: { type: String, enum: ["image", "video"] },
-    caption: { type: String, required: true },
+    caption: { type: String },
     expiryTime: {
       type: Date,
       default: () => new Date(Date.now() + 24 * 60 * 60 * 1000),

@@ -11,6 +11,7 @@ const { postCommentToDB } = require("../controllers/commentController");
 const { validateLikes } = require("../middleware/likesmiddleware");
 const { saveLikesToDB } = require("../controllers/likesController");
 const { getFeedPost } = require("../controllers/getFeedPosts");
+const { postStoriesToCloudinary } = require("../controllers/StoryController");
 
 router.post("/signup", validateUserSignUp, signup);
 router.post("/login", login);
@@ -25,5 +26,11 @@ router.post(
 router.post("/comments", validateAuth, validiateComment, postCommentToDB);
 router.post("/likes", validateAuth, validateLikes, saveLikesToDB);
 router.get("/feed", validateAuth, getFeedPost);
+router.post(
+  "/stories",
+  validateAuth,
+  upload.single("file"),
+  postStoriesToCloudinary
+);
 
 module.exports = router;

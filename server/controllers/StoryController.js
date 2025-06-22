@@ -1,8 +1,17 @@
 require("dotenv").config();
 
 const streamifier = require("streamifier");
+const cron = require("node-cron");
 const cloudinary = require("../config/cloudinary");
 const Stories = require("../models/stories");
+
+cron.schedule("*/5 * *  * *", async () => {
+  try {
+    await Stories.deleteMany({ expiryTime: { $lte: Date.now() } });
+  } catch (error) {
+    console.error("Something went wrong.");
+  }
+});
 
 const postStoriesToCloudinary = async (req, res) => {
   try {
@@ -53,12 +62,11 @@ const postStoriesToCloudinary = async (req, res) => {
       mediaType: mediaType,
       caption: req.body.caption,
       userId: req.user.id,
+      expiryTime: Date.now() + 24 * 60 * 60 * 1000,
     });
 
     await newStory.save();
-
     res.status(200).json(newStory);
-
   } catch (error) {
     console.log("error: ", error.message);
     res.status(500).json({
