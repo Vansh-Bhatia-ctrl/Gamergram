@@ -2,9 +2,13 @@ import {
   Gamepad2,
   Bell,
   MessageCircleMore,
-  Heart,
+  ThumbsUp,
   MessageCircle,
   Bookmark,
+  House,
+  Bot,
+  MessageCirclePlus,
+  User,
 } from "lucide-react";
 import { motion } from "motion/react";
 import Stories from "../components/Stories";
@@ -71,7 +75,8 @@ const FeedPage = () => {
 
   return (
     <>
-      <div className="h-full w-full bg-gradient-to-b from-custompurple-100 to-customblue-100 ">
+      <div className="h-full w-full bg-gradient-to-b from-custompurple-100 to-customblue-100">
+        {/*Stories and header*/}
         <div className="text-white">
           <div className="p-3 flex justify-between items-center">
             <div className="flex gap-2 items-center cursor-pointer">
@@ -89,92 +94,107 @@ const FeedPage = () => {
           <Stories />
         </div>
 
-        {feedData.length > 0 ? (
-          feedData.map((data, index) => (
-            <div key={index} className="w-full mt-5">
-              <div className="ml-1 w-[100px] flex items-center justify-center mb-2 gap-2">
-                <img
-                  src="/kratos.png"
-                  className="rounded-full h-[50px] w-[50px] object-contain border-2 border-gray-500"
-                />
-                <p className="text-white text-[15px] orbitron">
-                  {data.userId.Name}
-                </p>
-              </div>
-              <div className="w-full flex justify-center items-center bg-black">
-                <img
-                  src={data.mediaURL}
-                  alt="Post media"
-                  loading="lazy"
-                  className="w-full h-auto max-h-[600px] object-contain"
-                />
-              </div>
-              <div className="flex gap-7 mt-1 ml-1">
-                <div className="flex items-center gap-[3px]">
-                  <Heart
-                    size={28}
-                    color="#00f5c0"
-                    onClick={() => likePost(data._id)}
+        {/*Main feed page*/}
+        <div className="flex-1 overflow-y-auto">
+          {feedData.length > 0 ? (
+            feedData.map((data, index) => (
+              <div key={index} className="w-full mt-5">
+                <div className="ml-1 w-[100px] flex items-center justify-center mb-2 gap-2">
+                  <img
+                    src="/kratos.png"
+                    className="rounded-full h-[50px] w-[50px] object-contain border-2 border-gray-500"
                   />
-                  <p className="text-white text-[14px] font-semibold">
-                    {data.likes.length}
+                  <p className="text-white text-[15px] orbitron">
+                    {data.userId.Name}
                   </p>
                 </div>
-                <div className="flex items-center gap-[3px]">
-                  <MessageCircle
-                    size={28}
-                    color="#00f5c0"
-                    onClick={() => renderCommentSection(index)}
+                <div className="w-full flex justify-center items-center bg-black">
+                  <img
+                    src={data.mediaURL}
+                    alt="Post media"
+                    loading="lazy"
+                    className="w-full h-auto max-h-[600px] object-contain"
                   />
-                  <p className="text-white text-[14px] font-semibold">
-                    {data.comments.length}
-                  </p>
                 </div>
-                <div className="flex items-center gap-[3px]">
-                  <Bookmark size={28} color="#00f5c0" />
+                <div className="flex gap-7 mt-1 ml-1">
+                  <div className="flex items-center gap-[3px]">
+                    <ThumbsUp
+                      size={28}
+                      color="#00f5c0"
+                      onClick={() => likePost(data._id)}
+                    />
+                    <p className="text-white text-[14px] font-semibold">
+                      {data.likes.length}
+                    </p>
+                  </div>
+                  <div className="flex items-center gap-[3px]">
+                    <MessageCircle
+                      size={28}
+                      color="#00f5c0"
+                      onClick={() => renderCommentSection(index)}
+                    />
+                    <p className="text-white text-[14px] font-semibold">
+                      {data.comments.length}
+                    </p>
+                  </div>
+                  <div className="flex items-center gap-[3px]">
+                    <Bookmark size={28} color="#00f5c0" />
+                  </div>
                 </div>
-              </div>
-              {selectedPost === index && (
-                <div
-                  className="fixed inset-0 bg-opacity-60 z-40"
-                  onClick={() => setSelectedPost(null)}
-                >
-                  <motion.div
-                    initial={{ y: "100%" }}
-                    animate={{ y: 0 }}
-                    exit={{ y: "0%" }}
-                    transition={{ type: "spring", stiffness: 300, damping: 30 }}
-                    className="fixed bottom-0 left-0 w-full h-[70%] bg-gradient-to-b from-customblue-200 to-custompurple-100 rounded-t-2xl z-50 overflow-y-auto"
-                    onClick={(e) => e.stopPropagation()} 
+                {selectedPost === index && (
+                  <div
+                    className="fixed inset-0 bg-opacity-60 z-40"
+                    onClick={() => setSelectedPost(null)}
                   >
-                    <CommentsSection commentData={data} />
-                  </motion.div>
+                    <motion.div
+                      initial={{ y: "100%" }}
+                      animate={{ y: 0 }}
+                      exit={{ y: "0%" }}
+                      transition={{
+                        type: "spring",
+                        stiffness: 300,
+                        damping: 30,
+                      }}
+                      className="fixed bottom-0 left-0 w-full h-[70%] bg-gradient-to-b from-customblue-200 to-custompurple-100 rounded-t-2xl z-50 overflow-y-auto"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      <CommentsSection commentData={data} />
+                    </motion.div>
+                  </div>
+                )}
+                <div className="flex gap-2 ml-2 mt-1">
+                  <p className="text-white text-[15px] orbitron font-semibold">
+                    {data.userId.userName}
+                  </p>
+                  <p className="text-white text-[15px]">{data.caption}</p>
                 </div>
-              )}
-              <div className="flex gap-2 ml-2 mt-1">
-                <p className="text-white text-[15px] orbitron font-semibold">
-                  {data.userId.userName}
-                </p>
-                <p className="text-white text-[15px]">{data.caption}</p>
+                <div className="ml-2 mb-7">
+                  <p className="text-gray-600 text-[11px] mb-2">
+                    {data.createdAt}
+                  </p>
+                </div>{" "}
               </div>
-              <div className="ml-2 mb-7">
-                <p className="text-gray-600 text-[11px] mb-2">
-                  {data.createdAt}
-                </p>
-              </div>{" "}
+            ))
+          ) : (
+            <div className="w-screen h-screen flex -mt-30 items-center justify-center">
+              <p className="text-white orbitron font-semibold">
+                Start following fellow gamers to see their posts.
+              </p>
             </div>
-          ))
-        ) : (
-          <div className="w-screen h-screen flex -mt-30 items-center justify-center">
-            <p className="text-white orbitron font-semibold">
-              Start following fellow gamers to see their posts.
-            </p>
-          </div>
-        )}
+          )}
 
-        <div className="flex overflow-hidden mt-4">
-          <MiniDiscussionPage />
-          <MiniDiscussionPage />
+          <div className="flex overflow-hidden mt-4">
+            <MiniDiscussionPage />
+            <MiniDiscussionPage />
+          </div>
+        </div>
+
+        {/*Footer-cum-options*/}
+        <div className="fixed bottom-0 lef-0 w-screen h-[70px] bg-gradient-to-b from-custompurple-100 to-customblue-100 flex p-4 justify-between">
+          <House size={38} color="#00f5c0" />
+          <MessageCirclePlus size={38} color="#00f5c0" />
+          <Bot size={38} color="#00f5c0" />
+          <User size={38} color="#00f5c0" /> 
         </div>
       </div>
     </>
