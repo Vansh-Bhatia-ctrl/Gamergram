@@ -4,7 +4,8 @@ import HomePage from "./pages/HomePage";
 import LoginPage from "./pages/LoginPage";
 import SignUp from "./pages/SignUp";
 import FeedPage from "./pages/FeedPage";
-import PostPage from "./pages/PostPage";
+import AiChatBox from "./pages/AiChatBox";
+import AiCharecterChat from "./pages/AiCharecterChat";
 
 const router = createBrowserRouter([
   {
@@ -24,8 +25,12 @@ const router = createBrowserRouter([
     element: <FeedPage />,
   },
   {
-    path: "post",
-    element: <PostPage />,
+    path: "aiChatBox",
+    element: <AiChatBox />,
+  },
+  {
+    path: "charecterchatbox",
+    element: <AiCharecterChat />,
   },
 ]);
 
