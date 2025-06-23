@@ -1,9 +1,10 @@
 import "./App.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import HomePage from "./pages/HomePage";
-import LoginPage from "./pages/loginPage";
+import LoginPage from "./pages/LoginPage";
 import SignUp from "./pages/SignUp";
 import FeedPage from "./pages/FeedPage";
+import PostPage from "./pages/PostPage";
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
   {
     path: "feed",
     element: <FeedPage />,
+  },
+  {
+    path: "post",
+    element: <PostPage />,
   },
 ]);
 

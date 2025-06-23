@@ -1,11 +1,13 @@
 import { Gamepad2 } from "lucide-react";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const SignUp = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const naviagte = useNavigate();
 
   const handleSignUp = async (e) => {
     e.preventDefault();
@@ -23,6 +25,9 @@ const SignUp = () => {
 
       const resp = await req.json();
       console.log("User signed-up successfully", resp);
+      if (req.ok) {
+        naviagte("/login");
+      }
     } catch (error) {
       throw Error("Error logging-in, please try again.", error.message);
     }
@@ -95,8 +100,8 @@ const SignUp = () => {
                 <button className="bg-customgreen-200 hover:bg-customgreen-300 text-customblue-100 orbitron font-semibold w-[240px] h-[38px] rounded-md cursor-pointer">
                   Sign-up
                 </button>
-                 <p className="text-gray-400">
-                 Already have an account?{" "}
+                <p className="text-gray-400">
+                  Already have an account?{" "}
                   <a className="text-customgreen-400 cursor-pointer hover:text-customgreen-500">
                     Log in
                   </a>

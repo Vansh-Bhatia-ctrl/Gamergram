@@ -9,8 +9,10 @@ import {
   Bot,
   MessageCirclePlus,
   User,
+  CirclePlus,
 } from "lucide-react";
 import { motion } from "motion/react";
+import { format, formatDistanceToNow, differenceInHours } from "date-fns";
 import Stories from "../components/Stories";
 import MiniDiscussionPage from "../components/MiniDiscussionPage";
 import { useEffect } from "react";
@@ -73,6 +75,22 @@ const FeedPage = () => {
     }
   };
 
+  const dateFormat = (isoDate) => {
+    const date = new Date(isoDate);
+    const now = new Date();
+
+    const hoursDifference = differenceInHours(now, date);
+
+    if (hoursDifference < 24) {
+      return formatDistanceToNow(date, { addSuffix: true }).replace(
+        "about ",
+        ""
+      );
+    } else {
+      return format(date, "dd MMM yy");
+    }
+  };
+
   return (
     <>
       <div className="h-full w-full bg-gradient-to-b from-custompurple-100 to-customblue-100">
@@ -95,7 +113,7 @@ const FeedPage = () => {
         </div>
 
         {/*Main feed page*/}
-        <div className="flex-1 overflow-y-auto">
+        <div className="flex-1 overflow-y-auto scroll-smooth sm:p-20 custom-padding-1 custom-padding-2 custom-padding-3 sm:-mt-17">
           {feedData.length > 0 ? (
             feedData.map((data, index) => (
               <div key={index} className="w-full mt-5">
@@ -108,15 +126,15 @@ const FeedPage = () => {
                     {data.userId.Name}
                   </p>
                 </div>
-                <div className="w-full flex justify-center items-center bg-black">
+                <div className="w-full flex justify-center items-center bg-black ">
                   <img
                     src={data.mediaURL}
                     alt="Post media"
                     loading="lazy"
-                    className="w-full h-auto max-h-[600px] object-contain"
+                    className="w-full h-auto max-h-[600px] object-contain sm:h-auto"
                   />
                 </div>
-                <div className="flex gap-7 mt-1 ml-1">
+                <div className="flex gap-7 mt-1 ml-1 sm:mt-2">
                   <div className="flex items-center gap-[3px]">
                     <ThumbsUp
                       size={28}
@@ -162,15 +180,15 @@ const FeedPage = () => {
                     </motion.div>
                   </div>
                 )}
-                <div className="flex gap-2 ml-2 mt-1">
-                  <p className="text-white text-[15px] orbitron font-semibold">
+                <div className="flex gap-2 ml-2 mt-1 sm:mt-2">
+                  <p className="text-white text-[15px] orbitron font-semibold  sm:text-[16px]">
                     {data.userId.userName}
                   </p>
                   <p className="text-white text-[15px]">{data.caption}</p>
                 </div>
                 <div className="ml-2 mb-7">
-                  <p className="text-gray-600 text-[11px] mb-2">
-                    {data.createdAt}
+                  <p className="text-gray-600 text-[11px] mb-2 sm:text-[14px]">
+                    {dateFormat(data.createdAt)}
                   </p>
                 </div>{" "}
               </div>
@@ -190,11 +208,12 @@ const FeedPage = () => {
         </div>
 
         {/*Footer-cum-options*/}
-        <div className="fixed bottom-0 lef-0 w-screen h-[70px] bg-gradient-to-b from-custompurple-100 to-customblue-100 flex p-4 justify-between">
-          <House size={38} color="#00f5c0" />
-          <MessageCirclePlus size={38} color="#00f5c0" />
-          <Bot size={38} color="#00f5c0" />
-          <User size={38} color="#00f5c0" /> 
+        <div className="fixed -bottom-1 lef-0 w-screen h-[60px] bg-gradient-to-b from-custompurple-100 to-customblue-100 flex p-3 justify-between sm:justify-around">
+          <House size={32} color="#00f5c0" />
+          <MessageCirclePlus size={32} color="#00f5c0" />
+          <CirclePlus size={32} color="#00f5c0" />
+          <Bot size={32} color="#00f5c0" />
+          <User size={32} color="#00f5c0" />
         </div>
       </div>
     </>

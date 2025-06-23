@@ -1,9 +1,11 @@
 import { Gamepad2 } from "lucide-react";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function LoginPage() {
   const [username, setUserName] = useState("");
   const [password, setPassword] = useState("");
+  const naviagte = useNavigate();
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -23,6 +25,7 @@ export default function LoginPage() {
       console.log("Logged-in successfully", resp);
       if(resp.token){
         localStorage.setItem("token", resp.token);
+        naviagte("/feed");
       }else{
         console.log("Log-in failed. Please try again.")
       }
