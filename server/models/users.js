@@ -20,6 +20,7 @@ const usersSchema = new mongoose.Schema({
     required: true,
     minlength: 8,
   },
+  isAI: { type: Boolean, default: false },
   following: [{ type: mongoose.Schema.Types.ObjectId, ref: "User" }],
   followers: [{ type: mongoose.Schema.Types.ObjectId, ref: "User" }],
 });
