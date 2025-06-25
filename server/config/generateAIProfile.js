@@ -12,18 +12,18 @@ const generateAiProfiles = async () => {
       {
         role: "user",
         content:
-          "Generate a fictional character with username, full name, and a cool bio.",
+          "Generate a fictional character with userName, Name, email, and a bio and a realistic profile picture URL (image link).",
       },
     ],
     temperature: 0.9,
     n: 9,
   });
 
-  const charecter = response.choices.map((choice) =>
+  const characters = response.choices.map((choice) =>
     JSON.parse(choice.message.content)
   );
 
-  return charecter;
+  return characters;
 };
 
 module.exports = { generateAiProfiles };
