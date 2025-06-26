@@ -13,7 +13,7 @@ connectDB();
 // CORS Middleware: Allow requests from frontend at http://localhost:5173
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: ["http://localhost:5173", "http://192.168.29.9:5173"],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
@@ -29,6 +29,8 @@ app.get("/", (req, res) => {
   res.send("API is running...");
 });
 
+const HOST = "0.0.0.0";
+
 // Start the server
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
+app.listen(PORT, HOST, () => console.log(`🚀 Server running on port ${PORT}`));
