@@ -12,10 +12,10 @@ let images = [
 const Stories = () => {
   return (
     <>
-      <div className="overflow-x-hidden mt-2">
-        <div className="flex gap-4 w-max ml-2">
+      <div className="mt-2">
+        <div className="flex gap-4 w-max ml-2 overflow-x-auto">
           {images.map((img, idx) => (
-            <div key={idx} className="flex flex-col items-center">
+            <div key={idx} className="flex flex-col items-center overflow-hidden">
               <img
                 src={img.src}
                 alt={img.name}
