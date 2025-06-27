@@ -1,3 +1,4 @@
+import { Scrollbar } from 'react-scrollbars-custom';
 let images = [
   { src: "/kratos.png", name: "Kratos" },
   { src: "/altair.png", name: "Altair" },
@@ -9,25 +10,25 @@ let images = [
   { src: "/jinsakai.png", name: "Jin" },
 ];
 
+
 const Stories = () => {
   return (
-    <>
-      <div className="mt-2">
-        <div className="flex gap-4 w-max ml-2 overflow-x-auto">
-          {images.map((img, idx) => (
-            <div key={idx} className="flex flex-col items-center overflow-hidden">
-              <img
-                src={img.src}
-                alt={img.name}
-                className="w-[60px] h-[60px] rounded-full border-3 border-customgreen-100 object-contain bg-transparent sm:h-[80px] sm:w-[80px]"
-              />
-              <p className="text-sm mt-1 text-gray-300">{img.name}</p>
-            </div>
-          ))}
-        </div>
+     
+      <div className="flex gap-4 px-4 w-max md:mt-4">
+        {images.map((img, idx) => (
+          <div key={idx} className="flex flex-col items-center">
+            <img
+              src={img.src}
+              alt={img.name}
+              className="w-[60px] h-[60px] sm:w-[80px] sm:h-[80px] rounded-full border-[3px] border-customgreen-100 object-contain"
+            />
+            <p className="text-sm mt-1 text-gray-300">{img.name}</p>
+          </div>
+        ))}
       </div>
-    </>
+    
   );
 };
+
 
 export default Stories;

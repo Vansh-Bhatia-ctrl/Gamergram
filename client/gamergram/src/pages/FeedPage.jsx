@@ -24,7 +24,6 @@ const FeedPage = () => {
   const [selectedPost, setSelectedPost] = useState(null);
   const [iconSize, setIconSize] = useState(22);
   const [gamingIconSize, setGamingIconSize] = useState(32);
-  const [isVsisble, setIsvisible] = useState(false);
 
   useEffect(() => {
     const getFeedPost = async () => {
@@ -99,7 +98,6 @@ const FeedPage = () => {
       if (window.innerWidth > 767) {
         setIconSize(28);
         setGamingIconSize(43);
-        setIsvisible(true);
       } else {
         setIconSize(22);
         setGamingIconSize(32);
@@ -116,14 +114,15 @@ const FeedPage = () => {
 
   return (
     <>
-      <div className="h-full w-full bg-gradient-to-b from-custompurple-100 to-customblue-100 md:flex">
-        <div className="fixed">
-          {/* <div className="h-screen bg-purple-500 w-[100px]"></div> */}
+      <div className="h-full w-full bg-gradient-to-b from-custompurple-100 to-customblue-100 md:flex overflow-hidden">
+        {/*Sidebar*/}
+        <div className="hidden md:block">
+          <div className="h-full bg-transparent border-r-1 border-gray-600 w-[80px]"></div>
         </div>
-        <div className="p-4">
+        <div className="w-full md:ml-[30px]">
           {/*Stories and header*/}
           <div className="text-white">
-            <div className="p-3 flex justify-between items-center">
+            <div className="p-3 flex justify-between items-center md:hidden">
               <div className="flex gap-2 items-center cursor-pointer">
                 <Gamepad2 size={gamingIconSize} color="#00f5c0" className="" />
                 <h1 className="text-customgreen-100 orbitron text-xl font-semibold md:text-2xl">
@@ -131,16 +130,16 @@ const FeedPage = () => {
                 </h1>
               </div>
 
-              <div className="flex gap-4 items-center">
+              <div className="flex gap-4 items-center md:hidden">
                 <Bell size={iconSize} color="#6B7280" />
                 <MessageCircleMore size={iconSize} color="#6B7280" />
               </div>
             </div>
-            <Stories />
+           <Stories />  
           </div>
 
           {/*Main feed page*/}
-          <div className="flex-1 overflow-y-auto scroll-smooth sm:p-20 custom-padding-1 custom-padding-2 custom-padding-3 sm:-mt-17">
+          <div className="flex-1 overflow-y-auto scroll-smooth sm:p-20 custom-padding-1 custom-padding-2 custom-padding-3 sm:-mt-17 md:flex md:flex-col  ">
             {feedData.length > 0 ? (
               feedData.map((data, index) => (
                 <div key={index} className="w-full mt-5">
@@ -153,12 +152,12 @@ const FeedPage = () => {
                       {data.userId.Name}
                     </p>
                   </div>
-                  <div className="w-full flex justify-center items-center bg-black ">
+                  <div className="w-full flex justify-center items-center bg-black md:w-full md:h-full md:-ml-[70px]">
                     <img
                       src={data.mediaURL}
                       alt="Post media"
                       loading="lazy"
-                      className="w-full h-auto max-h-[600px] object-contain sm:h-auto"
+                      className="w-full h-auto max-h-[600px] object-contain sm:h-full md:object-fill"
                     />
                   </div>
                   <div className="flex gap-7 mt-1 ml-1 sm:mt-2">
@@ -235,8 +234,7 @@ const FeedPage = () => {
           </div>
 
           {/*Footer-cum-options*/}
-
-          <div className="fixed -bottom-1 lef-0 w-screen h-[60px] bg-gradient-to-b from-custompurple-100 to-customblue-100 flex p-3 justify-between sm:justify-around">
+          <div className="fixed -bottom-1 lef-0 w-screen h-[60px] bg-gradient-to-b from-custompurple-100 to-customblue-100 flex p-3 justify-between sm:justify-around md:hidden">
             <House size={32} color="#00f5c0" />
             <MessageCirclePlus size={32} color="#00f5c0" />
             <CirclePlus size={32} color="#00f5c0" />
