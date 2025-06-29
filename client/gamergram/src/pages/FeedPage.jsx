@@ -10,6 +10,7 @@ import {
   MessageCirclePlus,
   User,
   CirclePlus,
+  SidebarClose,
 } from "lucide-react";
 import { motion } from "motion/react";
 import { format, formatDistanceToNow, differenceInHours } from "date-fns";
@@ -18,6 +19,7 @@ import MiniDiscussionPage from "../components/MiniDiscussionPage";
 import { useEffect } from "react";
 import { useState } from "react";
 import CommentsSection from "../components/CommentsSection";
+import Sidebar from "../components/Sidebar";
 
 const FeedPage = () => {
   const [feedData, setFeedData] = useState([]);
@@ -116,10 +118,10 @@ const FeedPage = () => {
     <>
       <div className="h-full w-full bg-gradient-to-b from-custompurple-100 to-customblue-100 md:flex overflow-hidden">
         {/*Sidebar*/}
-        <div className="hidden md:block">
-          <div className="h-full bg-transparent border-r-1 border-gray-600 w-[80px]"></div>
-        </div>
-        <div className="w-full md:ml-[30px]">
+        <Sidebar />
+        
+
+        <div className="w-full md:ml-[110px]">
           {/*Stories and header*/}
           <div className="text-white">
             <div className="p-3 flex justify-between items-center md:hidden">
@@ -135,88 +137,101 @@ const FeedPage = () => {
                 <MessageCircleMore size={iconSize} color="#6B7280" />
               </div>
             </div>
-           <Stories />  
+            <Stories />
           </div>
 
           {/*Main feed page*/}
-          <div className="flex-1 overflow-y-auto scroll-smooth sm:p-20 custom-padding-1 custom-padding-2 custom-padding-3 sm:-mt-17 md:flex md:flex-col  ">
+          <div className="flex-1 overflow-y-auto scroll-smooth sm:p-20 custom-padding-1 custom-padding-2 custom-padding-3 sm:-mt-17 md:flex md:flex-col md:items-center md:justify-center ">
             {feedData.length > 0 ? (
               feedData.map((data, index) => (
-                <div key={index} className="w-full mt-5">
-                  <div className="ml-1 w-[100px] flex items-center justify-center mb-2 gap-2">
-                    <img
-                      src="/kratos.png"
-                      className="rounded-full h-[50px] w-[50px] object-contain border-2 border-gray-500"
-                    />
-                    <p className="text-white text-[15px] orbitron">
-                      {data.userId.Name}
-                    </p>
-                  </div>
-                  <div className="w-full flex justify-center items-center bg-black md:w-full md:h-full md:-ml-[70px]">
-                    <img
-                      src={data.mediaURL}
-                      alt="Post media"
-                      loading="lazy"
-                      className="w-full h-auto max-h-[600px] object-contain sm:h-full md:object-fill"
-                    />
-                  </div>
-                  <div className="flex gap-7 mt-1 ml-1 sm:mt-2">
-                    <div className="flex items-center gap-[3px]">
-                      <ThumbsUp
-                        size={28}
-                        color="#00f5c0"
-                        onClick={() => likePost(data._id)}
+                <div key={index} className="w-full flex justify-center mt-5">
+                  <div className="w-full max-w-[600px]">
+                    {/* User info */}
+                    <div className="flex items-center mb-2 gap-2 ml-1">
+                      <img
+                        src="/kratos.png"
+                        className="rounded-full h-[50px] w-[50px] object-contain border-2 border-gray-500"
                       />
-                      <p className="text-white text-[14px] font-semibold">
-                        {data.likes.length}
+                      <p className="text-white text-[15px] orbitron md:text-[17px]">
+                        {data.userId.Name}
                       </p>
                     </div>
-                    <div className="flex items-center gap-[3px]">
-                      <MessageCircle
-                        size={28}
-                        color="#00f5c0"
-                        onClick={() => renderCommentSection(index)}
+
+                    {/* Media */}
+                    <div className="w-full flex justify-center items-center bg-black">
+                      <img
+                        src={data.mediaURL}
+                        alt="Post media"
+                        loading="lazy"
+                        className="w-full h-auto max-h-[600px] object-contain sm:h-full md:object-fill"
                       />
-                      <p className="text-white text-[14px] font-semibold">
-                        {data.comments.length}
-                      </p>
                     </div>
-                    <div className="flex items-center gap-[3px]">
-                      <Bookmark size={28} color="#00f5c0" />
+
+                    {/* Icons */}
+                    <div className="flex gap-7 mt-1 ml-1 sm:mt-2">
+                      <div className="flex items-center gap-[3px]">
+                        <ThumbsUp
+                          size={28}
+                          color="#00f5c0"
+                          onClick={() => likePost(data._id)}
+                        />
+                        <p className="text-white text-[14px] font-semibold">
+                          {data.likes.length}
+                        </p>
+                      </div>
+                      <div className="flex items-center gap-[3px]">
+                        <MessageCircle
+                          size={28}
+                          color="#00f5c0"
+                          onClick={() => renderCommentSection(index)}
+                        />
+                        <p className="text-white text-[14px] font-semibold">
+                          {data.comments.length}
+                        </p>
+                      </div>
+                      <div className="flex items-center gap-[3px]">
+                        <Bookmark size={28} color="#00f5c0" />
+                      </div>
                     </div>
-                  </div>
-                  {selectedPost === index && (
-                    <div
-                      className="fixed inset-0 bg-opacity-60 z-40"
-                      onClick={() => setSelectedPost(null)}
-                    >
-                      <motion.div
-                        initial={{ y: "100%" }}
-                        animate={{ y: 0 }}
-                        exit={{ y: "0%" }}
-                        transition={{
-                          type: "spring",
-                          stiffness: 300,
-                          damping: 30,
-                        }}
-                        className="fixed bottom-0 left-0 w-full h-[70%] bg-gradient-to-b from-customblue-200 to-custompurple-100 rounded-t-2xl z-50 overflow-y-auto"
-                        onClick={(e) => e.stopPropagation()}
+
+                    {/* Comments Modal */}
+                    {selectedPost === index && (
+                      <div
+                        className="fixed inset-0 bg-opacity-60 z-40"
+                        onClick={() => setSelectedPost(null)}
                       >
-                        <CommentsSection commentData={data} />
-                      </motion.div>
+                        <motion.div
+                          initial={{ y: "100%" }}
+                          animate={{ y: 0 }}
+                          exit={{ y: "0%" }}
+                          transition={{
+                            type: "spring",
+                            stiffness: 300,
+                            damping: 30,
+                          }}
+                          className="fixed bottom-0 left-0 w-full h-[70%] bg-gradient-to-b from-customblue-200 to-custompurple-100 rounded-t-2xl z-50 overflow-y-auto"
+                          onClick={(e) => e.stopPropagation()}
+                        >
+                          <CommentsSection commentData={data} />
+                        </motion.div>
+                      </div>
+                    )}
+
+                    {/* Caption */}
+                    <div className="flex gap-2 ml-2 mt-1 sm:mt-2">
+                      <p className="text-white text-[15px] orbitron font-semibold sm:text-[16px]">
+                        {data.userId.userName}
+                      </p>
+                      <p className="text-white text-[15px]">{data.caption}</p>
                     </div>
-                  )}
-                  <div className="flex gap-2 ml-2 mt-1 sm:mt-2">
-                    <p className="text-white text-[15px] orbitron font-semibold  sm:text-[16px]">
-                      {data.userId.userName}
-                    </p>
-                    <p className="text-white text-[15px]">{data.caption}</p>
+
+                    {/* Timestamp */}
+                    <div className="ml-2 mb-7">
+                      <p className="text-gray-400 text-[11px] mb-2 sm:text-[14px]">
+                        {dateFormat(data.createdAt)}
+                      </p>
+                    </div>
                   </div>
-                  <div className="ml-2 mb-7">
-                    <p className="text-gray-600 text-[11px] mb-2 sm:text-[14px]">
-                      {dateFormat(data.createdAt)}
-                    </p>
-                  </div>{" "}
                 </div>
               ))
             ) : (
