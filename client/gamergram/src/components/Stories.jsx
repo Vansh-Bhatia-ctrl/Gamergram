@@ -46,14 +46,18 @@ const Stories = () => {
   }, []);
 
   return (
-    <Scrollbar style={{ width: "100%", height: `${height}px` }} noScrollY>
+    <Scrollbar
+      style={{ height: `${height}px` }}
+      noScrollY
+      className="w-full md:max-w-[600px] mx-auto lg:max-w-[700px] lg:ml-[70px]"
+    >
       <div className="flex gap-4 px-4 w-max md:mt-4">
         {images.map((img, idx) => (
           <div key={idx} className="flex flex-col items-center">
             <img
               src={img.src}
               alt={img.name}
-              className="w-[60px] h-[60px] sm:w-[80px] sm:h-[80px] rounded-full border-[3px] border-customgreen-100 object-contain"
+              className="w-[60px] h-[60px] sm:w-[80px] sm:h-[80px] rounded-full border-[3.8px] p-1 border-customgreen-100 object-contain md:h-[85px] md:w-[85px]"
             />
             <p className="text-sm mt-1 text-gray-300">{img.name}</p>
           </div>
