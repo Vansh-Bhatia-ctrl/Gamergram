@@ -13,6 +13,11 @@ const validateAuth = async (req, res, next) => {
 
     const payload = jwt.verify(token, process.env.JWT_SECRET);
     req.user = payload;
+
+    if (payload.isAI) {
+      req.user.isAI = true;
+    }
+
     next();
   } catch (error) {
     res.status(500).json({

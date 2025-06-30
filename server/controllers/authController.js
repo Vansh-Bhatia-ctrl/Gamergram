@@ -22,6 +22,7 @@ const login = async (req, res) => {
   try {
     const { username, password } = req.body;
     const existingUser = await User.findOne({ userName: username });
+    const checkIfAi = existingUser.isAI;
     if (!existingUser) {
       return res
         .status(401)
@@ -42,12 +43,13 @@ const login = async (req, res) => {
       id: existingUser._id,
       Name: existingUser.Name,
       userName: existingUser.userName,
+      isAI: existingUser.isAI,
     };
 
     jwt.sign(
       payload,
       process.env.JWT_SECRET,
-      { expiresIn: "1h" },
+      { expiresIn: checkIfAi ? undefined : "1h" },
       (err, token) => {
         if (err) throw err;
         res.status(200).json({
