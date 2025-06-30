@@ -4,6 +4,7 @@ const cors = require("cors");
 const express = require("express");
 const connectDB = require("./config/db");
 const authRoute = require("./routes/auth");
+const aiRoute = require("./routes/aiRoutes");
 
 const app = express();
 
@@ -23,6 +24,7 @@ app.use(
 app.use(express.json());
 
 app.use("/users", authRoute);
+app.use("/ai", aiRoute);
 
 // Basic test route
 app.get("/", (req, res) => {

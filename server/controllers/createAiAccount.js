@@ -1,28 +1,32 @@
 const User = require("../models/users");
-const generateAiProfiles = require("../config/generateAIProfile");
+const { generateAiProfiles } = require("../config/generateAIProfile");
+const bcrypt = require("bcrypt");
 
 const createAiAccounts = async (req, res) => {
   try {
     const profile = await generateAiProfiles();
 
-    const newAiCharecter = new User({
-      Name: profile.Name,
-      userName: profile.userName,
-      email: profile.email || `${profile.Name}@gamergram.ai`,
-      password: "AIDefaultPass123",
-      bio: profile.bio,
-      profilePicture: profile.URL,
+    const hashedPassword = await bcrypt.hash("AIDefaultPass123", 12);
+    const aiProfiles = profile.map((charecter) => ({
+      Name: charecter.Name,
+      userName: charecter.userName,
+      email: charecter.email,
+      password: hashedPassword,
+      profilePicture: charecter.profilePicture,
+      bio: charecter.bio,
       isAI: true,
-    });
+    }));
 
-    await newAiCharecter.save();
+    await User.insertMany(aiProfiles);
     return res
       .status(200)
-      .json({ message: "AI character generated successfully." });
+      .json({ message: "AI character information saved successfully." });
   } catch (error) {
-    return res
-      .status(500)
-      .json({ message: "Something went wrong, please try again." });
+    console.log("Error: ", error.message);
+    return res.status(500).json({
+      message: "Something went wrong, please try again.",
+      error: error.message,
+    });
   }
 };
 
