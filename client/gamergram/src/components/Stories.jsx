@@ -57,7 +57,7 @@ const Stories = () => {
             <img
               src={img.src}
               alt={img.name}
-              className="w-[60px] h-[60px] sm:w-[80px] sm:h-[80px] rounded-full border-[3.8px] p-1 border-customgreen-100 object-contain md:h-[85px] md:w-[85px]"
+              className="w-[70px] h-[70px] sm:w-[80px] sm:h-[80px] rounded-full border-[3.8px] p-1 border-customgreen-100 object-contain md:h-[85px] md:w-[85px]"
             />
             <p className="text-sm mt-1 text-gray-300">{img.name}</p>
           </div>
