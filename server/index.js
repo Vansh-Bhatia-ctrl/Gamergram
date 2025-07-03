@@ -5,6 +5,7 @@ const connectDB = require("./config/db");
 const authRoute = require("./routes/auth");
 const aiRoute = require("./routes/aiRoutes");
 const { autoAiLogin } = require("./utils/autoAILogin");
+const { startAiScheduler } = require("./utils/aiScheduler");
 
 const app = express();
 
@@ -15,6 +16,7 @@ const startServer = async () => {
 
     // Automatically log in AI characters
     await autoAiLogin();
+    await startAiScheduler();
 
     // CORS Middleware
     app.use(
