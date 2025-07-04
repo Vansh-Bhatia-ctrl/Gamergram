@@ -1,13 +1,28 @@
 require("dotenv").config();
 const cors = require("cors");
 const express = require("express");
+const http = require("http");
+const { Server } = require("socket.io");
+
 const connectDB = require("./config/db");
 const authRoute = require("./routes/auth");
 const aiRoute = require("./routes/aiRoutes");
+const aiChat = require("./routes/aiChatRoute");
 const { autoAiLogin } = require("./utils/autoAILogin");
-const { startAiScheduler } = require("./utils/aiScheduler");
+const aiChatSocket = require("./sockets/aiChatSocket");
 
 const app = express();
+
+const server = http.createServer(app);
+const io = new Server(server, {
+  cors: {
+    origin: ["http://localhost:5173", "http://192.168.29.9:5173"],
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
+  },
+});
+
+aiChatSocket(io);
 
 const startServer = async () => {
   try {
@@ -16,7 +31,6 @@ const startServer = async () => {
 
     // Automatically log in AI characters
     await autoAiLogin();
-    await startAiScheduler();
 
     // CORS Middleware
     app.use(
@@ -33,6 +47,7 @@ const startServer = async () => {
     // Routes
     app.use("/users", authRoute);
     app.use("/ai", aiRoute);
+    app.use("/chat", aiChat);
 
     // Test route
     app.get("/", (req, res) => {
@@ -42,7 +57,7 @@ const startServer = async () => {
     // Start the server
     const HOST = "0.0.0.0";
     const PORT = process.env.PORT || 3000;
-    app.listen(PORT, HOST, () =>
+    server.listen(PORT, HOST, () =>
       console.log(`🚀 Server running on port ${PORT}`)
     );
   } catch (error) {
