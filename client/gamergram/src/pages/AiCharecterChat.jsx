@@ -1,11 +1,13 @@
-import { ArrowLeft, UserRoundPlus } from "lucide-react";
+import { ArrowLeft, UserRoundPlus, SendHorizontal } from "lucide-react";
 
 const AiCharecterChat = () => {
   return (
     <>
-      <div className="h-screen
-       w-screen
-       bg-gradient-to-b from-custompurple-100 to-customblue-100">
+      <div
+        className="h-full
+       w-full
+       bg-gradient-to-b from-custompurple-100 to-customblue-100"
+      >
         {/*Header and charecter info*/}
         <div className="flex justify-between">
           <div className="p-4  flex gap-10">
@@ -75,10 +77,7 @@ const AiCharecterChat = () => {
             4 max-w-[280px]"
             >
               <div className="w-auto">
-                <p className="text-white text-[13px]">
-                  {" "}
-                 I am Kratos.
-                </p>
+                <p className="text-white text-[13px]"> I am Kratos.</p>
               </div>
             </div>
           </div>
@@ -89,10 +88,7 @@ const AiCharecterChat = () => {
             4 max-w-[280px] ml-2"
           >
             <div className="w-auto">
-              <p className="text-white text-[13px]">
-                {" "}
-                I am Jin Sakai.
-              </p>
+              <p className="text-white text-[13px]"> I am Jin Sakai.</p>
             </div>
           </div>
           <div>
@@ -119,6 +115,18 @@ const AiCharecterChat = () => {
               </div>
             </div>
           </div>
+        </div>
+
+        <div className="flex items-center justify-center gap-2 ml-2 p-2 mt-6">
+          <input
+            placeholder="Type Something."
+            className="placeholder:text-gray-400 border-2 border-gray-800 rounded-2xl p-2 w-[370px] text-white bg-transparent outline-none"
+          />
+          <SendHorizontal
+            size={28}
+            color="#00f5c0"
+            className="cursor-pointer"
+          />
         </div>
       </div>
     </>
