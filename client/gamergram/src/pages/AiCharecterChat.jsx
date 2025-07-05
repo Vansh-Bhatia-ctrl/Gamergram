@@ -3,9 +3,34 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 
+import io from "socket.io-client";
+
+const socket = io("http://localhost:3000");
+
 const AiCharecterChat = () => {
   const { userName } = useParams();
   const [character, setCharacter] = useState(null);
+  const [message, setMessage] = useState("");
+  const [chatLog, setChatlog] = useState([]);
+
+  useEffect(() => {
+    socket.on("aiReply", ({ aiReply, userMessage }) => {
+      setChatlog((prevLog) => [
+        ...prevLog,
+        { type: "user", message: userMessage },
+        { type: "ai", message: aiReply },
+      ]);
+    });
+
+    socket.on("error", (error) => {
+      console.error("Error starting chat", error.message);
+    });
+
+    return () => {
+      socket.off("aiReply");
+      socket.off("error");
+    };
+  }, []);
 
   useEffect(() => {
     const fetchedAiCharacter = async () => {
@@ -31,11 +56,22 @@ const AiCharecterChat = () => {
     }
   }, [userName]);
 
+  const handleChatMessages = () => {
+    if (!message.trim()) return;
+
+    socket.emit("sendMessage", {
+      aiUserName: userName,
+      userMessage: message,
+    });
+
+    setMessage("");
+  };
+
   return (
     <>
       <div
-        className="h-screen
-       w-screen
+        className="h-full
+       w-full
        bg-gradient-to-b from-custompurple-100 to-customblue-100"
       >
         {/*Header and charecter info*/}
@@ -88,9 +124,7 @@ const AiCharecterChat = () => {
                 </div>
                 <div className="flex justify-center mt-4">
                   <div className="text-center max-w-[500px] mx-auto">
-                    <p className="text-gray-400 text-[14px]">
-                     {character.bio}
-                    </p>
+                    <p className="text-gray-400 text-[14px]">{character.bio}</p>
                   </div>
                 </div>
               </div>
@@ -99,61 +133,37 @@ const AiCharecterChat = () => {
         )}
 
         {/*Actual chat between the charecter and the user*/}
-        <div className="mt-10 flex justify-start items-start">
-          <div className="flex">
-            <div className="p-2">
-              <img
-                src="./kratos.png"
-                className="h-[33px] w-[33px] rounded-full object-contain border-1 border-gray-800"
-              />
-            </div>
+        <div className="mt-10 space-y-4 px-4">
+          {chatLog.map((entry, index) => (
             <div
-              className="bg-gray-700 p-3 flex items-center justify-center rounded-4xl
-            4 max-w-[280px]"
+              key={index}
+              className={`flex ${
+                entry.type === "user" ? "justify-end" : "justify-start"
+              }`}
             >
-              <div className="w-auto">
-                <p className="text-white text-[13px]"> I am Kratos.</p>
+              {entry.type === "ai" && (
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
+                  className="h-[33px] w-[33px] rounded-full mr-2"
+                />
+              )}
+              <div className="bg-gray-700 p-3 rounded-3xl max-w-[280px]">
+                <p className="text-white text-sm">{entry.message}</p>
               </div>
+              {entry.type === "user" && (
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
+                  className="h-[33px] w-[33px] rounded-full ml-2"
+                />
+              )}
             </div>
-          </div>
-        </div>
-        <div className="mt-3 flex gap-4 items-end justify-end">
-          <div
-            className="bg-gray-700 p-3 flex items-center justify-center rounded-4xl
-            4 max-w-[280px] ml-2"
-          >
-            <div className="w-auto">
-              <p className="text-white text-[13px]"> I am Jin Sakai.</p>
-            </div>
-          </div>
-          <div>
-            <img
-              src="jinsakai.png"
-              className="h-[33px] w-[33px] rounded-full object-contain border-1 border-gray-800"
-            />
-          </div>
-        </div>
-        <div className="mt-3">
-          <div className="flex">
-            <div className="p-2">
-              <img
-                src="./kratos.png"
-                className="h-[33px] w-[33px] rounded-full object-contain border-1 border-gray-800"
-              />
-            </div>
-            <div
-              className="bg-gray-700 p-3 flex items-center justify-center rounded-4xl
-            4 max-w-[280px]"
-            >
-              <div className="w-auto">
-                <p className="text-white text-[13px]"> Good to meet you.</p>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
 
         <div className="flex items-center justify-center gap-2 ml-2 p-2 mt-6">
           <input
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
             placeholder="Type Something."
             className="placeholder:text-gray-400 border-2 border-gray-800 rounded-2xl p-2 w-[370px] text-white bg-transparent outline-none"
           />
@@ -161,6 +171,7 @@ const AiCharecterChat = () => {
             size={28}
             color="#00f5c0"
             className="cursor-pointer"
+            onClick={handleChatMessages}
           />
         </div>
       </div>
