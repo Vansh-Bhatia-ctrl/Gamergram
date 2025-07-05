@@ -1,4 +1,6 @@
 import { ArrowLeft, Search } from "lucide-react";
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 let images = [
   { src: "/kratos.png", name: "Kratos" },
@@ -23,6 +25,36 @@ let AiCharecters = [
 ];
 
 const AiChatBox = () => {
+  const [characters, setCharacters] = useState([]);
+  const navigate = useNavigate();
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (!token) {
+      navigate("/login");
+      return;
+    }
+
+    const fetchedCharacters = async () => {
+      try {
+        const response = await fetch("http://localhost:3000/fetchai/all", {
+          headers: { Authorization: `Bearer ${token}` },
+        });
+
+        if (!response.ok) {
+          throw new Error("Failed to fetch characters");
+        }
+
+        const data = await response.json();
+        setCharacters(data);
+        console.log(data);
+      } catch (error) {
+        console.error("Failed to fetch characters", error);
+      }
+    };
+
+    fetchedCharacters();
+  }, []);
+
   return (
     <>
       <div className="h-full w-full bg-gradient-to-b from-custompurple-100 to-customblue-100">
@@ -50,19 +82,29 @@ const AiChatBox = () => {
         {/*Ai charecters*/}
         <div className="overflow-x-hidden mt-2">
           <div className="flex gap-4 w-max ml-2  ">
-            {images.map((img, idx) => (
-              <div key={idx} className="flex flex-col items-center relative">
-                <img
-                  src={img.src}
-                  alt={img.name}
-                  className="w-[60px] h-[60px] rounded-full border-1 border-gray-800 object-contain bg-transparent sm:h-[80px] sm:w-[80px]"
-                />
-                <p className="text-sm mt-1 text-gray-300 orbitron">
-                  {img.name}
-                </p>
-                <div className="w-[12px] h-[12px] rounded-full bg-green-700 absolute bottom-[25px] left-[40px]"></div>
-              </div>
-            ))}
+            {characters.length > 0 ? (
+              characters.map((character) => (
+                <div
+                  key={character._id}
+                  className="flex flex-col items-center relative w-[70px] sm:w-[100px] mx-2"
+                  onClick={() =>
+                    navigate(`/charecterchatbox/${character.userName}`)
+                  }
+                >
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
+                    alt={character.Name}
+                    className="w-[60px] h-[60px] rounded-full border-1 border-gray-800 object-contain bg-transparent sm:h-[80px] sm:w-[80px]"
+                  />
+                  <p className="text-sm mt-1 text-gray-300 orbitron text-center truncate w-full">
+                    {character.Name}
+                  </p>
+                  <div className="w-[15px] h-[15px] rounded-full bg-green-700 absolute bottom-[25px] left-[48px]"></div>
+                </div>
+              ))
+            ) : (
+              <p className="text-white">An error occured, please try again.</p>
+            )}
           </div>
         </div>
 
@@ -71,21 +113,32 @@ const AiChatBox = () => {
           <div className="p-5 mt-3">
             <p className="text-white">Messages</p>
           </div>
-          {AiCharecters.map((charecter) => (
-            <div className="p-4 flex gap-6 relative focus:bg-gray-600">
-              <img
-                src={charecter.src}
-                className="h-[50px] w-[50px] rounded-full object-contain border-1 border-gray-600"
-              />
-              <div className="">
-                <p className="text-white font-bold text-[14px]">{charecter.name}</p>
-                <p className="text-gray-400 text-[12.5px]">
-                  Active Now
-                </p>
-                <div className="w-[12px] h-[12px] rounded-full bg-green-700 absolute bottom-[17px] left-[53px]"></div>
+
+          {characters.length > 0 ? (
+            characters.map((character) => (
+              <div
+                index={character._id}
+                className="p-4 flex gap-6 relative focus:bg-gray-600"
+                onClick={() =>
+                  navigate(`/charecterchatbox/${character.userName}`)
+                }
+              >
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
+                  className="h-[50px] w-[50px] rounded-full object-contain border-1 border-gray-600"
+                />
+                <div className="">
+                  <p className="text-white font-bold text-[14px]">
+                    {character.Name}
+                  </p>
+                  <p className="text-gray-400 text-[12.5px]">Active Now</p>
+                  <div className="w-[12px] h-[12px] rounded-full bg-green-700 absolute bottom-[17px] left-[53px]"></div>
+                </div>
               </div>
-            </div>
-          ))}
+            ))
+          ) : (
+            <p className="text-white">An error occured, please try again.</p>
+          )}
         </div>
       </div>
     </>

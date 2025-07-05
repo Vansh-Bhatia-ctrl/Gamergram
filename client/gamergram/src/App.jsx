@@ -29,7 +29,7 @@ const router = createBrowserRouter([
     element: <AiChatBox />,
   },
   {
-    path: "charecterchatbox",
+    path: "charecterchatbox/:userName",
     element: <AiCharecterChat />,
   },
 ]);

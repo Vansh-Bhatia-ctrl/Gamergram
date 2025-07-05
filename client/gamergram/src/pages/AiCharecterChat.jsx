@@ -1,11 +1,41 @@
 import { ArrowLeft, UserRoundPlus, SendHorizontal } from "lucide-react";
+import { useEffect } from "react";
+import { useState } from "react";
+import { useParams } from "react-router-dom";
 
 const AiCharecterChat = () => {
+  const { userName } = useParams();
+  const [character, setCharacter] = useState(null);
+
+  useEffect(() => {
+    const fetchedAiCharacter = async () => {
+      try {
+        const res = await fetch(
+          `http://localhost:3000/fetchsingleAI/${userName}`
+        );
+
+        if (!res.ok) {
+          throw new Error("Failed to fetch AI character");
+        }
+
+        const data = await res.json();
+        setCharacter(data);
+        console.log(data);
+      } catch (error) {
+        console.error("Error fetching character:", error);
+      }
+    };
+
+    if (userName) {
+      fetchedAiCharacter();
+    }
+  }, [userName]);
+
   return (
     <>
       <div
-        className="h-full
-       w-full
+        className="h-screen
+       w-screen
        bg-gradient-to-b from-custompurple-100 to-customblue-100"
       >
         {/*Header and charecter info*/}
@@ -14,21 +44,26 @@ const AiCharecterChat = () => {
             <div className="flex items-center justify-center">
               <ArrowLeft size={23} color="#00f5c0" />
             </div>
-            <div className="flex gap-4 relative">
-              <img
-                src="/kratos.png"
-                className="h-[40px] w-[40px] rounded-full object-contain border-1 border-gray-800"
-              />
-              <div className="w-[10px] h-[10px] rounded-full bg-green-700 absolute bottom-[2px] left-[30px]"></div>
-              <div className="flex items-center justify-center flex-col">
-                <div className="flex items-start justify-start">
-                  <p className="text-white">Kratos</p>
-                </div>
-                <div>
-                  <p className="text-gray-400 text-[11px]">Active now</p>
+
+            {character && (
+              <div className="flex gap-4 relative">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
+                  className="h-[40px] w-[40px] rounded-full object-contain border-1 border-gray-800"
+                />
+                <div className="w-[10px] h-[10px] rounded-full bg-green-700 absolute bottom-[2px] left-[30px]"></div>
+                <div className="flex flex-col">
+                  <div className="flex items-center justify-center">
+                    <div className="flex items-start justify-start">
+                      <p className="text-white">{character.Name}</p>
+                    </div>
+                  </div>
+                  <div className="">
+                    <p className="text-gray-400 text-[11px]">Active now</p>
+                  </div>
                 </div>
               </div>
-            </div>
+            )}
           </div>
           <div className="p-4 flex items-center justify-center">
             <UserRoundPlus size={26} color="#00f5c0" />
@@ -36,32 +71,32 @@ const AiCharecterChat = () => {
         </div>
 
         {/*Avatar and brief about the charecter*/}
-        <div className="mt-8">
-          <div className="flex flex-col">
-            <div className="p-4 flex items-center justify-center">
-              <img
-                src="/kratos.png"
-                className="h-[120px] w-[120px] rounded-full object-contain border-1 border-gray-800"
-              />
-            </div>
-            <div className="p-4">
-              <div className="flex items-center justify-center">
-                <p className="text-white text-[20px] font-semibold">Kratos</p>
+        {character && (
+          <div className="mt-8">
+            <div className="flex flex-col">
+              <div className="p-4 flex items-center justify-center">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
+                  className="h-[120px] w-[120px] rounded-full object-contain border-1 border-gray-800"
+                />
               </div>
-              <div className="flex justify-center">
-                <div className="text-center max-w-[500px] mx-auto">
-                  <p className="text-gray-400 text-[14px]">
-                    Kratos is a legendary Spartan warrior and god-slayer from
-                    the God of War series. Known for his brutal strength and
-                    iconic Blades of Chaos, he battles gods and monsters alike.
-                    Once fueled by rage, Kratos now seeks redemption and guides
-                    his son through the harsh realms of Norse mythology.
+              <div className="p-4">
+                <div className="flex items-center justify-center">
+                  <p className="text-white text-[20px] font-semibold">
+                    {character.Name}
                   </p>
+                </div>
+                <div className="flex justify-center mt-4">
+                  <div className="text-center max-w-[500px] mx-auto">
+                    <p className="text-gray-400 text-[14px]">
+                     {character.bio}
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
+        )}
 
         {/*Actual chat between the charecter and the user*/}
         <div className="mt-10 flex justify-start items-start">
