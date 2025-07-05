@@ -8,6 +8,9 @@ const connectDB = require("./config/db");
 const authRoute = require("./routes/auth");
 const aiRoute = require("./routes/aiRoutes");
 const aiChat = require("./routes/aiChatRoute");
+const fetchAiCharacter = require("./routes/aiCharacterFetch");
+const fetchsingleAI = require("./routes/fetchAiCharacter");
+
 const { autoAiLogin } = require("./utils/autoAILogin");
 const aiChatSocket = require("./sockets/aiChatSocket");
 
@@ -48,6 +51,8 @@ const startServer = async () => {
     app.use("/users", authRoute);
     app.use("/ai", aiRoute);
     app.use("/chat", aiChat);
+    app.use("/fetchai", fetchAiCharacter);
+    app.use("/fetchsingleAI", fetchsingleAI);
 
     // Test route
     app.get("/", (req, res) => {
