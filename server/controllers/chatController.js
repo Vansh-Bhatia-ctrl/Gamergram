@@ -1,5 +1,5 @@
 const Chat = require("../models/aichat");
-const getAiReply = require("../utils/getAiReply");
+const { getAiReply } = require("../utils/getAiReply");
 
 const handleChatSave = async (socket, data) => {
   const { aiUserName, userMessage } = data;
