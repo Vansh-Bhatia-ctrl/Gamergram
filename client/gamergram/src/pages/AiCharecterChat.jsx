@@ -70,9 +70,9 @@ const AiCharecterChat = () => {
   return (
     <>
       <div
-        className="h-full
-       w-full
-       bg-gradient-to-b from-custompurple-100 to-customblue-100"
+        className="h-screen
+       w-screen
+       bg-gradient-to-b from-custompurple-100 to-customblue-100 relative "
       >
         {/*Header and charecter info*/}
         <div className="flex justify-between">
@@ -100,9 +100,6 @@ const AiCharecterChat = () => {
                 </div>
               </div>
             )}
-          </div>
-          <div className="p-4 flex items-center justify-center">
-            <UserRoundPlus size={26} color="#00f5c0" />
           </div>
         </div>
 
@@ -133,7 +130,7 @@ const AiCharecterChat = () => {
         )}
 
         {/*Actual chat between the charecter and the user*/}
-        <div className="mt-10 space-y-4 px-4">
+        <div className="flex flex-col px-4 mt-4 mb-28 h-[calc(100vh-380px)] overflow-y-auto space-y-4">
           {chatLog.map((entry, index) => (
             <div
               key={index}
@@ -147,7 +144,7 @@ const AiCharecterChat = () => {
                   className="h-[33px] w-[33px] rounded-full mr-2"
                 />
               )}
-              <div className="bg-gray-700 p-3 rounded-3xl max-w-[280px]">
+              <div className="bg-gray-700 p-3 rounded-3xl max-w-[70%] break-words whitespace-pre-wrap">
                 <p className="text-white text-sm">{entry.message}</p>
               </div>
               {entry.type === "user" && (
@@ -160,7 +157,7 @@ const AiCharecterChat = () => {
           ))}
         </div>
 
-        <div className="flex items-center justify-center gap-2 ml-2 p-2 mt-6">
+        <div className="absolute bottom-1 left-[2px] w-full flex items-center justify-center gap-2 p-2">
           <input
             value={message}
             onChange={(e) => setMessage(e.target.value)}
