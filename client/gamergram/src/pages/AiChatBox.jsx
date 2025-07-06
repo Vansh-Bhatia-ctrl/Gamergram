@@ -2,28 +2,6 @@ import { ArrowLeft, Search } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-let images = [
-  { src: "/kratos.png", name: "Kratos" },
-  { src: "/altair.png", name: "Altair" },
-  { src: "/nathandrake.png", name: "Nathan" },
-  { src: "/wukong.png", name: "Wukong" },
-  { src: "/jinsakai.png", name: "Jin" },
-  { src: "/kratos.png", name: "Kratos" },
-  { src: "/wukong.png", name: "Wukong" },
-  { src: "/jinsakai.png", name: "Jin" },
-];
-
-let AiCharecters = [
-  { src: "/kratos.png", name: "Kratos" },
-  { src: "/altair.png", name: "Altair" },
-  { src: "/nathandrake.png", name: "Nathan" },
-  { src: "/wukong.png", name: "Wukong" },
-  { src: "/jinsakai.png", name: "Jin" },
-  { src: "/kratos.png", name: "Kratos" },
-  { src: "/wukong.png", name: "Wukong" },
-  { src: "/jinsakai.png", name: "Jin" },
-];
-
 const AiChatBox = () => {
   const [characters, setCharacters] = useState([]);
   const navigate = useNavigate();
@@ -57,7 +35,7 @@ const AiChatBox = () => {
 
   return (
     <>
-      <div className="h-full w-full bg-gradient-to-b from-custompurple-100 to-customblue-100">
+      <div className="h-screen w-screen bg-gradient-to-b from-custompurple-100 to-customblue-100">
         {/* Header */}
         <div className="p-4 flex gap-4 items-center">
           <ArrowLeft size={23} color="#00f5c0" />
