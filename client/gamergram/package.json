@@ -20,6 +20,7 @@
     "react-router-dom": "^7.6.2",
     "react-scrollbars-custom": "^4.1.1",
     "react-simple-typewriter": "^5.0.1",
+    "react-social-login-buttons": "^4.1.1",
     "react-typed": "^2.0.12",
     "socket.io-client": "^4.8.1",
     "tailwindcss": "^4.1.5"
