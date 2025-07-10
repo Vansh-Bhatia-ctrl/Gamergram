@@ -23,6 +23,7 @@
     "react-social-login-buttons": "^4.1.1",
     "react-typed": "^2.0.12",
     "socket.io-client": "^4.8.1",
+    "styled-components": "^6.1.19",
     "tailwindcss": "^4.1.5"
   },
   "devDependencies": {
