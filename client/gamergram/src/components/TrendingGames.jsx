@@ -35,7 +35,7 @@ const TrendingGames = () => {
 
   return (
     <div>
-      <div className="px-4 pt-60 md:pt-80">
+      <div className="px-4 pt-40 md:pt-20">
         <motion.h1
           className="text-[#00CFFF] font-bold text-xl md:text-2xl"
           initial={{ opacity: 0, y: -20 }}
