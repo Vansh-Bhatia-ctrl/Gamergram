@@ -13,6 +13,9 @@
   --color-customgreen-500: #1f7f37;
   --color-customgray-300: #0e1620;
   --color-customblue-200: #121824;
+  --color-pure-green: #00ff00;
+  --color-pure-red:#FF2C2C;
+  --color-customyellow-200:#FF8C32
 }
 
 .orbitron {
@@ -20,7 +23,7 @@
 }
 
 .audiowide {
-  font-family: 'Audiowide', sans-serif;
+  font-family: "Audiowide", sans-serif;
 }
 
 @media (min-width: 370px) and (max-width: 639px) {
@@ -184,18 +187,91 @@
 }
 
 .no-scrollbar::-webkit-scrollbar {
-  display: none;                  
+  display: none;
 }
 
 .gradient-text {
-  background: linear-gradient(to right, #00FFFF, #BF00FF);
+  background: linear-gradient(to right, #00ffff, #bf00ff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 @media (min-width: 400px) and (max-width: 470px) {
   .top-margin {
-    top:170px;
-    left:30px;
+    top: 170px;
+    left: 30px;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 375px) {
+  .custom-margin-left {
+    margin-left: 45px;
+  }
+}
+
+@media (min-width: 431px) and (max-width: 451px) {
+  .custom-margin-left-2 {
+    margin-left: 46px;
+  }
+}
+
+@media (min-width: 452px) and (max-width: 471px) {
+  .custom-margin-left-3 {
+    margin-left: 58px;
+  }
+}
+
+@media (min-width: 472px) and (max-width: 491px) {
+  .custom-margin-left-4 {
+    margin-left: 66px;
+  }
+}
+
+
+@media (min-width: 492px) and (max-width: 511px) {
+  .custom-margin-left-5 {
+    margin-left: 76px;
+  }
+}
+
+
+@media (min-width: 512px) and (max-width: 531px) {
+  .custom-margin-left-6 {
+    margin-left: 85px;
+  }
+}
+
+@media (min-width: 532px) and (max-width: 551px) {
+  .custom-margin-left-7 {
+    margin-left: 96px;
+  }
+}
+
+@media (min-width: 552px) and (max-width: 571px) {
+  .custom-margin-left-8 {
+    margin-left: 104px;
+  }
+}
+
+@media (min-width: 572px) and (max-width: 591px) {
+  .custom-margin-left-9 {
+    margin-left: 114px;
+  }
+}
+@media (min-width: 592px) and (max-width: 612px) {
+  .custom-margin-left-10 {
+    margin-left: 124px;
+  }
+}
+
+@media (min-width: 613px) and (max-width: 633px) {
+  .custom-margin-left-11 {
+    margin-left: 134px;
+  }
+}
+
+@media (min-width: 634px) and (max-width: 639px) {
+  .custom-margin-left-12 {
+    margin-left: 144px;
   }
 }
