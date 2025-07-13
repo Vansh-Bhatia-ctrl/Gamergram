@@ -1,7 +1,6 @@
 import { Gamepad2 } from "lucide-react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import SteamLoginButton from "../components/SteamLoginButton";
 
 export default function LoginPage() {
   const [username, setUserName] = useState("");
@@ -82,7 +81,6 @@ export default function LoginPage() {
                 <button className="bg-customgreen-200 hover:bg-customgreen-300 text-customblue-100 orbitron font-semibold w-[240px] h-[38px] rounded-md cursor-pointer">
                   Sign-in
                 </button>
-                <SteamLoginButton />
                 <p className="text-gray-400">
                   Don't have an account?{" "}
                   <a className="text-customgreen-400 cursor-pointer hover:text-customgreen-500">

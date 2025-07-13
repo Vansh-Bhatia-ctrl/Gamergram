@@ -3,7 +3,7 @@ import Highlights from "../components/Highlights";
 import HighLights_2 from "../components/HighLights_2";
 import LiveStreamSection from "../components/LiveStreamSection";
 import TrendingGames from "../components/TrendingGames";
-import GamergramLogo from "./GamergramLogo";
+import GamergramLogo from "../components/GamergramLogo";
 
 const HomePage = () => {
   return (
