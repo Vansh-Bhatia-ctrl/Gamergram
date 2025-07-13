@@ -7,13 +7,12 @@ const session = require("express-session");
 const passport = require("passport");
 
 const connectDB = require("./config/db");
-require("./config/steamPassport");
 const authRoute = require("./routes/auth");
 const aiRoute = require("./routes/aiRoutes");
 const aiChat = require("./routes/aiChatRoute");
 const fetchAiCharacter = require("./routes/aiCharacterFetch");
 const fetchsingleAI = require("./routes/fetchAiCharacter");
-const steamAuth = require("./routes/steamAuth");
+const twitchLiveStream = require("./routes/fetchLiveStream");
 
 const { autoAiLogin } = require("./utils/autoAILogin");
 const aiChatSocket = require("./sockets/aiChatSocket");
@@ -74,7 +73,7 @@ const startServer = async () => {
     app.use("/chat", aiChat);
     app.use("/fetchai", fetchAiCharacter);
     app.use("/fetchsingleAI", fetchsingleAI);
-    app.use("/steam", steamAuth);
+    app.use("/twitch", twitchLiveStream);
 
     // Test route
     app.get("/", (req, res) => {
