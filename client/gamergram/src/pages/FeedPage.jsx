@@ -115,7 +115,7 @@ const FeedPage = () => {
 
   return (
     <>
-      <div className="h-full w-full bg-gradient-to-b from-custompurple-100 to-customblue-100 md:flex overflow-hidden">
+      <div className="h-full w-full bg-gradient-to-b from-customblue-200 to-custompurple-100 md:flex overflow-hidden">
         {/*Sidebar*/}
         <Sidebar />
 

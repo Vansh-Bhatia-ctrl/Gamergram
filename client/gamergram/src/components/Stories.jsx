@@ -49,7 +49,7 @@ const Stories = () => {
     <Scrollbar
       style={{ height: `${height}px` }}
       noScrollY
-      className="w-full md:max-w-[600px] mx-auto lg:max-w-[700px] lg:ml-[70px]"
+      className="w-full md:max-w-[600px] mx-auto lg:max-w-[810px] "
     >
       <div className="flex gap-4 px-4 w-max md:mt-4">
         {images.map((img, idx) => (
