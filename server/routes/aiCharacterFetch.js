@@ -1,8 +1,9 @@
 const express = require("express");
 const router = express.Router();
 const User = require("../models/users");
+const { validateAuth } = require("../middleware/verifyAuth");
 
-router.get("/all", async (req, res) => {
+router.get("/all", validateAuth, async (req, res) => {
   try {
     const fetchedCharacters = await User.find({ isAI: true });
     return res.status(200).json(fetchedCharacters);

@@ -1,8 +1,9 @@
 const express = require("express");
 const router = express.Router();
 const Chat = require("../models/aichat");
+const { validateAuth } = require("../middleware/verifyAuth");
 
-router.get("/:aiUserName", async (req, res) => {
+router.get("/:aiUserName", validateAuth, async (req, res) => {
   const { aiUserName } = req.params;
 
   try {

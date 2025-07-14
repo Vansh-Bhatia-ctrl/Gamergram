@@ -4,6 +4,7 @@ const gameNews = new mongoose.Schema({
   title: { type: String, required: true },
   slug: { type: String, required: true, unique: true },
   coverImages: { type: String, required: true },
+  screenshots: { type: [String], required: true },
   reviews: [
     {
       author: String,

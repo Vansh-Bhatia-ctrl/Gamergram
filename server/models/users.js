@@ -20,14 +20,8 @@ const usersSchema = new mongoose.Schema({
     required: true,
     minlength: 8,
   },
-  profilePicture: {
-    type: String,
-    required: false,
-  },
+
   isAI: { type: Boolean, default: false },
-  bio: { type: String, required: false },
-  following: [{ type: mongoose.Schema.Types.ObjectId, ref: "User" }],
-  followers: [{ type: mongoose.Schema.Types.ObjectId, ref: "User" }],
 });
 
 usersSchema.pre("save", async function (next) {
