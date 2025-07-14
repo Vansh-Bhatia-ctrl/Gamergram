@@ -3,7 +3,6 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import LoginPage from "./pages/LoginPage";
 import SignUp from "./pages/SignUp";
-import FeedPage from "./pages/FeedPage";
 import AiChatBox from "./pages/AiChatBox";
 import AiCharecterChat from "./pages/AiCharecterChat";
 
@@ -20,10 +19,7 @@ const router = createBrowserRouter([
     path: "login",
     element: <LoginPage />,
   },
-  {
-    path: "feed",
-    element: <FeedPage />,
-  },
+ 
   {
     path: "aiChatBox",
     element: <AiChatBox />,

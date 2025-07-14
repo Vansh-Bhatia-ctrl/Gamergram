@@ -70,7 +70,7 @@ const AiCharecterChat = () => {
   return (
     <>
       <div
-        className="h-screen
+        className="min-h-screen
        w-screen
        bg-gradient-to-b from-custompurple-100 to-customblue-100 relative "
       >

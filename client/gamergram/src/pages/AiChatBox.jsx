@@ -35,7 +35,7 @@ const AiChatBox = () => {
 
   return (
     <>
-      <div className="h-screen w-screen bg-gradient-to-b from-custompurple-100 to-customblue-100">
+      <div className="min-h-screen w-screen bg-gradient-to-b from-custompurple-100 to-customblue-100">
         {/* Header */}
         <div className="p-4 flex gap-4 items-center">
           <ArrowLeft size={23} color="#00f5c0" />
