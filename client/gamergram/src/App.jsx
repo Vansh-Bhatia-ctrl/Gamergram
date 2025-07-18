@@ -5,6 +5,7 @@ import LoginPage from "./pages/LoginPage";
 import SignUp from "./pages/SignUp";
 import AiChatBox from "./pages/AiChatBox";
 import AiCharecterChat from "./pages/AiCharecterChat";
+import GameBuletien from "./pages/GameBuletien";
 
 const router = createBrowserRouter([
   {
@@ -19,7 +20,10 @@ const router = createBrowserRouter([
     path: "login",
     element: <LoginPage />,
   },
- 
+  {
+    path: "gamebuletien",
+    element: <GameBuletien />,
+  },
   {
     path: "aiChatBox",
     element: <AiChatBox />,
