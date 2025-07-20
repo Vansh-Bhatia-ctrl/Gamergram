@@ -6,6 +6,7 @@ import SignUp from "./pages/SignUp";
 import AiChatBox from "./pages/AiChatBox";
 import AiCharecterChat from "./pages/AiCharecterChat";
 import GameBuletien from "./pages/GameBuletien";
+import GameDetails from "./pages/GameDetails";
 
 const router = createBrowserRouter([
   {
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
   {
     path: "gamebuletien",
     element: <GameBuletien />,
+  },
+  {
+    path: "gamebuletien/:gameid",
+    element: <GameDetails />,
   },
   {
     path: "aiChatBox",
