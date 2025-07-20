@@ -5,15 +5,12 @@ const gameNews = new mongoose.Schema({
   slug: { type: String, required: true, unique: true },
   coverImages: { type: String, required: true },
   screenshots: { type: [String], required: true },
-  reviews: [
-    {
-      author: String,
-      content: String,
-      source: String,
-      url: String,
-    },
-  ],
   ratings: { type: Number, required: true },
+  releaseDate: { type: String, required: true },
+  publisher: [{ type: String, required: true }],
+  tags: [{ type: String, required: true }],
+  platforms: [{ type: String, required: true }],
+  genre: [{ type: String, required: true }],
   storyLine: { type: String },
   news: [
     {
@@ -25,7 +22,7 @@ const gameNews = new mongoose.Schema({
       source: String,
     },
   ],
-
+  similarGames: [{ type: String }],
   createdAt: { type: Date, default: Date.now },
 });
 
