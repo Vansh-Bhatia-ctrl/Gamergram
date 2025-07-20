@@ -1,19 +1,9 @@
 import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
-import {
-  Search,
-  Menu,
-  Check,
-  ChevronDown,
-  House,
-  ClipboardX,
-  Radio,
-  BotMessageSquare,
-  Newspaper,
-  LibraryBig,
-  LogOut,
-} from "lucide-react";
+import { Search, Menu, Check, ChevronDown, LogOut } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
+import GameCards from "../components/GameCards";
+import Sidebar from "../components/Sidebar";
 
 const GameBuletien = () => {
   const [filter, setFilter] = useState("Relevance");
@@ -43,7 +33,7 @@ const GameBuletien = () => {
         {/*Header section*/}
         <div>
           <div className="p-4 flex justify-between items-center  gap-4 ">
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 lg:fixed">
               <Menu size={19} color="#fff" className="lg:hidden" />
               <h1 className="text-white tracking-widest font-extrabold md:text-lg orbitron lg:text-xl">
                 GAMERGRAM
@@ -51,13 +41,13 @@ const GameBuletien = () => {
             </div>
             <div className="relative">
               <input
-                className="w-[170px] bg-neutral-700 p-1 rounded-2xl placeholder-neutral-400 pl-8 sm:w-[300px] md:w-[400px] lg:w-[600px] lg:p-3 lg:pl-8 lg:rounded-4xl"
+                className="w-[170px] bg-neutral-700 p-1 rounded-2xl placeholder-neutral-400 pl-8 sm:w-[300px] md:w-[400px] lg:w-[600px] lg:p-3 lg:pl-8 lg:rounded-4xl lg:ml-[870px]"
                 placeholder="Search games"
               />
               <Search
                 color="#a3a3a3"
                 size={18}
-                className="absolute top-1.5 left-2 lg:top-3.5"
+                className="absolute top-1.5 left-2 lg:top-3.5 lg:left-[880px]"
               />
             </div>
           </div>
@@ -69,43 +59,8 @@ const GameBuletien = () => {
           <div className="hidden lg:block bg-transparent min-h-screen w-[250px] fixed px-10 py-7">
             <div className="flex flex-col justify-between h-ful">
               {/* TOP Menu Items */}
-              <div className="flex flex-col gap-10">
-                <div className="flex items-center gap-2">
-                  <House size={25} color="#fff" />
-                  <h1 className=" text-white text-[26px] font-bold">Home</h1>
-                </div>
-
-                <div className="flex items-center gap-2">
-                  <ClipboardX size={25} color="#fff" />
-                  <h1 className=" text-white text-[26px] font-bold">Forum</h1>
-                </div>
-
-                <div className="flex items-center gap-2">
-                  <Radio size={25} color="#fff" />
-                  <h1 className=" text-white text-[26px] font-bold">
-                    Broadcast
-                  </h1>
-                </div>
-
-                <div className="flex items-center gap-2">
-                  <BotMessageSquare size={25} color="#fff" />
-                  <h1 className=" text-white text-[26px] font-bold">AI Chat</h1>
-                </div>
-
-                <div className="flex items-center gap-2">
-                  <Newspaper size={25} color="#fff" />
-                  <h1 className=" text-white text-[26px] font-bold">
-                    Game News
-                  </h1>
-                </div>
-
-                <div className="flex items-center gap-2">
-                  <LibraryBig size={25} color="#fff" />
-                  <h1 className=" text-white text-[26px] font-bold">Saga</h1>
-                </div>
-              </div>
-
-              {/* BOTTOM Logout */}
+              <Sidebar />
+          
               <div className="mt-10">
                 <div className="flex items-center gap-2">
                   <LogOut size={25} color="#fff" />
@@ -125,7 +80,7 @@ const GameBuletien = () => {
             </div>
 
             {/*Filters Section*/}
-            <div className="flex gap-4 mt-5 ml-2 lg:ml-0">
+            <div className="flex gap-4 mt-5 ml-2 sm:flex sm:justify-center lg:flex lg:justify-start lg:ml-0 ">
               {/*filter dropdown*/}
               <DropdownMenu.Root
                 open={isFilterOpen}
@@ -220,34 +175,7 @@ const GameBuletien = () => {
             </div>
 
             {/*Game Cards Section*/}
-            {/* <div>
-          <div className="p-4">
-            <div className="h-[500px] w-auto rounded-xl bg-[#1E1E1E]">
-              <img
-                src="/cyberPunk.png"
-                className="rounded-t-xl h-[280px] w-full object-cover"
-              />
-            </div>
-          </div>
-
-          <div className="p-4">
-            <div className="h-[600px] w-auto rounded-xl bg-[#1E1E1E]">
-              <img
-                src="/elden_ring.png"
-                className="rounded-t-xl h-[280px] w-full object-cover"
-              />
-            </div>
-          </div>
-
-          <div className="p-4">
-            <div className="h-[600px] w-auto rounded-xl bg-[#1E1E1E]">
-              <img
-                src="/godOfWar.png"
-                className="rounded-t-xl h-[280px] w-full object-cover"
-              />
-            </div>
-          </div>
-        </div>   */}
+            <GameCards />
           </div>
         </div>
       </div>
