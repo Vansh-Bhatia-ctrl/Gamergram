@@ -15,6 +15,7 @@ const fetchsingleAI = require("./routes/fetchAiCharacter");
 const twitchLiveStream = require("./routes/fetchLiveStream");
 const generatecoverImages = require("./routes/RAWGcover");
 const fetchAllGames = require("./routes/getAllGame");
+const fetchGameData = require("./routes/getGameData");
 
 const { autoAiLogin } = require("./utils/autoAILogin");
 const aiChatSocket = require("./sockets/aiChatSocket");
@@ -78,6 +79,7 @@ const startServer = async () => {
     app.use("/twitch", twitchLiveStream);
     app.use("/RAWG", generatecoverImages);
     app.use("/games", fetchAllGames);
+    app.use("/gamedata", fetchGameData);
 
     // Test route
     app.get("/", (req, res) => {
