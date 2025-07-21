@@ -1,19 +1,47 @@
-import { Search, Menu } from "lucide-react";
+import { Menu, Heart, Plus } from "lucide-react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faWindows,
   faXbox,
   faPlaystation,
 } from "@fortawesome/free-brands-svg-icons";
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import { format, parseISO } from "date-fns";
 
 const GameDetails = () => {
+  const [gameData, setGameData] = useState([]);
+  const [showAllScreenshots, setShowAllScreenshots] = useState(false);
+  const { gameID } = useParams();
+  useEffect(() => {
+    async function getGameData() {
+      try {
+        const response = await fetch(
+          `http://localhost:3000/gamedata/${gameID}`,
+          {
+            method: "GET",
+            headers: { "Content-type": "application/json" },
+          }
+        );
+
+        const data = await response.json();
+        console.log(data);
+        setGameData(data);
+      } catch (error) {
+        console.error("Something went wrong", error.message);
+      }
+    }
+
+    getGameData();
+  }, []);
+
   return (
     <>
       <div className="min-h-screen min-w-screen bg-neutral-900 overflow-x-hidden lg:p-4">
         <div>
           <div className="p-4 flex justify-between items-center  gap-4 ">
             <div className="flex items-center gap-2 ">
-              <Menu size={19} color="#fff" className="lg:hidden" />
+              <Menu size={19} color="#fff" className="" />
               <h1 className="text-white tracking-widest font-extrabold md:text-lg orbitron lg:text-xl">
                 GAMERGRAM
               </h1>
@@ -22,31 +50,54 @@ const GameDetails = () => {
         </div>
 
         {/*Game Details Section*/}
-        <div>
+        <div className="sm:px-12 md:px-28 lg:px-45 xl:px-86">
           <div>
             <h1 className="text-white text-center font-bold text-3xl mb-4">
-              CyberPunk 2077
+              {gameData.title}
             </h1>
 
             {/**Cover Image and ScreenShots of the game*/}
             <div className="flex">
               {/*Cover Image of the game*/}
-              <img src="/cyberPunk.png" className="w-[63%] p-2 rounded-xl" />
+              <div className="p-2 w-[5000px]">
+                <img
+                  src={gameData.coverImages}
+                  className="w-full h-full object-cover rounded-xl"
+                />
+              </div>
 
-              <div>
+              <div className="p-2 flex flex-col gap-3 items-start">
                 {/*In-game ScreenShots*/}
-                <img
-                  src="https://media.rawg.io/media/screenshots/814/814c25d6fd1fd34a4e6dade645a3bda7.jpg"
-                  className="w-[200px] p-2 rounded-xl"
-                />
-                <img
-                  src="https://media.rawg.io/media/screenshots/2ab/2ab0b67e68b6ede6b19d80094b6f7f2a_qTSfS2g.jpg"
-                  className="w-[200px] p-2 rounded-xl"
-                />
-                <img
-                  src="https://media.rawg.io/media/screenshots/cd2/cd22af9d6ac593440defac6082760e4a.jpg"
-                  className="w-[200px] p-2 rounded-xl"
-                />
+                {gameData?.screenshots &&
+                  (showAllScreenshots
+                    ? gameData.screenshots.map((screenshot, index) => (
+                        <div key={index} className="rounded-xl overflow-hidden">
+                          <img src={screenshot} className="rounded-xl" />
+                        </div>
+                      ))
+                    : gameData.screenshots
+                        .slice(0, 3)
+                        .map((screenshot, index) => (
+                          <div
+                            key={index}
+                            className="relative rounded-xl overflow-hidden"
+                            onClick={() => {
+                              if (index === 2) setShowAllScreenshots(true);
+                            }}
+                            style={{
+                              cursor: index === 2 ? "pointer" : "default",
+                            }}
+                          >
+                            <img src={screenshot} className="rounded-xl" />
+                            {index === 2 && (
+                              <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
+                                <p className="text-white font-semibold text-sm">
+                                  View More
+                                </p>
+                              </div>
+                            )}
+                          </div>
+                        )))}
               </div>
             </div>
 
@@ -57,28 +108,37 @@ const GameDetails = () => {
                   <span className="flex items-center gap-2">
                     <p className="text-white font-bold">Release Date:</p>
                     <p className="text-neutral-400 text-[13.5px]">
-                      10 Dec 2020
+                      {" "}
+                      {gameData.releaseDate
+                        ? format(parseISO(gameData.releaseDate), "do MMMM yy")
+                        : "N/A"}
                     </p>
                   </span>
 
                   <span className="flex items-center gap-2">
                     <p className="text-white font-bold">Publisher:</p>
-                    <p className="text-neutral-400 text-[13.5px]">
-                      CD PROJEKT RED
-                    </p>
+                    {gameData.publisher &&
+                      gameData.publisher.map((pub) => (
+                        <p className="text-neutral-400 text-[13.5px]">{pub}</p>
+                      ))}
                   </span>
                 </div>
                 <div className="flex flex-col gap-2">
                   <span className="flex items-center gap-2">
                     <p className="text-white font-bold">Rating:</p>
-                    <p className="text-yellow-200 text-[13.5px]">4.7</p>
+                    <p className="text-yellow-200 text-[13.5px]">
+                      {gameData.ratings}
+                    </p>
                   </span>
 
                   <span className="flex items-center gap-2">
                     <p className="text-white font-bold">Genre:</p>
-                    <p className="text-neutral-400 text-[13.5px] line-clamp-1">
-                      Action, Shooter, RPG
-                    </p>
+                    {gameData.genre &&
+                      gameData.genre.map((gen) => (
+                        <p className="text-neutral-400 text-[13.5px] line-clamp-1">
+                          {gen}
+                        </p>
+                      ))}
                   </span>
                 </div>
               </div>
@@ -86,40 +146,48 @@ const GameDetails = () => {
               {/*Tags & platforms Section*/}
               <div>
                 <div className="p-2">
-                  <span className="flex items-start gap-2">
+                  <span className="flex items-start gap-2 flex-wrap">
                     <p className="text-white font-bold">Tags:</p>
-                    <p className="text-neutral-400 text-[13.5px] tracking-wider underline">
-                      {" "}
-                      Singleplayer, Atmospheric, RPG, Story Rich, Open World,
-                      First-Person, Sci-fi, Singleplayer, Atmospheric, RPG,
-                      Story Rich, Open World, First-Person, Sci-fi,
-                      Singleplayer, Atmospheric, RPG, Story Rich, Open World,
-                      First-Person, Sci-fi, Singleplayer, Atmospheric, RPG,
-                      Story Rich, Open World, First-Person, Sci-fi,
-                      Singleplayer, Atmospheric, RPG, Story Rich, Open World,
-                      First-Person, Sci-fi,{" "}
-                    </p>
+                    {gameData.tags &&
+                      gameData.tags.map((tag) => (
+                        <p className="text-neutral-400 text-[13.5px] tracking-wider underline">
+                          {" "}
+                          {tag}{" "}
+                        </p>
+                      ))}
                   </span>
                 </div>
 
-                <div className="p-2">
-                  <span className="flex gap-2">
-                    <p className="text-white font-bold">Platforms:</p>
+                <div className="flex gap-2 p-2">
+                  <p className="text-white font-bold">Platforms:</p>
+                  {gameData.platforms && (
                     <div className="flex items-center gap-4">
-                      <FontAwesomeIcon
-                        icon={faWindows}
-                        className="text-xl text-blue-500"
-                      />
-                      <FontAwesomeIcon
-                        icon={faXbox}
-                        className="text-xl text-green-600"
-                      />
-                      <FontAwesomeIcon
-                        icon={faPlaystation}
-                        className="text-xl text-white"
-                      />
+                      {gameData.platforms.some((platform) =>
+                        platform.includes("PC")
+                      ) && (
+                        <FontAwesomeIcon
+                          icon={faWindows}
+                          className="text-xl text-blue-500"
+                        />
+                      )}
+                      {gameData.platforms.some((platform) =>
+                        platform.includes("Xbox")
+                      ) && (
+                        <FontAwesomeIcon
+                          icon={faXbox}
+                          className="text-xl text-green-600"
+                        />
+                      )}
+                      {gameData.platforms.some((platform) =>
+                        platform.includes("PlayStation")
+                      ) && (
+                        <FontAwesomeIcon
+                          icon={faPlaystation}
+                          className="text-xl text-white"
+                        />
+                      )}
                     </div>
-                  </span>
+                  )}
                 </div>
               </div>
 
@@ -128,33 +196,16 @@ const GameDetails = () => {
                 <span>
                   <p className="text-white font-bold text-3xl">The World</p>
                   <p className="text-white text-[13.5px] mt-2">
-                    Cyberpunk 2077 is a science fiction game loosely based on
-                    the role-playing game Cyberpunk 2020. ###Setting The game is
-                    set in the year 2077 in a fictional futuristic metropolis
-                    Night City in California. In the world of the game, there
-                    are developed cybernetic augmentations that enhance people's
-                    strength, agility, and memory. The city is governed by
-                    corporations. Many jobs are taken over by the robots,
-                    leaving a lot of people poor and homeless. Night City has a
-                    roaring underworld, with black markets, underground
-                    surgeons, drug dealers, and street gangs abound.
-                    ###Characters The main protagonist is fully customizable,
-                    including his or her sex and appearance, and goes by the
-                    nickname V. He or she is an underground mercenary who does
-                    “dirty business” for the various contractors. An NPC
-                    companion named Jackie joins the protagonist early at the
-                    game, and various other companions may join the player on
-                    certain missions as the plot demands. However, the game has
-                    no parties and no companion system. ###Gameplay The player
-                    controls V from the first person view, with the third-person
-                    view used for cutscenes only. The protagonist can travel
-                    across the city on feet or using various vehicles, in a
-                    manner some observers compared to GTA series. There are many
-                    options for the character customization, including three
-                    character classes, and a variety of augmentations V can
-                    install to enhance his or her abilities.
+                    {gameData.storyLine}
                   </p>
                 </span>
+              </div>
+              {/*Follow button*/}
+              <div className="p-4">
+                <button className="px-2 py-2 text-white flex items-center gap-1 bg-neutral-700 rounded-3xl w-[100px]">
+                  <Plus size={20} color="#FFF" />
+                  Follow
+                </button>
               </div>
             </div>
           </div>
