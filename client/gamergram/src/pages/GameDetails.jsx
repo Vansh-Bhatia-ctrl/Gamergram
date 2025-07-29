@@ -1,4 +1,4 @@
-import { Menu, Heart, Plus } from "lucide-react";
+import { Menu, ArrowBigLeft, ArrowBigRight, Plus } from "lucide-react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faWindows,
@@ -12,6 +12,9 @@ import { format, parseISO } from "date-fns";
 const GameDetails = () => {
   const [gameData, setGameData] = useState([]);
   const [showAllScreenshots, setShowAllScreenshots] = useState(false);
+  const [showScreenshotModal, setShowScreenshotModal] = useState(false);
+  const [showScreenshotIndex, setShowScreenshotIndex] = useState(0);
+
   const { gameID } = useParams();
   useEffect(() => {
     async function getGameData() {
@@ -35,9 +38,33 @@ const GameDetails = () => {
     getGameData();
   }, []);
 
+  useEffect(() => {
+    if (showScreenshotModal) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    const preLoad = (url) => {
+      const img = new Image();
+      img.src = url;
+    };
+
+    if (gameData?.screenshots?.length > 0) {
+      const next = gameData.screenshots[showScreenshotIndex + 1];
+      const prev = gameData.screenshots[showScreenshotIndex - 1];
+      if (next) preLoad(next);
+      if (prev) preLoad(prev);
+    }
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [showScreenshotModal, gameData, showScreenshotIndex]);
+
   return (
     <>
-      <div className="min-h-screen min-w-screen bg-neutral-900 overflow-x-hidden lg:p-4">
+      <div className="min-h-screen min-w-screen bg-neutral-900 overflow-x-hidden lg:p-4 relative">
         <div>
           <div className="p-4 flex justify-between items-center  gap-4 ">
             <div className="flex items-center gap-2 ">
@@ -82,7 +109,8 @@ const GameDetails = () => {
                             key={index}
                             className="relative rounded-xl overflow-hidden"
                             onClick={() => {
-                              if (index === 2) setShowAllScreenshots(true);
+                              setShowScreenshotIndex(2);
+                              setShowScreenshotModal(true);
                             }}
                             style={{
                               cursor: index === 2 ? "pointer" : "default",
@@ -210,6 +238,56 @@ const GameDetails = () => {
             </div>
           </div>
         </div>
+
+        {/*Screenshot Window*/}
+        {showScreenshotModal && (
+          <div className="min-h-screen w-screen absolute bg-black/90 top-0 left-0 z-50">
+            <button
+              className="absolute top-4 right-4  text-white text-2xl z-50 cursor-pointer"
+              onClick={() => setShowScreenshotModal(false)}
+            >
+              ✕
+            </button>
+            <div className="flex items-center justify-around">
+              {showScreenshotIndex > 0 ? (
+                <div className="mt-[100px] cursor-pointer">
+                  <ArrowBigLeft
+                    size={35}
+                    color="#fff"
+                    onClick={() =>
+                      setShowScreenshotIndex((prevIndex) =>
+                        Math.max(prevIndex - 1, 0)
+                      )
+                    }
+                  />
+                </div>
+              ) : (
+                <div className="w-[155px] md:w-[35px] md:mt-[100px]" />
+              )}
+              <div className="md:h-[400px] md:p-10 flex items-center justify-center mt-[150px]">
+                <img
+                  src={gameData.screenshots[showScreenshotIndex]}
+                  className="md:h-[500px] rounded-xl md:object-cover"
+                />
+              </div>
+              {showScreenshotIndex < gameData.screenshots.length - 1 ? (
+                <div className="mt-[100px] cursor-pointer">
+                  <ArrowBigRight
+                    size={35}
+                    color="#fff"
+                    onClick={() =>
+                      setShowScreenshotIndex((prevIndex) =>
+                        Math.min(prevIndex + 1, gameData.screenshots.length - 1)
+                      )
+                    }
+                  />
+                </div>
+              ) : (
+                <div className="w-[155px] md:w-[35px] mt-[100px]" />
+              )}
+            </div>
+          </div>
+        )}
       </div>
     </>
   );
