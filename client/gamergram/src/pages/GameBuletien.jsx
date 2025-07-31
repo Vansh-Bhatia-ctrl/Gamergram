@@ -1,16 +1,42 @@
 import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
-import { Search, Menu, Check, ChevronDown, LogOut } from "lucide-react";
+import { Check, ChevronDown, LogOut } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import GameCards from "../components/GameCards";
 import Sidebar from "../components/Sidebar";
 import HeaderSection from "../components/HeaderSection";
 
 const GameBuletien = () => {
+  const Platforms = ["PlayStation", "Xbox", "PC"];
+  const Filters = ["Relevance", "Release Date", "Popularity"];
+
   const [filter, setFilter] = useState("Relevance");
   const [platform, setPlatform] = useState("Platform");
   const [isFilterOpen, setIsFilterOpen] = useState(false);
   const [isPlatformChange, setIsPlaformChage] = useState(false);
+  const [gameData, setGameData] = useState([]);
+
+  useEffect(() => {
+    async function getGameData() {
+      try {
+        const response = await fetch(
+          "http://localhost:3000/games/getallgames",
+          {
+            method: "GET",
+            headers: { "Content-type": "application/json" },
+          }
+        );
+
+        const data = await response.json();
+        setGameData(data);
+        console.log(data);
+      } catch (error) {
+        console.log(error.message);
+      }
+    }
+
+    getGameData();
+  }, []);
 
   const dropdownVariants = {
     hidden: { opacity: 0, y: -8, scale: 0.95 },
@@ -86,12 +112,7 @@ const GameBuletien = () => {
                           variants={dropdownVariants}
                           className="bg-neutral-800 text-white p-2 rounded-md shadow-lg"
                         >
-                          {[
-                            "Relevance",
-                            "Date Added",
-                            "Release Date",
-                            "Popularity",
-                          ].map((option) => (
+                          {Filters.map((option) => (
                             <DropdownMenu.Item
                               key={option}
                               className="px-4 py-2 cursor-pointer hover:bg-neutral-700 rounded-md flex items-center justify-between"
@@ -134,21 +155,19 @@ const GameBuletien = () => {
                           variants={dropdownVariants}
                           className="bg-neutral-800 text-white p-2 rounded-md shadow-lg"
                         >
-                          {["PlayStation", "Xbox", "Nintendo", "PC"].map(
-                            (option) => (
-                              <DropdownMenu.Item
-                                key={option}
-                                className="px-4 py-2 cursor-pointer hover:bg-neutral-700 rounded-md flex Items-center justify-between"
-                                onSelect={(event) => {
-                                  event.preventDefault();
-                                  setPlatform(option);
-                                }}
-                              >
-                                {option}
-                                {platform === option && <Check size={16} />}
-                              </DropdownMenu.Item>
-                            )
-                          )}
+                          {Platforms.map((option) => (
+                            <DropdownMenu.Item
+                              key={option}
+                              className="px-4 py-2 cursor-pointer hover:bg-neutral-700 rounded-md flex Items-center justify-between"
+                              onSelect={(event) => {
+                                event.preventDefault();
+                                setPlatform(option);
+                              }}
+                            >
+                              {option}
+                              {platform === option && <Check size={16} />}
+                            </DropdownMenu.Item>
+                          ))}
                         </motion.div>
                       </DropdownMenu.Content>
                     )}
@@ -158,7 +177,11 @@ const GameBuletien = () => {
             </div>
 
             {/*Game Cards Section*/}
-            <GameCards />
+            <GameCards
+              gameData={gameData}
+              platForms={platform}
+              filters={Filters}
+            />
           </div>
         </div>
       </div>

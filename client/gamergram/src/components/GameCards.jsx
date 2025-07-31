@@ -6,40 +6,32 @@ import {
   faXbox,
   faPlaystation,
 } from "@fortawesome/free-brands-svg-icons";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
-const GameCards = () => {
+const GameCards = ({ gameData, platForms }) => {
   const [currentPage, setCurrentPage] = useState(0);
-  const [gameData, setGameData] = useState([]);
-
-  useEffect(() => {
-    async function getGameData() {
-      try {
-        const response = await fetch(
-          "http://localhost:3000/games/getallgames",
-          {
-            method: "GET",
-            headers: { "Content-type": "application/json" },
-          }
-        );
-
-        const data = await response.json();
-        setGameData(data);
-        console.log(data);
-      } catch (error) {
-        console.log(error.message);
-      }
-    }
-
-    getGameData();
-  }, []);
 
   const gamesPerPage = 54;
 
   const totalPages = Math.ceil(gameData.length / gamesPerPage);
   const startIndex = currentPage * gamesPerPage;
   const endIndex = startIndex + gamesPerPage;
-  const currentGames = gameData.slice(startIndex, endIndex);
+  const filteredGames = gameData.filter((game) => {
+    if (platForms === "Platform") return true;
+
+    if (platForms === "Xbox") {
+      return game.platforms.some((xb) => xb.includes("Xbox"));
+    }
+
+    if (platForms === "PlayStation") {
+      return game.platforms.some((ps) => ps.includes("PlayStation"));
+    }
+
+    return true;
+  });
+
+  const currentGames = filteredGames.slice(startIndex, endIndex);
+
   return (
     <>
       <div className="p-2 mt-2 flex flex-col gap-4 game-card-size-1 sm:flex sm:flex-col sm:justify-center sm:items-center sm:flex-nowrap sm:gap-[1rem] lg:grid lg:grid-cols-2 xl:grid xl:grid-cols-3">
@@ -49,6 +41,7 @@ const GameCards = () => {
           const hasPlaystation = game.platforms.some((p) =>
             p.includes("PlayStation")
           );
+
           return (
             <Link
               to={`/gamebuletien/${game._id}`}
