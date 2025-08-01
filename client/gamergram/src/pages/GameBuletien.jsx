@@ -5,19 +5,22 @@ import { useEffect, useState } from "react";
 import GameCards from "../components/GameCards";
 import Sidebar from "../components/Sidebar";
 import HeaderSection from "../components/HeaderSection";
+import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 
 const GameBuletien = () => {
   const Platforms = ["PlayStation", "Xbox", "PC"];
   const Filters = ["Relevance", "Release Date", "Popularity"];
 
-  const [filter, setFilter] = useState("Relevance");
+  const [filter, setFilter] = useState("Filter");
   const [platform, setPlatform] = useState("Platform");
   const [isFilterOpen, setIsFilterOpen] = useState(false);
   const [isPlatformChange, setIsPlaformChage] = useState(false);
   const [gameData, setGameData] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     async function getGameData() {
+      setIsLoading(true);
       try {
         const response = await fetch(
           "http://localhost:3000/games/getallgames",
@@ -33,6 +36,7 @@ const GameBuletien = () => {
       } catch (error) {
         console.log(error.message);
       }
+      setIsLoading(false);
     }
 
     getGameData();
@@ -180,8 +184,17 @@ const GameBuletien = () => {
             <GameCards
               gameData={gameData}
               platForms={platform}
-              filters={Filters}
+              filters={filter}
             />
+            {isLoading && (
+              <div className="flex items-center justify-center ml-[350px]">
+                <DotLottieReact
+                  src="https://lottie.host/7803dbda-7802-4570-b64c-6adb3d9cce04/3173B4Qe5z.lottie"
+                  loop
+                  autoplay
+                />
+              </div>
+            )}
           </div>
         </div>
       </div>

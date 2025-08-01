@@ -8,7 +8,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { useState } from "react";
 
-const GameCards = ({ gameData, platForms }) => {
+const GameCards = ({ gameData, platForms, filters }) => {
   const [currentPage, setCurrentPage] = useState(0);
 
   const gamesPerPage = 54;
@@ -16,19 +16,31 @@ const GameCards = ({ gameData, platForms }) => {
   const totalPages = Math.ceil(gameData.length / gamesPerPage);
   const startIndex = currentPage * gamesPerPage;
   const endIndex = startIndex + gamesPerPage;
-  const filteredGames = gameData.filter((game) => {
-    if (platForms === "Platform") return true;
+  let filteredGames = gameData;
 
-    if (platForms === "Xbox") {
-      return game.platforms.some((xb) => xb.includes("Xbox"));
-    }
+  //Platform filters for the games
+  if (platForms !== "Platform") {
+    filteredGames = filteredGames.filter((game) => {
+      if (platForms === "PC") {
+        return game.platforms.includes("PC");
+      } else if (platForms === "PlayStation") {
+        return game.platforms.some((ps) => ps.includes("PlayStation"));
+      } else {
+        return game.platforms.some((xb) => xb.includes("Xbox"));
+      }
+    });
+  }
 
-    if (platForms === "PlayStation") {
-      return game.platforms.some((ps) => ps.includes("PlayStation"));
-    }
-
-    return true;
-  });
+  //Filters for the games
+  if (filters === "Relevance") {
+    filteredGames = [...filteredGames].sort((a, b) => b.ratings - a.ratings);
+  } else if (filters === "Release Date") {
+    filteredGames = [...filteredGames].sort(
+      (a, b) => new Date(b.releaseDate) - new Date(a.releaseDate)
+    );
+  } else if (filters === "Popularity") {
+    //need to make the follow funtionality, wishlisting functionality, and check which games are comming more in news , uske hisab se popularity filter will work , to jab yeh sab bana lega you need to work on the popularity filter
+  }
 
   const currentGames = filteredGames.slice(startIndex, endIndex);
 
