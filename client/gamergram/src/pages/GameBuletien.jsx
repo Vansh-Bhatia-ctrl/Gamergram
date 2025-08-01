@@ -17,6 +17,7 @@ const GameBuletien = () => {
   const [isPlatformChange, setIsPlaformChage] = useState(false);
   const [gameData, setGameData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+  const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
     async function getGameData() {
@@ -63,7 +64,10 @@ const GameBuletien = () => {
       <div className="min-h-screen min-w-screen bg-neutral-900 overflow-x-hidden lg:p-4">
         {/*Header section*/}
         <div>
-          <HeaderSection />
+          <HeaderSection
+            searchTerm={searchTerm}
+            setSearchTerm={setSearchTerm}
+          />
         </div>
 
         {/*Heading game section*/}
@@ -185,9 +189,11 @@ const GameBuletien = () => {
               gameData={gameData}
               platForms={platform}
               filters={filter}
+              searchTerm={searchTerm}
             />
+
             {isLoading && (
-              <div className="flex items-center justify-center ml-[350px]">
+              <div className="flex items-center justify-center ">
                 <DotLottieReact
                   src="https://lottie.host/7803dbda-7802-4570-b64c-6adb3d9cce04/3173B4Qe5z.lottie"
                   loop

@@ -8,7 +8,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { useState } from "react";
 
-const GameCards = ({ gameData, platForms, filters }) => {
+const GameCards = ({ gameData, platForms, filters, searchTerm }) => {
   const [currentPage, setCurrentPage] = useState(0);
 
   const gamesPerPage = 54;
@@ -40,6 +40,12 @@ const GameCards = ({ gameData, platForms, filters }) => {
     );
   } else if (filters === "Popularity") {
     //need to make the follow funtionality, wishlisting functionality, and check which games are comming more in news , uske hisab se popularity filter will work , to jab yeh sab bana lega you need to work on the popularity filter
+  }
+
+  if (searchTerm.trim() !== "") {
+    filteredGames = filteredGames.filter((game) =>
+      game.title.toLowerCase().includes(searchTerm.toLowerCase())
+    );
   }
 
   const currentGames = filteredGames.slice(startIndex, endIndex);
@@ -109,21 +115,23 @@ const GameCards = ({ gameData, platForms, filters }) => {
           );
         })}
       </div>
-      <div className="flex flex-wrap justify-center gap-2 sm:gap-4 mt-6 px-2 mb-4">
-        {Array.from({ length: totalPages }, (_, index) => (
-          <button
-            key={index}
-            onClick={() => setCurrentPage(index)}
-            className={`${
-              currentPage === index
-                ? "bg-white text-black"
-                : "bg-neutral-700 text-white"
-            }   px-4 py-2 rounded-full bg-neutral-700 hover:bg-white hover:text-black transition duration-300 shadow-md text-sm sm:text-base cursor-pointer`}
-          >
-            {index + 1}
-          </button>
-        ))}
-      </div>
+      {searchTerm.trim === "" && (
+        <div className="flex flex-wrap justify-center gap-2 sm:gap-4 mt-6 px-2 mb-4">
+          {Array.from({ length: totalPages }, (_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentPage(index)}
+              className={`${
+                currentPage === index
+                  ? "bg-white text-black"
+                  : "bg-neutral-700 text-white"
+              }   px-4 py-2 rounded-full bg-neutral-700 hover:bg-white hover:text-black transition duration-300 shadow-md text-sm sm:text-base cursor-pointer`}
+            >
+              {index + 1}
+            </button>
+          ))}
+        </div>
+      )}
     </>
   );
 };
