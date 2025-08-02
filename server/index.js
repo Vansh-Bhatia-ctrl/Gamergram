@@ -16,9 +16,11 @@ const twitchLiveStream = require("./routes/fetchLiveStream");
 const generatecoverImages = require("./routes/RAWGcover");
 const fetchAllGames = require("./routes/getAllGame");
 const fetchGameData = require("./routes/getGameData");
+const newsRoutes = require("./routes/getNewsData");
 
 const { autoAiLogin } = require("./utils/autoAILogin");
 const aiChatSocket = require("./sockets/aiChatSocket");
+const { startNewsCron } = require("./controllers/news/cronjobnews");
 
 const app = express();
 
@@ -80,6 +82,9 @@ const startServer = async () => {
     app.use("/RAWG", generatecoverImages);
     app.use("/games", fetchAllGames);
     app.use("/gamedata", fetchGameData);
+    app.use("/api/news", newsRoutes);
+
+    startNewsCron();
 
     // Test route
     app.get("/", (req, res) => {
