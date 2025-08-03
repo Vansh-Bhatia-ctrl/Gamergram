@@ -1,9 +1,9 @@
 require("dotenv").config(); // to load your API key from .env
-const { saveAllNews } = require("./controllers/news");
+const { fetchXboxNews } = require("./controllers/news/fetchNewsXbox");
 
 (async () => {
   try {
-    const profiles = await saveAllNews();
+    const profiles = await fetchXboxNews();
 
     console.log("Generated Profiles:", profiles);
     console.log(JSON.stringify(profiles, null, 2)); // pretty print
