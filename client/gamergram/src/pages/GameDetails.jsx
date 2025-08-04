@@ -8,6 +8,7 @@ import {
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { format, parseISO } from "date-fns";
+import Header from "../components/Header";
 
 const GameDetails = () => {
   const [gameData, setGameData] = useState([]);
@@ -65,16 +66,7 @@ const GameDetails = () => {
   return (
     <>
       <div className="min-h-screen min-w-screen bg-neutral-900 overflow-x-hidden lg:p-4 relative">
-        <div>
-          <div className="p-4 flex justify-between items-center  gap-4 ">
-            <div className="flex items-center gap-2 ">
-              <Menu size={19} color="#fff" className="cursor-pointer" />
-              <h1 className="text-white tracking-widest font-extrabold md:text-lg orbitron lg:text-xl cursor-pointer">
-                GAMERGRAM
-              </h1>
-            </div>
-          </div>
-        </div>
+        <Header />
 
         {/*Game Details Section*/}
         <div className="sm:px-12 md:px-28 lg:px-45 xl:px-86">

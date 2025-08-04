@@ -7,6 +7,7 @@ import AiChatBox from "./pages/AiChatBox";
 import AiCharecterChat from "./pages/AiCharecterChat";
 import GameBuletien from "./pages/GameBuletien";
 import GameDetails from "./pages/GameDetails";
+import News from "./pages/News";
 
 const router = createBrowserRouter([
   {
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
   {
     path: "charecterchatbox/:userName",
     element: <AiCharecterChat />,
+  },
+  {
+    path: "news",
+    element: <News />,
   },
 ]);
 

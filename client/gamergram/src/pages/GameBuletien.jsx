@@ -6,6 +6,7 @@ import GameCards from "../components/GameCards";
 import Sidebar from "../components/Sidebar";
 import HeaderSection from "../components/HeaderSection";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
+import { useNavigate } from "react-router-dom";
 
 const GameBuletien = () => {
   const Platforms = ["PlayStation", "Xbox", "PC"];
@@ -23,11 +24,19 @@ const GameBuletien = () => {
     async function getGameData() {
       setIsLoading(true);
       try {
+        const token = localStorage.getItem("token");
+
+        if (!token) {
+          navigate("/login");
+        }
         const response = await fetch(
           "http://localhost:3000/games/getallgames",
           {
             method: "GET",
-            headers: { "Content-type": "application/json" },
+            headers: {
+              "Content-type": "application/json",
+              Authorization: `Bearer ${token}`,
+            },
           }
         );
 
