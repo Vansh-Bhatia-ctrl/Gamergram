@@ -1,7 +1,15 @@
-import { Menu, Bell } from "lucide-react";
+import {
+  Menu,
+  Bell,
+  TrendingUp,
+  MessageCircle,
+  Heart,
+  ExternalLink,
+} from "lucide-react";
 import SubHeader from "../components/SubHeader";
 import Filters from "../components/Filters";
 import PlatformFilters from "../components/PlatformFilters";
+import NewsCard from "../components/NewsCard";
 
 const News = () => {
   return (
@@ -45,6 +53,24 @@ const News = () => {
 
         {/*Platforms filter*/}
         <PlatformFilters />
+
+        {/*Trending Section*/}
+        <div className="mt-10 sm:items-center sm:gap-4 sm:min-w-screen md:max-w-4xl md:px-8 lg:max-w-6xl lg:mx-auto lg:px-14">
+          <div>
+            {/*Trending Header Section*/}
+            <div className="flex items-center gap-4">
+              <div className="ml-1 p-3 bg-gradient-to-r from-red-500 to-pink-500 rounded-2xl">
+                <TrendingUp className="text-white" />
+              </div>
+              <p className="tracking-wide sm:tracking-wider font-black bg-gradient-to-r from-red-400 to-pink-400 bg-clip-text text-transparent text-3xl">
+                🔥 TRENDING NOW
+              </p>
+            </div>
+
+            {/*News cards*/}
+            <NewsCard />
+          </div>
+        </div>
       </div>
     </>
   );
