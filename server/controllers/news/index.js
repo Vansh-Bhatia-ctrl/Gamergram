@@ -1,3 +1,4 @@
+const cron = require("node-cron");
 const { normalizeData } = require("./normalize");
 
 const saveAllNews = async (req, res) => {
@@ -9,13 +10,21 @@ const saveAllNews = async (req, res) => {
   }
 };
 
-module.exports = { saveAllNews };
+const startNewsCron = () => {
+  let lastRun = Date.now() - 2 * 24 * 60 * 60 * 1000;
 
-// const startNewsCron = () => {
-//   cron.schedule("0 10 */2 * *", async () => {
-//     console.log("🕒 Running scheduled job to normalize news...");
-//     await normalizeData();
-//   });
-// };
+  cron.schedule("0 10 * * *", async () => {
+    const now = Date.now();
+    if (now - lastRun >= 2 * 24 * 60 * 60 * 1000) {
+      console.log("🕒 Running scheduled job to normalize news...");
+      try {
+        await normalizeData();
+        lastRun = now;
+      } catch (error) {
+        console.error("❌ Cron job failed:", error);
+      }
+    }
+  });
+};
 
-// module.exports = { startNewsCron };
+module.exports = { startNewsCron, saveAllNews };
