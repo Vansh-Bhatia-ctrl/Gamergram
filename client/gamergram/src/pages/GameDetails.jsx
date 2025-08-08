@@ -1,4 +1,4 @@
-import { Menu, ArrowBigLeft, ArrowBigRight, Plus } from "lucide-react";
+import { ArrowBigLeft, ArrowBigRight, Plus } from "lucide-react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faWindows,

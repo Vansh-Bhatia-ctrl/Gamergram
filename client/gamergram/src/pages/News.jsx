@@ -1,15 +1,9 @@
-import {
-  Menu,
-  Bell,
-  TrendingUp,
-  MessageCircle,
-  Heart,
-  ExternalLink,
-} from "lucide-react";
+import { Menu, Bell, TrendingUp } from "lucide-react";
 import SubHeader from "../components/SubHeader";
 import Filters from "../components/Filters";
 import PlatformFilters from "../components/PlatformFilters";
 import NewsCard from "../components/NewsCard";
+import LoadMoreNewsButton from "../components/LoadMoreNewsButton";
 
 const News = () => {
   return (
@@ -69,6 +63,8 @@ const News = () => {
 
             {/*News cards*/}
             <NewsCard />
+
+            <LoadMoreNewsButton />
           </div>
         </div>
       </div>
