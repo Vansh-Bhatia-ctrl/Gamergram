@@ -18,6 +18,7 @@ const fetchAllGames = require("./routes/getAllGame");
 const fetchGameData = require("./routes/getGameData");
 const newsRoutes = require("./routes/getNewsData");
 const getAllNews = require("./routes/getallnews");
+const getYtTrailers = require("./routes/ytTrailers");
 
 const { autoAiLogin } = require("./utils/autoAILogin");
 const aiChatSocket = require("./sockets/aiChatSocket");
@@ -85,6 +86,7 @@ const startServer = async () => {
     app.use("/gamedata", fetchGameData);
     app.use("/api/news", newsRoutes);
     app.use("/getnews", getAllNews);
+    app.use("/yt", getYtTrailers);
 
     startNewsCron();
 
