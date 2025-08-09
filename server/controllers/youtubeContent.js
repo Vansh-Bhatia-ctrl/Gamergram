@@ -2,12 +2,12 @@ require("dotenv").config();
 const Youtube = require("../models/youtube");
 const fetch = require("node-fetch");
 
-const getYoutubeTrailers = async (req, res) => {
+const getYoutubeTrailers = async (channelID) => {
   const YOUTUBE_API_KEY = process.env.YOUTUBE_API_KEY;
-  const CHANNEL_ID = "UCjBp_7RuDBUYbd1LegWEJ8g";
+ 
   const URL = `https://www.googleapis.com/youtube/v3/search
 ?key=${YOUTUBE_API_KEY}
-&channelId=${CHANNEL_ID}
+&channelId=${channelID}
 &part=snippet
 &order=date
 &maxResults=20
@@ -40,7 +40,7 @@ const getYoutubeTrailers = async (req, res) => {
       console.log("items saved sucessfully", item.id.videoId);
     }
 
-    res.status(200).json({
+    console.log({
       success: true,
       message: "YouTube videos fetched and saved successfully",
       data: {

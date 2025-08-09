@@ -19,10 +19,12 @@ const fetchGameData = require("./routes/getGameData");
 const newsRoutes = require("./routes/getNewsData");
 const getAllNews = require("./routes/getallnews");
 const getYtTrailers = require("./routes/ytTrailers");
+const getAllVid = require("./routes/getAllYTVideos");
 
 const { autoAiLogin } = require("./utils/autoAILogin");
 const aiChatSocket = require("./sockets/aiChatSocket");
 const { startNewsCron } = require("./controllers/news/cronjobnews");
+const { runPlaystationCronJob } = require("./jobs/playstationcron");
 
 const app = express();
 
@@ -87,8 +89,10 @@ const startServer = async () => {
     app.use("/api/news", newsRoutes);
     app.use("/getnews", getAllNews);
     app.use("/yt", getYtTrailers);
+    app.use("/ytvideos", getAllVid);
 
     startNewsCron();
+    runPlaystationCronJob();
 
     // Test route
     app.get("/", (req, res) => {
