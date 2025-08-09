@@ -1,14 +1,9 @@
-import { Bell, Gamepad2, Target, Star } from "lucide-react";
-import { useState } from "react";
 
-const filters = [
-  { id: "all", label: "All News", icon: Gamepad2 },
-  { id: "trailers", label: "Trailers & Videos", icon: Target },
-  { id: "announcements", label: "Official Announcements", icon: Bell },
-];
+import useGameStore from "../store/useGameStore";
 
 const Filters = () => {
-  const [selectedFilter, setSelectedFilter] = useState("all");
+  const { filters, selectedFilter, setSelectedFilter } = useGameStore();
+
   return (
     <div className="sm:flex sm:items-center sm:gap-4 sm:min-w-screen md:max-w-4xl md:px-8 lg:max-w-6xl lg:mx-auto lg:px-14">
       <div className="flex flex-wrap lg:flex gap-3 mt-6 ">

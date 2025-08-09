@@ -1,6 +1,7 @@
 import { MessageCircle, Heart, ExternalLink } from "lucide-react";
 import useGameStore from "../store/useGameStore";
 import { format, parseISO } from "date-fns";
+import { Link } from "react-router-dom";
 
 const NewsCard = ({ newsList }) => {
   return (
@@ -54,7 +55,12 @@ const NewsCard = ({ newsList }) => {
                 </div>
               </div>
               <div className="flex items-center text-cyan-400 gap-1 cursor-pointer hover:text-cyan-300 transition-colors">
-                <span className="font-bold text-sm">READ MORE</span>
+                <Link
+                  to={`/news/:${newsItem._id}`}
+                  className="font-bold text-sm"
+                >
+                  READ MORE
+                </Link>
                 <ExternalLink size={15} />
               </div>
             </div>

@@ -6,9 +6,10 @@ import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import NewsSection from "../components/NewsSection";
 import useGameStore from "../store/useGameStore";
 import { useEffect } from "react";
+import VideoCards from "../components/VideoCards";
 
 const News = () => {
-  const { loading, fetchNews } = useGameStore();
+  const { loading, fetchNews, selectedFilter } = useGameStore();
 
   useEffect(() => {
     fetchNews();
@@ -58,25 +59,42 @@ const News = () => {
 
         {/*Trending Section*/}
         <div className="mt-10 sm:items-center sm:gap-4 sm:min-w-screen md:max-w-4xl md:px-8 lg:max-w-6xl lg:mx-auto lg:px-14">
-          <div>
-            {loading ? (
-              <div className="flex items-center justify-center" >
-                <DotLottieReact
-                  src="https://lottie.host/7803dbda-7802-4570-b64c-6adb3d9cce04/3173B4Qe5z.lottie"
-                  loop
-                  autoplay
-                />
-              </div>
-            ) : (
-              <>
-                <NewsSection type="trending">🔥 TRENDING NOW</NewsSection>
-                <NewsSection type="playstation">
-                  🎮 NEW IN PLAYSTATION
-                </NewsSection>
-                <NewsSection type="xbox"> 💚 NEW IN XBOX</NewsSection>{" "}
-              </>
-            )}
-          </div>
+          {loading ? (
+            <div className="flex items-center justify-center ">
+              <DotLottieReact
+                src="https://lottie.host/7803dbda-7802-4570-b64c-6adb3d9cce04/3173B4Qe5z.lottie"
+                loop
+                autoplay
+              />
+            </div>
+          ) : (
+            <div>
+              {selectedFilter === "all" && (
+                <>
+                  <NewsSection type="trending">🔥 TRENDING NOW</NewsSection>
+                  <NewsSection type="playstation">
+                    🎮 NEW IN PLAYSTATION
+                  </NewsSection>
+                  <NewsSection type="xbox"> 💚 NEW IN XBOX</NewsSection>{" "}
+                </>
+              )}
+
+              {selectedFilter === "trailers" && (
+                <>
+                  <VideoCards />
+                </>
+              )}
+
+              {selectedFilter === "announcements" && (
+                <>
+                  <NewsSection type="playstation">
+                    OFFICIAL PLAYSTATION NEWS
+                  </NewsSection>
+                  <NewsSection type="xbox"> OFFICIAL XBOX NEWS</NewsSection>
+                </>
+              )}
+            </div>
+          )}
         </div>
       </div>
     </>

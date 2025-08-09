@@ -9,6 +9,7 @@ import GameBuletien from "./pages/GameBuletien";
 import GameDetails from "./pages/GameDetails";
 import News from "./pages/News";
 import KratosSaga from "./pages/Kratos";
+import NewsDetails from "./pages/NewsDetails";
 
 const router = createBrowserRouter([
   {
@@ -42,6 +43,10 @@ const router = createBrowserRouter([
   {
     path: "news",
     element: <News />,
+  },
+  {
+    path: "news/:newsID",
+    element: <NewsDetails />,
   },
   {
     path: "kratos",
