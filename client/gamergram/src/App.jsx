@@ -8,6 +8,7 @@ import AiCharecterChat from "./pages/AiCharecterChat";
 import GameBuletien from "./pages/GameBuletien";
 import GameDetails from "./pages/GameDetails";
 import News from "./pages/News";
+import KratosSaga from "./pages/Kratos";
 
 const router = createBrowserRouter([
   {
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
   {
     path: "news",
     element: <News />,
+  },
+  {
+    path: "kratos",
+    element: <KratosSaga />,
   },
 ]);
 

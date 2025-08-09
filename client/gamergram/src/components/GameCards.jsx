@@ -13,9 +13,6 @@ const GameCards = ({ gameData, platForms, filters, searchTerm }) => {
 
   const gamesPerPage = 54;
 
-  const totalPages = Math.ceil(gameData.length / gamesPerPage);
-  const startIndex = currentPage * gamesPerPage;
-  const endIndex = startIndex + gamesPerPage;
   let filteredGames = gameData;
 
   //Platform filters for the games
@@ -42,14 +39,19 @@ const GameCards = ({ gameData, platForms, filters, searchTerm }) => {
     //need to make the follow funtionality, wishlisting functionality, and check which games are comming more in news , uske hisab se popularity filter will work , to jab yeh sab bana lega you need to work on the popularity filter
   }
 
-  if (searchTerm.trim() !== "") {
+  if (searchTerm && searchTerm.trim() !== "") {
     filteredGames = filteredGames.filter((game) =>
       game.title.toLowerCase().includes(searchTerm.toLowerCase())
     );
   }
 
+  const totalPages = Math.ceil(gameData.length / gamesPerPage);
+  const startIndex = currentPage * gamesPerPage;
+  const endIndex = startIndex + gamesPerPage;
   const currentGames = filteredGames.slice(startIndex, endIndex);
 
+  const isSearching = searchTerm && searchTerm.trim() !== "";
+  const showPagination = !isSearching && totalPages > 1;
   return (
     <>
       <div className="p-2 mt-2 flex flex-col gap-4 game-card-size-1 sm:flex sm:flex-col sm:justify-center sm:items-center sm:flex-nowrap sm:gap-[1rem] lg:grid lg:grid-cols-2 xl:grid xl:grid-cols-3">
@@ -115,7 +117,8 @@ const GameCards = ({ gameData, platForms, filters, searchTerm }) => {
           );
         })}
       </div>
-      {searchTerm.trim === "" && (
+
+      {showPagination && (
         <div className="flex flex-wrap justify-center gap-2 sm:gap-4 mt-6 px-2 mb-4">
           {Array.from({ length: totalPages }, (_, index) => (
             <button

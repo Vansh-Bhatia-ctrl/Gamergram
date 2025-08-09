@@ -4,7 +4,6 @@ import { useState } from "react";
 const filters = [
   { id: "all", label: "All News", icon: Gamepad2 },
   { id: "trailers", label: "Trailers & Videos", icon: Target },
-  { id: "events", label: "Events & Launches", icon: Star },
   { id: "announcements", label: "Official Announcements", icon: Bell },
 ];
 

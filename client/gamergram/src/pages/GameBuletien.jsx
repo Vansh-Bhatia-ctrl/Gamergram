@@ -89,8 +89,10 @@ const GameBuletien = () => {
 
               <div className="mt-10">
                 <div className="flex items-center gap-2">
-                  <LogOut size={25} color="#fff" />
-                  <h1 className=" text-white text-[18px] font-bold">Log-out</h1>
+                  <LogOut size={25} color="#fff" className="cursor-pointer" />
+                  <h1 className=" text-white text-[18px] font-bold cursor-pointer">
+                    Log-out
+                  </h1>
                 </div>
               </div>
             </div>

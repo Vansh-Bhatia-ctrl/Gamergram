@@ -1,17 +1,11 @@
 import { MessageCircle, Heart, ExternalLink } from "lucide-react";
 import useGameStore from "../store/useGameStore";
 import { format, parseISO } from "date-fns";
-import { useEffect, useState } from "react";
 
-const NewsCard = () => {
-  const { news, fetchNews } = useGameStore();
-  useEffect(() => {
-    fetchNews();
-  }, [fetchNews]);
-
+const NewsCard = ({ newsList }) => {
   return (
     <div className="p-2 flex flex-col md:grid md:grid-cols-2 xl:grid xl:grid-cols-3 gap-5 mt-4 md:mt-6">
-      {news.map((newsItem) => (
+      {newsList.map((newsItem) => (
         <div
           key={newsItem._id}
           className="flex flex-col h-full hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-500 hover:scale-[1.02] hover:-translate-y-1 bg-gradient-to-br from-neutral-800/80 to-neutral-900/80 backdrop-blur-sm border border-cyan-500/20 rounded-2xl overflow-hidden"

@@ -42,6 +42,7 @@ const GameDetails = () => {
   useEffect(() => {
     if (showScreenshotModal) {
       document.body.style.overflow = "hidden";
+      window.scrollTo({ top: 0, behavior: "smooth" });
     } else {
       document.body.style.overflow = "auto";
     }
