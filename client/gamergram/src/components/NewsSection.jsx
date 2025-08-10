@@ -2,6 +2,7 @@ import useGameStore from "../store/useGameStore";
 import NewsCard from "./NewsCard";
 
 const NewsSection = ({ type, children }) => {
+  const { searchItem, searchedNews, psNews, xboxNews, news } = useGameStore();
   const gradientClasses = {
     trending: "from-red-400 to-pink-400",
     playstation: "from-blue-400 via-indigo-500 to-purple-500",
@@ -10,11 +11,25 @@ const NewsSection = ({ type, children }) => {
 
   const gradientClass = gradientClasses[type] || gradientClasses.trending;
 
-  const newsList = useGameStore((state) => {
-    if (type === "playstation") return state.psNews;
-    if (type === "xbox") return state.xboxNews;
-    return state.news;
-  });
+  let newsList = [];
+
+  if (searchItem) {
+    if (type === "playstation") {
+      newsList = searchedNews.filter((n) => n.sourceName === "Playstation");
+    } else if (type === "xbox") {
+      newsList = searchedNews.filter((n) => n.sourceName === "Xbox");
+    } else {
+      newsList = searchedNews;
+    }
+  } else {
+    if (type === "playstation") {
+      newsList = psNews;
+    } else if (type === "xbox") {
+      newsList = xboxNews;
+    } else {
+      newsList = news;
+    }
+  }
 
   return (
     <>

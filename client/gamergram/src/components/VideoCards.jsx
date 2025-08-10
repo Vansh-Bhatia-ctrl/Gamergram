@@ -5,17 +5,35 @@ import { useEffect } from "react";
 import LoadMoreNewsButton from "./LoadMoreNewsButton";
 
 const VideoCards = () => {
-  const { videoData, getYTVideos, selectedFilter, gamePlayData } =
-    useGameStore();
+  const {
+    videoData,
+    searchedVideos,
+    gamePlayData,
+    searchedGameplays,
+    selectedFilter,
+    searchItem,
+    getYTVideos,
+  } = useGameStore();
+
   useEffect(() => {
     getYTVideos();
   }, [getYTVideos]);
 
-  const videoType =
-    (selectedFilter === "trailers" && videoData) ||
-    (selectedFilter === "gameplay" && gamePlayData);
+  const videosToShow = () => {
+    if (!searchItem) {
+      if (selectedFilter === "trailers") return videoData;
+      if (selectedFilter === "gameplay") return gamePlayData;
+    } else {
+      if (selectedFilter === "trailers") return searchedVideos;
+      if (selectedFilter === "gameplay") return searchedGameplays;
+    }
+    return [];
+  };
+
+  const videoType = videosToShow();
+
   return (
-    <div className="flex flex-col gap-4 p-2 md:grid md:grid-cols-2 lg:gird lg:grid-cols-3">
+    <div className="flex flex-col gap-4 p-2 md:grid md:grid-cols-2 lg:grid lg:grid-cols-3">
       {videoType.map((video) => (
         <div
           key={video._id}

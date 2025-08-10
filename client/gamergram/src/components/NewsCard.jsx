@@ -1,4 +1,4 @@
-import { MessageCircle, Heart, ExternalLink } from "lucide-react";
+import { MessageCircle, Heart, ExternalLink, BookmarkIcon } from "lucide-react";
 import useGameStore from "../store/useGameStore";
 import { format, parseISO } from "date-fns";
 import { Link } from "react-router-dom";
@@ -52,6 +52,9 @@ const NewsCard = ({ newsList }) => {
                     size={18}
                   />
                   <p className="text-sm">390</p>
+                </div>
+                <div className="text-neutral-400 flex items-center hover:text-white cursor-pointer">
+                  <BookmarkIcon size={18} />
                 </div>
               </div>
               <div className="flex items-center text-cyan-400 gap-1 cursor-pointer hover:text-cyan-300 transition-colors">

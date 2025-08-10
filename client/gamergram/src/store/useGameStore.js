@@ -24,6 +24,10 @@ const useGameStore = create((set, get) => ({
   videoData: [],
   gamePlayData: [],
   selectedPlatform: "all",
+  searchItem: "",
+  searchedNews: [],
+  searchedVideos: [],
+  searchedGameplays: [],
 
   fetchNews: async () => {
     set({ loading: true, error: null });
@@ -42,10 +46,7 @@ const useGameStore = create((set, get) => ({
       const data = await response.json();
       set({
         allNews: data,
-        news: data.filter(
-          (news) =>
-            news.sourceName !== "Xbox" && news.sourceName !== "Playstation"
-        ),
+        news: data,
         loading: false,
       });
 
@@ -113,6 +114,50 @@ const useGameStore = create((set, get) => ({
       );
       console.log(filteredData);
       set({ videoData: filteredData, gamePlayData: filteredGameplayData });
+    } catch (error) {
+      set({ error: error.message, loading: false });
+    }
+  },
+
+  searchSelectedItem: (value) => {
+    try {
+      const { allNews, gamePlayData, videoData } = get();
+      set({ searchItem: value });
+      let query = value.toLowerCase();
+
+      if (!query) {
+        set({
+          searchedNews: allNews,
+          searchedGameplays: gamePlayData,
+          searchedVideos: videoData,
+        });
+        return;
+      }
+
+      const filteredNews = allNews.filter(
+        (news) =>
+          news.title?.toLowerCase().includes(query) ||
+          news.description?.toLowerCase().includes(query) ||
+          news.sourceName?.toLowerCase().includes(query)
+      );
+
+      const filteredVideos = videoData.filter(
+        (video) =>
+          video.title?.toLowerCase().includes(query) ||
+          video.description?.toLowerCase().includes(query)
+      );
+
+      const filteredGameplays = gamePlayData.filter(
+        (vid) =>
+          vid.title?.toLowerCase().includes(query) ||
+          vid.description?.toLowerCase().includes(query)
+      );
+
+      set({
+        searchedGameplays: filteredGameplays,
+        searchedNews: filteredNews,
+        searchedVideos: filteredVideos,
+      });
     } catch (error) {
       set({ error: error.message, loading: false });
     }

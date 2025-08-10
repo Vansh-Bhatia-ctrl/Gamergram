@@ -9,8 +9,14 @@ import { useEffect } from "react";
 import VideoCards from "../components/VideoCards";
 
 const News = () => {
-  const { loading, fetchNews, selectedFilter, selectedPlatform } =
-    useGameStore();
+  const {
+    loading,
+    fetchNews,
+    selectedFilter,
+    selectedPlatform,
+    searchSelectedItem,
+    searchItem,
+  } = useGameStore();
 
   useEffect(() => {
     fetchNews();
@@ -40,6 +46,8 @@ const News = () => {
             {/*Search bar and  news letter button*/}
             <div className="mt-12 sm:flex-[4] md:flex-[6] lg:flex-[10]">
               <input
+                value={searchItem}
+                onChange={(e) => searchSelectedItem(e.target.value)}
                 className="text-white border-1 border-cyan-300/80 placeholder:text-cyan-300/50 p-4 w-[98%] ml-[2px] rounded-xl sm:w-full focus:border-cyan-400 focus:outline-none focus:shadow-lg focus:shadow-cyan-500/30 transition-all duration-300"
                 placeholder="🔍 Search gaming news, reviews, leaks..."
               />
@@ -70,25 +78,25 @@ const News = () => {
             </div>
           ) : (
             <div>
-              {(selectedFilter === "all") && (selectedPlatform === "all") && (
+              {selectedFilter === "all" && selectedPlatform === "all" && (
                 <>
-                  <NewsSection type="trending">🔥 TRENDING NOW</NewsSection>
-                  <NewsSection type="playstation">
-                    🎮 NEW IN PLAYSTATION
+                  <NewsSection type="trending">
+                    {!searchItem && "🔥 TRENDING NOW"}
                   </NewsSection>
-                  <NewsSection type="xbox"> 💚 NEW IN XBOX</NewsSection>{" "}
                 </>
               )}
 
               {selectedFilter === "all" &&
                 selectedPlatform === "playstation" && (
                   <NewsSection type="playstation">
-                    🎮 NEW IN PLAYSTATION
+                    {!searchItem && "🎮 NEW IN PLAYSTATION"}
                   </NewsSection>
                 )}
 
               {selectedFilter === "all" && selectedPlatform === "xbox" && (
-                <NewsSection type="xbox"> 💚 NEW IN XBOX</NewsSection>
+                <NewsSection type="xbox">
+                  {!searchItem && "💚 NEW IN XBOX"}
+                </NewsSection>
               )}
 
               {selectedFilter === "trailers" && (
@@ -100,9 +108,11 @@ const News = () => {
               {selectedFilter === "announcements" && (
                 <>
                   <NewsSection type="playstation">
-                    OFFICIAL PLAYSTATION NEWS
+                    {!searchItem && "OFFICIAL PLAYSTATION NEWS"}
                   </NewsSection>
-                  <NewsSection type="xbox"> OFFICIAL XBOX NEWS</NewsSection>
+                  <NewsSection type="xbox">
+                    {!searchItem && "OFFICIAL XBOX NEWS"}
+                  </NewsSection>
                 </>
               )}
 
