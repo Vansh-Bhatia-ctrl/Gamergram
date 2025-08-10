@@ -9,7 +9,8 @@ import { useEffect } from "react";
 import VideoCards from "../components/VideoCards";
 
 const News = () => {
-  const { loading, fetchNews, selectedFilter } = useGameStore();
+  const { loading, fetchNews, selectedFilter, selectedPlatform } =
+    useGameStore();
 
   useEffect(() => {
     fetchNews();
@@ -55,7 +56,7 @@ const News = () => {
         <Filters />
 
         {/*Platforms filter*/}
-        <PlatformFilters />
+        {selectedFilter === "all" && <PlatformFilters />}
 
         {/*Trending Section*/}
         <div className="mt-10 sm:items-center sm:gap-4 sm:min-w-screen md:max-w-4xl md:px-8 lg:max-w-6xl lg:mx-auto lg:px-14">
@@ -69,7 +70,7 @@ const News = () => {
             </div>
           ) : (
             <div>
-              {selectedFilter === "all" && (
+              {(selectedFilter === "all") && (selectedPlatform === "all") && (
                 <>
                   <NewsSection type="trending">🔥 TRENDING NOW</NewsSection>
                   <NewsSection type="playstation">
@@ -77,6 +78,17 @@ const News = () => {
                   </NewsSection>
                   <NewsSection type="xbox"> 💚 NEW IN XBOX</NewsSection>{" "}
                 </>
+              )}
+
+              {selectedFilter === "all" &&
+                selectedPlatform === "playstation" && (
+                  <NewsSection type="playstation">
+                    🎮 NEW IN PLAYSTATION
+                  </NewsSection>
+                )}
+
+              {selectedFilter === "all" && selectedPlatform === "xbox" && (
+                <NewsSection type="xbox"> 💚 NEW IN XBOX</NewsSection>
               )}
 
               {selectedFilter === "trailers" && (
@@ -91,6 +103,12 @@ const News = () => {
                     OFFICIAL PLAYSTATION NEWS
                   </NewsSection>
                   <NewsSection type="xbox"> OFFICIAL XBOX NEWS</NewsSection>
+                </>
+              )}
+
+              {selectedFilter === "gameplay" && (
+                <>
+                  <VideoCards />
                 </>
               )}
             </div>

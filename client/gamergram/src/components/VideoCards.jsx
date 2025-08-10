@@ -5,14 +5,18 @@ import { useEffect } from "react";
 import LoadMoreNewsButton from "./LoadMoreNewsButton";
 
 const VideoCards = () => {
-  const { videoData, getYTVideos } = useGameStore();
+  const { videoData, getYTVideos, selectedFilter, gamePlayData } =
+    useGameStore();
   useEffect(() => {
     getYTVideos();
   }, [getYTVideos]);
 
+  const videoType =
+    (selectedFilter === "trailers" && videoData) ||
+    (selectedFilter === "gameplay" && gamePlayData);
   return (
     <div className="flex flex-col gap-4 p-2 md:grid md:grid-cols-2 lg:gird lg:grid-cols-3">
-      {videoData.map((video) => (
+      {videoType.map((video) => (
         <div
           key={video._id}
           className="hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-500 hover:scale-[1.02] hover:-translate-y-1 bg-gradient-to-br from-neutral-800/80 to-neutral-900/80 backdrop-blur-sm border border-cyan-500/20 rounded-2xl"

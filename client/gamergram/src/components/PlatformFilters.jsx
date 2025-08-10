@@ -1,13 +1,7 @@
-import { useState } from "react";
-
-const platforms = [
-  { id: "all", label: "🎮 All" },
-  { id: "playstation", label: "🎮 PS" },
-  { id: "xbox", label: "🎯 Xbox" },
-];
+import useGameStore from "../store/useGameStore";
 
 const PlatformFilters = () => {
-  const [selectedPlatform, setSelectedPlatform] = useState("all");
+  const { selectedPlatform, platforms, setSelectedPlatform } = useGameStore();
   return (
     <div className="sm:flex sm:items-center sm:ml-1 sm:gap-4 sm:min-w-screen md:max-w-4xl md:px-8 lg:max-w-6xl lg:mx-auto lg:px-14">
       <div className="flex flex-wrap gap-2 mt-4">

@@ -15,8 +15,15 @@ const useGameStore = create((set, get) => ({
     { id: "gameplay", label: "Gameplays", icon: PlayCircle },
     { id: "announcements", label: "Official Announcements", icon: Bell },
   ],
+  platforms: [
+    { id: "all", label: "🎮 All" },
+    { id: "playstation", label: "🎮 PS" },
+    { id: "xbox", label: "🎯 Xbox" },
+  ],
   selectedFilter: "all",
   videoData: [],
+  gamePlayData: [],
+  selectedPlatform: "all",
 
   fetchNews: async () => {
     set({ loading: true, error: null });
@@ -89,6 +96,10 @@ const useGameStore = create((set, get) => ({
     set({ selectedFilter: filterID });
   },
 
+  setSelectedPlatform: (platformID) => {
+    set({ selectedPlatform: platformID });
+  },
+
   getYTVideos: async () => {
     try {
       const response = await fetch("http://localhost:3000/ytvideos/videos");
@@ -96,8 +107,12 @@ const useGameStore = create((set, get) => ({
         throw new Error("Failed to fetch videos, please try again.");
 
       const data = await response.json();
-      console.log(data);
-      set({ videoData: data });
+      const filteredData = data.filter((vid) => vid.type === "video");
+      const filteredGameplayData = data.filter(
+        (vid) => vid.type === "gameplay"
+      );
+      console.log(filteredData);
+      set({ videoData: filteredData, gamePlayData: filteredGameplayData });
     } catch (error) {
       set({ error: error.message, loading: false });
     }
