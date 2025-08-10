@@ -59,7 +59,7 @@ const NewsCard = ({ newsList }) => {
               </div>
               <div className="flex items-center text-cyan-400 gap-1 cursor-pointer hover:text-cyan-300 transition-colors">
                 <Link
-                  to={`/news/:${newsItem._id}`}
+                  to={`/news/${newsItem._id}`}
                   className="font-bold text-sm"
                 >
                   READ MORE

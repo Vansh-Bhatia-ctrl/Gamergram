@@ -28,6 +28,7 @@ const useGameStore = create((set, get) => ({
   searchedNews: [],
   searchedVideos: [],
   searchedGameplays: [],
+  newsDetails: {},
 
   fetchNews: async () => {
     set({ loading: true, error: null });
@@ -158,6 +159,22 @@ const useGameStore = create((set, get) => ({
         searchedNews: filteredNews,
         searchedVideos: filteredVideos,
       });
+    } catch (error) {
+      set({ error: error.message, loading: false });
+    }
+  },
+
+  fetchNewsDetails: async (newsID) => {
+    set({ loading: true, error: null });
+    try {
+      const response = await fetch(`http://localhost:3000/news/${newsID}`);
+      if (!response.ok) {
+        throw new Error("Something went wrong, Please try again!");
+      }
+
+      const data = await response.json();
+      console.log(data);
+      set({ newsDetails: data, loading: false });
     } catch (error) {
       set({ error: error.message, loading: false });
     }
