@@ -9,6 +9,12 @@ const youtubeSchema = new mongoose.Schema({
   channelID: { type: String, required: true },
   channelTitle: { type: String, required: true },
   videoURL: { type: String, required: true },
+
+  type: {
+    type: String,
+    enum: ["video", "gameplay"],
+    required: true,
+  },
 });
 
 const Youtube = mongoose.model("Youtube", youtubeSchema);

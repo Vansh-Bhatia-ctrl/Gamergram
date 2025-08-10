@@ -4,17 +4,32 @@ const fetch = require("node-fetch");
 
 const getYoutubeTrailers = async (channelID) => {
   const YOUTUBE_API_KEY = process.env.YOUTUBE_API_KEY;
- 
-  const URL = `https://www.googleapis.com/youtube/v3/search
-?key=${YOUTUBE_API_KEY}
-&channelId=${channelID}
-&part=snippet
-&order=date
-&maxResults=20
-&type=video`;
+  const VIDEO_CHANNELS = [
+    "UC-2Y8dQb0S6DtpxNgAKoJKA",
+    "UCjBp_7RuDBUYbd1LegWEJ8g",
+  ];
+
+  const contentType = VIDEO_CHANNELS.includes(channelID) ? "video" : "gameplay";
+
+  const URL = `https://www.googleapis.com/youtube/v3/search?key=${YOUTUBE_API_KEY}&channelId=${channelID}&part=snippet&order=date&maxResults=20&type=video`;
 
   try {
+    if (!YOUTUBE_API_KEY) {
+      throw new Error("YouTube API key is not configured");
+    }
+
+    if (!channelID) {
+      throw new Error("Channel ID is required");
+    }
+
     const response = await fetch(URL);
+
+    if (!response.ok) {
+      throw new Error(
+        `YouTube API request failed: ${response.status} ${response.statusText}`
+      );
+    }
+
     const data = await response.json();
     const items = data.items;
     const newItems = [];
@@ -33,6 +48,7 @@ const getYoutubeTrailers = async (channelID) => {
         channelID: item.snippet.channelId,
         channelTitle: item.snippet.channelTitle,
         videoURL: `https://www.youtube.com/watch?v=${item.id.videoId}`,
+        type: contentType,
       });
 
       await newItem.save();
