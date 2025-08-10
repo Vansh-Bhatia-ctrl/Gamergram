@@ -20,6 +20,7 @@ const newsRoutes = require("./routes/getNewsData");
 const getAllNews = require("./routes/getallnews");
 const getYtTrailers = require("./routes/ytTrailers");
 const getAllVid = require("./routes/getAllYTVideos");
+const getNewsDets = require("./routes/newsDetails");
 
 const { autoAiLogin } = require("./utils/autoAILogin");
 const aiChatSocket = require("./sockets/aiChatSocket");
@@ -90,6 +91,7 @@ const startServer = async () => {
     app.use("/getnews", getAllNews);
     app.use("/yt", getYtTrailers);
     app.use("/ytvideos", getAllVid);
+    app.use("/news", getNewsDets);
 
     startNewsCron();
     runPlaystationCronJob();
