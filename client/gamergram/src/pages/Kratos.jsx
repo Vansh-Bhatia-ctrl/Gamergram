@@ -505,6 +505,153 @@
 
 
 
+// import React, { useState } from 'react';
+// import { Gamepad2, User, Lock, Eye, EyeOff, Zap, Shield, Trophy } from 'lucide-react';
+
+// export default function GamerGramLogin() {
+//   const [showPassword, setShowPassword] = useState(false);
+//   const [email, setEmail] = useState('');
+//   const [password, setPassword] = useState('');
+//   const [isLoading, setIsLoading] = useState(false);
+
+//   const handleSubmit = async (e) => {
+//     e.preventDefault();
+//     setIsLoading(true);
+//     // Simulate login process
+//     await new Promise(resolve => setTimeout(resolve, 1500));
+//     setIsLoading(false);
+//   };
+
+//   return (
+//     <div className="min-h-screen bg-neutral-900 flex items-center justify-center p-4">
+//       {/* Main Login Container */}
+//       <div className="w-full max-w-md">
+//         {/* Logo Section */}
+//         <div className="text-center mb-8">
+//           <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg mb-4">
+//             <Gamepad2 className="w-8 h-8 text-white" />
+//           </div>
+//           <h1 className="text-3xl font-bold text-white mb-2">
+//             GAMER<span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500">GRAM</span>
+//           </h1>
+//           <p className="text-gray-400 text-sm">Connect. Play. Dominate.</p>
+//         </div>
+
+//         {/* Login Form */}
+//         <div className="bg-neutral-800 border border-neutral-700 rounded-lg p-6 shadow-lg">
+//           <div className="space-y-5">
+//             {/* Email Input */}
+//             <div>
+//               <label className="block text-sm font-medium text-gray-300 mb-2">
+//                 Email
+//               </label>
+//               <div className="relative">
+//                 <User className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+//                 <input
+//                   type="email"
+//                   value={email}
+//                   onChange={(e) => setEmail(e.target.value)}
+//                   className="w-full pl-10 pr-4 py-3 bg-neutral-700 border border-neutral-600 rounded-md text-white placeholder-gray-400 focus:border-cyan-500 focus:outline-none transition-colors"
+//                   placeholder="Enter your email"
+//                 />
+//               </div>
+//             </div>
+
+//             {/* Password Input */}
+//             <div>
+//               <label className="block text-sm font-medium text-gray-300 mb-2">
+//                 Password
+//               </label>
+//               <div className="relative">
+//                 <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+//                 <input
+//                   type={showPassword ? 'text' : 'password'}
+//                   value={password}
+//                   onChange={(e) => setPassword(e.target.value)}
+//                   className="w-full pl-10 pr-10 py-3 bg-neutral-700 border border-neutral-600 rounded-md text-white placeholder-gray-400 focus:border-cyan-500 focus:outline-none transition-colors"
+//                   placeholder="Enter your password"
+//                 />
+//                 <button
+//                   type="button"
+//                   onClick={() => setShowPassword(!showPassword)}
+//                   className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-cyan-400 transition-colors"
+//                 >
+//                   {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
+//                 </button>
+//               </div>
+//             </div>
+
+//             {/* Remember & Forgot */}
+//             <div className="flex items-center justify-between text-sm">
+//               <label className="flex items-center text-gray-300 cursor-pointer">
+//                 <input type="checkbox" className="w-4 h-4 text-cyan-500 bg-neutral-700 border-neutral-600 rounded mr-2" />
+//                 Remember me
+//               </label>
+//               <button className="text-cyan-400 hover:text-cyan-300 transition-colors">
+//                 Forgot password?
+//               </button>
+//             </div>
+
+//             {/* Login Button */}
+//             <button
+//               onClick={handleSubmit}
+//               disabled={isLoading}
+//               className="w-full py-3 px-4 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-medium rounded-md transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+//             >
+//               {isLoading ? (
+//                 <div className="flex items-center justify-center">
+//                   <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin mr-2" />
+//                   Signing in...
+//                 </div>
+//               ) : (
+//                 <div className="flex items-center justify-center">
+//                   <Zap className="w-4 h-4 mr-2" />
+//                   Sign In
+//                 </div>
+//               )}
+//             </button>
+//           </div>
+
+//           {/* Divider */}
+//           <div className="flex items-center my-6">
+//             <div className="flex-1 border-t border-neutral-600" />
+//             <span className="px-3 text-gray-500 text-sm">or</span>
+//             <div className="flex-1 border-t border-neutral-600" />
+//           </div>
+
+//           {/* Social Login */}
+//           <div className="grid grid-cols-2 gap-3">
+//             <button className="flex items-center justify-center px-4 py-2 bg-neutral-700 border border-neutral-600 rounded-md text-gray-300 hover:bg-neutral-600 transition-colors">
+//               <Shield className="w-4 h-4 mr-2" />
+//               Steam
+//             </button>
+//             <button className="flex items-center justify-center px-4 py-2 bg-neutral-700 border border-neutral-600 rounded-md text-gray-300 hover:bg-neutral-600 transition-colors">
+//               <Trophy className="w-4 h-4 mr-2" />
+//               Discord
+//             </button>
+//           </div>
+
+//           {/* Sign Up Link */}
+//           <div className="text-center text-gray-400 text-sm mt-6">
+//             New to GamerGram?{' '}
+//             <button className="text-cyan-400 hover:text-cyan-300 font-medium transition-colors">
+//               Create account
+//             </button>
+//           </div>
+//         </div>
+
+//         {/* Footer */}
+//         <div className="text-center mt-6">
+//           <div className="flex justify-center space-x-6 text-xs text-gray-500">
+//             <span>Privacy</span>
+//             <span>Terms</span>
+//             <span>Help</span>
+//           </div>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// }
 
 
 
@@ -520,289 +667,264 @@
 
 
 
-import React, { useState, useEffect } from 'react';
-import { ChevronLeft, Share2, Bookmark, Heart, MessageCircle, Eye, Calendar, Clock, User, ArrowUp } from 'lucide-react';
 
-const ArticlePage = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [readingProgress, setReadingProgress] = useState(0);
-  const [showScrollTop, setShowScrollTop] = useState(false);
-  const [isLiked, setIsLiked] = useState(false);
-  const [isBookmarked, setIsBookmarked] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollTop = window.scrollY;
-      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-      const scrollPercent = (scrollTop / docHeight) * 100;
-      
-      setReadingProgress(scrollPercent);
-      setIsScrolled(scrollTop > 50);
-      setShowScrollTop(scrollTop > 400);
-    };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
 
-  // Sample article data
-  const article = {
-    title: "Pokemon TCG Pocket Breaks Records with 1000+ Card Collection Launch",
-    subtitle: "The mobile adaptation brings the beloved trading card game to smartphones with unprecedented success",
-    author: "GameReporter",
-    publishDate: "Aug 10, 2025",
-    readTime: "5 min read",
-    views: "12.4K",
-    likes: 847,
-    comments: 156,
-    category: "Mobile Gaming",
-    tags: ["Pokemon", "TCG", "Mobile", "Cards"],
-    featuredImage: "https://live.staticflickr.com/65535/54705505730_e27e0b51d1_o.png",
-    content: `
-      The gaming world is buzzing with excitement as Pokemon TCG Pocket has shattered all expectations, becoming one of the most successful mobile game launches in recent memory. With over 1000 unique cards available at launch, the game has captured both longtime fans and newcomers alike.
+import React, { useState } from 'react';
+import { MessageCircle, Zap, Crown, Sword, Shield, Star, Sparkles } from 'lucide-react';
 
-      ## Revolutionary Mobile Experience
+export default function GamerGramAIChat() {
+  const [selectedCharacter, setSelectedCharacter] = useState(null);
 
-      Pokemon TCG Pocket represents a significant evolution in mobile gaming, bringing the tactical depth of the physical trading card game to smartphones with unprecedented polish. The development team has spent over three years perfecting the user experience, ensuring that every swipe, tap, and card interaction feels natural and satisfying.
+  const characters = [
+    {
+      id: 1,
+      name: "Master Chief",
+      title: "Spartan Super Soldier",
+      game: "Halo Series",
+      personality: "Strategic & Heroic",
+      status: "online",
+      image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=400&fit=crop&crop=face",
+      accent: "from-green-400 to-blue-500",
+      icon: Shield
+    },
+    {
+      id: 2,
+      name: "Geralt of Rivia",
+      title: "The White Wolf",
+      game: "The Witcher",
+      personality: "Wise & Mysterious",
+      status: "online",
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
+      accent: "from-amber-400 to-orange-500",
+      icon: Sword
+    },
+    {
+      id: 3,
+      name: "Aloy",
+      title: "Machine Hunter",
+      game: "Horizon Series",
+      personality: "Brave & Curious",
+      status: "online",
+      image: "https://images.unsplash.com/photo-1494790108755-2616c9105d42?w=400&h=400&fit=crop&crop=face",
+      accent: "from-red-400 to-pink-500",
+      icon: Zap
+    },
+    {
+      id: 4,
+      name: "Kratos",
+      title: "God of War",
+      game: "God of War",
+      personality: "Fierce & Protective",
+      status: "busy",
+      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
+      accent: "from-red-500 to-red-700",
+      icon: Sword
+    },
+    {
+      id: 5,
+      name: "Lara Croft",
+      title: "Tomb Raider",
+      game: "Tomb Raider",
+      personality: "Adventurous & Smart",
+      status: "online",
+      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face",
+      accent: "from-teal-400 to-cyan-500",
+      icon: Star
+    },
+    {
+      id: 6,
+      name: "Arthur Morgan",
+      title: "Outlaw Gunslinger",
+      game: "Red Dead Redemption",
+      personality: "Loyal & Honorable",
+      status: "away",
+      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=face",
+      accent: "from-yellow-400 to-amber-600",
+      icon: Star
+    },
+    {
+      id: 7,
+      name: "Ellie",
+      title: "Survivor",
+      game: "The Last of Us",
+      personality: "Tough & Witty",
+      status: "online",
+      image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&h=400&fit=crop&crop=face",
+      accent: "from-purple-400 to-indigo-500",
+      icon: Shield
+    },
+    {
+      id: 8,
+      name: "Solid Snake",
+      title: "Legendary Soldier",
+      game: "Metal Gear Solid",
+      personality: "Tactical & Stoic",
+      status: "online",
+      image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop&crop=face",
+      accent: "from-gray-400 to-slate-600",
+      icon: Shield
+    }
+  ];
 
-      The game features stunning 3D card animations that bring each Pokemon to life. When you summon a Charizard, flames dance across your screen. When Blastoise enters the battlefield, water effects cascade from the edges of your device. These visual flourishes aren't just eye candy – they're integral to the immersive experience that has players coming back for more.
-
-      ## Breaking Down the Numbers
-
-      The launch statistics are truly remarkable. In just the first week, Pokemon TCG Pocket achieved:
-
-      - Over 10 million downloads across iOS and Android
-      - 1000+ unique cards with more releasing monthly
-      - Average session time of 23 minutes
-      - 94% positive user rating across app stores
-      - $15 million in first-week revenue
-
-      These numbers place it among the top 5 most successful TCG mobile launches of all time, competing directly with established titles like Hearthstone and Magic: The Gathering Arena.
-
-      ## Strategic Depth Meets Accessibility
-
-      One of the game's greatest strengths is how it maintains the strategic complexity that Pokemon TCG fans love while remaining accessible to newcomers. The tutorial system gradually introduces mechanics, starting with basic Pokemon battles and slowly incorporating more complex elements like energy management, trainer cards, and advanced strategies.
-
-      Veteran players will appreciate the faithful adaptation of classic mechanics, while the addition of mobile-specific features like quick battles and AI opponents ensures there's always something to do, whether you have 5 minutes or an hour to play.
-
-      ## Community and Competitive Play
-
-      The social features have been particularly well-received. Players can trade cards with friends, join guilds, and participate in weekly tournaments. The ranking system provides clear progression paths for competitive players, while casual modes ensure everyone can enjoy the experience at their own pace.
-
-      The integration with Pokemon GO has been seamless, allowing players to earn special cards and bonuses by playing both games. This cross-promotion strategy has helped both titles maintain strong user engagement and has created a more unified Pokemon mobile gaming ecosystem.
-
-      ## Looking Ahead
-
-      With monthly content updates planned and a roadmap extending well into 2026, Pokemon TCG Pocket shows no signs of slowing down. The development team has hinted at features like augmented reality card battles, expanded trading systems, and integration with the physical TCG that could further revolutionize how we think about digital card games.
-
-      The success of Pokemon TCG Pocket demonstrates that there's still tremendous appetite for high-quality, thoughtfully designed mobile games. In an era where many mobile titles focus on quick monetization over player experience, this game stands as a shining example of what's possible when developers prioritize fun and engagement over short-term profits.
-
-      As we look toward the future of mobile gaming, Pokemon TCG Pocket has set a new standard for what players expect from digital adaptations of beloved physical games. Its success will undoubtedly inspire other developers to approach mobile gaming with the same level of care and attention to detail.
-    `
+  const getStatusColor = (status) => {
+    switch (status) {
+      case 'online': return 'bg-green-500';
+      case 'away': return 'bg-yellow-500';
+      case 'busy': return 'bg-red-500';
+      default: return 'bg-gray-500';
+    }
   };
 
   return (
-    <div className="min-h-screen bg-gray-900 text-white">
-      {/* Reading Progress Bar */}
-      <div className="fixed top-0 left-0 w-full h-1 bg-gray-800 z-50">
-        <div 
-          className="h-full bg-gradient-to-r from-cyan-400 to-purple-500 transition-all duration-300 ease-out"
-          style={{ width: `${readingProgress}%` }}
-        />
+    <div className="min-h-screen bg-neutral-900 p-6">
+      {/* Header */}
+      <div className="max-w-7xl mx-auto mb-8">
+        <div className="text-center mb-2">
+          <h1 className="text-4xl font-bold text-white mb-2">
+            AI <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500">Characters</span>
+          </h1>
+          <p className="text-gray-400">Choose a gaming legend to chat with</p>
+        </div>
+        
+        {/* Stats Bar */}
+        <div className="flex justify-center mt-6">
+          <div className="bg-neutral-800 rounded-lg px-6 py-3 border border-neutral-700">
+            <div className="flex items-center space-x-6 text-sm">
+              <div className="flex items-center space-x-2">
+                <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                <span className="text-gray-300">{characters.filter(c => c.status === 'online').length} Online</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
+                <span className="text-gray-300">{characters.filter(c => c.status === 'away').length} Away</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <div className="w-2 h-2 bg-red-500 rounded-full"></div>
+                <span className="text-gray-300">{characters.filter(c => c.status === 'busy').length} Busy</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
-      {/* Header */}
-      <header className={`fixed top-0 left-0 right-0 z-40 transition-all duration-500 ${
-        isScrolled ? 'bg-gray-900/95 backdrop-blur-sm border-b border-gray-800' : 'bg-transparent'
-      }`}>
-        <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-          <div className="flex items-center space-x-4">
-            <button className="p-2 hover:bg-gray-800 rounded-lg transition-colors duration-200 group">
-              <ChevronLeft className="w-5 h-5 group-hover:text-cyan-400 transition-colors duration-200" />
-            </button>
-            <div className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
-              GAMERGRAM
-            </div>
-          </div>
-          
-          <div className="flex items-center space-x-2">
-            <button className="p-2 hover:bg-gray-800 rounded-lg transition-colors duration-200">
-              <Share2 className="w-5 h-5" />
-            </button>
-            <button 
-              onClick={() => setIsBookmarked(!isBookmarked)}
-              className={`p-2 rounded-lg transition-colors duration-200 ${
-                isBookmarked ? 'bg-purple-600 text-white' : 'hover:bg-gray-800'
-              }`}
-            >
-              <Bookmark className={`w-5 h-5 ${isBookmarked ? 'fill-current' : ''}`} />
-            </button>
-          </div>
-        </div>
-      </header>
-
-      {/* Hero Section */}
-      <section className="relative pt-20 pb-12 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-purple-900/20 to-gray-900" />
-        <div className="max-w-4xl mx-auto px-4 relative z-10">
-          <div className="space-y-6 animate-fadeInUp">
-            <div className="flex flex-wrap items-center gap-4 text-sm text-gray-400">
-              <span className="px-3 py-1 bg-purple-600/20 text-purple-300 rounded-full border border-purple-500/30">
-                {article.category}
-              </span>
-              <div className="flex items-center gap-2">
-                <Calendar className="w-4 h-4" />
-                {article.publishDate}
-              </div>
-              <div className="flex items-center gap-2">
-                <Clock className="w-4 h-4" />
-                {article.readTime}
-              </div>
-              <div className="flex items-center gap-2">
-                <Eye className="w-4 h-4" />
-                {article.views}
-              </div>
-            </div>
-
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight bg-gradient-to-r from-white via-cyan-200 to-purple-200 bg-clip-text text-transparent">
-              {article.title}
-            </h1>
-
-            <p className="text-xl text-gray-300 leading-relaxed max-w-3xl">
-              {article.subtitle}
-            </p>
-
-            <div className="flex items-center justify-between pt-6">
-              <div className="flex items-center gap-3">
-                <div className="w-12 h-12 bg-gradient-to-br from-cyan-400 to-purple-500 rounded-full flex items-center justify-center">
-                  <User className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <div className="font-semibold text-white">{article.author}</div>
-                  <div className="text-sm text-gray-400">Gaming Journalist</div>
-                </div>
-              </div>
-
-              <div className="flex items-center gap-4">
-                <button 
-                  onClick={() => setIsLiked(!isLiked)}
-                  className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all duration-200 ${
-                    isLiked 
-                      ? 'bg-red-600 text-white' 
-                      : 'bg-gray-800 hover:bg-gray-700 text-gray-300'
-                  }`}
-                >
-                  <Heart className={`w-5 h-5 ${isLiked ? 'fill-current' : ''}`} />
-                  {article.likes + (isLiked ? 1 : 0)}
-                </button>
-                <button className="flex items-center gap-2 px-4 py-2 bg-gray-800 hover:bg-gray-700 rounded-lg transition-colors duration-200">
-                  <MessageCircle className="w-5 h-5" />
-                  {article.comments}
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Featured Image */}
-      <section className="max-w-6xl mx-auto px-4 mb-12">
-        <div className="relative overflow-hidden rounded-2xl group">
-          <img 
-            src={article.featuredImage} 
-            alt="Article featured image"
-            className="w-full h-96 object-cover transition-transform duration-700 group-hover:scale-105"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-gray-900/50 to-transparent" />
-        </div>
-      </section>
-
-      {/* Article Content */}
-      <main className="max-w-4xl mx-auto px-4 pb-20">
-        <article className="prose prose-lg prose-invert max-w-none">
-          <div 
-            className="space-y-6 text-gray-300 leading-relaxed animate-fadeInUp"
-            style={{ animationDelay: '0.2s' }}
-          >
-            {article.content.split('\n\n').map((paragraph, index) => {
-              if (paragraph.startsWith('## ')) {
-                return (
-                  <h2 key={index} className="text-3xl font-bold text-white mt-12 mb-6 bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
-                    {paragraph.replace('## ', '')}
-                  </h2>
-                );
-              }
-              if (paragraph.startsWith('- ')) {
-                const listItems = paragraph.split('\n').filter(item => item.startsWith('- '));
-                return (
-                  <ul key={index} className="space-y-2 my-6">
-                    {listItems.map((item, itemIndex) => (
-                      <li key={itemIndex} className="flex items-start gap-3">
-                        <div className="w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full mt-3 flex-shrink-0" />
-                        <span>{item.replace('- ', '')}</span>
-                      </li>
-                    ))}
-                  </ul>
-                );
-              }
-              return (
-                <p key={index} className="text-lg leading-relaxed mb-6">
-                  {paragraph.trim()}
-                </p>
-              );
-            })}
-          </div>
-        </article>
-
-        {/* Tags */}
-        <div className="mt-12 pt-8 border-t border-gray-800">
-          <h3 className="text-lg font-semibold mb-4 text-white">Tags</h3>
-          <div className="flex flex-wrap gap-2">
-            {article.tags.map((tag, index) => (
-              <span 
-                key={index}
-                className="px-3 py-1 bg-gray-800 hover:bg-gray-700 text-gray-300 rounded-full text-sm transition-colors duration-200 cursor-pointer"
+      {/* Characters Grid */}
+      <div className="max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          {characters.map((character) => {
+            const IconComponent = character.icon;
+            const isSelected = selectedCharacter === character.id;
+            
+            return (
+              <div
+                key={character.id}
+                onClick={() => setSelectedCharacter(character.id)}
+                className={`
+                  relative bg-neutral-800 border-2 rounded-xl p-6 cursor-pointer transition-all duration-300 transform
+                  ${isSelected 
+                    ? `border-cyan-500 scale-105 shadow-xl shadow-cyan-500/20` 
+                    : 'border-neutral-700 hover:border-neutral-600 hover:scale-102'
+                  }
+                  hover:shadow-lg group
+                `}
               >
-                #{tag}
-              </span>
-            ))}
+                {/* Status Indicator */}
+                <div className="absolute top-4 right-4">
+                  <div className={`w-3 h-3 ${getStatusColor(character.status)} rounded-full border-2 border-neutral-800`} />
+                </div>
+
+                {/* Selected Indicator */}
+                {isSelected && (
+                  <div className="absolute top-4 left-4">
+                    <div className="w-6 h-6 bg-cyan-500 rounded-full flex items-center justify-center">
+                      <Sparkles className="w-3 h-3 text-white" />
+                    </div>
+                  </div>
+                )}
+
+                {/* Character Image */}
+                <div className="relative mb-4">
+                  <div className={`
+                    w-20 h-20 mx-auto rounded-full bg-gradient-to-r ${character.accent} p-1 transition-transform duration-300
+                    ${isSelected ? 'rotate-6' : 'group-hover:rotate-3'}
+                  `}>
+                    <img
+                      src={character.image}
+                      alt={character.name}
+                      className="w-full h-full rounded-full object-cover"
+                    />
+                  </div>
+                  
+                  {/* Floating Icon */}
+                  <div className={`
+                    absolute -bottom-2 -right-2 w-8 h-8 bg-gradient-to-r ${character.accent} rounded-full 
+                    flex items-center justify-center transition-transform duration-300
+                    ${isSelected ? 'scale-110' : 'group-hover:scale-105'}
+                  `}>
+                    <IconComponent className="w-4 h-4 text-white" />
+                  </div>
+                </div>
+
+                {/* Character Info */}
+                <div className="text-center">
+                  <h3 className="text-white font-bold text-lg mb-1">{character.name}</h3>
+                  <p className={`text-sm font-medium bg-gradient-to-r ${character.accent} bg-clip-text text-transparent mb-2`}>
+                    {character.title}
+                  </p>
+                  <p className="text-gray-400 text-xs mb-2">{character.game}</p>
+                  <p className="text-gray-500 text-xs italic">"{character.personality}"</p>
+                </div>
+
+                {/* Chat Button */}
+                <div className="mt-4">
+                  <button className={`
+                    w-full py-2 px-4 rounded-lg font-medium transition-all duration-300 flex items-center justify-center space-x-2
+                    ${isSelected 
+                      ? `bg-gradient-to-r ${character.accent} text-white shadow-lg` 
+                      : 'bg-neutral-700 text-gray-300 hover:bg-neutral-600 group-hover:text-white'
+                    }
+                  `}>
+                    <MessageCircle className="w-4 h-4" />
+                    <span>{isSelected ? 'Selected' : 'Chat'}</span>
+                  </button>
+                </div>
+
+                {/* Hover Glow Effect */}
+                <div className={`
+                  absolute inset-0 rounded-xl bg-gradient-to-r ${character.accent} opacity-0 transition-opacity duration-300
+                  ${isSelected ? 'opacity-20' : 'group-hover:opacity-10'}
+                  pointer-events-none
+                `} />
+              </div>
+            );
+          })}
+        </div>
+      </div>
+
+      {/* Selected Character Info */}
+      {selectedCharacter && (
+        <div className="max-w-7xl mx-auto mt-8">
+          <div className="bg-neutral-800 border border-neutral-700 rounded-lg p-6">
+            <div className="flex items-center space-x-4">
+              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
+                <Crown className="w-6 h-6 text-white" />
+              </div>
+              <div>
+                <h3 className="text-white font-bold text-lg">Ready to Chat!</h3>
+                <p className="text-gray-400 text-sm">
+                  You've selected {characters.find(c => c.id === selectedCharacter)?.name}. 
+                  Click "Start Conversation" to begin your adventure.
+                </p>
+              </div>
+              <button className="ml-auto bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-lg font-medium hover:from-cyan-600 hover:to-purple-700 transition-all">
+                Start Conversation
+              </button>
+            </div>
           </div>
         </div>
-      </main>
-
-      {/* Scroll to Top Button */}
-      <button 
-        onClick={scrollToTop}
-        className={`fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full flex items-center justify-center transition-all duration-300 z-40 ${
-          showScrollTop ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
-        } hover:scale-110 shadow-lg hover:shadow-cyan-400/25`}
-      >
-        <ArrowUp className="w-6 h-6 text-white" />
-      </button>
-
-      {/* Custom Styles */}
-      <style jsx>{`
-        @keyframes fadeInUp {
-          from {
-            opacity: 0;
-            transform: translateY(30px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-        
-        .animate-fadeInUp {
-          animation: fadeInUp 0.6s ease-out forwards;
-        }
-      `}</style>
+      )}
     </div>
   );
-};
-
-export default ArticlePage;
+}

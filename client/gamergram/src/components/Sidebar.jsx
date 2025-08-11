@@ -1,58 +1,43 @@
-import {
-  House,
-  ClipboardX,
-  Radio,
-  BotMessageSquare,
-  Newspaper,
-  LibraryBig,
-} from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import useUIStore from "../store/useUIStore";
+import { useEffect } from "react";
 
 const Sidebar = () => {
+  const { pages, selectedPage, setSelectedPage } = useUIStore();
+  const location = useLocation();
+  useEffect(() => {
+    const currentLocation = pages.find((p) => p.link === location.pathname);
+
+    if (currentLocation) {
+      setSelectedPage(currentLocation.id);
+    }
+  }, [location.pathname, pages, setSelectedPage]);
+
   return (
     <div>
       <div className="flex flex-col gap-10">
-        <Link to="/gamebuletien" className="flex items-center gap-2">
-          <House size={25} color="#fff" className="cursor-pointer" />
-          <h1 className=" text-white text-[26px] font-bold cursor-pointer">
-            Home
-          </h1>
-        </Link>
-
-        <Link to="/Events" className="flex items-center gap-2">
-          <ClipboardX size={25} color="#fff" className="cursor-pointer" />
-          <h1 className=" text-white text-[26px] font-bold cursor-pointer">
-            Events
-          </h1>
-        </Link>
-
-        <Link to="/broadcast" className="flex items-center gap-2">
-          <Radio size={25} color="#fff" className="cursor-pointer" />
-          <h1 className=" text-white text-[26px] font-bold cursor-pointer">
-            Broadcast
-          </h1>
-        </Link>
-
-        <Link to="/aiChatBox" className="flex items-center gap-2">
-          <BotMessageSquare size={25} color="#fff" className="cursor-pointer" />
-          <h1 className=" text-white text-[26px] font-bold cursor-pointer">
-            AI Chat
-          </h1>
-        </Link>
-
-        <Link to="/news" className="flex items-center gap-2">
-          <Newspaper size={25} color="#fff" className="cursor-pointer" />
-          <h1 className=" text-white text-[26px] font-bold cursor-pointer">
-            News
-          </h1>
-        </Link>
-
-        <Link to="/saga" className="flex items-center gap-2">
-          <LibraryBig size={25} color="#fff" className="cursor-pointer" />
-          <h1 className=" text-white text-[26px] font-bold cursor-pointer">
-            Saga
-          </h1>
-        </Link>
+        {pages.map((page) => {
+          const IconComponent = page.icon;
+          return (
+            <Link to={page.link} className="flex items-center gap-2">
+              <IconComponent
+                size={25}
+                color="#fff"
+                className="cursor-pointer"
+              />
+              <button
+                onClick={() => setSelectedPage(page.id)}
+                className={`text-[26px] font-bold cursor-pointer ${
+                  selectedPage === page.id
+                    ? "bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"
+                    : "text-white hover:scale-115 transition-all duration-600 ease-in-out hover:bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 hover:bg-clip-text hover:text-transparent"
+                } `}
+              >
+                {page.label}
+              </button>
+            </Link>
+          );
+        })}
       </div>
     </div>
   );

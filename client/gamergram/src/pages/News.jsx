@@ -1,5 +1,6 @@
 import { Menu, Bell } from "lucide-react";
 import SubHeader from "../components/SubHeader";
+import Sidebar from "../components/Sidebar";
 import Filters from "../components/Filters";
 import PlatformFilters from "../components/PlatformFilters";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
@@ -31,13 +32,14 @@ const News = () => {
           <div className="p-4 flex justify-between items-center  gap-4">
             <div className="flex items-center gap-2 ">
               <Menu size={19} color="#fff" className="cursor-pointer" />
-              <h1 className="text-white tracking-widest font-extrabold md:text-lg orbitron lg:text-xl cursor-pointer">
+              <h1 className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent tracking-widest font-extrabold md:text-lg orbitron lg:text-xl cursor-pointer">
                 GAMERGRAM
               </h1>
             </div>
           </div>
         </div>
 
+              {/* <Sidebar /> */}
         <div className="lg:flex lg:flex-col lg:items-center lg:justify-center mt-7">
           {/*Sub-heading*/}
           <SubHeader />
