@@ -3,13 +3,21 @@ import { useParams } from "react-router-dom";
 import { format, parseISO } from "date-fns";
 import useGameStore from "../store/useGameStore";
 import { useEffect } from "react";
+import useUIStore from "../store/useUIStore";
 
 const NewsDetails = () => {
   const { newsID } = useParams();
 
   const { newsDetails, fetchNewsDetails } = useGameStore();
+  const { readingProgress, setReadingProgress } = useUIStore();
   useEffect(() => {
     fetchNewsDetails(newsID);
+  }, []);
+
+  useEffect(() => {
+    setReadingProgress();
+    window.addEventListener("scroll", setReadingProgress);
+    return () => window.removeEventListener("scroll", setReadingProgress);
   }, []);
 
   const getFirstSentence = (text) => {
@@ -79,7 +87,10 @@ const NewsDetails = () => {
       <div className="min-h-screen min-w-screen bg-neutral-900 overflow-x-hidden">
         {/*Progress bar*/}
         <div className="fixed top-0 left-0 w-full h-1 bg-gray-800 z-60">
-          <div className="h-full bg-gradient-to-r from-cyan-400 to-purple-500 transition-all duration-300 ease-out" />
+          <div
+            className="h-full bg-gradient-to-r from-cyan-400 to-purple-500 transition-all duration-300 ease-out show-scrollbar"
+            style={{ width: `${readingProgress}%` }}
+          />
         </div>
         {/*Header*/}
         <div className="relative">
