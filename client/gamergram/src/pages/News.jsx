@@ -8,6 +8,7 @@ import NewsSection from "../components/NewsSection";
 import useGameStore from "../store/useGameStore";
 import { useEffect } from "react";
 import VideoCards from "../components/VideoCards";
+import { useNavigate } from "react-router-dom";
 
 const News = () => {
   const {
@@ -17,12 +18,23 @@ const News = () => {
     selectedPlatform,
     searchSelectedItem,
     searchItem,
+    tokens,
+    authChecked,
   } = useGameStore();
-
+  const navigate = useNavigate();
   useEffect(() => {
     fetchNews();
   }, [fetchNews]);
 
+  useEffect(() => {
+    if (authChecked && !tokens) {
+      navigate("/login");
+    }
+  }, [authChecked, navigate, tokens]);
+
+  if (!authChecked) {
+    return null;
+  }
   return (
     <>
       <div className="min-h-screen min-w-screen bg-neutral-900 overflow-x-hidden">
@@ -39,7 +51,7 @@ const News = () => {
           </div>
         </div>
 
-              {/* <Sidebar /> */}
+        {/* <Sidebar /> */}
         <div className="lg:flex lg:flex-col lg:items-center lg:justify-center mt-7">
           {/*Sub-heading*/}
           <SubHeader />

@@ -19,16 +19,23 @@ const GameBuletien = () => {
   const [gameData, setGameData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
+  const [authChecked, setAuthChecked] = useState(false);
+  const navigate = useNavigate();
+  const token = localStorage.getItem("token");
 
   useEffect(() => {
+    if (!token) {
+      navigate("/login");
+    } else {
+      setAuthChecked(true);
+    }
+  }, [token, navigate]);
+
+  useEffect(() => {
+    if (!authChecked) return;
     async function getGameData() {
       setIsLoading(true);
       try {
-        const token = localStorage.getItem("token");
-
-        if (!token) {
-          navigate("/login");
-        }
         const response = await fetch(
           "http://localhost:3000/games/getallgames",
           {
@@ -50,7 +57,11 @@ const GameBuletien = () => {
     }
 
     getGameData();
-  }, []);
+  }, [authChecked, token]);
+
+  if (!authChecked) {
+    return null;
+  }
 
   const dropdownVariants = {
     hidden: { opacity: 0, y: -8, scale: 0.95 },

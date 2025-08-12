@@ -29,11 +29,14 @@ const useGameStore = create((set, get) => ({
   searchedVideos: [],
   searchedGameplays: [],
   newsDetails: {},
+  tokens: null,
+  authChecked: false,
 
   fetchNews: async () => {
     set({ loading: true, error: null });
     try {
       const token = localStorage.getItem("token");
+      set({ authChecked: true, tokens: token });
       if (!token) {
         set({ error: "No token found" });
       }

@@ -503,7 +503,7 @@
 
 
 
-
+//LOGIN PAGE
 
 // import React, { useState } from 'react';
 // import { Gamepad2, User, Lock, Eye, EyeOff, Zap, Shield, Trophy } from 'lucide-react';
@@ -671,260 +671,359 @@
 
 
 
+//AI CHAT BOX
 
-import React, { useState } from 'react';
-import { MessageCircle, Zap, Crown, Sword, Shield, Star, Sparkles } from 'lucide-react';
 
-export default function GamerGramAIChat() {
-  const [selectedCharacter, setSelectedCharacter] = useState(null);
+// import React, { useState } from 'react';
+// import { MessageCircle, Zap, Crown, Sword, Shield, Star, Sparkles } from 'lucide-react';
 
-  const characters = [
-    {
-      id: 1,
-      name: "Master Chief",
-      title: "Spartan Super Soldier",
-      game: "Halo Series",
-      personality: "Strategic & Heroic",
-      status: "online",
-      image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=400&fit=crop&crop=face",
-      accent: "from-green-400 to-blue-500",
-      icon: Shield
-    },
-    {
-      id: 2,
-      name: "Geralt of Rivia",
-      title: "The White Wolf",
-      game: "The Witcher",
-      personality: "Wise & Mysterious",
-      status: "online",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
-      accent: "from-amber-400 to-orange-500",
-      icon: Sword
-    },
-    {
-      id: 3,
-      name: "Aloy",
-      title: "Machine Hunter",
-      game: "Horizon Series",
-      personality: "Brave & Curious",
-      status: "online",
-      image: "https://images.unsplash.com/photo-1494790108755-2616c9105d42?w=400&h=400&fit=crop&crop=face",
-      accent: "from-red-400 to-pink-500",
-      icon: Zap
-    },
-    {
-      id: 4,
-      name: "Kratos",
-      title: "God of War",
-      game: "God of War",
-      personality: "Fierce & Protective",
-      status: "busy",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
-      accent: "from-red-500 to-red-700",
-      icon: Sword
-    },
-    {
-      id: 5,
-      name: "Lara Croft",
-      title: "Tomb Raider",
-      game: "Tomb Raider",
-      personality: "Adventurous & Smart",
-      status: "online",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face",
-      accent: "from-teal-400 to-cyan-500",
-      icon: Star
-    },
-    {
-      id: 6,
-      name: "Arthur Morgan",
-      title: "Outlaw Gunslinger",
-      game: "Red Dead Redemption",
-      personality: "Loyal & Honorable",
-      status: "away",
-      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=face",
-      accent: "from-yellow-400 to-amber-600",
-      icon: Star
-    },
-    {
-      id: 7,
-      name: "Ellie",
-      title: "Survivor",
-      game: "The Last of Us",
-      personality: "Tough & Witty",
-      status: "online",
-      image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&h=400&fit=crop&crop=face",
-      accent: "from-purple-400 to-indigo-500",
-      icon: Shield
-    },
-    {
-      id: 8,
-      name: "Solid Snake",
-      title: "Legendary Soldier",
-      game: "Metal Gear Solid",
-      personality: "Tactical & Stoic",
-      status: "online",
-      image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop&crop=face",
-      accent: "from-gray-400 to-slate-600",
-      icon: Shield
-    }
-  ];
+// export default function GamerGramAIChat() {
+//   const [selectedCharacter, setSelectedCharacter] = useState(null);
 
-  const getStatusColor = (status) => {
-    switch (status) {
-      case 'online': return 'bg-green-500';
-      case 'away': return 'bg-yellow-500';
-      case 'busy': return 'bg-red-500';
-      default: return 'bg-gray-500';
-    }
+//   const characters = [
+//     {
+//       id: 1,
+//       name: "Master Chief",
+//       title: "Spartan Super Soldier",
+//       game: "Halo Series",
+//       personality: "Strategic & Heroic",
+//       status: "online",
+//       image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=400&fit=crop&crop=face",
+//       accent: "from-green-400 to-blue-500",
+//       icon: Shield
+//     },
+//     {
+//       id: 2,
+//       name: "Geralt of Rivia",
+//       title: "The White Wolf",
+//       game: "The Witcher",
+//       personality: "Wise & Mysterious",
+//       status: "online",
+//       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
+//       accent: "from-amber-400 to-orange-500",
+//       icon: Sword
+//     },
+//     {
+//       id: 3,
+//       name: "Aloy",
+//       title: "Machine Hunter",
+//       game: "Horizon Series",
+//       personality: "Brave & Curious",
+//       status: "online",
+//       image: "https://images.unsplash.com/photo-1494790108755-2616c9105d42?w=400&h=400&fit=crop&crop=face",
+//       accent: "from-red-400 to-pink-500",
+//       icon: Zap
+//     },
+//     {
+//       id: 4,
+//       name: "Kratos",
+//       title: "God of War",
+//       game: "God of War",
+//       personality: "Fierce & Protective",
+//       status: "busy",
+//       image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
+//       accent: "from-red-500 to-red-700",
+//       icon: Sword
+//     },
+//     {
+//       id: 5,
+//       name: "Lara Croft",
+//       title: "Tomb Raider",
+//       game: "Tomb Raider",
+//       personality: "Adventurous & Smart",
+//       status: "online",
+//       image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face",
+//       accent: "from-teal-400 to-cyan-500",
+//       icon: Star
+//     },
+//     {
+//       id: 6,
+//       name: "Arthur Morgan",
+//       title: "Outlaw Gunslinger",
+//       game: "Red Dead Redemption",
+//       personality: "Loyal & Honorable",
+//       status: "away",
+//       image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=face",
+//       accent: "from-yellow-400 to-amber-600",
+//       icon: Star
+//     },
+//     {
+//       id: 7,
+//       name: "Ellie",
+//       title: "Survivor",
+//       game: "The Last of Us",
+//       personality: "Tough & Witty",
+//       status: "online",
+//       image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&h=400&fit=crop&crop=face",
+//       accent: "from-purple-400 to-indigo-500",
+//       icon: Shield
+//     },
+//     {
+//       id: 8,
+//       name: "Solid Snake",
+//       title: "Legendary Soldier",
+//       game: "Metal Gear Solid",
+//       personality: "Tactical & Stoic",
+//       status: "online",
+//       image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop&crop=face",
+//       accent: "from-gray-400 to-slate-600",
+//       icon: Shield
+//     }
+//   ];
+
+//   const getStatusColor = (status) => {
+//     switch (status) {
+//       case 'online': return 'bg-green-500';
+//       case 'away': return 'bg-yellow-500';
+//       case 'busy': return 'bg-red-500';
+//       default: return 'bg-gray-500';
+//     }
+//   };
+
+//   return (
+//     <div className="min-h-screen bg-neutral-900 p-6">
+//       {/* Header */}
+//       <div className="max-w-7xl mx-auto mb-8">
+//         <div className="text-center mb-2">
+//           <h1 className="text-4xl font-bold text-white mb-2">
+//             AI <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500">Characters</span>
+//           </h1>
+//           <p className="text-gray-400">Choose a gaming legend to chat with</p>
+//         </div>
+        
+//         {/* Stats Bar */}
+//         <div className="flex justify-center mt-6">
+//           <div className="bg-neutral-800 rounded-lg px-6 py-3 border border-neutral-700">
+//             <div className="flex items-center space-x-6 text-sm">
+//               <div className="flex items-center space-x-2">
+//                 <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+//                 <span className="text-gray-300">{characters.filter(c => c.status === 'online').length} Online</span>
+//               </div>
+//               <div className="flex items-center space-x-2">
+//                 <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
+//                 <span className="text-gray-300">{characters.filter(c => c.status === 'away').length} Away</span>
+//               </div>
+//               <div className="flex items-center space-x-2">
+//                 <div className="w-2 h-2 bg-red-500 rounded-full"></div>
+//                 <span className="text-gray-300">{characters.filter(c => c.status === 'busy').length} Busy</span>
+//               </div>
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+
+//       {/* Characters Grid */}
+//       <div className="max-w-7xl mx-auto">
+//         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+//           {characters.map((character) => {
+//             const IconComponent = character.icon;
+//             const isSelected = selectedCharacter === character.id;
+            
+//             return (
+//               <div
+//                 key={character.id}
+//                 onClick={() => setSelectedCharacter(character.id)}
+//                 className={`
+//                   relative bg-neutral-800 border-2 rounded-xl p-6 cursor-pointer transition-all duration-300 transform
+//                   ${isSelected 
+//                     ? `border-cyan-500 scale-105 shadow-xl shadow-cyan-500/20` 
+//                     : 'border-neutral-700 hover:border-neutral-600 hover:scale-102'
+//                   }
+//                   hover:shadow-lg group
+//                 `}
+//               >
+//                 {/* Status Indicator */}
+//                 <div className="absolute top-4 right-4">
+//                   <div className={`w-3 h-3 ${getStatusColor(character.status)} rounded-full border-2 border-neutral-800`} />
+//                 </div>
+
+//                 {/* Selected Indicator */}
+//                 {isSelected && (
+//                   <div className="absolute top-4 left-4">
+//                     <div className="w-6 h-6 bg-cyan-500 rounded-full flex items-center justify-center">
+//                       <Sparkles className="w-3 h-3 text-white" />
+//                     </div>
+//                   </div>
+//                 )}
+
+//                 {/* Character Image */}
+//                 <div className="relative mb-4">
+//                   <div className={`
+//                     w-20 h-20 mx-auto rounded-full bg-gradient-to-r ${character.accent} p-1 transition-transform duration-300
+//                     ${isSelected ? 'rotate-6' : 'group-hover:rotate-3'}
+//                   `}>
+//                     <img
+//                       src={character.image}
+//                       alt={character.name}
+//                       className="w-full h-full rounded-full object-cover"
+//                     />
+//                   </div>
+                  
+//                   {/* Floating Icon */}
+//                   <div className={`
+//                     absolute -bottom-2 -right-2 w-8 h-8 bg-gradient-to-r ${character.accent} rounded-full 
+//                     flex items-center justify-center transition-transform duration-300
+//                     ${isSelected ? 'scale-110' : 'group-hover:scale-105'}
+//                   `}>
+//                     <IconComponent className="w-4 h-4 text-white" />
+//                   </div>
+//                 </div>
+
+//                 {/* Character Info */}
+//                 <div className="text-center">
+//                   <h3 className="text-white font-bold text-lg mb-1">{character.name}</h3>
+//                   <p className={`text-sm font-medium bg-gradient-to-r ${character.accent} bg-clip-text text-transparent mb-2`}>
+//                     {character.title}
+//                   </p>
+//                   <p className="text-gray-400 text-xs mb-2">{character.game}</p>
+//                   <p className="text-gray-500 text-xs italic">"{character.personality}"</p>
+//                 </div>
+
+//                 {/* Chat Button */}
+//                 <div className="mt-4">
+//                   <button className={`
+//                     w-full py-2 px-4 rounded-lg font-medium transition-all duration-300 flex items-center justify-center space-x-2
+//                     ${isSelected 
+//                       ? `bg-gradient-to-r ${character.accent} text-white shadow-lg` 
+//                       : 'bg-neutral-700 text-gray-300 hover:bg-neutral-600 group-hover:text-white'
+//                     }
+//                   `}>
+//                     <MessageCircle className="w-4 h-4" />
+//                     <span>{isSelected ? 'Selected' : 'Chat'}</span>
+//                   </button>
+//                 </div>
+
+//                 {/* Hover Glow Effect */}
+//                 <div className={`
+//                   absolute inset-0 rounded-xl bg-gradient-to-r ${character.accent} opacity-0 transition-opacity duration-300
+//                   ${isSelected ? 'opacity-20' : 'group-hover:opacity-10'}
+//                   pointer-events-none
+//                 `} />
+//               </div>
+//             );
+//           })}
+//         </div>
+//       </div>
+
+//       {/* Selected Character Info */}
+//       {selectedCharacter && (
+//         <div className="max-w-7xl mx-auto mt-8">
+//           <div className="bg-neutral-800 border border-neutral-700 rounded-lg p-6">
+//             <div className="flex items-center space-x-4">
+//               <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
+//                 <Crown className="w-6 h-6 text-white" />
+//               </div>
+//               <div>
+//                 <h3 className="text-white font-bold text-lg">Ready to Chat!</h3>
+//                 <p className="text-gray-400 text-sm">
+//                   You've selected {characters.find(c => c.id === selectedCharacter)?.name}. 
+//                   Click "Start Conversation" to begin your adventure.
+//                 </p>
+//               </div>
+//               <button className="ml-auto bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-lg font-medium hover:from-cyan-600 hover:to-purple-700 transition-all">
+//                 Start Conversation
+//               </button>
+//             </div>
+//           </div>
+//         </div>
+//       )}
+//     </div>
+//   );
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import { motion } from "framer-motion";
+import { useState } from "react";
+import { Send, Heart } from "lucide-react";
+
+export default function CommentSection({ onClose }) {
+  const [comments, setComments] = useState([
+    { id: 1, user: "KratosFan", text: "This boss fight was insane!", likes: 15 },
+    { id: 2, user: "WukongMain", text: "Can't wait to try this game!", likes: 8 },
+  ]);
+  const [newComment, setNewComment] = useState("");
+
+  const handleAddComment = () => {
+    if (!newComment.trim()) return;
+    setComments([
+      ...comments,
+      { id: Date.now(), user: "You", text: newComment, likes: 0 },
+    ]);
+    setNewComment("");
   };
 
   return (
-    <div className="min-h-screen bg-neutral-900 p-6">
+    <motion.div
+      initial={{ y: "100%", opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      exit={{ y: "100%", opacity: 0 }}
+      transition={{ duration: 0.4, ease: "easeOut" }}
+      className="fixed bottom-0 left-0 w-full md:w-[500px] h-[70vh] bg-[#0d0d0d] border-t border-gray-700 rounded-t-2xl shadow-lg shadow-purple-500/20 flex flex-col"
+    >
       {/* Header */}
-      <div className="max-w-7xl mx-auto mb-8">
-        <div className="text-center mb-2">
-          <h1 className="text-4xl font-bold text-white mb-2">
-            AI <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500">Characters</span>
-          </h1>
-          <p className="text-gray-400">Choose a gaming legend to chat with</p>
-        </div>
-        
-        {/* Stats Bar */}
-        <div className="flex justify-center mt-6">
-          <div className="bg-neutral-800 rounded-lg px-6 py-3 border border-neutral-700">
-            <div className="flex items-center space-x-6 text-sm">
-              <div className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                <span className="text-gray-300">{characters.filter(c => c.status === 'online').length} Online</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
-                <span className="text-gray-300">{characters.filter(c => c.status === 'away').length} Away</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-red-500 rounded-full"></div>
-                <span className="text-gray-300">{characters.filter(c => c.status === 'busy').length} Busy</span>
+      <div className="p-4 border-b border-gray-700 flex justify-between items-center">
+        <h2 className="text-lg font-bold text-purple-400">Comments</h2>
+        <button
+          onClick={onClose}
+          className="text-gray-400 hover:text-purple-400 transition"
+        >
+          ✖
+        </button>
+      </div>
+
+      {/* Comments List */}
+      <div className="flex-1 overflow-y-auto p-4 space-y-4">
+        {comments.map((comment) => (
+          <div key={comment.id} className="flex items-start space-x-3">
+            {/* Avatar */}
+            <div className="w-10 h-10 rounded-full bg-purple-500 flex items-center justify-center text-white font-bold">
+              {comment.user[0]}
+            </div>
+            {/* Text */}
+            <div className="flex-1">
+              <p className="text-sm text-purple-300 font-semibold">
+                {comment.user}
+              </p>
+              <p className="text-gray-300">{comment.text}</p>
+              {/* Like button */}
+              <div className="flex items-center text-gray-500 mt-1 space-x-1">
+                <Heart size={14} className="hover:text-red-500 cursor-pointer" />
+                <span className="text-xs">{comment.likes}</span>
               </div>
             </div>
           </div>
-        </div>
+        ))}
       </div>
 
-      {/* Characters Grid */}
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          {characters.map((character) => {
-            const IconComponent = character.icon;
-            const isSelected = selectedCharacter === character.id;
-            
-            return (
-              <div
-                key={character.id}
-                onClick={() => setSelectedCharacter(character.id)}
-                className={`
-                  relative bg-neutral-800 border-2 rounded-xl p-6 cursor-pointer transition-all duration-300 transform
-                  ${isSelected 
-                    ? `border-cyan-500 scale-105 shadow-xl shadow-cyan-500/20` 
-                    : 'border-neutral-700 hover:border-neutral-600 hover:scale-102'
-                  }
-                  hover:shadow-lg group
-                `}
-              >
-                {/* Status Indicator */}
-                <div className="absolute top-4 right-4">
-                  <div className={`w-3 h-3 ${getStatusColor(character.status)} rounded-full border-2 border-neutral-800`} />
-                </div>
-
-                {/* Selected Indicator */}
-                {isSelected && (
-                  <div className="absolute top-4 left-4">
-                    <div className="w-6 h-6 bg-cyan-500 rounded-full flex items-center justify-center">
-                      <Sparkles className="w-3 h-3 text-white" />
-                    </div>
-                  </div>
-                )}
-
-                {/* Character Image */}
-                <div className="relative mb-4">
-                  <div className={`
-                    w-20 h-20 mx-auto rounded-full bg-gradient-to-r ${character.accent} p-1 transition-transform duration-300
-                    ${isSelected ? 'rotate-6' : 'group-hover:rotate-3'}
-                  `}>
-                    <img
-                      src={character.image}
-                      alt={character.name}
-                      className="w-full h-full rounded-full object-cover"
-                    />
-                  </div>
-                  
-                  {/* Floating Icon */}
-                  <div className={`
-                    absolute -bottom-2 -right-2 w-8 h-8 bg-gradient-to-r ${character.accent} rounded-full 
-                    flex items-center justify-center transition-transform duration-300
-                    ${isSelected ? 'scale-110' : 'group-hover:scale-105'}
-                  `}>
-                    <IconComponent className="w-4 h-4 text-white" />
-                  </div>
-                </div>
-
-                {/* Character Info */}
-                <div className="text-center">
-                  <h3 className="text-white font-bold text-lg mb-1">{character.name}</h3>
-                  <p className={`text-sm font-medium bg-gradient-to-r ${character.accent} bg-clip-text text-transparent mb-2`}>
-                    {character.title}
-                  </p>
-                  <p className="text-gray-400 text-xs mb-2">{character.game}</p>
-                  <p className="text-gray-500 text-xs italic">"{character.personality}"</p>
-                </div>
-
-                {/* Chat Button */}
-                <div className="mt-4">
-                  <button className={`
-                    w-full py-2 px-4 rounded-lg font-medium transition-all duration-300 flex items-center justify-center space-x-2
-                    ${isSelected 
-                      ? `bg-gradient-to-r ${character.accent} text-white shadow-lg` 
-                      : 'bg-neutral-700 text-gray-300 hover:bg-neutral-600 group-hover:text-white'
-                    }
-                  `}>
-                    <MessageCircle className="w-4 h-4" />
-                    <span>{isSelected ? 'Selected' : 'Chat'}</span>
-                  </button>
-                </div>
-
-                {/* Hover Glow Effect */}
-                <div className={`
-                  absolute inset-0 rounded-xl bg-gradient-to-r ${character.accent} opacity-0 transition-opacity duration-300
-                  ${isSelected ? 'opacity-20' : 'group-hover:opacity-10'}
-                  pointer-events-none
-                `} />
-              </div>
-            );
-          })}
-        </div>
+      {/* Input Box */}
+      <div className="p-3 border-t border-gray-700 flex items-center space-x-2">
+        <input
+          type="text"
+          placeholder="Add a comment..."
+          value={newComment}
+          onChange={(e) => setNewComment(e.target.value)}
+          className="flex-1 bg-[#1a1a1a] text-white rounded-full px-4 py-2 text-sm outline-none focus:ring-2 focus:ring-purple-500"
+        />
+        <button
+          onClick={handleAddComment}
+          className="bg-purple-500 hover:bg-purple-600 text-white p-2 rounded-full transition"
+        >
+          <Send size={16} />
+        </button>
       </div>
-
-      {/* Selected Character Info */}
-      {selectedCharacter && (
-        <div className="max-w-7xl mx-auto mt-8">
-          <div className="bg-neutral-800 border border-neutral-700 rounded-lg p-6">
-            <div className="flex items-center space-x-4">
-              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
-                <Crown className="w-6 h-6 text-white" />
-              </div>
-              <div>
-                <h3 className="text-white font-bold text-lg">Ready to Chat!</h3>
-                <p className="text-gray-400 text-sm">
-                  You've selected {characters.find(c => c.id === selectedCharacter)?.name}. 
-                  Click "Start Conversation" to begin your adventure.
-                </p>
-              </div>
-              <button className="ml-auto bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-lg font-medium hover:from-cyan-600 hover:to-purple-700 transition-all">
-                Start Conversation
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
-    </div>
+    </motion.div>
   );
 }
