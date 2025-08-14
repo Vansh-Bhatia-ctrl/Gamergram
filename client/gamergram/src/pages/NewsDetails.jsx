@@ -1,15 +1,25 @@
-import { Calendar, Heart, Menu, MessageCircle, Timer } from "lucide-react";
+import {
+  Calendar,
+  Heart,
+  Menu,
+  Send,
+  MessageCircle,
+  Timer,
+} from "lucide-react";
 import { useParams } from "react-router-dom";
 import { format, parseISO } from "date-fns";
 import useGameStore from "../store/useGameStore";
 import { useEffect } from "react";
 import useUIStore from "../store/useUIStore";
+import { useState } from "react";
 
 const NewsDetails = () => {
   const { newsID } = useParams();
 
   const { newsDetails, fetchNewsDetails } = useGameStore();
   const { readingProgress, setReadingProgress } = useUIStore();
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+
   useEffect(() => {
     fetchNewsDetails(newsID);
   }, []);
@@ -19,6 +29,15 @@ const NewsDetails = () => {
     window.addEventListener("scroll", setReadingProgress);
     return () => window.removeEventListener("scroll", setReadingProgress);
   }, []);
+
+  useEffect(() => {
+    if (modalIsOpen) {
+      document.body.style.overflow = "hidden";
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [modalIsOpen]);
 
   const getFirstSentence = (text) => {
     if (!text) return "";
@@ -146,7 +165,10 @@ const NewsDetails = () => {
                   <p>820</p>
                 </button>
 
-                <button className="text-white flex  items-center gap-2 mt-7 px-4 py-2 bg-neutral-800 rounded-xl cursor-pointer hover:bg-neutral-700 hover:scale-103 transition-all duration-500 ease-in-out">
+                <button
+                  onClick={() => setModalIsOpen(true)}
+                  className="text-white flex  items-center gap-2 mt-7 px-4 py-2 bg-neutral-800 rounded-xl cursor-pointer hover:bg-neutral-700 hover:scale-103 transition-all duration-500 ease-in-out"
+                >
                   <MessageCircle size={22} />
                   <p>634</p>
                 </button>
@@ -202,6 +224,84 @@ const NewsDetails = () => {
             </div>
           </div>
         </div>
+        {modalIsOpen && (
+          <div className="fixed inset-0 backdrop-blur-sm flex items-center justify-center overflow-x-hidden">
+            <div className="max-h-[80vh] w-[90%] bg-neutral-800 rounded-xl  flex flex-col">
+              <div className="flex justify-between px-5 py-4 border-b-1 border-neutral-600">
+                <h1 className="text-purple-400 font-bold tracking-wide text-lg">
+                  Comments
+                </h1>
+                <button
+                  onClick={() => setModalIsOpen(false)}
+                  className="cursor-pointer"
+                >
+                  ✖
+                </button>
+              </div>
+              <div className="flex-1 overflow-y-auto p-2 space-y-3">
+                <div className="flex items-start gap-3 p-2 ">
+                  <div className="w-10 h-10 rounded-full bg-purple-500 flex items-center justify-center text-white font-bold flex-shrink-0">
+                    K
+                  </div>
+                  <div>
+                    <p className="text-purple-300">Kratos</p>
+                    <p className="text-white line-clamp-2">
+                      This boss fight was insane! This boss fight was insane!
+                      This boss fight was insane! This boss fight was
+                      insane!This boss fight was insane! This boss fight was
+                      insane! This boss fight was insane! This boss fight was
+                      insane! This boss fight was insane!This boss fight was
+                      insane!
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3 p-2 ">
+                  <div className="w-10 h-10 rounded-full bg-purple-500 flex items-center justify-center text-white font-bold flex-shrink-0">
+                    K
+                  </div>
+                  <div>
+                    <p className="text-purple-300">Kratos</p>
+                    <p className="text-white line-clamp-2">
+                      This boss fight was insane! This boss fight was insane!
+                      This boss fight was insane! This boss fight was
+                      insane!This boss fight was insane! This boss fight was
+                      insane! This boss fight was insane! This boss fight was
+                      insane! This boss fight was insane!This boss fight was
+                      insane!
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3 p-2 ">
+                  <div className="w-10 h-10 rounded-full bg-purple-500 flex items-center justify-center text-white font-bold flex-shrink-0">
+                    K
+                  </div>
+                  <div>
+                    <p className="text-purple-300">Kratos</p>
+                    <p className="text-white line-clamp-2">
+                      This boss fight was insane! This boss fight was insane!
+                      This boss fight was insane! This boss fight was
+                      insane!This boss fight was insane! This boss fight was
+                      insane! This boss fight was insane! This boss fight was
+                      insane! This boss fight was insane!This boss fight was
+                      insane!
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="border-t-1 border-neutral-600 p-3 flex items-center gap-2">
+                <input
+                  className="w-full h-10 bg-neutral-700 rounded-4xl placeholder:text-neutral-400 placeholder:text-sm p-3 outline-none focus:ring-2 focus:ring-purple-400"
+                  placeholder="Add a comment..."
+                />
+                <button className="bg-purple-500 hover:bg-purple-600 text-white p-2 rounded-full transition flex-shrink-0 cursor-pointer">
+                  <Send size={16} />
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </>
   );
