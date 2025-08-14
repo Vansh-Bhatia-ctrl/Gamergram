@@ -1,10 +1,10 @@
-const Comments = require("../models/comment");
+const Comments = require("../models/comments");
 
 const saveCommentsToDB = async (req, res) => {
   try {
-    const { comment, userID, newsID } = req.body;
+    const { comment, newsID } = req.body;
 
-    if (!comment || !userID || !newsID) {
+    if (!comment || !newsID) {
       return res
         .status(400)
         .json({ message: "Required fields missing. Please try again." });
@@ -12,8 +12,9 @@ const saveCommentsToDB = async (req, res) => {
 
     const newComment = new Comments({
       newsID: newsID,
-      userID: userID,
+      userID: req.user.id,
       comment: comment,
+      userName: req.user.userName,
     });
 
     await newComment.save();

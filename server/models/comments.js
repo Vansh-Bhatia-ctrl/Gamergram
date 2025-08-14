@@ -18,6 +18,11 @@ const commentSchema = new mongoose.Schema({
     required: true,
     trim: true,
   },
+  userName: {
+    type: String,
+    ref: "User",
+    required: true,
+  },
   createdAt: {
     type: Date,
     default: Date.now,
