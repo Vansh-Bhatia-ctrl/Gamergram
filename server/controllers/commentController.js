@@ -22,6 +22,7 @@ const saveCommentsToDB = async (req, res) => {
       .status(200)
       .json({ message: "Comment saved successfully", comment: newComment });
   } catch (error) {
+    console.log("Error", error.message);
     return res.status(500).json({
       message: "Something went wrong, please try later!",
       error: error.message,
