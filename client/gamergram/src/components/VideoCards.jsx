@@ -52,24 +52,7 @@ const VideoCards = () => {
                 {format(parseISO(video.publishedDate), "do MMMM yy")}
               </p>
             </div>
-            <div className="flex justify-between">
-              <div className="flex gap-4">
-                <div className="text-sm text-gray-400 flex items-center gap-1 mt-3">
-                  <Heart
-                    size={18}
-                    className="cursor-pointer hover:text-red-400"
-                  />
-                  890
-                </div>
-
-                <div className="text-sm text-gray-400 flex items-center gap-1 mt-3 ">
-                  <MessageCircle
-                    size={18}
-                    className="cursor-pointer hover:text-blue-400"
-                  />
-                  1240
-                </div>
-              </div>
+            <div className="flex justify-end">
               <a
                 target="_blank"
                 rel="noopener noreferrer"

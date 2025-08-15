@@ -5,6 +5,7 @@ import {
   Send,
   MessageCircle,
   Timer,
+  BookmarkIcon,
 } from "lucide-react";
 import { useParams } from "react-router-dom";
 import { format, parseISO } from "date-fns";
@@ -15,6 +16,8 @@ import { useState } from "react";
 
 const NewsDetails = () => {
   const { newsID } = useParams();
+  const [comment, setComment] = useState("");
+  const [fetchedComments, setFetchedComments] = useState([]);
 
   const { newsDetails, fetchNewsDetails } = useGameStore();
   const { readingProgress, setReadingProgress } = useUIStore();
@@ -101,6 +104,58 @@ const NewsDetails = () => {
       });
   };
 
+  const handleComment = async () => {
+    const token = localStorage.getItem("token");
+    try {
+      const response = await fetch(
+        "http://localhost:3000/savecomment/comment",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+          body: JSON.stringify({
+            comment: comment,
+            newsID: newsID,
+          }),
+        }
+      );
+
+      if (!response.ok)
+        throw new Error("Something went wrong. Please try again!");
+
+      const data = await response.json();
+      console.log(data);
+
+      await getAllComments();
+      setComment("");
+    } catch (error) {
+      console.log("Error posting comment.", error.message);
+    }
+  };
+
+  const getAllComments = async () => {
+    try {
+      const response = await fetch(
+        "http://localhost:3000/getcomments/get-all-comments"
+      );
+
+      const data = await response.json();
+      console.log(data);
+      setFetchedComments(data);
+    } catch (error) {
+      console.log("Error getting comments.", error.message);
+    }
+  };
+  useEffect(() => {
+    getAllComments();
+  }, []);
+
+  const commentCount = fetchedComments.filter(
+    (comment) => comment.newsID === newsID
+  );
+
   return (
     <>
       <div className="min-h-screen min-w-screen bg-neutral-900 overflow-x-hidden">
@@ -160,17 +215,15 @@ const NewsDetails = () => {
             {/*Comment and like section*/}
             <div>
               <div className="flex gap-4">
-                <button className="text-white flex  items-center gap-2 mt-7 px-4 py-2 bg-neutral-800 rounded-xl cursor-pointer hover:bg-neutral-700 hover:scale-103 transition-all duration-500 ease-in-out">
-                  <Heart size={22} />
-                  <p>820</p>
-                </button>
-
                 <button
                   onClick={() => setModalIsOpen(true)}
                   className="text-white flex  items-center gap-2 mt-7 px-4 py-2 bg-neutral-800 rounded-xl cursor-pointer hover:bg-neutral-700 hover:scale-103 transition-all duration-500 ease-in-out"
                 >
                   <MessageCircle size={22} />
-                  <p>634</p>
+                  <p>{commentCount.length}</p>
+                </button>
+                <button className="text-white flex  items-center gap-2 mt-7 px-4 py-2 bg-neutral-800 rounded-xl cursor-pointer hover:bg-neutral-700 hover:scale-103 transition-all duration-500 ease-in-out">
+                  <BookmarkIcon size={18} />
                 </button>
               </div>
 
@@ -239,64 +292,31 @@ const NewsDetails = () => {
                 </button>
               </div>
               <div className="flex-1 overflow-y-auto p-2 space-y-3">
-                <div className="flex items-start gap-3 p-2 ">
-                  <div className="w-10 h-10 rounded-full bg-purple-500 flex items-center justify-center text-white font-bold flex-shrink-0">
-                    K
-                  </div>
-                  <div>
-                    <p className="text-purple-300">Kratos</p>
-                    <p className="text-white line-clamp-2">
-                      This boss fight was insane! This boss fight was insane!
-                      This boss fight was insane! This boss fight was
-                      insane!This boss fight was insane! This boss fight was
-                      insane! This boss fight was insane! This boss fight was
-                      insane! This boss fight was insane!This boss fight was
-                      insane!
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-3 p-2 ">
-                  <div className="w-10 h-10 rounded-full bg-purple-500 flex items-center justify-center text-white font-bold flex-shrink-0">
-                    K
-                  </div>
-                  <div>
-                    <p className="text-purple-300">Kratos</p>
-                    <p className="text-white line-clamp-2">
-                      This boss fight was insane! This boss fight was insane!
-                      This boss fight was insane! This boss fight was
-                      insane!This boss fight was insane! This boss fight was
-                      insane! This boss fight was insane! This boss fight was
-                      insane! This boss fight was insane!This boss fight was
-                      insane!
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-3 p-2 ">
-                  <div className="w-10 h-10 rounded-full bg-purple-500 flex items-center justify-center text-white font-bold flex-shrink-0">
-                    K
-                  </div>
-                  <div>
-                    <p className="text-purple-300">Kratos</p>
-                    <p className="text-white line-clamp-2">
-                      This boss fight was insane! This boss fight was insane!
-                      This boss fight was insane! This boss fight was
-                      insane!This boss fight was insane! This boss fight was
-                      insane! This boss fight was insane! This boss fight was
-                      insane! This boss fight was insane!This boss fight was
-                      insane!
-                    </p>
-                  </div>
-                </div>
+                {commentCount.length > 0 ? (
+                  commentCount.map((com) => (
+                    <div key={com._id} className="flex items-start gap-3 p-2 ">
+                      <div className="w-10 h-10 rounded-full bg-purple-500 flex items-center justify-center text-white font-bold flex-shrink-0">
+                        {com.userName?.charAt(0).toUpperCase()}
+                      </div>
+                      <div>
+                        <p className="text-purple-300">{com.userName}</p>
+                        <p className="text-white line-clamp-2">{com.comment}</p>
+                      </div>
+                    </div>
+                  ))
+                ) : (
+                  <p className="text-white">No comments.</p>
+                )}
               </div>
               <div className="border-t-1 border-neutral-600 p-3 flex items-center gap-2">
                 <input
-                  className="w-full h-10 bg-neutral-700 rounded-4xl placeholder:text-neutral-400 placeholder:text-sm p-3 outline-none focus:ring-2 focus:ring-purple-400"
+                  value={comment}
+                  onChange={(e) => setComment(e.target.value)}
+                  className=" text-white w-full h-10 bg-neutral-700 rounded-4xl placeholder:text-neutral-400 placeholder:text-sm p-3 outline-none focus:ring-2 focus:ring-purple-400"
                   placeholder="Add a comment..."
                 />
                 <button className="bg-purple-500 hover:bg-purple-600 text-white p-2 rounded-full transition flex-shrink-0 cursor-pointer">
-                  <Send size={16} />
+                  <Send size={16} onClick={handleComment} />
                 </button>
               </div>
             </div>

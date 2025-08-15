@@ -37,25 +37,7 @@ const NewsCard = ({ newsList }) => {
 
             <div className="w-full h-[0.3px] bg-cyan-400 rounded-full mb-4" />
             <div className="flex justify-between items-center mt-auto">
-              <div className="flex gap-4">
-                <div className="flex items-center text-neutral-400 gap-2">
-                  <Heart
-                    className="cursor-pointer hover:text-red-400 transition-colors"
-                    size={18}
-                  />
-                  <p className="text-sm">240</p>
-                </div>
-                {/* <div className="flex items-center text-neutral-400 gap-2">
-                  <MessageCircle
-                    className="cursor-pointer hover:text-blue-400 transition-colors"
-                    size={18}
-                  />
-                  <p className="text-sm">390</p>
-                </div> */}
-                <div className="text-neutral-400 flex items-center hover:text-white cursor-pointer">
-                  <BookmarkIcon size={18} />
-                </div>
-              </div>
+              <div className="flex gap-4"></div>
               <div className="flex items-center text-cyan-400 gap-1 cursor-pointer hover:text-cyan-300 transition-colors">
                 <Link
                   to={`/news/${newsItem._id}`}
