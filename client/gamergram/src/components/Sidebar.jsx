@@ -19,19 +19,22 @@ const Sidebar = () => {
         {pages.map((page) => {
           const IconComponent = page.icon;
           return (
-            <Link to={page.link} className="flex items-center gap-2">
+            <Link
+              to={page.link}
+              className={`flex items-center gap-2 ${
+                selectedPage === page.id
+                  ? "bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"
+                  : "text-white hover:scale-115 transition-all duration-300 ease-in-out hover:bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 hover:bg-clip-text hover:text-transparent"
+              }`}
+            >
               <IconComponent
                 size={25}
                 color="#fff"
-                className="cursor-pointer"
+                className={`cursor-pointer`}
               />
               <button
                 onClick={() => setSelectedPage(page.id)}
-                className={`text-[26px] font-bold cursor-pointer ${
-                  selectedPage === page.id
-                    ? "bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"
-                    : "text-white hover:scale-115 transition-all duration-600 ease-in-out hover:bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 hover:bg-clip-text hover:text-transparent"
-                } `}
+                className={`text-[26px] font-bold cursor-pointer`}
               >
                 {page.label}
               </button>

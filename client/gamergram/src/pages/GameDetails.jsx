@@ -221,11 +221,11 @@ const GameDetails = () => {
                   </p>
                 </span>
               </div>
-              {/*Follow button*/}
+              {/*Add to button*/}
               <div className="p-4">
                 <button className="px-2 py-2 text-white flex items-center gap-1 bg-neutral-700 rounded-3xl w-[100px]">
                   <Plus size={20} color="#FFF" />
-                  Follow
+                  Add to
                 </button>
               </div>
             </div>
