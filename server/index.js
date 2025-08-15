@@ -23,6 +23,9 @@ const getAllVid = require("./routes/getAllYTVideos");
 const getNewsDets = require("./routes/newsDetails");
 const saveComment = require("./routes/commentRoutes");
 const getComments = require("./routes/getcomments");
+const saveBookmark = require("./routes/savebookamarks");
+const removeBookmarks = require("./routes/deletebookmarks");
+const getBookmarks = require("./routes/getbookmarks");
 
 const { autoAiLogin } = require("./utils/autoAILogin");
 const aiChatSocket = require("./sockets/aiChatSocket");
@@ -96,6 +99,9 @@ const startServer = async () => {
     app.use("/news", getNewsDets);
     app.use("/savecomment", saveComment);
     app.use("/getcomments", getComments);
+    app.use("/save", saveBookmark);
+    app.use("/remove", removeBookmarks);
+    app.use("/getbookmarks", getBookmarks);
 
     startNewsCron();
     runPlaystationCronJob();
