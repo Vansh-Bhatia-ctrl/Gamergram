@@ -13,15 +13,18 @@ import useGameStore from "../store/useGameStore";
 import { useEffect } from "react";
 import useUIStore from "../store/useUIStore";
 import { useState } from "react";
+import useBookmarkStore from "../store/useBookmarkStore";
 
 const NewsDetails = () => {
   const { newsID } = useParams();
   const [comment, setComment] = useState("");
   const [fetchedComments, setFetchedComments] = useState([]);
+  const [modalIsOpen, setModalIsOpen] = useState(false);
 
   const { newsDetails, fetchNewsDetails } = useGameStore();
   const { readingProgress, setReadingProgress } = useUIStore();
-  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const { bookmarks, saveBookmarks, removeBookmark, isBookmark } =
+    useBookmarkStore();
 
   useEffect(() => {
     fetchNewsDetails(newsID);
@@ -222,7 +225,12 @@ const NewsDetails = () => {
                   <MessageCircle size={22} />
                   <p>{commentCount.length}</p>
                 </button>
-                <button className="text-white flex  items-center gap-2 mt-7 px-4 py-2 bg-neutral-800 rounded-xl cursor-pointer hover:bg-neutral-700 hover:scale-103 transition-all duration-500 ease-in-out">
+                <button
+                  onClick={() =>
+                    isBookmark ? removeBookmark(newsID) : saveBookmarks(newsID)
+                  }
+                  className={`text-white flex  items-center gap-2 mt-7 px-4 py-2 bg-neutral-800 rounded-xl cursor-pointer hover:bg-neutral-700 hover:scale-103 transition-all duration-500 ease-in-out`}
+                >
                   <BookmarkIcon size={18} />
                 </button>
               </div>
