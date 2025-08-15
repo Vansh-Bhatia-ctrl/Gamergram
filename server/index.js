@@ -8,10 +8,6 @@ const passport = require("passport");
 
 const connectDB = require("./config/db");
 const authRoute = require("./routes/auth");
-const aiRoute = require("./routes/aiRoutes");
-const aiChat = require("./routes/aiChatRoute");
-const fetchAiCharacter = require("./routes/aiCharacterFetch");
-const fetchsingleAI = require("./routes/fetchAiCharacter");
 const twitchLiveStream = require("./routes/fetchLiveStream");
 const generatecoverImages = require("./routes/RAWGcover");
 const fetchAllGames = require("./routes/getAllGame");
@@ -27,8 +23,6 @@ const saveBookmark = require("./routes/savebookamarks");
 const removeBookmarks = require("./routes/deletebookmarks");
 const getBookmarks = require("./routes/getbookmarks");
 
-const { autoAiLogin } = require("./utils/autoAILogin");
-const aiChatSocket = require("./sockets/aiChatSocket");
 const { startNewsCron } = require("./controllers/news/cronjobnews");
 const { runPlaystationCronJob } = require("./jobs/playstationcron");
 
@@ -43,15 +37,10 @@ const io = new Server(server, {
   },
 });
 
-aiChatSocket(io);
-
 const startServer = async () => {
   try {
     // Connect to MongoDB
     await connectDB();
-
-    // Automatically log in AI characters
-    await autoAiLogin();
 
     //sessions for steam auth
     app.use(
@@ -84,10 +73,6 @@ const startServer = async () => {
 
     // Routes
     app.use("/users", authRoute);
-    app.use("/ai", aiRoute);
-    app.use("/chat", aiChat);
-    app.use("/fetchai", fetchAiCharacter);
-    app.use("/fetchsingleAI", fetchsingleAI);
     app.use("/twitch", twitchLiveStream);
     app.use("/RAWG", generatecoverImages);
     app.use("/games", fetchAllGames);
