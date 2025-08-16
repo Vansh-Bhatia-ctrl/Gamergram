@@ -1,4 +1,6 @@
 import { MessageCircle, Star } from "lucide-react";
+import { useState } from "react";
+import ChatWindow from "./ChatWindow";
 
 const aiCharacters = [
   {
@@ -106,11 +108,15 @@ const aiCharacters = [
 ];
 
 const AiCard = () => {
+  const [modalIsOpen, setModalIsOpen] = useState(false);
   return (
     <>
       <div className="p-3 flex flex-col gap-5 mt-4 md:max-w-7xl md:mx-auto md:grid md:grid-cols-2 lg:grid lg:grid-cols-3">
         {aiCharacters.map((character) => (
-          <div className="bg-neutral-800 h-auto p-4 rounded-xl border hover:bg-neutral-700 border-neutral-600 cursor-pointer hover:-translate-y-1 transition-all duration-300 ease-in-out">
+          <div
+            onClick={() => setModalIsOpen(true)}
+            className="bg-neutral-800 h-auto p-4 rounded-xl border hover:bg-neutral-700 border-neutral-600 cursor-pointer hover:-translate-y-1 transition-all duration-300 ease-in-out"
+          >
             <div className="flex items-center gap-4">
               <div
                 className={`bg-gradient-to-br ${character.color} px-3 py-2 text-lg rounded-xl inline-block`}
@@ -156,6 +162,9 @@ const AiCard = () => {
             </div>
           </div>
         ))}
+
+        {/**Chat Window */}
+        <ChatWindow modalIsOpen={modalIsOpen} setModalIsOpen={setModalIsOpen} />
       </div>
     </>
   );
