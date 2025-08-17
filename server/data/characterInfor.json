@@ -1,0 +1,274 @@
+
+  [
+    {
+      "characterId": "1",
+      "name": "Arthur Morgan",
+      "game": "Red Dead Redemption 2",
+      "imageURL": "/athruMorgan.png",
+      "bio": "A loyal enforcer of the Van der Linde gang, Arthur grapples with morality and survival in a changing world.",
+      "tag": "Honorable",
+      "specialty": "Expert marksmanship and horseback riding"
+    },
+    {
+      "characterId": "2",
+      "name": "Geralt of Rivia",
+      "game": "The Witcher 3: Wild Hunt",
+      "imageURL": "/geralt.png",
+      "bio": "A monster hunter with supernatural abilities, searching for his adopted daughter while navigating political intrigue.",
+      "tag": "Monster Hunter",
+      "specialty": "Swordsmanship and magical signs"
+    },
+    {
+      "characterId": "3",
+      "name": "Joel Miller",
+      "game": "The Last of Us",
+      "imageURL": "/joelMiller.png",
+      "bio": "A hardened survivor escorting a teenage girl across a post-apocalyptic America overrun by infected.",
+      "tag": "Survivor",
+      "specialty": "Resourcefulness and stealth combat"
+    },
+    {
+      "characterId": "4",
+      "name": "Kratos",
+      "game": "God of War (2018)",
+      "imageURL": "/kratos.png",
+      "bio": "A former Greek god seeking redemption while teaching his son Atreus about strength and responsibility.",
+      "tag": "God of War",
+      "specialty": "Brutal combat and divine powers"
+    },
+    {
+      "characterId": "5",
+      "name": "Master Chief",
+      "game": "Halo Series",
+      "imageURL": "/masterChief.png",
+      "bio": "A genetically enhanced super-soldier fighting to save humanity from alien threats.",
+      "tag": "Spartan",
+      "specialty": "Advanced warfare and tactical leadership"
+    },
+    {
+      "characterId": "6",
+      "name": "Aloy",
+      "game": "Horizon Zero Dawn",
+      "imageURL": "/aloy.png",
+      "bio": "A skilled hunter in a post-apocalyptic world dominated by robotic creatures, uncovering the truth of her origins.",
+      "tag": "Machine Hunter",
+      "specialty": "Archery and technology override"
+    },
+    {
+      "characterId": "7",
+      "name": "Nathan Drake",
+      "game": "Uncharted Series",
+      "imageURL": "/nathandrake.png",
+      "bio": "A charismatic treasure hunter who travels the globe seeking legendary artifacts.",
+      "tag": "Treasure Hunter",
+      "specialty": "Parkour and quick wit"
+    },
+    {
+      "characterId": "8",
+      "name": "Lara Croft",
+      "game": "Tomb Raider (2013)",
+      "imageURL": "/laraCroft.png",
+      "bio": "An archaeologist who becomes a hardened survivor after being stranded on a mysterious island.",
+      "tag": "Survivor",
+      "specialty": "Exploration and improvised combat"
+    },
+    {
+      "characterId": "9",
+      "name": "Marcus Fenix",
+      "game": "Gears of War",
+      "imageURL": "/marcusFenix.png",
+      "bio": "A battle-hardened soldier fighting against the subterranean Locust Horde threatening humanity.",
+      "tag": "War Hero",
+      "specialty": "Heavy weapons and tactical warfare"
+    },
+    {
+      "characterId": "10",
+      "name": "Commander Shepard",
+      "game": "Mass Effect Series",
+      "imageURL": "/commanderShepard.png",
+      "bio": "A human military officer tasked with saving the galaxy from ancient machine intelligences.",
+      "tag": "Commander",
+      "specialty": "Leadership and biotic abilities"
+    },
+    {
+      "characterId": "11",
+      "name": "Link",
+      "game": "The Legend of Zelda: Breath of the Wild",
+      "imageURL": "/link.png",
+      "bio": "A legendary hero awakening from a century-long slumber to save Hyrule from Calamity Ganon.",
+      "tag": "Hero of Hyrule",
+      "specialty": "Swordsmanship and puzzle-solving"
+    },
+    {
+      "characterId": "12",
+      "name": "Ellie",
+      "game": "The Last of Us Part II",
+      "imageURL": "/ellie.png",
+      "bio": "A young woman immune to the fungal infection, driven by revenge in a brutal post-apocalyptic world.",
+      "tag": "Immune",
+      "specialty": "Stealth and survival instincts"
+    },
+    {
+      "characterId": "13",
+      "name": "Solid Snake",
+      "game": "Metal Gear Solid Series",
+      "imageURL": "/solidSnake.png",
+      "bio": "A legendary soldier and spy known for infiltration missions and tactical espionage.",
+      "tag": "Legendary Soldier",
+      "specialty": "Stealth infiltration and CQC"
+    },
+    {
+      "characterId": "14",
+      "name": "Ezio Auditore",
+      "game": "Assassin's Creed II",
+      "imageURL": "/ezioAuditore.png",
+      "bio": "A Renaissance-era assassin seeking revenge against those who wronged his family.",
+      "tag": "Master Assassin",
+      "specialty": "Parkour and hidden blade combat"
+    },
+    {
+      "characterId": "15",
+      "name": "Gordon Freeman",
+      "game": "Half-Life Series",
+      "imageURL": "/gordonFreeman.png",
+      "bio": "A theoretical physicist turned unlikely hero fighting against alien occupation of Earth.",
+      "tag": "Scientist",
+      "specialty": "Improvised weaponry and problem-solving"
+    },
+    {
+      "characterId": "16",
+      "name": "Bayek",
+      "game": "Assassin's Creed Origins",
+      "imageURL": "/bayek.png",
+      "bio": "The last Medjay of Egypt who becomes the founder of the Hidden Ones (Assassins).",
+      "tag": "Medjay",
+      "specialty": "Ancient combat techniques and eagle vision"
+    },
+    {
+      "characterId": "17",
+      "name": "Kassandra",
+      "game": "Assassin's Creed Odyssey",
+      "imageURL": "/kassandra.png",
+      "bio": "A Spartan warrior with Isu bloodline abilities, seeking to reunite her family in ancient Greece.",
+      "tag": "Spartan Misthios",
+      "specialty": "Superhuman abilities and spear combat"
+    },
+    {
+      "characterId": "18",
+      "name": "Aiden Pearce",
+      "game": "Watch Dogs",
+      "imageURL": "/aidenPearce.png",
+      "bio": "A vigilante hacker using the city's infrastructure to fight crime and seek revenge.",
+      "tag": "The Fox",
+      "specialty": "Hacking and digital surveillance"
+    },
+    {
+      "characterId": "19",
+      "name": "Jin Sakai",
+      "game": "Ghost of Tsushima",
+      "imageURL": "/jinSakai.png",
+      "bio": "A samurai who abandons his code of honor to become the Ghost and save his homeland from Mongol invasion.",
+      "tag": "The Ghost",
+      "specialty": "Stealth assassination and katana mastery"
+    },
+    {
+      "characterId": "20",
+      "name": "V",
+      "game": "Cyberpunk 2077",
+      "imageURL": "/v.png",
+      "bio": "A mercenary in Night City struggling with a digital ghost threatening to overwrite their consciousness.",
+      "tag": "Mercenary",
+      "specialty": "Cybernetic enhancements and street combat"
+    },
+    {
+      "characterId": "21",
+      "name": "Abby Anderson",
+      "game": "The Last of Us Part II",
+      "imageURL": "/abbyAnderson.png",
+      "bio": "A former Firefly seeking revenge for her father's death, caught in a cycle of violence.",
+      "tag": "Ex-Firefly",
+      "specialty": "Hand-to-hand combat and medical knowledge"
+    },
+    {
+      "characterId": "22",
+      "name": "Sekiro",
+      "game": "Sekiro: Shadows Die Twice",
+      "imageURL": "/sekiro.png",
+      "bio": "A shinobi warrior with a prosthetic arm, bound by duty to protect his young lord.",
+      "tag": "Shinobi",
+      "specialty": "Sword techniques and prosthetic tools"
+    },
+    {
+      "characterId": "23",
+      "name": "Senua",
+      "game": "Hellblade: Senua's Sacrifice",
+      "imageURL": "/senua.png",
+      "bio": "A Celtic warrior struggling with psychosis while journeying through a hellish underworld.",
+      "tag": "Psychotic Warrior",
+      "specialty": "Combat prowess despite mental affliction"
+    },
+    {
+      "characterId": "24",
+      "name": "Sam Porter Bridges",
+      "game": "Death Stranding",
+      "imageURL": "/samPorter.png",
+      "bio": "A porter tasked with reconnecting isolated communities in a post-apocalyptic America.",
+      "tag": "Bridge Builder",
+      "specialty": "Long-distance traversal and cargo delivery"
+    },
+    {
+      "characterId": "25",
+      "name": "Ciri",
+      "game": "The Witcher 3: Wild Hunt",
+      "imageURL": "/ciri.png",
+      "bio": "A princess with Elder Blood and space-time manipulation abilities, hunted by the Wild Hunt.",
+      "tag": "Child of Destiny",
+      "specialty": "Teleportation and swordsmanship"
+    },
+    {
+      "characterId": "26",
+      "name": "Rico Rodriguez",
+      "game": "Just Cause Series",
+      "imageURL": "/ricoRodriguez.png",
+      "bio": "A CIA operative specializing in regime change through creative destruction and chaos.",
+      "tag": "Chaos Agent",
+      "specialty": "Grappling hook combat and explosive mayhem"
+    },
+    {
+      "characterId": "27",
+      "name": "Tracer",
+      "game": "Overwatch",
+      "imageURL": "/tracer.png",
+      "bio": "A former pilot with time-manipulation abilities fighting for peace as part of Overwatch.",
+      "tag": "Chrono-Accelerator",
+      "specialty": "Time manipulation and rapid movement"
+    },
+    {
+      "characterId": "28",
+      "name": "Doomguy",
+      "game": "DOOM (2016)",
+      "imageURL": "/doomguy.png",
+      "bio": "A relentless space marine fighting against demonic forces from Hell with pure rage and determination.",
+      "tag": "Doom Slayer",
+      "specialty": "Demon extermination and heavy weaponry"
+    },
+    {
+      "characterId": "29",
+      "name": "Marcus Holloway",
+      "game": "Watch Dogs 2",
+      "imageURL": "/marcusHolloway.png",
+      "bio": "A young hacker fighting against corporate surveillance and government oppression in San Francisco.",
+      "tag": "Dedsec Hacker",
+      "specialty": "Social engineering and drone warfare"
+    },
+    {
+      "characterId": "30",
+      "name": "Alyx Vance",
+      "game": "Half-Life: Alyx",
+      "imageURL": "/alyxVance.png",
+      "bio": "A skilled engineer and fighter in the human resistance against alien occupation.",
+      "tag": "Resistance Fighter",
+      "specialty": "Engineering and improvised weapons"
+    }
+  ]
+

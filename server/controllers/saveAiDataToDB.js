@@ -1,44 +1,21 @@
-require("dotenv").config();
-const openai = require("../config/openai");
 const AiProfiles = require("../models/aiprofiles");
+const characterData = require("../data/characterInfor.json");
 
 const saveAiDataToDB = async (req, res) => {
   try {
-    const prompt = `Generate 20 video game characters profile including Arthur morgan from Red Dead Redemption 2 in JSON format exactly following this schema:
-
-{
-  "name": "Character's full name",
-  "game": "The game they appear in",
-  "symbol": "A single emoji or symbol representing them (optional)",
-  "bio": "A short 1-2 sentence bio describing their story and traits",
-  "tag": "A short descriptive tag, e.g., 'Spartan Super Soldier'",
-  "specialty": "Their unique skill, power, or role in the game"
-}
-
-Please provide realistic and creative entries. Only respond with valid JSON.`;
-
-    const chatResponse = await openai.chat.completions.create({
-      model: "gpt-4o-mini",
-      messages: [{ role: "user", content: prompt }],
-      temperature: 0.7,
-      max_tokens: 2500,
-    });
-
-    const message = chatResponse.choices[0].message.content;
-
-    let profileData;
-    try {
-      profileData = JSON.parse(message);
-    } catch (err) {
-      const jsonMatch = message.match(/\[.*\]/s);
-      if (jsonMatch) profileData = JSON.parse(jsonMatch[0]);
-      else throw err;
+    const existingProfiles = await AiProfiles.countDocuments();
+    if (existingProfiles > 0) {
+      return res.status(400).json({
+        message: "Character profiles already exist in database",
+        count: existingProfiles,
+      });
     }
 
-    const savedProfiles = await AiProfiles.insertMany(profileData);
+    const savedProfiles = await AiProfiles.insertMany(characterData);
 
     return res.status(201).json({
-      message: "Added profiles successfully",
+      message: "Added character profiles to DB.",
+      count: savedProfiles.length,
       profiles: savedProfiles,
     });
   } catch (error) {

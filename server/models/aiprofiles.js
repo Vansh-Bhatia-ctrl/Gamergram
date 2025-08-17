@@ -1,6 +1,11 @@
 const mongoose = require("mongoose");
 
 const aiProfiles = new mongoose.Schema({
+  characterId: {
+    type: String,
+    required: true,
+    unique: true,
+  },
   name: {
     type: String,
     required: true,
@@ -9,8 +14,9 @@ const aiProfiles = new mongoose.Schema({
     type: String,
     required: true,
   },
-  symbol: {
+  imageURL: {
     type: String,
+    required: true,
   },
   bio: {
     type: String,
@@ -29,15 +35,3 @@ const aiProfiles = new mongoose.Schema({
 const AiProfiles = mongoose.model("AiProfiles", aiProfiles);
 
 module.exports = AiProfiles;
-
-
-
-
-
-
-
-
-
-
-
-
