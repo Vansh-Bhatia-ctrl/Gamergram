@@ -1,5 +1,4 @@
 import Header from "../components/Header";
-import AiFilters from "../components/AiFilters";
 import AiCard from "../components/AiCard";
 
 const AiChatBox = () => {
@@ -25,7 +24,6 @@ const AiChatBox = () => {
         </div>
 
         {/*Filters section*/}
-        <AiFilters />
 
         {/*Character cards*/}
         <AiCard />

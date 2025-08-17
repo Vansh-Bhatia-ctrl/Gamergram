@@ -24,15 +24,7 @@ const useUIStore = create((set, get) => ({
     { id: "saga", label: "Saga", icon: LibraryBig, link: "/kratos" },
   ],
   selectedPage: "home",
-  filters: [
-    { id: "All", label: "All" },
-    { id: "FPS", label: "FPS" },
-    { id: "RPG", label: "RPG" },
-    { id: "Action", label: "Action" },
-    { id: "Adventure", label: "Adventure" },
-    { id: "Puzzle", label: "Puzzle" },
-  ],
-  selectedFilter: "All",
+
   selectedCharacter: null,
 
   setReadingProgress: () => {
@@ -45,10 +37,6 @@ const useUIStore = create((set, get) => ({
 
   setSelectedPage: (pageID) => {
     set({ selectedPage: pageID });
-  },
-
-  setSelectedFilter: (filterID) => {
-    set({ selectedFilter: filterID });
   },
 
   setSelectedCharacter: (character) => {
