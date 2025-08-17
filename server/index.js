@@ -27,6 +27,7 @@ const getProfiles = require("./routes/getAiProfiles");
 
 const { startNewsCron } = require("./controllers/news/cronjobnews");
 const { runPlaystationCronJob } = require("./jobs/playstationcron");
+const { handleSocketConnection } = require("./websocket/socketHandlers");
 
 const app = express();
 
@@ -38,6 +39,8 @@ const io = new Server(server, {
     credentials: true,
   },
 });
+
+handleSocketConnection(io);
 
 const startServer = async () => {
   try {
@@ -112,3 +115,4 @@ const startServer = async () => {
 };
 
 startServer();
+
