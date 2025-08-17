@@ -33,6 +33,7 @@ const useUIStore = create((set, get) => ({
     { id: "Puzzle", label: "Puzzle" },
   ],
   selectedFilter: "All",
+  selectedCharacter: null,
 
   setReadingProgress: () => {
     const scrollTop = window.scrollY;
@@ -48,6 +49,10 @@ const useUIStore = create((set, get) => ({
 
   setSelectedFilter: (filterID) => {
     set({ selectedFilter: filterID });
+  },
+
+  setSelectedCharacter: (character) => {
+    set({ selectedCharacter: character });
   },
 }));
 

@@ -3,115 +3,12 @@ import { useState } from "react";
 import ChatWindow from "./ChatWindow";
 import useAiProfileStore from "../store/useAiProfileStore";
 import { useEffect } from "react";
-
-const aiCharacters = [
-  {
-    id: 1,
-    name: "Master Chief",
-    game: "Halo",
-    category: "FPS",
-    description:
-      "Legendary Spartan super-soldier ready for tactical discussions",
-    avatar: "🎖️",
-    color: "from-green-500 to-blue-600",
-    specialty: "Combat Strategy",
-    status: "online",
-  },
-  {
-    id: 2,
-    name: "Kratos",
-    game: "God of War",
-    category: "Action",
-    description: "God of War with wisdom from his journey of redemption",
-    avatar: "⚡",
-    color: "from-red-500 to-orange-600",
-    specialty: "Mythology & Combat",
-    status: "online",
-  },
-  {
-    id: 3,
-    name: "GLaDOS",
-    game: "Portal",
-    category: "Puzzle",
-    description: "Sarcastically helpful AI for puzzle-solving and dark humor",
-    avatar: "🤖",
-    color: "from-blue-500 to-purple-600",
-    specialty: "Logic & Puzzles",
-    status: "online",
-  },
-  {
-    id: 4,
-    name: "Geralt of Rivia",
-    game: "The Witcher",
-    category: "RPG",
-    description:
-      "Witcher with knowledge of monsters, potions, and tough choices",
-    avatar: "🗡️",
-    color: "from-gray-500 to-yellow-600",
-    specialty: "Monster Hunting",
-    status: "online",
-  },
-  {
-    id: 5,
-    name: "Commander Shepard",
-    game: "Mass Effect",
-    category: "RPG",
-    description:
-      "N7 operative ready to discuss galactic politics and alien species",
-    avatar: "🚀",
-    color: "from-blue-600 to-indigo-700",
-    specialty: "Space Exploration",
-    status: "online",
-  },
-  {
-    id: 6,
-    name: "Cortana",
-    game: "Halo",
-    category: "FPS",
-    description: "Advanced AI companion with vast tactical knowledge",
-    avatar: "💎",
-    color: "from-cyan-500 to-blue-600",
-    specialty: "AI Intelligence",
-    status: "online",
-  },
-  {
-    id: 7,
-    name: "Lara Croft",
-    game: "Tomb Raider",
-    category: "Adventure",
-    description: "Adventurous archaeologist ready for exploration discussions",
-    avatar: "🏺",
-    color: "from-amber-500 to-orange-600",
-    specialty: "Archaeology",
-    status: "online",
-  },
-  {
-    id: 8,
-    name: "Solid Snake",
-    game: "Metal Gear",
-    category: "Action",
-    description: "Legendary soldier with expertise in stealth and espionage",
-    avatar: "🥷",
-    color: "from-gray-600 to-green-600",
-    specialty: "Stealth Operations",
-    status: "online",
-  },
-  {
-    id: 9,
-    name: "Aloy",
-    game: "Horizon",
-    category: "Adventure",
-    description: "Hunter from post-apocalyptic world with tech knowledge",
-    avatar: "🏹",
-    color: "from-orange-500 to-red-600",
-    specialty: "Technology & Hunting",
-    status: "online",
-  },
-];
+import useUIStore from "../store/useUIStore";
 
 const AiCard = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const { aiProfiles, isLoading, error, getAiProfiles } = useAiProfileStore();
+  const { setSelectedCharacter } = useUIStore();
   useEffect(() => {
     getAiProfiles();
   }, []);
@@ -122,7 +19,10 @@ const AiCard = () => {
         {aiProfiles.map((character) => (
           <div
             key={character.characterId}
-            onClick={() => setModalIsOpen(true)}
+            onClick={() => {
+              setModalIsOpen(true);
+              setSelectedCharacter(character);
+            }}
             className="bg-neutral-800 h-auto p-4 rounded-xl border hover:bg-neutral-700 border-neutral-600 cursor-pointer hover:-translate-y-1 transition-all duration-300 ease-in-out"
           >
             <div className="flex items-center gap-4">

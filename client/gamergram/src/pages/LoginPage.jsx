@@ -1,11 +1,9 @@
 import { Gamepad2 } from "lucide-react";
 import { useState } from "react";
- 
 
 export default function LoginPage() {
   const [username, setUserName] = useState("");
   const [password, setPassword] = useState("");
- 
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -25,6 +23,7 @@ export default function LoginPage() {
       console.log("Logged-in successfully", resp);
       if (resp.token) {
         localStorage.setItem("token", resp.token);
+        localStorage.setItem("userId", resp.user.id);
       } else {
         console.log("Log-in failed. Please try again.");
       }
