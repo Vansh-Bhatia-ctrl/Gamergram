@@ -9,6 +9,7 @@ import GameDetails from "./pages/GameDetails";
 import News from "./pages/News";
 import KratosSaga from "./pages/Kratos";
 import NewsDetails from "./pages/NewsDetails";
+import ProtectedRoute from "./components/ProtectedRoute ";
 
 const router = createBrowserRouter([
   {
@@ -25,7 +26,11 @@ const router = createBrowserRouter([
   },
   {
     path: "gamebuletien",
-    element: <GameBuletien />,
+    element: (
+      <ProtectedRoute>
+        <GameBuletien />
+      </ProtectedRoute>
+    ),
   },
   {
     path: "gamebuletien/:gameID",
@@ -33,11 +38,19 @@ const router = createBrowserRouter([
   },
   {
     path: "aiChatBox",
-    element: <AiChatBox />,
+    element: (
+      <ProtectedRoute>
+        <AiChatBox />
+      </ProtectedRoute>
+    ),
   },
   {
     path: "news",
-    element: <News />,
+    element: (
+      <ProtectedRoute>
+        <News />
+      </ProtectedRoute>
+    ),
   },
   {
     path: "news/:newsID",

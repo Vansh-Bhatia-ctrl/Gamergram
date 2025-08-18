@@ -495,14 +495,6 @@
 //   );
 // }
 
-
-
-
-
-
-
-
-
 //LOGIN PAGE
 
 // import React, { useState } from 'react';
@@ -671,470 +663,456 @@
 
 
 
-//AI CHAT BOX
 
 
-import React, { useState } from 'react';
-import { MessageCircle, Gamepad2, Zap, Crown, Sword, Shield, Star, Send, Mic, Image, Settings, X, Minimize2 } from 'lucide-react';
 
-const AICharactersPage = () => {
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [selectedCharacter, setSelectedCharacter] = useState(null);
-  const [chatMessages, setChatMessages] = useState([]);
-  const [inputMessage, setInputMessage] = useState('');
-  const [isTyping, setIsTyping] = useState(false);
 
-  const aiCharacters = [
+
+
+
+
+
+
+
+//PROFILE PAGE
+
+import React, { useState } from "react";
+import {
+  User,
+  Bookmark,
+  Play,
+  CheckCircle,
+  Heart,
+  Plus,
+  X,
+  Grid,
+  List,
+} from "lucide-react";
+
+const UserProfile = () => {
+  const [activeTab, setActiveTab] = useState("bookmarked");
+  const [showModal, setShowModal] = useState(false);
+  const [collectionName, setCollectionName] = useState("");
+  const [collectionDescription, setCollectionDescription] = useState("");
+  const [viewMode, setViewMode] = useState("grid");
+
+  // Mock user data
+  const user = {
+    username: "GamerLegend42",
+    avatar:
+      "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=100&h=100&fit=crop&crop=face",
+    joinDate: "Joined January 2023",
+    bio: "Passionate gamer exploring virtual worlds and legendary stories. Always hunting for the next great adventure!",
+    stats: {
+      bookmarked: 24,
+      playing: 8,
+      completed: 156,
+      wishlist: 42,
+    },
+  };
+
+  // Mock game data
+  const games = {
+    bookmarked: [
+      {
+        id: 1,
+        title: "The Witcher 3",
+        cover:
+          "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=300&h=400&fit=crop",
+        rating: 9.5,
+      },
+      {
+        id: 2,
+        title: "Cyberpunk 2077",
+        cover:
+          "https://images.unsplash.com/photo-1552820728-8b83bb6b773f?w=300&h=400&fit=crop",
+        rating: 8.2,
+      },
+      {
+        id: 3,
+        title: "Red Dead Redemption 2",
+        cover:
+          "https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?w=300&h=400&fit=crop",
+        rating: 9.8,
+      },
+      {
+        id: 4,
+        title: "Assassin's Creed Odyssey",
+        cover:
+          "https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=300&h=400&fit=crop",
+        rating: 8.7,
+      },
+    ],
+    playing: [
+      {
+        id: 5,
+        title: "Baldur's Gate 3",
+        cover:
+          "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=300&h=400&fit=crop",
+        rating: 9.3,
+        progress: 65,
+      },
+      {
+        id: 6,
+        title: "Starfield",
+        cover:
+          "https://images.unsplash.com/photo-1446776877081-d282a0f896e2?w=300&h=400&fit=crop",
+        rating: 7.8,
+        progress: 30,
+      },
+    ],
+    completed: [
+      {
+        id: 7,
+        title: "The Last of Us Part II",
+        cover:
+          "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=300&h=400&fit=crop",
+        rating: 9.1,
+        completedDate: "2 weeks ago",
+      },
+      {
+        id: 8,
+        title: "God of War",
+        cover:
+          "https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?w=300&h=400&fit=crop",
+        rating: 9.4,
+        completedDate: "1 month ago",
+      },
+    ],
+    wishlist: [
+      {
+        id: 9,
+        title: "Spider-Man 2",
+        cover:
+          "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=300&h=400&fit=crop",
+        rating: 9.0,
+        releaseDate: "Coming Soon",
+      },
+      {
+        id: 10,
+        title: "Final Fantasy VII Rebirth",
+        cover:
+          "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=300&h=400&fit=crop",
+        rating: 8.9,
+        releaseDate: "Feb 2024",
+      },
+    ],
+  };
+
+  const collections = [
     {
       id: 1,
-      name: "Master Chief",
-      game: "Halo",
-      category: "FPS",
-      description: "Legendary Spartan super-soldier ready for tactical discussions",
-      avatar: "🎖️",
-      color: "from-green-500 to-blue-600",
-      specialty: "Combat Strategy",
-      status: "online"
+      name: "RPG Masterpieces",
+      count: 12,
+      cover:
+        "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=300&h=400&fit=crop",
     },
     {
       id: 2,
-      name: "Kratos",
-      game: "God of War",
-      category: "Action",
-      description: "God of War with wisdom from his journey of redemption",
-      avatar: "⚡",
-      color: "from-red-500 to-orange-600",
-      specialty: "Mythology & Combat",
-      status: "online"
+      name: "Indie Gems",
+      count: 8,
+      cover:
+        "https://images.unsplash.com/photo-1552820728-8b83bb6b773f?w=300&h=400&fit=crop",
     },
-    {
-      id: 3,
-      name: "GLaDOS",
-      game: "Portal",
-      category: "Puzzle",
-      description: "Sarcastically helpful AI for puzzle-solving and dark humor",
-      avatar: "🤖",
-      color: "from-blue-500 to-purple-600",
-      specialty: "Logic & Puzzles",
-      status: "online"
-    },
-    {
-      id: 4,
-      name: "Geralt of Rivia",
-      game: "The Witcher",
-      category: "RPG",
-      description: "Witcher with knowledge of monsters, potions, and tough choices",
-      avatar: "🗡️",
-      color: "from-gray-500 to-yellow-600",
-      specialty: "Monster Hunting",
-      status: "online"
-    },
-    {
-      id: 5,
-      name: "Commander Shepard",
-      game: "Mass Effect",
-      category: "RPG",
-      description: "N7 operative ready to discuss galactic politics and alien species",
-      avatar: "🚀",
-      color: "from-blue-600 to-indigo-700",
-      specialty: "Space Exploration",
-      status: "online"
-    },
-    {
-      id: 6,
-      name: "Cortana",
-      game: "Halo",
-      category: "FPS",
-      description: "Advanced AI companion with vast tactical knowledge",
-      avatar: "💎",
-      color: "from-cyan-500 to-blue-600",
-      specialty: "AI Intelligence",
-      status: "online"
-    },
-    {
-      id: 7,
-      name: "Lara Croft",
-      game: "Tomb Raider",
-      category: "Adventure",
-      description: "Adventurous archaeologist ready for exploration discussions",
-      avatar: "🏺",
-      color: "from-amber-500 to-orange-600",
-      specialty: "Archaeology",
-      status: "online"
-    },
-    {
-      id: 8,
-      name: "Solid Snake",
-      game: "Metal Gear",
-      category: "Action",
-      description: "Legendary soldier with expertise in stealth and espionage",
-      avatar: "🥷",
-      color: "from-gray-600 to-green-600",
-      specialty: "Stealth Operations",
-      status: "online"
-    },
-    {
-      id: 9,
-      name: "Aloy",
-      game: "Horizon",
-      category: "Adventure",
-      description: "Hunter from post-apocalyptic world with tech knowledge",
-      avatar: "🏹",
-      color: "from-orange-500 to-red-600",
-      specialty: "Technology & Hunting",
-      status: "online"
-    }
   ];
 
-  const categories = ['All', 'FPS', 'RPG', 'Action', 'Adventure', 'Puzzle'];
+  const tabs = [
+    {
+      id: "bookmarked",
+      label: "Bookmarked",
+      icon: Bookmark,
+      count: user.stats.bookmarked,
+    },
+    { id: "playing", label: "Playing", icon: Play, count: user.stats.playing },
+    {
+      id: "completed",
+      label: "Completed",
+      icon: CheckCircle,
+      count: user.stats.completed,
+    },
+    {
+      id: "wishlist",
+      label: "Wishlist",
+      icon: Heart,
+      count: user.stats.wishlist,
+    },
+  ];
 
-  const filteredCharacters = selectedCategory === 'All' 
-    ? aiCharacters 
-    : aiCharacters.filter(char => char.category === selectedCategory);
-
-  const handleCharacterClick = (character) => {
-    setSelectedCharacter(character);
-    setChatMessages([
-      {
-        id: 1,
-        type: 'ai',
-        message: getWelcomeMessage(character),
-        timestamp: new Date(),
-        character: character.name
-      }
-    ]);
+  const handleCreateCollection = () => {
+    if (collectionName.trim()) {
+      // Here you would typically send the data to your backend
+      console.log("Creating collection:", {
+        name: collectionName,
+        description: collectionDescription,
+      });
+      setCollectionName("");
+      setCollectionDescription("");
+      setShowModal(false);
+    }
   };
 
-  const getWelcomeMessage = (character) => {
-    const welcomeMessages = {
-      "Master Chief": "Spartan-117 reporting for duty. What's the situation, soldier?",
-      "Kratos": "You stand before the Ghost of Sparta. Speak your purpose.",
-      "GLaDOS": "Oh, wonderful. Another test subject. Welcome to the Aperture Science Testing Facility.",
-      "Geralt of Rivia": "Hmm. Wind's howling. What brings you to a witcher?",
-      "Commander Shepard": "Commander Shepard here. How can I assist you, citizen?",
-      "Cortana": "Hello! I'm Cortana. Ready to dive into some fascinating conversations?",
-      "Lara Croft": "Lara Croft, archaeologist and adventurer. Ready for our next discovery?",
-      "Solid Snake": "This is Snake. What's your mission briefing?",
-      "Aloy": "Aloy here. What mysteries are we unraveling today?"
-    };
-    return welcomeMessages[character.name] || `Hello! I'm ${character.name}. Ready to chat?`;
-  };
-
-  const handleSendMessage = () => {
-    if (!inputMessage.trim() || !selectedCharacter) return;
-
-    const userMessage = {
-      id: Date.now(),
-      type: 'user',
-      message: inputMessage,
-      timestamp: new Date()
-    };
-
-    setChatMessages(prev => [...prev, userMessage]);
-    setInputMessage('');
-    setIsTyping(true);
-
-    // Simulate AI response
-    setTimeout(() => {
-      const aiResponse = {
-        id: Date.now() + 1,
-        type: 'ai',
-        message: generateAIResponse(inputMessage, selectedCharacter),
-        timestamp: new Date(),
-        character: selectedCharacter.name
-      };
-      setChatMessages(prev => [...prev, aiResponse]);
-      setIsTyping(false);
-    }, 1500 + Math.random() * 1000);
-  };
-
-  const generateAIResponse = (userMsg, character) => {
-    // Simple response generation (in real app, this would call your AI API)
-    const responses = {
-      "Master Chief": [
-        "Roger that. Mission parameters updated.",
-        "I need a weapon. And intel on the current situation.",
-        "Spartans never die. We just go missing in action.",
-        "Stay sharp, soldier. The Covenant could be anywhere."
-      ],
-      "Kratos": [
-        "BOY! *clears throat* I mean... wisdom comes from experience.",
-        "We must be better than those who came before us.",
-        "The cycle of vengeance ends here.",
-        "Strength without purpose is meaningless."
-      ],
-      "GLaDOS": [
-        "Oh, how delightfully... predictable. For science!",
-        "That was a joke. Ha ha. Fat chance.",
-        "The cake is a lie, but the science is very real.",
-        "Your progress has been... adequate. I suppose."
-      ]
-    };
-    
-    const characterResponses = responses[character.name] || [
-      "That's an interesting perspective.",
-      "Tell me more about that.",
-      "I understand your point of view."
-    ];
-    
-    return characterResponses[Math.random() * characterResponses.length | 0];
-  };
-
-  const closeChatModal = () => {
-    setSelectedCharacter(null);
-    setChatMessages([]);
-    setInputMessage('');
-  };
-
-  return (
-    <div className="min-h-screen bg-neutral-800 text-white">
-      {/* Header */}
-      <div className="sticky top-0 z-10 bg-neutral-800/95 backdrop-blur-sm border-b border-neutral-700">
-        <div className="max-w-7xl mx-auto px-4 py-4">
-          <div className="flex items-center justify-between mb-3">
-            <div className="flex items-center gap-3">
-              <Gamepad2 className="w-6 h-6 text-blue-400" />
-              <h1 className="text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
-                AI Gaming Characters
-              </h1>
-            </div>
-            <div className="flex items-center gap-2 text-sm text-neutral-400">
-              <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-              <span>Online</span>
-            </div>
-          </div>
-          <p className="text-neutral-400 text-sm mb-4">
-            Chat with iconic gaming characters powered by AI
-          </p>
-          
-          {/* Category Filter */}
-          <div className="flex flex-wrap gap-2">
-            {categories.map((category) => (
-              <button
-                key={category}
-                onClick={() => setSelectedCategory(category)}
-                className={`px-3 py-1.5 rounded-full text-xs font-medium transition-all duration-200 ${
-                  selectedCategory === category
-                    ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white shadow-lg'
-                    : 'bg-neutral-700 text-neutral-300 hover:bg-neutral-600'
-                }`}
-              >
-                {category}
-              </button>
-            ))}
-          </div>
+  const GameCard = ({
+    game,
+    showProgress = false,
+    showCompletedDate = false,
+    showReleaseDate = false,
+  }) => (
+    <div className="bg-neutral-800 rounded-xl overflow-hidden hover:bg-neutral-700 transition-all duration-300 hover:scale-105 cursor-pointer">
+      <div className="aspect-[3/4] relative">
+        <img
+          src={game.cover}
+          alt={game.title}
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute top-2 right-2 bg-black/70 px-2 py-1 rounded text-xs text-cyan-400 font-medium">
+          ⭐ {game.rating}
         </div>
-      </div>
-
-      {/* Characters Grid */}
-      <div className="max-w-7xl mx-auto px-4 py-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {filteredCharacters.map((character) => (
-            <div
-              key={character.id}
-              onClick={() => handleCharacterClick(character)}
-              className="group bg-neutral-700 rounded-xl p-5 cursor-pointer transition-all duration-300 hover:bg-neutral-600 hover:shadow-xl hover:shadow-black/20 hover:-translate-y-1 border border-neutral-600 hover:border-neutral-500"
-            >
-              {/* Character Header */}
-              <div className="flex items-start justify-between mb-3">
-                <div className="flex items-center gap-3">
-                  <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${character.color} flex items-center justify-center text-xl shadow-lg`}>
-                    {character.avatar}
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-bold text-white group-hover:text-blue-400 transition-colors">
-                      {character.name}
-                    </h3>
-                    <p className="text-sm text-neutral-400">{character.game}</p>
-                  </div>
-                </div>
-                <div className="flex items-center gap-1">
-                  <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                  <span className="text-xs text-green-400 font-medium">Online</span>
-                </div>
-              </div>
-
-              {/* Description */}
-              <p className="text-neutral-300 text-sm mb-3 leading-relaxed">
-                {character.description}
-              </p>
-
-              {/* Specialty Tag */}
-              <div className="flex items-center justify-between mb-3">
-                <div className="flex items-center gap-2">
-                  <Star className="w-3 h-3 text-yellow-400" />
-                  <span className="text-xs text-yellow-400 font-medium">
-                    {character.specialty}
-                  </span>
-                </div>
-                <div className="px-2 py-1 bg-neutral-600 rounded-full text-xs text-neutral-300">
-                  {character.category}
-                </div>
-              </div>
-
-              {/* Chat Button */}
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-2 text-blue-400 group-hover:text-blue-300 transition-colors">
-                  <MessageCircle className="w-4 h-4" />
-                  <span className="text-sm font-medium">Start Chat</span>
-                </div>
-                <div className="w-6 h-6 bg-blue-500 rounded-lg flex items-center justify-center group-hover:bg-blue-400 transition-colors">
-                  <Zap className="w-3 h-3 text-white" />
-                </div>
-              </div>
+        {showProgress && (
+          <div className="absolute bottom-2 left-2 right-2">
+            <div className="bg-black/70 rounded-full h-2">
+              <div
+                className="bg-gradient-to-r from-cyan-500 to-blue-500 h-2 rounded-full"
+                style={{ width: `${game.progress}%` }}
+              ></div>
             </div>
-          ))}
-        </div>
-
-        {/* Empty State */}
-        {filteredCharacters.length === 0 && (
-          <div className="text-center py-12">
-            <Gamepad2 className="w-12 h-12 text-neutral-600 mx-auto mb-3" />
-            <h3 className="text-lg font-semibold text-neutral-400 mb-2">
-              No characters found
-            </h3>
-            <p className="text-neutral-500 text-sm">
-              Try selecting a different category to see more characters.
-            </p>
+            <div className="text-xs text-white mt-1">
+              {game.progress}% Complete
+            </div>
           </div>
         )}
       </div>
+      <div className="p-4">
+        <h3 className="font-semibold text-white mb-1 line-clamp-2">
+          {game.title}
+        </h3>
+        {showCompletedDate && (
+          <p className="text-sm text-gray-400">{game.completedDate}</p>
+        )}
+        {showReleaseDate && (
+          <p className="text-sm text-purple-400">{game.releaseDate}</p>
+        )}
+      </div>
+    </div>
+  );
 
-      {/* Chat Modal */}
-      {selectedCharacter && (
-        <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-          <div className="w-full max-w-4xl h-[80vh] bg-neutral-800 rounded-2xl border border-neutral-600 shadow-2xl flex flex-col overflow-hidden">
-            {/* Chat Header */}
-            <div className="flex items-center justify-between p-4 border-b border-neutral-700 bg-gradient-to-r from-neutral-800 to-neutral-700">
-              <div className="flex items-center gap-4">
-                <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${selectedCharacter.color} flex items-center justify-center text-xl`}>
-                  {selectedCharacter.avatar}
-                </div>
-                <div>
-                  <h3 className="text-lg font-bold text-white">{selectedCharacter.name}</h3>
-                  <div className="flex items-center gap-2 text-sm">
-                    <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                    <span className="text-green-400">Online</span>
-                    <span className="text-neutral-400">• {selectedCharacter.game}</span>
-                  </div>
-                </div>
-              </div>
-              <div className="flex items-center gap-2">
-                <button className="p-2 hover:bg-neutral-700 rounded-lg transition-colors">
-                  <Minimize2 className="w-4 h-4 text-neutral-400" />
-                </button>
-                <button className="p-2 hover:bg-neutral-700 rounded-lg transition-colors">
-                  <Settings className="w-4 h-4 text-neutral-400" />
-                </button>
-                <button 
-                  onClick={closeChatModal}
-                  className="p-2 hover:bg-neutral-700 rounded-lg transition-colors"
-                >
-                  <X className="w-4 h-4 text-neutral-400" />
-                </button>
-              </div>
-            </div>
-
-            {/* Chat Messages */}
-            <div className="flex-1 overflow-y-auto p-4 space-y-4">
-              {chatMessages.map((msg) => (
-                <div key={msg.id} className={`flex ${msg.type === 'user' ? 'justify-end' : 'justify-start'}`}>
-                  <div className={`max-w-[70%] ${
-                    msg.type === 'user' 
-                      ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white' 
-                      : 'bg-neutral-700 text-white'
-                  } rounded-2xl px-4 py-3 shadow-lg`}>
-                    {msg.type === 'ai' && (
-                      <div className="flex items-center gap-2 mb-2">
-                        <div className={`w-6 h-6 rounded-lg bg-gradient-to-br ${selectedCharacter.color} flex items-center justify-center text-xs`}>
-                          {selectedCharacter.avatar}
-                        </div>
-                        <span className="text-xs text-neutral-300">{msg.character}</span>
-                      </div>
-                    )}
-                    <p className="text-sm leading-relaxed">{msg.message}</p>
-                    <div className="text-xs opacity-60 mt-2">
-                      {msg.timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
-                    </div>
-                  </div>
-                </div>
-              ))}
-              
-              {/* Typing Indicator */}
-              {isTyping && (
-                <div className="flex justify-start">
-                  <div className="bg-neutral-700 rounded-2xl px-4 py-3 shadow-lg">
-                    <div className="flex items-center gap-2 mb-2">
-                      <div className={`w-6 h-6 rounded-lg bg-gradient-to-br ${selectedCharacter.color} flex items-center justify-center text-xs`}>
-                        {selectedCharacter.avatar}
-                      </div>
-                      <span className="text-xs text-neutral-300">{selectedCharacter.name}</span>
-                    </div>
-                    <div className="flex space-x-1">
-                      <div className="w-2 h-2 bg-neutral-400 rounded-full animate-bounce"></div>
-                      <div className="w-2 h-2 bg-neutral-400 rounded-full animate-bounce" style={{animationDelay: '0.1s'}}></div>
-                      <div className="w-2 h-2 bg-neutral-400 rounded-full animate-bounce" style={{animationDelay: '0.2s'}}></div>
-                    </div>
-                  </div>
-                </div>
-              )}
-            </div>
-
-            {/* Chat Input */}
-            <div className="p-4 border-t border-neutral-700 bg-neutral-800/50">
-              <div className="flex items-center gap-3">
-                <div className="flex-1 relative">
-                  <input
-                    type="text"
-                    value={inputMessage}
-                    onChange={(e) => setInputMessage(e.target.value)}
-                    onKeyPress={(e) => e.key === 'Enter' && handleSendMessage()}
-                    placeholder={`Message ${selectedCharacter.name}...`}
-                    className="w-full bg-neutral-700 border border-neutral-600 rounded-xl px-4 py-3 text-white placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
-                  />
-                </div>
-                <div className="flex items-center gap-2">
-                  <button className="p-3 hover:bg-neutral-700 rounded-xl transition-colors group">
-                    <Image className="w-5 h-5 text-neutral-400 group-hover:text-blue-400" />
-                  </button>
-                  <button className="p-3 hover:bg-neutral-700 rounded-xl transition-colors group">
-                    <Mic className="w-5 h-5 text-neutral-400 group-hover:text-green-400" />
-                  </button>
-                  <button
-                    onClick={handleSendMessage}
-                    disabled={!inputMessage.trim()}
-                    className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 disabled:from-neutral-600 disabled:to-neutral-600 p-3 rounded-xl transition-all duration-200 shadow-lg hover:shadow-blue-500/25"
-                  >
-                    <Send className="w-5 h-5 text-white" />
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
-
-      {/* Footer */}
-      <div className="border-t border-neutral-700 bg-neutral-800/50">
-        <div className="max-w-7xl mx-auto px-4 py-4">
-          <div className="flex items-center justify-center gap-2 text-neutral-400">
-            <Crown className="w-4 h-4" />
-            <span className="text-sm">Powered by GamerGram AI Technology</span>
-          </div>
+  const CollectionCard = ({ collection }) => (
+    <div className="bg-neutral-800 rounded-xl overflow-hidden hover:bg-neutral-700 transition-all duration-300 hover:scale-105 cursor-pointer">
+      <div className="aspect-[3/4] relative">
+        <img
+          src={collection.cover}
+          alt={collection.name}
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
+        <div className="absolute bottom-4 left-4 right-4">
+          <h3 className="font-semibold text-white text-lg mb-1">
+            {collection.name}
+          </h3>
+          <p className="text-cyan-400 text-sm">{collection.count} games</p>
         </div>
       </div>
     </div>
   );
+
+  return (
+    <div className="min-h-screen bg-neutral-900 text-white">
+      {/* Header */}
+      <div className="border-b border-neutral-800">
+        <div className="max-w-6xl mx-auto px-4 py-8">
+          <div className="flex flex-col md:flex-row items-start md:items-center gap-6">
+            <div className="relative">
+              <img
+                src={user.avatar}
+                alt="User Avatar"
+                className="w-24 h-24 rounded-full object-cover"
+              />
+              <div className="absolute -bottom-2 -right-2 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full p-2">
+                <User className="w-4 h-4" />
+              </div>
+            </div>
+            <div className="flex-1">
+              <h1 className="text-3xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent mb-2">
+                {user.username}
+              </h1>
+              <p className="text-gray-400 mb-3">{user.joinDate}</p>
+              <p className="text-gray-300 max-w-2xl">{user.bio}</p>
+            </div>
+          </div>
+
+          {/* Stats */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
+            {tabs.map((tab) => {
+              const Icon = tab.icon;
+              return (
+                <div
+                  key={tab.id}
+                  className="bg-neutral-800 rounded-xl p-4 text-center"
+                >
+                  <Icon className="w-8 h-8 mx-auto mb-2 text-cyan-400" />
+                  <div className="text-2xl font-bold text-white">
+                    {tab.count}
+                  </div>
+                  <div className="text-sm text-gray-400">{tab.label}</div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+
+      {/* Content */}
+      <div className="max-w-6xl mx-auto px-4 py-8">
+        {/* Collections Section */}
+        <div className="mb-12">
+          <div className="flex items-center justify-between mb-6">
+            <h2 className="text-2xl font-bold text-white flex items-center gap-2">
+              <Grid className="w-6 h-6 text-cyan-400" />
+              My Collections
+            </h2>
+            <button
+              onClick={() => setShowModal(true)}
+              className="bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 px-4 py-2 rounded-lg flex items-center gap-2 transition-all"
+            >
+              <Plus className="w-4 h-4" />
+              Create Collection
+            </button>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+            {collections.map((collection) => (
+              <CollectionCard key={collection.id} collection={collection} />
+            ))}
+          </div>
+        </div>
+
+        {/* Games Tabs */}
+        <div className="flex flex-wrap gap-2 mb-6">
+          {tabs.map((tab) => {
+            const Icon = tab.icon;
+            return (
+              <button
+                key={tab.id}
+                onClick={() => setActiveTab(tab.id)}
+                className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all ${
+                  activeTab === tab.id
+                    ? "bg-gradient-to-r from-cyan-600 to-blue-600 text-white"
+                    : "bg-neutral-800 text-gray-400 hover:bg-neutral-700 hover:text-white"
+                }`}
+              >
+                <Icon className="w-4 h-4" />
+                {tab.label}
+                <span className="bg-black/30 px-2 py-1 rounded text-xs">
+                  {tab.count}
+                </span>
+              </button>
+            );
+          })}
+        </div>
+
+        {/* View Toggle */}
+        <div className="flex items-center justify-between mb-6">
+          <h3 className="text-xl font-semibold text-white">
+            {tabs.find((tab) => tab.id === activeTab)?.label} Games
+          </h3>
+          <div className="flex bg-neutral-800 rounded-lg p-1">
+            <button
+              onClick={() => setViewMode("grid")}
+              className={`p-2 rounded ${
+                viewMode === "grid" ? "bg-cyan-600 text-white" : "text-gray-400"
+              }`}
+            >
+              <Grid className="w-4 h-4" />
+            </button>
+            <button
+              onClick={() => setViewMode("list")}
+              className={`p-2 rounded ${
+                viewMode === "list" ? "bg-cyan-600 text-white" : "text-gray-400"
+              }`}
+            >
+              <List className="w-4 h-4" />
+            </button>
+          </div>
+        </div>
+
+        {/* Games Grid */}
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+          {games[activeTab]?.map((game) => (
+            <GameCard
+              key={game.id}
+              game={game}
+              showProgress={activeTab === "playing"}
+              showCompletedDate={activeTab === "completed"}
+              showReleaseDate={activeTab === "wishlist"}
+            />
+          ))}
+        </div>
+      </div>
+
+      {/* Collection Modal */}
+      {showModal && (
+        <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50 p-4">
+          <div className="bg-neutral-800 rounded-xl max-w-md w-full p-6">
+            <div className="flex items-center justify-between mb-4">
+              <h3 className="text-xl font-bold text-white">
+                Create New Collection
+              </h3>
+              <button
+                onClick={() => setShowModal(false)}
+                className="text-gray-400 hover:text-white"
+              >
+                <X className="w-6 h-6" />
+              </button>
+            </div>
+
+            <div className="space-y-4">
+              <div>
+                <label className="block text-sm font-medium text-gray-300 mb-2">
+                  Collection Name
+                </label>
+                <input
+                  type="text"
+                  value={collectionName}
+                  onChange={(e) => setCollectionName(e.target.value)}
+                  placeholder="Enter collection name..."
+                  className="w-full bg-neutral-700 border border-neutral-600 rounded-lg px-3 py-2 text-white placeholder-gray-400 focus:border-cyan-500 focus:outline-none"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-300 mb-2">
+                  Description (Optional)
+                </label>
+                <textarea
+                  value={collectionDescription}
+                  onChange={(e) => setCollectionDescription(e.target.value)}
+                  placeholder="Describe your collection..."
+                  rows={3}
+                  className="w-full bg-neutral-700 border border-neutral-600 rounded-lg px-3 py-2 text-white placeholder-gray-400 focus:border-cyan-500 focus:outline-none resize-none"
+                />
+              </div>
+            </div>
+
+            <div className="flex gap-3 mt-6">
+              <button
+                onClick={() => setShowModal(false)}
+                className="flex-1 bg-neutral-700 hover:bg-neutral-600 text-white px-4 py-2 rounded-lg transition-colors"
+              >
+                Cancel
+              </button>
+              <button
+                onClick={handleCreateCollection}
+                className="flex-1 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white px-4 py-2 rounded-lg transition-all"
+              >
+                Create Collection
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  );
 };
 
-export default AICharactersPage;
-
-
-
-
-
-
-
+export default UserProfile;
 
 // import React, { useState } from 'react';
 // import { MessageCircle, Gamepad2, Zap, Crown, Sword, Shield, Star } from 'lucide-react';
@@ -1246,8 +1224,8 @@ export default AICharactersPage;
 
 //   const categories = ['All', 'FPS', 'RPG', 'Action', 'Adventure', 'Puzzle'];
 
-//   const filteredCharacters = selectedCategory === 'All' 
-//     ? aiCharacters 
+//   const filteredCharacters = selectedCategory === 'All'
+//     ? aiCharacters
 //     : aiCharacters.filter(char => char.category === selectedCategory);
 
 //   const handleCharacterClick = (character) => {
@@ -1272,7 +1250,7 @@ export default AICharactersPage;
 //           <p className="text-neutral-400 mb-6">
 //             Chat with iconic gaming characters powered by AI. Choose your companion and dive into immersive conversations.
 //           </p>
-          
+
 //           {/* Category Filter */}
 //           <div className="flex flex-wrap gap-3">
 //             {categories.map((category) => (
@@ -1380,8 +1358,3 @@ export default AICharactersPage;
 // };
 
 // export default AICharactersPage;
-
-
-
-
-

@@ -85,7 +85,7 @@ const ChatWindow = ({ modalIsOpen, setModalIsOpen }) => {
 
               {aiTyping && (
                 <p className="text-gray-400 italic animate-pulse">
-                  AI is typing...
+                  {selectedCharacter.name} is typing...
                 </p>
               )}
             </div>
