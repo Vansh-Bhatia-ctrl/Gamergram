@@ -645,35 +645,6 @@
 //   );
 // }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //PROFILE PAGE
 
 import React, { useState } from "react";
@@ -688,6 +659,7 @@ import {
   Grid,
   List,
 } from "lucide-react";
+import Header from "../components/Header";
 
 const UserProfile = () => {
   const [activeTab, setActiveTab] = useState("bookmarked");
@@ -917,7 +889,10 @@ const UserProfile = () => {
   return (
     <div className="min-h-screen bg-neutral-900 text-white">
       {/* Header */}
-      <div className="border-b border-neutral-800">
+      <div className="">
+        <div>
+          <Header />
+        </div>
         <div className="max-w-6xl mx-auto px-4 py-8">
           <div className="flex flex-col md:flex-row items-start md:items-center gap-6">
             <div className="relative">

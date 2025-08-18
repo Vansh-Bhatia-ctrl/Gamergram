@@ -1,5 +1,5 @@
 import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
-import { Check, ChevronDown, LogOut } from "lucide-react";
+import { Check, ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 import GameCards from "../components/GameCards";
@@ -97,15 +97,6 @@ const GameBuletien = () => {
             <div className="flex flex-col justify-between h-ful">
               {/* TOP Menu Items */}
               <Sidebar />
-
-              <div className="mt-10">
-                <div className="flex items-center gap-2">
-                  <LogOut size={25} color="#fff" className="cursor-pointer" />
-                  <h1 className=" text-white text-[18px] font-bold cursor-pointer">
-                    Log-out
-                  </h1>
-                </div>
-              </div>
             </div>
           </div>
           <div className="lg:ml-[250px]">

@@ -1,6 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import useUIStore from "../store/useUIStore";
 import { useEffect } from "react";
+import { User } from "lucide-react";
 
 const Sidebar = () => {
   const { pages, selectedPage, setSelectedPage } = useUIStore();

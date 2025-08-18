@@ -6,7 +6,7 @@ import PlatformFilters from "../components/PlatformFilters";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import NewsSection from "../components/NewsSection";
 import useGameStore from "../store/useGameStore";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import VideoCards from "../components/VideoCards";
 import { useNavigate } from "react-router-dom";
 
@@ -22,6 +22,7 @@ const News = () => {
     authChecked,
   } = useGameStore();
   const navigate = useNavigate();
+  const [sidebarOpen, setSidebarOpen] = useState(false);
   useEffect(() => {
     fetchNews();
   }, [fetchNews]);
@@ -43,7 +44,12 @@ const News = () => {
           <div className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-neutral-800 via-neutral-700 to-neutral-600" />
           <div className="p-4 flex justify-between items-center  gap-4">
             <div className="flex items-center gap-2 ">
-              <Menu size={19} color="#fff" className="cursor-pointer" />
+              <Menu
+                onClick={() => setSidebarOpen(true)}
+                size={19}
+                color="#fff"
+                className="cursor-pointer"
+              />
               <h1 className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent tracking-widest font-extrabold md:text-lg orbitron lg:text-xl cursor-pointer">
                 GAMERGRAM
               </h1>
@@ -139,6 +145,14 @@ const News = () => {
           )}
         </div>
       </div>
+      {sidebarOpen && (
+        <div className="fixed inset-0 min-h-screen w-screen bg-black/50">
+          <div className="bg-neutral-800 w-[20%] h-[100vh] p-20  ">
+            <button onClick={() => setSidebarOpen(false)} className="text-white">X</button>
+            <Sidebar />
+          </div>
+        </div>
+      )}
     </>
   );
 };

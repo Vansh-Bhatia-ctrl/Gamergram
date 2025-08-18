@@ -81,10 +81,18 @@
 }
 
 .show-scrollbar {
-  scrollbar-width: auto;  
-  -ms-overflow-style: auto;  
+  scrollbar-width: auto;
+  -ms-overflow-style: auto;
 }
 
 .show-scrollbar::-webkit-scrollbar {
-  display: block; 
+  display: block;
+}
+
+.scrollbar-custom::-webkit-scrollbar {
+  height: 8px; /* scrollbar height */
+}
+
+.scrollbar-custom::-webkit-scrollbar-track {
+  background: #171717; /* tailwind's neutral-800 */
 }

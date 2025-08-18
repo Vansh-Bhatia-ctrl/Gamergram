@@ -10,6 +10,7 @@ import News from "./pages/News";
 import KratosSaga from "./pages/Kratos";
 import NewsDetails from "./pages/NewsDetails";
 import ProtectedRoute from "./components/ProtectedRoute ";
+import ProfilePage from "./pages/ProfilePage";
 
 const router = createBrowserRouter([
   {
@@ -59,6 +60,10 @@ const router = createBrowserRouter([
   {
     path: "kratos",
     element: <KratosSaga />,
+  },
+  {
+    path: "profile",
+    element: <ProfilePage />,
   },
 ]);
 

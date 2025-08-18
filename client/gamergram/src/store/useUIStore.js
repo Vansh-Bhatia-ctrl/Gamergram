@@ -6,6 +6,11 @@ import {
   BotMessageSquare,
   Newspaper,
   LibraryBig,
+  User,
+  Bookmark,
+  Play,
+  CheckCircle,
+  Heart,
 } from "lucide-react";
 
 const useUIStore = create((set, get) => ({
@@ -22,10 +27,32 @@ const useUIStore = create((set, get) => ({
     },
     { id: "News", label: "News", icon: Newspaper, link: "/news" },
     { id: "saga", label: "Saga", icon: LibraryBig, link: "/kratos" },
+    { id: "profile", label: "Profile", icon: User, link: "/profile" },
+  ],
+  tabs: [
+    {
+      id: "bookmarked",
+      label: "Bookmarked",
+      icon: Bookmark,
+      count: 24,
+    },
+    { id: "playing", label: "Playing", icon: Play, count: 8 },
+    {
+      id: "completed",
+      label: "Completed",
+      icon: CheckCircle,
+      count: 156,
+    },
+    {
+      id: "wishlist",
+      label: "Wishlist",
+      icon: Heart,
+      count: 42,
+    },
   ],
   selectedPage: "home",
-
   selectedCharacter: null,
+  isSelected: "bookmarked",
 
   setReadingProgress: () => {
     const scrollTop = window.scrollY;
@@ -41,6 +68,9 @@ const useUIStore = create((set, get) => ({
 
   setSelectedCharacter: (character) => {
     set({ selectedCharacter: character });
+  },
+  setSelected: (id) => {
+    set({ isSelected: id });
   },
 }));
 
