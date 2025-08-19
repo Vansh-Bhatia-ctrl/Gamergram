@@ -25,6 +25,7 @@ const getBookmarks = require("./routes/getbookmarks");
 const saveAiTodb = require("./routes/savAiProfiles");
 const getProfiles = require("./routes/getAiProfiles");
 const userList = require("./routes/userList");
+const getAllList = require("./routes/getAllList");
 
 const { startNewsCron } = require("./controllers/news/cronjobnews");
 const { runPlaystationCronJob } = require("./jobs/playstationcron");
@@ -95,7 +96,8 @@ const startServer = async () => {
     app.use("/getbookmarks", getBookmarks);
     app.use("/api/ai", saveAiTodb);
     app.use("/aiprofiles", getProfiles);
-    app.use("userlist", userList);
+    app.use("/userlist", userList);
+    app.use("/getlist", getAllList);
 
     startNewsCron();
     runPlaystationCronJob();
