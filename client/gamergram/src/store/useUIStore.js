@@ -17,7 +17,7 @@ const useUIStore = create((set, get) => ({
   readingProgress: 0,
   pages: [
     { id: "home", label: "Home", icon: House, link: "/gamebuletien" },
-    { id: "events", label: "Events", icon: ClipboardX, link: "/events" },
+    { id: "quiz", label: "Quiz Me", icon: ClipboardX, link: "/quiz" },
     { id: "broadcast", label: "Broadcast", icon: Radio, link: "/broadcast" },
     {
       id: "ai Chat",
@@ -30,6 +30,27 @@ const useUIStore = create((set, get) => ({
     { id: "profile", label: "Profile", icon: User, link: "/profile" },
   ],
   tabs: [
+    {
+      id: "bookmarked",
+      label: "Bookmarked",
+      icon: Bookmark,
+      count: 24,
+    },
+    { id: "playing", label: "Playing", icon: Play, count: 8 },
+    {
+      id: "completed",
+      label: "Completed",
+      icon: CheckCircle,
+      count: 156,
+    },
+    {
+      id: "wishlist",
+      label: "Wishlist",
+      icon: Heart,
+      count: 42,
+    },
+  ],
+  newTabs: [
     {
       id: "bookmarked",
       label: "Bookmarked",

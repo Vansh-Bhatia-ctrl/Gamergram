@@ -66,7 +66,7 @@ const GameCards = ({ gameData, platForms, filters, searchTerm }) => {
             <Link
               to={`/gamebuletien/${game._id}`}
               key={game._id}
-              className="h-[560px] bg-[#1E1E1E] rounded-xl hover:shadow-2xl hover:scale-[1.05] shadow-lg shadow-black transition-all ease-in duration-300 cursor-pointer game-card sm:w-[450px] sm:shrink-0 lg:w-[350px] xl:w-[400px]"
+              className="h-[460px] bg-[#1E1E1E] rounded-xl hover:shadow-2xl hover:scale-[1.05] shadow-lg shadow-black transition-all ease-in duration-300 cursor-pointer game-card sm:w-[450px] sm:shrink-0 lg:w-[350px] xl:w-[400px]"
             >
               <div className="h-full w-full">
                 <img
@@ -101,17 +101,6 @@ const GameCards = ({ gameData, platForms, filters, searchTerm }) => {
                   </h1>
                 </div>
 
-                <div className="p-4 flex gap-2">
-                  <button className="px-2 py-2 text-white flex items-center gap-1 bg-neutral-700 rounded-3xl w-[100px]">
-                    <Heart size={20} color="#FF0000" />
-                    Wishlist
-                  </button>
-
-                  <button className="px-2 py-2 text-white flex items-center gap-1 bg-neutral-700 rounded-3xl w-[100px]">
-                    <Plus size={20} color="#FFF" />
-                    Follow
-                  </button>
-                </div>
               </div>
             </Link>
           );

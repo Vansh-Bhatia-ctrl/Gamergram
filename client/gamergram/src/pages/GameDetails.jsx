@@ -9,12 +9,17 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { format, parseISO } from "date-fns";
 import Header from "../components/Header";
+import useUIStore from "../store/useUIStore";
+import useUserList from "../store/useUserList";
 
 const GameDetails = () => {
   const [gameData, setGameData] = useState([]);
   const [showAllScreenshots, setShowAllScreenshots] = useState(false);
   const [showScreenshotModal, setShowScreenshotModal] = useState(false);
   const [showScreenshotIndex, setShowScreenshotIndex] = useState(0);
+  const { newTabs, setSelected, isSelected } = useUIStore();
+  const { userList, loading, error, addToUserList, fetchUserList } =
+    useUserList();
 
   const { gameID } = useParams();
   useEffect(() => {
@@ -37,7 +42,8 @@ const GameDetails = () => {
     }
 
     getGameData();
-  }, []);
+    fetchUserList();
+  }, [gameID]);
 
   useEffect(() => {
     if (showScreenshotModal) {
@@ -222,11 +228,26 @@ const GameDetails = () => {
                 </span>
               </div>
               {/*Add to button*/}
-              <div className="p-4">
-                <button className="px-2 py-2 text-white flex items-center gap-1 bg-neutral-700 rounded-3xl w-[100px]">
-                  <Plus size={20} color="#FFF" />
-                  Add to
-                </button>
+              <div className="flex flex-wrap gap-2 mb-6 mt-4">
+                {newTabs.map((tab) => {
+                  const Icon = tab.icon;
+                  const currentGameId = userList[gameData._id];
+
+                  return (
+                    <button
+                      key={tab.id}
+                      onClick={() => addToUserList(gameData._id, tab.id)}
+                      className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all ${
+                        currentGameId === tab.id
+                          ? "bg-gradient-to-r from-cyan-600 to-blue-600 text-white"
+                          : "bg-neutral-800 text-gray-400 hover:bg-neutral-700 hover:text-white"
+                      } cursor-pointer`}
+                    >
+                      <Icon className="w-4 h-4" />
+                      {tab.label}
+                    </button>
+                  );
+                })}
               </div>
             </div>
           </div>
