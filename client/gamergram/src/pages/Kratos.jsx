@@ -1,499 +1,4 @@
-// // KratosSaga.jsx
-// import React, { useEffect, useRef, useState } from "react";
-// import { motion, AnimatePresence } from "framer-motion";
 
-// /**
-//  * KratosSaga - a full-page scroll timeline with gamer HUD and expanded lore.
-//  * Requires Tailwind CSS. Optional: framer-motion for smooth animations.
-//  */
-// export default function KratosSaga() {
-//   const containerRef = useRef(null);
-//   const nodesRef = useRef([]);
-//   const [visibleSet, setVisibleSet] = useState(new Set());
-//   const [scrollProgress, setScrollProgress] = useState(0);
-//   const [currentIndex, setCurrentIndex] = useState(0);
-//   const [xpPop, setXpPop] = useState({ index: null, show: false });
-
-//   // Expanded, cinematic storyline (11 entries) — extremely detailed
-//   const timeline = [
-//     {
-//       id: 1,
-//       chapter: "Chapter I",
-//       title: "The Spartan General",
-//       year: "c. 500 BCE",
-//       location: "Sparta — Mountain Holds",
-//       short:
-//         "A child of war raised to kill. The Spartan general known as Kratos earns his stripes by fire and blood.",
-//       long:
-//         "Born into the unbending iron of Spartan custom, Kratos learns that mercy is a weakness and discipline its only salvation. His tactical mind is sharpened in the scorched passes and frozen ridgelines where boys become men—where a single misstep ends in blood. By twenty summers he commands columns of hardened hoplites, his voice a blade that cleaves order from chaos. Every stride whispers the same prophecy: a marked warrior will turn the tide of gods and men.",
-//       icon: "⚔️",
-//       color: "from-red-600 to-orange-500",
-//       stats: { battles: "47", victories: "47", renown: "Feared" },
-//       bgGlyph: "🏛️",
-//     },
-//     {
-//       id: 2,
-//       chapter: "Chapter II",
-//       title: "The Fields Run Red",
-//       year: "c. 499 BCE",
-//       location: "Fields of Attica",
-//       short:
-//         "Outnumbered, pinned, and broken—Kratos feels death at his throat and bargains for salvation.",
-//       long:
-//         "The enemy tide is endless: thousands of barbarians swell across the plain like a living sea. Spears tear banners to shreds. Kratos watches brothers fall beneath the pounding sky, and for a single, unbearable moment the world narrows to the rasp of his own breath. He cries out, not in prayer but in savage hunger for deliverance. In that plea the war-weary god answers—Ares hears the howl and the bargain is sealed in blood.",
-//       icon: "🛡️",
-//       color: "from-orange-500 to-red-700",
-//       stats: { enemies: "50K+", spartans: "300", survival: "Impossible" },
-//       bgGlyph: "⛰️",
-//     },
-//     {
-//       id: 3,
-//       chapter: "Chapter III",
-//       title: "Chains and Flames — Pact of Ares",
-//       year: "c. 499 BCE",
-//       location: "Blood-soaked Plain",
-//       short:
-//         "Power for servitude: the god of war offers a blade and fate binds to flesh.",
-//       long:
-//         "Ares descends like a storm of iron and hunger, his hand extended with the chill of destiny. In exchange for the lives of Kratos's brothers, the god brands him with infernal chains and the Blades of Chaos—twin instruments of fury welded to his wrists and soul. They burn as they bind; they sing when swung. Kratos stands reborn, a weapon bound, a man whose freedom is the coin of a bargain he cannot recall making without cost.",
-//       icon: "🔥",
-//       color: "from-red-700 to-purple-700",
-//       stats: { power: "Unnatural", servitude: "Absolute", scars: "Deep" },
-//       bgGlyph: "⚡",
-//     },
-//     {
-//       id: 4,
-//       chapter: "Chapter IV",
-//       title: "Juggernaut of the Gods",
-//       year: "c. 498–492 BCE",
-//       location: "Across the Mediterranean",
-//       short:
-//         "Kratos becomes Olympus' weapon. Cities fall; his name becomes a whisper and a curse.",
-//       long:
-//         "Ares sends him like a scythe through city-states. Kratos knows only the rhythm of battle: a swing, a fall, a sea of motionless bodies. He razes sanctuaries, topples walls, and brings victory where the gods desire it. Each triumph tightens the chains of servitude; each scream softens whatever mercy remained in his chest. Legends call him the Ghost of Sparta—an unstoppable storm whose wake is ash.",
-//       icon: "👑",
-//       color: "from-purple-600 to-blue-700",
-//       stats: { cities: "23+", years: "6", heart: "Hardened" },
-//       bgGlyph: "🏙️",
-//     },
-//     {
-//       id: 5,
-//       chapter: "Chapter V",
-//       title: "The Temple and the Blood",
-//       year: "c. 492 BCE",
-//       location: "Forgotten Village",
-//       short:
-//         "Deceived by the god he serves — Kratos destroys what he loves most.",
-//       long:
-//         "Under orders, Kratos storms a humble temple and slaughters those within; the echo of steel drowns prayer. When the frenzy clears, his hands clutch the cold forms of his wife Lysandra and his daughter Calliope. The realization is a lance driven into his chest—Ares engineered the atrocity to break his soul. The god's laughter erupts like thunder. Kratos's world fractures and a new hunger wakes: not for glory, but for vengeance that will swallow Olympus.",
-//       icon: "💀",
-//       color: "from-gray-800 to-black",
-//       stats: { innocents: "All", family: "Lost", guilt: "Infinite" },
-//       bgGlyph: "🏺",
-//     },
-//     {
-//       id: 6,
-//       chapter: "Chapter VI",
-//       title: "Ashes of Remembrance",
-//       year: "c. 492 BCE",
-//       location: "Cursed Temple",
-//       short:
-//         "The ashes of his family are bound to his skin; he becomes the Ghost—marked by grief.",
-//       long:
-//         "The Oracle curses Kratos: the ash of his loved ones will cling to his flesh for all time, a pallid tapestry that announces his sin. Flesh white as bone; eyes like hollow coals. He is exiled, haunted by the sound of laughter that once was warmth. The ash is not only punishment but an identity—no ritual cleanses, no river washes away the weight. He wanders seeking a purpose beyond doom.",
-//       icon: "👻",
-//       color: "from-gray-300 to-gray-700",
-//       stats: { curse: "Eternal", nightmares: "Tethered", purpose: "Unknown" },
-//       bgGlyph: "🌫️",
-//     },
-//     {
-//       id: 7,
-//       chapter: "Chapter VII",
-//       title: "Ten Years of the Gods’ Axe",
-//       year: "c. 492–482 BCE",
-//       location: "The Known World",
-//       short:
-//         "A decade of tasks and torment—Kratos becomes the gods' instrument to mend their errors.",
-//       long:
-//         "Bound by promises and broken bargains, Kratos is set upon quests the gods dare not touch. He slays monsters birthed from vanity and hubris, bargained with titans and plucked fate's threads. Athena whispers of redemption like a fragile reed—promises of absolution traded for loyalty. But apologies do not mend bone-deep sorrow, and the years salt the wound until vengeance tastes like air.",
-//       icon: "⚡",
-//       color: "from-blue-400 to-purple-600",
-//       stats: { labors: "100+", years: "10", hope: "Diminished" },
-//       bgGlyph: "🏔️",
-//     },
-//     {
-//       id: 8,
-//       chapter: "Chapter VIII",
-//       title: "Revelation and Betrayal",
-//       year: "c. 482 BCE",
-//       location: "Athens — Stricken City",
-//       short:
-//         "Kratos sees the gods’ hand laid bare—he is a tool, not a son. Fury ignites a revolt.",
-//       long:
-//         "As war boils, secrets spill. Athena’s counsel is a veil that hid manipulation; Zeus himself curbed Kratos's path. The gods deny any real atonement—only the illusion of it. Kratos's oath of servitude snaps like dry rope. When your benefactors are your exploiters, the only prayer left is to break them. A new campaign begins: not for a god’s favor, but to end the reign of those who made him a monster.",
-//       icon: "🏛️",
-//       color: "from-yellow-500 to-red-600",
-//       stats: { hope: "Shattered", fury: "Ignited", target: "Ares & Olympus" },
-//       bgGlyph: "🔥",
-//     },
-//     {
-//       id: 9,
-//       chapter: "Chapter IX",
-//       title: "Pandora's Trial",
-//       year: "c. 481 BCE",
-//       location: "Temple of Hephaestus — The Labyrinth",
-//       short:
-//         "To slay a god, Kratos must claim what the ancients hid: Pandora’s Box.",
-//       long:
-//         "Hephaestus’s forges and Pandora's cunning produce a temple that is equal parts machine and mind. Puzzles rip at memory, corridors devour time, and the soul is the primary price of entry. Kratos pushes onward—losing pieces of memory, sacrificing comforts, trading peace for possibility. When the box is finally pried free, its light is not salvation but the cold edge of consequence: power without guarantee of peace.",
-//       icon: "📦",
-//       color: "from-purple-600 to-pink-600",
-//       stats: { trials: "Relentless", sacrifice: "Everything", power: "God-bound" },
-//       bgGlyph: "🏺",
-//     },
-//     {
-//       id: 10,
-//       chapter: "Chapter X",
-//       title: "Titanic End — Deicide",
-//       year: "c. 480 BCE",
-//       location: "Over Athens — The Final Duel",
-//       short:
-//         "A battle to shake the heavens: Kratos and Ares collide in a storm of divine ruin.",
-//       long:
-//         "On the smoking heights above a crumbling city, men and gods alike bear witness. Ares, furious with the rage of an unbound mortal, rains divine fury; Kratos, with Pandora's terrible boon, answers with raw and honed hatred. Steel and flame become poetry of ruin; at the height of motion Kratos drives a blade into the god’s heart. Olympus trembles. The God of War falls, but Kratos's victory is a hollow throne—he has toppled one monster only to become something else entirely.",
-//       icon: "🗡️",
-//       color: "from-red-600 to-gold-500",
-//       stats: { clash: "World-shattering", witness: "Gods & mortals", outcome: "Deicide" },
-//       bgGlyph: "⚡",
-//     },
-//     {
-//       id: 11,
-//       chapter: "Epilogue",
-//       title: "Crown of Ashes — New God of War",
-//       year: "c. 479 BCE",
-//       location: "Mount Olympus",
-//       short:
-//         "Kratos takes Ares' mantle—but the throne doesn't answer the ache inside him.",
-//       long:
-//         "Zeus offers Olympus' seat, a crown heavy with consequence. Kratos accepts, not for glory but because the path forward is burned into him. Divinity gives him reach but not reprieve; ghosts of Lysandra and Calliope ride the wind and cry out at night. The God of War now carries not only power but an oath: to burn the rot of deceit from the heavens. The saga is never truly finished; it mutates into a new war beneath new suns.",
-//       icon: "👑",
-//       color: "from-gold-400 to-red-600",
-//       stats: { power: "Divine", peace: "None", vengeance: "Eternal" },
-//       bgGlyph: "🏛️",
-//     },
-//   ];
-
-//   // IntersectionObserver for reveal + set current index
-//   useEffect(() => {
-//     const observer = new IntersectionObserver(
-//       (entries) => {
-//         const newSet = new Set(visibleSet);
-//         entries.forEach((entry) => {
-//           const idx = Number(entry.target.dataset.index);
-//           if (entry.isIntersecting) {
-//             newSet.add(idx);
-//             // trigger XP popup for this item briefly
-//             triggerXp(idx);
-//           } else {
-//             // optionally remove when out of view
-//             // newSet.delete(idx);
-//           }
-//         });
-//         setVisibleSet(newSet);
-
-//         // compute current index by highest visible index or fallback to scroll
-//         const visibleArray = Array.from(newSet).sort((a, b) => a - b);
-//         if (visibleArray.length) {
-//           setCurrentIndex(visibleArray[visibleArray.length - 1]);
-//         }
-//       },
-//       {
-//         root: null,
-//         rootMargin: "0px",
-//         threshold: [0.25, 0.6],
-//       }
-//     );
-
-//     nodesRef.current.forEach((el) => {
-//       if (el) observer.observe(el);
-//     });
-
-//     return () => observer.disconnect();
-//     // eslint-disable-next-line react-hooks/exhaustive-deps
-//   }, [nodesRef.current]);
-
-//   // scroll progress calculation and parallax transforms
-//   useEffect(() => {
-//     const onScroll = () => {
-//       const scrollY = window.scrollY;
-//       const winH = window.innerHeight;
-//       const docH =
-//         document.documentElement.scrollHeight - window.innerHeight || 1;
-//       const prog = Math.min(1, Math.max(0, scrollY / docH));
-//       setScrollProgress(prog);
-
-//       // simple parallax by translating background layers
-//       const layers = document.querySelectorAll("[data-parallax]");
-//       layers.forEach((layer) => {
-//         const depth = Number(layer.dataset.depth) || 0.2;
-//         layer.style.transform = `translateY(${scrollY * depth}px)`;
-//       });
-//     };
-
-//     onScroll();
-//     window.addEventListener("scroll", onScroll, { passive: true });
-//     return () => window.removeEventListener("scroll", onScroll);
-//   }, []);
-
-//   // XP popup trigger
-//   const triggerXp = (index) => {
-//     setXpPop({ index, show: true });
-//     setTimeout(() => setXpPop((s) => ({ ...s, show: false })), 1400);
-//   };
-
-//   // helper to set refs
-//   const setNodeRef = (el, i) => {
-//     nodesRef.current[i] = el;
-//   };
-
-//   return (
-//     <div className="min-h-screen bg-gradient-to-b from-slate-900 via-gray-900 to-black text-white overflow-x-hidden">
-//       {/* HUD Header */}
-//       <header className="fixed top-0 left-0 right-0 z-50 bg-black/70 backdrop-blur-sm border-b border-red-600/30">
-//         <div className="container mx-auto px-6 py-3 flex items-center justify-between">
-//           <div className="flex items-center gap-4">
-//             <div className="text-lg font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-red-400 via-orange-400 to-yellow-300">
-//               GAMERGRAM
-//             </div>
-//             <div className="flex flex-col text-xs text-gray-300">
-//               <span className="tracking-wider">SAGA MODE</span>
-//               <span className="text-gray-400 text-[11px]">KRATOS — THE GHOST</span>
-//             </div>
-//           </div>
-
-//           <div className="flex items-center gap-4">
-//             <div className="text-sm text-gray-300">Chapter</div>
-//             <div className="px-3 py-1 rounded-lg bg-black/60 border border-red-600/40 text-sm">
-//               {currentIndex + 1}/{timeline.length}
-//             </div>
-
-//             <div className="w-48 h-2 bg-gray-800 rounded-full overflow-hidden">
-//               <div
-//                 className="h-full bg-gradient-to-r from-red-500 via-orange-500 to-yellow-400 transition-all duration-200"
-//                 style={{ width: `${Math.floor(scrollProgress * 100)}%` }}
-//               />
-//             </div>
-//           </div>
-//         </div>
-//       </header>
-
-//       {/* Parallax & Particles (background layers) */}
-//       <div className="fixed inset-0 pointer-events-none -z-10">
-//         <div
-//           data-parallax
-//           data-depth="0.08"
-//           className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_#6b0000_0%,_transparent_30%)] opacity-40"
-//         />
-//         <div
-//           data-parallax
-//           data-depth="0.04"
-//           className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,_#1f0a0a_0%,_transparent_25%)] opacity-30"
-//         />
-//         {/* embers + digital noise */}
-//         <div className="absolute inset-0">
-//           {[...Array(30)].map((_, i) => (
-//             <div
-//               key={i}
-//               style={{
-//                 left: `${Math.random() * 100}%`,
-//                 top: `${Math.random() * 100}%`,
-//                 animationDelay: `${Math.random() * 4}s`,
-//               }}
-//               className="absolute w-1.5 h-1.5 bg-orange-400 rounded-full opacity-60 animate-[ember_3s_linear_infinite]"
-//             />
-//           ))}
-//         </div>
-//         <svg className="absolute inset-0 w-full h-full opacity-5" preserveAspectRatio="none">
-//           <filter id="grain"><feTurbulence baseFrequency="0.9" numOctaves="1" stitchTiles="stitch"></feTurbulence></filter>
-//           <rect width="100%" height="100%" filter="url(#grain)" />
-//         </svg>
-//       </div>
-
-//       {/* Hero */}
-//       <section className="h-screen flex items-center justify-center relative">
-//         <div className="absolute inset-0 bg-black/60" />
-//         <div className="text-center z-10 px-6 max-w-4xl">
-//           <motion.div
-//             initial={{ scale: 0.98, opacity: 0 }}
-//             animate={{ scale: 1, opacity: 1 }}
-//             transition={{ duration: 0.7 }}
-//           >
-//             <div className="text-9xl md:text-[140px] leading-none mb-6">⚔️</div>
-//             <h1 className="text-6xl md:text-7xl font-black tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-red-400 via-orange-500 to-yellow-300">
-//               KRATOS
-//             </h1>
-//             <p className="mt-4 text-lg text-gray-300 max-w-2xl mx-auto">
-//               The Ghost of Sparta — a soldier remade by gods, a legend forged in ash,
-//               and a vengeful force that will tear the heavens down.
-//             </p>
-
-//             <div className="mt-8 inline-flex items-center gap-4 bg-black/60 border border-red-600/30 px-5 py-3 rounded-xl">
-//               <div className="text-xs text-gray-200 uppercase tracking-widest">Scroll to begin</div>
-//               <div className="text-xs text-red-300 font-semibold">+ XP on milestones</div>
-//             </div>
-//           </motion.div>
-//         </div>
-
-//         {/* scroll hint */}
-//         <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20">
-//           <div className="w-9 h-12 rounded-full border-2 border-red-500 flex items-start justify-center p-2">
-//             <div className="w-1 h-3 bg-red-500 rounded animate-bounce" />
-//           </div>
-//         </div>
-//       </section>
-
-//       {/* Timeline container */}
-//       <main className="relative max-w-6xl mx-auto px-6 pb-36" ref={containerRef}>
-//         {/* central spine line (desktop center) */}
-//         <div className="hidden md:block absolute top-0 bottom-0 left-1/2 -translate-x-1/2 w-1 bg-gradient-to-b from-red-600 via-orange-500 to-yellow-400 opacity-80" />
-
-//         <div className="space-y-28 md:space-y-40 mt-10">
-//           {timeline.map((item, i) => {
-//             const isVisible = visibleSet.has(i);
-//             const side = i % 2 === 0 ? "left" : "right";
-//             return (
-//               <article
-//                 key={item.id}
-//                 data-index={i}
-//                 ref={(el) => setNodeRef(el, i)}
-//                 className={`timeline-item relative md:min-h-[18rem] flex flex-col md:flex-row items-stretch md:items-start gap-6 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
-//               >
-//                 {/* NODE - visible on both small & large */}
-//                 <div className={`md:w-1/2 md:px-8 ${side === "left" ? "md:pr-12 md:order-1" : "md:pl-12 md:order-2"} order-2 md:order-1`}>
-//                   <motion.div
-//                     initial={{ x: side === "left" ? -30 : 30, opacity: 0 }}
-//                     animate={{ x: 0, opacity: isVisible ? 1 : 0 }}
-//                     transition={{ duration: 0.7, delay: 0.05 * i }}
-//                     className="relative group"
-//                   >
-//                     <div className="absolute -left-6 md:-left-12 top-4 md:top-6 w-14 h-14 md:w-20 md:h-20 rounded-full bg-black/60 border-4 border-red-600/40 flex items-center justify-center text-2xl md:text-3xl shadow-xl z-10">
-//                       <span className="select-none">{item.icon || "⚔️"}</span>
-//                     </div>
-
-//                     <div className="bg-black/70 backdrop-blur-md border border-red-700/20 rounded-3xl p-6 md:pl-28 md:pt-6 shadow-2xl relative overflow-hidden">
-//                       {/* animated glow */}
-//                       <div className={`absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-30 transition-opacity duration-500`} style={{ background: `linear-gradient(90deg, rgba(255,90,70,0.06), rgba(255,160,70,0.04))` }} />
-
-//                       <div className="flex items-start gap-4">
-//                         <div>
-//                           <div className="text-sm text-red-300 font-semibold tracking-wide">{item.chapter}</div>
-//                           <div className="text-xs text-gray-400">{item.bgGlyph} • {item.location}</div>
-//                         </div>
-//                         <div className="ml-auto text-sm text-gray-400">{item.year}</div>
-//                       </div>
-
-//                       <h3 className="mt-4 text-2xl md:text-3xl font-bold leading-tight">{item.title}</h3>
-//                       <p className="mt-3 text-gray-300 leading-relaxed text-base">{item.long}</p>
-
-//                       <div className="mt-6 grid grid-cols-3 gap-4">
-//                         {Object.entries(item.stats).map(([k, v]) => (
-//                           <div key={k} className="text-center">
-//                             <div className="text-xl md:text-2xl font-extrabold text-red-400">{v}</div>
-//                             <div className="text-xs text-gray-400 uppercase tracking-widest">{k}</div>
-//                           </div>
-//                         ))}
-//                       </div>
-
-//                       <div className="mt-6 flex items-center justify-between gap-4">
-//                         <div className="px-3 py-2 rounded-full bg-black/50 border border-red-600/20 text-sm text-red-300 font-semibold">KEY: {item.title}</div>
-//                         <div className="text-sm text-gray-400 italic">Hover for ambient glow</div>
-//                       </div>
-//                     </div>
-//                   </motion.div>
-//                 </div>
-
-//                 {/* spacer / center column for node visuals on large screens */}
-//                 <div className="hidden md:flex md:w-[80px] items-center justify-center order-1 md:order-2">
-//                   {/* vertical connector + animated node ring */}
-//                   <div className="relative">
-//                     <div className="w-14 h-14 rounded-full bg-gradient-to-br from-red-500 to-orange-500 shadow-2xl border-4 border-black flex items-center justify-center">
-//                       <div className="w-7 h-7 rounded-full bg-black/60 border-2 border-red-600 flex items-center justify-center text-sm">{i + 1}</div>
-//                     </div>
-//                     <div className="absolute top-full left-1/2 -translate-x-1/2 w-1 h-32 bg-gradient-to-b from-red-600 to-transparent opacity-80"></div>
-//                   </div>
-//                 </div>
-
-//                 {/* mirror side content */}
-//                 <div className={`md:w-1/2 md:px-8 ${side === "left" ? "md:pl-12 md:order-3" : "md:pr-12 md:order-3"} order-3 md:order-3`}>
-//                   {/* On smaller screens the right column becomes another stacked card - keep it light or add flavor */}
-//                   <div className="hidden md:block">
-//                     <motion.div
-//                       initial={{ y: 20, opacity: 0 }}
-//                       animate={{ y: 0, opacity: isVisible ? 1 : 0 }}
-//                       transition={{ duration: 0.6, delay: 0.06 * i }}
-//                       className="bg-black/60 border border-red-700/20 rounded-2xl p-4 shadow-inner"
-//                     >
-//                       <div className="text-sm text-gray-300">SUMMARY</div>
-//                       <div className="mt-2 text-gray-400 text-sm">{item.short}</div>
-//                       <div className="mt-4 flex gap-3">
-//                         <div className="px-3 py-2 bg-red-900/30 rounded-full text-xs">+{100 * (i + 1)} XP</div>
-//                         <div className="px-3 py-2 bg-gray-800/40 rounded-full text-xs">ACHIEVEMENT: {item.chapter.replace("Chapter", "Ch")}</div>
-//                       </div>
-//                     </motion.div>
-//                   </div>
-//                 </div>
-//               </article>
-//             );
-//           })}
-//         </div>
-//       </main>
-
-//       {/* XP popup */}
-//       <AnimatePresence>
-//         {xpPop.show && xpPop.index !== null && (
-//           <motion.div
-//             initial={{ y: 20, opacity: 0, scale: 0.95 }}
-//             animate={{ y: 0, opacity: 1, scale: 1 }}
-//             exit={{ y: -10, opacity: 0, scale: 0.95 }}
-//             transition={{ duration: 0.45 }}
-//             className="fixed right-8 bottom-20 z-50 bg-black/80 border border-red-600/40 px-4 py-3 rounded-xl shadow-xl flex items-center gap-3"
-//           >
-//             <div className="w-8 h-8 rounded-full bg-gradient-to-br from-red-500 to-orange-400 flex items-center justify-center text-sm font-bold">+{100 * (xpPop.index + 1)}</div>
-//             <div className="text-sm">
-//               <div className="text-xs text-gray-300">MILESTONE</div>
-//               <div className="font-semibold">Chapter {xpPop.index + 1} Complete</div>
-//             </div>
-//           </motion.div>
-//         )}
-//       </AnimatePresence>
-
-//       {/* Footer */}
-//       <footer className="mt-24 bg-black/80 border-t border-red-700/10">
-//         <div className="container mx-auto px-6 py-16 text-center">
-//           <div className="text-6xl mb-6">👑</div>
-//           <h3 className="text-3xl font-bold mb-3 text-white">The Saga Continues</h3>
-//           <p className="text-gray-400 max-w-2xl mx-auto">
-//             This timeline is the first act of Kratos' story — a brutal, haunted journey through gods, monsters, and the broken threads of fate.
-//             Continue exploring to unlock deep lore, artifacts, and audio-backed cutscenes integrated with your Gamergram profile.
-//           </p>
-//           <div className="mt-6 text-red-400 font-semibold">GAMERGRAM — WHERE LEGENDS LIVE</div>
-//         </div>
-//       </footer>
-
-//       {/* small style for ember animation (Tailwind JIT custom) */}
-//       <style>{`
-//         @keyframes ember {
-//           0% { transform: translateY(0) scale(1); opacity: 0.9; }
-//           50% { transform: translateY(-30px) scale(0.9); opacity: 0.6; }
-//           100% { transform: translateY(-60px) scale(0.8); opacity: 0; }
-//         }
-//         .animate-[ember_3s_linear_infinite] {
-//           animation: ember 6s linear infinite;
-//         }
-//       `}</style>
-//     </div>
-//   );
-// }
 
 //LOGIN PAGE
 
@@ -645,691 +150,1035 @@
 //   );
 // }
 
-//PROFILE PAGE
 
-import React, { useState } from "react";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//STORY LANDING PAGE
+
+
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import {
-  User,
-  Bookmark,
-  Play,
-  CheckCircle,
-  Heart,
-  Plus,
-  X,
-  Grid,
-  List,
-} from "lucide-react";
-import Header from "../components/Header";
+  Sword, Shield, Zap, Crown, Flame, Mountain, Star, Heart,
+  Target, Gamepad2, Skull, Trophy, Swords, Eye, Users,
+  Wind, Snowflake, Sun, Moon, Compass, Gem
+} from 'lucide-react';
 
-const UserProfile = () => {
-  const [activeTab, setActiveTab] = useState("bookmarked");
-  const [showModal, setShowModal] = useState(false);
-  const [collectionName, setCollectionName] = useState("");
-  const [collectionDescription, setCollectionDescription] = useState("");
-  const [viewMode, setViewMode] = useState("grid");
+const GAMING_CHARACTERS = [
+  {
+    id: 1,
+    name: "Kratos",
+    title: "God of War",
+    game: "God of War Series",
+    icon: Sword,
+    color: "from-red-600 to-orange-500",
+    bgGlow: "bg-red-500/10",
+    borderGlow: "border-red-500/30",
+    description: "The Ghost of Sparta - A tale of rage, revenge, and redemption",
+    available: true
+  },
+  {
+    id: 2,
+    name: "Master Chief",
+    title: "Spartan-117",
+    game: "Halo Series",
+    icon: Shield,
+    color: "from-green-600 to-blue-500",
+    bgGlow: "bg-green-500/10",
+    borderGlow: "border-green-500/30",
+    description: "Humanity's greatest defender against the Covenant",
+    available: true
+  },
+  {
+    id: 3,
+    name: "Geralt",
+    title: "The White Wolf",
+    game: "The Witcher Series",
+    icon: Swords,
+    color: "from-gray-400 to-amber-400",
+    bgGlow: "bg-amber-500/10",
+    borderGlow: "border-amber-500/30",
+    description: "Monster hunter with a code of honor",
+    available: true
+  },
+  {
+    id: 4,
+    name: "Link",
+    title: "Hero of Hyrule",
+    game: "The Legend of Zelda",
+    icon: Shield,
+    color: "from-green-500 to-emerald-400",
+    bgGlow: "bg-emerald-500/10",
+    borderGlow: "border-emerald-500/30",
+    description: "The legendary hero destined to save Hyrule",
+    available: true
+  },
+  {
+    id: 5,
+    name: "Solid Snake",
+    title: "Legendary Soldier",
+    game: "Metal Gear Series",
+    icon: Target,
+    color: "from-gray-600 to-blue-600",
+    bgGlow: "bg-blue-500/10",
+    borderGlow: "border-blue-500/30",
+    description: "Tactical espionage operative extraordinaire",
+    available: true
+  },
+  {
+    id: 6,
+    name: "Samus Aran",
+    title: "Intergalactic Bounty Hunter",
+    game: "Metroid Series",
+    icon: Zap,
+    color: "from-orange-600 to-red-500",
+    bgGlow: "bg-orange-500/10",
+    borderGlow: "border-orange-500/30",
+    description: "The galaxy's most feared bounty hunter",
+    available: true
+  },
+  {
+    id: 7,
+    name: "Dante",
+    title: "Devil Hunter",
+    game: "Devil May Cry Series",
+    icon: Flame,
+    color: "from-red-600 to-purple-600",
+    bgGlow: "bg-red-500/10",
+    borderGlow: "border-red-500/30",
+    description: "Half-demon with a flair for style",
+    available: true
+  },
+  {
+    id: 8,
+    name: "Lara Croft",
+    title: "Tomb Raider",
+    game: "Tomb Raider Series",
+    icon: Compass,
+    color: "from-amber-600 to-orange-500",
+    bgGlow: "bg-amber-500/10",
+    borderGlow: "border-amber-500/30",
+    description: "Adventurous archaeologist and explorer",
+    available: true
+  },
+  {
+    id: 9,
+    name: "Arthur Morgan",
+    title: "Outlaw",
+    game: "Red Dead Redemption 2",
+    icon: Star,
+    color: "from-amber-700 to-red-600",
+    bgGlow: "bg-amber-500/10",
+    borderGlow: "border-amber-500/30",
+    description: "A gunslinger's tale in the dying Wild West",
+    available: true
+  },
+  {
+    id: 10,
+    name: "Ezio Auditore",
+    title: "Master Assassin",
+    game: "Assassin's Creed Series",
+    icon: Eye,
+    color: "from-red-700 to-gray-600",
+    bgGlow: "bg-red-500/10",
+    borderGlow: "border-red-500/30",
+    description: "Renaissance assassin fighting for freedom",
+    available: true
+  },
+  {
+    id: 11,
+    name: "Gordon Freeman",
+    title: "Theoretical Physicist",
+    game: "Half-Life Series",
+    icon: Zap,
+    color: "from-orange-600 to-yellow-500",
+    bgGlow: "bg-orange-500/10",
+    borderGlow: "border-orange-500/30",
+    description: "Scientist turned resistance leader",
+    available: true
+  },
+  {
+    id: 12,
+    name: "Aloy",
+    title: "Machine Hunter",
+    game: "Horizon Series",
+    icon: Target,
+    color: "from-cyan-500 to-blue-600",
+    bgGlow: "bg-cyan-500/10",
+    borderGlow: "border-cyan-500/30",
+    description: "Hunter in a world dominated by machines",
+    available: true
+  },
+  {
+    id: 13,
+    name: "Shepard",
+    title: "Commander",
+    game: "Mass Effect Series",
+    icon: Star,
+    color: "from-blue-600 to-purple-600",
+    bgGlow: "bg-blue-500/10",
+    borderGlow: "border-blue-500/30",
+    description: "Galaxy's last hope against ancient threats",
+    available: true
+  },
+  {
+    id: 14,
+    name: "Doom Slayer",
+    title: "Hell Walker",
+    game: "DOOM Series",
+    icon: Skull,
+    color: "from-green-600 to-red-600",
+    bgGlow: "bg-green-500/10",
+    borderGlow: "border-green-500/30",
+    description: "Hell's worst nightmare",
+    available: true
+  },
+  {
+    id: 15,
+    name: "Sub-Zero",
+    title: "Grandmaster",
+    game: "Mortal Kombat Series",
+    icon: Snowflake,
+    color: "from-cyan-500 to-blue-700",
+    bgGlow: "bg-cyan-500/10",
+    borderGlow: "border-cyan-500/30",
+    description: "Cryomancer ninja with ice-cold precision",
+    available: true
+  },
+  {
+    id: 16,
+    name: "Ryu",
+    title: "World Warrior",
+    game: "Street Fighter Series",
+    icon: Flame,
+    color: "from-red-600 to-orange-500",
+    bgGlow: "bg-red-500/10",
+    borderGlow: "border-red-500/30",
+    description: "Eternal warrior seeking true strength",
+    available: true
+  },
+  {
+    id: 17,
+    name: "Leon Kennedy",
+    title: "Special Agent",
+    game: "Resident Evil Series",
+    icon: Shield,
+    color: "from-blue-600 to-gray-600",
+    bgGlow: "bg-blue-500/10",
+    borderGlow: "border-blue-500/30",
+    description: "Zombie apocalypse survivor and government agent",
+    available: true
+  },
+  {
+    id: 18,
+    name: "Raiden",
+    title: "God of Thunder",
+    game: "Mortal Kombat Series",
+    icon: Zap,
+    color: "from-blue-400 to-white",
+    bgGlow: "bg-blue-500/10",
+    borderGlow: "border-blue-500/30",
+    description: "Elder God protector of Earthrealm",
+    available: true
+  },
+  {
+    id: 19,
+    name: "Jill Valentine",
+    title: "S.T.A.R.S. Member",
+    game: "Resident Evil Series",
+    icon: Target,
+    color: "from-blue-600 to-purple-600",
+    bgGlow: "bg-blue-500/10",
+    borderGlow: "border-blue-500/30",
+    description: "Elite operative fighting bioterrorism",
+    available: true
+  },
+  {
+    id: 20,
+    name: "Cloud Strife",
+    title: "Ex-SOLDIER",
+    game: "Final Fantasy VII",
+    icon: Sword,
+    color: "from-yellow-500 to-purple-600",
+    bgGlow: "bg-yellow-500/10",
+    borderGlow: "border-yellow-500/30",
+    description: "Mercenary with a mysterious past",
+    available: true
+  },
+  {
+    id: 21,
+    name: "Marcus Fenix",
+    title: "COG Soldier",
+    game: "Gears of War Series",
+    icon: Target,
+    color: "from-gray-600 to-red-600",
+    bgGlow: "bg-gray-500/10",
+    borderGlow: "border-gray-500/30",
+    description: "Hardened soldier fighting the Locust Horde",
+    available: true
+  },
+  {
+    id: 22,
+    name: "Nathan Drake",
+    title: "Treasure Hunter",
+    game: "Uncharted Series",
+    icon: Compass,
+    color: "from-amber-600 to-brown-600",
+    bgGlow: "bg-amber-500/10",
+    borderGlow: "border-amber-500/30",
+    description: "Adventurous fortune hunter",
+    available: true
+  },
+  {
+    id: 23,
+    name: "Ellie",
+    title: "Survivor",
+    game: "The Last of Us Series",
+    icon: Heart,
+    color: "from-green-600 to-amber-600",
+    bgGlow: "bg-green-500/10",
+    borderGlow: "border-green-500/30",
+    description: "Immune survivor in a post-apocalyptic world",
+    available: true
+  },
+  {
+    id: 24,
+    name: "Bayonetta",
+    title: "Umbra Witch",
+    game: "Bayonetta Series",
+    icon: Moon,
+    color: "from-purple-600 to-pink-600",
+    bgGlow: "bg-purple-500/10",
+    borderGlow: "border-purple-500/30",
+    description: "Stylish witch with supernatural powers",
+    available: true
+  }
+];
 
-  // Mock user data
-  const user = {
-    username: "GamerLegend42",
-    avatar:
-      "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=100&h=100&fit=crop&crop=face",
-    joinDate: "Joined January 2023",
-    bio: "Passionate gamer exploring virtual worlds and legendary stories. Always hunting for the next great adventure!",
-    stats: {
-      bookmarked: 24,
-      playing: 8,
-      completed: 156,
-      wishlist: 42,
-    },
-  };
-
-  // Mock game data
-  const games = {
-    bookmarked: [
-      {
-        id: 1,
-        title: "The Witcher 3",
-        cover:
-          "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=300&h=400&fit=crop",
-        rating: 9.5,
-      },
-      {
-        id: 2,
-        title: "Cyberpunk 2077",
-        cover:
-          "https://images.unsplash.com/photo-1552820728-8b83bb6b773f?w=300&h=400&fit=crop",
-        rating: 8.2,
-      },
-      {
-        id: 3,
-        title: "Red Dead Redemption 2",
-        cover:
-          "https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?w=300&h=400&fit=crop",
-        rating: 9.8,
-      },
-      {
-        id: 4,
-        title: "Assassin's Creed Odyssey",
-        cover:
-          "https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=300&h=400&fit=crop",
-        rating: 8.7,
-      },
-    ],
-    playing: [
-      {
-        id: 5,
-        title: "Baldur's Gate 3",
-        cover:
-          "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=300&h=400&fit=crop",
-        rating: 9.3,
-        progress: 65,
-      },
-      {
-        id: 6,
-        title: "Starfield",
-        cover:
-          "https://images.unsplash.com/photo-1446776877081-d282a0f896e2?w=300&h=400&fit=crop",
-        rating: 7.8,
-        progress: 30,
-      },
-    ],
-    completed: [
-      {
-        id: 7,
-        title: "The Last of Us Part II",
-        cover:
-          "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=300&h=400&fit=crop",
-        rating: 9.1,
-        completedDate: "2 weeks ago",
-      },
-      {
-        id: 8,
-        title: "God of War",
-        cover:
-          "https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?w=300&h=400&fit=crop",
-        rating: 9.4,
-        completedDate: "1 month ago",
-      },
-    ],
-    wishlist: [
-      {
-        id: 9,
-        title: "Spider-Man 2",
-        cover:
-          "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=300&h=400&fit=crop",
-        rating: 9.0,
-        releaseDate: "Coming Soon",
-      },
-      {
-        id: 10,
-        title: "Final Fantasy VII Rebirth",
-        cover:
-          "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=300&h=400&fit=crop",
-        rating: 8.9,
-        releaseDate: "Feb 2024",
-      },
-    ],
-  };
-
-  const collections = [
-    {
-      id: 1,
-      name: "RPG Masterpieces",
-      count: 12,
-      cover:
-        "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=300&h=400&fit=crop",
-    },
-    {
-      id: 2,
-      name: "Indie Gems",
-      count: 8,
-      cover:
-        "https://images.unsplash.com/photo-1552820728-8b83bb6b773f?w=300&h=400&fit=crop",
-    },
-  ];
-
-  const tabs = [
-    {
-      id: "bookmarked",
-      label: "Bookmarked",
-      icon: Bookmark,
-      count: user.stats.bookmarked,
-    },
-    { id: "playing", label: "Playing", icon: Play, count: user.stats.playing },
-    {
-      id: "completed",
-      label: "Completed",
-      icon: CheckCircle,
-      count: user.stats.completed,
-    },
-    {
-      id: "wishlist",
-      label: "Wishlist",
-      icon: Heart,
-      count: user.stats.wishlist,
-    },
-  ];
-
-  const handleCreateCollection = () => {
-    if (collectionName.trim()) {
-      // Here you would typically send the data to your backend
-      console.log("Creating collection:", {
-        name: collectionName,
-        description: collectionDescription,
-      });
-      setCollectionName("");
-      setCollectionDescription("");
-      setShowModal(false);
-    }
-  };
-
-  const GameCard = ({
-    game,
-    showProgress = false,
-    showCompletedDate = false,
-    showReleaseDate = false,
-  }) => (
-    <div className="bg-neutral-800 rounded-xl overflow-hidden hover:bg-neutral-700 transition-all duration-300 hover:scale-105 cursor-pointer">
-      <div className="aspect-[3/4] relative">
-        <img
-          src={game.cover}
-          alt={game.title}
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute top-2 right-2 bg-black/70 px-2 py-1 rounded text-xs text-cyan-400 font-medium">
-          ⭐ {game.rating}
-        </div>
-        {showProgress && (
-          <div className="absolute bottom-2 left-2 right-2">
-            <div className="bg-black/70 rounded-full h-2">
-              <div
-                className="bg-gradient-to-r from-cyan-500 to-blue-500 h-2 rounded-full"
-                style={{ width: `${game.progress}%` }}
-              ></div>
-            </div>
-            <div className="text-xs text-white mt-1">
-              {game.progress}% Complete
-            </div>
-          </div>
-        )}
-      </div>
-      <div className="p-4">
-        <h3 className="font-semibold text-white mb-1 line-clamp-2">
-          {game.title}
-        </h3>
-        {showCompletedDate && (
-          <p className="text-sm text-gray-400">{game.completedDate}</p>
-        )}
-        {showReleaseDate && (
-          <p className="text-sm text-purple-400">{game.releaseDate}</p>
-        )}
-      </div>
-    </div>
-  );
-
-  const CollectionCard = ({ collection }) => (
-    <div className="bg-neutral-800 rounded-xl overflow-hidden hover:bg-neutral-700 transition-all duration-300 hover:scale-105 cursor-pointer">
-      <div className="aspect-[3/4] relative">
-        <img
-          src={collection.cover}
-          alt={collection.name}
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
-        <div className="absolute bottom-4 left-4 right-4">
-          <h3 className="font-semibold text-white text-lg mb-1">
-            {collection.name}
-          </h3>
-          <p className="text-cyan-400 text-sm">{collection.count} games</p>
-        </div>
-      </div>
-    </div>
-  );
+const CharacterCard = ({ character, index, onSelect }) => {
+  const Icon = character.icon;
+  const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <div className="min-h-screen bg-neutral-900 text-white">
-      {/* Header */}
-      <div className="">
-        <div>
-          <Header />
-        </div>
-        <div className="max-w-6xl mx-auto px-4 py-8">
-          <div className="flex flex-col md:flex-row items-start md:items-center gap-6">
-            <div className="relative">
-              <img
-                src={user.avatar}
-                alt="User Avatar"
-                className="w-24 h-24 rounded-full object-cover"
-              />
-              <div className="absolute -bottom-2 -right-2 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full p-2">
-                <User className="w-4 h-4" />
-              </div>
-            </div>
-            <div className="flex-1">
-              <h1 className="text-3xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent mb-2">
-                {user.username}
-              </h1>
-              <p className="text-gray-400 mb-3">{user.joinDate}</p>
-              <p className="text-gray-300 max-w-2xl">{user.bio}</p>
-            </div>
-          </div>
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: index * 0.05 }}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      onClick={() => character.available && onSelect(character)}
+      className={`
+        relative group cursor-pointer rounded-xl border transition-all duration-300
+        ${character.available
+          ? `${character.bgGlow} ${character.borderGlow} hover:scale-105`
+          : 'bg-neutral-800/50 border-neutral-700/50 opacity-60 cursor-not-allowed'
+        }
+      `}
+    >
+      {/* Glow Effect */}
+      <motion.div
+        className={`
+          absolute inset-0 rounded-xl opacity-0 transition-opacity duration-300
+          ${character.available ? character.bgGlow : ''}
+        `}
+        animate={{ opacity: isHovered && character.available ? 1 : 0 }}
+      />
 
-          {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
-            {tabs.map((tab) => {
-              const Icon = tab.icon;
-              return (
-                <div
-                  key={tab.id}
-                  className="bg-neutral-800 rounded-xl p-4 text-center"
-                >
-                  <Icon className="w-8 h-8 mx-auto mb-2 text-cyan-400" />
-                  <div className="text-2xl font-bold text-white">
-                    {tab.count}
-                  </div>
-                  <div className="text-sm text-gray-400">{tab.label}</div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </div>
-
-      {/* Content */}
-      <div className="max-w-6xl mx-auto px-4 py-8">
-        {/* Collections Section */}
-        <div className="mb-12">
-          <div className="flex items-center justify-between mb-6">
-            <h2 className="text-2xl font-bold text-white flex items-center gap-2">
-              <Grid className="w-6 h-6 text-cyan-400" />
-              My Collections
-            </h2>
-            <button
-              onClick={() => setShowModal(true)}
-              className="bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 px-4 py-2 rounded-lg flex items-center gap-2 transition-all"
-            >
-              <Plus className="w-4 h-4" />
-              Create Collection
-            </button>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
-            {collections.map((collection) => (
-              <CollectionCard key={collection.id} collection={collection} />
-            ))}
-          </div>
+      <div className="relative p-6">
+        {/* Character Icon */}
+        <div className="flex justify-center mb-4">
+          <motion.div
+            className={`
+              p-4 rounded-full transition-all duration-300
+              ${character.available
+                ? `bg-gradient-to-r ${character.color}`
+                : 'bg-neutral-700'
+              }
+            `}
+            animate={{
+              rotate: isHovered && character.available ? 360 : 0,
+              scale: isHovered && character.available ? 1.1 : 1
+            }}
+            transition={{ duration: 0.6 }}
+          >
+            <Icon className="w-8 h-8 text-white" />
+          </motion.div>
         </div>
 
-        {/* Games Tabs */}
-        <div className="flex flex-wrap gap-2 mb-6">
-          {tabs.map((tab) => {
-            const Icon = tab.icon;
-            return (
-              <button
-                key={tab.id}
-                onClick={() => setActiveTab(tab.id)}
-                className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all ${
-                  activeTab === tab.id
-                    ? "bg-gradient-to-r from-cyan-600 to-blue-600 text-white"
-                    : "bg-neutral-800 text-gray-400 hover:bg-neutral-700 hover:text-white"
-                }`}
-              >
-                <Icon className="w-4 h-4" />
-                {tab.label}
-                <span className="bg-black/30 px-2 py-1 rounded text-xs">
-                  {tab.count}
-                </span>
-              </button>
-            );
-          })}
-        </div>
-
-        {/* View Toggle */}
-        <div className="flex items-center justify-between mb-6">
-          <h3 className="text-xl font-semibold text-white">
-            {tabs.find((tab) => tab.id === activeTab)?.label} Games
+        {/* Character Info */}
+        <div className="text-center space-y-2">
+          <h3 className={`text-xl font-bold ${character.available ? 'text-white' : 'text-neutral-400'}`}>
+            {character.name}
           </h3>
-          <div className="flex bg-neutral-800 rounded-lg p-1">
-            <button
-              onClick={() => setViewMode("grid")}
-              className={`p-2 rounded ${
-                viewMode === "grid" ? "bg-cyan-600 text-white" : "text-gray-400"
-              }`}
-            >
-              <Grid className="w-4 h-4" />
-            </button>
-            <button
-              onClick={() => setViewMode("list")}
-              className={`p-2 rounded ${
-                viewMode === "list" ? "bg-cyan-600 text-white" : "text-gray-400"
-              }`}
-            >
-              <List className="w-4 h-4" />
-            </button>
-          </div>
+          <p className={`text-sm font-medium ${character.available ? 'text-gray-300' : 'text-neutral-500'}`}>
+            {character.title}
+          </p>
+          <p className={`text-xs ${character.available ? 'text-gray-400' : 'text-neutral-600'}`}>
+            {character.game}
+          </p>
+          <p className={`text-xs leading-relaxed ${character.available ? 'text-gray-400' : 'text-neutral-600'}`}>
+            {character.description}
+          </p>
         </div>
 
-        {/* Games Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
-          {games[activeTab]?.map((game) => (
-            <GameCard
-              key={game.id}
-              game={game}
-              showProgress={activeTab === "playing"}
-              showCompletedDate={activeTab === "completed"}
-              showReleaseDate={activeTab === "wishlist"}
+        {/* Status Badge */}
+        <div className="absolute top-3 right-3">
+          {character.available ? (
+            <motion.div
+              className="w-3 h-3 bg-green-500 rounded-full"
+              animate={{ scale: isHovered ? [1, 1.2, 1] : 1 }}
+              transition={{ duration: 1, repeat: Infinity }}
             />
-          ))}
+          ) : (
+            <div className="px-2 py-1 bg-neutral-700 rounded-full">
+              <span className="text-xs text-neutral-400">Soon</span>
+            </div>
+          )}
         </div>
       </div>
+    </motion.div>
+  );
+};
 
-      {/* Collection Modal */}
-      {showModal && (
-        <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50 p-4">
-          <div className="bg-neutral-800 rounded-xl max-w-md w-full p-6">
-            <div className="flex items-center justify-between mb-4">
-              <h3 className="text-xl font-bold text-white">
-                Create New Collection
-              </h3>
-              <button
-                onClick={() => setShowModal(false)}
-                className="text-gray-400 hover:text-white"
-              >
-                <X className="w-6 h-6" />
-              </button>
-            </div>
+const FloatingParticles = () => {
+  const particles = Array.from({ length: 20 }, (_, i) => ({
+    id: i,
+    x: Math.random() * 100,
+    y: Math.random() * 100,
+    delay: Math.random() * 5,
+    duration: 3 + Math.random() * 4
+  }));
 
-            <div className="space-y-4">
-              <div>
-                <label className="block text-sm font-medium text-gray-300 mb-2">
-                  Collection Name
-                </label>
-                <input
-                  type="text"
-                  value={collectionName}
-                  onChange={(e) => setCollectionName(e.target.value)}
-                  placeholder="Enter collection name..."
-                  className="w-full bg-neutral-700 border border-neutral-600 rounded-lg px-3 py-2 text-white placeholder-gray-400 focus:border-cyan-500 focus:outline-none"
-                />
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium text-gray-300 mb-2">
-                  Description (Optional)
-                </label>
-                <textarea
-                  value={collectionDescription}
-                  onChange={(e) => setCollectionDescription(e.target.value)}
-                  placeholder="Describe your collection..."
-                  rows={3}
-                  className="w-full bg-neutral-700 border border-neutral-600 rounded-lg px-3 py-2 text-white placeholder-gray-400 focus:border-cyan-500 focus:outline-none resize-none"
-                />
-              </div>
-            </div>
-
-            <div className="flex gap-3 mt-6">
-              <button
-                onClick={() => setShowModal(false)}
-                className="flex-1 bg-neutral-700 hover:bg-neutral-600 text-white px-4 py-2 rounded-lg transition-colors"
-              >
-                Cancel
-              </button>
-              <button
-                onClick={handleCreateCollection}
-                className="flex-1 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white px-4 py-2 rounded-lg transition-all"
-              >
-                Create Collection
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
+  return (
+    <div className="fixed inset-0 pointer-events-none overflow-hidden">
+      {particles.map((particle) => (
+        <motion.div
+          key={particle.id}
+          className="absolute w-1 h-1 bg-neutral-600 rounded-full opacity-20"
+          style={{
+            left: `${particle.x}%`,
+            top: `${particle.y}%`
+          }}
+          animate={{
+            y: [0, -100, 0],
+            opacity: [0.2, 0.5, 0.2]
+          }}
+          transition={{
+            duration: particle.duration,
+            delay: particle.delay,
+            repeat: Infinity,
+            ease: "linear"
+          }}
+        />
+      ))}
     </div>
   );
 };
 
-export default UserProfile;
+const GamingCharacterHub = () => {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCharacter, setSelectedCharacter] = useState(null);
 
-// import React, { useState } from 'react';
-// import { MessageCircle, Gamepad2, Zap, Crown, Sword, Shield, Star } from 'lucide-react';
+  const filteredCharacters = GAMING_CHARACTERS.filter(character =>
+    character.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    character.game.toLowerCase().includes(searchTerm.toLowerCase())
+  );
 
-// const AICharactersPage = () => {
-//   const [selectedCategory, setSelectedCategory] = useState('All');
+  const handleCharacterSelect = (character) => {
+    if (character.available) {
+      setSelectedCharacter(character);
+      // Here you would navigate to the character's saga page
+      console.log(`Selected ${character.name} - Navigate to saga page`);
+    }
+  };
 
-//   const aiCharacters = [
-//     {
-//       id: 1,
-//       name: "Master Chief",
-//       game: "Halo",
-//       category: "FPS",
-//       description: "Legendary Spartan super-soldier ready for tactical discussions",
-//       avatar: "🎖️",
-//       color: "from-green-500 to-blue-600",
-//       specialty: "Combat Strategy",
-//       status: "online"
-//     },
-//     {
-//       id: 2,
-//       name: "Kratos",
-//       game: "God of War",
-//       category: "Action",
-//       description: "God of War with wisdom from his journey of redemption",
-//       avatar: "⚡",
-//       color: "from-red-500 to-orange-600",
-//       specialty: "Mythology & Combat",
-//       status: "online"
-//     },
-//     {
-//       id: 3,
-//       name: "GLaDOS",
-//       game: "Portal",
-//       category: "Puzzle",
-//       description: "Sarcastically helpful AI for puzzle-solving and dark humor",
-//       avatar: "🤖",
-//       color: "from-blue-500 to-purple-600",
-//       specialty: "Logic & Puzzles",
-//       status: "online"
-//     },
-//     {
-//       id: 4,
-//       name: "Geralt of Rivia",
-//       game: "The Witcher",
-//       category: "RPG",
-//       description: "Witcher with knowledge of monsters, potions, and tough choices",
-//       avatar: "🗡️",
-//       color: "from-gray-500 to-yellow-600",
-//       specialty: "Monster Hunting",
-//       status: "online"
-//     },
-//     {
-//       id: 5,
-//       name: "Commander Shepard",
-//       game: "Mass Effect",
-//       category: "RPG",
-//       description: "N7 operative ready to discuss galactic politics and alien species",
-//       avatar: "🚀",
-//       color: "from-blue-600 to-indigo-700",
-//       specialty: "Space Exploration",
-//       status: "online"
-//     },
-//     {
-//       id: 6,
-//       name: "Cortana",
-//       game: "Halo",
-//       category: "FPS",
-//       description: "Advanced AI companion with vast tactical knowledge",
-//       avatar: "💎",
-//       color: "from-cyan-500 to-blue-600",
-//       specialty: "AI Intelligence",
-//       status: "online"
-//     },
-//     {
-//       id: 7,
-//       name: "Lara Croft",
-//       game: "Tomb Raider",
-//       category: "Adventure",
-//       description: "Adventurous archaeologist ready for exploration discussions",
-//       avatar: "🏺",
-//       color: "from-amber-500 to-orange-600",
-//       specialty: "Archaeology",
-//       status: "online"
-//     },
-//     {
-//       id: 8,
-//       name: "Solid Snake",
-//       game: "Metal Gear",
-//       category: "Action",
-//       description: "Legendary soldier with expertise in stealth and espionage",
-//       avatar: "🥷",
-//       color: "from-gray-600 to-green-600",
-//       specialty: "Stealth Operations",
-//       status: "online"
-//     },
-//     {
-//       id: 9,
-//       name: "Aloy",
-//       game: "Horizon",
-//       category: "Adventure",
-//       description: "Hunter from post-apocalyptic world with tech knowledge",
-//       avatar: "🏹",
-//       color: "from-orange-500 to-red-600",
-//       specialty: "Technology & Hunting",
-//       status: "online"
-//     }
-//   ];
+  return (
+    <div className="min-h-screen bg-neutral-900 text-white relative">
+      <FloatingParticles />
 
-//   const categories = ['All', 'FPS', 'RPG', 'Action', 'Adventure', 'Puzzle'];
+      {/* Header */}
+      <div className="relative z-10 px-8 py-12">
+        <motion.div
+          initial={{ opacity: 0, y: -30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-12"
+        >
+          <h1 className="text-5xl font-black mb-4 bg-gradient-to-r from-white via-gray-300 to-gray-500 bg-clip-text text-transparent">
+            LEGENDARY SAGAS
+          </h1>
+          <p className="text-lg text-neutral-400 max-w-2xl mx-auto">
+            Explore the epic stories of gaming's most iconic characters
+          </p>
+        </motion.div>
 
-//   const filteredCharacters = selectedCategory === 'All'
-//     ? aiCharacters
-//     : aiCharacters.filter(char => char.category === selectedCategory);
+        {/* Search Bar */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="max-w-md mx-auto mb-12"
+        >
+          <div className="relative">
+            <input
+              type="text"
+              placeholder="Search characters or games..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              className="w-full px-6 py-4 bg-neutral-800/50 border border-neutral-700 rounded-full text-white placeholder-neutral-400 focus:outline-none focus:border-neutral-500 transition-colors duration-300"
+            />
+            <Gamepad2 className="absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-neutral-500" />
+          </div>
+        </motion.div>
+      </div>
 
-//   const handleCharacterClick = (character) => {
-//     console.log(`Starting chat with ${character.name}`);
-//     // Here you would typically navigate to the chat interface
-//     alert(`Starting chat with ${character.name} from ${character.game}!`);
-//   };
+      {/* Character Grid */}
+      <div className="relative z-10 px-8 pb-16">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-6">
+            {filteredCharacters.map((character, index) => (
+              <CharacterCard
+                key={character.id}
+                character={character}
+                index={index}
+                onSelect={handleCharacterSelect}
+              />
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Stats Footer */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.4 }}
+        className="relative z-10 px-8 pb-8"
+      >
+        <div className="max-w-4xl mx-auto border-t border-neutral-800 pt-8">
+          <div className="flex justify-center gap-12 text-center">
+            <div>
+              <div className="text-2xl font-bold text-white">
+                {GAMING_CHARACTERS.filter(c => c.available).length}
+              </div>
+              <div className="text-sm text-neutral-400">Available</div>
+            </div>
+            <div>
+              <div className="text-2xl font-bold text-neutral-500">
+                {GAMING_CHARACTERS.filter(c => !c.available).length}
+              </div>
+              <div className="text-sm text-neutral-400">Coming Soon</div>
+            </div>
+            <div>
+              <div className="text-2xl font-bold text-white">{GAMING_CHARACTERS.length}</div>
+              <div className="text-sm text-neutral-400">Total Characters</div>
+            </div>
+          </div>
+        </div>
+      </motion.div>
+    </div>
+  );
+};
+
+export default GamingCharacterHub;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//ACTUAL STORY PAGE
+
+// import React, { useState, useRef } from "react";
+// import { motion, AnimatePresence } from "framer-motion";
+// import {
+//   Shield,
+//   Sword,
+//   Skull,
+//   Zap,
+//   Crown,
+//   Flame,
+//   Mountain,
+//   Star,
+//   Heart,
+//   ChevronDown,
+//   ChevronUp,
+//   Play,
+//   Pause,
+// } from "lucide-react";
+
+// const STORIES = [
+//   {
+//     id: 1,
+//     era: "The Spartan Warrior",
+//     title: "Birth of a Legend",
+//     Icon: Shield,
+//     color: "from-red-600 to-orange-500",
+//     bgPattern: "bg-gradient-to-br from-gray-900 via-red-900 to-black",
+//     content: {
+//       summary:
+//         "Born in Sparta, Kratos was destined for greatness from birth. His journey begins as a mortal warrior driven by rage and ambition.",
+//       details: [
+//         "Kratos was born to Callisto, a mortal woman, and Zeus, the King of the Gods, though this divine parentage remained hidden for years. Raised in the militant society of Sparta, he was trained from childhood in the arts of war, becoming one of their most fearsome warriors.",
+//         "His early years were marked by countless battles across the ancient world. Kratos led Spartan armies with unmatched ferocity, earning the respect of his soldiers and the fear of his enemies. His tactical brilliance was matched only by his raw physical prowess.",
+//       ],
+//     },
+//   },
+//   {
+//     id: 2,
+//     era: "The Servant of Ares",
+//     title: "Pact with the God of War",
+//     Icon: Sword,
+//     color: "from-orange-600 to-red-600",
+//     bgPattern: "bg-gradient-to-br from-black via-orange-900 to-red-900",
+//     content: {
+//       summary:
+//         "Facing defeat against barbarian hordes, Kratos makes a fateful pact with Ares that will change his destiny forever.",
+//       details: [
+//         "In what seemed like his final hour, Kratos found himself overwhelmed by a massive barbarian army led by the Barbarian King. His Spartan forces were decimated, and death seemed certain. In desperation, he called out to the gods for aid, and Ares, the God of War, answered.",
+//         "The pact was sealed with divine magic: Ares would grant Kratos the power to defeat his enemies in exchange for eternal servitude. The Blades of Chaos, twin weapons forged in the depths of Tartarus, were permanently fused to Kratos's arms with burning chains that seared his flesh.",
+//       ],
+//     },
+//   },
+//   {
+//     id: 3,
+//     era: "The Village Massacre",
+//     title: "The Birth of the Ghost",
+//     Icon: Skull,
+//     color: "from-gray-600 to-red-700",
+//     bgPattern: "bg-gradient-to-br from-gray-800 via-gray-700 to-red-800",
+//     content: {
+//       summary:
+//         "Tricked by Ares, Kratos commits the unforgivable act that transforms him into the Ghost of Sparta.",
+//       details: [
+//         "On what appeared to be a routine mission to destroy a village that opposed Ares, Kratos led his Spartan warriors in a savage assault. The village was defended by followers of Athena, and Kratos cut through them with his usual ruthless efficiency, lost in the bloodlust that had become his nature.",
+//         "In the heat of battle, blinded by rage and divine manipulation, Kratos entered a temple and slaughtered everyone inside, including the Oracle who had tried to warn him. It was only after the carnage ended that the horrible truth was revealed - among the bodies lay his wife Lysandra and daughter Calliope.",
+//       ],
+//     },
+//   },
+//   {
+//     id: 4,
+//     era: "God of War Rises",
+//     title: "Slaying Ares",
+//     Icon: Crown,
+//     color: "from-yellow-500 to-red-600",
+//     bgPattern: "bg-gradient-to-br from-yellow-600 via-orange-600 to-red-700",
+//     content: {
+//       summary:
+//         "Kratos confronts and destroys Ares, claiming the throne of the God of War and achieving his long-sought revenge.",
+//       details: [
+//         "The final confrontation with Ares began when the God of War launched an assault on Athens, Athena's favored city. Kratos was tasked with stopping his former master, but he knew that as a mortal, he stood little chance against a full god.",
+//         "With Ares's death, the throne of the God of War stood empty. Zeus, recognizing Kratos's power and perhaps hoping to control him, offered him Ares's position among the Olympians. Kratos accepted, finally achieving the power and recognition he had always sought.",
+//       ],
+//     },
+//   },
+//   {
+//     id: 5,
+//     era: "War on Olympus",
+//     title: "The Titan's Assault",
+//     Icon: Mountain,
+//     color: "from-gray-500 to-red-600",
+//     bgPattern: "bg-gradient-to-br from-gray-700 via-red-700 to-black",
+//     content: {
+//       summary:
+//         "Leading the Titans in a final assault on Mount Olympus, Kratos begins the war that will end the age of gods.",
+//       details: [
+//         "The assault on Olympus was the culmination of a war that had been brewing since the dawn of creation. Kratos led the Titans - Gaia, Cronos, Oceanus, and others - in a direct attack on Mount Olympus itself.",
+//         "The initial assault was devastatingly successful. The Titans scaled Mount Olympus like a living mountain range, their massive forms dwarfing even the grandest divine architecture.",
+//       ],
+//     },
+//   },
+//   {
+//     id: 6,
+//     era: "The Norse Lands",
+//     title: "A New Beginning",
+//     Icon: Heart,
+//     color: "from-blue-400 to-green-500",
+//     bgPattern: "bg-gradient-to-br from-blue-600 via-green-500 to-gray-700",
+//     content: {
+//       summary:
+//         "Years later, a changed Kratos emerges in the Norse realm of Midgard, seeking a new life away from his past.",
+//       details: [
+//         "Decades after the fall of Olympus, Kratos had somehow survived his apparent death and traveled to the Norse realms, specifically Midgard. Here, far from the ruins of Greek civilization, he attempted to build a new life free from the ghosts of his past.",
+//         "In these northern lands, Kratos met Faye (Laufey), a powerful giant who saw past his reputation as the Ghost of Sparta to the man he was trying to become. Their relationship was built on mutual respect and understanding rather than fear or worship.",
+//       ],
+//     },
+//   },
+// ];
+
+// const StoryCard = ({ story, index, isExpanded, onToggle }) => {
+//   const { Icon, era, title, color, content } = story;
 
 //   return (
-//     <div className="min-h-screen bg-neutral-800 text-white">
-//       {/* Header */}
-//       <div className="sticky top-0 z-10 bg-neutral-800/95 backdrop-blur-sm border-b border-neutral-700">
-//         <div className="max-w-7xl mx-auto px-6 py-6">
-//           <div className="flex items-center gap-4 mb-4">
-//             <div className="flex items-center gap-3">
-//               <Gamepad2 className="w-8 h-8 text-blue-400" />
-//               <h1 className="text-3xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
-//                 AI Gaming Characters
-//               </h1>
-//             </div>
-//           </div>
-//           <p className="text-neutral-400 mb-6">
-//             Chat with iconic gaming characters powered by AI. Choose your companion and dive into immersive conversations.
-//           </p>
+//     <motion.div
+//       initial={{ opacity: 0, y: 50 }}
+//       animate={{ opacity: 1, y: 0 }}
+//       transition={{ duration: 0.6, delay: index * 0.1 }}
+//       className="group relative"
+//     >
+//       {/* Timeline connector */}
+//       {index < STORIES.length - 1 && (
+//         <div className="absolute left-6 top-20 w-0.5 h-32 bg-gradient-to-b from-red-500 to-transparent opacity-30" />
+//       )}
 
-//           {/* Category Filter */}
-//           <div className="flex flex-wrap gap-3">
-//             {categories.map((category) => (
-//               <button
-//                 key={category}
-//                 onClick={() => setSelectedCategory(category)}
-//                 className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
-//                   selectedCategory === category
-//                     ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white shadow-lg'
-//                     : 'bg-neutral-700 text-neutral-300 hover:bg-neutral-600'
-//                 }`}
-//               >
-//                 {category}
-//               </button>
-//             ))}
-//           </div>
-//         </div>
-//       </div>
+//       <motion.div
+//         className={`relative bg-black/40 backdrop-blur-sm border border-white/10 rounded-xl p-6 cursor-pointer overflow-hidden
+//           hover:border-white/20 transition-all duration-300 ${
+//             isExpanded ? "ring-1 ring-red-500/50" : ""
+//           }`}
+//         onClick={onToggle}
+//         whileHover={{ scale: 1.02, y: -2 }}
+//         whileTap={{ scale: 0.98 }}
+//       >
+//         {/* Background gradient */}
+//         <div
+//           className={`absolute inset-0 bg-gradient-to-br ${color} opacity-5 group-hover:opacity-10 transition-opacity duration-300`}
+//         />
 
-//       {/* Characters Grid */}
-//       <div className="max-w-7xl mx-auto px-6 py-8">
-//         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-//           {filteredCharacters.map((character) => (
-//             <div
-//               key={character.id}
-//               onClick={() => handleCharacterClick(character)}
-//               className="group bg-neutral-700 rounded-xl p-6 cursor-pointer transition-all duration-300 hover:bg-neutral-600 hover:shadow-xl hover:shadow-black/20 hover:-translate-y-1 border border-neutral-600 hover:border-neutral-500"
-//             >
-//               {/* Character Header */}
-//               <div className="flex items-start justify-between mb-4">
-//                 <div className="flex items-center gap-4">
-//                   <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${character.color} flex items-center justify-center text-2xl shadow-lg`}>
-//                     {character.avatar}
-//                   </div>
-//                   <div>
-//                     <h3 className="text-xl font-bold text-white group-hover:text-blue-400 transition-colors">
-//                       {character.name}
-//                     </h3>
-//                     <p className="text-sm text-neutral-400">{character.game}</p>
-//                   </div>
-//                 </div>
-//                 <div className="flex items-center gap-2">
-//                   <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
-//                   <span className="text-xs text-green-400 font-medium">Online</span>
-//                 </div>
-//               </div>
-
-//               {/* Description */}
-//               <p className="text-neutral-300 text-sm mb-4 leading-relaxed">
-//                 {character.description}
-//               </p>
-
-//               {/* Specialty Tag */}
-//               <div className="flex items-center justify-between mb-4">
-//                 <div className="flex items-center gap-2">
-//                   <Star className="w-4 h-4 text-yellow-400" />
-//                   <span className="text-xs text-yellow-400 font-medium">
-//                     {character.specialty}
-//                   </span>
-//                 </div>
-//                 <div className="px-3 py-1 bg-neutral-600 rounded-full text-xs text-neutral-300">
-//                   {character.category}
-//                 </div>
-//               </div>
-
-//               {/* Chat Button */}
-//               <div className="flex items-center justify-between">
-//                 <div className="flex items-center gap-2 text-blue-400 group-hover:text-blue-300 transition-colors">
-//                   <MessageCircle className="w-5 h-5" />
-//                   <span className="text-sm font-medium">Start Chat</span>
-//                 </div>
-//                 <div className="w-8 h-8 bg-blue-500 rounded-lg flex items-center justify-center group-hover:bg-blue-400 transition-colors">
-//                   <Zap className="w-4 h-4 text-white" />
-//                 </div>
-//               </div>
-//             </div>
-//           ))}
-//         </div>
-
-//         {/* Empty State */}
-//         {filteredCharacters.length === 0 && (
-//           <div className="text-center py-16">
-//             <Gamepad2 className="w-16 h-16 text-neutral-600 mx-auto mb-4" />
-//             <h3 className="text-xl font-semibold text-neutral-400 mb-2">
-//               No characters found
+//         {/* Icon and era */}
+//         <div className="flex items-center gap-4 mb-4">
+//           <motion.div
+//             className={`p-3 rounded-full bg-gradient-to-br ${color} shadow-lg`}
+//             whileHover={{ rotate: 360 }}
+//             transition={{ duration: 0.6 }}
+//           >
+//             <Icon className="w-6 h-6 text-white" />
+//           </motion.div>
+//           <div>
+//             <h3 className="text-sm font-medium text-red-400 uppercase tracking-wider">
+//               {era}
 //             </h3>
-//             <p className="text-neutral-500">
-//               Try selecting a different category to see more characters.
-//             </p>
+//             <h2 className="text-xl font-bold text-white">{title}</h2>
 //           </div>
-//         )}
-//       </div>
-
-//       {/* Footer */}
-//       <div className="border-t border-neutral-700 bg-neutral-800/50">
-//         <div className="max-w-7xl mx-auto px-6 py-6">
-//           <div className="flex items-center justify-center gap-2 text-neutral-400">
-//             <Crown className="w-5 h-5" />
-//             <span className="text-sm">Powered by GamerGram AI Technology</span>
-//           </div>
+//           <motion.div
+//             className="ml-auto"
+//             animate={{ rotate: isExpanded ? 180 : 0 }}
+//             transition={{ duration: 0.3 }}
+//           >
+//             <ChevronDown className="w-5 h-5 text-gray-400" />
+//           </motion.div>
 //         </div>
-//       </div>
+
+//         {/* Summary */}
+//         <p className="text-gray-300 text-sm leading-relaxed mb-4">
+//           {content.summary}
+//         </p>
+
+//         {/* Expanded content */}
+//         <AnimatePresence>
+//           {isExpanded && (
+//             <motion.div
+//               initial={{ height: 0, opacity: 0 }}
+//               animate={{ height: "auto", opacity: 1 }}
+//               exit={{ height: 0, opacity: 0 }}
+//               transition={{ duration: 0.3 }}
+//               className="overflow-hidden"
+//             >
+//               <div className="border-t border-white/10 pt-4 mt-4">
+//                 {content.details.map((detail, idx) => (
+//                   <motion.p
+//                     key={idx}
+//                     initial={{ opacity: 0, x: -20 }}
+//                     animate={{ opacity: 1, x: 0 }}
+//                     transition={{ duration: 0.4, delay: idx * 0.1 }}
+//                     className="text-gray-300 text-sm leading-relaxed mb-3 pl-4 border-l-2 border-red-500/30"
+//                   >
+//                     {detail}
+//                   </motion.p>
+//                 ))}
+//               </div>
+//             </motion.div>
+//           )}
+//         </AnimatePresence>
+//       </motion.div>
+//     </motion.div>
+//   );
+// };
+
+// const ParticleField = () => {
+//   return (
+//     <div className="absolute inset-0 overflow-hidden pointer-events-none">
+//       {[...Array(20)].map((_, i) => (
+//         <motion.div
+//           key={i}
+//           className="absolute w-1 h-1 bg-red-500/20 rounded-full"
+//           initial={{
+//             x: Math.random() * window.innerWidth,
+//             y: Math.random() * window.innerHeight,
+//           }}
+//           animate={{
+//             x: Math.random() * window.innerWidth,
+//             y: Math.random() * window.innerHeight,
+//           }}
+//           transition={{
+//             duration: Math.random() * 10 + 10,
+//             repeat: Infinity,
+//             repeatType: "reverse",
+//           }}
+//         />
+//       ))}
 //     </div>
 //   );
 // };
 
-// export default AICharactersPage;
+// export default function KratosStoryTimeline() {
+//   const [expandedCard, setExpandedCard] = useState(null);
+//   const [isPlaying, setIsPlaying] = useState(false);
+//   const timelineRef = useRef(null);
+
+//   const toggleCard = (id) => {
+//     setExpandedCard(expandedCard === id ? null : id);
+//   };
+
+//   const toggleAutoPlay = () => {
+//     setIsPlaying(!isPlaying);
+//   };
+
+//   return (
+//     <div className="min-h-screen bg-neutral-900 text-white relative overflow-hidden">
+//       <ParticleField />
+
+//       {/* Header */}
+//       <motion.header
+//         initial={{ opacity: 0, y: -50 }}
+//         animate={{ opacity: 1, y: 0 }}
+//         transition={{ duration: 0.8 }}
+//         className="relative z-10 text-center py-12"
+//       >
+//         <motion.h1
+//           className="text-6xl font-bold mb-4 bg-gradient-to-r from-red-500 via-orange-500 to-yellow-500 bg-clip-text text-transparent"
+//           animate={{
+//             backgroundPosition: ["0%", "100%", "0%"],
+//           }}
+//           transition={{
+//             duration: 3,
+//             repeat: Infinity,
+//             ease: "linear",
+//           }}
+//           style={{ backgroundSize: "200% 200%" }}
+//         >
+//           KRATOS
+//         </motion.h1>
+//         <motion.p
+//           initial={{ opacity: 0 }}
+//           animate={{ opacity: 1 }}
+//           transition={{ delay: 0.5, duration: 0.8 }}
+//           className="text-xl text-gray-300 mb-8"
+//         >
+//           The Legendary Journey of the Ghost of Sparta
+//         </motion.p>
+
+//         {/* Auto-play control */}
+//         <motion.button
+//           onClick={toggleAutoPlay}
+//           className="flex items-center gap-2 mx-auto px-6 py-2 bg-red-600/20 border border-red-500/30 rounded-full text-red-400 hover:bg-red-600/30 transition-colors"
+//           whileHover={{ scale: 1.05 }}
+//           whileTap={{ scale: 0.95 }}
+//         >
+//           {isPlaying ? (
+//             <Pause className="w-4 h-4" />
+//           ) : (
+//             <Play className="w-4 h-4" />
+//           )}
+//           {isPlaying ? "Pause Story" : "Play Story"}
+//         </motion.button>
+//       </motion.header>
+
+//       {/* Timeline */}
+//       <main className="relative z-10 max-w-4xl mx-auto px-6 pb-12">
+//         <div ref={timelineRef} className="space-y-8">
+//           {STORIES.map((story, index) => (
+//             <StoryCard
+//               key={story.id}
+//               story={story}
+//               index={index}
+//               isExpanded={expandedCard === story.id}
+//               onToggle={() => toggleCard(story.id)}
+//             />
+//           ))}
+//         </div>
+//       </main>
+
+//       {/* Footer */}
+//       <motion.footer
+//         initial={{ opacity: 0 }}
+//         animate={{ opacity: 1 }}
+//         transition={{ delay: 1, duration: 0.8 }}
+//         className="relative z-10 text-center py-8 border-t border-white/10"
+//       >
+//         <p className="text-gray-500 text-sm">
+//           The legend continues... Experience the epic saga of Kratos across
+//           mythologies
+//         </p>
+//       </motion.footer>
+
+//       {/* Background effects */}
+//       <div className="absolute inset-0 bg-gradient-to-br from-red-900/5 via-transparent to-orange-900/5" />
+//       <div className="absolute top-0 left-0 w-96 h-96 bg-red-500/10 rounded-full blur-3xl -translate-x-48 -translate-y-48" />
+//       <div className="absolute bottom-0 right-0 w-96 h-96 bg-orange-500/10 rounded-full blur-3xl translate-x-48 translate-y-48" />
+//     </div>
+//   );
+// }

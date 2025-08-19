@@ -26,7 +26,7 @@ const useUIStore = create((set, get) => ({
       link: "/aiChatBox",
     },
     { id: "News", label: "News", icon: Newspaper, link: "/news" },
-    { id: "saga", label: "Saga", icon: LibraryBig, link: "/kratos" },
+    { id: "saga", label: "Saga", icon: LibraryBig, link: "/saga" },
     { id: "profile", label: "Profile", icon: User, link: "/profile" },
   ],
   tabs: [
@@ -53,7 +53,7 @@ const useUIStore = create((set, get) => ({
   newTabs: [
     {
       id: "bookmarked",
-      label: "Bookmarked",
+      label: "Bookmark",
       icon: Bookmark,
       count: 24,
     },
