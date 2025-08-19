@@ -1,0 +1,303 @@
+{
+  "title": "Kratos: The Ghost of Sparta — Expanded Codex",
+  "meta": {
+    "note": "User-supplied eras expanded in extreme detail. Each era includes an expanded summary and long-form, scene-by-scene detail entries suitable for use as codex text, in-app lore popups, or narration.",
+    "format": "Array of era objects with id, era, title, Icon (string), color, bgPattern, content { summary, details[] }"
+  },
+  "chapters": [
+    {
+      "id": 1,
+      "era": "The Spartan Warrior",
+      "title": "Birth of a Legend",
+      "Icon": "Shield",
+      "color": "from-red-600 to-orange-500",
+      "bgPattern": "bg-gradient-to-br from-gray-900 via-red-900 to-black",
+      "content": {
+        "summary": "Born under stone skies and the unforgiving discipline of Sparta, Kratos' earliest world is sensory and strict: iron tang on the air, the rhythm of the drill, ritual lamplight catching on bronze. This era traces the building blocks of habit — how violence was taught as grammar, how honor became a currency, and how tenderness was both refuge and a liability. It is the architecture of a man being forged: muscle learned to obey the state, heart taught to hide, and a hunger for recognition that mutates into an appetite for power.",
+        "details": [
+          "Birth and naming: Kratos' first breaths come in a small room scented with olive oil and sweat. Callisto shields the infant with a shawl from gossiping midwives; the name Kratos is spoken as both prayer and vow. The rumor of Zeus as father circles like a moth — no one says it plainly, but the hush that follows a passing comment shapes how neighbors look at the child. From the first days, identity is something negotiated in whispers.",
+          "Childhood under watch: His early years are split between familial warmth and public expectation. Mornings begin with drills in communal courtyards: running until calves burn, carrying logs until arms fail. Even play is regimented; boys learn to wrestle as training and story-telling as memory. Kratos learns that softness is dangerous because it signals weakness to others who measure by strength alone.",
+          "Ritualized discipline: The rites of Spartan upbringing are precise and ceremonial. Salt water is used to wake the body; blisters are catalogued and corrected. Teachers mark mistakes in line and spear placement as if composing a hymn. Kratos excels not because he is simply strong but because he is meticulous. Muscle learns pattern; pattern becomes reflex. The pedagogy of violence teaches him to anticipate a man's breathing and to count the seconds between heartbeats.",
+          "First mentor figures: Older warriors and helots appear as provisional gods of craft. A grizzled lance instructor shows Kratos how to read a horizon for an incoming formation. A tutor of letters insists Kratos learn numbers and names — tools that will later serve logistical ruthlessness. These teachers are not kindly; their lessons embed the notion that survival requires both physical and bureaucratic domination.",
+          "Relationship with Deimos: Deimos is a mirror and a contrast — a lighter step, a laugh like breaking bell. Where Kratos is controlled, Deimos is impulsive. Their brotherhood is tight and competitive, full of dares and midnight skirmishes. The prophecy that arrives in their household is a thin, poisonous thing: a child's future written in someone else's voice. It distorts the brothers' games into solemn omens and sets a shadow over Deimos that invites violent fate.",
+          "The household of Lysandra and Calliope: Home life is not absent of warmth. Lysandra's patience and Callisto's quiet strength provide Kratos with small refuges: a hearth that tolerates his rage, a child's hand to return to when the world closes. Those luminous domestic images will later be used against him by the gods; in these scenes, tenderness is not naivety but the kernel of everything he will lose.",
+          "Early choices and moral seeds: Small episodes test the boy's sense of rightness: whether to spare a beaten foe, whether to accept a command without question. Each choice is catalogued by Kratos internally. He begins to see morality as instrument: decisions that confer survival and status are repeated until they harden into instinct. This calculus will later be mistaken for inevitability.",
+          "Rumors, trophies, and reputation: As he matures, Kratos returns to Sparta with trophies and scars that speak for him. Victories are traded in the market of reputation: a captured standard, a bronze necklace, whisper campaigns of valor. He learns the social mechanics of fear and respect. Reputation becomes a tool to bend others' will, and it tastes like copper on the tongue — desirable and metallic, a herald of hunger."
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "era": "The Servant of Ares",
+      "title": "Pact with the God of War",
+      "Icon": "Sword",
+      "color": "from-orange-600 to-red-600",
+      "bgPattern": "bg-gradient-to-br from-black via-orange-900 to-red-900",
+      "content": {
+        "summary": "Cornered and desperate, Kratos accepts Ares' terrible bargain — an exchange that grants power while burrowing a new self beneath the old one. The pact is procedural and intimate: ritual, chains, and the steady induction into violence as identity. This era documents not only the external metamorphosis but also how servitude to a divine force rewrites memory, remaps loyalties, and teaches a man to think of himself as an implement.",
+        "details": [
+          "Crisis on the field: A defeat so total that the sky itself feels unsteady drives Kratos to the edge. Men around him break in ways that make survival arbitrary. He stands in mud and blood and makes a decision not born of faith but arithmetic: the value of one life if traded might save many. The pact is not cinematic in that instant — it is a quiet, rational surrender made beneath a sky that will not answer.",
+          "Ares' arrival and terms: The god's presence is not magnanimous. He appears like smoke and iron, speaking in images rather than promises. The offer is precise: serve me, and I will make you more than a man. The catch is the binding — service is total. Kratos asks for strength. Ares gives chains that link flesh and will. The language of myth here is transactional; divinity is a contract written on marrow.",
+          "Forging the Blades: The Blades of Chaos are not simply given — they are welded to Kratos' body in a painful ceremony. Chains find tendon and bone; heat coaxes sinew into new shapes. The first swing is a lesson in new geometry as metal becomes extension. The Blades change not only what Kratos can do but how he senses space and rhythm. Combat becomes choreography learned in the body’s bones.",
+          "Interior surrender and fracture: Accepting the power creates a fissure between the man who loved Lysandra and the instrument he becomes. Kratos experiences a private, recurring death: the person who sat in a warm kitchen dies a little more each night. This grief is not total yet; kindness survives in tiny acts, but obedience and fury crowd the room, making tenderness speak through gritted teeth.",
+          "Ares' pedagogy of war: As an avatar, Kratos is trained to enact Ares' doctrine. He is taught to escalate conflicts until opponents capitulate or are erased. Ares cultivates a taste for the absolute: strike first, ask questions never. Kratos learns systems of terror — how to use fear as a siege engine, how to make victory a spectacle that undermines dissent.",
+          "Ritual and public identity: Kratos' new title is presented publicly with ceremony. Soldiers now call him by names he had not owned. The populace begins to build legends around his deeds. The ritual solidifies his identity into a public commodity. Each triumph increases the distance between private remorse and public myth making.",
+          "Strategic cruelty: Kratos learns cruelty as policy. He practices feats that terrorize rather than simply defeat: burning granaries to starve rebellions, public executions staged for effect. These acts teach him that power can be maintained by performance. He recognizes the economy of dread and refines it with professional efficiency.",
+          "First cracks of conscience: Even at the height of servitude there are moments when small mercies surface — a spared prisoner, a child's life hidden in the chaos — and Kratos feels these like splinters. They do not change his path yet, but they seed future conflict between duty and a residual humanity."
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "era": "The Village Massacre",
+      "title": "The Birth of the Ghost",
+      "Icon": "Skull",
+      "color": "from-gray-600 to-red-700",
+      "bgPattern": "bg-gradient-to-br from-gray-800 via-gray-700 to-red-800",
+      "content": {
+        "summary": "Ares engineers Kratos' greatest fracture: convincing him to slaughter the one anchor left to his life. The Village Massacre is described as accumulation — of manipulations, half-truths, and ritual cruelties — and as a sudden geometry of betrayal that hollows Kratos out. The whitened ash of his skin becomes a walking indictment, and the moment redefines him from soldier into legend and cursed pariah.",
+        "details": [
+          "Orders that mask motives: The campaign orders come wrapped in euphemism and urgency. Kratos is told to root out traitors; the language removes intimacy from targets. He obeys with the precision of a man who trusts procedure. The convoy rides through dawn; the world smells of barley and stone. No one in the command expects to cry that morning.",
+          "The assault in granular detail: Streets become corridors of decision. Kratos moves methodically: doorways smashed, banners seized, men cut down mid-prayer. The fighting is intimate and close — the metallic ring of blades on columns, the sickening give when timber breaks. For a time he believes he is killing enemies; the logic of the orders keeps him lucid as he moves through destruction.",
+          "Domestic discovery: Amid the ruin, evidence of a normal life pierces the fog. A child's carved toy, a fresh loaf cooling on a sill, Lysandra's scarf caught on a broken lattice — each object is a punctuation mark. The arrival in the family chamber compresses a lifetime into a blink: the terrible recognition that the victims were not faceless enemies but his own hearth.",
+          "Kratos' physical and moral collapse: The revelation collapses Kratos into a new register of pain. His body experiences a nausea unlike battlefield exertion: his hands still know how to kill, but his throat tightens with a grief that cannot be measured by muscle. He collapses into a silence that has the quality of an earthquake. The world rearranges around that silence.",
+          "Ares' engineered betrayal: Later, as he attempts to find pattern in what happened, Kratos uncovers fragments of manipulation: dreams coaxed, spies placed, lies whispered into sleeping hours. Ares' cruelty is not spontaneous but surgical. He built a scenario where Kratos would be the tool and the ruin simultaneously, ensuring that guilt would be absolute.",
+          "The Oracle's curse made visible: The Oracle's dying words and the ritual ash that follows are described as a forced inscription — a script seared into skin. The ash bleaches Kratos' flesh into a blankness that forces the world to read him as guilty. The physical whiteness is a social sentence; wherever he goes, people see the evidence of his crime before they hear his voice.",
+          "Social exile and ritual branding: Villages speak of him in hush. Travelers cross their paths sooner. Priests recompose hymns to warn children about the Ghost. Kratos learns what it means to be marked: every glance becomes accusation, every doorway a stage for suspicion. The myth grows as a mechanism of ostracism.",
+          "Internalization of the ghost: Inwardly Kratos becomes a repository for the massacre’s aftershocks. Memory intrudes as sensory flash: a child's laugh in the wind, the smell of smoke at noon. These images become motifs that haunt his decisions. The event reframes his identity from a soldier with duties to a walking relic of catastrophe."
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "era": "Servant to the Gods",
+      "title": "Ten Years of Torment",
+      "Icon": "Zap",
+      "color": "from-blue-600 to-purple-600",
+      "bgPattern": "bg-gradient-to-br from-blue-900 via-purple-800 to-indigo-900",
+      "content": {
+        "summary": "Kratos seeks redemption through obedience. For a decade Olympus uses his contrition as a resource: he is assigned labors that are both spectacle and punishment. This is a long season of public performance and private disintegration — a time when the promises of absolution are repeatedly deferred and when divine patronage is revealed as a ledger that always demands balance.",
+        "details": [
+          "Athena's patronage formalized: Athena offers Kratos missions with the rhetoric of balance and justice. She frames dangerous tasks as penance and cloaks political calculation in the language of moral repair. Kratos accepts because the ritual of service is all he believes can erase the stain, even if the servicing is itself a new chain.",
+          "Catalog of monstrous trials: Over the years he confronts beings of archetypal terror: serpents that twist into symbolic debts, monsters that are metaphors given flesh. Each defeat is a stage event: hymns are written, statues erected, and bards reshape the truth into heroic narrative. Kratos' private suffering becomes public art.",
+          "Psychic scarring and nightmares: The constant combat and public ritual breeds insomnia that is as punishing as any wound. Dreams blend memory and mission; sometimes Kratos fights in sleep against the very faces of his family. Waking is a kind of small victory. The ten-year mark is less a count than a cumulative corrosion of interior life.",
+          "Divine augmentations and new dependencies: Gods grant boons to Kratos to make him more effective, but each boon functions like a leash. Lightning that tears flesh for Zeus, shadows for Hades — these gifts increase his capacity for violence while increasing expectations. He becomes dependent on the divinity of others to perform tasks that previously would have required simply human cunning.",
+          "Public adoration and private suspicion: Popularity rises in temples and marketplaces, but it does not feed the same hunger. Where the crowd sees a savior, Krisos experiences empty applause. Temples collect offerings and priests write liturgies while Kratos sits in private and measures the cost: each act of worship is also an inventory entry in the ledger of control.",
+          "Comrades lost and isolated command: He watches those who fought beside him age and die. Men he led into battle fall to disease or are executed as political scapegoats. Kratos becomes less a leader and more an instrument executed by others' hands. The loneliness is a function of being both necessary and disposable.",
+          "Small mercies and fragmented conscience: Occasionally, acts of mercy leak through — a spared village, aid provided to survivors. These are private resistances against the role he's forced into. They do not undo the decade of horrors but they complicate his portrait: Kratos is at once punitive and capable of tenderness.",
+          "Reflection on purpose: The era ends with Kratos asking whether atonement forced by gods is meaningful. He begins to suspect that the gods profit by his suffering and that the rituals of penance were designed to convert guilt into a manageable tool for Olympus. This insight plants seeds of rebellion."
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "era": "God of War Rises",
+      "title": "Slaying Ares",
+      "Icon": "Crown",
+      "color": "from-yellow-500 to-red-600",
+      "bgPattern": "bg-gradient-to-br from-yellow-600 via-orange-600 to-red-700",
+      "content": {
+        "summary": "Kratos' vengeance culminates in the hunt for Pandora's Box, a quest that is both physical and psychic. The journey through deserts and ruins is a pilgrimage of obsession; the retrieval of power and the slaying of Ares become a crucible. This era details obsession's architecture: how a man turns tools into ends, and how victory can reveal a new set of chains under a gilded throne.",
+        "details": [
+          "Call to the quest: The rumor of Pandora's Box travels like a fever, a whispered cure for divine impotence. Kratos hears of it as both opportunity and instrument: a way to break Ares' hold. He departs with the fixedness of a man who has refused to accept his status as victim, seeing the Box as a ledger-clearing device.",
+          "Harsh landscapes and tests of endurance: The path to Pandora's Temple is filled with natural and constructed trials: winds that cut the skin, deserts that erase footprints, stone mechanisms that punish arrogance. Kratos is tested physically to a place where muscle memory and resolve become indistinguishable. The pilgrimage teaches a lesson: possession of power requires an endurance to hold it.",
+          "Temple architecture as moral mirror: Pandora's Temple is designed to reflect the seeker. Chambers present illusions of family scenes, crossroads asking which life to preserve. The traps are ethical puzzles as much as mechanical ones: reach for power and something else may be forfeited. Each solved mechanism is an answer Kratos gives about what he values most.",
+          "Confrontation with self in the Box's vestibule: In the final approach the Box prompts hallucinations of alternative lives. Kratos sees Lysandra laughing in a different light, Deimos untouched, a home unruined. These mirages test whether his hunger is for revenge alone or to restore what was taken. He chooses the Box, a decision that is simultaneously reclamation and further surrender to the logic of ends that justify means.",
+          "Opening the Box and the freight of power: The Box releases a force that transforms Kratos' body and perception. Strength surges and with it a clarity that includes the ability to break a god. Yet the release is not pure: it smells of ancient bargains and leaves residue in the world — nightmares leaked into day, small wild things warped by the Box’s touch. The power is intoxicating but contaminated.",
+          "Duel with Ares: The final conflict is an orchestration of old memories and new might. Ares manipulates perception, sending Kratos through loops of memory designed to drown him in guilt. Kratos answers with the brute lucidity granted by Pandora: he moves with the violence of a man who knows exactly what each blow will achieve. The death of Ares is final and seismic.",
+          "Ascension to godhood and immediate disquiet: Given the mantle of God of War, Kratos discovers the throne is not remedy but new context. The crown brings responsibilities and expectations that are conceptually different but practically similar to servitude. He is given ritual and temple, but the internal ache remains, now outlined against a wider horizon of authority.",
+          "First signs of emptiness: His victories are celebrated, but in quiet moments the same ache returns. He realizes power solves the tactical problem of an enemy but does not fill the cavities left by grief. The era closes with Kratos seated on the throne, scanning a horizon where the scale of his influence begins to reveal new and unforeseen costs."
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "era": "The Mad God",
+      "title": "Tyranny Unleashed",
+      "Icon": "Flame",
+      "color": "from-red-700 to-black",
+      "bgPattern": "bg-gradient-to-br from-red-800 via-black to-gray-900",
+      "content": {
+        "summary": "As a god Kratos governs through the logic he knows best: decisive, violent action. His administration reads like a campaign plan: strategies meant to secure order through dominance. This era documents how trauma can calcify into policy, how absolute power rationalizes collateral catastrophes, and how Olympus' political calculus shifts from patronage to containment in response to his unshakable methods.",
+        "details": [
+          "Establishing a doctrine of force: Kratos introduces direct military policies to maintain control. Where others prefer diplomacy, he prefers disruption: cutting supply lines, public demonstrations of force, and pre-emptive strikes against potential rebellions. Those decisions are taught as necessary by advisors and implemented without sentiment.",
+          "Public ceremonies and the weaponization of spectacle: Ceremonies under Kratos are staged with the same brutality as his campaigns. Parades, sacrifices, and the spectacle of punishment are meant to remind the populace of consequences. Worship becomes a form of psychological governance. Citizens measure seasons in the calendar of his edicts.",
+          "Athena's uneasy role: Athena attempts to modulate Kratos, offering counsel that reads like policy notes mixing ethics and realpolitik. Kratos listens but often chooses direct methods, seeing slow processes as indulgences that threaten security. Their conversations become a study in competing visions of governance: wisdom versus immediate control.",
+          "The toll on cities and people: Military campaigns and harsh edicts fragment economies and social fabric. Grain stores are repurposed for military needs; towns near supply routes suffer raids meant to deter larger insurrections. Civilian life becomes precarious. Kratos occasionally observes the human cost and does not find immediate consolation — he feels only the reality that his methods create a brittle peace.",
+          "Signs of Olympian dissent: Gods comfortable with the old order begin to worry. Zeus re-evaluates risk and control, Hera whispers counsel in corridors, and small cabals form to discuss checks on Kratos. Politics becomes a theater of knives behind gilded facades. The gods' anxiety about succession and power balancing forms the seedbed for conspiracies.",
+          "Kratos' solitude with power: The weight of authority isolates him. He learns that he cannot trust flattery, only the facts of force. Nights are full of dreams in which bodies he has broken return with faces of accusation. These visions sharpen his sense that power always arrives with a precise arithmetic of loss.",
+          "Moral erosion into habit: The moral choices Kratos wrestled with earlier have become institutional practice. He no longer has to justify cruelty because systems and ceremonies have normalized it. This institutionalization is the era's defining tragedy: what once required conscious decision becomes automatic, hardening the world around him into a machine that replicates violence.",
+          "Prelude to downfall: The gods' plotting intensifies as Kratos' methods produce predictable instability. Zeus, fearing both Kratos' unpredictability and his ability to command worship, begins to see containment as the only feasible strategy. The seeds of betrayal are sowed in council chambers and whispered strategy sessions."
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "era": "The Betrayal",
+      "title": "Zeus's Lightning",
+      "Icon": "Zap",
+      "color": "from-blue-400 to-yellow-500",
+      "bgPattern": "bg-gradient-to-br from-blue-600 via-yellow-500 to-white",
+      "content": {
+        "summary": "Betrayed by the father-figure he once sought to honor, Kratos experiences a fall that is both technical and mythic. Zeus's calculated treachery converts trust into ruin and casts Kratos down into Tartarus. This era explores the mechanics of betrayal, the anatomy of fall, and Kratos' subsequent encounter with old, untouchable forces that will reshape his understanding of power.",
+        "details": [
+          "Zeus' diplomatic mask: Zeus approaches not as criminal but as statesman, presenting an artifact — the Blade of Olympus — as a collective solution to a mortal problem. The language used is noble and urgent; the Blade is framed as mutual benefit. This manipulation relies on Kratos' habit of accepting instruments for pragmatic ends.",
+          "The siphon trick unspooled: Once Kratos channels his collected divine energies through the Blade, the weapon acts as a siphon. The transfer is described as clinical and inevitable: godhood flows out of Kratos like breath. The betrayal is as much ritual engineering as military stratagem, showcasing Zeus' understanding of leverage and mechanism.",
+          "Tartarus as a place of accumulation: The fall to Tartarus is not simple banishment; it is deposition into a mythic refuse heap where gods discard unusable things. Souls of forgotten pacts and broken promises swirl; stone corridors are lined with relics of misbegotten ambition. Kratos arrives amidst a chorus of murmurs, a living testament to hubris.",
+          "Adjustment to subterranean law: Tartarus has its own rules — time dilated, pain made structural. Kratos learns to map these rules as tactics: where to hide, when to strike, how to survive with rationed hope. He studies the environment and learns from the remnants of previous sufferers. Survival becomes an apprenticeship in patience and cunning.",
+          "Zeus' strategic miscalculation: Despite the brilliance of the betrayal, Zeus underestimates the ember he extinguished. Stripping a god of title does not necessarily remove the core human fury that birthed it. Kratos' will hardens in response to being made less by someone seeking to regain more. The miscalculation is poetic: attempts to purify the world of danger can birth new, more dangerous resolve.",
+          "Emotional consequences and rage refined: In the depths, Kratos experiences an emotion that is not mere fury but a sharpened instrument. His solitude becomes a kiln where intent is purified into relentless purpose. The experience is crucible-like: what emerges is less about regaining power and more about reconstituting identity on different terms.",
+          "Meeting archaic entities: Tartarus houses creatures and minor deities older than Olympian politics. Kratos encounters beings whose scale and perspective reframe his revenge as a small human drama in a vaster geological history. Interacting with them broadens his tactical imagination: gods are political animals, but Titans and primordial forces obey different logics.",
+          "Resolve into a new strategy: The era closes with Kratos' decision matrix altered — he will no longer simply fight among gods on Olympus' terms. He will seek alliances with forces that operate on deeper temporal frequencies, starting the political realignment that will propel him into the Titans' orbit."
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "era": "Titan's Alliance",
+      "title": "Rise from Tartarus",
+      "Icon": "Mountain",
+      "color": "from-stone-600 to-amber-600",
+      "bgPattern": "bg-gradient-to-br from-stone-800 via-amber-700 to-orange-800",
+      "content": {
+        "summary": "Rescued by Gaia, Kratos is folded into a new polity whose motives are ancient and often inscrutable. The alliance with the Titans redefines his purpose: not as a god to be honored but as a force to be repurposed. This era explores resurrection rituals, the political calculus of the Titans, and Kratos' gradual conversion from instrument to reluctant strategist within a movement whose ends may mirror Olympus' ambitions.",
+        "details": [
+          "Gaia's pragmatic rescue: Gaia's intervention is not an act of mercy but of opportunity. She sees in Kratos an engineered violence that can be retasked toward remaking a cosmic order. Her voice is slow and geological; her terms are stern. Kratos accepts because his options are constrained and revenge demands allies.",
+          "Ritual of revival: The resurrection sequence is intimate and strange. Muscles knit under the pressure of old earth; tendons are realigned by Titanic force. Kratos wakes bandaged, with senses tuned to continental rhythms: an ability to feel seismic groans as if they were heartbeats. The resurrection is a re-education in scale.",
+          "Politics of the Titan court: Titans are long-lived and suspicious of novelty. They praise Kratos' efficiency but distrust the volatility that comes from a mortal who was once worshipped. Debates occur in measured tones among Titans about restoration versus domination, and Kratos learns to read the pauses between their words for policy.",
+          "Learning primordial strategy: Titans operate on timeframes measured in epochs rather than seasons. Their plans are patient and indifferent to individual suffering. Kratos appreciates their resources but bristles at their detachment. This friction forces him to refine his own approach: blend Titan patience with mortal urgency to produce feasible tactics.",
+          "Quest assigned: the Sisters of Fate: Gaia instructs Kratos to seize the Sisters of Fate as a tactical lever. Control of destiny itself would permit strategic rewriting of betrayals. The quest is pitched as both revenge and preventative medicine: if the Loom can be controlled, the chain of events that birthed his ruin can be altered.",
+          "Exercising agency within a larger cause: Kratos discovers that being allied to the Titans does not erase his own agency. He negotiates missions, argues for methods, and sometimes refuses orders that would create needless suffering. These small acts of pushback are crucial; they mark the difference between being a tool and being an actor.",
+          "The uneasy moral mirror: Working with ancient powers that seek to reclaim lost glory, Kratos confronts the realization that the cycle of seize-and-rule stretches beyond Olympus. The Titans' aims are grand but not innocent. This ethical ambiguity complicates Kratos' identity: he is driven by revenge yet conscious of becoming another engine of systemic change.",
+          "New definition of vengeance: By the era's close, Kratos recognizes his role has shifted: he is no longer solely avenging his losses but is part of a larger structural upheaval. He chooses actions with awareness of systemic repercussions, signaling the start of an evolution from simple retaliation to strategically targeted reversal."
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "era": "Master of Fate",
+      "title": "Controlling Destiny",
+      "Icon": "Star",
+      "color": "from-purple-500 to-pink-500",
+      "bgPattern": "bg-gradient-to-br from-purple-800 via-pink-600 to-indigo-900",
+      "content": {
+        "summary": "Kratos assaults the metaphysical apparatus that binds cause and consequence. The Sisters of Fate defend threads of history with paradoxical weapons; defeating them grants Kratos access to the Loom. This era focuses on the ontological stakes of altering timelines, the seductive clarity of retroactive fixes, and the ethical dilemma that arises when one man can prune or reroute the lives of many.",
+        "details": [
+          "Approach to the Fates' domain: The path contorts in ways that test orientation: stairways leading backwards, corridors folding onto memory. Guardians are conceptual constructs that attack through memory and language rather than mere muscle. Kratos must learn to fight on intellectual axes as much as physical ones.",
+          "Sisters' illusions: Each Fate presents tailored visions meant to seduce: a life where Lysandra lived, a life where Kratos never accepted Ares' bargain, an existence where whispered apologies sufficed. These alternate histories are wrought with realism, designed to make him hesitate. Their appeal is loneliness' opposite: an offered restitution that would kill the messy present in exchange for altered past.",
+          "Combat as narrative surgery: Battles with the Sisters resemble an act of cutting story threads. Kratos' strikes cleave causal chains; each cut requires choosing which consequences to sever. The fights are interleaved with images of branching lives, and the physical impact of a blow is amplified by an echo through alternate realities.",
+          "Securing the Loom: Taking control of the Loom is both triumph and dread. It offers a mechanism to rewrite pivotal events but also surfaces the complexity of unintended consequences. Kratos sees that altering one small thread causes ripples: new sorrows, displaced lives, a cascade of compensatory tragedies. The Loom emerges as a tool with the moral density of a weapon of mass alteration.",
+          "Philosophical temptation and restraint: Kratos wrestles with the philosophical idea of fixing the past: whether grief should be erased or learned from. He recognizes that the desire to correct is born of an intolerance for pain rather than ethical prudence. This self-awareness tempers his immediate urge to use the Loom selfishly.",
+          "Tactical applications and regrets: Kratos uses the Loom strategically in a few narrow cases to avert immediate catastrophe, but each instance brings collateral shifts he cannot wholly predict. He collects evidence of the results, tallying benefits against the emergent costs. This empirical approach teaches him caution.",
+          "Consequences to the world: The existence of a tool that can change causality unsettles societies in subtle ways: rumors spread, cults form, and some rulers attempt to hoard access. The Loom's presence reshapes political incentives and introduces a new axis of power in which history itself can be traded.",
+          "Moral maturity and the choice to limit use: By the era's end Kratos accepts a principle: power to alter fate must be exercised with humility or not at all. He resolves to guard the Loom rather than exploit it, understanding that the heavy hand of unilateral correction often produces an architecture of new injustices."
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "era": "War on Olympus",
+      "title": "The Titan's Assault",
+      "Icon": "Mountain",
+      "color": "from-gray-500 to-red-600",
+      "bgPattern": "bg-gradient-to-br from-gray-700 via-red-700 to-black",
+      "content": {
+        "summary": "With Titan forces arrayed, Kratos leads a campaign to dismantle Olympus. The war is geologic in scale and intimate in consequence: mountains move, seas rage, and human communities are reshaped. The assault demands logistical genius as much as brute force and forces Kratos to chose which structures can be sacrificed to secure a different future.",
+        "details": [
+          "Mobilization and strategic staging: Titans' movement requires orchestration: altering coastlines to move siege engines, redirecting rivers to undermine fortifications. Kratos coordinates strikes that are part military tactic and part geomantic operation. The logistical scope highlights his maturation into a commander who thinks in scales larger than the single battle.",
+          "Sieges as landscape events: The Titans assault Olympus with full geological theater. Mountains become battering rams; seas are weaponized in tidal onslaughts; the very architecture of Olympus buckles under a campaign not merely aimed at defenders but designed to break the city’s relationship to place and worship.",
+          "Godly counters and chaotic retaliations: The gods fight with forms shaped by centuries of rule: storms that reconfigure weather, illusions that fracture loyalty, servants raised from myth. These defenses produce collateral damage that ripples across the mortal world. Battles escalate into events that generate refugees, climate dislocations, and cultural upheaval.",
+          "Strain on the Titan-Kratos alliance: Long campaigns expose friction: Titans' long view clashes with Kratos' urgency to end an active source of pain. Disputes arise over target selection and acceptable civilian cost. Kratos negotiates, sometimes pushing the campaign in ways that minimize needless suffering despite the overall destructive project.",
+          "Human consequences and refugee flows: War produces dislocations: populations uprooted, markets collapsed, children's education interrupted. Kratos witnesses these tragedies and feels the contradiction: victory here arrives on the backs of the same people he once sought to protect. He seeks mitigation where possible while acknowledging some damage is unavoidable.",
+          "Strategic assassinations and targeted operations: Many of the campaign's successes are not purely brute force but precise operations: disabling a god's worship center, severing a power source, inciting schisms among pantheon allies. Kratos uses cunning as much as strength, learning that systemic collapse often requires surgical moves rather than indiscriminate fury.",
+          "Shifts in cosmic order: With gods felled and institutions broken, the metaphysical scaffolding of the world shifts: thresholds thin, seasons destabilize, and cultural practices lose their anchor. The universe feels like a house whose load-bearing beams have been rearranged. Kratos begins to understand that power reallocation must be followed by active reconstruction.",
+          "Kratos' growing ambivalence: Watching the world reconfigure, Kratos questions whether removing Olympus' tyranny necessitated a different, constructive plan for the aftermath. The realization that vengeance could produce unintended long-term harm marks a turning point in his political thought."
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "era": "The Godslayer",
+      "title": "Death of Olympus",
+      "Icon": "Skull",
+      "color": "from-black to-red-600",
+      "bgPattern": "bg-gradient-to-br from-black via-gray-800 to-red-900",
+      "content": {
+        "summary": "Kratos systematically dismantles the old pantheon. Each death reverberates into mortal affairs with complex feedback loops: ecological, social, and spiritual. This era chronicles the methodical application of power and the dawning comprehension that removing rulers does not automatically repair a broken world. Kratos emerges as both destroyer and, provisionally, architect of what comes next.",
+        "details": [
+          "Methodical campaign of divine removal: Kratos approaches each god with analysis based on knowledge gleaned from his time among deities. He leverages grudges, discovers vulnerabilities, and designs encounters that not only remove a god but neutralize the systemic function they performed. The campaign reads like a forensic operation.",
+          "Poseidon's death and oceanic aftermath: The fall of the sea god produces immediate hydraulic consequences. Coasts flood, trade routes collapse, and marine ecosystems are thrown into chaos. Kratos witnesses drowned villages and altered migratory patterns of sea creatures. The price of eliminating a god becomes a palpably tangible ledger line in human suffering.",
+          "Hades' fall and the weakening veil: The death of Hades thins the membrane between life and death. Spirits become unwilling travelers, memories manifest physically, and funeral rites lose their moorings. Societies adapt uneasily: necromancy and the animated dead require new ethical frameworks. Kratos discovers that a metaphysical function's removal demands human adaptation and institutional invention.",
+          "Helios and the disruption of light: With the god of the sun struck down, daily rhythms fray. Seasons slip, agriculture suffers, and people learn to map time without divine certainty. There is an immediate humanitarian impact: famine risk, migration inland, and an acute cultural rethinking of calendars and ritual observances.",
+          "Cataloging the moral weight: Kratos reflects on each god's death not as a triumph but as a set of consequences. He begins to tally effects in a ledger of regret and responsibility. The act of removing tyrants imposes on him a stewardship role he did not ask for but cannot deny.",
+          "Political vacuum and emergent institutions: With Olympus' structures gone, new institutions begin to form: councils of mortals, localized priesthoods, and regional compacts. These emergent bodies are fragile and uneven but represent the beginning of political self-determination. Kratos observes both hopeful experiments and predatory actors seeking to seize the void.",
+          "Personal cost and existential doubt: His victories leave Kratos more exhausted than triumphant. He endures nights of recollection and the recurring question whether annihilation of power is adequate without subsequent rules for rebuilding. This doubt begins to shape his later choices toward relinquishment rather than accumulation.",
+          "The world as workshop: By the era's end Kratos recognizes that he has the capacity to destroy but also the obligation to help assemble alternative structures. This transition from slayer to provisional architect sets the stage for his later act of hope and release."
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "era": "Father and Son",
+      "title": "The Final Battle",
+      "Icon": "Zap",
+      "color": "from-yellow-400 to-blue-600",
+      "bgPattern": "bg-gradient-to-br from-yellow-500 via-white to-blue-700",
+      "content": {
+        "summary": "This era reframes Kratos from cosmic avenger to a parent grappling with legacy. His relationship with Atreus functions as crucible: a place of unlearning and new disciplines. The final confrontation with Zeus is layered — physical, psychological, and symbolic — and culminates in decisions that prioritize future possibility over immediate dominance.",
+        "details": [
+          "Domestic training as transformation: Kratos' instruction of Atreus is less about proving strength and more about instilling restraint. Training sessions become exercises in patience: how to hold a spear without killing, how to aim words to better effect. These domestic scenes are a counterpoint to a life defined by conquest.",
+          "The father-son dynamic tested on the road: Their journey across realms reveals fissures: Atreus' curiosity, Kratos' fear of repeating past abuses, and the struggle to teach without imposing terror. They argue, reconcile, and teach each other. Atreus offers Kratos glimpses of tenderness that are not instrumental but corrective.",
+          "Confrontation with Zeus as familial tragedy: The final battle is staged as much like a broken family reconciliation as a duel of gods. Zeus' betrayal now reads as oedipal theatre — a father killing possibility in the name of control. Kratos fights a figure who is his mirror and antagonist, and every blow resonates with years of mislearned trust.",
+          "Pandora and Hope reframed: Pandora's role becomes metaphysical and ethical. Hope, long sequestered, functions as both balm and temptation. Kratos realizes keeping Hope captive repeats the cycle of domination; releasing it risks short-term chaos but promises a distributed future. This is the moral dilemma that reframes his last actions.",
+          "Turning point — refusal of absolute revenge: During the battle, Kratos halts a destructive escalation in favor of actions that preserve a possibility for the world. He chooses a path that does not simply replace one tyranny with another, signaling a major narrative shift in his character from reflexive destruction to deliberate construction.",
+          "Victory, cost, and governance: With Zeus defeated, the world lacks an automatic steward. Kratos recognizes that victory opens a long season of governance and repair. He cannot simply walk away; the epoch demands structures for healing and civic recovery. He begins to act with foresight about institutions rather than purges.",
+          "Atreus' role and the new apprenticeship: Atreus emerges as a partner in stewardship rather than a subordinate warrior. Kratos teaches him the hard lessons of humility — that power must be accountable and that restraint is a discipline to be cultivated and passed along.",
+          "Closure and opening: The final battle ends but also opens a new narrative: Kratos' identity no longer solely bound to vengeance. He becomes a man learning to shepherd a world in transition, laying down a pattern that will culminate in his final sacrificial choice."
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "era": "The Aftermath",
+      "title": "Hope Released",
+      "Icon": "Heart",
+      "color": "from-pink-400 to-orange-400",
+      "bgPattern": "bg-gradient-to-br from-pink-500 via-orange-400 to-yellow-500",
+      "content": {
+        "summary": "Kratos elects a radical relinquishment: he releases Hope back into the world rather than permit another centralized holder to monopolize it. This act is not simple heroism but strategic humility — a recognition that sustainable recovery requires distributed agency. The aftermath explores the slow, uneven work of rebuilding and how symbolic acts can catalyze institutional and cultural regeneration.",
+        "details": [
+          "Athena's ambition revealed: Athena's desire to centralize Hope is shown not as pure wisdom but as a governance strategy: she fears chaos and seeks tools to maintain cosmic order. Kratos sees this pattern as a replay of past mistakes: centralize power, suppress dissent, claim paternal benevolence.",
+          "The moment of relinquishment: Kratos' decision to drive the Blade through himself and release Hope is theatrical and functional. The gesture breaks any possibility of another figure hoarding the resource. It is both a repudiation of cycles of domination and an infrastructural act: disperse the means of resilience rather than concentrate them.",
+          "Immediate material effects: Released Hope functions slowly but materially: fields that had failed begin to yield again, communities reclaim initiative, and cultural practices shift from petitioning gods to mutual aid. Healing is uneven: some regions recover quickly, others lag. Hope does not solve structural shortages instantly, but it reorients incentives toward local agency.",
+          "Mythmaking and ambiguity: Kratos' disappearance becomes the seed of varied myths. Some portray him as a saintly martyr, others as a monstrous figure who fled responsibility. The plurality of stories causes the world to debate and to think, rather than to accept a single authoritative narrative. This discursive plurality helps prevent the reconstitution of one centralized truth.",
+          "Institutional emergence: The vacuum left by gods gives rise to councils, guilds, and cooperative institutions. Mortals experiment with models: regional federations, ritual councils, and new legal norms. The process is messy but generative. Kratos' relinquishment is thus a causal lever that produces civic experimentation.",
+          "Cultural memory and critical appraisal: Bards and scholars produce competing accounts of Kratos' life. The codex perspective resists simplistic verdicts, instead encouraging nuance: he is both destroyer and redeemer, a man whose final act forces a confrontation with the ethics of power. Historiography becomes a field shaped by contested memory rather than state-scripted myth.",
+          "Long-term social consequences: Over decades, societies adapt: certain old religious practices wane, new secular and communal rituals bloom, and a sense of distributed moral responsibility becomes a dominant ethic in many regions. Kratos' act reshapes not only institutions but the moral grammar of public life.",
+          "Personal legacy and anonymous humanity: The final note is human: Kratos' life remains complex. He is not absolved; he is recontextualized. The world inherits both scars and seeds. His absence, more than his presence, becomes an engine for human initiative — a bitter but catalytic inheritance."
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "era": "The Norse Lands",
+      "title": "A New Beginning",
+      "Icon": "Mountain",
+      "color": "from-blue-400 to-green-500",
+      "bgPattern": "bg-gradient-to-br from-blue-600 via-green-500 to-gray-700",
+      "content": {
+        "summary": "Kratos' relocation to the Norse realms reframes him as a survivor attempting repair: quieter rhythms, domestic labor, and the apprenticeship of fatherhood. The Norse chapter is less about grand politics and more about small, daily reforms — how a famous destroyer learns to build a small life and teach a child the ethics of restraint. Yet even here peril and prophecy intrude, connecting the micro-scale of family to the macro-scale of fate.",
+        "details": [
+          "Arrival and the practice of quiet: Kratos arrives in Midgard with scars and habits; he learns the practical arts of woodcraft, boat repair, and domestic maintenance. These tasks require a different set of virtues — patience, care, and the humility of repetition. The act of making a net, seeing it hold fish, becomes a new kind of victory.",
+          "Meeting Faye and building a household: Faye's presence steadies him. Their partnership is portrayed as mutual work rather than conquest: shared labor in fields, co-management of provisions, and private conversations that model emotional labor for Kratos. Faye's subtle lessons teach him that tenderness is durable if practiced slowly.",
+          "Daily parenting scenes: Atreus' upbringing becomes a classroom for Kratos' reform: how to answer questions without intimidation, how to correct without humiliation, how to allow mistake as a pathway to learning. These scenes are granular: a lesson about tracking becomes a lesson about patience; a story at dusk becomes a lesson about responsibility.",
+          "Faye's death and the journey's imperative: Her death is quiet but catalytic; the final wish to scatter her ashes asks Kratos to step again into the world. The journey is both external and inward: it is a narrative device that forces Kratos to confront secrets and to model restraint in the face of provocation.",
+          "Parenthood tested by prophecy: Atreus' identity and the prophecies surrounding him pull Kratos into political dilemmas he sought to avoid. Teaching a child in a world of prophecy demands balancing truth with protection. Kratos negotiates what to reveal and what to withhold, learning that secrecy can be protection but also a source of later pain.",
+          "Encounters with Norse beings and moral reframing: The realms present novel challenges — gods of a different temperament, monstrous creatures with distinct logics. Kratos' approach must adapt: he learns to listen to older, quieter rules of reciprocity rather than the conquest logic of his youth. This reframing changes his tactics and moral vocabulary.",
+          "Atreus as co-actor in shapeshifting fate: Atreus grows from student to participant, sometimes making choices Kratos cannot foresee. This dynamic forces Kratos to accept vulnerability: allowing a child autonomy is a form of hope. Their relationship becomes a small-scale laboratory of governance by example rather than decrees.",
+          "Seeds of future change: The Norse habits — craft, speech, restraint — become the cultural capital Kratos hopes to pass on. The era ends not with the dissolution of danger but with the establishment of practices of repair: Kratos learns domestic stewardship and seeds a generational experiment in ethical life."
+        ]
+      }
+    }
+  ]
+}
