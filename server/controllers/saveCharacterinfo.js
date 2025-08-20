@@ -16,12 +16,11 @@ const saveCharactersToDb = async (req, res) => {
       characterData: saveInfo,
     });
   } catch (error) {
-    return res
-      .status(500)
-      .json({
-        message: "Something went wrong, please try again!",
-        error: error.message,
-      });
+    console.log("Error: ", error.message);
+    return res.status(500).json({
+      message: "Something went wrong, please try again!",
+      error: error.message,
+    });
   }
 };
 

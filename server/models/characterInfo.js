@@ -22,6 +22,10 @@ const gameCharactersSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  imageURL: {
+    type: String,
+    required: true,
+  },
   color: {
     type: String,
     required: true,
@@ -40,9 +44,6 @@ const gameCharactersSchema = new mongoose.Schema({
   },
 });
 
-const GameCharacters = mongoose.model(
-  "GameCharacters",
-  gameCharactersSchema
-);
+const GameCharacters = mongoose.model("GameCharacters", gameCharactersSchema);
 
 module.exports = GameCharacters;
