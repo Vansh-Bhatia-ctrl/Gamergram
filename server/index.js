@@ -26,6 +26,8 @@ const saveAiTodb = require("./routes/savAiProfiles");
 const getProfiles = require("./routes/getAiProfiles");
 const userList = require("./routes/userList");
 const getAllList = require("./routes/getAllList");
+const saveCharacters = require("./routes/saveCharacterToDb");
+const getCharacters = require("./routes/getCharacters");
 
 const { startNewsCron } = require("./controllers/news/cronjobnews");
 const { runPlaystationCronJob } = require("./jobs/playstationcron");
@@ -98,6 +100,8 @@ const startServer = async () => {
     app.use("/aiprofiles", getProfiles);
     app.use("/userlist", userList);
     app.use("/getlist", getAllList);
+    app.use("/save-db", saveCharacters);
+    app.use("/get-characters", getCharacters);
 
     startNewsCron();
     runPlaystationCronJob();
