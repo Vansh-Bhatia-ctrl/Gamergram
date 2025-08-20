@@ -34,7 +34,6 @@ const GAMING_CHARACTERS = [
     borderGlow: "border-red-500/30",
     description:
       "The Ghost of Sparta - A tale of rage, revenge, and redemption",
-    available: true,
   },
   {
     id: 2,
@@ -46,7 +45,6 @@ const GAMING_CHARACTERS = [
     bgGlow: "bg-green-500/10",
     borderGlow: "border-green-500/30",
     description: "Humanity's greatest defender against the Covenant",
-    available: true,
   },
   {
     id: 3,
@@ -58,7 +56,6 @@ const GAMING_CHARACTERS = [
     bgGlow: "bg-amber-500/10",
     borderGlow: "border-amber-500/30",
     description: "Monster hunter with a code of honor",
-    available: true,
   },
   {
     id: 4,
@@ -70,7 +67,6 @@ const GAMING_CHARACTERS = [
     bgGlow: "bg-emerald-500/10",
     borderGlow: "border-emerald-500/30",
     description: "The legendary hero destined to save Hyrule",
-    available: true,
   },
   {
     id: 5,
@@ -82,7 +78,6 @@ const GAMING_CHARACTERS = [
     bgGlow: "bg-blue-500/10",
     borderGlow: "border-blue-500/30",
     description: "Tactical espionage operative extraordinaire",
-    available: true,
   },
   {
     id: 6,
@@ -94,7 +89,6 @@ const GAMING_CHARACTERS = [
     bgGlow: "bg-orange-500/10",
     borderGlow: "border-orange-500/30",
     description: "The galaxy's most feared bounty hunter",
-    available: true,
   },
   {
     id: 7,
@@ -106,7 +100,6 @@ const GAMING_CHARACTERS = [
     bgGlow: "bg-red-500/10",
     borderGlow: "border-red-500/30",
     description: "Half-demon with a flair for style",
-    available: true,
   },
   {
     id: 8,
@@ -118,7 +111,6 @@ const GAMING_CHARACTERS = [
     bgGlow: "bg-amber-500/10",
     borderGlow: "border-amber-500/30",
     description: "Adventurous archaeologist and explorer",
-    available: true,
   },
   {
     id: 9,
@@ -130,7 +122,6 @@ const GAMING_CHARACTERS = [
     bgGlow: "bg-amber-500/10",
     borderGlow: "border-amber-500/30",
     description: "A gunslinger's tale in the dying Wild West",
-    available: true,
   },
   {
     id: 10,
@@ -142,7 +133,6 @@ const GAMING_CHARACTERS = [
     bgGlow: "bg-red-500/10",
     borderGlow: "border-red-500/30",
     description: "Renaissance assassin fighting for freedom",
-    available: true,
   },
   {
     id: 11,
@@ -154,7 +144,6 @@ const GAMING_CHARACTERS = [
     bgGlow: "bg-orange-500/10",
     borderGlow: "border-orange-500/30",
     description: "Scientist turned resistance leader",
-    available: true,
   },
   {
     id: 12,
@@ -166,7 +155,6 @@ const GAMING_CHARACTERS = [
     bgGlow: "bg-cyan-500/10",
     borderGlow: "border-cyan-500/30",
     description: "Hunter in a world dominated by machines",
-    available: true,
   },
   {
     id: 13,
@@ -178,7 +166,6 @@ const GAMING_CHARACTERS = [
     bgGlow: "bg-blue-500/10",
     borderGlow: "border-blue-500/30",
     description: "Galaxy's last hope against ancient threats",
-    available: true,
   },
   {
     id: 14,
@@ -190,7 +177,6 @@ const GAMING_CHARACTERS = [
     bgGlow: "bg-green-500/10",
     borderGlow: "border-green-500/30",
     description: "Hell's worst nightmare",
-    available: true,
   },
   {
     id: 15,
@@ -202,7 +188,6 @@ const GAMING_CHARACTERS = [
     bgGlow: "bg-cyan-500/10",
     borderGlow: "border-cyan-500/30",
     description: "Cryomancer ninja with ice-cold precision",
-    available: true,
   },
   {
     id: 16,
@@ -214,7 +199,6 @@ const GAMING_CHARACTERS = [
     bgGlow: "bg-red-500/10",
     borderGlow: "border-red-500/30",
     description: "Eternal warrior seeking true strength",
-    available: true,
   },
   {
     id: 17,
@@ -226,7 +210,6 @@ const GAMING_CHARACTERS = [
     bgGlow: "bg-blue-500/10",
     borderGlow: "border-blue-500/30",
     description: "Zombie apocalypse survivor and government agent",
-    available: true,
   },
   {
     id: 18,
@@ -238,7 +221,6 @@ const GAMING_CHARACTERS = [
     bgGlow: "bg-blue-500/10",
     borderGlow: "border-blue-500/30",
     description: "Elder God protector of Earthrealm",
-    available: true,
   },
   {
     id: 19,
@@ -250,7 +232,6 @@ const GAMING_CHARACTERS = [
     bgGlow: "bg-blue-500/10",
     borderGlow: "border-blue-500/30",
     description: "Elite operative fighting bioterrorism",
-    available: true,
   },
   {
     id: 20,
@@ -262,7 +243,6 @@ const GAMING_CHARACTERS = [
     bgGlow: "bg-yellow-500/10",
     borderGlow: "border-yellow-500/30",
     description: "Mercenary with a mysterious past",
-    available: true,
   },
   {
     id: 21,
@@ -274,7 +254,6 @@ const GAMING_CHARACTERS = [
     bgGlow: "bg-gray-500/10",
     borderGlow: "border-gray-500/30",
     description: "Hardened soldier fighting the Locust Horde",
-    available: true,
   },
   {
     id: 22,
@@ -286,7 +265,6 @@ const GAMING_CHARACTERS = [
     bgGlow: "bg-amber-500/10",
     borderGlow: "border-amber-500/30",
     description: "Adventurous fortune hunter",
-    available: true,
   },
   {
     id: 23,
@@ -298,7 +276,6 @@ const GAMING_CHARACTERS = [
     bgGlow: "bg-green-500/10",
     borderGlow: "border-green-500/30",
     description: "Immune survivor in a post-apocalyptic world",
-    available: true,
   },
   {
     id: 24,
@@ -310,7 +287,6 @@ const GAMING_CHARACTERS = [
     bgGlow: "bg-purple-500/10",
     borderGlow: "border-purple-500/30",
     description: "Stylish witch with supernatural powers",
-    available: true,
   },
 ];
 

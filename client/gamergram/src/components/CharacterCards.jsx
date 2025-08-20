@@ -1,12 +1,20 @@
 import { motion } from "framer-motion";
-import GAMING_CHARACTERS from "../utils/gameCharacters";
+import * as LucideIcons from "lucide-react";
+import useGameCharactersStore from "../store/useGameCharacters";
+import { useEffect } from "react";
 
 const CharacterCards = () => {
+  const { gameCharacters, loading, fetchGameCharacters } =
+    useGameCharactersStore();
+  useEffect(() => {
+    fetchGameCharacters();
+  }, []);
+
   return (
     <>
       <div className="p-3 flex flex-wrap gap-4 md:grid md:grid-cols-2 lg:grid lg:grid-cols-3 max-w-7xl mx-auto">
-        {GAMING_CHARACTERS.map((character) => {
-          const Icon = character.icon;
+        {gameCharacters.map((character) => {
+          const IconComponent = LucideIcons[character.icon];
           return (
             <motion.div
               key={character.id}
@@ -24,7 +32,7 @@ const CharacterCards = () => {
                 }}
                 className={`inline-block p-4 bg-gradient-to-l ${character.color} rounded-full`}
               >
-                <Icon size={27} className="text-white font-bold" />
+                <IconComponent size={27} className="text-white font-bold" />
               </motion.div>
               <h1 className="text-white text-xl font-bold">{character.name}</h1>
               <div className="space-y-2 mt-4">
