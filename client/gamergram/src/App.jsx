@@ -77,11 +77,7 @@ const router = createBrowserRouter([
   },
   {
     path: "saga/:characterID",
-    element: (
-      <ProtectedRoute>
-        <StoryPage />
-      </ProtectedRoute>
-    ),
+    element: <StoryPage />,
   },
   {
     path: "kratos",

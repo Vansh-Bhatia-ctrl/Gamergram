@@ -13,6 +13,9 @@ const StoryPage = () => {
   const currentCharacterStory = STORIES_DATA.filter(
     (story) => story._id === characterID
   );
+  console.log(STORIES_DATA);
+  console.log(characterID);
+  console.log(currentCharacterStory);
 
   return (
     <>
@@ -26,16 +29,15 @@ const StoryPage = () => {
           {/*Character Name section*/}
           <div className="text-center space-y-4 p-2">
             <h1 className="text-5xl font-extrabold bg-gradient-to-r from-red-500 via-orange-800 to-yellow-500 bg-clip-text text-transparent md:text-6xl">
-              {currentCharacterStory[0].name}
+              {currentCharacterStory[0]?.name}
             </h1>
             <p className="text-white text-lg font-semibold">
-              {currentCharacterStory[0].meta.note}
+              {currentCharacterStory[0]?.meta.note}
             </p>
           </div>
           {/*Story cards*/}
           <div className="relative p-5 mt-6 flex flex-col gap-8 timeline-container">
-            {currentCharacterStory[0].chapters.map((story) => {
-              const IconComponent = LucideIcons[story.Icon];
+            {currentCharacterStory[0]?.chapters.map((story) => {
               const isActive = currentId === story.id && expanded;
               return (
                 <motion.div

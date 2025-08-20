@@ -15,26 +15,19 @@ const CharacterCards = () => {
     <>
       <div className="p-3 flex flex-wrap gap-4 md:grid md:grid-cols-2 lg:grid lg:grid-cols-3 max-w-7xl mx-auto">
         {gameCharacters.map((character) => {
-          const IconComponent = LucideIcons[character.icon];
           return (
             <Link
               to={`/saga/${character._id}`}
               key={character.id}
-              className={`text-center h-auto w-full p-4 ${character.bgGlow} rounded-xl border  ${character.borderGlow} cursor-pointer hover:scale-105 duration-300 transition-all ease-in-out`}
+              className={`text-center h-auto w-full p-4 bg-neutral-800  hover:bg-neutral-700 border-neutral-600 rounded-xl border  cursor-pointer hover:scale-105 duration-300 transition-all ease-in-out`}
             >
               <motion.div whileHover="hover" initial="initial">
-                <motion.div
-                  variants={{
-                    initial: { rotate: 0 },
-                    hover: {
-                      rotate: 360,
-                      transition: { duration: 0.5, ease: "easeInOut" },
-                    },
-                  }}
-                  className={`inline-block p-4 bg-gradient-to-l ${character.color} rounded-full`}
-                >
-                  <IconComponent size={27} className="text-white font-bold" />
-                </motion.div>
+                <div className="inline-block rounded-full">
+                  <img
+                    src={character.imageURL}
+                    className="text-white font-bold w-25 h-25 md:w-30 md:h-30 object-cover rounded-full"
+                  />
+                </div>
                 <h1 className="text-white text-xl font-bold">
                   {character.name}
                 </h1>
