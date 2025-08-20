@@ -2416,5 +2416,226 @@
         }
       }
     ]
+  },
+  {
+    "_id": "68a5f3225e175c3b4e68d966",
+    "name": "Gordon Freeman",
+    "title": "Gordon Freeman: The Silent Codex",
+    "meta": {
+      "note": "The complete chronicle of Gordon Freeman’s journey across the *Half-Life* series (*Half-Life*, *Half-Life 2*, *Episode One*, *Episode Two*), from a scientist thrust into chaos to a silent hero battling alien invaders and totalitarian regimes. Each era explores his resilience, ingenuity, and unspoken leadership in a world of science gone wrong, drawn from the games’ narrative, environmental storytelling, and his unspoken legacy.",
+      "format": "Array of era objects with id, era, title, Icon (string), color, bgPattern, content { summary, details[] }"
+    },
+    "chapters": [
+      {
+        "id": 1,
+        "era": "Origins and Black Mesa",
+        "title": "The Scientist’s Dawn",
+        "Icon": "Crowbar",
+        "color": "from-blue-600 to-orange-600",
+        "bgPattern": "bg-gradient-to-br from-blue-800 via-orange-700 to-black",
+        "content": {
+          "summary": "Gordon Freeman, a theoretical physicist, is thrust into chaos during the Black Mesa Incident in *Half-Life* (1998). From a routine experiment to a fight for survival against aliens and military forces, his journey begins with a crowbar and a hazard suit. This era explores his transformation from scientist to reluctant hero, his intellect under pressure, and the birth of his legend in a doomed facility.",
+          "details": [
+            "Early life and education: Born in 1970, Gordon Freeman grows up in Seattle, fascinated by physics. Earning a Ph.D. in theoretical physics from MIT, his thesis on teleportation catches Black Mesa’s eye. At 27, he joins the Anomalous Materials Lab, his mind sharp but untested, his heart set on discovery, his path leading to a fateful experiment, his codename ‘Freeman’ yet to be feared.",
+            "Arrival at Black Mesa: In 1998, Gordon rides a tram into Black Mesa, a sprawling New Mexico research facility. Donning his HEV suit, he calibrates equipment, his intellect navigating complex machinery. Colleagues—Barney Calhoun, Dr. Kleiner—joke about delays, his heart calm in routine, his path mundane until a resonance cascade changes everything, his codename still unknown.",
+            "The resonance cascade: Pushing a xen crystal into a spectrometer, Gordon triggers a dimensional rift, unleashing Xen aliens—headcrabs, vortigaunts—into Black Mesa. Teleporting briefly to Xen, his heart races at alien vistas, his crowbar smashing crates for survival. His path becomes a fight, his intellect solving crises, his codename whispered by survivors as chaos erupts.",
+            "Survival in the facility: Armed with a crowbar, Gordon fights headcrabs and zombies through Black Mesa’s labs. Finding a Glock, his aim steadies, his HEV suit absorbing damage. Navigating vents and conveyor belts, his mind deciphers security systems, his heart pounding with fear, his path a desperate escape, his codename a spark among scientists fleeing aliens.",
+            "Military betrayal: The HECU marines arrive, not to rescue but to silence Black Mesa. Gordon ambushes soldiers with grenades, his MP5 cutting through squads, his heart hardening against betrayal. Saving Dr. Eli Vance, his intellect aligns with survivors, his path a rebellion, his codename feared by marines, his crowbar a symbol of defiance in blood-soaked halls.",
+            "Xen’s alien horrors: Teleporting to Xen, Gordon battles gonarchs and gargantuas, his zero-point energy gun ripping through aliens. Jumping across floating platforms, his heart grapples with alien physics, his mind decoding portal tech. His codename spreads among vortigaunts, his path a war against the Nihilanth, his suit a lifeline in a hostile dimension.",
+            "The G-Man’s offer: After slaying the Nihilanth, ending the invasion, Gordon faces the G-Man, a cryptic figure. Offered a job or death, his silence accepts employment, his heart wary, his path uncertain. His codename now a legend in Black Mesa’s ruins, his intellect a tool for unseen forces, his journey paused in stasis by the G-Man’s will.",
+            "The scientist’s burden: As Black Mesa burns, Gordon’s crowbar rests, his heart heavy with loss, his mind haunted by Xen. The era ends with him in stasis, his codename a whisper among survivors, his path as a hero begun in a facility of shattered science, his legacy tied to a crowbar and a silent resolve."
+          ]
+        }
+      },
+      {
+        "id": 2,
+        "era": "Half-Life 2: City 17",
+        "title": "The Freeman’s Return",
+        "Icon": "Lambda",
+        "color": "from-blue-600 to-grey-600",
+        "bgPattern": "bg-gradient-to-br from-blue-800 via-grey-700 to-black",
+        "content": {
+          "summary": "In *Half-Life 2* (circa 2020s), Gordon Freeman awakens in City 17, a dystopian city under Combine rule. Freed from stasis by the G-Man, he joins a resistance against alien overlords, wielding his crowbar and zero-point energy gun. This era explores his role as a silent leader, his fight for humanity, and his defiance in a world crushed by oppression.",
+          "details": [
+            "Awakening in City 17: Released from stasis, Gordon arrives in City 17, a bleak Eastern European city under Combine control. Met by Barney, now a resistance spy, he dodges Civil Protection, his crowbar smashing scanners. His heart races in the oppressive streets, his mind decoding the city’s layout, his codename a rumor among rebels, his path set to fight the Combine.",
+            "Meeting the resistance: At Dr. Kleiner’s lab, Gordon reunites with Eli Vance and meets Alyx, Eli’s daughter. Given the zero-point energy gun, his intellect masters its physics, his heart warmed by their trust. His journal—unwritten but implied—notes their hope, his codename sparking rebellion, his path a mission to arm the resistance, his suit ready for battle.",
+            "Ravenholm’s horrors: Sent to Ravenholm, Gordon faces headcrab zombies in a ruined town. With Father Grigori’s aid, his shotgun blasts through hordes, his heart chilled by the town’s decay, his mind navigating traps. His codename feared by zombies, his path a survival gauntlet, his crowbar a lifeline in a nightmare of alien infestation.",
+            "Highway 17’s gauntlet: Driving a buggy along Highway 17, Gordon battles Combine gunships, his rocket launcher felling them. Rescuing rebels at outposts, his heart steadies their fear, his mind plotting routes through antlion nests. His codename a beacon to survivors, his path a race to Black Mesa East, his zero-point gun a tool of defiance.",
+            "Black Mesa East ambush: At Eli’s lab, Gordon trains with Alyx, but Combine forces attack, capturing Eli. Escaping through canals, his airboat dodges helicopters, his heart set on rescue, his mind solving floodgate puzzles. His codename spreads among rebels, his path a fight to save Eli, his crowbar smashing through Combine barricades.",
+            "Nova Prospekt assault: Infiltrating Nova Prospekt, a Combine prison, Gordon frees Eli with Alyx, his pulse rifle cutting through synths. Sabotaging teleporters, his intellect outpaces Combine tech, his heart bonded with Alyx’s courage. His codename a terror to guards, his path a rebellion’s spark, his leadership silent but unyielding in the prison’s depths.",
+            "City 17 uprising: Returning to City 17, Gordon leads a rebel uprising, his zero-point gun hurling debris at striders. Storming barricades, his heart fuels their fight, his mind coordinating strikes. His codename a war cry, his path a war against the Citadel, his crowbar and suit symbols of hope in a city under siege.",
+            "The Citadel’s fall: Entering the Citadel, Gordon battles Combine advisors, his zero-point gun disrupting their tech. Facing Breen, the Combine leader, his silence defies threats, his heart set on humanity’s freedom. The era ends with the Citadel exploding, his codename a legend, his path paused by the G-Man, his legacy a spark for rebellion."
+          ]
+        }
+      },
+      {
+        "id": 3,
+        "era": "Half-Life 2: Episode One",
+        "title": "The Escape from City 17",
+        "Icon": "Explosion",
+        "color": "from-blue-600 to-red-600",
+        "bgPattern": "bg-gradient-to-br from-blue-800 via-red-700 to-black",
+        "content": {
+          "summary": "In *Half-Life 2: Episode One*, Gordon and Alyx escape a collapsing City 17 as the Citadel’s destruction threatens a cataclysm. Fighting Combine remnants and zombies, they stabilize the reactor and flee by train. This era explores Gordon’s partnership with Alyx, his ingenuity under pressure, and his silent resolve in a city on the brink of ruin.",
+          "details": [
+            "Citadel’s collapse: Saved by vortigaunts from the G-Man’s stasis, Gordon awakens in the Citadel’s ruins. With Alyx, he navigates its wreckage, his zero-point gun clearing debris, his heart steadied by her wit. His mind decodes alien tech, his codename a whisper among vortigaunts, his path a race to stop the reactor’s meltdown, his suit battered but intact.",
+            "Stabilizing the reactor: Gordon and Alyx infiltrate the Citadel’s core, his intellect bypassing Combine locks. Using his zero-point gun to manipulate energy fields, his heart races as the reactor hums, his mind solving its mechanics. His codename inspires Alyx’s trust, his path a fight against time, his leadership silent as they avert a catastrophe.",
+            "Underground nightmare: Escaping through City 17’s sewers, Gordon battles headcrab zombies, his crowbar smashing through. Alyx’s rifle aids him, their bond deepening, his heart warmed by her courage, his mind navigating dark tunnels. His codename a light in the dark, his path a survival gauntlet, his suit shielding them from toxins.",
+            "Combine remnants: Facing Combine striders in ruined streets, Gordon’s rocket launcher fells them, his heart set on protecting Alyx. Coordinating with Barney, his mind plans their escape, his codename a rallying cry for rebels. His path a war through rubble, his leadership guiding survivors, his zero-point gun a tool of defiance in chaos.",
+            "Hospital ambush: In a zombie-infested hospital, Gordon clears rooms with his shotgun, his heart chilled by headcrab screams. Protecting Alyx from antlions, his mind maps the building’s traps, his codename feared by aliens. His path a desperate push to the train station, his leadership a silent vow to keep her safe, his suit scarred by claws.",
+            "Train escape: Reaching a train station, Gordon and Alyx board an evacuation train, his crowbar prying open gates. Combine advisors pursue, his pulse rifle felling drones, his heart set on freedom, his mind plotting their route. His codename a rebel’s hope, his path a flight from ruin, his leadership ensuring their escape as the city burns.",
+            "Alyx’s bond: Alyx’s trust in Gordon grows, her humor easing his silent burden, his heart warmed by their partnership, his mind sharp despite exhaustion. His codename ties them together, his path a shared fight, his leadership a quiet strength, his suit a symbol of their survival in a collapsing world.",
+            "The city’s end: As the train speeds away, City 17 explodes, Gordon’s heart heavy with loss, his codename a legend among survivors. The era ends with the train derailing, his crowbar ready, his path uncertain, his leadership a beacon in the resistance’s flight from a doomed city."
+          ]
+        }
+      },
+      {
+        "id": 4,
+        "era": "Half-Life 2: Episode Two",
+        "title": "The White Forest Stand",
+        "Icon": "Rocket",
+        "color": "from-blue-600 to-green-600",
+        "bgPattern": "bg-gradient-to-br from-blue-800 via-green-700 to-black",
+        "content": {
+          "summary": "In *Half-Life 2: Episode Two*, Gordon and Alyx reach White Forest, a resistance base, to deliver critical data and stop a Combine superportal. Facing antlions, hunters, and advisors, Gordon’s ingenuity and crowbar secure victory. This era explores his role as humanity’s champion, his bond with allies, and his defiance against overwhelming odds in a rural wasteland.",
+          "details": [
+            "Crash in the wilderness: After the train crash, Gordon and Alyx trek through rural mines, his crowbar smashing antlions. Vortigaunts heal Alyx, wounded by a hunter, his heart aching for her, his mind decoding their rituals. His codename a vortigaunt chant, his path a fight to reach White Forest, his suit a shield in the wild.",
+            "Antlion hives: Navigating antlion caves, Gordon battles grubs and warriors, his shotgun clearing nests. With a vortigaunt ally, his mind maps tunnels, his heart steadied by their wisdom, his zero-point gun hurling boulders. His codename feared by antlions, his path a survival gauntlet, his leadership guiding Alyx through the dark.",
+            "White Forest reunion: Reaching White Forest, Gordon reunites with Eli and Kleiner, their rocket plan to stop the superportal sparking his intellect. Testing the Magnusson Device, his aim destroys striders, his heart warmed by their trust, his codename a rebel’s cry. His path a mission to save Earth, his leadership silent but resolute.",
+            "The G-Man’s warning: The G-Man contacts Gordon, urging him to protect Alyx, his cryptic words chilling his heart, his mind wary of manipulation. His codename tied to unseen forces, his path a balance of duty and doubt, his leadership focused on the resistance, his suit ready for the coming battle.",
+            "Hunter ambush: Combine hunters attack a resistance outpost, Gordon’s crossbow piercing their armor, his heart set on saving rebels. With Alyx, his mind coordinates defenses, his zero-point gun hurling cars at foes. His codename a terror to synths, his path a war in the woods, his leadership rallying survivors against alien machines.",
+            "Strider assault: As Combine forces storm White Forest, Gordon uses Magnusson Devices to destroy striders, his rocket launcher aiding rebels. His heart races in the battle’s chaos, his mind plotting their defense, his codename a war cry. His path a stand for humanity, his leadership ensuring the rocket’s launch, his crowbar a symbol of defiance.",
+            "Eli’s sacrifice: After launching the rocket, closing the superportal, Eli is killed by an advisor, his death shattering Gordon’s heart. Alyx’s grief binds them, his mind vowing revenge, his codename a vow to honor Eli. His path a fight against despair, his leadership a quiet strength, his suit scarred but unyielding in the face of loss.",
+            "The resistance’s hope: The era ends with Gordon and Alyx preparing to find the Borealis, his heart heavy but resolute, his codename a legend in White Forest. His path uncertain, his leadership a beacon for the resistance, his crowbar ready for the next fight in a world on the brink."
+          ]
+        }
+      },
+      {
+        "id": 5,
+        "era": "The Resistance Network",
+        "title": "The Silent Leader",
+        "Icon": "Rebel",
+        "color": "from-blue-600 to-red-600",
+        "bgPattern": "bg-gradient-to-br from-blue-800 via-red-700 to-black",
+        "content": {
+          "summary": "Across the *Half-Life* series, Gordon builds and inspires a resistance network against the Combine, from Black Mesa’s survivors to City 17’s rebels. His silent actions unite scientists, fighters, and vortigaunts, forging a rebellion. This era explores his unspoken leadership, his bonds with allies, and his role as a symbol of hope in a dystopian world.",
+          "details": [
+            "Black Mesa survivors: In *Half-Life*, Gordon aids scientists like Kleiner, hiding from HECU marines. His crowbar clears paths, his heart warmed by their trust, his mind solving lab puzzles. His codename spreads among them, his path a spark for rebellion, his leadership silent as he escorts them through Black Mesa’s chaos.",
+            "Barney’s alliance: Reuniting with Barney in City 17, Gordon supports his undercover work, his zero-point gun aiding rebel escapes. His heart trusts Barney’s courage, his mind coordinating their strikes, his codename a rebel’s hope. His path a fight alongside old friends, his leadership strengthening the resistance’s spies.",
+            "Alyx’s partnership: Alyx becomes Gordon’s closest ally, her skills complementing his. In Ravenholm, her rifle aids his shotgun, their bond deepening, his heart steadied by her wit, his mind syncing with her plans. His codename ties them together, his path a shared rebellion, his leadership a quiet strength in their fight.",
+            "Vortigaunt allies: Vortigaunts, freed from Xen’s control, join Gordon, their energy blasts aiding his crowbar. In White Forest, their rituals save Alyx, his heart awed by their wisdom, his mind learning their ways. His codename chanted in their tongue, his path a bridge to alien allies, his leadership uniting species against the Combine.",
+            "Kleiner’s science: Gordon protects Dr. Kleiner’s lab, his pulse rifle fending off scanners, his intellect aiding teleportation experiments. His heart respects Kleiner’s hope, his mind grasping his theories, his codename a scientist’s trust. His path a defense of innovation, his leadership ensuring the resistance’s tech survives.",
+            "Rebel outposts: In Highway 17, Gordon arms rebel outposts, his rocket launcher felling gunships, his heart set on their survival. His mind maps their defenses, his codename a rallying cry, his path a network of safehouses, his leadership turning scattered fighters into a unified force against the Combine.",
+            "City 17’s uprising: Leading rebels in City 17’s streets, Gordon’s zero-point gun clears barricades, his heart fueling their courage, his mind plotting their advance. His codename a war cry, his path a rebellion’s heart, his leadership a silent vow to free humanity, his suit a symbol of their hope.",
+            "The silent symbol: Gordon’s silence inspires all, his actions louder than words, his heart a beacon, his codename a legend in rebel tales. The era ends with him arming White Forest, his path a resistance’s core, his leadership eternal in a world fighting for freedom."
+          ]
+        }
+      },
+      {
+        "id": 6,
+        "era": "The Xen Connection",
+        "title": "The Alien Frontier",
+        "Icon": "Portal",
+        "color": "from-blue-600 to-purple-600",
+        "bgPattern": "bg-gradient-to-br from-blue-800 via-purple-700 to-black",
+        "content": {
+          "summary": "Across the *Half-Life* series, Gordon navigates the alien world of Xen and its creatures, from Black Mesa’s invasion to City 17’s resistance. Battling headcrabs and aiding vortigaunts, he uncovers alien secrets. This era explores his encounters with Xen, his adaptation to its physics, and his role as a bridge between worlds in a war against the Combine.",
+          "details": [
+            "First Xen encounter: In *Half-Life*, Gordon teleports to Xen during the cascade, battling headcrabs on floating islands. His zero-point gun manipulates alien gravity, his heart chilled by its surreal vistas, his mind decoding its physics. His codename unknown to Xen’s creatures, his path a survival test, his suit a shield in an alien realm.",
+            "Nihilanth’s defeat: Facing the Nihilanth, Xen’s controller, Gordon’s rocket launcher and gluon gun shatter its defenses. Jumping through portals, his intellect outpaces its telepathy, his heart defiant against its voice. His codename spreads among vortigaunts, his path a victory over Xen, his leadership freeing them from slavery.",
+            "Vortigaunt liberation: In *Half-Life 2*, freed vortigaunts join Gordon, their energy blasts aiding his crowbar in Ravenholm. His heart respects their wisdom, his mind learning their language, his codename chanted in their rituals. His path a bond with aliens, his leadership uniting them against the Combine, his suit a symbol of alliance.",
+            "Antlion alliance: In *Episode Two*, Gordon uses antlion pheromones to control their swarms, his mind mastering their instincts, his heart steady as they charge hunters. His codename feared by Combine synths, his path a tactical use of Xen’s creatures, his leadership turning alien foes into allies in White Forest’s defense.",
+            "Headcrab horrors: Gordon battles headcrab variants—fast, poison, armored—his shotgun blasting through Ravenholm’s hordes. His heart chilled by their screams, his mind mapping their weaknesses, his codename a terror to zombies. His path a war on Xen’s spawn, his leadership protecting rebels from infestation, his crowbar bloodied but unyielding.",
+            "Combine’s Xen tech: The Combine’s use of Xen portals, seen in Nova Prospekt, fuels Gordon’s fight, his zero-point gun disrupting their teleporters. His intellect decodes their tech, his heart set against their tyranny, his codename a threat to their science. His path a sabotage of alien tools, his leadership crippling their advantage.",
+            "Xen’s lingering mystery: In White Forest, vortigaunts share Xen’s history, their tales shaping Gordon’s understanding, his heart awed by their sacrifice, his mind grasping their dimensions. His codename a bridge to Xen, his path a quest for its secrets, his leadership uniting humans and aliens against a shared foe.",
+            "The alien bridge: Gordon’s Xen encounters shape the resistance, his heart a link to alien allies, his codename a legend across worlds. The era ends with him facing a Xen relic, his path tied to its mysteries, his leadership a vow to protect Earth from its dangers, his suit a beacon in the unknown."
+          ]
+        }
+      },
+      {
+        "id": 7,
+        "era": "The G-Man’s Game",
+        "title": "The Puppet’s Strings",
+        "Icon": "Briefcase",
+        "color": "from-blue-600 to-grey-600",
+        "bgPattern": "bg-gradient-to-br from-blue-800 via-grey-700 to-black",
+        "content": {
+          "summary": "Across the *Half-Life* series, Gordon is manipulated by the G-Man, a cryptic figure orchestrating his actions from Black Mesa to White Forest. From employment to cryptic warnings, the G-Man shapes his path. This era explores Gordon’s unwitting role in a larger plan, his defiance of control, and his silent rebellion against an enigmatic puppetmaster.",
+          "details": [
+            "Black Mesa’s contract: After defeating the Nihilanth, the G-Man offers Gordon a job, his cryptic words chilling his heart, his silence accepting the role. His mind wary of manipulation, his codename tied to the G-Man’s schemes, his path a forced servitude, his leadership unaware of the strings pulling him through Black Mesa’s ruins.",
+            "City 17’s awakening: In *Half-Life 2*, the G-Man releases Gordon from stasis, placing him in City 17. His heart distrusts the figure’s motives, his mind questioning his role, his codename a tool in an unseen plan. His path a rebellion sparked by the G-Man, his leadership silent but defiant, his suit a pawn in a cosmic game.",
+            "Vortigaunt intervention: In *Episode One*, vortigaunts free Gordon from the G-Man’s stasis, their ritual defying his control. His heart warmed by their rebellion, his mind grasping their power, his codename a symbol of freedom. His path a break from the G-Man’s grip, his leadership aligning with alien allies, his crowbar a sign of defiance.",
+            "White Forest warning: In *Episode Two*, the G-Man contacts Gordon, urging him to protect Alyx for his employers. His cryptic message—‘unforeseen consequences’—chills his heart, his mind wary of manipulation. His codename tied to the G-Man’s agenda, his path a fight against control, his leadership focused on the resistance’s goals.",
+            "Alyx’s delivery: The G-Man uses Alyx as a messenger, her words echoing his, unsettling Gordon’s heart. His mind rejects being a pawn, his codename a reluctant tool, his path a struggle to protect her. His leadership prioritizes her safety, his suit a shield against the G-Man’s unseen influence in White Forest.",
+            "The Borealis mystery: The G-Man’s hints about the Borealis, a ship with alien tech, set Gordon’s next mission. His heart distrusts the cryptic plan, his mind decoding its importance, his codename tied to its secrets. His path a quest under manipulation, his leadership a silent rebellion, his crowbar ready for an unknown threat.",
+            "Defying the puppeteer: Gordon’s actions—saving Eli, arming rebels—defy the G-Man’s control, his heart set on humanity’s freedom, his mind outpacing his schemes. His codename a symbol of resistance, his path a fight against cosmic strings, his leadership a quiet stand against an enigmatic force.",
+            "The puppet’s resolve: Gordon’s heart rejects the G-Man’s control, his codename a legend despite manipulation. The era ends with him facing the Borealis’ call, his path uncertain, his leadership a silent vow to break free, his suit a beacon in a game he never chose."
+          ]
+        }
+      },
+      {
+        "id": 8,
+        "era": "The Scientific Mind",
+        "title": "The Physics of Rebellion",
+        "Icon": "Equation",
+        "color": "from-blue-600 to-silver-600",
+        "bgPattern": "bg-gradient-to-br from-blue-800 via-silver-700 to-black",
+        "content": {
+          "summary": "Across the *Half-Life* series, Gordon’s scientific background shapes his fight, from decoding Black Mesa’s tech to mastering Combine devices. His intellect solves puzzles, sabotages alien tech, and aids the resistance. This era explores his role as a physicist-warrior, his ingenuity in crisis, and his legacy as a mind that turned science into rebellion.",
+          "details": [
+            "Black Mesa’s tech: In *Half-Life*, Gordon calibrates Black Mesa’s spectrometers, his mind mastering quantum devices. After the cascade, he activates generators, his intellect bypassing broken systems, his heart steady despite chaos. His codename tied to science, his path a fight through labs, his leadership using physics to survive alien onslaughts.",
+            "HEV suit mastery: Gordon’s HEV suit, a Black Mesa design, enhances his survival, its HUD guiding his aim. His mind optimizes its power, his heart trusts its armor, his codename linked to its tech. His path a blend of science and combat, his leadership leveraging the suit to protect rebels in City 17.",
+            "Zero-point energy gun: In *Half-Life 2*, Gordon wields the zero-point energy gun, his intellect grasping its physics to hurl objects at Combine. Manipulating gravity fields, his heart races in battle, his mind solving its mechanics. His codename a scientist’s threat, his path a war with experimental tech, his leadership turning science into a weapon.",
+            "Teleportation sabotage: In Nova Prospekt, Gordon disrupts Combine teleporters, his mind decoding their Xen-based tech. Rewiring circuits, his heart set on freeing Eli, his codename feared by scientists. His path a sabotage of alien science, his leadership crippling Combine plans, his intellect a key to resistance victories.",
+            "Magnusson’s device: In *Episode Two*, Gordon tests the Magnusson Device, his mind mastering its electromagnetic pulse to destroy striders. Deploying it in battle, his heart fuels rebel hope, his codename a scientist’s cry. His path a defense of White Forest, his leadership turning tech into triumph, his suit a tool of innovation.",
+            "Portal mechanics: Navigating Xen and Combine portals, Gordon’s intellect decodes their dimensional physics, his heart steady in alien realms. His mind maps teleportation routes, his codename tied to portal tech, his path a journey through dimensions, his leadership guiding rebels through unstable gates.",
+            "Kleiner’s lab: Protecting Dr. Kleiner’s experiments, Gordon aids teleportation research, his mind grasping quantum entanglement, his heart trusting his mentor. His codename a scientist’s hope, his path a defense of innovation, his leadership ensuring the resistance’s tech survives Combine assaults.",
+            "The physicist’s legacy: Gordon’s intellect shapes the resistance, his heart a beacon of discovery, his codename a legend in labs. The era ends with him studying a Xen relic, his path a blend of science and war, his leadership eternal in turning physics into humanity’s salvation."
+          ]
+        }
+      },
+      {
+        "id": 9,
+        "era": "The World of Ruin",
+        "title": "The Wasteland Warrior",
+        "Icon": "Wasteland",
+        "color": "from-blue-600 to-brown-600",
+        "bgPattern": "bg-gradient-to-br from-blue-800 via-brown-700 to-black",
+        "content": {
+          "summary": "Across the *Half-Life* series, Gordon navigates ruined landscapes, from Black Mesa’s labs to City 17’s rubble and rural wastelands. Fighting aliens and Combine in desolate environments, he finds hope in survivors. This era explores his survival in a broken world, his bond with its people, and his role as a warrior in a land scarred by invasion.",
+          "details": [
+            "Black Mesa’s collapse: In *Half-Life*, Gordon traverses Black Mesa’s ruined labs, his crowbar smashing through debris, his heart chilled by blood-soaked halls. Navigating reactors, his mind solves their puzzles, his codename a survivor’s whisper. His path a fight through collapse, his leadership guiding scientists to safety, his suit a shield in chaos.",
+            "City 17’s decay: In *Half-Life 2*, Gordon explores City 17’s slums, his zero-point gun clearing Combine checkpoints, his heart aching for its oppressed. Mapping its alleys, his mind plans rebel routes, his codename a hope in tenements. His path a war in urban ruin, his leadership rallying citizens against tyranny.",
+            "Ravenholm’s nightmare: Ravenholm’s zombie-infested streets test Gordon, his shotgun blasting through headcrabs, his heart chilled by its desolation. With Grigori’s aid, his mind navigates traps, his codename feared by zombies. His path a survival horror, his leadership a light in darkness, his crowbar a tool in a town of death.",
+            "Highway 17’s desolation: Driving through Highway 17’s coast, Gordon battles antlions in abandoned towns, his rocket launcher felling gunships. His heart steadies rebel outposts, his mind mapping their ruins, his codename a beacon. His path a journey through decay, his leadership arming survivors, his suit scarred by sand and claws.",
+            "City 17’s rubble: In *Episode One*, Gordon escapes City 17’s collapsing streets, his zero-point gun hurling rubble at striders. His heart bonded with Alyx, his mind plotting their escape, his codename a rebel’s cry. His path a flight through destruction, his leadership guiding survivors, his crowbar a tool in a city’s end.",
+            "White Forest’s wilds: In *Episode Two*, Gordon fights in rural wastelands, his crossbow piercing hunters in forests. His heart set on protecting White Forest, his mind mapping its terrain, his codename a warrior’s vow. His path a stand in the wild, his leadership defending the base, his suit a shield in nature’s ruins.",
+            "Survivors’ hope: Gordon aids survivors—rebels, refugees—his pulse rifle protecting them from Combine raids. His heart warmed by their gratitude, his mind planning their safety, his codename a symbol of survival. His path a fight for the lost, his leadership a beacon in ruin, his crowbar a promise to the desperate.",
+            "The wasteland’s champion: Gordon’s fight shapes the ruined world, his heart a light in despair, his codename a legend in rubble. The era ends with him in White Forest, his path a stand against collapse, his leadership eternal in a world fighting to rebuild."
+          ]
+        }
+      },
+      {
+        "id": 10,
+        "era": "The Silent Hero",
+        "title": "The Legend of Freeman",
+        "Icon": "Suit",
+        "color": "from-blue-600 to-orange-600",
+        "bgPattern": "bg-gradient-to-br from-blue-800 via-orange-700 to-black",
+        "content": {
+          "summary": "Across the *Half-Life* series, Gordon Freeman’s silence defines his heroism, inspiring rebels and terrifying enemies without a word. From Black Mesa to White Forest, his actions—wielding crowbar and zero-point gun—forge a legend. This era explores his unspoken impact, his role as a symbol, and his legacy as a silent savior in a world of chaos.",
+          "details": [
+            "Black Mesa’s spark: In *Half-Life*, Gordon’s silence rallies scientists, his crowbar saving them from marines, his heart a quiet resolve, his mind sharp in crisis. His codename spreads as ‘the Freeman,’ his path a spark of hope, his leadership a silent vow to fight through Black Mesa’s hell.",
+            "City 17’s symbol: In *Half-Life 2*, Gordon’s silence inspires rebels, his zero-point gun toppling Combine towers, his heart fueling their courage. His codename a war cry in slums, his path a rebellion’s heart, his leadership a quiet force uniting citizens against alien rule, his suit a beacon of defiance.",
+            "Alyx’s trust: Alyx trusts Gordon’s silence, her words filling his void, their bond deepening in Ravenholm’s horrors. His heart warmed by her faith, his mind syncing with her plans, his codename tying them together. His path a shared fight, his leadership a silent strength, his crowbar a promise to protect her.",
+            "Vortigaunt reverence: Vortigaunts call Gordon ‘the Freeman,’ their chants honoring his Xen victory. His silence unites them, his heart respecting their wisdom, his mind learning their ways. His codename a legend in their tongue, his path a bridge to aliens, his leadership forging an interspecies alliance.",
+            "Rebel war cry: In City 17’s uprising, Gordon’s silence rallies rebels, his pulse rifle leading their charge, his heart fueling their hope. His codename shouted in streets, his path a war against the Citadel, his leadership a quiet vow to free humanity, his suit a symbol of their fight.",
+            "Combine’s fear: The Combine fear Gordon’s silence, his zero-point gun a threat to their synths, his heart defiant against their tyranny. His codename a terror in their ranks, his path a war on their empire, his leadership crippling their control, his crowbar a nightmare in their reports.",
+            "White Forest’s hero: In White Forest, Gordon’s silence leads the rocket launch, his Magnusson Device destroying striders, his heart steady in battle. His codename a legend among rebels, his path a stand for Earth, his leadership a silent vow to save humanity, his suit a beacon of victory.",
+            "The silent legend: Gordon’s silence shapes a world, his heart a symbol of hope, his codename eternal in rebel tales. The era ends with him facing the Borealis, his path a legacy of defiance, his leadership immortal in a world fighting for freedom."
+          ]
+        }
+      }
+    ]
   }
 ]
