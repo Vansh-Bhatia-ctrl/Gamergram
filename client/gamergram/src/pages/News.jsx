@@ -1,4 +1,4 @@
-import { Menu, Bell } from "lucide-react";
+import { Menu } from "lucide-react";
 import SubHeader from "../components/SubHeader";
 import Sidebar from "../components/Sidebar";
 import Filters from "../components/Filters";
@@ -72,11 +72,7 @@ const News = () => {
                 placeholder="🔍 Search gaming news, reviews, leaks..."
               />
             </div>
-            <div className="mt-4 sm:mt-12 ">
-              <button className="bg-gradient-to-r from-cyan-500 to-purple-500 p-4 w-[98%] ml-[1%] rounded-xl flex items-center justify-center gap-2 text-lg font-bold sm:w-full hover:scale-105 transition-transform duration-300 ease-in-out cursor-pointer hover:shadow-lg hover:shadow-purple-500">
-                <Bell /> ⚡ GET UPDATES
-              </button>
-            </div>
+
           </div>
         </div>
 

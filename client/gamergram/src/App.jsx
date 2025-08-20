@@ -12,6 +12,7 @@ import NewsDetails from "./pages/NewsDetails";
 import ProtectedRoute from "./components/ProtectedRoute ";
 import ProfilePage from "./pages/ProfilePage";
 import SagaPage from "./pages/SagaPage";
+import StoryPage from "./pages/StoryPage";
 
 const router = createBrowserRouter([
   {
@@ -36,7 +37,11 @@ const router = createBrowserRouter([
   },
   {
     path: "gamebuletien/:gameID",
-    element: <GameDetails />,
+    element: (
+      <ProtectedRoute>
+        <GameDetails />
+      </ProtectedRoute>
+    ),
   },
   {
     path: "aiChatBox",
@@ -56,11 +61,27 @@ const router = createBrowserRouter([
   },
   {
     path: "news/:newsID",
-    element: <NewsDetails />,
+    element: (
+      <ProtectedRoute>
+        <NewsDetails />
+      </ProtectedRoute>
+    ),
   },
   {
     path: "saga",
-    element: <SagaPage />,
+    element: (
+      <ProtectedRoute>
+        <SagaPage />
+      </ProtectedRoute>
+    ),
+  },
+  {
+    path: "saga/:characterID",
+    element: (
+      <ProtectedRoute>
+        <StoryPage />
+      </ProtectedRoute>
+    ),
   },
   {
     path: "kratos",

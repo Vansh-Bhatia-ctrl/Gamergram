@@ -2,7 +2,7 @@ import { create } from "zustand";
 import {
   House,
   ClipboardX,
-  Radio,
+  Rows3,
   BotMessageSquare,
   Newspaper,
   LibraryBig,
@@ -18,7 +18,7 @@ const useUIStore = create((set, get) => ({
   pages: [
     { id: "home", label: "Home", icon: House, link: "/gamebuletien" },
     { id: "quiz", label: "Quiz Me", icon: ClipboardX, link: "/quiz" },
-    { id: "broadcast", label: "Broadcast", icon: Radio, link: "/broadcast" },
+    { id: "reviews", label: "Reviews", icon: Rows3, link: "/reviews" },
     {
       id: "ai Chat",
       label: "AI Chat",

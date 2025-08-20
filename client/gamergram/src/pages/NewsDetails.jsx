@@ -313,7 +313,7 @@ const NewsDetails = () => {
                     </div>
                   ))
                 ) : (
-                  <p className="text-white">No comments.</p>
+                  <p className="text-white">No comments added.</p>
                 )}
               </div>
               <div className="border-t-1 border-neutral-600 p-3 flex items-center gap-2">

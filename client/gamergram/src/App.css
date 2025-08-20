@@ -90,9 +90,11 @@
 }
 
 .scrollbar-custom::-webkit-scrollbar {
-  height: 8px; /* scrollbar height */
+  height: 8px;  
 }
 
 .scrollbar-custom::-webkit-scrollbar-track {
-  background: #171717; /* tailwind's neutral-800 */
+  background: #171717;  
 }
+
+ 
