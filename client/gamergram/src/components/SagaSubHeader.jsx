@@ -1,6 +1,9 @@
-import React from "react";
+import useGameCharactersStore from "../store/useGameCharacters";
 
 const SagaSubHeader = () => {
+  const { userInput, setSearchedCharacter, notFound, searchedCharacter } =
+    useGameCharactersStore();
+
   return (
     <>
       <div>
@@ -14,6 +17,8 @@ const SagaSubHeader = () => {
         </div>
         <div className="p-4 mt-7 max-w-2xl mx-auto">
           <input
+            value={userInput}
+            onChange={(e) => setSearchedCharacter(e.target.value)}
             className="bg-neutral-800/50 w-full px-6 py-4 rounded-4xl border border-neutral-700/50 text-white focus:outline-none focus:border-neutral-500 transition-colors duration-300 placeholder:text-neutral-500 placeholder:text-md"
             placeholder="Search character's name..."
           />

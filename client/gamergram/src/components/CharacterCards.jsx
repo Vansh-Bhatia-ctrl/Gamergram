@@ -5,8 +5,14 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const CharacterCards = () => {
-  const { gameCharacters, loading, fetchGameCharacters } =
-    useGameCharactersStore();
+  const {
+    gameCharacters,
+    loading,
+    fetchGameCharacters,
+    setSearchedCharacter,
+    notFound,
+    searchedCharacter,
+  } = useGameCharactersStore();
   useEffect(() => {
     fetchGameCharacters();
   }, []);
@@ -14,7 +20,7 @@ const CharacterCards = () => {
   return (
     <>
       <div className="p-3 flex flex-wrap gap-4 md:grid md:grid-cols-2 lg:grid lg:grid-cols-3 max-w-7xl mx-auto">
-        {gameCharacters.map((character) => {
+        {searchedCharacter.map((character) => {
           return (
             <Link
               to={`/saga/${character._id}`}

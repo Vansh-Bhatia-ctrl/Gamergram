@@ -2,7 +2,6 @@ import { useParams } from "react-router-dom";
 import Header from "../components/Header";
 import STORIES_DATA from "../utils/stories.json";
 import { motion, AnimatePresence } from "framer-motion";
-import * as LucideIcons from "lucide-react";
 import { ChevronDown } from "lucide-react";
 import { useState } from "react";
 

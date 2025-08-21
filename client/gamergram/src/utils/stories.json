@@ -2637,5 +2637,226 @@
         }
       }
     ]
+  },
+  {
+    "_id": "68a639f58383ccaa602cc374",
+    "name": "Aloy",
+    "title": "Aloy: The Nora Codex",
+    "meta": {
+      "note": "The complete chronicle of Aloy’s journey across the *Horizon* series (*Horizon Zero Dawn*, *Horizon Forbidden West*), from an outcast Nora to a legendary hero saving a post-apocalyptic world from ancient machines and AI threats. Each era explores her courage, ingenuity, and quest for identity, drawn from the games’ narrative, data points, and her interactions with tribes and technology, set against a world of nature and ruin.",
+      "format": "Array of era objects with id, era, title, Icon (string), color, bgPattern, content { summary, details[] }"
+    },
+    "chapters": [
+      {
+        "id": 1,
+        "era": "Origins and Early Life",
+        "title": "The Outcast’s Dawn",
+        "Icon": "Spear",
+        "color": "from-green-600 to-blue-600",
+        "bgPattern": "bg-gradient-to-br from-green-800 via-blue-700 to-black",
+        "content": {
+          "summary": "Aloy, born in a post-apocalyptic world, grows up as a Nora outcast, shaped by hardship, Rost’s mentorship, and a mysterious origin tied to ancient technology. Trained in survival and combat, she seeks answers about her birth. This era, rooted in *Horizon Zero Dawn*’s backstory, explores her early years, her resilience, and the forging of her path as a seeker in a machine-filled wilderness.",
+          "details": [
+            "Birth and mystery: Born in 3021 inside All-Mother Mountain, Aloy is found in a cradle of ancient tech, her origins unknown. Given to Rost, a Nora outcast, she’s raised in the Embrace, a lush valley. At six, she falls into a ruin, finding a Focus—a holographic device—her mind sparked by its data, her heart curious, her path set toward uncovering her birth.",
+            "Outcast upbringing: Shunned by the Nora for her lack of a mother, Aloy endures taunts, her heart hardened but defiant. Rost teaches her to hunt with a bow, her aim felling rabbits, her spear sparring with dummies. Climbing cliffs, her agility grows, her mind sharp with the Focus’s scans, her codename ‘Aloy’ a whisper of defiance, her path one of survival.",
+            "Rost’s mentorship: Rost, a grizzled exile, trains Aloy in tracking and stealth, his stories of machines—Sawtooths, Thunderjaws—fueling her courage. At ten, she kills a Scrapper with a tripwire, her heart racing, her mind learning machine patterns. Her codename unknown beyond the Embrace, her path tied to Rost’s lessons, her Focus a tool of knowledge.",
+            "The proving quest: At twelve, Aloy vows to win the Proving, a Nora rite to join the tribe. Hunting Grazers for blaze canisters, her bow precise, she trains relentlessly, her heart set on acceptance. The Focus reveals machine weaknesses, her mind decoding their circuits, her codename a spark among outcasts, her path a quest for identity and belonging.",
+            "First ruin exploration: Exploring ancient ruins, Aloy finds Old Ones’ artifacts—data logs, metal flowers—her Focus decoding their secrets. Facing a corrupted Watcher, her spear strikes true, her heart awed by forgotten tech, her mind piecing together a lost world. Her codename tied to ruins, her path a search for truth, her courage a light in the dark.",
+            "Nora traditions: Aloy learns Nora lore—All-Mother’s wisdom, tribal hunts—her heart torn between respect and exclusion. Crafting arrows with Rost, her hands deft, she honors their ways, her mind questioning their dogma. Her codename a whisper among hunters, her path a balance of tradition and rebellion, her Focus a bridge to the unknown.",
+            "Facing prejudice: Bullied by Nora children, Aloy fights back, her fists bruising rivals, her heart burning with defiance. Rost’s guidance keeps her grounded, her mind using the Focus to outsmart foes. Her codename a symbol of resilience, her path a fight for respect, her spear a vow to prove her worth in a tribe that rejects her.",
+            "The outcast’s resolve: At eighteen, Aloy prepares for the Proving, her heart set on answers, her mind sharp with the Focus’s data. The era ends with her climbing All-Mother Mountain, her bow ready, Rost’s lessons echoing, her codename a spark of hope, her path as an outcast leading to a destiny tied to the world’s survival."
+          ]
+        }
+      },
+      {
+        "id": 2,
+        "era": "Horizon Zero Dawn: The Proving and Beyond",
+        "title": "The Seeker’s Path",
+        "Icon": "Focus",
+        "color": "from-green-600 to-red-600",
+        "bgPattern": "bg-gradient-to-br from-green-800 via-red-700 to-black",
+        "content": {
+          "summary": "In *Horizon Zero Dawn* (3039), Aloy wins the Proving, becoming a Nora Brave, only to face a massacre by the Eclipse cult. Seeking answers about her origins, she battles machines and uncovers the truth of Project Zero Dawn. This era explores her transformation into a hero, her fight against HADES, and her quest for identity in a world of machines and tribal conflict.",
+          "details": [
+            "The Proving triumph: Aloy competes in the Proving, climbing cliffs and hunting machines, her bow felling Grazers. Winning the rite, she earns the title of Brave, her heart swelling with pride, her Focus scanning for threats. A Kestrels’ ambush kills her peers, her codename born in blood, her path a fight for survival, her spear a symbol of defiance.",
+            "Rost’s sacrifice: As Eclipse cultists attack, Rost saves Aloy, dying to a bomb blast, his loss shattering her heart. Escaping through Nora lands, her mind uses the Focus to track killers, her codename whispered by survivors. Her path a vow to avenge him, her leadership emerging in crisis, her bow ready for the Eclipse’s leaders.",
+            "Meridian’s call: Named a Seeker, Aloy travels to Meridian, the Carja capital. Hunting Sawtooths with her blaze bombs, her heart steadies with purpose, her mind decoding Carja politics. Aligning with Erend, a Vanguard warrior, her codename spreads among tribes, her path a quest for answers, her Focus revealing the Eclipse’s plans.",
+            "The Eclipse threat: Aloy infiltrates Eclipse camps, her stealth overriding machine guards, her spear felling cultists. Discovering HADES, an AI controlling corrupted machines, her mind decodes its signals, her heart set against its destruction. Her codename a terror to cultists, her path a war on AI, her leadership rallying tribes against a common foe.",
+            "Project Zero Dawn: In ancient ruins, Aloy uncovers Zero Dawn, a project to restore Earth after an AI-driven apocalypse. Learning she’s a clone of Elisabet Sobeck, its creator, her heart grapples with identity, her mind piecing together GAIA’s role. Her codename tied to ancient tech, her path a mission to save the world, her Focus a key to truth.",
+            "Allies across tribes: Aloy unites Nora, Carja, and Oseram, her diplomacy winning their trust, her heart warmed by their courage. Training with Talanah, a Hawk, her bow syncs with allies, her codename a unifier’s vow. Her path a coalition against HADES, her leadership forging bonds, her spear a symbol of unity.",
+            "The battle of Meridian: Facing HADES in Meridian, Aloy overrides its network, her spear piercing corrupted Thunderjaws, her mind outsmarting its code. Saving the city, her heart honors Rost, her codename a hero’s cry. Her path a victory for life, her leadership a beacon for tribes, her Focus a tool to shut down HADES.",
+            "The seeker’s truth: Aloy finds Sobeck’s body, her heart at peace with her origins, her codename a legend in Meridian. The era ends with her atop a Spire, her bow ready, a new threat looming, her path a fight for GAIA, her leadership a light in a world of machines and tribes."
+          ]
+        }
+      },
+      {
+        "id": 3,
+        "era": "Horizon Forbidden West: The Forbidden West",
+        "title": "The Savior’s Quest",
+        "Icon": "Sunwing",
+        "color": "from-green-600 to-gold-600",
+        "bgPattern": "bg-gradient-to-br from-green-800 via-gold-700 to-black",
+        "content": {
+          "summary": "In *Horizon Forbidden West* (3040), Aloy ventures into the Forbidden West to restore GAIA and stop a blight threatening life. Facing Regalla’s rebels and the Far Zenith, she masters new machines and allies with tribes. This era explores her growth as a savior, her battle against advanced foes, and her struggle to balance duty with personal bonds in a vibrant, dangerous land.",
+          "details": [
+            "Journey to the West: Aloy crosses the Forbidden West, a lush yet deadly region, her bow felling new machines like Slitherfangs. Reuniting with Varl, her heart warmed by his loyalty, her mind decoding the Focus’s data on GAIA. Her codename spreads among Tenakth tribes, her path a quest to save Earth, her spear ready for new threats.",
+            "Regalla’s rebellion: Facing Regalla, a Tenakth warlord, Aloy battles her machine-mounted rebels, her blaze bombs blasting Tremortusks. Her heart rejects their violence, her mind outsmarting their tactics, her codename feared by rebels. Her path a fight to unite the Tenakth, her leadership rallying their clans, her Focus tracking Regalla’s moves.",
+            "Far Zenith’s return: Aloy discovers Far Zenith, immortal humans seeking to colonize Earth with their AI, Nemesis. Infiltrating their base, her stealth overrides specter drones, her heart raging against their greed, her mind decoding their tech. Her codename a threat to Zenith, her path a war on their plans, her leadership protecting the tribes.",
+            "GAIA’s restoration: Aloy retrieves GAIA’s subordinate functions—MINERVA, AETHER—from ancient cauldrons, her spear hacking machines, her mind merging their code. Reuniting with Beta, her clone sister, her heart grapples with family, her codename tied to Zero Dawn. Her path a mission to rebuild GAIA, her leadership a beacon for allies.",
+            "New allies, new bonds: Aloy recruits Zo, a Utaru healer, and Kotallo, a Tenakth warrior, their skills aiding her overrides. Her heart grows with their trust, her mind learning their ways, her codename a unifier’s vow. Her path a coalition against Zenith, her leadership forging bonds, her bow a symbol of their fight.",
+            "Cauldron conquests: Navigating cauldrons, Aloy overrides HEPHAESTUS, gaining control of machines like Sunwings. Her mind decodes their forges, her heart steady in their depths, her codename a master of tech. Her path a war on rogue AIs, her leadership turning machines into allies, her spear a tool in mechanical lairs.",
+            "The final stand: Facing Far Zenith in a desert stronghold, Aloy battles their leader, Tilda, her spear piercing specters, her mind overriding their shields. Saving Beta and GAIA, her heart honors Sobeck’s legacy, her codename a hero’s cry. Her path a victory for Earth, her leadership a light against Nemesis, her Focus a key to survival.",
+            "The savior’s burden: Aloy prepares for Nemesis, her heart heavy with duty, her codename a legend in the West. The era ends with her atop a Sunwing, her bow ready, allies at her side, her path a fight for life, her leadership a vow to protect a world on the brink."
+          ]
+        }
+      },
+      {
+        "id": 4,
+        "era": "The Tribal Alliances",
+        "title": "The Unifier’s Call",
+        "Icon": "Totem",
+        "color": "from-green-600 to-brown-600",
+        "bgPattern": "bg-gradient-to-br from-green-800 via-brown-700 to-black",
+        "content": {
+          "summary": "Across the *Horizon* series, Aloy unites disparate tribes—Nora, Carja, Tenakth, Utaru, and others—against machines and external threats. Her diplomacy and strength forge alliances, balancing tribal traditions with a shared fight. This era explores her role as a unifier, her bonds with diverse cultures, and her leadership in creating a coalition to save the world.",
+          "details": [
+            "Nora reconciliation: In *Zero Dawn*, Aloy earns the Nora’s respect, her Proving victory softening their prejudice. Leading Braves against Eclipse, her bow fells corrupted machines, her heart warmed by their trust. Her codename a Nora legend, her path a bridge to their faith, her leadership uniting them in Meridian’s defense.",
+            "Carja alliance: Aligning with Avad, the Carja Sun-King, Aloy aids Meridian’s recovery, her spear protecting his court from Eclipse. Her mind navigates Carja politics, her heart respecting their art, her codename a royal ally. Her path a defense of their city, her leadership forging a Nora-Carja pact, her Focus a tool of unity.",
+            "Oseram partnership: Befriending Erend and Petra, Oseram warriors, Aloy uses their forges to craft weapons, her blaze bombs aiding their sieges. Her heart trusts their strength, her mind learning their tech, her codename a spark in their camps. Her path a shared fight, her leadership uniting Oseram with tribes, her spear a symbol of alliance.",
+            "Tenakth unity: In *Forbidden West*, Aloy wins over Tenakth clans, her bow defeating their champions in duels. Aligning with Hekarro, their chief, her heart respects their honor, her mind grasping their tactics, her codename a warrior’s cry. Her path a Tenakth alliance, her leadership curbing Regalla’s rebellion, her Focus a key to peace.",
+            "Utaru harmony: Helping Zo and the Utaru heal their blighted lands, Aloy restores their Seedbeds, her overrides calming machines. Her heart moved by their songs, her mind decoding their agriculture, her codename a healer’s vow. Her path a fight for their survival, her leadership uniting them with GAIA’s cause, her bow a tool of hope.",
+            "Banuk respect: In *The Frozen Wilds*, Aloy earns Banuk trust, her spear defeating Scorcher daemons in the Cut. Learning their shamanic ways, her heart awed by their resilience, her mind grasping their lore. Her codename a Banuk chant, her path a bond with their tribe, her leadership uniting them against HEPHAESTUS.",
+            "Quen connection: Meeting the Quen, a seafaring tribe, Aloy shares Zero Dawn’s truth, her Focus decoding their archives. Her heart trusts their explorers, her mind learning their navigation, her codename a beacon across seas. Her path a global alliance, her leadership tying them to GAIA, her spear a symbol of shared destiny.",
+            "The unifier’s legacy: Aloy’s alliances save the world, her heart a bridge between tribes, her codename a legend in camps. The era ends with her addressing a tribal council, her path a coalition against Nemesis, her leadership eternal in uniting a fractured world."
+          ]
+        }
+      },
+      {
+        "id": 5,
+        "era": "The Machine Mastery",
+        "title": "The Tamer of Metal",
+        "Icon": "Override",
+        "color": "from-green-600 to-silver-600",
+        "bgPattern": "bg-gradient-to-br from-green-800 via-silver-700 to-black",
+        "content": {
+          "summary": "Across the *Horizon* series, Aloy masters machines, from overriding Sawtooths to riding Sunwings, using her Focus to hack their systems. Facing corrupted and rogue constructs, she turns technology into allies. This era explores her skill with machines, her ingenuity in combat, and her role as a tamer in a world ruled by metal beasts.",
+          "details": [
+            "First overrides: In *Zero Dawn*, Aloy learns to override machines in a Nora cauldron, her Focus hacking a Strider’s core. Riding it against Scrappers, her heart races with control, her mind decoding their circuits. Her codename a machine-tamer’s vow, her path a war with overrides, her leadership turning beasts into allies.",
+            "Sawtooth battles: Facing massive Sawtooths, Aloy uses blaze bombs to blast their armor, her spear striking weak points. Her mind maps their patterns, her heart steady in their shadow, her codename feared by machines. Her path a conquest of giants, her leadership rallying hunters, her Focus a key to their defeat.",
+            "Corrupted machines: Battling HADES’ corrupted Thunderjaws, Aloy’s tripwires and ropecasters bind them, her mind outsmarting their aggression. Her heart defies their chaos, her codename a terror to corrupted cores. Her path a fight against AI control, her leadership protecting tribes, her bow a tool of precision.",
+            "Cauldron conquests: In *Forbidden West*, Aloy navigates cauldrons to override HEPHAESTUS’ machines, her spear hacking Slaughterspines. Her mind decodes their forges, her heart bold in their depths, her codename a master of tech. Her path a war on rogue AIs, her leadership gaining machine allies, her Focus a bridge to their systems.",
+            "Sunwing flight: Mastering Sunwings, Aloy soars over the West, her overrides guiding their wings, her heart awed by their freedom. Her mind maps aerial routes, her codename a sky-rider’s cry. Her path a flight against specters, her leadership using machines for reconnaissance, her spear a tool in the clouds.",
+            "Specter drones: Facing Far Zenith’s specters, Aloy hacks their shields, her plasma arrows piercing cores. Her mind outpaces their AI, her heart set against their threat, her codename a drone’s bane. Her path a war on advanced tech, her leadership turning their weapons against them, her Focus a key to victory.",
+            "HEPHAESTUS’ challenge: Capturing HEPHAESTUS in a cauldron, Aloy overrides its production, her mind merging it with GAIA, her heart steady despite its traps. Her codename a tamer’s legend, her path a mastery of creation, her leadership controlling the world’s machines, her spear a symbol of dominance.",
+            "The tamer’s legacy: Aloy’s machine mastery saves tribes, her heart a bridge to technology, her codename a legend in cauldrons. The era ends with her riding a Sunwing, her path a fight with tech, her leadership eternal in taming a world of metal."
+          ]
+        }
+      },
+      {
+        "id": 6,
+        "era": "The Ancient Truths",
+        "title": "The Keeper of Secrets",
+        "Icon": "Data",
+        "color": "from-green-600 to-purple-600",
+        "bgPattern": "bg-gradient-to-br from-green-800 via-purple-700 to-black",
+        "content": {
+          "summary": "Across the *Horizon* series, Aloy uncovers ancient truths about the Old Ones, Zero Dawn, and the AI systems shaping her world. From ruins to Far Zenith’s archives, she decodes humanity’s past and her own origins. This era explores her role as a truth-seeker, her intellectual battles, and her guardianship of knowledge in a world of lost history.",
+          "details": [
+            "Ancient ruins: In *Zero Dawn*, Aloy explores Old Ones’ ruins, her Focus decoding data logs about Faro’s plague. Her mind pieces together the apocalypse, her heart awed by lost cities, her codename tied to ancient tech. Her path a quest for history, her leadership sharing truth with tribes, her spear a tool in forgotten halls.",
+            "Zero Dawn revelation: Discovering Project Zero Dawn, Aloy learns of GAIA and Elisabet Sobeck, her genetic mother. Her mind decodes GAIA’s purpose—to restore Earth—her heart grappling with her clone identity. Her codename a keeper of secrets, her path a fight for GAIA, her Focus a key to humanity’s past.",
+            "HADES’ origin: Uncovering HADES’ role as a rogue AI, Aloy’s mind traces its corruption to an ancient signal, her heart set against its destruction. Her codename a bane to rogue systems, her path a war on AI threats, her leadership protecting tribes from its chaos, her bow a tool to shut it down.",
+            "Far Zenith’s history: In *Forbidden West*, Aloy decodes Far Zenith’s archives, learning of their failed colony and Nemesis’ creation. Her mind outpaces their tech, her heart raging against their greed, her codename a threat to their legacy. Her path a fight for Earth, her leadership guarding ancient truths, her Focus a bridge to their secrets.",
+            "Beta’s bond: Meeting Beta, her clone sister, Aloy shares Zero Dawn’s truth, her heart warmed by family, her mind syncing with her knowledge. Her codename ties them together, her path a shared quest for GAIA, her leadership protecting Beta, her spear a vow to honor Sobeck’s legacy.",
+            "APOLLO’s loss: Discovering APOLLO’s deletion by Ted Faro, Aloy’s heart burns with his betrayal, her mind seeking its fragments in Quen archives. Her codename a scholar’s vow, her path a quest for lost knowledge, her leadership restoring humanity’s heritage, her Focus a tool to rebuild culture.",
+            "Nemesis’ threat: Learning of Nemesis, a rogue AI seeking Earth, Aloy’s mind plans its defeat, her heart set on saving life. Her codename a guardian’s cry, her path a fight against cosmic threats, her leadership rallying tribes and GAIA, her spear a symbol of defiance against annihilation.",
+            "The keeper’s legacy: Aloy’s truths reshape the world, her heart a light in history’s shadows, her codename a legend in ruins. The era ends with her decoding a final log, her path a quest for knowledge, her leadership eternal in guarding humanity’s past."
+          ]
+        }
+      },
+      {
+        "id": 7,
+        "era": "The Frozen Wilds",
+        "title": "The Banuk’s Champion",
+        "Icon": "Snowflake",
+        "color": "from-green-600 to-white-600",
+        "bgPattern": "bg-gradient-to-br from-green-800 via-white-700 to-black",
+        "content": {
+          "summary": "In *Horizon Zero Dawn: The Frozen Wilds*, Aloy ventures into the Banuk’s frozen Cut, battling a rogue AI, HEPHAESTUS, and its daemon machines. Earning the Banuk’s respect, she uncovers secrets of the Old Ones. This era explores her strength in a harsh wilderness, her bond with the Banuk, and her role as a champion against a mechanical threat.",
+          "details": [
+            "The Cut’s frozen wastes: Entering the Banuk’s snowy Cut, Aloy hunts Frostclaws, her blaze bombs blasting their cores, her heart chilled by the cold. Her mind maps the icy terrain, her codename a whisper among shamans, her path a fight in the wild, her leadership earning Banuk trust, her spear a tool in the snow.",
+            "Banuk alliance: Meeting Aratak, the Banuk chief, Aloy duels for his respect, her bow felling his machines. Her heart warmed by their rituals, her mind learning their lore, her codename a chant in their camps. Her path a bond with the Banuk, her leadership uniting them, her Focus a key to their trust.",
+            "HEPHAESTUS’ daemon: Discovering HEPHAESTUS controlling daemon machines, Aloy infiltrates Thunder’s Drum, her overrides hacking Scorcher cores. Her mind outsmarts its traps, her heart set against its chaos, her codename a bane to rogue AIs. Her path a war on mechanical threats, her leadership protecting the Cut, her spear a symbol of defiance.",
+            "Ourea’s sacrifice: Aiding Ourea, a Banuk shaman, Aloy frees the Spirit, an AI guardian, from HEPHAESTUS’ grip. Ourea’s death to save the Cut moves her heart, her mind decoding the Spirit’s data, her codename tied to their sacrifice. Her path a fight for their faith, her leadership honoring their loss, her bow a tool of liberation.",
+            "Daemon battles: Facing daemon Fireclaws, Aloy’s ropecasters bind their limbs, her arrows piercing weak points. Her heart steady in their shadow, her mind mapping their patterns, her codename feared by machines. Her path a conquest of giants, her leadership rallying Banuk hunters, her Focus a key to their defeat.",
+            "Banuk lore: Learning Banuk tales of machines and spirits, Aloy’s heart respects their mysticism, her mind linking it to Zero Dawn. Her codename a shaman’s vow, her path a bridge between faith and tech, her leadership sharing truths, her spear a symbol of their shared fight.",
+            "The Spirit’s freedom: Freeing the Spirit from HEPHAESTUS, Aloy restores Banuk lands, her heart warmed by their gratitude, her mind decoding its code. Her codename a hero’s cry, her path a victory for the Cut, her leadership a light in the snow, her Focus a tool to save their home.",
+            "The champion’s mark: Aloy’s deeds earn her Banuk tattoos, her heart a part of their tribe, her codename a legend in the Cut. The era ends with her leaving Thunder’s Drum, her path a fight for GAIA, her leadership eternal in the Banuk’s songs."
+          ]
+        }
+      },
+      {
+        "id": 8,
+        "era": "The Personal Journey",
+        "title": "The Heart of Aloy",
+        "Icon": "Heart",
+        "color": "from-green-600 to-pink-600",
+        "bgPattern": "bg-gradient-to-br from-green-800 via-pink-700 to-black",
+        "content": {
+          "summary": "Across the *Horizon* series, Aloy’s personal bonds—with Rost, Varl, Beta, and others—shape her fight, grounding her duty with love and loss. From outcast to sister, her relationships define her humanity. This era explores her emotional growth, her sacrifices for those she loves, and her role as a hero driven by heart in a world of machines.",
+          "details": [
+            "Rost’s love: Rost raises Aloy as a daughter, his lessons shaping her courage, his death breaking her heart. Her mind honors his teachings, her codename tied to his sacrifice, her path a vow to avenge him. Her leadership carries his strength, her spear a tribute to his love, her Focus a memory of his guidance.",
+            "Varl’s loyalty: In *Zero Dawn* and *Forbidden West*, Varl, a Nora Brave, becomes Aloy’s steadfast friend, his faith steadying her heart. Fighting alongside her, his spear syncs with her bow, her codename a bond between them. Her path a shared fight, her leadership inspiring him, her heart torn by his death to Zenith.",
+            "Beta’s sisterhood: Meeting Beta, her clone sister, Aloy finds family, her heart warmed by their bond, her mind sharing Zero Dawn’s truth. Her codename ties them together, her path a fight to protect her, her leadership shielding Beta from Zenith, her spear a vow to honor their shared origin.",
+            "Erend’s friendship: Erend, an Oseram warrior, supports Aloy with humor and strength, his hammer aiding her battles, her heart eased by his loyalty. Her mind trusts his courage, her codename a spark in his forge, her path a shared rebellion, her leadership uniting them against Eclipse and Zenith.",
+            "Zo’s compassion: Zo, an Utaru healer, grounds Aloy with her empathy, their bond healing her heart, her mind learning her songs. Her codename a healer’s ally, her path a fight for her lands, her leadership protecting her tribe, her bow a symbol of their shared hope.",
+            "Talanah’s respect: Talanah, a Carja Hawk, trains with Aloy, their bows felling machines, her heart warmed by her ambition. Her mind respects her skill, her codename a hunter’s vow, her path a bond of warriors, her leadership inspiring Talanah’s lodge, her spear a mark of their trust.",
+            "Sylens’ rivalry: Sylens, a rogue scholar, challenges Aloy, his intellect pushing her mind, her heart wary of his motives. Her codename a rival’s respect, her path a tense alliance, her leadership outsmarting his schemes, her Focus a tool to match his knowledge in their fight for GAIA.",
+            "The heart’s legacy: Aloy’s bonds shape her fight, her heart a light in duty, her codename a legend of love. The era ends with her mourning Varl, her path a fight for those she loves, her leadership eternal in the hearts of her allies."
+          ]
+        }
+      },
+      {
+        "id": 9,
+        "era": "The World of Machines",
+        "title": "The Wilderness of Metal",
+        "Icon": "Gear",
+        "color": "from-green-600 to-grey-600",
+        "bgPattern": "bg-gradient-to-br from-green-800 via-grey-700 to-black",
+        "content": {
+          "summary": "Across the *Horizon* series, Aloy explores a post-apocalyptic world of lush wilderness and deadly machines, from Nora valleys to Tenakth deserts. Hunting and overriding constructs, she finds balance between nature and technology. This era explores her connection to the land, her survival in a mechanical wilderness, and her role as a protector of a fragile Earth.",
+          "details": [
+            "The Embrace’s valleys: In *Zero Dawn*, Aloy hunts in the Nora’s Embrace, her bow felling Grazers in lush meadows. Her heart loves the land’s beauty, her mind mapping its trails, her codename a whisper in forests. Her path a fight for its safety, her leadership protecting its tribes, her Focus a guide through its wilds.",
+            "Meridian’s deserts: Traveling to Meridian, Aloy navigates Carja sands, her spear battling Glinthawks, her heart awed by its vistas. Her mind tracks machine migrations, her codename a hero in oases. Her path a defense of its people, her leadership uniting tribes, her bow a tool in sun-scorched lands.",
+            "The Cut’s snows: In *The Frozen Wilds*, Aloy treks through the Banuk’s snowy Cut, her blaze bombs blasting Frostclaws. Her heart chilled by its storms, her mind mapping its peaks, her codename a chant in blizzards. Her path a fight in the cold, her leadership saving its tribes, her spear a beacon in snow.",
+            "Forbidden West’s jungles: In *Forbidden West*, Aloy explores lush Tenakth jungles, her overrides taming Clawstriders. Her heart loves their vibrancy, her mind decoding their ecosystems, her codename a legend in canopies. Her path a war on blight, her leadership protecting their lands, her Focus a key to their secrets.",
+            "Utaru plains: Helping Utaru farms, Aloy restores blighted fields, her bow felling burrowing machines. Her heart moved by their harvests, her mind learning their crops, her codename a healer’s vow. Her path a fight for their survival, her leadership uniting their clans, her spear a tool of renewal.",
+            "Quen shores: Exploring Quen coastlines, Aloy rides Waterwings, her heart awed by their seas, her mind mapping their currents. Her codename a sailor’s cry, her path a defense of their shores, her leadership tying them to GAIA, her bow a symbol in their tides.",
+            "Machine migrations: Tracking machine herds, Aloy studies their routes, her Focus analyzing their AI, her heart respecting their power. Her codename a tamer’s legend, her path a balance of nature and tech, her leadership protecting ecosystems, her spear a tool in their world.",
+            "The wilderness’s guardian: Aloy’s love for the land shapes her fight, her heart a protector’s vow, her codename a legend in wilds. The era ends with her atop a cliff, her path a fight for Earth, her leadership eternal in saving a world of nature and machines."
+          ]
+        }
+      },
+      {
+        "id": 10,
+        "era": "The Legacy of Aloy",
+        "title": "The Hero of Tomorrow",
+        "Icon": "Star",
+        "color": "from-green-600 to-gold-600",
+        "bgPattern": "bg-gradient-to-br from-green-800 via-gold-700 to-black",
+        "content": {
+          "summary": "Across the *Horizon* series, Aloy’s actions forge a legacy that inspires tribes and shapes the fight against Nemesis. From Nora outcast to global savior, her courage and wisdom endure. This era explores her lasting impact, her role as a symbol of hope, and her eternal legend in a world reborn from ruin.",
+          "details": [
+            "Nora’s champion: Aloy’s Proving victory and HADES’ defeat make her a Nora legend, her bow a symbol in their songs. Her heart carries their faith, her mind sharing Zero Dawn’s truth, her codename chanted in All-Mother’s halls. Her path a Nora’s pride, her leadership uniting their tribe, her spear eternal in their lore.",
+            "Carja’s savior: Saving Meridian, Aloy becomes a Carja hero, her alliance with Avad shaping their future. Her heart respects their art, her mind guiding their reforms, her codename a royal ally. Her path a defense of their city, her leadership inspiring their Sun-Priests, her Focus a light in their courts.",
+            "Tenakth’s warrior: Uniting Tenakth clans, Aloy’s defeat of Regalla earns her their tattoos, her heart bold in their arenas. Her mind teaches their tactics, her codename a war cry in their camps. Her path a bond of warriors, her leadership strengthening their tribes, her bow a mark of their respect.",
+            "Banuk’s spirit: Freeing the Cut, Aloy’s deeds echo in Banuk chants, her spear a symbol of their Spirit. Her heart awed by their resilience, her mind sharing their lore, her codename a shaman’s vow. Her path a fight for their wilds, her leadership a light in their snows, her Focus a bridge to their faith.",
+            "Utaru’s healer: Restoring Utaru lands, Aloy’s compassion lives in their songs, her bow a tool of renewal. Her heart moved by their harvests, her mind aiding their crops, her codename a healer’s cry. Her path a fight for their survival, her leadership uniting their clans, her spear a symbol of hope.",
+            "Quen’s guide: Sharing Zero Dawn with the Quen, Aloy’s wisdom shapes their archives, her heart trusting their explorers. Her mind maps their seas, her codename a sailor’s legend. Her path a global alliance, her leadership tying them to GAIA, her Focus a key to their future.",
+            "GAIA’s heir: As Sobeck’s clone, Aloy’s restoration of GAIA ensures Earth’s survival, her heart honoring her legacy, her mind merging AI systems. Her codename a savior’s vow, her path a fight for life, her leadership a beacon against Nemesis, her spear a symbol of humanity’s hope.",
+            "The eternal hero: Aloy’s legacy inspires a world, her heart a light in ruin, her codename a legend in tribes. The era ends with her preparing for Nemesis, her path a fight for tomorrow, her leadership eternal in a world reborn."
+          ]
+        }
+      }
+    ]
   }
 ]
