@@ -28,6 +28,8 @@ const userList = require("./routes/userList");
 const getAllList = require("./routes/getAllList");
 const saveCharacters = require("./routes/saveCharacterToDb");
 const getCharacters = require("./routes/getCharacters");
+const saveReviews = require("./routes/postReviews");
+const fetchReviewsFromDB = require("./routes/fetchReviews");
 
 const { startNewsCron } = require("./controllers/news/cronjobnews");
 const { runPlaystationCronJob } = require("./jobs/playstationcron");
@@ -102,6 +104,8 @@ const startServer = async () => {
     app.use("/getlist", getAllList);
     app.use("/save-db", saveCharacters);
     app.use("/get-characters", getCharacters);
+    app.use("/save-to-db", saveReviews);
+    app.use("/getreviews", fetchReviewsFromDB);
 
     startNewsCron();
     runPlaystationCronJob();
