@@ -2858,5 +2858,922 @@
         }
       }
     ]
+  },
+  {
+    "_id": "68a639f58383ccaa602cc375",
+    "name": "Shepard",
+    "title": "Shepard: The Spectre Codex",
+    "meta": {
+      "note": "The complete chronicle of Commander Shepard’s journey across the *Mass Effect* series (*Mass Effect*, *Mass Effect 2*, *Mass Effect 3*), from a skilled soldier to a legendary Spectre saving the galaxy from Reapers and other threats. Each era explores Shepard’s leadership, moral choices, and sacrifices, drawn from the games’ narrative, squad interactions, and galactic conflicts, set in a universe of advanced technology and diverse species. This codex assumes a Paragon-leaning Shepard with key choices (e.g., saving the Council, uniting species) for consistency, while acknowledging player-driven variations.",
+      "format": "Array of era objects with id, era, title, Icon (string), color, bgPattern, content { summary, details[] }"
+    },
+    "chapters": [
+      {
+        "id": 1,
+        "era": "Origins and Early Career",
+        "title": "The Soldier’s Rise",
+        "Icon": "N7 Helmet",
+        "color": "from-blue-600 to-red-600",
+        "bgPattern": "bg-gradient-to-br from-blue-800 via-red-700 to-black",
+        "content": {
+          "summary": "Commander Shepard, born in 2154, rises through the Alliance Navy, shaped by a traumatic past and rigorous training. From a colony survivor to an N7 operative, Shepard’s early career forges a leader ready for galactic challenges. This era, rooted in *Mass Effect*’s backstory, explores Shepard’s formative years, resilience, and path to becoming the first human Spectre.",
+          "details": [
+            "Early life and loss: Born on April 11, 2154, Shepard grows up on Mindoir, a human colony. At 16, batarian slavers attack, killing their family, leaving Shepard scarred but defiant. Orphaned, their heart hardens, their mind sharpens through survival, their path set toward the military, their codename ‘Shepard’ a whisper of vengeance against raiders.",
+            "Alliance enlistment: Joining the Alliance Navy at 18, Shepard trains on Earth, excelling in combat and tactics. Their biotic implants (if biotic) or tech skills (if engineer) shine in drills, their heart driven by duty, their mind mastering omni-tools. Their codename earns respect, their path a rise through ranks, their N7 training a crucible of skill.",
+            "N7 trials: Selected for N7 special forces, Shepard endures grueling missions on hostile worlds. Leading squads through asteroid bases, their rifle fells pirates, their heart steady under pressure, their mind solving strategic puzzles. Their codename marks elite status, their path a test of leadership, their armor a symbol of Alliance pride.",
+            "Akuze’s tragedy: On Akuze (if Sole Survivor), Shepard’s squad is wiped out by thresher maws, their survival a testament to grit. Alone, their heart grapples with guilt, their mind analyzing the maw’s patterns. Their codename whispered in Alliance halls, their path forged in loss, their resolve a vow to protect others.",
+            "Eden Prime mission: In 2183, Shepard, now a Commander, leads the Normandy SR-1 to Eden Prime. Investigating a Prothean beacon, their squad—Kaidan, Jenkins—faces geth, their pistol cutting through drones, their heart racing at the beacon’s visions. Their codename noted by the Council, their path set toward Spectre candidacy, their leadership tested.",
+            "First Spectre nomination: After Eden Prime, Nihlus, a turian Spectre, evaluates Shepard, impressed by their combat skill. The beacon’s Reaper visions haunt their mind, their heart set on proving humanity’s worth. Their codename a spark in Citadel politics, their path a galactic stage, their N7 armor a beacon of potential.",
+            "Alliance loyalty: Shepard’s loyalty to Admiral Anderson and Captain Hackett shapes their duty, their heart trusting their mentors, their mind learning galactic strategy. Their codename earns Alliance trust, their path a defense of human colonies, their leadership a bridge between Earth and the stars.",
+            "The hero’s dawn: At 29, Shepard stands ready for Spectre status, their heart fueled by justice, their codename a symbol of hope. The era ends with them aboard the Normandy, their mind decoding the beacon’s warning, their path a fight against unseen threats, their leadership poised to shape the galaxy."
+          ]
+        }
+      },
+      {
+        "id": 2,
+        "era": "Mass Effect: The Saren Pursuit",
+        "title": "The First Spectre",
+        "Icon": "Spectre Badge",
+        "color": "from-blue-600 to-silver-600",
+        "bgPattern": "bg-gradient-to-br from-blue-800 via-silver-700 to-black",
+        "content": {
+          "summary": "In *Mass Effect* (2183), Shepard becomes the first human Spectre, tasked with stopping Saren, a rogue turian Spectre allied with the Reapers. Leading a diverse squad, they uncover a galaxy-wide threat, uniting species against Saren’s geth army. This era explores Shepard’s rise to galactic hero, their moral leadership, and their fight to save the Citadel from Sovereign.",
+          "details": [
+            "Spectre induction: After Saren’s betrayal on Eden Prime, Shepard is named a Spectre by the Citadel Council, their heart proud but wary, their mind decoding Saren’s plans. Recruiting Garrus, Wrex, and Tali, their codename rallies a squad, their path a hunt across the galaxy, their leadership uniting aliens for a common cause.",
+            "Therum’s rescue: On Therum, Shepard saves Liara T’Soni from geth, their biotic barriers (or tech mines) clearing traps, their heart warmed by her gratitude. Her Prothean expertise aids their mind, their codename a beacon to scholars, their path a search for Reaper secrets, their leadership forging her loyalty in lava-filled ruins.",
+            "Noveria’s corruption: Infiltrating Noveria’s corporate labs, Shepard battles rachni controlled by Saren, their rifle felling drones, their heart rejecting corporate greed. Their mind uncovers Matriarch Benezia’s indoctrination, their codename feared by geth, their path a fight against Saren’s allies, their leadership sparing or saving the rachni queen.",
+            "Feros’ mind control: On Feros, Shepard frees colonists from the Thorian’s thrall, their grenades blasting creepers, their heart aching for the possessed. Their mind decodes Prothean ruins, their codename a liberator’s cry, their path a stand against indoctrination, their leadership saving lives while uncovering Saren’s network.",
+            "Virmire’s sacrifice: On Virmire, Shepard destroys Saren’s cloning facility, their squad facing krogan hordes. Choosing to save Kaidan or Ashley, their heart breaks at the loss, their mind outsmarting Saren’s traps. Their codename a hero’s vow, their path a costly victory, their leadership rallying survivors against Sovereign’s shadow.",
+            "Citadel lockdown: Pursuing Saren to the Citadel, Shepard battles geth in its wards, their pistol piercing his armor. Their heart defies his indoctrination, their mind decoding Sovereign’s Reaper nature. Their codename a terror to geth, their path a race to save the Council, their leadership uniting fleets for the final stand.",
+            "Sovereign’s defeat: Leading the Normandy and Alliance fleet, Shepard destroys Sovereign, a Reaper controlling Saren, their heart set on saving the Citadel. Their mind coordinates the attack, their codename a galactic legend, their path a victory against cosmic threats, their leadership sparing the Council, uniting species for future wars.",
+            "The Spectre’s mark: Shepard’s triumph cements their legend, their heart heavy with Virmire’s loss, their codename echoing in Citadel towers. The era ends with them warning of Reapers, their path a fight for galactic survival, their leadership a beacon for a divided galaxy, their N7 armor a symbol of hope."
+          ]
+        }
+      },
+      {
+        "id": 3,
+        "era": "Mass Effect 2: The Collector Threat",
+        "title": "The Lazarus Reborn",
+        "Icon": "Cerberus Logo",
+        "color": "from-blue-600 to-orange-600",
+        "bgPattern": "bg-gradient-to-br from-blue-800 via-orange-700 to-black",
+        "content": {
+          "summary": "In *Mass Effect 2* (2185), Shepard is resurrected by Cerberus after dying in a Collector attack. Leading a new squad against the Collectors, alien abductors serving the Reapers, they navigate Cerberus’ shadowy motives. This era explores Shepard’s return from death, their uneasy alliance with Cerberus, and their leadership in a suicide mission to save human colonies.",
+          "details": [
+            "Death and rebirth: Ambushed by Collectors, Shepard dies when the Normandy is destroyed, their heart silent in space. Revived by Cerberus’ Lazarus Project, their mind grapples with lost time, their codename reborn in a lab. Their path a second chance, their leadership tested by the Illusive Man’s agenda, their N7 armor restored.",
+            "Cerberus alliance: Recruited by the Illusive Man, Shepard works with Cerberus, their heart wary of his motives, their mind decoding his intel. Building a new Normandy, their codename rallies Miranda and Jacob, their path a fight against Collectors, their leadership navigating Cerberus’ shadowy resources.",
+            "Recruiting the team: Shepard assembles a diverse squad—Mordin, Jack, Thane, Samara—across Omega and Illium. Their rifle aids each mission, their heart bonds with their stories, their mind planning their roles. Their codename a unifier’s vow, their path a team forged in loyalty, their leadership inspiring outcasts and warriors.",
+            "Collector abductions: Investigating human colony abductions, Shepard battles Collectors on Horizon, their biotic slams (or tech drones) felling husks. Their heart aches for the lost, their mind tracing Reaper links, their codename feared by aliens. Their path a fight to save lives, their leadership rallying survivors like Kaidan or Ashley.",
+            "Loyalty missions: Earning squad loyalty, Shepard aids Garrus on Omega, their sniper rifle backing his vengeance, and Tali on the Flotilla, their mind defending her trial. Their heart trusts their bonds, their codename a squad’s anchor, their path a web of loyalty, their leadership ensuring their survival.",
+            "Omega-4 relay: Leading the suicide mission through the Omega-4 relay, Shepard storms the Collector base, their shotgun blasting harbingers. Their mind outsmarts traps, their heart set on saving their crew. Their codename a terror to Collectors, their path a gamble for survival, their leadership guiding the squad through a Reaper hive.",
+            "Collector base decision: Destroying or sparing the Collector base, Shepard defies the Illusive Man, their heart rejecting his control, their mind wary of Reaper tech. Their codename a symbol of defiance, their path a stand against manipulation, their leadership preserving or purging the base for humanity’s sake.",
+            "The reborn hero: Shepard’s victory halts the Collectors, their heart heavy with losses, their codename a legend in Terminus systems. The era ends with them facing Reaper signals, their path a fight against cosmic threats, their leadership a beacon for the galaxy, their N7 armor scarred but unyielding."
+          ]
+        }
+      },
+      {
+        "id": 4,
+        "era": "Mass Effect 3: The Reaper War",
+        "title": "The Galaxy’s Savior",
+        "Icon": "Crucible",
+        "color": "from-blue-600 to-green-600",
+        "bgPattern": "bg-gradient-to-br from-blue-800 via-green-700 to-black",
+        "content": {
+          "summary": "In *Mass Effect 3* (2186), Shepard leads a galactic war against the Reapers, uniting species to build the Crucible, a weapon to stop the invasion. Facing Cerberus and Reaper forces, they make critical choices shaping the galaxy’s fate. This era explores Shepard’s ultimate leadership, their sacrifices, and their legacy as a hero in a war-torn universe.",
+          "details": [
+            "Earth’s fall: Reapers invade Earth, forcing Shepard to flee, their heart breaking as cities burn, their mind decoding distress signals. Reuniting with Anderson, their codename rallies the Normandy, their path a fight to save humanity, their leadership inspiring hope amidst chaos, their rifle ready for war.",
+            "Mars archives: On Mars, Shepard uncovers Crucible plans, battling Cerberus troops, their biotic charge (or tech armor) smashing Kai Leng. Their mind decodes Prothean data with Liara, their heart set on victory, their codename feared by Cerberus. Their path a race for the Crucible, their leadership uniting scientists.",
+            "Turian alliance: On Palaven’s moon, Shepard aids Primarch Victus, their sniper rifle felling husks, their heart warmed by turian resolve. Their mind brokers peace with Garrus, their codename a unifier’s cry, their path an alliance against Reapers, their leadership forging turian-human bonds.",
+            "Krogan salvation: On Tuchanka, Shepard cures the genophage with Mordin’s sacrifice, their shotgun blasting Reaper brutes, their heart moved by Wrex’s gratitude. Their mind negotiates with salarians, their codename a krogan hero, their path a cure for a species, their leadership uniting clans for war.",
+            "Quarian peace: Resolving the quarian-geth conflict, Shepard saves both with Tali’s aid, their tech drones disabling geth primes. Their heart trusts Legion’s sacrifice, their mind uploading peace codes, their codename a diplomat’s vow. Their path a unity of synthetics and organics, their leadership bridging ancient rifts.",
+            "Cerberus betrayal: Storming Cerberus’ headquarters, Shepard defeats the Illusive Man, their pistol piercing his indoctrination, their heart rejecting his control. Their mind uncovers Reaper plots, their codename a terror to Cerberus, their path a dismantling of their empire, their leadership exposing their schemes.",
+            "The Crucible’s choice: At the Citadel, Shepard activates the Crucible, choosing to destroy, control, or synthesize Reapers, their heart heavy with the galaxy’s fate, their mind grappling with the Catalyst’s AI. Their codename a savior’s cry, their path a final stand, their leadership shaping existence, their sacrifice (or survival) defining victory.",
+            "The savior’s legacy: Shepard’s choices save or reshape the galaxy, their heart a beacon of hope, their codename eternal in Citadel archives. The era ends with the Normandy flying, their path a legend, their leadership immortal in a galaxy reborn or lost."
+          ]
+        }
+      },
+      {
+        "id": 5,
+        "era": "The Squad’s Bond",
+        "title": "The Heart of the Normandy",
+        "Icon": "Normandy",
+        "color": "from-blue-600 to-purple-600",
+        "bgPattern": "bg-gradient-to-br from-blue-800 via-purple-700 to-black",
+        "content": {
+          "summary": "Across the *Mass Effect* series, Shepard builds a loyal squad of diverse species—Garrus, Tali, Liara, and others—whose bonds fuel their fight against Reapers. From shared battles to personal loyalties, these relationships define Shepard’s leadership. This era explores their camaraderie, emotional connections, and role as the heart of a galaxy-spanning team.",
+          "details": [
+            "Garrus’ loyalty: Garrus, a turian sniper, joins Shepard in *Mass Effect*, their heart warmed by his defiance, their mind syncing with his tactics. Fighting on Omega in *Mass Effect 2*, their rifles align, their codename a brother’s vow. Their path a shared fight, their leadership inspiring his growth, their bond a constant in war.",
+            "Tali’s trust: Tali, a quarian engineer, bonds with Shepard over geth battles, their heart moved by her exile, their mind aiding her tech. In *Mass Effect 3*, saving her Flotilla, their codename a quarian hero, their path a fight for her home, their leadership forging her confidence, their friendship a light in chaos.",
+            "Liara’s devotion: Liara, an asari archaeologist, grows close to Shepard, their heart softened by her wisdom, their mind decoding Prothean secrets together. In *Mass Effect 3*, her Shadow Broker role aids them, their codename a scholar’s ally, their path a shared quest, their leadership strengthening her resolve.",
+            "Wrex’s respect: Wrex, a krogan mercenary, trusts Shepard after Virmire, their heart bold in his presence, their mind negotiating his leadership. Curing the genophage in *Mass Effect 3*, their codename a krogan legend, their path a bond of warriors, their leadership uniting clans, their bond a krogan vow.",
+            "Mordin’s sacrifice: Mordin, a salarian scientist, aids Shepard in *Mass Effect 2*, their heart moved by his ethics, their mind respecting his genius. His death curing the genophage in *Mass Effect 3* breaks their heart, their codename tied to his sacrifice, their leadership honoring his legacy, their path a shared fight.",
+            "Ashley/Kaidan’s duty: Ashley or Kaidan, surviving Virmire, remains loyal, their heart trusting Shepard’s command, their mind syncing in battle. In *Mass Effect 3*, defending the Citadel, their codename a soldier’s anchor, their path a shared duty, their leadership inspiring their growth, their bond a constant through war.",
+            "Thane/Jack’s redemption: Thane, a drell assassin, and Jack, a biotic convict, find purpose with Shepard in *Mass Effect 2*. Their heart eases their pain, their mind guiding their redemption, their codename a mentor’s vow. Their path a fight for their souls, their leadership healing their scars, their bond a light in darkness.",
+            "The Normandy’s heart: Shepard’s squad becomes family, their heart a beacon of trust, their codename a legend in the Normandy’s halls. The era ends with a Citadel farewell, their path a fight for their bonds, their leadership eternal in their loyalty."
+          ]
+        }
+      },
+      {
+        "id": 6,
+        "era": "The Galactic Diplomacy",
+        "title": "The Unifier of Species",
+        "Icon": "Citadel",
+        "color": "from-blue-600 to-gold-600",
+        "bgPattern": "bg-gradient-to-br from-blue-800 via-gold-700 to-black",
+        "content": {
+          "summary": "Across the *Mass Effect* series, Shepard brokers peace between species—turians, krogan, quarians, geth—uniting a fractured galaxy against the Reapers. Their diplomacy shapes alliances, balancing war with cooperation. This era explores their role as a galactic unifier, their moral choices, and their leadership in forging a coalition to save all life.",
+          "details": [
+            "Citadel Council: In *Mass Effect*, Shepard earns the Council’s trust, saving them from Saren, their heart set on humanity’s place, their mind navigating politics. Their codename a diplomat’s cry, their path a defense of the Citadel, their leadership proving human worth, their N7 armor a symbol of unity.",
+            "Turian pact: Aiding Primarch Victus in *Mass Effect 3*, Shepard secures turian fleets, their rifle felling Reaper husks, their heart respecting turian honor. Their mind brokers alliances, their codename a turian ally, their path a galactic coalition, their leadership uniting Palaven with Earth.",
+            "Krogan alliance: Curing the genophage, Shepard wins krogan support, their heart moved by Wrex’s gratitude, their mind negotiating with salarians. Their codename a krogan hero, their path a cure for a species, their leadership rallying clans for the Crucible, their sacrifice honoring Mordin.",
+            "Quarian-geth peace: Resolving the quarian-geth war, Shepard unites both, their tech drones aiding Tali, their heart trusting Legion’s sacrifice. Their codename a peacemaker’s vow, their path a bridge between synthetics and organics, their leadership securing fleets for the Reaper war.",
+            "Asari wisdom: Aligning with the asari, Shepard protects Thessia, their biotic barriers aiding Liara, their heart aching for their losses. Their mind decodes Prothean secrets, their codename an asari ally, their path a defense of their culture, their leadership rallying their fleets.",
+            "Salarian strategy: Convincing the salarians to join the war, Shepard’s diplomacy outpaces their caution, their heart respecting their science, their mind leveraging their stealth tech. Their codename a strategist’s cry, their path a galactic pact, their leadership securing their support for the Crucible.",
+            "Rachni revival: Sparing the rachni queen, Shepard gains an ally, their heart trusting her loyalty, their mind wary of her hive. Their codename a rachni savior, their path a gamble for unity, their leadership adding her forces to the war, their rifle ready for her aid.",
+            "The unifier’s legacy: Shepard’s diplomacy saves the galaxy, their heart a bridge between species, their codename a legend in Citadel halls. The era ends with a united fleet, their path a fight for all life, their leadership eternal in a galaxy bound together."
+          ]
+        }
+      },
+      {
+        "id": 7,
+        "era": "The Reaper War",
+        "title": "The Stand Against Extinction",
+        "Icon": "Reaper",
+        "color": "from-blue-600 to-black-600",
+        "bgPattern": "bg-gradient-to-br from-blue-800 via-black-700 to-grey-900",
+        "content": {
+          "summary": "Across *Mass Effect 3*, Shepard leads a desperate war against the Reapers, colossal machines bent on galactic extinction. From Earth to Thessia, they battle indoctrinated forces and build the Crucible. This era explores their defiance, strategic brilliance, and sacrifices in a war that tests the galaxy’s survival, forging their legend as a savior or martyr.",
+          "details": [
+            "Earth’s defense: As Reapers raze Earth, Shepard evacuates with Anderson, their rifle felling husks, their heart breaking for home. Their mind plans a counterattack, their codename a rallying cry, their path a fight for humanity, their leadership inspiring resistance in London’s ruins.",
+            "Palaven’s flames: On Palaven, Shepard aids turian resistance, their sniper rifle piercing banshees, their heart bold with Garrus’ resolve. Their mind coordinates fleet strikes, their codename a turian hero, their path a defense of their moon, their leadership rallying their forces against Reapers.",
+            "Tuchanka’s hope: Curing the genophage, Shepard battles a Reaper on Tuchanka, their Cain launcher blasting its core, their heart moved by krogan cheers. Their mind outsmarts its defenses, their codename a krogan legend, their path a victory for their future, their leadership uniting clans.",
+            "Thessia’s fall: Defending Thessia, Shepard fights Reaper asari banshees, their biotic slams saving civilians, their heart aching for Liara’s home. Their mind decodes temple secrets, their codename an asari ally, their path a desperate stand, their leadership rallying survivors amidst ruin.",
+            "Geth consensus: Entering the geth consensus, Shepard frees them from Reaper control, their tech drones aiding Legion, their heart trusting their sentience. Their mind rewrites their code, their codename a synthetic’s savior, their path a peace with quarians, their leadership uniting AI and organics.",
+            "Cerberus’ end: Storming Cronos Station, Shepard defeats the Illusive Man, their pistol stopping his indoctrination, their heart rejecting his lies. Their mind uncovers Reaper plans, their codename a terror to Cerberus, their path a dismantling of their empire, their leadership exposing their betrayal.",
+            "The final push: Leading the charge on Earth, Shepard unites fleets, their shotgun blasting marauders, their heart set on the Crucible. Their mind coordinates the armada, their codename a war cry, their path a stand against extinction, their leadership guiding the galaxy to victory or sacrifice.",
+            "The war’s end: Activating the Crucible, Shepard’s choice—destroy, control, or synthesize—ends the Reaper threat, their heart heavy with cost, their codename eternal in the stars. The era ends with Earth’s fate sealed, their path a legend, their leadership immortal in a galaxy reborn or lost."
+          ]
+        }
+      },
+      {
+        "id": 8,
+        "era": "The Moral Choices",
+        "title": "The Weight of Command",
+        "Icon": "Scale",
+        "color": "from-blue-600 to-grey-600",
+        "bgPattern": "bg-gradient-to-br from-blue-800 via-grey-700 to-black",
+        "content": {
+          "summary": "Across the *Mass Effect* series, Shepard faces moral dilemmas that shape the galaxy, from sparing the rachni to curing the genophage. Their choices—Paragon or Renegade—define their legacy, balancing compassion with pragmatism. This era explores their moral compass, the consequences of their decisions, and their leadership in navigating a universe of tough choices.",
+          "details": [
+            "Rachni dilemma: In *Mass Effect*, Shepard decides the rachni queen’s fate, sparing her for peace, their heart trusting her loyalty, their mind wary of her hive. Their codename a savior or destroyer, their path a gamble for unity, their leadership shaping her role in the Reaper war.",
+            "Virmire’s sacrifice: Choosing between Kaidan or Ashley on Virmire, Shepard’s heart breaks at the loss, their mind weighing their skills. Their codename a commander’s burden, their path a costly victory, their leadership rallying survivors, their choice haunting their dreams in the Normandy’s quiet nights.",
+            "Council’s fate: Saving or sacrificing the Citadel Council, Shepard’s heart prioritizes unity, their mind calculating fleet costs. Their codename a diplomat or pragmatist, their path a galactic shift, their leadership proving humanity’s worth or dominance, their choice echoing in Citadel politics.",
+            "Genophage cure: In *Mass Effect 3*, curing the genophage, Shepard honors Mordin’s sacrifice, their heart moved by krogan hope, their mind negotiating salarian fears. Their codename a krogan hero, their path a species’ revival, their leadership uniting clans, their choice a vow for life.",
+            "Quarian-geth peace: Brokering peace between quarians and geth, Shepard’s heart trusts both, their mind rewriting code for unity. Their codename a peacemaker’s cry, their path a bridge between foes, their leadership saving both, their choice a model for coexistence in a Reaper-torn galaxy.",
+            "Collector base choice: Deciding to destroy or spare the Collector base, Shepard’s heart rejects Reaper tech, their mind wary of Cerberus’ greed. Their codename a symbol of defiance, their path a stand against corruption, their leadership shaping humanity’s ethics, their choice a warning to the Illusive Man.",
+            "Crucible decision: Choosing to destroy, control, or synthesize Reapers, Shepard’s heart weighs the galaxy’s soul, their mind grappling with the Catalyst’s logic. Their codename a savior’s vow, their path a final stand, their leadership defining existence, their choice eternal in galactic history.",
+            "The commander’s burden: Shepard’s choices shape a universe, their heart a guide through chaos, their codename a legend of judgment. The era ends with them facing the Crucible, their path a legacy of morality, their leadership eternal in a galaxy forged by their will."
+          ]
+        }
+      },
+      {
+        "id": 9,
+        "era": "The Normandy Legacy",
+        "title": "The Ship of Heroes",
+        "Icon": "Starship",
+        "color": "from-blue-600 to-silver-600",
+        "bgPattern": "bg-gradient-to-br from-blue-800 via-silver-700 to-black",
+        "content": {
+          "summary": "Across the *Mass Effect* series, the Normandy—SR-1 and SR-2—serves as Shepard’s home, command center, and symbol of hope. From Saren’s pursuit to the Reaper war, it carries their squad through the stars. This era explores the Normandy’s role, Shepard’s leadership aboard it, and its legacy as a beacon in a galaxy under siege.",
+          "details": [
+            "Normandy SR-1: In *Mass Effect*, Shepard commands the SR-1, a stealth frigate, their heart proud of its crew, their mind mastering its systems with Joker’s piloting. Their codename a captain’s cry, their path a hunt for Saren, their leadership uniting the ship against geth, its stealth a key to victory.",
+            "Destruction and loss: The SR-1’s destruction by Collectors, killing Shepard, breaks their heart, their mind haunted by its wreckage. Their codename tied to its legacy, their path a vow to avenge it, their leadership rebuilding hope, the ship’s memory a spark in the stars.",
+            "Normandy SR-2: Rebuilt by Cerberus in *Mass Effect 2*, the SR-2 becomes Shepard’s new home, their heart wary of its origins, their mind leveraging its upgrades. Their codename rallies a new crew, their path a fight against Collectors, their leadership turning it into a rebel stronghold.",
+            "Crew’s home: The Normandy’s crew—Joker, EDI, Chakwas—becomes family, their heart warmed by their loyalty, their mind trusting their skills. Their codename a captain’s vow, their path a shared fight, their leadership fostering bonds, the ship a haven in a galaxy of war.",
+            "Reaper pursuit: In *Mass Effect 3*, the SR-2 evades Reapers, its stealth aiding Shepard’s missions, their heart set on its survival, their mind coordinating with EDI. Their codename a fleet’s beacon, their path a war through the stars, their leadership guiding it through battles.",
+            "Citadel refuge: Docked at the Citadel, the Normandy offers respite, Shepard’s heart eased by squad banter, their mind planning in its war room. Their codename a symbol of hope, their path a fight from its helm, their leadership making it a galactic rallying point.",
+            "Crucible escort: Escorting the Crucible, the Normandy faces Reaper fleets, Shepard’s heart bold with Joker’s maneuvers, their mind plotting its defense. Their codename a war cry, their path a final stand, their leadership ensuring its survival, the ship a legend in the galaxy’s fight.",
+            "The ship’s legacy: The Normandy carries Shepard’s legend, their heart its soul, their codename eternal in its halls. The era ends with it flying post-Crucible, their path a galactic beacon, their leadership immortal in a ship that saved the stars."
+          ]
+        }
+      },
+      {
+        "id": 10,
+        "era": "The Reaper Legacy",
+        "title": "The Cosmic Defiance",
+        "Icon": "Reaper Eye",
+        "color": "from-blue-600 to-black-600",
+        "bgPattern": "bg-gradient-to-br from-blue-800 via-black-700 to-grey-900",
+        "content": {
+          "summary": "Across the *Mass Effect* series, Shepard uncovers the Reapers’ ancient cycle of extinction, from Prothean ruins to the Catalyst’s truth. Battling indoctrination and cosmic forces, they defy a galactic purge. This era explores their role as a cosmic hero, their fight against an ancient evil, and their legacy in stopping a cycle older than the stars.",
+          "details": [
+            "Prothean visions: In *Mass Effect*, the Eden Prime beacon reveals Reaper cycles, Shepard’s mind haunted by Prothean warnings, their heart set against extinction. Their codename tied to ancient truths, their path a quest for knowledge, their leadership uncovering secrets in ruins, their rifle ready for geth.",
+            "Sovereign’s revelation: Facing Sovereign, Shepard learns of the Reapers’ galactic purge, their heart defiant against its voice, their mind decoding its tech. Their codename a terror to Reapers, their path a stand against cosmic evil, their leadership rallying fleets, their N7 armor a shield against indoctrination.",
+            "Collector connection: In *Mass Effect 2*, Shepard discovers Collectors as Reaper pawns, their heart raging at human abductions, their mind tracing their hive. Their codename a bane to husks, their path a war on Reaper proxies, their leadership destroying their base, their shotgun a tool of defiance.",
+            "Leviathan’s truth: In *Mass Effect 3*, Shepard meets the Leviathans, Reaper creators, their mind grappling with their history, their heart wary of their power. Their codename a cosmic spark, their path a fight against ancient masters, their leadership allying them, their biotic slams a stand against their will.",
+            "Catalyst’s choice: Meeting the Catalyst, the Reapers’ AI, Shepard learns of its cycle, their heart weighing its logic, their mind choosing the galaxy’s fate. Their codename a savior’s cry, their path a final defiance, their leadership shaping existence, their choice ending or redirecting the Reaper threat.",
+            "Indoctrination’s shadow: Battling indoctrinated foes—Saren, Illusive Man—Shepard resists their pull, their heart steady against Reaper whispers, their mind outsmarting their traps. Their codename a symbol of free will, their path a fight for minds, their leadership saving allies from control.",
+            "Galactic resistance: Uniting species against Reapers, Shepard’s heart fuels their hope, their mind coordinating fleets, their codename a war cry across stars. Their path a stand against extinction, their leadership building the Crucible, their rifle a beacon in a galaxy under siege.",
+            "The cosmic legacy: Shepard’s defiance ends the Reaper cycle, their heart a light in the dark, their codename eternal in the stars. The era ends with their choice reshaping history, their path a legend, their leadership immortal in a galaxy free or forever changed."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "_id": "68a639f58383ccaa602cc376",
+    "name": "Doom Slayer",
+    "title": "Doom Slayer: The Eternal Codex",
+    "meta": {
+      "note": "The complete chronicle of the Doom Slayer’s journey across the DOOM series, from a marine thrust into hellish combat to an ancient warrior eternally battling demonic forces, ancient gods, and cosmic betrayals. Each era explores his unyielding rage, unbreakable will, and silent defiance against the legions of Hell, drawing from key events in DOOM (1993) to DOOM Eternal: The Ancient Gods (2021).",
+      "format": "Array of era objects with id, era, title, Icon (string), color, bgPattern, content { summary, details[] }"
+    },
+    "chapters": [
+      {
+        "id": 1,
+        "era": "Origins and the UAC Marine",
+        "title": "The Soldier’s Descent",
+        "Icon": "Marine Helmet",
+        "color": "from-red-600 to-gray-600",
+        "bgPattern": "bg-gradient-to-br from-red-800 via-gray-700 to-black",
+        "content": {
+          "summary": "In the early days of the DOOM series, a nameless marine, later known as the Doomguy, is stationed on Mars as punishment for assaulting a superior officer. When hellish portals open during UAC experiments, he becomes humanity’s first line of defense against demonic invasion. This era, rooted in DOOM (1993) and expanded in lore, explores his transformation from an ordinary soldier to a relentless demon killer, forging his path through blood and fire in a facility overrun by Hell’s legions.",
+          "details": [
+            "Punishment posting on Mars: The marine, a battle-hardened UAC security guard with a record of insubordination, is transferred to Mars after punching a commanding officer who ordered him to fire on civilians during a riot. Arriving at the UAC’s Phobos base, he patrols sterile corridors lined with scientific equipment and flickering holographic displays, his standard-issue pistol holstered at his side, his mind wandering to thoughts of Earth and the life he left behind, his heart carrying a sense of resentment toward the corporate overlords who treat soldiers like disposable tools in their pursuit of interdimensional energy sources, his path seemingly mundane until the alarms blare, signaling the beginning of an unimaginable nightmare that will redefine his existence.",
+            "The resonance cascade equivalent: As UAC scientists push the boundaries of teleportation technology, experimenting with gateways to other dimensions in search of unlimited energy, a catastrophic failure occurs, ripping open portals to Hell itself and flooding the base with demonic entities ranging from fireball-hurling imps to hulking cybernetic hell knights. The marine, stationed in a remote security post, receives frantic radio calls from panicked colleagues describing the chaos unfolding in the labs, his heart pounding with adrenaline as he grabs his shotgun from the armory, his mind racing to process the impossible reports of monsters materializing out of thin air, his path now a desperate sprint through blood-soaked hallways where the screams of the dying echo off the metallic walls, his codename 'Doomguy' not yet earned but about to be forged in the fires of unrelenting combat.",
+            "First encounters with demons: Bursting into the Phobos labs, the marine faces his first demons—zombified former colleagues shambling toward him with vacant eyes and outstretched claws, their bodies twisted by hellish possession. He unloads his shotgun into their torsos, the blasts echoing like thunder as limbs fly and blood splatters the consoles, his heart steeling itself against the horror of killing what were once allies, his mind quickly adapting to the need for headshots to prevent reanimation, his path littered with the corpses of the undead as he presses forward, scavenging ammo from fallen guards and upgrading to a chaingun that shreds through the tougher pinky demons with their massive jaws and charging attacks, his determination growing with each kill as he realizes this is no ordinary invasion but a literal hell on Mars.",
+            "Navigating the Phobos base: The Phobos facility, a maze of interconnected labs, hangars, and toxic waste storage areas, becomes a labyrinth of death where the marine must solve environmental puzzles to progress, such as finding keycards to unlock doors or activating switches to lower radiation barriers while fending off waves of demons that seem to pour endlessly from the glowing red portals. He navigates dimly lit corridors where the hum of flickering lights mixes with the guttural growls of approaching enemies, his heart maintaining a steady rhythm despite the constant threat, his mind memorizing the layout through trial and error as he backtracks for missed secrets like hidden armor caches or health packs tucked behind destructible walls, his path a relentless advance through levels of increasing difficulty, his arsenal expanding to include the plasma rifle that melts through baron of hell's tough hides with its blue energy bolts.",
+            "Deeper into Deimos: As the marine descends to the Deimos base via a teleporter, he finds the facility warped by demonic influence, its structures twisted into nightmarish forms with rivers of lava and floating platforms suspended over abyssal voids. He battles cyberdemons, massive goat-legged behemoths armed with rocket launchers, dodging their projectiles with precise sidesteps while retaliating with his own BFG9000, a weapon that unleashes green plasma orbs capable of vaporizing groups of enemies in a single shot, his heart unflinching in the face of their roars, his mind calculating the perfect timing to fire and avoid splash damage, his path a descent into literal Hell as the teleporters begin to malfunction and transport him to infernal dimensions filled with brimstone and eternal flames.",
+            "Hell’s legions: In the infernal realms, the marine faces the full might of Hell’s army—cacodemons floating like bloated tomatoes with gaping maws spewing fireballs, lost souls screaming as they charge, and arch-viles resurrecting fallen demons with their unholy magic. He adapts his tactics, using the chainsaw to carve through lesser foes like imps in close quarters for ammo conservation, his heart pumping with the thrill of combat despite the overwhelming odds, his mind exploiting the environment by luring enemies into lava pits or under collapsing structures, his path a bloody trail through Hell’s nine circles, his endurance tested as he scavenges for medkits to heal wounds from hell knight's plasma blasts.",
+            "The Spider Mastermind’s lair: Reaching the depths of Hell, the marine confronts the Spider Mastermind, a gigantic arachnid demon with a chaingun mounted on its cybernetic body, its rapid-fire barrages forcing him to seek cover behind pillars while countering with the BFG9000's devastating blasts that chip away at its armor. The battle is intense, the ground shaking with each of its steps, his heart resolute as he dodges its sweeping attacks and exploits brief windows to unload rockets into its vulnerable underbelly, his mind focused on the patterns of its movements to predict and evade, his path culminating in its defeat which closes the portals and ends the invasion on Mars, his victory a temporary reprieve as Hell’s forces retreat but vow eternal vengeance.",
+            "The marine’s legend: Escaping Hell via a portal, the marine emerges on Earth, only to find demons have invaded, his heart set on continuing the fight, his mind already planning the next battle. His codename 'Doomguy' now a symbol of humanity’s resistance, his path an endless war against Hell, his shotgun a beacon in the dark, his legacy forged in the fires of Phobos and Deimos, ready for Earth’s hellish reckoning."
+          ]
+        }
+      },
+      {
+        "id": 2,
+        "era": "DOOM II: Hell on Earth",
+        "title": "The Earth Invasion",
+        "Icon": "Earth",
+        "color": "from-red-600 to-brown-600",
+        "bgPattern": "bg-gradient-to-br from-red-800 via-brown-700 to-black",
+        "content": {
+          "summary": "In DOOM II: Hell on Earth (1994), the Doomguy returns to Earth after Mars, finding it overrun by demons from Hell’s gates. Fighting through cities and bases to close the portals, he faces new horrors like revenants and arch-viles. This era explores his unyielding assault on Hell’s earthly forces, his role as humanity’s lone savior, and his descent into Hell to end the invasion.",
+          "details": [
+            "Return to a doomed Earth: After sealing Hell’s portals on Mars, the marine crash-lands on Earth, finding cities ablaze and skies darkened by demonic swarms, human survivors barricaded in crumbling buildings as imps and hell knights roam the streets. He scavenges a pistol from a fallen soldier, his heart steeling against the horror of homeworld invasion, his mind assessing the urban battlefield where familiar landmarks like spaceports are now gateways spewing infernal creatures, his path a one-man counterattack to stem the tide before humanity is extinguished, his codename 'Doomguy' becoming a whispered prayer among the few remaining civilians.",
+            "Urban warfare in the streets: Navigating the ruined cityscapes, the marine battles through office buildings and subways turned into demonic lairs, where mancubi fire plasma cannons from rooftops and pain elementals spawn lost souls that swarm like angry bees. He upgrades to a super shotgun that blasts through groups of zombies with its double-barreled fury, his heart unflinching as he clears room after room, his mind exploiting narrow corridors to funnel enemies into kill zones, his path littered with spent shells and demon corpses as he pushes toward the central portal hub, his endurance pushed to limits by the ceaseless waves that seem to regenerate from the hellish rifts.",
+            "Industrial bases overrun: Infiltrating UAC facilities on Earth now corrupted by Hell’s influence, the marine faces cyberdemons patrolling assembly lines and barons of hell guarding fusion reactors, their fireballs scorching the air as he dodges behind conveyor belts for cover. He activates emergency shutdowns to trap demons in blast doors, his intellect turning the environment against them, his heart driven by memories of Black Mesa's fall, his path a systematic purge of each sector, his arsenal expanding to the plasma gun that overheats machinery and melts infernal armor alike, his codename echoing in the static of abandoned radios.",
+            "New demonic horrors: Encountering revenants—skeletal demons with homing missiles—and arch-viles that resurrect fallen foes with flames, the marine adapts his tactics, prioritizing the arch-viles with the BFG9000's massive green plasma explosions that vaporize groups in a chain reaction. He learns to anticipate the revenants' shoulder-launched rockets by listening for their homing whine, sidestepping at the last moment, his heart maintaining a steady beat despite the escalating threats, his mind cataloging their weaknesses like exposed wiring on the cybernetic implants, his path a gauntlet of evolving enemies that demand constant innovation to survive the onslaught.",
+            "Hell’s gates on Earth: Reaching the central demonic citadel built from twisted human architecture fused with hellish bone and flesh, the marine battles through courtyards filled with arachnotrons—spider-like machines with plasma guns—and mancubi leading charges of lesser demons. He uses the environment, collapsing bridges to drown enemies in lava moats, his intellect outpacing their brute force, his heart fueled by the sight of human skulls decorating the walls, his path a direct assault on the portal generators that sustain the invasion, his shotgun and rocket launcher a symphony of destruction in the infernal fortress.",
+            "The Icon of Sin’s awakening: Confronting the Icon of Sin, a massive demonic wall that spawns endless enemies from its brain-like core, the marine navigates platforms suspended over hellish voids, dodging the spawned demons while targeting the Icon's weak point with perfectly timed rocket launches that require precision to avoid self-damage from splash. The battle is epic, the ground shaking with each spawn wave of barons and cacodemons, his heart resolute as he climbs closer to the core, his mind calculating the trajectory through the chaos, his path culminating in a final explosive strike that shatters the Icon and closes the primary portal, ending Hell's foothold on Earth but at the cost of immense physical exhaustion.",
+            "Earth’s fragile peace: With the portals closed, the marine surveys the devastated planet, cities in ruins but humanity clinging to survival, his heart weary but satisfied with the victory, his mind already pondering the source of Hell's endless aggression. He ventures through a final gate to ensure no demons remain, his path leading back into the infernal realms for a preemptive strike, his codename now synonymous with salvation among the survivors who begin to rebuild, his legend growing as 'the man who saved Earth from Hell'.",
+            "The slayer’s mark: The marine’s triumphs cement his legend, his heart a symbol of humanity’s defiance, his codename 'Doomguy' eternal in survivor tales. The era ends with him stepping through a portal, his shotgun ready, his pistols gleaming, his path an endless war, his leadership silent but unbreakable against Hell’s legions."
+          ]
+        }
+      },
+      {
+        "id": 3,
+        "era": "DOOM 64: The Absolution",
+        "title": "The Mother Demon’s Curse",
+        "Icon": "Portal",
+        "color": "from-red-600 to-purple-600",
+        "bgPattern": "bg-gradient-to-br from-red-800 via-purple-700 to-black",
+        "content": {
+          "summary": "In DOOM 64 (1997), the Doomguy returns to the UAC bases on Phobos and Deimos after their decontamination, only to find a new demonic threat led by the Mother Demon, who resurrects Hell’s armies. Fighting through redesigned facilities and deeper into Hell, he seeks to end the invasion permanently. This era explores his continued war against resurrection, his role as Hell’s bane, and his quest for absolution in a cycle of eternal combat.",
+          "details": [
+            "Return to Phobos: After Earth’s salvation, the marine is recalled to Phobos for a UAC cleanup operation, finding the base resealed but corrupted anew by demonic energy, with hell knights and lost souls emerging from shadowed corners. He arms himself with familiar weapons like the double-barreled shotgun, its blasts echoing through the refurbished but still eerie corridors, his heart sensing the familiar pull of Hell's influence, his mind alert to the subtle changes in the facility's layout that hint at a more insidious resurrection, his path a precautionary sweep that quickly turns into another full-scale war as portals flicker back to life.",
+            "Deimos’ resurrected horrors: Descending to Deimos, the marine encounters enhanced demons like nightmare imps that move with blinding speed and cyber-mancubi with improved armor, forcing him to adapt his strategies by using the unmaker, a powerful laser weapon crafted from demonic technology, to pierce through their defenses. The base's architecture, now fused with even more hellish elements like organic walls pulsing with veins, challenges his navigation skills as he solves switch puzzles to access sealed areas, his heart steadfast against the growing dread, his mind piecing together signs of a central entity orchestrating the revival, his path a deeper dive into the facilities where the nightmare began.",
+            "The Unmaker’s power: Discovering fragments of the Unmaker scattered throughout the bases, the marine assembles this ancient weapon designed specifically to combat demons, its beams disintegrating hell spawn with unholy efficiency and revealing hidden platforms or secrets when fired at certain walls. He tests it against chainsaw-wielding nightmare demons that charge relentlessly, his heart empowered by its destructive force, his mind calculating its energy consumption to avoid overheating during prolonged battles, his path illuminated by its glow as he uncovers more about the Mother Demon's role in resurrecting the hordes, his determination to end the cycle once and for all burning brighter with each kill.",
+            "Deeper hellish realms: Venturing through new portals, the marine explores twisted dimensions where gravity shifts and environments blend Mars' red dust with Hell's brimstone, facing pain elementals that spawn swarms of lost souls and arachnotrons upgraded with homing missiles. He utilizes environmental hazards like acid pools to lure enemies to their doom, his intellect turning the chaotic landscapes to his advantage, his heart unyielding to the psychological terror of the realms' illusions and whispers, his path a relentless push toward the source of the corruption, his arsenal now fully upgraded with the plasma gun's rapid fire proving invaluable against clustered foes.",
+            "Cyberdemon rematch: Confronting a more aggressive cyberdemon in a vast arena filled with teleport pads and ammo crates, the marine circles it with dodging maneuvers, using the BFG9000 to soften its cybernetic enhancements before finishing with rocket barrages to its exposed flesh. The battle tests his endurance as the demon's rockets crater the ground and create obstacles, his heart pumping with the adrenaline of revenge for past encounters, his mind anticipating its stomp attacks that send shockwaves across the arena, his path cleared for deeper incursions into Hell's fortified positions, his victory a step closer to facing the Mother Demon.",
+            "The Mother Demon’s lair: Reaching the core of Hell's resurgence, the marine battles the Mother Demon, a grotesque entity capable of resurrecting all demons and firing devastating energy blasts, requiring him to maintain constant movement while targeting her weak points with the Unmaker's focused beams that exploit her demonic essence. The lair, a cavernous pit with rising platforms and spawning minions, demands precise timing to avoid her resurrection waves that bring back defeated foes, his heart fueled by the desire to end the eternal cycle, his mind exploiting brief windows when her shields drop after major attacks, his path culminating in her destruction which finally seals Hell's portals for good, or so it seems.",
+            "Absolution and exile: With the Mother Demon slain, the marine activates a device to collapse the remaining portals, but finds himself trapped in Hell as the dimensions stabilize, his heart resolute in his self-sacrifice to ensure Earth's safety, his mind reflecting on the countless battles that led to this moment. He wanders the infernal plains, becoming a myth among demons as the one who cannot be killed, his path an eternal vigil against any resurgence, his codename 'Doomguy' now synonymous with terror in Hell's ranks, his legend growing as the slayer who chose exile to protect his world.",
+            "The eternal guardian: The marine’s sacrifice cements his legend, his heart a symbol of humanity’s defiance, his codename eternal in UAC reports. The era ends with him facing a new demonic horde in Hell, his shotgun ready, his pistols gleaming, his path an endless war, his leadership silent but unbreakable against Hell’s legions."
+          ]
+        }
+      },
+      {
+        "id": 4,
+        "era": "DOOM 3: Resurrection of Evil",
+        "title": "The Artifact’s Curse",
+        "Icon": "Artifact",
+        "color": "from-red-600 to-black-600",
+        "bgPattern": "bg-gradient-to-br from-red-800 via-black-700 to-gray-900",
+        "content": {
+          "summary": "In DOOM 3: Resurrection of Evil (2005), a marine engineer discovers the Artifact, an ancient hellish device that resurrects demons on Mars. Fighting through UAC facilities and Hell to seal it, he faces the Maledict and other horrors. This era, a side story, explores the continued demonic threat, the Artifact’s power, and a new hero’s stand against Hell’s resurrection.",
+          "details": [
+            "Discovery of the Artifact: Two years after the original Mars invasion, a UAC engineer on a routine dig uncovers the Artifact, a blood-red, skull-shaped device pulsing with demonic energy, accidentally activating it and unleashing a new wave of hellish creatures that corrupt the base's personnel and machinery. He grabs the Artifact, which grants him enhanced strength and speed but at the cost of visions of Hell's torments, his heart filled with dread as he realizes its power to open portals, his mind racing to understand its ancient runes while fending off initial imp attacks with a grabbed shotgun, his path set as an unwitting guardian forced to wield the cursed object to survive the resurgence.",
+            "UAC Delta Labs overrun: Navigating the Delta Labs now twisted by the Artifact's influence, the engineer battles familiar demons like trites and ticks that scurry across ceilings, using the Artifact's time-slow ability to dodge their leaps and counter with precise pistol shots. The labs' sterile environments contrast with the growing organic hellgrowth creeping through vents, his heart pounding with the urgency to contain the spread before it consumes the entire facility, his mind piecing together logs from deceased scientists warning of the Artifact's seductive power that corrupts users over time, his path a desperate push through locked doors unlocked by puzzle-like power rerouting amid constant ambushes.",
+            "Resurrected enemies and new threats: Encountering revived cyberdemons and sabbaths that blend machine and flesh in more grotesque forms, the engineer adapts by using the Artifact's helltime to slow motion, allowing him to sidestep rocket barrages and deliver headshots with the machine gun. The resurrection mechanic forces him to double-tap fallen enemies to prevent their revival, his heart steeling against the horror of watching corpses twitch back to life, his mind calculating the Artifact's charge limits to avoid overuse that drains his health, his path littered with permanently dispatched demons as he delves deeper into the base's core where the corruption originated.",
+            "Hell’s guardians return: Facing the Hell Hunters—three elite demons empowered by the Artifact's fragments—the engineer battles them in phased arenas, first the Invulnerability Hunter that charges relentlessly until its shield is overloaded with plasma fire, then the Berserk Hunter that smashes through obstacles with brute force countered by agile dodging and shotgun blasts at close range, and finally the Maledict Hunter that flies and summons meteors, requiring the Artifact's grab ability to pull it down for damage. Each victory absorbs a fragment back into the Artifact, enhancing its powers but increasing its corrupting influence, his heart resisting the temptation to fully embrace its strength, his mind using the new abilities like soul siphon to drain enemy life force for health restoration, his path a gauntlet of boss fights that test his growing reliance on the cursed tool.",
+            "The Maledict’s domain: Venturing into Hell through a massive portal opened by the Artifact's full activation, the engineer confronts the Maledict, a flying demonic skull with bat wings that rains fireballs and summons minions from the skies. The open hellish landscape with floating islands and lava rivers allows for dynamic movement, using the Artifact's double jump and grab to navigate and pull floating skulls for ammo, his heart defiant against its taunts of eternal damnation, his mind timing attacks to exploit brief vulnerabilities after its dive bombs, his path culminating in a final empowered shot from the Artifact that shatters the Maledict and seals the portal, but at the cost of the Artifact's destruction which leaves him stranded in Hell as a final curse.",
+            "Stranded in eternal combat: With the Artifact shattered and the portal closed, the engineer finds himself trapped in Hell, surrounded by endless demonic hordes that sense his vulnerability without the cursed device's protection. He scavenges weapons from fallen demons, adapting to the eternal battlefield where time loops in cycles of combat, his heart embracing the role of an undying warrior cursed to fight forever, his mind devising infinite strategies to survive wave after wave, his path an unending loop of slaying that solidifies his transformation into a mythic figure, his legend as a 'doomed marine' growing even in the infernal realms where demons whisper of the one who cannot be slain.",
+            "The curse’s legacy: The engineer’s sacrifice seals Hell’s resurgence, but his eternal combat inspires future slayers, his heart a symbol of defiance, his codename a legend in UAC whispers. The era ends with him facing a new horde, his shotgun ready, his pistols gleaming, his path an endless war, his leadership silent but unbreakable against Hell’s legions.",
+            "The doomed marine: The marine’s curse cements his myth, his heart unyielding, his codename eternal in Hell’s halls. The era closes with him in the abyss, his path a legacy of torment, his leadership immortal in a fight without end."
+          ]
+        }
+      },
+      {
+        "id": 5,
+        "era": "DOOM 3: The Lost Mission",
+        "title": "The Bravo Team’s Fate",
+        "Icon": "Team",
+        "color": "from-red-600 to-blue-600",
+        "bgPattern": "bg-gradient-to-br from-red-800 via-blue-700 to-black",
+        "content": {
+          "summary": "In DOOM 3: The Lost Mission (2005 DLC), a Bravo Team marine survives the initial invasion, fighting through uncharted UAC facilities to close a portal to Hell. Facing demons and discovering lost tech, he uncovers the UAC’s dark experiments. This era, a side story, explores a lone survivor’s fight, his role in containing the outbreak, and his quest for escape in a facility of horrors.",
+          "details": [
+            "Bravo Team’s isolation: As part of Bravo Team, the marine is separated during the invasion, trapped in a remote UAC sector with limited comms to the outside. He scavenges a pistol from a fallen comrade, his heart pounding as demons breach the airlocks, his mind assessing the sealed doors and ventilation shafts for escape routes, his path a solitary push through auxiliary labs where the lights flicker and the air fills with the stench of sulfur from emerging hellish rifts.",
+            "Uncharted facilities: Navigating previously unexplored areas like the Exis Labs, the marine battles through corridors filled with new demon variants such as bruisers with mouth cannons and tentacles that lash out from afar, using the grabber tool—a prototype gravity gun—to hurl barrels and debris at them for ammo conservation. The labs' experimental equipment provides clues to UAC's forbidden research on dimensional travel, his heart disgusted by logs detailing human sacrifices to stabilize portals, his mind piecing together the catastrophe's origin, his path a discovery of horrors that extend beyond the main base's known sectors.",
+            "Lost tech discoveries: Uncovering prototype weapons like the double-barreled shotgun that packs a punch against groups of ticks and trites, the marine tests them in confined spaces where the blast radius risks self-damage, learning to time shots perfectly. He activates teleporters that malfunction due to corruption, sending him to pocket dimensions of Hell where gravity inverts and enemies spawn from walls, his intellect adapting to the shifting physics by using the environment to crush demons under falling debris, his heart resolute against the disorientation, his path illuminated by the glow of experimental energy sources that power his newfound arsenal.",
+            "Demonic ambushes and traps: Encountering traps set by intelligent demons like hell knights who collapse ceilings or summon imp reinforcements, the marine uses grenades to clear groups and the chainsaw for close encounters with z-sec soldiers turned undead. The ambushes in narrow maintenance tunnels force quick reflexes to avoid being overwhelmed, his heart maintaining focus through the adrenaline, his mind anticipating patterns from the demons' guttural communications, his path a gauntlet of surprises that hone his survival instincts in the isolated wings of the facility.",
+            "The teleporter to Hell: Activating a forbidden UAC teleporter to pursue the source of the resurgence, the marine is transported to Hell's outskirts, where the landscape is a twisted amalgamation of flesh and machinery with rivers of blood and floating skulls that attack on sight. He battles through hordes of forgotten ones—demons left behind in previous incursions—with the plasma gun's rapid fire, his heart defiant against the oppressive atmosphere that saps morale, his mind navigating the non-Euclidean geometry where paths loop illogically, his path a deliberate incursion to disrupt Hell's reinforcement lines before they can flood the base anew.",
+            "Confronting the Guardian: Facing the Guardian of Hell, a blind beast with seeker minions that act as its eyes, the marine targets the seekers first with precise shotgun blasts to blind the creature, then unleashes rockets on its exposed weak points as it charges blindly. The battle in a vast hellish arena with lava pits and collapsing platforms demands constant movement, his heart pumping with the thrill of outsmarting a superior foe, his mind exploiting the Guardian's reliance on its minions, his path cleared for the final portal shutdown that could end the lost mission's nightmare.",
+            "Sealing the portal: Reaching the portal generator powered by stolen UAC tech in Hell, the marine overloads its systems by destroying coolant pipes and energy cores while fending off waves of demons summoned to defend it, using the artifact-like grabber to hurl explosive barrels at the structure. The generator's explosion creates a chain reaction that seals the rift but strands him temporarily in a collapsing pocket of Hell, his heart accepting the risk for the greater good of preventing further invasions, his mind calculating escape routes through the chaos, his path leading back to a battered but secured base where survivors can finally evacuate.",
+            "The survivor’s legacy: The marine’s victory seals the portal, his heart a symbol of humanity’s resistance, his codename a legend in UAC logs. The era ends with him facing a new threat, his shotgun ready, his pistols gleaming, his path an endless war, his leadership silent but unbreakable against Hell’s legions."
+          ]
+        }
+      },
+      {
+        "id": 6,
+        "era": "DOOM (2016): The Slayer Awakens",
+        "title": "The Argent Tower Assault",
+        "Icon": "Praetor Suit",
+        "color": "from-red-600 to-orange-600",
+        "bgPattern": "bg-gradient-to-br from-red-800 via-orange-700 to-black",
+        "content": {
+          "summary": "In DOOM (2016), the Doom Slayer awakens on Mars after centuries in a sarcophagus, unleashed to stop the UAC’s demonic invasion fueled by Argent Energy from Hell. Battling through facilities and Hell, he destroys the Well and stops Olivia Pierce’s plan. This era explores his eternal rage, his role as Hell’s doom, and his unyielding assault on demonic corruption in a corporate Hell.",
+          "details": [
+            "Awakening in the UAC facility: The Slayer awakens chained in a UAC sarcophagus on Mars, breaking free as demons swarm, his Praetor Suit activating with ancient runes that enhance his strength and speed. He grabs a pistol from a possessed worker, his heart burning with timeless rage against Hell, his mind instinctively navigating the high-tech corridors filled with holographic displays and blood-smeared walls, his path a violent awakening as he punches through gore nests that spawn imps and soldiers, his codename 'Doom Slayer' etched in demonic fear from eons past.",
+            "Argent Energy’s corruption: Exploring the UAC's Argent Facility, the Slayer discovers the corporation's exploitation of Hell's energy source, Argent, which powers humanity but opens portals for demonic invasions. He battles possessed engineers turned into flaming skulls that explode on impact, using his combat shotgun to blast them from mid-air, his heart defiant against the UAC's hubris, his mind hacking terminals to uncover logs of Olivia Pierce's pact with Hell for personal power, his path a systematic dismantling of the facility's defenses including laser grids and automated turrets that he rips apart with his bare hands.",
+            "The Super Shotgun’s retrieval: Delving into resource operations, the Slayer retrieves the Super Shotgun from a locked armory, its double-barreled design perfect for close-quarters carnage against groups of hell knights that charge with ground-pounding leaps. He tests it on revenants launching homing missiles, the blasts shredding their skeletal frames, his heart reveling in the weapon's raw power, his mind adapting to its spread for maximum efficiency in narrow hallways, his path illuminated by the muzzle flash as he pushes toward the Argent Tower, the heart of the UAC's demonic energy production.",
+            "Battling the Cyber-Mancubus: Encountering the Cyber-Mancubus, a heavily armored demon with acid launchers and cybernetic enhancements, the Slayer circles it in a vast processing chamber, dodging toxic pools while using the chainsaw to cut through its defenses for ammo drops. The beast's ground slams create shockwaves that he jumps over with double leaps, his heart steady in the face of its roars, his mind targeting its exposed vents with precision grenade launches, his path cleared for higher levels where the corruption intensifies with more elite demons patrolling the elevated walkways.",
+            "Hell’s guardians on Mars: As portals open wider, the Slayer faces barons of hell in the Lazarus Labs, their fireballs countered by his gauss cannon's siege mode that pierces through multiple enemies. The labs' experiments on demon physiology provide lore on their weaknesses, his intellect absorbing the data from scattered tablets, his heart unphased by the grotesque dissections, his path a rampage through testing chambers where he activates teleporters to access restricted areas filled with even deadlier variants like the summoner that calls reinforcements from thin air.",
+            "Olivia Pierce’s betrayal: Confronting Olivia Pierce at the Argent Tower's peak, the Slayer witnesses her transformation into a hellish entity after opening a massive portal to Hell, summoning waves of demons including pinkies and cacodemons that fill the sky. He battles through the horde with the BFG9000's green plasma trails that chain between enemies, his heart raging against her corporate greed that doomed Mars, his mind calculating the tower's structural weak points to collapse sections on demon clusters, his path leading to a dive into the portal itself to cut off the invasion at its source.",
+            "Descent into Argent D'Nur: Transported to the hellish dimension of Argent D'Nur, the Slayer navigates ancient ruins fused with demonic architecture, battling hell razers and unholy priests that channel dark energy beams. He uncovers lore stones detailing his own ancient history as the Slayer who once aided the Night Sentinels against Hell, his heart resonating with forgotten memories of betrayal, his mind piecing together his eternal cycle of combat, his path a rediscovery of his origins as he presses toward the Well, the source of Argent Energy that sustains Hell's armies.",
+            "The Well’s destruction: At the Well, a massive energy extractor guarded by the Cyberdemon reborn with enhanced armor and homing rockets, the Slayer engages in an epic duel, using glory kills to rip out its heart for health restoration while dodging its charge attacks that crater the ground. With the demon slain, he overloads the Well with Argent accumulators, causing a chain reaction that severs Hell's energy supply to Mars, his heart satisfied with the blow to demonic forces, his mind contemplating the UAC's folly, his path leading back to Mars where he shuts down the remaining portals, his codename 'Doom Slayer' now fully reclaimed as the harbinger of Hell's end.",
+            "The Slayer’s testament: With the portals closed and Mars secured, the Slayer is teleported away by Samuel Hayden, the UAC's cybernetic leader who sees him as a threat, confiscating the Crucible sword but unable to contain his rage. The Slayer's heart burns for eternal vengeance, his mind plotting his return, his codename a curse in demonic tongues, his path an unending war, his Praetor Suit a symbol of unyielding destruction in a universe scarred by Hell's touch.",
+            "The eternal rage: The Slayer’s legend endures, his heart a fire against darkness, his codename echoing in UAC halls. The era ends with him in stasis, his chainsaw ready, his pistols gleaming, his path a promise of doom, his leadership silent but unbreakable against Hell’s legions."
+          ]
+        }
+      },
+      {
+        "id": 7,
+        "era": "DOOM VFR: The Virtual Front",
+        "title": "The Digital Hell",
+        "Icon": "VR Headset",
+        "color": "from-red-600 to-blue-600",
+        "bgPattern": "bg-gradient-to-br from-red-800 via-blue-700 to-black",
+        "content": {
+          "summary": "In DOOM VFR (2017), a UAC scientist’s consciousness is uploaded into a cybernetic body during a demonic invasion on Mars, fighting to contain the outbreak using virtual reality interfaces and advanced weapons. This era explores a new perspective on the Slayer’s world, the fusion of human mind with machine, and a desperate battle to prevent Hell’s spread through digital means.",
+          "details": [
+            "Digital resurrection: As demons overrun the UAC Mars facility, a dying scientist's mind is uploaded into a combat drone, granting him mobility and weapons to fight back, his heart adapting to the disembodied state where sensations are simulated through code, his mind racing to process the virtual interface that allows teleportation-like movement, his path a digital assault on the physical invasion, his codename 'Last Man Standing' in the UAC's logs as he becomes the only hope for containment.",
+            "Virtual navigation of the base: Using teleportation mechanics to zip through corridors while avoiding demon fire, the scientist battles imps and possessed with a grenade launcher that bounces off walls for indirect kills, his heart steadying as he adjusts to the lack of physical fatigue, his mind exploiting the VR system's hacking capabilities to override doors and turrets against enemies, his path a blend of physical combat and digital manipulation in the ruined labs where hellgrowth merges with circuitry.",
+            "Hacking demonic systems: Encountering corrupted terminals that spawn enemies when approached, the scientist uses data probes to hack and purify them, gaining access to security footage that reveals the invasion's progression and clues to the central portal. The hacking mini-games require precise timing to align code sequences, his intellect thriving in the digital puzzles, his heart defiant against the growing demonic presence that corrupts the facility's AI, his path a cybernetic purge of hellish influence, his arsenal expanding to include multi-lock missile systems that target multiple demons simultaneously.",
+            "Battling hell in VR: Facing unique demons like the marauder prototypes that shield against direct attacks, the scientist teleports behind them for backstabs with energy blades, the VR perspective allowing for immersive dodging of axe throws. The battles in zero-gravity sections where demons float and attack from all angles demand spatial awareness, his heart embracing the freedom of movement without bodily limits, his mind calculating trajectories for grenade arcs, his path a virtual gauntlet through the facility's core where reality blends with hellish simulations.",
+            "The cybernetic Maledict: Confronting a cybernetically enhanced Maledict fused with UAC tech, the scientist uses teleport dodges to avoid its sweeping laser beams and summons, countering with plasma rifles that overheat its implants. The boss arena, a vast server room with floating platforms, allows for vertical combat, his intellect targeting cooling vents to weaken the beast, his heart resolute in ending the digital-hybrid threat, his path culminating in a system overload that banishes the demon back to Hell while stabilizing the facility's networks.",
+            "Sealing the digital rift: Accessing the central AI core corrupted by demonic code, the scientist initiates a full system purge, fighting off waves of virtual demons manifested in the network while the process completes, using shield drones for protection and multi-tool weapons to switch between offensive modes. The purge succeeds but traps his consciousness in a loop, his heart accepting the sacrifice for humanity's safety, his mind reflecting on the hubris of blending tech with hellish forces, his path ending in a digital limbo where he continues to guard against any resurgence.",
+            "The virtual guardian: The scientist’s sacrifice contains the invasion, his heart a digital sentinel, his codename eternal in UAC firewalls. The era ends with his code running simulations of battles, his path an endless watch, his leadership silent but unbreakable against virtual Hell.",
+            "The cursed code: The marine’s digital legacy inspires future fighters, his heart a fire against corruption, his codename echoing in servers. The era closes with his program facing a new glitch, his path a legacy of containment, his leadership immortal in a fight without end."
+          ]
+        }
+      },
+      {
+        "id": 8,
+        "era": "DOOM Eternal: The Ancient Gods Part One",
+        "title": "The Makyr’s Betrayal",
+        "Icon": "Angel Wing",
+        "color": "from-red-600 to-white-600",
+        "bgPattern": "bg-gradient-to-br from-red-800 via-white-700 to-gray-900",
+        "content": {
+          "summary": "In DOOM Eternal: The Ancient Gods Part One (2020 DLC), the Doom Slayer journeys to Urdak, the Maykr heaven, to stop the Khan Maykr’s pact with Hell that threatens Earth. Battling angelic and demonic forces, he uncovers cosmic betrayals. This era explores his war against divine corruption, his role as creation’s doom, and his unyielding assault on heavenly deceit.",
+          "details": [
+            "Awakening to new threats: After destroying the Icon of Sin on Earth, the Slayer is summoned by the Seraphim to Urdak, the Maykr realm, where the Khan Maykr's alliance with Hell has corrupted the heavenly order, spawning demonic incursions even in paradise. He arms himself with the Crucible blade, its energy slicing through Maykr drones that patrol the ethereal spires, his heart burning with rage against the betrayal of divine beings who were supposed to protect worlds but instead bargained with Hell for immortality, his mind piecing together the cosmic pact from ancient holograms, his path a holy war against the false gods who manipulated Hell's invasions.",
+            "Urdak’s corrupted halls: Navigating Urdak's floating cathedrals and energy bridges, the Slayer battles Maykr angels with wings of light and staffs that summon lightning, using his super shotgun to ground them before finishing with glory kills that shatter their divine armor. The realm's pristine architecture contrasts with growing demonic taint like blood vines creeping over golden walls, his heart defiant against the hypocrisy of a heaven that trades in souls, his mind solving alignment puzzles to activate portals that lead deeper into the corrupted core, his path illuminated by the glow of fallen angels whose essence he absorbs to fuel his rage.",
+            "The Seraphim’s revelation: Encountering the Seraphim, a fallen Maykr who once empowered the Slayer in ancient times, reveals the Khan's desperate plan to resurrect the Dark Lord of Hell using stolen Earth souls to sustain Urdak's immortality engines. The Seraphim grants him the Maykr's bane weapon, a hammer that smashes through angelic shields, his intellect adapting to its charged attacks that create shockwaves, his heart allying with the outcast for mutual vengeance, his path a alliance forged in betrayal as he presses toward the Khan's sanctum where the ritual unfolds.",
+            "Battling the Icon remnants: Facing remnants of the Icon of Sin manifested as titanic arms bursting from portals, the Slayer uses the BFG10K's massive projectiles to sever the limbs before they can crush Urdak's structures, the explosions chain-reacting through demon swarms that pour from the rifts. The scale of the battle demands mobility with double dashes and grapples, his heart unphased by the colossal threat, his mind targeting structural weak points to collapse sections on the manifestations, his path cleared for the confrontation with the Khan Maykr who watches from her throne with disdain for the 'mortal' slayer.",
+            "The Khan Maykr’s duel: Confronting the Khan Maykr in her arena of light, the Slayer dodges her energy beams and summoned blood punches while using the Crucible to shatter her protective orbs that orbit like satellites. The duel phases through her teleportations and minion summons of empowered imps, his intellect anticipating her patterns based on Maykr technology scans, his heart raging against her godly arrogance that sacrificed countless worlds for her people's survival, his path culminating in a final strike that ends her reign and disrupts Urdak's pact with Hell, but at the cost of destabilizing the realm's dimensional barriers.",
+            "Urdak’s fall and exile: With the Khan slain, Urdak collapses into chaos as portals to Hell widen without her control, the Slayer fighting through escaping demons and falling spires to reach an extraction point activated by the Seraphim. The realm's destruction severs Hell's direct link but strands the Slayer in a limbo dimension, his heart accepting the isolation as the price for victory, his mind plotting his return to continue the eternal war, his path a self-imposed exile to prevent further cosmic imbalances caused by the Maykr's fall.",
+            "The divine slayer: The Slayer’s triumph over the Maykrs cements his god-killing legend, his heart a fire against betrayal, his codename eternal in cosmic whispers. The era ends with him in limbo, his chainsaw ready, his pistols gleaming, his path an endless war, his leadership silent but unbreakable against divine legions.",
+            "The eternal godslayer: The Slayer’s legacy endures, his heart unyielding, his codename echoing in fallen heavens. The era closes with his return signal, his path a legacy of defiance, his leadership immortal in a fight without end."
+          ]
+        }
+      },
+      {
+        "id": 9,
+        "era": "DOOM Eternal: The Ancient Gods Part Two",
+        "title": "The Dark Lord’s End",
+        "Icon": "Crucible",
+        "color": "from-red-600 to-gold-600",
+        "bgPattern": "bg-gradient-to-br from-red-800 via-gold-700 to-black",
+        "content": {
+          "summary": "In DOOM Eternal: The Ancient Gods Part Two (2021 DLC), the Doom Slayer returns to Immora, Hell’s capital, to slay the Dark Lord, the creator of evil, and end Hell’s threat forever. Battling through ancient worlds and demonic armies, he faces his own origins. This era explores his final war against Hell’s source, his role as the universe’s doom, and his unyielding rage in a cosmic reckoning.",
+          "details": [
+            "Return from exile: Escaping Urdak's limbo with the help of the Seraphim's portal, the Slayer lands on a war-torn Earth where demon lords have established strongholds, rallying his Sentinel allies for a final assault on Immora, the heart of Hell. He wields the Sentinel Hammer, a weapon that stuns demons and empowers his attacks, his heart burning with the need to end the eternal cycle, his mind strategizing the invasion with ancient maps of Hell's fortifications, his path a march through demon-infested wastelands where the skies rain blood and the ground quakes with infernal machinery.",
+            "Reuniting with the Sentinels: Rallying the Night Sentinels, ancient warriors who once fought alongside him against Hell, the Slayer leads them in battles against demon titans on Argent D'Nur's remnants, using the Crucible to sever their limbs while Sentinels provide covering fire with energy lances. The reunion stirs memories of his past life as Davoth's champion before his betrayal, his heart resolute in their loyalty, his mind coordinating their phalanx formations to breach demon gates, his path a revival of the old alliance that once nearly conquered Hell itself.",
+            "The Dark Lord’s domain: Infiltrating Immora's walled city of eternal night, the Slayer navigates streets lined with crucified angels and patrolled by armageddon demons that summon meteor storms, using his dash boosters to evade the raining fire while countering with the chaingun's shield mod for protection. The city's architecture, a blend of gothic spires and biomechanical horrors, hides traps like soul spheres that explode on proximity, his intellect spotting their glow from afar, his heart defiant against the oppressive atmosphere designed to break lesser warriors, his path a stealthy advance toward the Dark Lord's citadel where the final ritual to resurrect him is underway.",
+            "Battling the Hell Priests: Facing the remaining Hell Priests who chant rituals to empower demon hordes, the Slayer disrupts their ceremonies by destroying altars with the BFG10K's massive shots that clear entire congregations, the priests' protective barriers requiring sustained fire from the precision bolt to crack before finishing with glory kills. Their deaths weaken Hell's magical defenses, his heart satisfied with each silenced chant, his mind noting the reduction in demon spawn rates, his path cleared for the inner sanctum where the Dark Lord's vessel awaits awakening.",
+            "The Dark Lord’s awakening: Confronting the Dark Lord Davoth, revealed as the creator of all realms including the Maykrs who betrayed him, the Slayer engages in a titanic duel where the Dark Lord's godlike powers include reality-warping blasts and summoning legions that fill the arena. The Slayer counters with the Crucible's energy waves that slice through summons and the Sentinel Hammer's area stuns, his intellect exploiting brief vulnerabilities after the Dark Lord's overextended attacks, his heart raging against the being who orchestrated his eternal suffering, his path culminating in a final strike that shatters the Dark Lord's form and ends Hell's leadership, freeing the universe from its tyrannical source.",
+            "Immora’s fall: With the Dark Lord slain, Immora crumbles as Hell's structure unravels without its creator, the Slayer fighting through collapsing towers and exploding gateways while demons flee in panic. He activates an ancient artifact to open a portal back to Earth, his heart accepting the end of his purpose as the Slayer with no more Hell to fight, his mind reflecting on the cost of victory that leaves him as an obsolete weapon, his path leading to self-imposed exile in a realm where he can rest from eternal combat, his legacy as the one who killed God itself.",
+            "The universe’s peace: The Slayer’s triumph ends Hell’s threat, his heart a fire extinguished, his codename eternal in cosmic myths. The era ends with him stepping into exile, his chainsaw silent, his pistols holstered, his path a legacy of doom, his leadership immortal in a universe freed from evil.",
+            "The godkiller’s rest: The Slayer’s legacy endures, his heart at peace, his codename echoing in saved worlds. The era closes with his rest, his path complete, his leadership eternal in the absence of Hell."
+          ]
+        }
+      },
+      {
+        "id": 10,
+        "era": "The Slayer’s Testament",
+        "title": "The Myths of Doom",
+        "Icon": "Scroll",
+        "color": "from-red-600 to-gold-600",
+        "bgPattern": "bg-gradient-to-br from-red-800 via-gold-700 to-black",
+        "content": {
+          "summary": "In the DOOM lore, expanded in DOOM (2016) and Eternal, the Slayer’s legend is etched in demonic testaments, feared by Hell as an unstoppable force. From his origins as a Night Sentinel to his eternal war, this era explores his mythic status, his role as Hell’s bane, and his legacy as a figure of terror and salvation.",
+          "details": [
+            "The testaments’ birth: Demons whisper the Slayer’s testaments, ancient slabs detailing his rampages, his heart a curse to them, his codename their nightmare. His mind unknown to their lore, his path etched in fear, his leadership a solo doom, his Praetor Suit a symbol of their defeat.",
+            "Night Sentinel origins: As a mortal warrior, the Slayer joins the Sentinels, fighting Hell in Argent D'Nur, his hammer breaking demons, his heart loyal to their king. Betrayed by the Maykrs, his rage awakens, his codename born in battle, his path a vengeance against gods, his leadership inspiring Sentinels.",
+            "The Maykr pact revealed: Discovering the Maykrs’ deal with Hell for Argent Energy, the Slayer defies them, his Crucible slicing traitors, his heart raging against betrayal. His mind plotting their fall, his codename a rebel’s cry, his path a war on heaven, his leadership turning Sentinels against their makers.",
+            "Hell’s eternal foe: Cast into Hell, the Slayer fights endlessly, his chainsaw carving through legions, his heart unyielding, his mind adapting to infernal realms. Demons’ testaments call him 'the Beast,' his codename their doom, his path an endless slaughter, his leadership a lone terror in Hell’s halls.",
+            "The sarcophagus seal: Captured by demons, the Slayer is sealed in a sarcophagus, his rage contained but unbroken, his heart waiting for release. His mind dormant, his codename a forbidden word, his path paused in stone, his legacy a warning to Hell’s minions, his Praetor Suit a relic of fear.",
+            "UAC’s awakening: Freed by UAC on Mars, the Slayer resumes his war, his shotgun blasting possessed, his heart raging anew. His mind ignoring UAC’s pleas, his codename awakening demon fears, his path a rampage through facilities, his leadership silent but deadly.",
+            "The testaments’ echo: Demons recite the testaments, his heart their curse, his codename eternal in Hell. The era ends with his continued fight, his path a legacy of doom, his leadership immortal in myths of terror and salvation.",
+            "The slayer’s myth: The Slayer’s testaments shape his legend, his heart a fire against darkness, his codename echoing in feared tales. The era closes with demons fleeing his name, his path eternal, his leadership a silent doom for Hell."
+          ]
+        }
+      },
+      {
+        "id": 11,
+        "era": "The Night Sentinels",
+        "title": "The Argent Warriors",
+        "Icon": "Hammer",
+        "color": "from-red-600 to-silver-600",
+        "bgPattern": "bg-gradient-to-br from-red-800 via-silver-700 to-black",
+        "content": {
+          "summary": "In DOOM Eternal lore, the Doom Slayer joins the Night Sentinels of Argent D'Nur, ancient warriors battling Hell. Rising through ranks, he becomes their champion, only to face Maykr betrayal. This era explores his integration into their order, his leadership in war, and his defiance against divine corruption, forging his eternal rage.",
+          "details": [
+            "Arrival on Argent D'Nur: Crashing on Argent D'Nur after a dimensional rift, the marine is found by Sentinels, his combat prowess earning their respect. Joining their order, his heart aligns with their honor, his mind learning their tactics, his codename 'Slayer' born in their halls, his path a warrior’s vow, his hammer a symbol of their brotherhood.",
+            "Training with the Sentinels: The Sentinels train the Slayer in their ways, his strength breaking demon lines, his heart loyal to King Novik. Fighting in arenas, his fists earn rank, his mind mastering their lances, his codename chanted in battles, his path a rise to champion, his leadership inspiring their legions.",
+            "Hell’s wars: Leading charges into Hell, the Slayer battles demon titans, his Crucible slicing through hordes, his heart defiant against their numbers. His mind strategizes assaults on fortresses, his codename feared by lords, his path a crusade for Argent D'Nur, his leadership a fire in Sentinel hearts.",
+            "Maykr’s pact: Discovering the Maykrs’ alliance with Hell for Argent Energy, the Slayer defies them, his hammer smashing their idols, his heart raging against betrayal. His mind uncovers their deceit, his codename a rebel’s cry, his path a war on gods, his leadership turning Sentinels against their masters.",
+            "The betrayal’s fall: Facing the Khan Maykr’s forces, the Slayer battles angelic drones, his BFG blasting their wings, his heart unyielding to their divinity. His mind exploits their arrogance, his codename their doom, his path a divine slaughter, his leadership freeing Sentinels from chains.",
+            "Exile and rage: Betrayed and cast into Hell, the Slayer’s rage awakens fully, his heart a furnace against all evil, his mind plotting eternal war. His codename Hell’s curse, his path an endless fight, his leadership a lone stand, his Praetor Suit a relic of his fallen order.",
+            "The Sentinels’ legacy: The Slayer’s time with Sentinels shapes his war, his heart their champion, his codename eternal in their songs. The era ends with his fall, his path a legacy of defiance, his leadership immortal in Argent D'Nur’s ruins.",
+            "The warrior’s fire: The Slayer’s Sentinel legacy endures, his heart a light against betrayal, his codename echoing in warrior tales. The era closes with his rage in Hell, his path eternal, his leadership a silent vow against gods and demons."
+          ]
+        }
+      },
+      {
+        "id": 12,
+        "era": "The UAC’s Folly",
+        "title": "The Corporate Hell",
+        "Icon": "UAC Logo",
+        "color": "from-red-600 to-blue-600",
+        "bgPattern": "bg-gradient-to-br from-red-800 via-blue-700 to-black",
+        "content": {
+          "summary": "In DOOM (2016) and Eternal, the UAC’s obsession with Argent Energy opens gates to Hell, fueling the Slayer’s war against corporate greed. From Mars facilities to Argent Tower, he dismantles their hellish experiments. This era explores his fight against human hubris, his role as a corporate doombringer, and his unyielding assault on a company that bargained with Hell.",
+          "details": [
+            "UAC’s Argent discovery: The UAC uncovers Argent Energy in Hell, their labs extracting it for power, demons slipping through portals. The Slayer awakens to stop them, his shotgun blasting possessed scientists, his heart raging against their folly, his mind hacking their terminals, his path a purge of their facilities, his codename their nightmare.",
+            "Olivia Pierce’s pact: Olivia Pierce, UAC’s leader, bargains with Hell for immortality, opening gates for demons. The Slayer battles through her labs, his BFG vaporizing cyberdemons, his heart defiant against her greed, his mind exposing her logs, his path a hunt for her, his leadership a solo war on corruption.",
+            "Mars’ demonic labs: In Mars’ facilities, the Slayer navigates Argent processors, his chainsaw carving through barons, his heart unphased by gore nests. His mind solves laser puzzles, his codename feared by UAC guards, his path a destruction of their tech, his Praetor Suit a shield against their experiments.",
+            "Hayden’s ambition: Samuel Hayden, a cyborg UAC head, seeks to harness Argent, clashing with the Slayer. His robotic form taunts him, but the Slayer’s hammer breaks his defenses, his heart rejecting his hubris, his mind outsmarting his AI, his codename a corporate curse, his path a fight against his plans.",
+            "The Well’s core: At the Argent Well, the Slayer overloads extractors, demons swarming as towers collapse. His BFG clears hordes, his heart steady, his mind targeting weak points, his codename echoing in explosions, his path a blow to UAC’s heart, his leadership a silent doom for their empire.",
+            "Hayden’s betrayal: Hayden teleports the Slayer away, stealing the Crucible, his codename a threat to his schemes. The Slayer’s heart burns for return, his mind plotting revenge, his path an exile from Mars, his Praetor Suit ready for his comeback, his legacy a warning to corporate fools.",
+            "UAC’s fall: The Slayer’s destruction cripples the UAC, his heart a fire against greed, his codename eternal in their ruins. The era ends with his return in Eternal, his path a continued war, his leadership unbreakable against human folly.",
+            "The doombringer’s legacy: The Slayer’s assault on the UAC endures, his heart unyielding, his codename echoing in corporate nightmares. The era closes with his rage against Hayden, his path eternal, his leadership a silent vow against ambition."
+          ]
+        }
+      },
+      {
+        "id": 13,
+        "era": "The Slayer’s Arsenal",
+        "title": "The Tools of Doom",
+        "Icon": "Shotgun",
+        "color": "from-red-600 to-silver-600",
+        "bgPattern": "bg-gradient-to-br from-red-800 via-silver-700 to-black",
+        "content": {
+          "summary": "Across the DOOM series, the Doom Slayer masters an arsenal of weapons, from shotguns to the BFG, each tailored to Hell’s horrors. Upgrading and wielding them, he turns tools of destruction into symbols of his rage. This era explores his proficiency with firearms and melee, his adaptation in battle, and his role as a weapon master in an eternal war.",
+          "details": [
+            "The combat shotgun: The Slayer’s staple, the combat shotgun blasts imps at close range, its mods—explosive shots, charged bursts—adapt to hordes. His heart steady in its roar, his mind timing reloads, his codename tied to its fury, his path a shotgun symphony, his leadership a blast against demons.",
+            "The super shotgun: Double-barreled doom, the super shotgun shreds pinkies, its hook mod pulling foes close for kills. His heart revels in its power, his mind mastering its spread, his codename a close-quarters legend, his path a carnage trail, his leadership a double blast of defiance.",
+            "The BFG9000: The big gun, the BFG fires plasma orbs that chain through enemies, vaporizing barons. His heart calm in its charge, his mind calculating arcs, his codename a BFG’s echo, his path a plasma path, his leadership a massive strike against Hell.",
+            "The Crucible blade: The energy sword, the Crucible slices titans, its charge building with kills. His heart burning with its glow, his mind wielding its power, his codename tied to its legend, his path a blade through darkness, his leadership a cut against gods.",
+            "The chainsaw: The melee ripper, the chainsaw carves demons for ammo, its buzz a demon’s dread. His heart unphased by gore, his mind timing glory kills, his codename a chainsaw’s roar, his path a bloody harvest, his leadership a rip through legions.",
+            "The gauss cannon: The railgun, the gauss cannon pierces armor with siege mode, sniping from afar. His heart precise in its aim, his mind scoping targets, his codename a sniper’s vow, his path a long-range doom, his leadership a shot through Hell’s ranks.",
+            "The ballista: The energy crossbow, the ballista fires explosive bolts, its arbalest mod sniping distant foes. His heart steady in its pull, his mind calculating windage, his codename a bowman’s cry, his path an arrow through demons, his leadership a precision strike.",
+            "The arsenal’s master: The Slayer’s weapons define his war, his heart a fire with their power, his codename eternal in blasts. The era ends with him upgrading his arsenal, his path a legacy of destruction, his leadership unbreakable with tools of doom."
+          ]
+        }
+      },
+      {
+        "id": 14,
+        "era": "The Demonic Pantheon",
+        "title": "The Lords of Hell",
+        "Icon": "Demon Lord",
+        "color": "from-red-600 to-black-600",
+        "bgPattern": "bg-gradient-to-br from-red-800 via-black-700 to-gray-900",
+        "content": {
+          "summary": "Across the DOOM series, the Doom Slayer battles Hell’s pantheon, from the Icon of Sin to the Dark Lord, each a embodiment of evil’s facets. Defeating them, he ends their reigns. This era explores his war against demonic lords, his role as their doom, and his unyielding rage in a cosmic hierarchy of terror.",
+          "details": [
+            "The Icon of Sin: The Icon, a demonic wall spawning hordes, faces the Slayer’s rockets, his heart defiant against its endless minions, his mind targeting its brain. His codename its curse, his path a war on its spawn, his leadership a stand against infinite evil.",
+            "The Mother Demon: The resurrector, the Mother Demon revives legions, countered by the Slayer’s Unmaker, his heart unyielding to its calls, his mind exploiting its weaknesses. His codename her doom, his path a purge of revival, his leadership a cut against eternity.",
+            "The Cyberdemon: The cybernetic behemoth, the Cyberdemon’s rockets dodged by the Slayer’s dashes, his BFG shattering its armor. His heart steady in its roar, his mind calculating its charges, his codename its bane, his path a duel with machines of Hell.",
+            "The Maledict: The flying skull lord, the Maledict’s meteors countered by the Slayer’s teleport, his heart raging against its taunts, his mind timing its dives. His codename its nightmare, his path a sky war, his leadership a strike against winged terror.",
+            "The Khan Maykr: The divine betrayer, the Khan Maykr’s orbs shattered by the Slayer’s hammer, his heart defying her godhood, his mind outsmarting her rituals. His codename her fall, his path a war on heaven, his leadership a doom for false gods.",
+            "The Dark Lord: The creator of evil, the Dark Lord’s reality blasts dodged by the Slayer’s dashes, his heart burning with cosmic vengeance, his mind matching his power. His codename his end, his path a final reckoning, his leadership a silent vow against creation’s source.",
+            "Hell’s hierarchy fallen: The Slayer’s victories shatter Hell’s pantheon, his heart a fire against lords, his codename eternal in their ruins. The era ends with his gaze on a new threat, his path a legacy of slaying, his leadership unbreakable against demonic thrones.",
+            "The lordslayer’s legacy: The Slayer’s rage ends Hell’s rulers, his heart unyielding, his codename echoing in defeated halls. The era closes with his eternal watch, his path complete, his leadership immortal in a universe freed from lords."
+          ]
+        }
+      },
+      {
+        "id": 15,
+        "era": "The Praetor Suit",
+        "title": "The Armor of Rage",
+        "Icon": "Suit",
+        "color": "from-red-600 to-green-600",
+        "bgPattern": "bg-gradient-to-br from-red-800 via-green-700 to-black",
+        "content": {
+          "summary": "In DOOM (2016) and Eternal, the Doom Slayer’s Praetor Suit, forged by a demon and enhanced by Sentinels, becomes his unbreakable armor, absorbing runes and mods to enhance his war. This era explores his bond with the suit, its evolution, and its role as a vessel of his eternal rage against Hell.",
+          "details": [
+            "Forging the suit: Crafted in Hell by a wretch demon, the Praetor Suit bonds to the Slayer, its indestructible alloy absorbing demonic energy. Runes etched in battles enhance its speed, his heart one with its power, his mind mastering its systems, his codename tied to its legend, his path a armored war on Hell.",
+            "UAC enhancements: On Mars, UAC scientists study the suit, adding Argent cells for infinite ammo, his heart rejecting their probes, his mind hacking their terminals. His codename feared by UAC, his path a fight with upgraded armor, his leadership a solo stand, his suit a tool against corporate demons.",
+            "Rune trials: Completing rune challenges in Hell’s arenas, the Slayer unlocks double jumps and blood-fueled speed, his heart steady in trials, his mind solving their puzzles. His codename a rune’s curse, his path empowered by ancient magic, his leadership unbreakable with its boosts.",
+            "Mod mastery: Upgrading weapons with suit mods—chaingun turrets, shotgun grenades—his mind calculates their use, his heart revels in their destruction. His codename a mod’s roar, his path a war with enhanced firepower, his leadership a blast against legions, his suit a canvas for doom.",
+            "Sentinel upgrades: On Argent D'Nur, the suit absorbs Sentinel energy, enhancing its glory kills for health, his heart resonating with their honor, his mind integrating their tech. His codename a Sentinel chant, his path a fusion of ancient and hellish power, his leadership a charge with armored might.",
+            "The suit’s evolution: In Eternal, the suit gains the Fortress of Doom hub, its systems managing weapons and runes, his mind customizing its loadouts, his heart set on endless war. His codename tied to its glory, his path a suited rampage, his leadership eternal in its protection.",
+            "Hell’s bane: The suit withstands Hell’s fires, its runes absorbing demonic essence, his heart unyielding in its shell, his mind adapting its defenses. His codename its legend, his path a armored doom, his leadership a silent vow with its power, his suit a symbol of the Slayer.",
+            "The armored legacy: The suit’s power cements the Slayer’s myth, his heart a fire within, his codename echoing in armored halls. The era ends with its glow in battle, his path eternal, his leadership unbreakable in a suit forged for doom."
+          ]
+        }
+      },
+      {
+        "id": 16,
+        "era": "The Legacy of the Slayer",
+        "title": "The Doom of All",
+        "Icon": "Skull",
+        "color": "from-red-600 to-black-600",
+        "bgPattern": "bg-gradient-to-br from-red-800 via-black-700 to-gray-900",
+        "content": {
+          "summary": "In the DOOM series lore, the Doom Slayer’s legacy terrifies Hell and inspires humanity, his rage an eternal force against evil. From testaments to UAC myths, his codename dooms all who oppose him. This era explores his mythic status, his impact on worlds, and his role as the universe’s ultimate weapon, forged in endless war.",
+          "details": [
+            "Hell’s testaments: Demons carve testaments fearing the Slayer, his heart their curse, his codename their doom. His mind unknown, his path etched in stone, his leadership a solo terror, his legacy a warning to Hell’s legions.",
+            "UAC’s nightmare: UAC scientists whisper of the Slayer, his awakening their folly, his heart raging against their greed. His mind outsmarting their tech, his codename a corporate curse, his path a purge of their halls, his legacy a lesson in hubris.",
+            "Humanity’s savior: Survivors hail the Slayer as Earth's protector, his heart a symbol of defiance, his codename a hope in ruins. His path a legend in tales, his leadership silent salvation, his legacy inspiring resistance against Hell.",
+            "Maykr’s fall: The Maykrs fear the Slayer’s god-killing rage, his heart defying their divinity, his codename their end. His mind exposing their pact, his path a war on heaven, his leadership a doom for false gods, his legacy a shattered Urdak.",
+            "Sentinel’s champion: The Night Sentinels chant the Slayer’s name, his heart their warrior king, his codename a battle cry. His mind leading their charges, his path a revival of their order, his leadership immortal in their halls, his legacy a light against betrayal.",
+            "The Dark Lord’s fear: The Dark Lord dreads the Slayer, his creator’s bane, his heart a fire against origin, his codename his doom. His mind matching his power, his path a final reckoning, his leadership a silent vow, his legacy the end of evil.",
+            "Cosmic myths: Worlds whisper the Slayer’s legend, his heart eternal rage, his codename echoing in stars. His path a legacy of doom, his leadership unbreakable in tales, his legacy a fire that burns Hell forever.",
+            "The slayer’s eternity: The Slayer’s myth endures, his heart unyielding, his codename a curse in all realms. The era ends with his watch, his path endless, his leadership immortal in a universe saved from doom."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "_id": "68a639f58383ccaa602cc377",
+    "name": "Sub-Zero",
+    "title": "Sub-Zero: The Grandmaster Codex",
+    "meta": {
+      "note": "The complete chronicle of Sub-Zero’s journey across the *Mortal Kombat* series, focusing on Kuai Liang as the iconic Sub-Zero and Grandmaster of the Lin Kuei, with references to Bi-Han’s tenure. This codex traces Kuai Liang’s transformation from a skilled cryomancer to a legendary leader defending Earthrealm, drawn from key games (*Mortal Kombat II*, *Mortal Kombat X*, *Mortal Kombat 11*, *Mortal Kombat 1*) and media. Each era explores his leadership, honor, and battles against Netherrealm forces, with a Paragon-leaning narrative emphasizing his redemption of the Lin Kuei, while acknowledging Bi-Han’s contrasting path.",
+      "format": "Array of era objects with id, era, title, Icon (string), color, bgPattern, content { summary, details[] }"
+    },
+    "chapters": [
+      {
+        "id": 1,
+        "era": "Origins and Cryomancer Roots",
+        "title": "The Frozen Legacy",
+        "Icon": "Ice Crystal",
+        "color": "from-blue-600 to-white-600",
+        "bgPattern": "bg-gradient-to-br from-blue-800 via-white-700 to-black",
+        "content": {
+          "summary": "Kuai Liang, born into the Lin Kuei clan with cryomancer heritage, trains alongside his elder brother Bi-Han, the original Sub-Zero, in a secretive ninja order. This era, rooted in *Mortal Kombat* lore and expanded in *Mortal Kombat Mythologies: Sub-Zero*, explores Kuai Liang’s early years, his mastery of ice, and the burden of his brother’s legacy, setting the stage for his path to Grandmaster.",
+          "details": [
+            "Cryomancer heritage: Born in Earthrealm to a secret cryomancer lineage, Kuai Liang and Bi-Han inherit the power to manipulate ice, their blood tied to an ancient race from Outworld. Raised in the Lin Kuei’s hidden temple, Kuai Liang trains in martial arts, his heart loyal to his clan, his mind sharpening on stealth tactics, his codename ‘Tundra’ a mark of his frost abilities, his path a disciplined ascent under the Grandmaster’s shadow.",
+            "Training with Bi-Han: Kuai Liang spars with Bi-Han, the clan’s prized assassin, mastering ice slides and freeze balls, their sibling bond strong but strained by Bi-Han’s ruthlessness. His heart admires his brother’s skill, his mind learning from his ferocity, his codename whispered in training halls, his path a shadow to Bi-Han’s Sub-Zero, his cryomancy a spark of future greatness.",
+            "Lin Kuei’s shadow: The Lin Kuei, a clan of assassins, molds Kuai Liang into a killer, their missions serving warlords and Outworld’s interests. He freezes enemies in covert strikes, his heart uneasy with their amoral code, his mind questioning their loyalty to Earthrealm, his codename a tool of their will, his path a test of obedience versus honor.",
+            "Bi-Han’s mission: Bi-Han, as Sub-Zero, is sent to the *Mortal Kombat* tournament (1992), tasked with killing Shang Tsung. Kuai Liang remains behind, his heart troubled by the mission’s stakes, his mind studying Bi-Han’s ice techniques, his codename dormant but ready, his path poised to inherit the mantle after Bi-Han’s fatal clash with Scorpion.",
+            "Scorpion’s vengeance: Learning of Bi-Han’s death by Scorpion’s hand, Kuai Liang vows to honor his brother, his heart burning with grief, his mind analyzing Scorpion’s hellfire. His codename shifts to ‘Sub-Zero,’ his path a quest for answers, his cryomancy a tool to avenge or redeem the Lin Kuei’s name.",
+            "Early missions: Undertaking Lin Kuei assignments, Kuai Liang infiltrates enemy strongholds, freezing guards with ice blasts, his heart set on proving his worth, his mind navigating clan politics. His codename earns whispers in Earthrealm, his path a rise through ranks, his leadership budding as he questions the clan’s dark path.",
+            "The ice awakens: At a young age, Kuai Liang masters his cryomancy, creating ice clones to misdirect foes, his heart fueled by duty, his mind honing precision. His codename a symbol of cold resolve, his path a preparation for the *Mortal Kombat II* tournament, his leadership a spark in the Lin Kuei’s frozen halls.",
+            "The frozen path: Kuai Liang stands ready to claim Sub-Zero’s mantle, his heart loyal to Earthrealm, his codename a legacy of ice. The era ends with him stepping into the tournament, his path a fight against Netherrealm’s wrath, his leadership poised to redefine the Lin Kuei."
+          ]
+        }
+      },
+      {
+        "id": 2,
+        "era": "Mortal Kombat II: The Avenger’s Quest",
+        "title": "The Ice of Vengeance",
+        "Icon": "Kunai",
+        "color": "from-blue-600 to-silver-600",
+        "bgPattern": "bg-gradient-to-br from-blue-800 via-silver-700 to-black",
+        "content": {
+          "summary": "In *Mortal Kombat II* (1993), Kuai Liang, now Sub-Zero, enters the Outworld tournament to avenge Bi-Han’s death and uncover the Lin Kuei’s ties to Shao Kahn. Facing Scorpion and other foes, he begins to question his clan’s purpose. This era explores his early heroism, his cryomancy mastery, and his path toward reforming the Lin Kuei.",
+          "details": [
+            "Tournament entry: Kuai Liang joins the Outworld tournament as Sub-Zero, tasked by the Lin Kuei to kill Shang Tsung, his heart set on avenging Bi-Han, his mind wary of Shao Kahn’s influence. His ice blasts freeze Outworld warriors, his codename a chilling whisper, his path a quest for truth, his leadership emerging in solo combat.",
+            "Scorpion’s confrontation: Facing Scorpion, Kuai Liang learns of Bi-Han’s death, his heart sparing the specter despite their feud, his mind suspecting deeper manipulation. His ice clones block hellfire kunai, his codename a rival’s curse, his path a step toward peace, his leadership showing mercy over vengeance.",
+            "Outworld’s dangers: Battling Baraka’s Tarkatans, Kuai Liang uses ice slides to evade blades, his heart steady in Outworld’s arenas, his mind reading their feral patterns. His codename feared by Shao Kahn’s minions, his path a fight for Earthrealm, his cryomancy a shield against their numbers.",
+            "Shang Tsung’s lair: Infiltrating Shang Tsung’s palace, Sub-Zero freezes soul traps, his heart defiant against sorcery, his mind decoding the sorcerer’s plans. His codename a threat to Outworld, his path a strike against evil, his leadership inspiring Liu Kang and Kitana to resist Shao Kahn.",
+            "Lin Kuei’s betrayal: Learning the Lin Kuei allied with Shao Kahn, Kuai Liang questions their honor, his heart rebelling against their orders, his mind seeking independence. His codename a spark of defiance, his path a break from servitude, his leadership forging a new vision for the clan.",
+            "Raiden’s guidance: Guided by Raiden, Sub-Zero aids Earthrealm’s champions, his ice walls protecting allies like Johnny Cage, his heart aligned with their cause, his mind strategizing against Outworld’s invasion. His codename a hero’s vow, his path a defense of Earth, his leadership uniting fighters.",
+            "Shao Kahn’s defeat: Supporting Liu Kang’s victory over Shao Kahn, Sub-Zero freezes Kahn’s guards, his heart proud of Earthrealm’s stand, his mind planning the Lin Kuei’s redemption. His codename a symbol of resistance, his path a return to Earthrealm, his leadership a beacon for his clan.",
+            "The avenger’s rise: Sub-Zero’s actions cement his heroism, his heart set on reform, his codename echoing in Outworld’s ruins. The era ends with him questioning the Lin Kuei, his path a fight for honor, his leadership a spark to reshape a corrupted clan."
+          ]
+        }
+      },
+      {
+        "id": 3,
+        "era": "Mortal Kombat 3: The Lin Kuei’s Fall",
+        "title": "The Cold Rebellion",
+        "Icon": "Dragon Medallion",
+        "color": "from-blue-600 to-red-600",
+        "bgPattern": "bg-gradient-to-br from-blue-800 via-red-700 to-black",
+        "content": {
+          "summary": "In *Mortal Kombat 3* (1995), Kuai Liang, as Sub-Zero, rebels against the Lin Kuei’s Cyber Initiative, fleeing their temple as Shao Kahn invades Earthrealm. Marked by a scar from Kano, he fights to protect Earth and begins reforming his clan. This era explores his defiance, his cryomancy evolution, and his rise as a leader against tyranny.",
+          "details": [
+            "Cyber Initiative betrayal: The Lin Kuei’s Grandmaster orders cybernetic conversions, targeting Kuai Liang for the Cyber Initiative. Refusing to become a machine, he flees, his heart rejecting their control, his mind evading cyborg assassins like Cyrax, his codename a rebel’s cry, his path a fight for freedom.",
+            "Kano’s scar: Ambushed by Kano during his escape, Sub-Zero gains a scar across his eye, his ice blasts countering Kano’s knives, his heart burning with defiance, his mind outsmarting the Black Dragon thug. His codename a mark of survival, his path scarred but unbowed, his leadership born in pain.",
+            "Shao Kahn’s invasion: As Shao Kahn’s forces invade Earthrealm, Sub-Zero aids Raiden’s champions, freezing centaurs like Motaro, his heart loyal to Earth, his mind reading Kahn’s strategies. His codename a defender’s vow, his path a stand against extermination, his cryomancy a shield for humanity.",
+            "Smoke’s alliance: Reuniting with Smoke, his Lin Kuei friend, Sub-Zero tries to save him from cyberization, his ice clones covering their retreat, his heart aching for his friend’s fate, his mind planning their escape. His codename a brother’s hope, his path a rescue mission, his leadership inspiring loyalty.",
+            "Sindel’s threat: Facing Sindel’s banshee screams, Sub-Zero uses ice walls to block her sonic attacks, his heart steady against her power, his mind exploiting her arrogance. His codename feared by Outworld, his path a fight with Earth’s heroes, his leadership rallying against her resurrection.",
+            "Lin Kuei pursuit: Hunted by cyborgs Sektor and Cyrax, Sub-Zero freezes their circuits with ice bursts, his heart defiant against his former clan, his mind hacking their systems. His codename a traitor’s brand, his path a rebellion against machines, his leadership forging a new Lin Kuei vision.",
+            "Earthrealm’s defense: Supporting Liu Kang’s defeat of Shao Kahn, Sub-Zero protects cities with ice barriers, his heart proud of Earth’s survival, his mind planning the Lin Kuei’s future. His codename a hero’s chant, his path a fight for redemption, his leadership a light in the invasion’s dark.",
+            "The rebel’s stand: Sub-Zero’s rebellion marks his rise, his heart a fire against tyranny, his codename eternal in Earthrealm’s tales. The era ends with him hiding in the Arctic, his path a quest to rebuild the Lin Kuei, his leadership a vow to restore honor."
+          ]
+        }
+      },
+      {
+        "id": 4,
+        "era": "Mortal Kombat 4: The Netherrealm’s Shadow",
+        "title": "The Ice Against Darkness",
+        "Icon": "Netherrealm Portal",
+        "color": "from-blue-600 to-purple-600",
+        "bgPattern": "bg-gradient-to-br from-blue-800 via-purple-700 to-black",
+        "content": {
+          "summary": "In *Mortal Kombat 4* (1997), Sub-Zero faces Quan Chi and Shinnok’s Netherrealm forces, uncovering the sorcerer’s role in Bi-Han’s death. Battling alongside Earthrealm’s heroes, he strengthens his resolve to lead the Lin Kuei honorably. This era explores his fight against demonic corruption, his growing leadership, and his cryomancy’s power against fallen gods.",
+          "details": [
+            "Quan Chi’s deception: Sub-Zero learns Quan Chi orchestrated Bi-Han’s death, his heart raging against the sorcerer, his mind tracing his Netherrealm ties. His ice blasts freeze Quan Chi’s minions, his codename a vengeful vow, his path a hunt for truth, his leadership defying demonic lies.",
+            "Shinnok’s invasion: Facing Shinnok’s Netherrealm army, Sub-Zero battles fallen Elder God forces, his ice slides evading their dark magic, his heart steady against their terror, his mind reading their weaknesses. His codename feared by demons, his path a defense of Earthrealm, his cryomancy a light in darkness.",
+            "Scorpion’s truth: Confronting Scorpion again, Sub-Zero reveals Quan Chi’s manipulation, his heart seeking peace, his mind sparing his rival. His ice clones block hellfire, his codename a bridge to trust, his path a step toward alliance, his leadership forging respect between foes.",
+            "Fujin’s alliance: Teaming with Fujin, the wind god, Sub-Zero fights Shinnok’s generals, his ice walls aiding Fujin’s cyclones, his heart aligned with divine justice, his mind strategizing joint attacks. His codename a godly ally, his path a fight for realms, his leadership uniting elemental forces.",
+            "Netherrealm incursion: Infiltrating Shinnok’s fortress, Sub-Zero freezes demonic guards, his heart unyielding to their corruption, his mind navigating soul traps. His codename a terror to Netherrealm, his path a strike against Shinnok, his leadership inspiring Raiden’s champions.",
+            "Quan Chi’s escape: Pursuing Quan Chi, Sub-Zero battles his shadow clones, his ice hammer smashing illusions, his heart burning for justice, his mind outsmarting sorcery. His codename a sorcerer’s fear, his path a chase through portals, his leadership relentless in pursuit.",
+            "Shinnok’s defeat: Supporting Raiden’s victory over Shinnok, Sub-Zero seals Netherrealm portals with ice, his heart proud of Earthrealm’s stand, his mind planning the Lin Kuei’s reform. His codename a hero’s chant, his path a return to Earth, his leadership a beacon for his clan.",
+            "The icy defender: Sub-Zero’s stand cements his legend, his heart a fire against darkness, his codename echoing in Netherrealm’s ruins. The era ends with him seeking the Lin Kuei’s redemption, his path a fight for honor, his leadership a vow to protect Earthrealm."
+          ]
+        }
+      },
+      {
+        "id": 5,
+        "era": "Mortal Kombat: Deadly Alliance",
+        "title": "The Dragon Medallion",
+        "Icon": "Dragon Medallion",
+        "color": "from-blue-600 to-gold-600",
+        "bgPattern": "bg-gradient-to-br from-blue-800 via-gold-700 to-black",
+        "content": {
+          "summary": "In *Mortal Kombat: Deadly Alliance* (2002), Sub-Zero claims the Dragon Medallion, enhancing his cryomancy and aging him prematurely, as he rebuilds the Lin Kuei in an Arctic temple. Facing Quan Chi and Shang Tsung’s alliance, he strengthens his leadership. This era explores his rise as Grandmaster, his enhanced powers, and his fight against the Deadly Alliance.",
+          "details": [
+            "Claiming the Medallion: Sub-Zero discovers the Dragon Medallion, a relic amplifying his cryomancy but accelerating his aging, his heart accepting the cost, his mind mastering its power. His ice blasts grow stronger, his codename a Grandmaster’s vow, his path a quest to lead, his leadership forging a new Lin Kuei.",
+            "Arctic temple: Relocating the Lin Kuei to an Arctic stronghold, Sub-Zero trains new warriors, his ice hammer shaping recruits, his heart set on reform, his mind crafting a code of honor. His codename a beacon in snow, his path a rebuilding of the clan, his leadership inspiring loyalty.",
+            "Quan Chi’s alliance: Learning of Quan Chi and Shang Tsung’s Deadly Alliance, Sub-Zero prepares to fight, his ice clones countering their sorcery, his heart defiant against their evil, his mind tracing their plans. His codename feared by sorcerers, his path a strike against Outworld, his leadership rallying Earthrealm.",
+            "Training Frost: Mentoring Frost, a cryomancer apprentice, Sub-Zero teaches ice manipulation, his heart hopeful for her potential, his mind wary of her ambition. His codename a mentor’s title, his path a guide for the next generation, his leadership tested by her eventual betrayal.",
+            "Outworld incursion: Traveling to Outworld, Sub-Zero battles Quan Chi’s Oni, his ice slides evading their claws, his heart steady in hostile lands, his mind reading their demonic patterns. His codename a terror to Netherrealm, his path a fight for Earth, his cryomancy a shield against sorcery.",
+            "Shang Tsung’s palace: Infiltrating Shang Tsung’s fortress, Sub-Zero freezes soul traps, his heart unyielding to temptation, his mind decoding their defenses. His codename a sorcerer’s dread, his path a strike against the Alliance, his leadership aiding Liu Kang’s allies.",
+            "The Alliance’s fall: Supporting Raiden’s champions, Sub-Zero weakens Quan Chi’s forces with ice barriers, his heart proud of their stand, his mind planning the Lin Kuei’s future. His codename a hero’s chant, his path a return to the temple, his leadership a light in Outworld’s dark.",
+            "The Grandmaster’s rise: Sub-Zero’s leadership cements his legend, his heart a fire in ice, his codename eternal in Lin Kuei halls. The era ends with him strengthening the clan, his path a fight for honor, his leadership a vow to protect Earthrealm."
+          ]
+        }
+      },
+      {
+        "id": 6,
+        "era": "Mortal Kombat: Deception",
+        "title": "The Champion of Realms",
+        "Icon": "Ice Hammer",
+        "color": "from-blue-600 to-orange-600",
+        "bgPattern": "bg-gradient-to-br from-blue-800 via-orange-700 to-black",
+        "content": {
+          "summary": "In *Mortal Kombat: Deception* (2004), Sub-Zero, now Grandmaster, faces Onaga’s return and Frost’s betrayal, defending the Lin Kuei and Earthrealm. His cryomancy, enhanced by the Dragon Medallion, becomes a cornerstone of his leadership. This era explores his battles against ancient threats, his struggle with loyalty, and his role as Earthrealm’s protector.",
+          "details": [
+            "Onaga’s resurrection: Sub-Zero learns of Onaga’s return, the Dragon King threatening all realms, his heart set on stopping him, his mind studying ancient texts. His ice hammer smashes Onaga’s minions, his codename a Grandmaster’s vow, his path a fight for existence, his leadership rallying the Lin Kuei.",
+            "Frost’s betrayal: Frost, corrupted by ambition, steals the Dragon Medallion, forcing Sub-Zero to subdue her with ice blasts, his heart pained by her treachery, his mind outsmarting her cryomancy. His codename a mentor’s burden, his path a reclaiming of power, his leadership restoring the Medallion.",
+            "Netherrealm’s call: Venturing to the Netherrealm to aid Shujinko, Sub-Zero battles Noob Saibot, revealed as Bi-Han, his heart torn by his brother’s corruption, his mind countering shadow clones with ice. His codename a brother’s curse, his path a fight against darkness, his leadership unyielding to familial pain.",
+            "Outworld alliances: Aligning with Kitana’s Edenian forces, Sub-Zero freezes Onaga’s Tarkatans, his heart loyal to Earthrealm’s allies, his mind strategizing joint assaults. His codename a unifier’s chant, his path a defense of realms, his leadership forging bonds across worlds.",
+            "Onaga’s fortress: Infiltrating Onaga’s stronghold, Sub-Zero uses ice slides to evade dragon traps, his heart steady against ancient power, his mind decoding Kamidogu relics. His codename feared by Onaga’s army, his path a strike against the Dragon King, his cryomancy a weapon of precision.",
+            "Shujinko’s aid: Supporting Shujinko’s quest to defeat Onaga, Sub-Zero protects him with ice barriers, his heart proud of their stand, his mind coordinating their moves. His codename a hero’s vow, his path a fight for all realms, his leadership a light in Onaga’s shadow.",
+            "The Lin Kuei’s strength: Returning to the Arctic temple, Sub-Zero trains new cryomancers, his heart set on the clan’s future, his mind refining their code. His codename a Grandmaster’s chant, his path a rebuilding of honor, his leadership inspiring a new generation.",
+            "The protector’s legacy: Sub-Zero’s stand against Onaga cements his legend, his heart a fire in ice, his codename eternal in Lin Kuei lore. The era ends with him guarding the temple, his path a fight for realms, his leadership a vow to uphold honor."
+          ]
+        }
+      },
+      {
+        "id": 7,
+        "era": "Mortal Kombat: Armageddon",
+        "title": "The Battle of Armageddon",
+        "Icon": "Blaze",
+        "color": "from-blue-600 to-red-600",
+        "bgPattern": "bg-gradient-to-br from-blue-800 via-red-700 to-black",
+        "content": {
+          "summary": "In *Mortal Kombat: Armageddon* (2006), Sub-Zero joins the final battle against Blaze and the forces of light and darkness, seeking to prevent the apocalypse. Facing Noob Saibot and the Lin Kuei’s past sins, he solidifies his role as Grandmaster. This era explores his fight for balance, his cryomancy’s peak, and his leadership in a war to save all realms.",
+          "details": [
+            "The prophecy of Armageddon: Sub-Zero learns of Argus’ prophecy, foretelling a battle to reset the realms, his heart set on preventing collapse, his mind studying the Edenian pyramid. His ice hammer crushes corrupted warriors, his codename a Grandmaster’s vow, his path a fight for balance, his leadership rallying Earthrealm.",
+            "Noob Saibot’s return: Facing Noob Saibot, his corrupted brother Bi-Han, Sub-Zero battles shadow clones, his ice blasts countering darkness, his heart torn by loss, his mind outsmarting his tactics. His codename a brother’s curse, his path a fight against his past, his leadership unyielding to Netherrealm’s pull.",
+            "Blaze’s inferno: Confronting Blaze, the fire elemental, Sub-Zero uses ice walls to douse flames, his heart steady against his heat, his mind timing his vulnerabilities. His codename feared by elemental forces, his path a strike against apocalypse, his cryomancy a shield in the fiery chaos.",
+            "Taven’s alliance: Aiding Taven, Argus’ son, Sub-Zero freezes Daegon’s Red Dragon clan, his heart loyal to the quest, his mind strategizing their moves. His codename a unifier’s chant, his path a defense of realms, his leadership forging bonds with Edenian heroes.",
+            "Lin Kuei’s redemption: Leading his clan to the pyramid, Sub-Zero protects recruits from Shao Kahn’s forces, his ice clones shielding them, his heart proud of their honor, his mind coordinating their defense. His codename a Grandmaster’s cry, his path a stand for the clan, his leadership inspiring loyalty.",
+            "The pyramid’s peak: At the Edenian pyramid, Sub-Zero battles multiple foes, his ice hammer smashing through Oni, his heart defiant against chaos, his mind reading the battle’s flow. His codename a hero’s vow, his path a fight for survival, his leadership a light in Armageddon’s dark.",
+            "Balance restored: Supporting Taven’s victory, Sub-Zero seals the pyramid’s energy with ice, his heart relieved at the realms’ survival, his mind planning the Lin Kuei’s future. His codename a protector’s chant, his path a return to the temple, his leadership a beacon for peace.",
+            "The Grandmaster’s stand: Sub-Zero’s role in Armageddon cements his legend, his heart a fire in ice, his codename eternal in realm tales. The era ends with him rebuilding the Lin Kuei, his path a fight for balance, his leadership a vow to protect existence."
+          ]
+        }
+      },
+      {
+        "id": 8,
+        "era": "Mortal Kombat (2011): The Time Reset",
+        "title": "The Frozen Rebirth",
+        "Icon": "Time Crystal",
+        "color": "from-blue-600 to-green-600",
+        "bgPattern": "bg-gradient-to-br from-blue-800 via-green-700 to-black",
+        "content": {
+          "summary": "In *Mortal Kombat* (2011), Raiden’s time reset revisits Sub-Zero’s journey, with Kuai Liang facing cyberization and death, only to be restored by Raiden. Fighting Shao Kahn and Quan Chi, he begins his path to Grandmaster. This era explores his rebirth, his cryomancy’s resilience, and his leadership in a rewritten timeline.",
+          "details": [
+            "Time’s reset: Raiden’s visions reset the timeline, placing Sub-Zero in the *Mortal Kombat* tournament, his heart set on avenging Bi-Han, his mind wary of Quan Chi’s schemes. His ice blasts freeze Shang Tsung’s guards, his codename a chilling vow, his path a fight for Earthrealm, his leadership emerging anew.",
+            "Cyber Sub-Zero: Captured by the Lin Kuei, Kuai Liang is cyberized into LK-52O, his heart resisting the machine, his mind fighting for control. His ice beams destroy cyborgs, his codename a mechanized curse, his path a struggle for humanity, his leadership defying the Cyber Initiative.",
+            "Raiden’s restoration: Rescued by Raiden, Sub-Zero is restored to human form, his cryomancy returning stronger, his heart grateful for freedom, his mind realigning with Earthrealm’s cause. His codename a reborn hero’s cry, his path a fight against Kahn, his leadership inspiring hope.",
+            "Quan Chi’s manipulation: Facing Quan Chi’s Netherrealm forces, Sub-Zero freezes his Oni, his heart raging against his brother’s corruption as Noob Saibot, his mind uncovering his lies. His codename a sorcerer’s fear, his path a hunt for justice, his leadership defying demonic control.",
+            "Shao Kahn’s invasion: Battling Shao Kahn’s army, Sub-Zero protects Earthrealm with ice barriers, his heart steady against extermination, his mind aiding Liu Kang’s strategies. His codename a defender’s chant, his path a stand for survival, his cryomancy a shield in the invasion.",
+            "Sindel’s massacre: Facing Sindel’s attack on Earthrealm’s heroes, Sub-Zero falls, his heart defiant to the end, his mind shielding allies with ice. His codename a martyr’s vow, his path a sacrifice for Earth, his leadership inspiring Raiden’s final stand against Kahn.",
+            "Rebirth’s cost: Restored by Raiden, Sub-Zero mourns fallen allies, his heart set on rebuilding the Lin Kuei, his mind planning its redemption. His codename a reborn legend, his path a fight for honor, his leadership a light in the reset timeline’s dark.",
+            "The frozen hero: Sub-Zero’s rebirth cements his legend, his heart a fire in ice, his codename eternal in Earthrealm’s tales. The era ends with him seeking the Lin Kuei’s future, his path a fight for redemption, his leadership a vow to protect realms."
+          ]
+        }
+      },
+      {
+        "id": 9,
+        "era": "Mortal Kombat X: The Grandmaster’s Rise",
+        "title": "The Lin Kuei Reborn",
+        "Icon": "Lin Kuei Crest",
+        "color": "from-blue-600 to-silver-600",
+        "bgPattern": "bg-gradient-to-br from-blue-800 via-silver-700 to-black",
+        "content": {
+          "summary": "In *Mortal Kombat X* (2015), Sub-Zero, fully restored, defeats Sektor and becomes Grandmaster, rebuilding the Lin Kuei as a force for good. Facing Shinnok’s return, he allies with Earthrealm’s new generation. This era explores his leadership peak, his cryomancy mastery, and his role as a mentor and protector.",
+          "details": [
+            "Sektor’s defeat: Sub-Zero battles Sektor, the Cyber Initiative’s leader, freezing his circuits with ice blasts, his heart set on reclaiming the Lin Kuei, his mind outsmarting his tech. His codename a Grandmaster’s vow, his path a purge of corruption, his leadership restoring the clan’s honor.",
+            "Rebuilding the Lin Kuei: As Grandmaster, Sub-Zero trains a new generation in the Arctic temple, his ice hammer shaping recruits, his heart proud of their loyalty, his mind crafting a code of justice. His codename a beacon in snow, his path a reformation, his leadership inspiring a reborn clan.",
+            "Shinnok’s amulet: Facing Shinnok’s return, Sub-Zero aids Cassie Cage’s team, freezing revenants like Kitana, his heart steady against Netherrealm’s pull, his mind strategizing with Raiden. His codename feared by demons, his path a defense of Earth, his cryomancy a shield for allies.",
+            "Mentoring the young: Training Cassie and Takeda, Sub-Zero teaches cryomancy tactics, his heart hopeful for their growth, his mind guiding their combat skills. His codename a mentor’s title, his path a guide for heroes, his leadership fostering Earthrealm’s future.",
+            "Netherrealm’s threat: Infiltrating Shinnok’s fortress, Sub-Zero freezes bone constructs, his heart unyielding to corruption, his mind navigating soul traps. His codename a terror to demons, his path a strike against the fallen god, his leadership aiding Johnny Cage’s team.",
+            "Scorpion’s peace: Forging peace with Scorpion, Sub-Zero reveals Quan Chi’s role in their feud, his heart seeking unity, his mind building trust. His ice clones aid joint missions, his codename a brother’s vow, his path a bridge between clans, his leadership ending the Lin Kuei-Shirai Ryu war.",
+            "Shinnok’s fall: Supporting Cassie’s defeat of Shinnok, Sub-Zero seals amulet chambers with ice, his heart proud of their victory, his mind planning the Lin Kuei’s role. His codename a hero’s chant, his path a return to the temple, his leadership a light in Earthrealm’s dark.",
+            "The Grandmaster’s legacy: Sub-Zero’s leadership reshapes the Lin Kuei, his heart a fire in ice, his codename eternal in Earthrealm’s tales. The era ends with him guarding the realms, his path a fight for peace, his leadership a vow to protect humanity."
+          ]
+        }
+      },
+      {
+        "id": 10,
+        "era": "Mortal Kombat 11: The Timekeeper’s War",
+        "title": "The Frozen Stand",
+        "Icon": "Hourglass",
+        "color": "from-blue-600 to-purple-600",
+        "bgPattern": "bg-gradient-to-br from-blue-800 via-purple-700 to-black",
+        "content": {
+          "summary": "In *Mortal Kombat 11* (2019), Sub-Zero battles Kronika’s time manipulation, uniting with Scorpion and Earthrealm’s heroes to stop her rewriting history. As Grandmaster, he leads the Lin Kuei against past and present threats. This era explores his role in a cosmic war, his cryomancy’s peak, and his leadership in saving existence.",
+          "details": [
+            "Kronika’s manipulation: Sub-Zero faces Kronika’s time rifts, merging past and present, his heart set on stopping her, his mind analyzing her Titan powers. His ice hammer smashes revenant clones, his codename a Grandmaster’s vow, his path a fight for time, his leadership rallying Earthrealm.",
+            "Past Sub-Zero’s clash: Meeting his younger self from the past, Sub-Zero confronts his own doubts, his ice blasts countering his clone’s, his heart guiding his past, his mind teaching honor. His codename a mirror’s cry, his path a lesson in growth, his leadership inspiring his younger self.",
+            "Scorpion’s alliance: Uniting with Scorpion, Sub-Zero ends their clans’ feud, his ice walls aiding Scorpion’s hellfire, his heart trusting their bond, his mind strategizing joint attacks. His codename a brother’s vow, his path a bridge of peace, his leadership forging a new era.",
+            "Noob Saibot’s shadow: Facing Noob Saibot, Sub-Zero battles Bi-Han’s corruption, his ice clones countering shadows, his heart pained by his brother’s fall, his mind outsmarting his portals. His codename a brother’s curse, his path a fight against darkness, his leadership unyielding to loss.",
+            "Kronika’s keep: Infiltrating Kronika’s Keep, Sub-Zero freezes time traps, his heart steady against her power, his mind navigating her hourglass. His codename feared by her minions, his path a strike against time, his cryomancy a shield in her chaotic realm.",
+            "Fire and ice: With Scorpion, Sub-Zero storms Kronika’s forces, their combined powers—ice and hellfire—destroying revenants, his heart proud of their unity, his mind coordinating their strikes. His codename a unifier’s chant, his path a defense of existence, his leadership a light in time’s war.",
+            "Liu Kang’s victory: Supporting Liu Kang’s battle against Kronika, Sub-Zero seals time rifts with ice, his heart relieved at the realms’ survival, his mind planning the Lin Kuei’s role. His codename a hero’s vow, his path a return to Earth, his leadership a beacon for balance.",
+            "The timekeeper’s fall: Sub-Zero’s stand cements his legend, his heart a fire in ice, his codename eternal in realm tales. The era ends with him guarding the Lin Kuei, his path a fight for time, his leadership a vow to protect all existence."
+          ]
+        }
+      },
+      {
+        "id": 11,
+        "era": "Mortal Kombat 1: The New Era",
+        "title": "The Scorpion’s Shadow",
+        "Icon": "Scorpion Kunai",
+        "color": "from-blue-600 to-orange-600",
+        "bgPattern": "bg-gradient-to-br from-blue-800 via-orange-700 to-black",
+        "content": {
+          "summary": "In *Mortal Kombat 1* (2023), Liu Kang’s new timeline sees Kuai Liang as Scorpion, while Bi-Han is Sub-Zero and Grandmaster, turning villainous. Kuai Liang’s past as Sub-Zero remains iconic as he forms the Shirai Ryu. This era explores his shift to Scorpion, his cryomancy legacy, and his leadership against Bi-Han’s corruption.",
+          "details": [
+            "New timeline’s shift: In Liu Kang’s timeline, Bi-Han is Sub-Zero and Grandmaster, while Kuai Liang becomes Scorpion, his heart retaining Sub-Zero’s honor, his mind wielding hellfire with cryomancy roots. His codename shifts, his path a new clan’s birth, his leadership forging the Shirai Ryu.",
+            "Bi-Han’s betrayal: Sub-Zero (Bi-Han) allies with Shang Tsung, corrupting the Lin Kuei, forcing Kuai Liang to rebel, his heart raging against his brother, his mind countering his ice with fire. His codename a rebel’s cry, his path a fight for honor, his leadership defying tyranny.",
+            "Shirai Ryu’s rise: Founding the Shirai Ryu, Kuai Liang trains ninjas with Hanzo Hasashi, his heart set on justice, his mind blending cryomancy and hellfire. His codename a new clan’s vow, his path a reformation, his leadership inspiring loyalty against the Lin Kuei.",
+            "Titan Shang Tsung: Facing Titan Shang Tsung’s multiversal threat, Kuai Liang aids Liu Kang, his fire kunai burning sorcerers, his heart steady in chaos, his mind strategizing with allies. His codename a hero’s chant, his path a defense of timelines, his leadership uniting realms.",
+            "Bi-Han’s fall: Confronting Bi-Han, Kuai Liang battles his ice with fire, his heart pained by his brother’s corruption, his mind outsmarting his cryomancy. His codename a brother’s curse, his path a stand against evil, his leadership protecting the Shirai Ryu from Sub-Zero’s wrath.",
+            "Liu Kang’s guidance: Guided by Liu Kang, Kuai Liang defends the new timeline, his heart aligned with the Fire God, his mind aiding his plans. His codename a protector’s vow, his path a fight for balance, his leadership a light in the new era’s dark.",
+            "The new clan’s stand: Kuai Liang’s Shirai Ryu rises, his heart a fire from ice, his codename echoing in new tales. The era ends with him guarding his clan, his path a fight for honor, his leadership a vow to protect the timeline.",
+            "The Scorpion’s legacy: Kuai Liang’s shift cements his legend, his heart a fire in a new role, his codename eternal as Sub-Zero and Scorpion. The era closes with him leading the Shirai Ryu, his path a new fight, his leadership immortal in a reborn realm."
+          ]
+        }
+      },
+      {
+        "id": 12,
+        "era": "The Cryomancy Legacy",
+        "title": "The Power of Ice",
+        "Icon": "Ice Clone",
+        "color": "from-blue-600 to-white-600",
+        "bgPattern": "bg-gradient-to-br from-blue-800 via-white-700 to-black",
+        "content": {
+          "summary": "Across the *Mortal Kombat* series, Sub-Zero’s cryomancy defines his combat style, evolving with the Dragon Medallion and his Grandmaster role. From ice blasts to clones, his powers shape his legend. This era explores his mastery of ice, his tactical brilliance, and his leadership as a cryomancer icon.",
+          "details": [
+            "Ice blast mastery: Sub-Zero’s signature ice blasts freeze enemies, his heart steady in their chill, his mind timing their impact. His codename a cryomancer’s vow, his path a frozen battlefield, his leadership a cold strike against foes, his ice a weapon of precision.",
+            "Ice clone tactics: Creating ice clones to misdirect, Sub-Zero traps opponents, his heart using deception, his mind setting ambushes. His codename a strategist’s cry, his path a maze of ice, his leadership outsmarting enemies with frozen decoys.",
+            "Ice slide mobility: Using ice slides for speed, Sub-Zero evades attacks, his heart agile in combat, his mind reading enemy patterns. His codename a swift shadow, his path a glide through battle, his leadership a dance of frost and fury.",
+            "Dragon Medallion’s power: The Medallion enhances Sub-Zero’s cryomancy, his ice walls blocking armies, his heart accepting its cost, his mind wielding its strength. His codename a relic’s chant, his path a surge of power, his leadership a frozen force.",
+            "Ice hammer’s might: Wielding the ice hammer, Sub-Zero smashes foes, its axe form slicing through armor, his heart bold in its swing, his mind aiming for weak points. His codename a warrior’s roar, his path a crushing blow, his leadership a hammer of justice.",
+            "Cryomancy evolution: In *Mortal Kombat X*, Sub-Zero’s ice forms barriers and projectiles, his heart mastering new techniques, his mind adapting to modern foes. His codename a cryomancer’s legend, his path a frozen arsenal, his leadership inspiring awe in allies.",
+            "Netherrealm defiance: In Netherrealm, Sub-Zero’s ice resists hellfire, his heart unyielding to heat, his mind countering demonic magic. His codename a frozen terror, his path a stand against fire, his leadership a cold shield in infernal realms.",
+            "The icy legacy: Sub-Zero’s cryomancy shapes his legend, his heart a fire in ice, his codename eternal in frozen tales. The era ends with him wielding frost, his path a legacy of cold, his leadership immortal in a realm of ice."
+          ]
+        }
+      },
+      {
+        "id": 13,
+        "era": "The Lin Kuei’s Redemption",
+        "title": "The Clan of Honor",
+        "Icon": "Temple",
+        "color": "from-blue-600 to-silver-600",
+        "bgPattern": "bg-gradient-to-br from-blue-800 via-silver-700 to-black",
+        "content": {
+          "summary": "Across *Mortal Kombat X* and *11*, Sub-Zero rebuilds the Lin Kuei as a force for good, defeating corrupt leaders like Sektor and forging peace with the Shirai Ryu. This era explores his transformation of the clan, his leadership as Grandmaster, and his role as Earthrealm’s protector.",
+          "details": [
+            "Sektor’s overthrow: Defeating Sektor, Sub-Zero claims the Lin Kuei, his ice hammer crushing cyborgs, his heart set on reform, his mind purging corruption. His codename a Grandmaster’s vow, his path a cleansing of the clan, his leadership restoring honor.",
+            "Arctic temple’s rise: Relocating to an Arctic stronghold, Sub-Zero trains cryomancers, his heart proud of their loyalty, his mind crafting a new code. His codename a beacon in snow, his path a rebuilding of trust, his leadership inspiring a reborn clan.",
+            "Shirai Ryu peace: Forging peace with Scorpion’s Shirai Ryu, Sub-Zero ends their feud, his heart trusting Hanzo, his mind building alliances. His codename a unifier’s chant, his path a bridge between clans, his leadership ending centuries of war.",
+            "Mentoring the future: Training recruits like Frost, Sub-Zero teaches honor, his heart hopeful for their growth, his mind wary of betrayal. His codename a mentor’s title, his path a guide for warriors, his leadership fostering the Lin Kuei’s new generation.",
+            "Earthrealm’s guardian: Protecting Earthrealm, Sub-Zero aids Raiden’s champions, his ice walls shielding allies, his heart loyal to humanity, his mind strategizing defenses. His codename a protector’s vow, his path a fight for peace, his leadership a light in chaos.",
+            "Cyber Initiative’s end: Destroying the Cyber Initiative’s remnants, Sub-Zero freezes Sektor’s factories, his heart rejecting machines, his mind dismantling their tech. His codename a terror to cyborgs, his path a purge of corruption, his leadership freeing the clan.",
+            "The clan’s rebirth: The Lin Kuei rises under Sub-Zero, his heart a fire in ice, his codename eternal in their halls. The era ends with him leading the clan, his path a fight for honor, his leadership a vow to protect Earthrealm.",
+            "The Grandmaster’s code: Sub-Zero’s redemption of the Lin Kuei cements his legend, his heart unyielding, his codename echoing in warrior tales. The era closes with the clan’s strength, his path eternal, his leadership immortal in a reborn order."
+          ]
+        }
+      },
+      {
+        "id": 14,
+        "era": "The Scorpion Rivalry",
+        "title": "The Fire and Ice",
+        "Icon": "Hellfire",
+        "color": "from-blue-600 to-orange-600",
+        "bgPattern": "bg-gradient-to-br from-blue-800 via-orange-700 to-black",
+        "content": {
+          "summary": "Across the *Mortal Kombat* series, Sub-Zero’s rivalry with Scorpion evolves from vengeance to alliance, shaped by Quan Chi’s manipulations and their shared honor. This era explores their iconic feud, Sub-Zero’s cryomancy against Scorpion’s hellfire, and his leadership in forging peace between their clans.",
+          "details": [
+            "Bi-Han’s death: Scorpion kills Bi-Han, sparking the feud, Sub-Zero (Kuai Liang) vowing revenge, his heart raging, his mind seeking answers. His ice blasts counter hellfire, his codename a rival’s curse, his path a hunt for vengeance, his leadership driven by grief.",
+            "Mortal Kombat II clash: Facing Scorpion in Outworld, Sub-Zero spares him, his heart sensing deeper truths, his mind suspecting Quan Chi. His ice clones block kunai, his codename a step toward peace, his path a fight for clarity, his leadership showing mercy.",
+            "Quan Chi’s truth: In *Mortal Kombat 4*, Sub-Zero reveals Quan Chi’s role in Scorpion’s family’s death, his heart seeking unity, his mind exposing sorcery. His codename a bridge to trust, his path a shared enemy, his leadership forging respect between foes.",
+            "Netherrealm battles: In *Deception*, Sub-Zero and Scorpion fight Noob Saibot, their ice and fire combining, his heart trusting their bond, his mind coordinating strikes. His codename a brother’s vow, his path a joint stand, his leadership uniting rivals.",
+            "Mortal Kombat X peace: As Grandmaster, Sub-Zero formalizes peace with Scorpion’s Shirai Ryu, his heart proud of their alliance, his mind building trust. His codename a unifier’s chant, his path a bridge between clans, his leadership ending their war.",
+            "Kronika’s war: In *Mortal Kombat 11*, Sub-Zero and Scorpion fight Kronika’s forces, their ice and fire devastating revenants, his heart steady in their bond, his mind strategizing joint assaults. His codename a hero’s vow, his path a defense of time, his leadership a light in chaos.",
+            "New timeline’s shift: In *Mortal Kombat 1*, Kuai Liang as Scorpion continues their bond, his heart retaining Sub-Zero’s honor, his mind aiding Hanzo. His codename a shared legacy, his path a new clan’s rise, his leadership uniting fire and ice.",
+            "The eternal bond: Sub-Zero’s rivalry with Scorpion becomes a legend, his heart a fire in ice, his codename echoing in their peace. The era ends with their alliance, his path a fight for unity, his leadership immortal in their shared honor."
+          ]
+        }
+      },
+      {
+        "id": 15,
+        "era": "The Legends of Media",
+        "title": "The Cinematic Grandmaster",
+        "Icon": "Film Reel",
+        "color": "from-blue-600 to-silver-600",
+        "bgPattern": "bg-gradient-to-br from-blue-800 via-silver-700 to-black",
+        "content": {
+          "summary": "In *Mortal Kombat* films, animated series, and comics, Sub-Zero’s legacy as Grandmaster shines through Kuai Liang’s heroism and Bi-Han’s villainy. From *Mortal Kombat: Annihilation* to *Mortal Kombat Legends*, this era explores his cinematic battles, his cryomancy’s portrayal, and his leadership in broader media.",
+          "details": [
+            "Mortal Kombat (1995): Bi-Han as Sub-Zero battles Liu Kang, his ice blasts countered by fire, his heart cold and ruthless, his mind serving Shang Tsung. His codename a villain’s cry, his path a tournament defeat, his legacy a shadow for Kuai Liang to redeem.",
+            "Annihilation (1997): Kuai Liang, played by Keith Cooke, aids Earthrealm, his ice freezing Shao Kahn’s minions, his heart loyal to Raiden, his mind strategizing with Kitana. His codename a hero’s vow, his path a cinematic stand, his leadership inspiring in film.",
+            "Defenders of the Realm: In the animated series, Sub-Zero (voiced by Luke Perry) fights Outworld, his ice walls protecting allies, his heart bold against evil, his mind aiding Raiden. His codename a cartoon hero’s chant, his path a defense of Earth, his leadership a light for viewers.",
+            "Battle of the Realms: In *Mortal Kombat Legends*, Sub-Zero escapes the Cyber Initiative, his ice hammer smashing cyborgs, his heart defying corruption, his mind outsmarting Sektor. His codename a rebel’s cry, his path a fight for freedom, his leadership inspiring animated heroes.",
+            "Snow Blind: In *Snow Blind*, Sub-Zero mentors a post-apocalyptic Earth, his cryomancy shielding survivors, his heart set on hope, his mind teaching resilience. His codename a survivor’s vow, his path a fight for humanity, his leadership a beacon in ruin.",
+            "Mobile warrior: In *Mortal Kombat Mobile*, Sub-Zero’s Grandmaster form uses ice barriers for defense, his heart steady in digital combat, his mind mastering team synergy. His codename a digital legend, his path a virtual fight, his leadership rallying virtual warriors.",
+            "Comic battles: In comics, Sub-Zero fights Quan Chi’s forces, his ice clones outsmarting sorcerers, his heart loyal to Earthrealm, his mind uncovering plots. His codename a comic hero’s cry, his path a drawn defense, his leadership inspiring inked tales.",
+            "The cinematic legacy: Sub-Zero’s media presence cements his legend, his heart a fire in ice, his codename eternal in screens and pages. The era ends with his cinematic battles, his path a fight for realms, his leadership immortal in *Mortal Kombat*’s lore."
+          ]
+        }
+      },
+      {
+        "id": 16,
+        "era": "The Grandmaster’s Legacy",
+        "title": "The Eternal Ice",
+        "Icon": "Lin Kuei Temple",
+        "color": "from-blue-600 to-white-600",
+        "bgPattern": "bg-gradient-to-br from-blue-800 via-white-700 to-black",
+        "content": {
+          "summary": "Across the *Mortal Kombat* series, Sub-Zero’s legacy as Grandmaster, primarily through Kuai Liang, reshapes the Lin Kuei and protects Earthrealm. His cryomancy, honor, and leadership inspire realms. This era explores his mythic status, his impact on allies and foes, and his role as an eternal protector.",
+          "details": [
+            "Lin Kuei’s rebirth: Sub-Zero’s reformation of the Lin Kuei into a force for good, his heart a fire in ice, his codename a Grandmaster’s chant. His mind crafting honor, his path a legacy of redemption, his leadership inspiring a new clan.",
+            "Earthrealm’s protector: Defending Earth against Shao Kahn, Shinnok, and Kronika, Sub-Zero’s ice shields humanity, his heart loyal to Raiden, his mind strategizing with heroes. His codename a defender’s vow, his path a fight for survival, his leadership a light in chaos.",
+            "Scorpion’s bond: Forging peace with Scorpion, Sub-Zero ends their feud, his heart trusting their alliance, his mind building unity. His codename a unifier’s cry, his path a bridge between clans, his leadership immortal in their shared honor.",
+            "Noob Saibot’s shadow: Facing Bi-Han’s corruption, Sub-Zero overcomes his brother’s darkness, his heart pained but resolute, his mind outsmarting shadows. His codename a brother’s curse, his path a fight against loss, his leadership unyielding to Netherrealm.",
+            "Cryomancy’s legend: Sub-Zero’s ice powers inspire awe, his heart mastering frost, his mind wielding it with precision. His codename a cryomancer’s chant, his path a frozen legacy, his leadership a cold force against evil.",
+            "Mentor’s guidance: Training heroes like Cassie and Frost, Sub-Zero shapes the future, his heart hopeful for their growth, his mind teaching resilience. His codename a mentor’s title, his path a guide for warriors, his leadership fostering hope.",
+            "Cosmic defender: In Kronika’s war, Sub-Zero saves existence, his ice sealing time rifts, his heart steady in chaos, his mind aiding Liu Kang. His codename a hero’s vow, his path a fight for time, his leadership eternal in realms.",
+            "The eternal Grandmaster: Sub-Zero’s legacy endures, his heart a fire in ice, his codename echoing in realm tales. The era ends with him guarding the Lin Kuei, his path eternal, his leadership immortal in a universe saved by frost."
+          ]
+        }
+      }
+    ]
   }
 ]

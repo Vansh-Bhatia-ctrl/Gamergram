@@ -13,6 +13,7 @@ import ProtectedRoute from "./components/ProtectedRoute ";
 import ProfilePage from "./pages/ProfilePage";
 import SagaPage from "./pages/SagaPage";
 import StoryPage from "./pages/StoryPage";
+import ReviewsPage from "./pages/ReviewsPage";
 
 const router = createBrowserRouter([
   {
@@ -82,6 +83,10 @@ const router = createBrowserRouter([
   {
     path: "kratos",
     element: <KratosSaga />,
+  },
+  {
+    path: "reviews",
+    element: <ReviewsPage />,
   },
   {
     path: "profile",
