@@ -3775,5 +3775,699 @@
         }
       }
     ]
+  },
+  {
+    "_id": "68a639f58383ccaa602cc378",
+    "name": "Ryu",
+    "title": "Ryu: The Wandering Warrior Codex",
+    "meta": {
+      "note": "The complete chronicle of Ryu’s journey across the *Street Fighter* series, from a disciplined martial artist seeking mastery to a world-traveling warrior confronting inner darkness and global threats. This codex traces his path through key games (*Street Fighter*, *Street Fighter II*, *Street Fighter Alpha*, *Street Fighter III*, *Street Fighter IV*, *Street Fighter V*, *Street Fighter 6*) and media, emphasizing his Ansatsuken training, battles against Shadaloo, and quest for balance. Each era explores his discipline, strength, and silent leadership as a paragon of martial arts.",
+      "format": "Array of era objects with id, era, title, Icon (string), color, bgPattern, content { summary, details[] }"
+    },
+    "chapters": [
+      {
+        "id": 1,
+        "era": "Origins and Ansatsuken Training",
+        "title": "The Path of the Fist",
+        "Icon": "Dojo",
+        "color": "from-white-600 to-red-600",
+        "bgPattern": "bg-gradient-to-br from-white-800 via-red-700 to-black",
+        "content": {
+          "summary": "In the early *Street Fighter* lore, Ryu begins as an orphan trained by Gouken in the Ansatsuken martial art, mastering the Hadoken and Shoryuken. This era, rooted in *Street Fighter* (1987) and expanded in *Street Fighter Alpha*, explores his youth, his bond with Ken, and his quest to become a true martial artist.",
+          "details": [
+            "Orphan’s beginning: Found as an orphan in Japan, Ryu is adopted by Gouken, a master of Ansatsuken, his heart set on martial discipline, his mind absorbing the art’s philosophy. His codename ‘Ryu’ a symbol of potential, his path a dojo’s training, his leadership budding in sparring sessions.",
+            "Ansatsuken mastery: Training under Gouken, Ryu hones the Hadoken, a blue energy wave, and Shoryuken, a rising dragon punch, his heart steady in focus, his mind perfecting form. His codename whispered in the dojo, his path a quest for strength, his leadership shown in resilience.",
+            "Bond with Ken: Sparring with Ken Masters, Gouken’s other student, Ryu builds a brotherly rivalry, their kicks and punches echoing in the mountains, his heart loyal to their bond, his mind learning from Ken’s flair. His codename a friend’s chant, his path a shared journey, his leadership forged in mutual respect.",
+            "Gouken’s teachings: Gouken instills balance in Ryu, warning against the Satsui no Hado, a dark energy within Ansatsuken, his heart embracing discipline, his mind rejecting rage. His codename a student’s vow, his path a pursuit of purity, his leadership rooted in humility.",
+            "First tournament: Entering the first *Street Fighter* tournament (1987), Ryu faces Sagat, the Muay Thai king, his Hadoken stunning crowds, his heart calm in battle, his mind reading Sagat’s kicks. His codename a rising star, his path a test of skill, his leadership inspiring awe.",
+            "Sagat’s defeat: Defeating Sagat with a desperate Shoryuken, Ryu scars the champion, his heart conflicted by victory, his mind sensing the Satsui no Hado’s pull. His codename a victor’s cry, his path a lesson in restraint, his leadership marked by honor.",
+            "The wanderer’s call: Leaving the dojo to test his skills, Ryu travels the world, his heart seeking true strength, his mind open to new challengers. His codename a wanderer’s vow, his path a global quest, his leadership a silent example for martial artists.",
+            "The disciplined path: Ryu’s training shapes his legend, his heart a fire of focus, his codename echoing in dojos. The era ends with him wandering, his path a fight for mastery, his leadership a quiet vow to uphold Ansatsuken’s honor."
+          ]
+        }
+      },
+      {
+        "id": 2,
+        "era": "Street Fighter II: The World Warrior",
+        "title": "The Global Challenge",
+        "Icon": "Globe",
+        "color": "from-white-600 to-blue-600",
+        "bgPattern": "bg-gradient-to-br from-white-800 via-blue-700 to-black",
+        "content": {
+          "summary": "In *Street Fighter II* (1991), Ryu competes in the World Warrior tournament, facing global fighters like Chun-Li, Guile, and Bison. His victories cement his reputation as a martial arts icon. This era explores his rise to fame, his battles against Shadaloo, and his quest for balance amidst growing power.",
+          "details": [
+            "World Warrior tournament: Ryu enters the global tournament, his Hadoken blasting through opponents, his heart set on testing his limits, his mind analyzing fighters’ styles. His codename a champion’s cry, his path a worldwide stage, his leadership inspiring competitors.",
+            "Chun-Li’s alliance: Facing Chun-Li, Ryu respects her Interpol mission, his Shoryuken countering her kicks, his heart admiring her justice, his mind learning her speed. His codename a friend’s chant, his path a shared fight, his leadership forging bonds with heroes.",
+            "Guile’s military might: Battling Guile, Ryu dodges sonic booms, his Tatsumaki Senpukyaku spinning through defenses, his heart steady against military precision, his mind reading his patterns. His codename a soldier’s respect, his path a test of skill, his leadership earning honor.",
+            "Bison’s shadow: Encountering M. Bison, Shadaloo’s dictator, Ryu senses his Psycho Power, his Hadoken clashing with dark energy, his heart rejecting corruption, his mind resisting temptation. His codename a rebel’s vow, his path a fight against evil, his leadership defying tyranny.",
+            "Sagat’s rematch: Facing Sagat again, Ryu battles his Tiger Shots, his heart calm in their rivalry, his mind exploiting his scars. His codename a champion’s echo, his path a redemption duel, his leadership showing mercy in victory.",
+            "Shadaloo’s threat: Learning of Shadaloo’s criminal empire, Ryu vows to oppose Bison, his Shoryuken shattering minions, his heart set on justice, his mind tracking their bases. His codename a hero’s cry, his path a war on crime, his leadership inspiring resistance.",
+            "Tournament victory: Winning the World Warrior title, Ryu defeats Bison, his Hadoken overwhelming Psycho Power, his heart humble in triumph, his mind seeking greater challenges. His codename a global legend, his path a wanderer’s return, his leadership a beacon for fighters.",
+            "The world’s warrior: Ryu’s victories cement his legend, his heart a fire of discipline, his codename echoing in arenas. The era ends with him leaving the tournament, his path a quest for mastery, his leadership a silent vow to fight evil."
+          ]
+        }
+      },
+      {
+        "id": 3,
+        "era": "Street Fighter Alpha: The Dark Hado",
+        "title": "The Shadow Within",
+        "Icon": "Dark Flame",
+        "color": "from-white-600 to-purple-600",
+        "bgPattern": "bg-gradient-to-br from-white-800 via-purple-700 to-black",
+        "content": {
+          "summary": "In *Street Fighter Alpha* series (1995-1998), Ryu confronts the Satsui no Hado, a dark force within Ansatsuken, while battling Shadaloo and reconnecting with Gouken and Ken. This era explores his struggle with inner darkness, his growth as a fighter, and his leadership in resisting corruption.",
+          "details": [
+            "Satsui no Hado’s pull: Ryu feels the Satsui no Hado stirring, its rage tempting him in battles, his heart resisting its call, his mind seeking Gouken’s teachings. His Hadoken darkens briefly, his codename a warrior’s struggle, his path a fight for balance, his leadership defying darkness.",
+            "Akuma’s challenge: Facing Akuma, Gouken’s corrupted brother, Ryu battles his dark Ansatsuken, his Shoryuken countering the Raging Demon, his heart rejecting his path, his mind reading his ferocity. His codename a rival’s curse, his path a stand against evil, his leadership unyielding to temptation.",
+            "Gouken’s return: Reuniting with Gouken, Ryu learns of the Mu no Ken, a balanced Ansatsuken form, his heart embracing its calm, his mind mastering its power. His codename a student’s vow, his path a return to purity, his leadership inspired by his master.",
+            "Ken’s rivalry: Sparring with Ken, Ryu refines his skills, their Hadokens clashing in friendly duels, his heart loyal to their bond, his mind learning from his flair. His codename a brother’s chant, his path a shared journey, his leadership forging mutual growth.",
+            "Shadaloo’s pursuit: Hunted by Shadaloo, Ryu battles Vega and Balrog, his Tatsumaki evading claws and punches, his heart steady against their malice, his mind outsmarting their brutality. His codename a rebel’s cry, his path a fight against crime, his leadership defying Bison’s empire.",
+            "Rose’s prophecy: Meeting Rose, a mystic tied to Bison’s soul, Ryu learns of his destiny, his heart set on stopping Shadaloo, his mind absorbing her warnings. His codename a seer’s chant, his path a fated fight, his leadership guiding allies against darkness.",
+            "Bison’s stronghold: Infiltrating Shadaloo’s base, Ryu destroys Psycho Drive machines, his Hadoken shattering defenses, his heart rejecting corruption, his mind navigating traps. His codename a hero’s vow, his path a strike against Bison, his leadership inspiring Chun-Li’s team.",
+            "The balanced warrior: Ryu’s struggle with the Hado cements his legend, his heart a fire of discipline, his codename echoing in dojos. The era ends with him resisting darkness, his path a quest for balance, his leadership a vow to uphold Ansatsuken’s honor."
+          ]
+        }
+      },
+      {
+        "id": 4,
+        "era": "Street Fighter III: The New Generation",
+        "title": "The Master’s Path",
+        "Icon": "Denjin",
+        "color": "from-white-600 to-blue-600",
+        "bgPattern": "bg-gradient-to-br from-white-800 via-blue-700 to-black",
+        "content": {
+          "summary": "In *Street Fighter III* series (1997-1999), Ryu, now a seasoned fighter, seeks true mastery in the Third World Warrior tournament, facing new challengers like Alex and Oro. Battling Gill’s Illuminati, he refines his Ansatsuken. This era explores his pursuit of perfection, his leadership among fighters, and his stand against a new evil.",
+          "details": [
+            "Third tournament: Entering the Third World Warrior tournament, Ryu faces new fighters, his Hadoken blasting through defenses, his heart set on mastery, his mind analyzing their styles. His codename a champion’s cry, his path a global stage, his leadership inspiring a new generation.",
+            "Alex’s challenge: Battling Alex, a grappler seeking strength, Ryu counters throws with Shoryuken, his heart respecting his drive, his mind reading his power. His codename a rival’s respect, his path a test of skill, his leadership earning honor in defeat.",
+            "Oro’s wisdom: Training with Oro, a hermit master, Ryu learns advanced techniques, his heart embracing wisdom, his mind mastering the Denjin Hadoken, an electrified energy wave. His codename a student’s vow, his path a quest for growth, his leadership inspired by mentorship.",
+            "Gill’s Illuminati: Facing Gill, the Illuminati’s godlike leader, Ryu battles his elemental powers, his Shoryuken piercing fire and ice, his heart rejecting his tyranny, his mind outsmarting his resurrection. His codename a rebel’s cry, his path a fight against control, his leadership defying divine rule.",
+            "Ibuki’s speed: Dodging Ibuki’s ninja strikes, Ryu uses Tatsumaki to counter her agility, his heart steady against her youth, his mind reading her patterns. His codename a mentor’s chant, his path a lesson in patience, his leadership guiding young fighters.",
+            "Necro’s resilience: Battling Necro, a mutated fighter, Ryu overwhelms his stretchy limbs with Hadoken barrages, his heart calm against his pain, his mind exploiting his reach. His codename a hero’s vow, his path a fight for freedom, his leadership inspiring resistance.",
+            "Tournament’s end: Defeating Gill, Ryu spares his life, his heart humble in victory, his mind seeking greater challenges. His codename a global legend, his path a wanderer’s return, his leadership a beacon for martial artists.",
+            "The master’s journey: Ryu’s pursuit of mastery cements his legend, his heart a fire of discipline, his codename echoing in arenas. The era ends with him wandering, his path a quest for perfection, his leadership a silent vow to fight evil."
+          ]
+        }
+      },
+      {
+        "id": 5,
+        "era": "Street Fighter IV: The Shadaloo Resurgence",
+        "title": "The Psycho Power’s Return",
+        "Icon": "Psycho Drive",
+        "color": "from-white-600 to-purple-600",
+        "bgPattern": "bg-gradient-to-br from-white-800 via-purple-700 to-black",
+        "content": {
+          "summary": "In *Street Fighter IV* series (2008-2010), Ryu battles a resurgent Shadaloo, facing Seth and new fighters like Juri. His struggle with the Satsui no Hado intensifies, but Gouken’s guidance keeps him grounded. This era explores his fight against Shadaloo’s new plans, his inner balance, and his leadership as a martial arts icon.",
+          "details": [
+            "Shadaloo’s return: Ryu discovers Shadaloo’s new leader, Seth, a cyborg wielding Psycho Power, his heart set on stopping him, his mind tracking his bases. His Hadoken destroys S.I.N. drones, his codename a rebel’s cry, his path a war on crime, his leadership defying tyranny.",
+            "Seth’s challenge: Battling Seth, Ryu counters his copied techniques with Shoryuken, his heart steady against his artificial power, his mind exploiting his arrogance. His codename a hero’s vow, his path a strike against S.I.N., his leadership inspiring Chun-Li’s team.",
+            "Juri’s chaos: Facing Juri, a sadistic Taekwondo fighter, Ryu dodges her Feng Shui Engine kicks, his Tatsumaki spinning through her speed, his heart rejecting her cruelty, his mind reading her patterns. His codename a defender’s chant, his path a fight for order, his leadership unyielding to chaos.",
+            "Gouken’s guidance: Reuniting with Gouken, Ryu strengthens his Mu no Ken, resisting the Satsui no Hado, his heart embracing balance, his mind mastering the Power of Nothingness. His codename a student’s vow, his path a quest for purity, his leadership inspired by wisdom.",
+            "C. Viper’s pursuit: Battling C. Viper, an agent hunting Shadaloo, Ryu aids her mission, his Hadoken blasting drones, his heart aligned with justice, his mind coordinating strikes. His codename a partner’s chant, his path a shared fight, his leadership forging alliances.",
+            "Akuma’s temptation: Facing Akuma again, Ryu rejects the Satsui no Hado, his Shoryuken countering the Raging Demon, his heart firm in discipline, his mind resisting darkness. His codename a rival’s curse, his path a stand against evil, his leadership defying corruption.",
+            "Psycho Drive’s end: Destroying Seth’s Psycho Drive, Ryu shatters Shadaloo’s plans, his Hadoken overwhelming defenses, his heart humble in victory, his mind seeking new challenges. His codename a global legend, his path a wanderer’s return, his leadership a beacon for fighters.",
+            "The balanced fighter: Ryu’s fight against Shadaloo cements his legend, his heart a fire of discipline, his codename echoing in arenas. The era ends with him resisting the Hado, his path a quest for balance, his leadership a vow to uphold Ansatsuken’s honor."
+          ]
+        }
+      },
+      {
+        "id": 6,
+        "era": "Street Fighter V: The Neo Shadaloo",
+        "title": "The Light of Nothingness",
+        "Icon": "Mu no Ken",
+        "color": "from-white-600 to-gold-600",
+        "bgPattern": "bg-gradient-to-br from-white-800 via-gold-700 to-black",
+        "content": {
+          "summary": "In *Street Fighter V* (2016-2020), Ryu confronts Neo Shadaloo and F.A.N.G., mastering the Power of Nothingness to fully reject the Satsui no Hado. Mentoring new fighters like Sakura, he battles alongside Dhalsim. This era explores his ultimate balance, his leadership as a mentor, and his fight against a new criminal empire.",
+          "details": [
+            "Neo Shadaloo’s rise: Ryu faces Neo Shadaloo under F.A.N.G., a poison-wielding scientist, his heart set on stopping their Black Moons, his mind tracking their bases. His Hadoken destroys drones, his codename a rebel’s cry, his path a war on crime, his leadership defying tyranny.",
+            "F.A.N.G.’s poison: Battling F.A.N.G., Ryu dodges toxic clouds, his Shoryuken piercing his defenses, his heart steady against his malice, his mind exploiting his overconfidence. His codename a hero’s vow, his path a strike against Neo Shadaloo, his leadership inspiring allies.",
+            "Sakura’s mentorship: Training Sakura, a devoted student, Ryu teaches Hadoken control, his heart proud of her growth, his mind guiding her spirit. His codename a mentor’s chant, his path a guide for the future, his leadership fostering young fighters.",
+            "Dhalsim’s wisdom: Fighting alongside Dhalsim, Ryu combines Hadoken with yoga flames, his heart aligned with enlightenment, his mind coordinating their strikes. His codename a mystic’s respect, his path a shared fight, his leadership forging spiritual bonds.",
+            "Power of Nothingness: Mastering the Mu no Ken, Ryu fully rejects the Satsui no Hado, his Denjin Hadoken electrifying foes, his heart calm in its light, his mind wielding its power. His codename a master’s vow, his path a quest for purity, his leadership inspiring balance.",
+            "Rashid’s alliance: Teaming with Rashid, Ryu battles Shadaloo’s remnants, his Tatsumaki countering wind attacks, his heart steady in their bond, his mind strategizing joint moves. His codename a friend’s chant, his path a fight for freedom, his leadership uniting heroes.",
+            "Black Moons’ fall: Destroying the Black Moons, Ryu stops Shadaloo’s chaos, his Hadoken shattering their cores, his heart humble in victory, his mind seeking new challenges. His codename a global legend, his path a wanderer’s return, his leadership a beacon for fighters.",
+            "The enlightened warrior: Ryu’s mastery of Mu no Ken cements his legend, his heart a fire of balance, his codename echoing in dojos. The era ends with him mentoring others, his path a quest for perfection, his leadership a vow to protect the world."
+          ]
+        }
+      },
+      {
+        "id": 7,
+        "era": "Street Fighter 6: The World Tour",
+        "title": "The Wandering Master",
+        "Icon": "World Map",
+        "color": "from-white-600 to-blue-600",
+        "bgPattern": "bg-gradient-to-br from-white-800 via-blue-700 to-black",
+        "content": {
+          "summary": "In *Street Fighter 6* (2023), Ryu, now a seasoned master, travels the world, mentoring new fighters and facing JP’s schemes in Metro City. His Ansatsuken reaches new heights with refined techniques. This era explores his role as a global mentor, his leadership among fighters, and his fight against emerging threats.",
+          "details": [
+            "World tour: Ryu wanders Metro City and beyond, his Hadoken refined with age, his heart set on teaching, his mind analyzing new challengers. His codename a master’s cry, his path a global journey, his leadership inspiring a new generation of fighters.",
+            "JP’s schemes: Facing JP, a Psycho Power manipulator, Ryu counters his tricks with Shoryuken, his heart rejecting his control, his mind outsmarting his illusions. His codename a rebel’s vow, his path a fight against corruption, his leadership defying new tyrants.",
+            "Luke’s mentorship: Training Luke, a brash MMA fighter, Ryu teaches discipline, his heart proud of his growth, his mind guiding his punches. His codename a mentor’s chant, his path a guide for the future, his leadership fostering Metro City’s heroes.",
+            "Chun-Li’s reunion: Reuniting with Chun-Li, Ryu aids her Interpol missions, his Hadoken blasting gangs, his heart aligned with justice, his mind coordinating strikes. His codename a partner’s respect, his path a shared fight, his leadership forging bonds.",
+            "New techniques: Refining his Ansatsuken, Ryu unveils the Shin Shoryuken, a devastating uppercut, his heart steady in its power, his mind mastering its execution. His codename a master’s vow, his path a peak of skill, his leadership inspiring awe in arenas.",
+            "Metro City’s chaos: Battling street gangs and JP’s minions, Ryu protects civilians, his Tatsumaki clearing crowds, his heart calm in urban chaos, his mind reading their patterns. His codename a hero’s cry, his path a defense of the city, his leadership a light in the dark.",
+            "Global influence: Mentoring fighters worldwide, Ryu spreads Ansatsuken’s teachings, his heart humble in his role, his mind shaping the next generation. His codename a global legend, his path a wandering legacy, his leadership a beacon for martial artists.",
+            "The master’s legacy: Ryu’s world tour cements his legend, his heart a fire of balance, his codename echoing in arenas. The era ends with him wandering, his path a quest for perfection, his leadership a vow to protect the world."
+          ]
+        }
+      },
+      {
+        "id": 8,
+        "era": "The Satsui no Hado Struggle",
+        "title": "The Battle Within",
+        "Icon": "Dark Hado",
+        "color": "from-white-600 to-purple-600",
+        "bgPattern": "bg-gradient-to-br from-white-800 via-purple-700 to-black",
+        "content": {
+          "summary": "Across the *Street Fighter* series, Ryu’s struggle with the Satsui no Hado defines his journey, tempting him with rage but countered by his pursuit of the Mu no Ken. This era explores his inner conflict, his mastery over darkness, and his leadership as a symbol of balance.",
+          "details": [
+            "Hado’s temptation: The Satsui no Hado tempts Ryu in battles, its rage fueling his Hadoken, his heart resisting its pull, his mind seeking Gouken’s teachings. His codename a warrior’s struggle, his path a fight for balance, his leadership defying darkness.",
+            "Akuma’s influence: Facing Akuma repeatedly, Ryu rejects his dark path, his Shoryuken countering the Raging Demon, his heart firm in discipline, his mind resisting corruption. His codename a rival’s curse, his path a stand against evil, his leadership unyielding to temptation.",
+            "Gouken’s salvation: Guided by Gouken, Ryu embraces the Mu no Ken, his Hadoken purified, his heart calm in its light, his mind mastering its power. His codename a student’s vow, his path a quest for purity, his leadership inspired by wisdom.",
+            "Bison’s corruption: Battling Bison’s Psycho Power, Ryu resists its similarity to the Hado, his heart rejecting tyranny, his mind outsmarting his control. His codename a rebel’s cry, his path a fight against darkness, his leadership defying evil.",
+            "Evil Ryu’s shadow: In moments of weakness, Evil Ryu emerges, his attacks fueled by rage, his heart fighting to reclaim control, his mind suppressing the Hado. His codename a dark mirror, his path a battle within, his leadership a vow to overcome.",
+            "Mu no Ken’s triumph: Mastering the Power of Nothingness in *Street Fighter V*, Ryu banishes the Hado, his Denjin Hadoken electrifying foes, his heart steady in balance, his mind wielding its light. His codename a master’s chant, his path a purified fight, his leadership inspiring hope.",
+            "Mentors and rivals: Teaching Sakura and facing Ken, Ryu shares his balance, his heart proud of their growth, his mind guiding their paths. His codename a mentor’s vow, his path a shared journey, his leadership forging bonds against darkness.",
+            "The balanced soul: Ryu’s victory over the Hado cements his legend, his heart a fire of discipline, his codename echoing in dojos. The era ends with him purified, his path a quest for balance, his leadership a vow to uphold Ansatsuken’s honor."
+          ]
+        }
+      },
+      {
+        "id": 9,
+        "era": "The Shadaloo Wars",
+        "title": "The Fight Against Tyranny",
+        "Icon": "Psycho Power",
+        "color": "from-white-600 to-red-600",
+        "bgPattern": "bg-gradient-to-br from-white-800 via-red-700 to-black",
+        "content": {
+          "summary": "Across *Street Fighter II*, *Alpha*, *IV*, and *V*, Ryu battles Shadaloo’s leaders—Bison, Seth, and F.A.N.G.—to dismantle their criminal empire. This era explores his role as a rebel against tyranny, his Hadoken’s power against Psycho Power, and his leadership in uniting fighters for justice.",
+          "details": [
+            "Bison’s empire: Facing M. Bison in *Street Fighter II*, Ryu battles his Psycho Power, his Hadoken clashing with dark energy, his heart rejecting corruption, his mind outsmarting his control. His codename a rebel’s cry, his path a war on Shadaloo, his leadership defying tyranny.",
+            "Psycho Drive’s threat: In *Alpha*, Ryu destroys Bison’s Psycho Drive, his Shoryuken shattering machines, his heart steady against temptation, his mind navigating traps. His codename a hero’s vow, his path a strike against evil, his leadership inspiring Chun-Li’s team.",
+            "Seth’s ambition: In *Street Fighter IV*, Ryu faces Seth, his Hadoken overwhelming his copied moves, his heart calm against his arrogance, his mind exploiting his weaknesses. His codename a champion’s chant, his path a fight against S.I.N., his leadership uniting fighters.",
+            "F.A.N.G.’s schemes: Battling F.A.N.G. in *Street Fighter V*, Ryu dodges poison clouds, his Tatsumaki countering his attacks, his heart rejecting malice, his mind outsmarting his plans. His codename a defender’s cry, his path a war on Neo Shadaloo, his leadership defying crime.",
+            "Chun-Li’s alliance: Teaming with Chun-Li, Ryu aids Interpol, his Hadoken blasting Shadaloo bases, his heart aligned with justice, his mind coordinating strikes. His codename a partner’s respect, his path a shared fight, his leadership forging bonds.",
+            "Guile’s support: Fighting alongside Guile, Ryu combines Hadoken with sonic booms, his heart steady in teamwork, his mind strategizing joint assaults. His codename a soldier’s chant, his path a defense of freedom, his leadership uniting heroes.",
+            "Shadaloo’s fall: Destroying Shadaloo’s final plans, Ryu defeats Bison, his Mu no Ken overpowering Psycho Power, his heart humble in victory, his mind seeking peace. His codename a global legend, his path a wanderer’s return, his leadership a beacon for justice.",
+            "The rebel’s legacy: Ryu’s war on Shadaloo cements his legend, his heart a fire of discipline, his codename echoing in arenas. The era ends with him opposing tyranny, his path a quest for justice, his leadership a vow to protect the world."
+          ]
+        }
+      },
+      {
+        "id": 10,
+        "era": "The Ansatsuken Legacy",
+        "title": "The Art of the Fist",
+        "Icon": "Hadoken",
+        "color": "from-white-600 to-blue-600",
+        "bgPattern": "bg-gradient-to-br from-white-800 via-blue-700 to-black",
+        "content": {
+          "summary": "Across the *Street Fighter* series, Ryu’s mastery of Ansatsuken—Hadoken, Shoryuken, Tatsumaki Senpukyaku, and Denjin Hadoken—defines his combat style. This era explores his evolution of these techniques, his tactical brilliance, and his leadership as the art’s greatest practitioner.",
+          "details": [
+            "Hadoken’s power: Ryu’s Hadoken, a blue energy wave, blasts through foes, his heart steady in its focus, his mind timing its release. His codename a warrior’s cry, his path a projectile storm, his leadership a blast of precision.",
+            "Shoryuken’s might: The Shoryuken, a rising dragon punch, crushes defenses, his heart bold in its ascent, his mind aiming for weak points. His codename a champion’s vow, his path an uppercut’s arc, his leadership a strike of power.",
+            "Tatsumaki’s spin: The Tatsumaki Senpukyaku, a spinning kick, clears crowds, his heart agile in its spin, his mind reading enemy patterns. His codename a whirlwind’s chant, his path a spinning assault, his leadership a dance of fury.",
+            "Denjin Hadoken’s spark: In *Street Fighter III*, Ryu’s Denjin Hadoken electrifies foes, his heart calm in its charge, his mind wielding its power. His codename a master’s cry, his path a surge of energy, his leadership inspiring awe.",
+            "Shin Shoryuken’s peak: In *Street Fighter 6*, Ryu’s Shin Shoryuken devastates with multiple hits, his heart steady in its force, his mind mastering its execution. His codename a legend’s vow, his path a peak of skill, his leadership a crushing blow.",
+            "Mu no Ken’s balance: Mastering the Power of Nothingness, Ryu purifies his techniques, his heart embracing calm, his mind wielding light. His codename a sage’s chant, his path a balanced fight, his leadership a beacon of discipline.",
+            "Mentoring the art: Teaching Sakura and Luke, Ryu passes Ansatsuken’s legacy, his heart proud of their growth, his mind guiding their form. His codename a mentor’s title, his path a shared art, his leadership fostering future masters.",
+            "The art’s legacy: Ryu’s Ansatsuken shapes his legend, his heart a fire of discipline, his codename echoing in dojos. The era ends with him refining his art, his path a legacy of fists, his leadership immortal in martial arts."
+          ]
+        }
+      },
+      {
+        "id": 11,
+        "era": "The Mentorship Era",
+        "title": "The Teacher’s Path",
+        "Icon": "Sensei",
+        "color": "from-white-600 to-gold-600",
+        "bgPattern": "bg-gradient-to-br from-white-800 via-gold-700 to-black",
+        "content": {
+          "summary": "In *Street Fighter V* and *6*, Ryu becomes a mentor to Sakura, Luke, and others, passing on Ansatsuken’s teachings and fostering a new generation. This era explores his role as a teacher, his leadership in guiding fighters, and his legacy as a martial arts sage.",
+          "details": [
+            "Sakura’s growth: Mentoring Sakura in *Street Fighter V*, Ryu teaches Hadoken control, his heart proud of her spirit, his mind guiding her discipline. His codename a mentor’s chant, his path a guide for youth, his leadership fostering her potential.",
+            "Luke’s training: In *Street Fighter 6*, Ryu trains Luke, refining his MMA style, his heart steady in his growth, his mind teaching balance. His codename a sensei’s vow, his path a shared journey, his leadership inspiring Metro City’s hero.",
+            "Chun-Li’s support: Guiding Chun-Li’s students, Ryu shares Ansatsuken tactics, his heart aligned with her justice, his mind coordinating their moves. His codename a partner’s respect, his path a defense of the city, his leadership forging bonds.",
+            "Global mentorship: Traveling the world, Ryu teaches fighters in dojos, his Hadoken inspiring students, his heart humble in his role, his mind shaping their skills. His codename a global legend, his path a wandering school, his leadership a beacon for martial artists.",
+            "Ken’s rivalry renewed: Sparring with Ken, Ryu refines their bond, his heart loyal to their friendship, his mind learning from his flair. His codename a brother’s chant, his path a shared legacy, his leadership fostering mutual growth.",
+            "New generation’s rise: Ryu’s students spread his teachings, his heart proud of their strength, his mind guiding their paths. His codename a sensei’s cry, his path a legacy of mentorship, his leadership inspiring a new era of fighters.",
+            "Balance taught: Teaching the Mu no Ken, Ryu instills balance in his students, his heart calm in its light, his mind passing its wisdom. His codename a master’s vow, his path a purified art, his leadership a light for the future.",
+            "The teacher’s legacy: Ryu’s mentorship cements his legend, his heart a fire of discipline, his codename echoing in dojos. The era ends with him guiding fighters, his path a legacy of teaching, his leadership immortal in martial arts."
+          ]
+        }
+      },
+      {
+        "id": 12,
+        "era": "The Media Legend",
+        "title": "The Cinematic Warrior",
+        "Icon": "Film Reel",
+        "color": "from-white-600 to-silver-600",
+        "bgPattern": "bg-gradient-to-br from-white-800 via-silver-700 to-black",
+        "content": {
+          "summary": "In *Street Fighter* films, anime, and comics, Ryu’s journey as a wandering warrior shines through battles against Shadaloo and his own darkness. From *Street Fighter II: The Animated Movie* to *Street Fighter Alpha: The Animation*, this era explores his cinematic battles, his Hadoken’s portrayal, and his leadership in broader media.",
+          "details": [
+            "Street Fighter II: The Animated Movie: Ryu battles Bison, his Hadoken clashing with Psycho Power, his heart steady against evil, his mind outsmarting his control. His codename a hero’s cry, his path a cinematic fight, his leadership inspiring allies in animation.",
+            "Street Fighter Alpha: The Animation: Facing Akuma, Ryu resists the Satsui no Hado, his Shoryuken countering the Raging Demon, his heart firm in discipline, his mind seeking balance. His codename a warrior’s vow, his path a fight for purity, his leadership defying darkness.",
+            "Street Fighter (1994 film): In the live-action film, Ryu aids Guile against Bison, his Hadoken blasting minions, his heart aligned with justice, his mind coordinating strikes. His codename a rebel’s chant, his path a defense of freedom, his leadership uniting heroes.",
+            "Street Fighter comics: In comics, Ryu battles Shadaloo’s forces, his Tatsumaki clearing gangs, his heart steady in chaos, his mind navigating traps. His codename a comic hero’s cry, his path a drawn fight, his leadership inspiring inked tales.",
+            "Street Fighter V: A Shadow Falls: In the cinematic story, Ryu destroys the Black Moons, his Mu no Ken overpowering F.A.N.G., his heart humble in victory, his mind seeking peace. His codename a digital legend, his path a virtual fight, his leadership a beacon in cinematics.",
+            "Anime rivalries: Facing Ken and Chun-Li in anime, Ryu refines his skills, his heart loyal to their bonds, his mind learning from their styles. His codename a friend’s chant, his path a shared journey, his leadership forging animated alliances.",
+            "Mobile battles: In *Street Fighter mobile games*, Ryu’s Hadoken dominates arenas, his heart steady in digital combat, his mind mastering team synergy. His codename a virtual legend, his path a mobile fight, his leadership rallying digital warriors.",
+            "The cinematic legacy: Ryu’s media presence cements his legend, his heart a fire of discipline, his codename echoing in screens and pages. The era ends with his cinematic battles, his path a fight for justice, his leadership immortal in *Street Fighter*’s lore."
+          ]
+        }
+      },
+      {
+        "id": 13,
+        "era": "The Rivalries of Ryu",
+        "title": "The Eternal Challenges",
+        "Icon": "Fist Clash",
+        "color": "from-white-600 to-red-600",
+        "bgPattern": "bg-gradient-to-br from-white-800 via-red-700 to-black",
+        "content": {
+          "summary": "Across the *Street Fighter* series, Ryu’s rivalries with Ken, Sagat, Akuma, and others define his journey, pushing him to grow as a fighter. This era explores his iconic rivalries, his Hadoken against their skills, and his leadership in forging bonds through combat.",
+          "details": [
+            "Ken’s brotherhood: Sparring with Ken, Ryu refines his Ansatsuken, their Hadokens clashing in friendly duels, his heart loyal to their bond, his mind learning from his flair. His codename a brother’s chant, his path a shared journey, his leadership fostering mutual growth.",
+            "Sagat’s redemption: Facing Sagat, Ryu battles his Muay Thai, his Shoryuken countering Tiger Shots, his heart respecting his honor, his mind reading his scars. His codename a rival’s respect, his path a redemption duel, his leadership showing mercy.",
+            "Akuma’s darkness: Battling Akuma, Ryu rejects the Satsui no Hado, his Hadoken countering the Raging Demon, his heart firm in discipline, his mind resisting corruption. His codename a rival’s curse, his path a stand against evil, his leadership defying temptation.",
+            "Chun-Li’s justice: Teaming with Chun-Li, Ryu aids her Interpol missions, his Hadoken blasting foes, his heart aligned with her cause, his mind coordinating strikes. His codename a partner’s respect, his path a shared fight, his leadership forging bonds.",
+            "Guile’s discipline: Fighting alongside Guile, Ryu combines Hadoken with sonic booms, his heart steady in teamwork, his mind strategizing joint moves. His codename a soldier’s chant, his path a defense of freedom, his leadership uniting heroes.",
+            "Sakura’s admiration: Facing Sakura, Ryu inspires her growth, his heart proud of her spirit, his mind guiding her Hadoken. His codename a mentor’s vow, his path a guide for youth, his leadership fostering her potential.",
+            "Bison’s tyranny: Battling Bison, Ryu overcomes Psycho Power, his Mu no Ken shattering his control, his heart rejecting corruption, his mind outsmarting his malice. His codename a rebel’s cry, his path a war on evil, his leadership defying tyranny.",
+            "The eternal rivals: Ryu’s rivalries shape his legend, his heart a fire of discipline, his codename echoing in arenas. The era ends with him facing challengers, his path a legacy of combat, his leadership immortal in bonds forged through fists."
+          ]
+        }
+      },
+      {
+        "id": 14,
+        "era": "The Global Wanderer",
+        "title": "The Path of the World",
+        "Icon": "Backpack",
+        "color": "from-white-600 to-blue-600",
+        "bgPattern": "bg-gradient-to-br from-white-800 via-blue-700 to-black",
+        "content": {
+          "summary": "Across the *Street Fighter* series, Ryu’s global travels define his quest for mastery, facing fighters in diverse locales from Japan to Metro City. This era explores his wandering spirit, his Hadoken’s power across cultures, and his leadership as a global martial arts icon.",
+          "details": [
+            "Japan’s roots: Fighting in Japanese dojos, Ryu hones his Ansatsuken, his Hadoken echoing in mountains, his heart tied to his homeland, his mind absorbing tradition. His codename a warrior’s cry, his path a return to roots, his leadership inspiring local fighters.",
+            "Thailand’s trials: Battling in Thailand, Ryu faces Sagat’s Muay Thai, his Shoryuken countering Tiger Shots, his heart respecting their culture, his mind reading their power. His codename a champion’s chant, his path a test of skill, his leadership earning global respect.",
+            "Brazil’s jungles: In Brazil, Ryu battles Blanka, his Tatsumaki dodging electric shocks, his heart calm in the wild, his mind adapting to his ferocity. His codename a wanderer’s vow, his path a fight in nature, his leadership uniting diverse fighters.",
+            "Metro City’s chaos: In *Street Fighter 6*, Ryu fights in Metro City, his Hadoken clearing gangs, his heart steady in urban chaos, his mind navigating streets. His codename a hero’s cry, his path a defense of the city, his leadership a light in the dark.",
+            "India’s mysticism: Training with Dhalsim in India, Ryu learns spiritual balance, his Hadoken combining with yoga flames, his heart embracing enlightenment, his mind absorbing wisdom. His codename a mystic’s respect, his path a spiritual fight, his leadership forging bonds.",
+            "Russia’s strength: Facing Zangief in Russia, Ryu counters wrestling throws with Shoryuken, his heart respecting his power, his mind reading his grapples. His codename a rival’s chant, his path a test of endurance, his leadership earning honor.",
+            "Global connections: Meeting fighters worldwide, Ryu builds a network of allies, his heart humble in his travels, his mind learning from cultures. His codename a global legend, his path a wandering legacy, his leadership uniting martial artists.",
+            "The wanderer’s legacy: Ryu’s travels cement his legend, his heart a fire of discipline, his codename echoing in arenas. The era ends with him wandering, his path a global quest, his leadership immortal in martial arts."
+          ]
+        }
+      },
+      {
+        "id": 15,
+        "era": "The Cultural Impact",
+        "title": "The Icon of Street Fighter",
+        "Icon": "Trophy",
+        "color": "from-white-600 to-gold-600",
+        "bgPattern": "bg-gradient-to-br from-white-800 via-gold-700 to-black",
+        "content": {
+          "summary": "Ryu’s status as *Street Fighter*’s face makes him a cultural icon, inspiring players and appearing in crossovers like *Super Smash Bros.* and *Capcom vs. SNK*. This era explores his influence in gaming, his Hadoken’s recognition, and his leadership as a symbol of martial arts excellence.",
+          "details": [
+            "Gaming icon: As *Street Fighter*’s mascot, Ryu’s Hadoken is a gaming staple, his heart inspiring players, his mind shaping competitive play. His codename a gamer’s cry, his path a digital legacy, his leadership uniting fans worldwide.",
+            "Super Smash Bros.: In *Super Smash Bros. Ultimate*, Ryu battles Nintendo heroes, his Shoryuken clashing with Mario’s fireballs, his heart steady in crossovers, his mind adapting to new arenas. His codename a crossover legend, his path a global fight, his leadership inspiring players.",
+            "Capcom vs. SNK: Facing SNK fighters, Ryu’s Hadoken meets Kyo’s flames, his heart respecting their skills, his mind reading their styles. His codename a rival’s chant, his path a shared universe, his leadership forging cross-franchise bonds.",
+            "Esports legacy: In esports, Ryu dominates tournaments, his combos inspiring pros, his heart calm in competition, his mind mastering frame data. His codename a champion’s vow, his path a competitive legacy, his leadership shaping fighting game culture.",
+            "Anime influence: In anime, Ryu’s battles inspire fans, his Hadoken lighting screens, his heart steady in stories, his mind guiding animated heroes. His codename a cinematic cry, his path a drawn fight, his leadership a beacon in animation.",
+            "Merchandise icon: Ryu’s gi and headband adorn merchandise, his heart a symbol of discipline, his mind inspiring designs. His codename a brand’s chant, his path a cultural legacy, his leadership uniting collectors.",
+            "Fan devotion: Fans cosplay Ryu, chanting ‘Hadoken’ at conventions, his heart humble in their love, his mind shaping their passion. His codename a community’s cry, his path a shared fandom, his leadership inspiring devotion.",
+            "The cultural warrior: Ryu’s influence cements his legend, his heart a fire of discipline, his codename echoing in culture. The era ends with his global impact, his path a legacy of fists, his leadership immortal in gaming history."
+          ]
+        }
+      },
+      {
+        "id": 16,
+        "era": "The Eternal Warrior",
+        "title": "The Legacy of Ryu",
+        "Icon": "White Gi",
+        "color": "from-white-600 to-red-600",
+        "bgPattern": "bg-gradient-to-br from-white-800 via-red-700 to-black",
+        "content": {
+          "summary": "Across the *Street Fighter* series, Ryu’s legacy as the wandering warrior endures, inspiring fighters and players with his discipline and Hadoken. This era explores his mythic status, his impact on allies and foes, and his leadership as the eternal symbol of martial arts mastery.",
+          "details": [
+            "Ansatsuken’s champion: Ryu’s mastery of Ansatsuken inspires dojos, his Hadoken a symbol of power, his heart a fire of discipline, his codename echoing in training halls. His path a legacy of fists, his leadership immortal in martial arts.",
+            "Shadaloo’s bane: Defeating Bison and Shadaloo, Ryu protects the world, his Shoryuken shattering tyranny, his heart steady against evil, his mind outsmarting corruption. His codename a rebel’s cry, his path a war on crime, his leadership defying darkness.",
+            "Mentor’s guidance: Teaching Sakura, Luke, and others, Ryu shapes the future, his heart proud of their growth, his mind guiding their paths. His codename a sensei’s vow, his path a shared journey, his leadership fostering hope.",
+            "Rivalries’ legacy: Facing Ken, Sagat, and Akuma, Ryu forges bonds through combat, his heart loyal to their challenges, his mind learning from their skills. His codename a rival’s chant, his path a legacy of duels, his leadership uniting fighters.",
+            "Mu no Ken’s light: Mastering the Power of Nothingness, Ryu banishes the Satsui no Hado, his heart calm in its light, his mind wielding its balance. His codename a sage’s cry, his path a purified fight, his leadership inspiring peace.",
+            "Global wanderer: Traveling the world, Ryu spreads Ansatsuken’s teachings, his heart humble in his travels, his mind learning from cultures. His codename a global legend, his path a wandering legacy, his leadership a beacon for martial artists.",
+            "Cultural icon: As *Street Fighter*’s face, Ryu inspires players, his Hadoken a gaming staple, his heart steady in fame, his mind shaping culture. His codename a gamer’s chant, his path a digital legacy, his leadership uniting fans.",
+            "The eternal warrior: Ryu’s legacy endures, his heart a fire of discipline, his codename echoing in arenas. The era ends with him wandering, his path a quest for mastery, his leadership immortal in a world saved by fists."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "_id": "68a639f58383ccaa602cc379",
+    "name": "Leon Kennedy",
+    "title": "Leon S. Kennedy: The Survivor’s Codex",
+    "meta": {
+      "note": "The complete chronicle of Leon S. Kennedy’s journey across the Resident Evil series, from a rookie cop surviving Raccoon City to a seasoned agent battling global bioterrorism. This codex traces his path through key games (Resident Evil 2, Resident Evil 4, Resident Evil 6, Resident Evil: Revelations 2, Resident Evil: Vendetta, Resident Evil: Death Island, Resident Evil 2 Remake, Resident Evil 4 Remake) and media, emphasizing his resilience, combat skills, and leadership in the face of bio-organic horrors. Each era explores his growth, his fight against Umbrella and its successors, and his unyielding resolve as a paragon of survival.",
+      "format": "Array of era objects with id, era, title, Icon (string), color, bgPattern, content { summary, details[] }"
+    },
+    "chapters": [
+      {
+        "id": 1,
+        "era": "Resident Evil 2: The Rookie’s Nightmare",
+        "title": "Raccoon City’s Inferno",
+        "Icon": "Police Badge",
+        "color": "from-blue-600 to-red-600",
+        "bgPattern": "bg-gradient-to-br from-blue-800 via-red-700 to-black",
+        "content": {
+          "summary": "In Resident Evil 2 (1998) and its Remake (2019), Leon S. Kennedy, a rookie cop, arrives in Raccoon City on his first day, only to face a zombie outbreak caused by Umbrella’s T-Virus. Teaming with Claire Redfield, he battles mutants and uncovers Umbrella’s secrets. This era explores his baptism by fire, his survival instincts, and his emerging leadership in a city of horrors.",
+          "details": [
+            "First day chaos: Arriving in Raccoon City, Leon faces zombies, his heart pounding with shock, his mind racing to adapt, his 9mm handgun firing at undead. His codename ‘Rookie’ a mark of inexperience, his path a descent into chaos, his leadership budding in crisis.",
+            "Claire’s alliance: Meeting Claire Redfield, Leon teams up to survive, his shotgun blasting Lickers, his heart protective of her, his mind coordinating their escape. His codename a partner’s trust, his path a shared fight, his leadership forged in teamwork.",
+            "RPD horrors: Navigating the Raccoon Police Department, Leon battles zombies and Tyrant (Mr. X), his heart steady despite fear, his mind solving puzzles to escape. His codename a survivor’s cry, his path a maze of blood, his leadership guiding Claire through danger.",
+            "Ada’s mystery: Encountering Ada Wong, a supposed FBI agent, Leon aids her, his heart drawn to her enigma, his mind wary of her secrets. His codename a naive trust, his path tangled in deception, his leadership tested by her hidden motives.",
+            "Umbrella’s labs: Infiltrating Umbrella’s underground facility, Leon faces the G-Virus mutant William Birkin, his magnum piercing its flesh, his heart resolute against biohorrors, his mind uncovering Umbrella’s crimes. His codename a rebel’s vow, his path a fight against corruption, his leadership defying corporate evil.",
+            "Sherry’s protection: Protecting Sherry Birkin, a young survivor, Leon shields her from Mr. X, his heart fierce in her defense, his mind navigating sewers. His codename a guardian’s chant, his path a rescue mission, his leadership ensuring her safety.",
+            "Escape from Raccoon: Escaping as the city is destroyed, Leon saves Claire and Sherry, his heart relieved but scarred, his mind vowing to fight Umbrella. His codename a survivor’s cry, his path a narrow escape, his leadership a beacon in the apocalypse.",
+            "The rookie’s resolve: Leon’s survival cements his legend, his heart a fire of courage, his codename echoing in Raccoon’s ruins. The era ends with him vowing justice, his path a fight against bioterror, his leadership born in the inferno."
+          ]
+        }
+      },
+      {
+        "id": 2,
+        "era": "Resident Evil 4: The Agent’s Mission",
+        "title": "The Los Illuminados Cult",
+        "Icon": "Handgun",
+        "color": "from-blue-600 to-green-600",
+        "bgPattern": "bg-gradient-to-br from-blue-800 via-green-700 to-black",
+        "content": {
+          "summary": "In Resident Evil 4 (2005) and its Remake (2023), Leon, now a U.S. government agent, is sent to rural Spain to rescue Ashley Graham, the President’s daughter, from the Los Illuminados cult and their Las Plagas parasite. Facing monstrous villagers and cult leaders, he uncovers a global threat. This era explores his transformation into a skilled operative, his combat prowess, and his leadership in a bioterror crisis.",
+          "details": [
+            "Agent training: After Raccoon City, Leon trains as a government agent, mastering knives and firearms, his heart hardened by loss, his mind sharpened for missions. His codename ‘Agent Kennedy’ a mark of duty, his path a covert fight, his leadership honed in discipline.",
+            "Spanish village: Arriving in Spain, Leon battles Plaga-infected villagers, his Red9 pistol cutting through hordes, his heart steady in chaos, his mind reading their patterns. His codename a lone operative, his path a rural nightmare, his leadership guiding him through ambush.",
+            "Ashley’s rescue: Finding Ashley Graham, Leon protects her from cultists, his shotgun blasting Ganados, his heart fierce in her defense, his mind navigating traps. His codename a guardian’s vow, his path a rescue mission, his leadership ensuring her safety.",
+            "Ada’s return: Reuniting with Ada Wong, Leon navigates her ambiguous motives, his heart conflicted by attraction, his mind wary of her espionage. His codename a tangled trust, his path a dance with deception, his leadership tested by her secrets.",
+            "Los Illuminados’ cult: Facing Lord Saddler, the cult’s leader, Leon battles Plaga monstrosities, his rocket launcher destroying bio-weapons, his heart resolute against fanaticism, his mind uncovering their plans. His codename a rebel’s cry, his path a fight against infection, his leadership defying the cult.",
+            "Bitores Mendez: Confronting the village chief Mendez, Leon dodges his Plaga mutations, his knife slashing weak points, his heart calm under pressure, his mind exploiting his size. His codename a survivor’s chant, his path a village showdown, his leadership outsmarting the enemy.",
+            "Escape with Ashley: Escaping the island facility, Leon destroys Saddler’s Plaga core, his heart relieved at victory, his mind planning their extraction. His codename a hero’s vow, his path a narrow escape, his leadership saving Ashley from infection.",
+            "The agent’s stand: Leon’s mission cements his legend, his heart a fire of resolve, his codename echoing in Spain’s ruins. The era ends with him thwarting Los Illuminados, his path a fight against bioterror, his leadership a beacon in darkness."
+          ]
+        }
+      },
+      {
+        "id": 3,
+        "era": "Resident Evil: Degeneration",
+        "title": "The Airport Outbreak",
+        "Icon": "Airplane",
+        "color": "from-blue-600 to-silver-600",
+        "bgPattern": "bg-gradient-to-br from-blue-800 via-silver-700 to-black",
+        "content": {
+          "summary": "In Resident Evil: Degeneration (2008), a CGI film, Leon, now a seasoned agent, responds to a T-Virus outbreak at Harvardville Airport, teaming with Claire Redfield to stop a bioterror attack linked to WilPharma. This era explores his expertise in crisis management, his teamwork with Claire, and his leadership in containing a new outbreak.",
+          "details": [
+            "Harvardville crisis: Dispatched to Harvardville Airport, Leon faces T-Virus zombies, his submachine gun mowing down hordes, his heart steady in chaos, his mind assessing the outbreak. His codename an agent’s call, his path an airport siege, his leadership guiding survivors.",
+            "Claire’s reunion: Teaming with Claire, Leon battles infected, his grenades clearing paths, his heart protective of his ally, his mind coordinating their moves. His codename a partner’s trust, his path a shared fight, his leadership forged in teamwork.",
+            "WilPharma’s plot: Uncovering WilPharma’s T-Virus experiments, Leon confronts their scientist Curtis Miller, his pistol stopping his G-Virus mutation, his heart resolute against corruption, his mind exposing their crimes. His codename a rebel’s cry, his path a fight against bioterror, his leadership defying corporate greed.",
+            "Airport rescue: Saving Senator Ron Davis and survivors, Leon navigates collapsing terminals, his heart fierce in their defense, his mind solving escape routes. His codename a guardian’s vow, his path a rescue mission, his leadership ensuring their safety.",
+            "T-Virus containment: Containing the outbreak, Leon destroys infected with Claire, his heart relieved at containment, his mind tracing WilPharma’s ties to Umbrella. His codename a hero’s chant, his path a containment effort, his leadership a beacon in crisis.",
+            "Survivor evacuation: Escorting survivors to safety, Leon holds off zombies, his knife slashing through undead, his heart calm under pressure, his mind planning extraction. His codename a survivor’s cry, his path a narrow escape, his leadership saving lives.",
+            "WilPharma’s downfall: Exposing WilPharma’s role, Leon aids Claire’s investigation, his heart set on justice, his mind linking evidence to Umbrella. His codename an agent’s vow, his path a fight against corruption, his leadership dismantling bioterror networks.",
+            "The airport’s hero: Leon’s containment cements his legend, his heart a fire of resolve, his codename echoing in Harvardville’s ruins. The era ends with him stopping the outbreak, his path a fight against bioterror, his leadership a light in the dark."
+          ]
+        }
+      },
+      {
+        "id": 4,
+        "era": "Resident Evil: Damnation",
+        "title": "The Eastern War",
+        "Icon": "AK-47",
+        "color": "from-blue-600 to-red-600",
+        "bgPattern": "bg-gradient-to-br from-blue-800 via-red-700 to-black",
+        "content": {
+          "summary": "In Resident Evil: Damnation (2012), a CGI film, Leon is sent to a war-torn Eastern European country to investigate B.O.W.s (Bio-Organic Weapons) used in a civil war. Facing Plaga-infected soldiers and a rogue president, he allies with rebels. This era explores his tactical expertise, his solo operations, and his leadership in a warzone.",
+          "details": [
+            "Warzone mission: Deployed to Eastern Europe, Leon faces Plaga-infected soldiers, his assault rifle cutting through hordes, his heart steady in war, his mind reading battle patterns. His codename an agent’s call, his path a war-torn fight, his leadership guiding rebels.",
+            "Rebel alliance: Teaming with rebel leader JD, Leon battles Lickers, his shotgun blasting bio-weapons, his heart protective of allies, his mind coordinating strikes. His codename a partner’s trust, his path a shared resistance, his leadership forged in combat.",
+            "Svetlana’s betrayal: Confronting President Svetlana, Leon uncovers her B.O.W. control, his knife slashing Plaga hosts, his heart resolute against deception, his mind exposing her tyranny. His codename a rebel’s cry, his path a fight against corruption, his leadership defying her regime.",
+            "Tyrant onslaught: Facing multiple Tyrants, Leon uses rocket launchers, his heart calm under their size, his mind exploiting weak points. His codename a survivor’s vow, his path a bio-weapon gauntlet, his leadership outsmarting monstrous foes.",
+            "Plaga hive: Infiltrating Svetlana’s facility, Leon destroys Plaga hives, his grenades collapsing chambers, his heart fierce against infection, his mind navigating traps. His codename a hero’s chant, his path a strike against bioterror, his leadership dismantling her arsenal.",
+            "Rebel support: Protecting rebel forces, Leon holds off infected, his pistol precise in chaos, his heart steady in their defense, his mind planning their survival. His codename a guardian’s cry, his path a rescue mission, his leadership saving allies.",
+            "Svetlana’s fall: Defeating Svetlana’s forces, Leon exposes her B.O.W. trade, his heart set on justice, his mind linking her to global bioterror. His codename an agent’s vow, his path a warzone victory, his leadership ending her tyranny.",
+            "The warzone’s hero: Leon’s stand cements his legend, his heart a fire of resolve, his codename echoing in war’s ruins. The era ends with him stopping the B.O.W.s, his path a fight against bioterror, his leadership a beacon in conflict."
+          ]
+        }
+      },
+      {
+        "id": 5,
+        "era": "Resident Evil: Revelations 2",
+        "title": "The Island of Mutants",
+        "Icon": "Island Map",
+        "color": "from-blue-600 to-green-600",
+        "bgPattern": "bg-gradient-to-br from-blue-800 via-green-700 to-black",
+        "content": {
+          "summary": "In Resident Evil: Revelations 2 (2015), Leon appears indirectly, aiding Claire Redfield via radio during her imprisonment on a remote island controlled by Alex Wesker. His guidance helps Claire and Moira Burton survive T-Phobos mutants. This era explores his offscreen support, his strategic leadership, and his role in combating Wesker’s legacy.",
+          "details": [
+            "Remote support: Contacting Claire via radio, Leon guides her through Sejm Island, his heart concerned for her safety, his mind relaying intel on Alex Wesker. His codename an agent’s call, his path a distant fight, his leadership aiding from afar.",
+            "T-Phobos outbreak: Advising Claire on T-Phobos mutants, Leon provides tactics, his heart steady despite distance, his mind analyzing Wesker’s experiments. His codename a strategist’s vow, his path a remote rescue, his leadership guiding survivors.",
+            "Claire’s mission: Supporting Claire’s fight against Afflicted, Leon shares Umbrella’s history, his heart protective of his ally, his mind coordinating her moves. His codename a partner’s trust, his path a shared resistance, his leadership forged in communication.",
+            "Alex Wesker’s legacy: Helping Claire uncover Alex’s T-Phobos plans, Leon links her to Umbrella’s remnants, his heart resolute against Wesker’s evil, his mind exposing her schemes. His codename a rebel’s cry, his path a fight against bioterror, his leadership defying her legacy.",
+            "Moira’s survival: Guiding Claire to protect Moira, Leon ensures their escape, his heart fierce in their defense, his mind planning extraction routes. His codename a guardian’s chant, his path a rescue mission, his leadership saving lives remotely.",
+            "Island containment: Advising on containment, Leon helps Claire destroy Wesker’s facility, his heart relieved at their survival, his mind tracing her ties to global bioterror. His codename a hero’s vow, his path a distant strike, his leadership stopping the outbreak.",
+            "Barry’s support: Coordinating with Barry Burton, Leon aids the rescue, his heart aligned with their cause, his mind relaying critical intel. His codename a partner’s respect, his path a shared fight, his leadership uniting allies against Wesker.",
+            "The distant hero: Leon’s guidance cements his legend, his heart a fire of resolve, his codename echoing in radio waves. The era ends with him aiding Claire, his path a fight against bioterror, his leadership a beacon from afar."
+          ]
+        }
+      },
+      {
+        "id": 6,
+        "era": "Resident Evil 6: The Global Outbreak",
+        "title": "The C-Virus Apocalypse",
+        "Icon": "Globe",
+        "color": "from-blue-600 to-red-600",
+        "bgPattern": "bg-gradient-to-br from-blue-800 via-red-700 to-black",
+        "content": {
+          "summary": "In Resident Evil 6 (2012), Leon battles a global C-Virus outbreak orchestrated by Neo-Umbrella and Derek Simmons. Teaming with Helena Harper, he faces zombies and mutants across America and China. This era explores his peak as an agent, his combat against a worldwide threat, and his leadership in a global crisis.",
+          "details": [
+            "Tall Oaks outbreak: In Tall Oaks, Leon faces C-Virus zombies, his shotgun blasting through hordes, his heart steady in chaos, his mind assessing the infection. His codename an agent’s call, his path a city siege, his leadership guiding survivors.",
+            "Helena’s partnership: Teaming with Helena Harper, Leon uncovers Simmons’ betrayal, his pistol cutting through infected, his heart protective of his partner, his mind coordinating their moves. His codename a partner’s trust, his path a shared fight, his leadership forged in teamwork.",
+            "Simmons’ conspiracy: Confronting Derek Simmons, Leon battles his C-Virus mutations, his magnum piercing his forms, his heart resolute against corruption, his mind exposing his crimes. His codename a rebel’s cry, his path a fight against Neo-Umbrella, his leadership defying betrayal.",
+            "China’s chaos: Pursuing Simmons to Lanshiang, Leon faces J’avo mutants, his submachine gun mowing down enemies, his heart calm in urban war, his mind navigating traps. His codename a survivor’s vow, his path a global fight, his leadership outsmarting bioterror.",
+            "Ada’s shadow: Encountering Ada Wong again, Leon navigates her dual motives, his heart conflicted by trust, his mind wary of her espionage. His codename a tangled bond, his path a dance with deception, his leadership tested by her actions.",
+            "C-Virus containment: Destroying Simmons’ facility, Leon stops the C-Virus spread, his grenades collapsing labs, his heart relieved at containment, his mind tracing Neo-Umbrella’s network. His codename a hero’s chant, his path a strike against bioterror, his leadership saving cities.",
+            "Global survival: Protecting survivors in Lanshiang, Leon holds off mutants, his knife slashing through J’avo, his heart fierce in their defense, his mind planning evacuation. His codename a guardian’s cry, his path a rescue mission, his leadership ensuring safety.",
+            "The global hero: Leon’s fight cements his legend, his heart a fire of resolve, his codename echoing in ruined cities. The era ends with him stopping Neo-Umbrella, his path a fight against apocalypse, his leadership a beacon in the dark."
+          ]
+        }
+      },
+      {
+        "id": 7,
+        "era": "Resident Evil: Vendetta",
+        "title": "The New York Siege",
+        "Icon": "Motorcycle",
+        "color": "from-blue-600 to-silver-600",
+        "bgPattern": "bg-gradient-to-br from-blue-800 via-silver-700 to-black",
+        "content": {
+          "summary": "In Resident Evil: Vendetta (2017), a CGI film, Leon, haunted by losses, joins Chris Redfield and Rebecca Chambers to stop Glenn Arias’ A-Virus outbreak in New York. Facing zombie dogs and bioterrorists, he regains his resolve. This era explores his emotional struggles, his teamwork with BSAA, and his leadership in a bioterror crisis.",
+          "details": [
+            "Haunted agent: Battling depression after losses, Leon fights A-Virus zombies in New York, his pistol cutting through hordes, his heart heavy with grief, his mind refocusing on duty. His codename a weary hero, his path a city siege, his leadership rekindled in crisis.",
+            "Chris’ teamwork: Joining Chris Redfield, Leon battles infected, his shotgun blasting Cerberus dogs, his heart strengthened by their bond, his mind coordinating BSAA strikes. His codename a partner’s trust, his path a shared fight, his leadership forged in teamwork.",
+            "Rebecca’s aid: Protecting Rebecca Chambers, Leon aids her A-Virus cure research, his knife slashing mutants, his heart fierce in her defense, his mind analyzing her data. His codename a guardian’s vow, his path a rescue mission, his leadership ensuring her safety.",
+            "Arias’ bioterror: Confronting Glenn Arias, Leon battles his A-Virus Tyrant, his rocket launcher destroying its core, his heart resolute against vengeance, his mind exposing his plans. His codename a rebel’s cry, his path a fight against bioterror, his leadership defying his empire.",
+            "New York rescue: Saving civilians, Leon navigates collapsing skyscrapers, his heart steady in chaos, his mind planning evacuation routes. His codename a survivor’s chant, his path a city escape, his leadership protecting lives.",
+            "A-Virus containment: Destroying Arias’ lab, Leon stops the A-Virus spread, his grenades collapsing chambers, his heart relieved at containment, his mind tracing his bioterror network. His codename a hero’s vow, his path a strike against infection, his leadership saving New York.",
+            "Motorcycle escape: Escaping on a motorcycle with Chris, Leon outruns infected, his heart bold in pursuit, his mind navigating streets. His codename a rider’s cry, his path a daring flight, his leadership a beacon in the dark.",
+            "The city’s hero: Leon’s stand cements his legend, his heart a fire of resolve, his codename echoing in New York’s ruins. The era ends with him stopping Arias, his path a fight against bioterror, his leadership a light in despair."
+          ]
+        }
+      },
+      {
+        "id": 8,
+        "era": "Resident Evil: Death Island",
+        "title": "The Alcatraz Outbreak",
+        "Icon": "Prison Cell",
+        "color": "from-blue-600 to-grey-600",
+        "bgPattern": "bg-gradient-to-br from-blue-800 via-grey-700 to-black",
+        "content": {
+          "summary": "In Resident Evil: Death Island (2023), a CGI film, Leon teams with Chris, Claire, Jill Valentine, and Rebecca to stop a T-Virus outbreak on Alcatraz Island, orchestrated by Dylan Blake. Facing new mutants, he battles to save San Francisco. This era explores his veteran status, his multi-team leadership, and his fight against a vengeful bioterrorist.",
+          "details": [
+            "Alcatraz mission: Deployed to Alcatraz, Leon faces T-Virus mutants, his assault rifle cutting through infected, his heart steady in confinement, his mind reading bio-weapon patterns. His codename an agent’s call, his path a prison siege, his leadership guiding allies.",
+            "Team reunion: Joining Chris, Claire, Jill, and Rebecca, Leon battles Lickers, his shotgun blasting hordes, his heart strengthened by their bond, his mind coordinating their strikes. His codename a partner’s trust, his path a shared fight, his leadership forged in unity.",
+            "Dylan’s vengeance: Confronting Dylan Blake, Leon uncovers his T-Virus plot, his magnum piercing his drones, his heart resolute against his rage, his mind exposing his schemes. His codename a rebel’s cry, his path a fight against bioterror, his leadership defying his vendetta.",
+            "Mutant onslaught: Facing enhanced Lickers and Tyrants, Leon uses grenades, his heart calm under their size, his mind exploiting weak points. His codename a survivor’s vow, his path a bio-weapon gauntlet, his leadership outsmarting monstrous foes.",
+            "San Francisco threat: Protecting the city from Dylan’s outbreak, Leon navigates Alcatraz’s tunnels, his heart fierce in defense, his mind planning containment. His codename a guardian’s chant, his path a rescue mission, his leadership saving civilians.",
+            "T-Virus cure: Aiding Rebecca’s cure development, Leon protects her research, his knife slashing infected, his heart steady in her defense, his mind analyzing her data. His codename a protector’s vow, his path a fight for hope, his leadership ensuring progress.",
+            "Dylan’s defeat: Destroying Dylan’s facility, Leon stops the T-Virus spread, his rocket launcher collapsing labs, his heart relieved at victory, his mind tracing his network. His codename a hero’s cry, his path a strike against bioterror, his leadership saving the bay.",
+            "The island’s hero: Leon’s stand cements his legend, his heart a fire of resolve, his codename echoing in Alcatraz’s ruins. The era ends with him stopping Dylan, his path a fight against apocalypse, his leadership a beacon in the dark."
+          ]
+        }
+      },
+      {
+        "id": 9,
+        "era": "The Combat Evolution",
+        "title": "The Arsenal of Survival",
+        "Icon": "Knife",
+        "color": "from-blue-600 to-silver-600",
+        "bgPattern": "bg-gradient-to-br from-blue-800 via-silver-700 to-black",
+        "content": {
+          "summary": "Across the Resident Evil series, Leon’s combat skills evolve from basic police training to expert marksmanship, knife mastery, and tactical prowess against B.O.W.s. This era explores his arsenal, his adaptability to biohorrors, and his leadership as a combat specialist.",
+          "details": [
+            "Handgun precision: Starting with a 9mm in Resident Evil 2, Leon’s pistol shots target zombie heads, his heart steady in aim, his mind calculating trajectories. His codename a marksman’s cry, his path a gunfire gauntlet, his leadership guiding precise strikes.",
+            "Shotgun power: In Resident Evil 4, Leon’s shotgun blasts Ganados, its spread clearing hordes, his heart bold in close combat, his mind timing reloads. His codename a warrior’s vow, his path a shotgun storm, his leadership overwhelming foes.",
+            "Knife mastery: Mastering knife combat, Leon slashes Plaga weak points, his heart calm in melee, his mind exploiting enemy gaps. His codename a bladesman’s chant, his path a close-quarters fight, his leadership a dance of steel.",
+            "Magnum force: Using magnums against Tyrants, Leon pierces armored mutants, his heart resolute in power, his mind aiming for critical hits. His codename a heavy hitter’s cry, his path a high-caliber strike, his leadership crushing bio-weapons.",
+            "Grenade tactics: Employing grenades in Resident Evil 6, Leon collapses mutant hordes, his heart steady in explosions, his mind timing blasts. His codename a strategist’s vow, his path a fiery assault, his leadership clearing paths.",
+            "Rocket launcher: Wielding rocket launchers against bosses like Saddler, Leon destroys bio-weapon cores, his heart fierce in destruction, his mind targeting weak points. His codename a destroyer’s chant, his path a final blow, his leadership ending threats.",
+            "CQC expertise: Mastering close-quarters combat in Resident Evil 4 Remake, Leon suplexes enemies, his heart agile in grapples, his mind reading movements. His codename a fighter’s cry, his path a tactical dance, his leadership outsmarting foes.",
+            "The survivor’s arsenal: Leon’s combat skills cement his legend, his heart a fire of resolve, his codename echoing in battlefields. The era ends with him armed for war, his path a fight against biohorrors, his leadership immortal in survival."
+          ]
+        }
+      },
+      {
+        "id": 10,
+        "era": "The Anti-Bioterror Crusade",
+        "title": "The War on Biohorrors",
+        "Icon": "Biohazard Symbol",
+        "color": "from-blue-600 to-red-600",
+        "bgPattern": "bg-gradient-to-br from-blue-800 via-red-700 to-black",
+        "content": {
+          "summary": "Across Resident Evil 2, 4, 6, Degeneration, Damnation, Vendetta, and Death Island, Leon battles Umbrella, Los Illuminados, Neo-Umbrella, and other bioterror groups. This era explores his relentless fight against bio-weapons, his alliances with Claire and Chris, and his leadership in dismantling bioterror networks.",
+          "details": [
+            "Umbrella’s downfall: In Resident Evil 2, Leon exposes Umbrella’s T-Virus crimes, his pistol blasting G-mutants, his heart resolute against corruption, his mind uncovering their labs. His codename a rebel’s cry, his path a fight against corporate evil, his leadership defying Umbrella.",
+            "Los Illuminados’ end: In Resident Evil 4, Leon destroys the Plaga cult, his rocket launcher crushing Saddler, his heart steady against fanaticism, his mind exposing their plans. His codename a hero’s vow, his path a strike against infection, his leadership saving Ashley.",
+            "Neo-Umbrella’s collapse: In Resident Evil 6, Leon stops Simmons’ C-Virus, his grenades collapsing labs, his heart fierce against apocalypse, his mind tracing their network. His codename a survivor’s chant, his path a global fight, his leadership ending Neo-Umbrella.",
+            "WilPharma’s exposure: In Degeneration, Leon uncovers WilPharma’s T-Virus ties, his shotgun blasting mutants, his heart set on justice, his mind linking them to Umbrella. His codename an agent’s cry, his path a corporate takedown, his leadership saving Harvardville.",
+            "Svetlana’s defeat: In Damnation, Leon stops Svetlana’s B.O.W. trade, his rifle destroying Tyrants, his heart resolute against tyranny, his mind exposing her schemes. His codename a rebel’s vow, his path a warzone victory, his leadership dismantling her regime.",
+            "Arias’ fall: In Vendetta, Leon defeats Glenn Arias’ A-Virus, his rocket launcher crushing his Tyrant, his heart steady in grief, his mind aiding Rebecca’s cure. His codename a hero’s chant, his path a bioterror strike, his leadership saving New York.",
+            "Dylan’s end: In Death Island, Leon stops Dylan Blake’s T-Virus, his magnum piercing drones, his heart united with allies, his mind exposing his vendetta. His codename a survivor’s cry, his path a prison fight, his leadership saving San Francisco.",
+            "The bioterror slayer: Leon’s crusade cements his legend, his heart a fire of resolve, his codename echoing in ruined labs. The era ends with him fighting biohorrors, his path a war on bioterror, his leadership immortal in survival."
+          ]
+        }
+      },
+      {
+        "id": 11,
+        "era": "The Alliances of Leon",
+        "title": "The Bonds of Survival",
+        "Icon": "Handshake",
+        "color": "from-blue-600 to-silver-600",
+        "bgPattern": "bg-gradient-to-br from-blue-800 via-silver-700 to-black",
+        "content": {
+          "summary": "Across the Resident Evil series, Leon’s alliances with Claire, Chris, Ada, and others define his survival, from Raccoon City to global missions. This era explores his partnerships, his trust in allies amidst bioterror, and his leadership in uniting teams against biohorrors.",
+          "details": [
+            "Claire’s bond: In Resident Evil 2 and Degeneration, Leon teams with Claire, his shotgun aiding her pistol, his heart protective of her, his mind coordinating their moves. His codename a partner’s trust, his path a shared fight, his leadership forged in teamwork.",
+            "Chris’ alliance: In Vendetta and Death Island, Leon fights alongside Chris, his rifle complementing BSAA tactics, his heart strengthened by their bond, his mind planning joint strikes. His codename a brother’s chant, his path a united front, his leadership uniting heroes.",
+            "Ada’s enigma: Across Resident Evil 2, 4, and 6, Leon navigates Ada’s motives, his heart conflicted by attraction, his mind wary of her espionage. His codename a tangled trust, his path a dance with deception, his leadership tested by her secrets.",
+            "Helena’s partnership: In Resident Evil 6, Leon protects Helena, his pistol clearing J’avo, his heart fierce in her defense, his mind uncovering Simmons’ betrayal. His codename a guardian’s vow, his path a rescue mission, his leadership ensuring her survival.",
+            "Jill’s teamwork: In Death Island, Leon joins Jill Valentine, his magnum blasting mutants, his heart aligned with her resolve, his mind coordinating BSAA moves. His codename a partner’s respect, his path a shared fight, his leadership uniting veterans.",
+            "Rebecca’s protection: In Vendetta and Death Island, Leon guards Rebecca, his knife slashing infected, his heart steady in her defense, his mind aiding her cure research. His codename a protector’s cry, his path a scientific fight, his leadership saving lives.",
+            "Sherry’s care: In Resident Evil 2 and 6, Leon protects Sherry, his shotgun shielding her, his heart fierce in her safety, his mind planning her escape. His codename a guardian’s chant, his path a rescue mission, his leadership ensuring her future.",
+            "The survivor’s bonds: Leon’s alliances cement his legend, his heart a fire of resolve, his codename echoing in teamwork. The era ends with him united with allies, his path a shared fight, his leadership immortal in bonds forged through survival."
+          ]
+        }
+      },
+      {
+        "id": 12,
+        "era": "The Media Legend",
+        "title": "The Cinematic Survivor",
+        "Icon": "Film Reel",
+        "color": "from-blue-600 to-silver-600",
+        "bgPattern": "bg-gradient-to-br from-blue-800 via-silver-700 to-black",
+        "content": {
+          "summary": "In Resident Evil films, comics, and animated series, Leon’s journey as a bioterror fighter shines through battles in Degeneration, Damnation, Vendetta, and Death Island. This era explores his cinematic presence, his combat against biohorrors, and his leadership in broader media.",
+          "details": [
+            "Degeneration’s airport: In Degeneration, Leon battles T-Virus zombies, his submachine gun clearing Harvardville, his heart steady with Claire, his mind exposing WilPharma. His codename a hero’s cry, his path a cinematic siege, his leadership saving survivors.",
+            "Damnation’s warzone: In Damnation, Leon fights Plaga soldiers, his rifle destroying Tyrants, his heart resolute with rebels, his mind stopping Svetlana. His codename a rebel’s chant, his path a war-torn fight, his leadership defying bioterror.",
+            "Vendetta’s despair: In Vendetta, Leon overcomes grief, his rocket launcher crushing Arias’ Tyrant, his heart united with Chris, his mind aiding Rebecca’s cure. His codename a survivor’s vow, his path a New York strike, his leadership a beacon in darkness.",
+            "Death Island’s prison: In Death Island, Leon battles T-Virus mutants, his magnum piercing drones, his heart strong with BSAA, his mind stopping Dylan. His codename a hero’s cry, his path an Alcatraz fight, his leadership saving San Francisco.",
+            "Comics’ battles: In Resident Evil comics, Leon fights Umbrella remnants, his shotgun blasting bio-weapons, his heart steady in chaos, his mind uncovering plots. His codename a comic hero’s chant, his path a drawn fight, his leadership inspiring inked tales.",
+            "Live-action cameos: In live-action Resident Evil films, Leon appears briefly, his pistol aiding survivors, his heart resolute against infection, his mind supporting allies. His codename a cinematic vow, his path a fleeting fight, his leadership uniting heroes.",
+            "Mobile missions: In Resident Evil mobile games, Leon’s combat dominates, his knife slashing infected, his heart steady in digital chaos, his mind mastering missions. His codename a virtual legend, his path a mobile fight, his leadership rallying players.",
+            "The cinematic legacy: Leon’s media presence cements his legend, his heart a fire of resolve, his codename echoing in screens and pages. The era ends with his cinematic battles, his path a fight against bioterror, his leadership immortal in Resident Evil’s lore."
+          ]
+        }
+      },
+      {
+        "id": 13,
+        "era": "The Emotional Resilience",
+        "title": "The Heart of a Survivor",
+        "Icon": "Broken Heart",
+        "color": "from-blue-600 to-red-600",
+        "bgPattern": "bg-gradient-to-br from-blue-800 via-red-700 to-black",
+        "content": {
+          "summary": "Across the Resident Evil series, Leon’s emotional strength defines his survival, from the trauma of Raccoon City to the grief in Vendetta. This era explores his resilience against loss, his bonds with allies, and his leadership as a beacon of hope amidst despair.",
+          "details": [
+            "Raccoon’s trauma: Surviving Raccoon City, Leon carries the scars of loss, his heart heavy with fallen allies, his mind vowing justice. His codename a survivor’s cry, his path a haunted fight, his leadership rising from despair.",
+            "Ada’s conflict: Navigating Ada’s betrayals in Resident Evil 2, 4, and 6, Leon wrestles with attraction, his heart torn by her motives, his mind staying focused. His codename a conflicted vow, his path a tangled bond, his leadership enduring deception.",
+            "Vendetta’s grief: In Vendetta, Leon battles depression, his heart weighed by losses, his mind rekindled by Chris’ support. His codename a weary hero, his path a fight through sorrow, his leadership reborn in purpose.",
+            "Claire’s trust: Relying on Claire in Resident Evil 2 and Degeneration, Leon finds strength in their bond, his heart lifted by her courage, his mind aligned with her resolve. His codename a partner’s chant, his path a shared fight, his leadership forged in trust.",
+            "Sherry’s care: Protecting Sherry in Resident Evil 2 and 6, Leon becomes her guardian, his heart fierce in her defense, his mind ensuring her future. His codename a protector’s vow, his path a rescue mission, his leadership a light for her hope.",
+            "Team unity: In Death Island, Leon’s bonds with Chris, Jill, and Rebecca strengthen his resolve, his heart united in their cause, his mind coordinating their fight. His codename a hero’s cry, his path a team effort, his leadership uniting survivors.",
+            "Hope amidst horror: Facing endless biohorrors, Leon’s heart remains unbroken, his mind focused on saving lives. His codename a beacon’s chant, his path a fight for humanity, his leadership inspiring hope in darkness.",
+            "The resilient survivor: Leon’s emotional strength cements his legend, his heart a fire of resolve, his codename echoing in survival tales. The era ends with him enduring loss, his path a fight against despair, his leadership immortal in hope."
+          ]
+        }
+      },
+      {
+        "id": 14,
+        "era": "The Global Operative",
+        "title": "The World of Bioterror",
+        "Icon": "Globe",
+        "color": "from-blue-600 to-green-600",
+        "bgPattern": "bg-gradient-to-br from-blue-800 via-green-700 to-black",
+        "content": {
+          "summary": "Across Resident Evil 4, 6, Damnation, Vendetta, and Death Island, Leon’s missions take him worldwide, from Spain to China, Eastern Europe to Alcatraz. This era explores his global fight against bioterror, his adaptability to diverse threats, and his leadership as an international agent.",
+          "details": [
+            "Spain’s cult: In Resident Evil 4, Leon battles Los Illuminados in rural Spain, his shotgun blasting Ganados, his heart steady in isolation, his mind navigating villages. His codename an agent’s cry, his path a rural fight, his leadership saving Ashley.",
+            "China’s chaos: In Resident Evil 6, Leon fights C-Virus J’avo in Lanshiang, his submachine gun clearing streets, his heart calm in urban war, his mind tracing Simmons’ plans. His codename a survivor’s vow, his path a global siege, his leadership protecting cities.",
+            "Eastern Europe’s war: In Damnation, Leon battles Plaga soldiers in a warzone, his rifle destroying Tyrants, his heart resolute in conflict, his mind aiding rebels. His codename a rebel’s chant, his path a war-torn fight, his leadership defying Svetlana.",
+            "New York’s siege: In Vendetta, Leon stops an A-Virus outbreak, his rocket launcher crushing Tyrants, his heart steady with Chris, his mind aiding Rebecca’s cure. His codename a hero’s cry, his path a city fight, his leadership saving New York.",
+            "Alcatraz’s prison: In Death Island, Leon fights T-Virus mutants, his magnum piercing drones, his heart united with BSAA, his mind stopping Dylan’s outbreak. His codename a survivor’s vow, his path a prison siege, his leadership saving San Francisco.",
+            "Global networks: Tracing bioterror networks, Leon links Umbrella to Neo-Umbrella, his heart set on justice, his mind exposing their ties. His codename an agent’s chant, his path a worldwide hunt, his leadership dismantling global threats.",
+            "International allies: Working with BSAA and Interpol, Leon coordinates with Claire and Chris, his heart strengthened by their bonds, his mind planning joint strikes. His codename a partner’s trust, his path a shared fight, his leadership uniting heroes.",
+            "The global survivor: Leon’s worldwide missions cement his legend, his heart a fire of resolve, his codename echoing in ruined cities. The era ends with him fighting globally, his path a war on bioterror, his leadership immortal in survival."
+          ]
+        }
+      },
+      {
+        "id": 15,
+        "era": "The Cultural Impact",
+        "title": "The Icon of Resident Evil",
+        "Icon": "Trophy",
+        "color": "from-blue-600 to-gold-600",
+        "bgPattern": "bg-gradient-to-br from-blue-800 via-gold-700 to-black",
+        "content": {
+          "summary": "Leon’s status as a Resident Evil icon makes him a fan favorite, appearing in games, films, and crossovers. His quips and heroism inspire players worldwide. This era explores his cultural influence, his recognition as a survival hero, and his leadership as a gaming legend.",
+          "details": [
+            "Gaming icon: As a Resident Evil staple, Leon’s pistol and quips define survival horror, his heart inspiring players, his mind shaping gameplay. His codename a gamer’s cry, his path a digital legacy, his leadership uniting fans.",
+            "Film presence: In Degeneration, Damnation, Vendetta, and Death Island, Leon’s cinematic battles captivate, his shotgun blasting biohorrors, his heart steady on screen, his mind guiding allies. His codename a cinematic hero, his path a filmed fight, his leadership inspiring viewers.",
+            "Comic legacy: In Resident Evil comics, Leon’s missions against Umbrella resonate, his knife slashing mutants, his heart resolute in chaos, his mind uncovering plots. His codename a comic legend, his path a drawn fight, his leadership inspiring inked tales.",
+            "Fan devotion: Fans cosplay Leon’s RPD uniform and jacket, his heart humble in their love, his mind shaping their passion. His codename a community’s chant, his path a shared fandom, his leadership uniting conventions.",
+            "Merchandise star: Leon’s likeness adorns figures and apparel, his heart a symbol of survival, his mind inspiring designs. His codename a brand’s cry, his path a cultural legacy, his leadership rallying collectors.",
+            "Crossover cameos: In crossovers like Dead by Daylight, Leon battles killers, his flashlight aiding survivors, his heart steady in new worlds, his mind adapting to threats. His codename a crossover legend, his path a shared fight, his leadership inspiring players.",
+            "Esports and mods: In modding communities, Leon’s skins dominate, his heart a fan’s creation, his mind shaping custom missions. His codename a modder’s vow, his path a virtual legacy, his leadership inspiring creativity.",
+            "The cultural survivor: Leon’s influence cements his legend, his heart a fire of resolve, his codename echoing in gaming culture. The era ends with his global impact, his path a legacy of survival, his leadership immortal in Resident Evil’s lore."
+          ]
+        }
+      },
+      {
+        "id": 16,
+        "era": "The Eternal Survivor",
+        "title": "The Legacy of Leon",
+        "Icon": "RPD Badge",
+        "color": "from-blue-600 to-red-600",
+        "bgPattern": "bg-gradient-to-br from-blue-800 via-red-700 to-black",
+        "content": {
+          "summary": "Across the Resident Evil series, Leon’s legacy as a survivor endures, inspiring allies and players with his courage and combat skills. This era explores his mythic status, his impact on bioterror fighters, and his leadership as the eternal hero of survival horror.",
+          "details": [
+            "Raccoon’s survivor: Surviving Resident Evil 2, Leon’s escape from Raccoon City shapes his resolve, his heart scarred but strong, his mind vowing justice. His codename a survivor’s cry, his path a fight against Umbrella, his leadership born in chaos.",
+            "Bioterror’s bane: Defeating Los Illuminados, Neo-Umbrella, and others, Leon stops global outbreaks, his shotgun blasting biohorrors, his heart resolute against evil, his mind dismantling networks. His codename a rebel’s chant, his path a war on bioterror, his leadership defying tyranny.",
+            "Allies’ trust: Uniting with Claire, Chris, and Jill, Leon forges bonds, his heart strengthened by their cause, his mind coordinating their strikes. His codename a partner’s trust, his path a shared fight, his leadership uniting heroes.",
+            "Ada’s enigma: Navigating Ada’s motives, Leon endures her deceptions, his heart conflicted but firm, his mind staying focused. His codename a tangled bond, his path a dance with mystery, his leadership enduring betrayal.",
+            "Combat mastery: Mastering pistols, knives, and rocket launchers, Leon’s arsenal defines survival, his heart steady in combat, his mind targeting weak points. His codename a warrior’s vow, his path a battlefield legacy, his leadership crushing bio-weapons.",
+            "Global missions: Fighting in Spain, China, and Alcatraz, Leon battles bioterror worldwide, his heart resolute in chaos, his mind tracing global threats. His codename an agent’s cry, his path a worldwide hunt, his leadership saving cities.",
+            "Cultural hero: As Resident Evil’s icon, Leon inspires fans with his quips and courage, his heart a symbol of survival, his mind shaping gaming culture. His codename a gamer’s chant, his path a digital legacy, his leadership uniting players.",
+            "The eternal survivor: Leon’s legacy endures, his heart a fire of resolve, his codename echoing in ruined cities and gaming halls. The era ends with him fighting on, his path a war against biohorrors, his leadership immortal in survival horror."
+          ]
+        }
+      }
+    ]
   }
 ]

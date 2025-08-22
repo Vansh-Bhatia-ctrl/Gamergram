@@ -14,6 +14,8 @@ import ProfilePage from "./pages/ProfilePage";
 import SagaPage from "./pages/SagaPage";
 import StoryPage from "./pages/StoryPage";
 import ReviewsPage from "./pages/ReviewsPage";
+import QuizPage from "./pages/QuizPage";
+import QuizArenaPage from "./pages/QuizArenaPage";
 
 const router = createBrowserRouter([
   {
@@ -86,7 +88,19 @@ const router = createBrowserRouter([
   },
   {
     path: "reviews",
-    element: <ReviewsPage />,
+    element: (
+      <ProtectedRoute>
+        <ReviewsPage />
+      </ProtectedRoute>
+    ),
+  },
+  {
+    path: "quiz",
+    element: <QuizPage />,
+  },
+  {
+    path: "quizarena",
+    element: <QuizArenaPage />,
   },
   {
     path: "profile",
