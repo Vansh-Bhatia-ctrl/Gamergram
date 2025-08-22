@@ -96,11 +96,19 @@ const router = createBrowserRouter([
   },
   {
     path: "quiz",
-    element: <QuizPage />,
+    element: (
+      <ProtectedRoute>
+        <QuizPage />
+      </ProtectedRoute>
+    ),
   },
   {
     path: "quizarena",
-    element: <QuizArenaPage />,
+    element: (
+      <ProtectedRoute>
+        <QuizArenaPage />
+      </ProtectedRoute>
+    ),
   },
   {
     path: "profile",
