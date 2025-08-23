@@ -101,7 +101,6 @@ const startServer = async () => {
       })
     );
 
-    app.options("*", cors());
 
     // Middleware
     app.use(express.json());
