@@ -16,7 +16,7 @@ const ReviewsPage = () => {
       const token = localStorage.getItem("token");
       try {
         const response = await fetch(
-          `${process.env.REACT_APP_API_URL}/getreviews/getreviews`,
+          `${import.meta.env.VITE_API_URL}/getreviews/getreviews`,
           {
             method: "GET",
             headers: {
@@ -46,7 +46,7 @@ const ReviewsPage = () => {
     const token = localStorage.getItem("token");
     try {
       const response = await fetch(
-        `${process.env.REACT_APP_API_URL}/save-to-db/review`,
+        `${import.meta.env.VITE_API_URL}/save-to-db/review`,
         {
           method: "POST",
           headers: {

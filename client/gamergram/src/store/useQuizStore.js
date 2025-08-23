@@ -18,7 +18,7 @@ const useQuizStore = create((set, get) => ({
 
       set({ token: token });
       const response = await fetch(
-        `${process.env.REACT_APP_API_URL}/getquiz/quizes`,
+        `${import.meta.env.VITE_API_URL}/getquiz/quizes`,
         {
           method: "GET",
           headers: {
@@ -53,7 +53,7 @@ const useQuizStore = create((set, get) => ({
 
       set({ token: token });
       const response = await fetch(
-        `${process.env.REACT_APP_API_URL}/getuserdata/userdata`,
+        `${import.meta.env.VITE_API_URL}/getuserdata/userdata`,
         {
           method: "GET",
           headers: {

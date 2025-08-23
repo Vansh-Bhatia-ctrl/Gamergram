@@ -9,7 +9,7 @@ const useChatStore = create((set, get) => ({
 
   connectSocket: (userId) => {
     if (!get().socket) {
-      const socket = io(`${process.env.REACT_APP_API_URL}`);
+      const socket = io(`${import.meta.env.VITE_API_URL}`);
       socket.on("connect", () => {
         console.log("🔗 Connected to backend:", socket.id);
         socket.emit("joinUser", userId);

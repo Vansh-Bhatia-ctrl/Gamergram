@@ -88,7 +88,7 @@ const QuizArenaPage = () => {
     };
     try {
       const response = await fetch(
-        `${process.env.REACT_APP_API_URL}/saveusertodb/saveuserdata`,
+        `${import.meta.env.VITE_API_URL}/saveusertodb/saveuserdata`,
         {
           method: "POST",
           headers: {

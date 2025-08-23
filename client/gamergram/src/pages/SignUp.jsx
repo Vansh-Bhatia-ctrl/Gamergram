@@ -23,7 +23,7 @@ const SignUp = () => {
     setIsLoading(true);
     setError(false);
     try {
-      const req = await fetch(`${process.env.REACT_APP_API_URL}/users/signup`, {
+      const req = await fetch(`${import.meta.env.VITE_API_URL}/users/signup`, {
         method: "POST",
         headers: { "Content-type": "application/json" },
         body: JSON.stringify({

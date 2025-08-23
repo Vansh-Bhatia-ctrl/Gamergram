@@ -37,7 +37,7 @@ const GameBuletien = () => {
       setIsLoading(true);
       try {
         const response = await fetch(
-          `${process.env.REACT_APP_API_URL}/games/getallgames`,
+          `${import.meta.env.VITE_API_URL}/games/getallgames`,
           {
             method: "GET",
             headers: {

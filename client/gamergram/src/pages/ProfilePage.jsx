@@ -16,7 +16,7 @@ const ProfilePage = () => {
       try {
         const token = localStorage.getItem("token");
         const response = await fetch(
-          `${process.env.REACT_APP_API_URL}/getlist/get-userlist`,
+          `${import.meta.env.VITE_API_URL}/getlist/get-userlist`,
           {
             method: "GET",
             headers: {
@@ -38,7 +38,7 @@ const ProfilePage = () => {
         console.log("data: ", data);
         const entireGameData = data.userList.map(async (item) => {
           const response = await fetch(
-            `${process.env.REACT_APP_API_URL}/gamedata/${item.gameID}`,
+            `${import.meta.env.VITE_API_URL}/gamedata/${item.gameID}`,
             {
               method: "GET",
               headers: {

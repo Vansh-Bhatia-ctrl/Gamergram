@@ -20,7 +20,7 @@ export default function LoginPage() {
     setIsLoading(true);
     setError(false);
     try {
-      const req = await fetch(`${process.env.REACT_APP_API_URL}/users/login`, {
+      const req = await fetch(`${import.meta.env.VITE_API_URL}/users/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

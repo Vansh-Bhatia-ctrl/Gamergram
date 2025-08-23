@@ -41,7 +41,7 @@ const useGameStore = create((set, get) => ({
         set({ error: "No token found" });
       }
       const response = await fetch(
-        `${process.env.REACT_APP_API_URL}/getnews/getallnews`,
+        `${import.meta.env.VITE_API_URL}/getnews/getallnews`,
         {
           headers: { Authorization: `Bearer ${token}` },
         }
@@ -111,7 +111,7 @@ const useGameStore = create((set, get) => ({
   getYTVideos: async () => {
     try {
       const response = await fetch(
-        `${process.env.REACT_APP_API_URL}/ytvideos/videos`
+        `${import.meta.env.VITE_API_URL}/ytvideos/videos`
       );
       if (!response.ok)
         throw new Error("Failed to fetch videos, please try again.");
@@ -176,7 +176,7 @@ const useGameStore = create((set, get) => ({
     set({ loading: true, error: null });
     try {
       const response = await fetch(
-        `${process.env.REACT_APP_API_URL}3000/news/${newsID}`
+        `${import.meta.env.VITE_API_URL}/news/${newsID}`
       );
       if (!response.ok) {
         throw new Error("Something went wrong, Please try again!");

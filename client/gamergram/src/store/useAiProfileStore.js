@@ -9,7 +9,7 @@ const useAiProfileStore = create((set, get) => ({
     set({ isLoading: true });
     try {
       const response = await fetch(
-        `${process.env.REACT_APP_API_URL}/aiprofiles/ai-profiles`
+        `${import.meta.env.VITE_API_URL}/aiprofiles/ai-profiles`
       );
 
       if (!response.ok) {

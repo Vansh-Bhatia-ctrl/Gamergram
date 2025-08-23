@@ -7,7 +7,7 @@ const useLogoutStore = create((set, get) => ({
       if (!token) {
         console.log("No token found.");
       }
-      await fetch(`${process.env.REACT_APP_API_URL}/logout/log-out`, {
+      await fetch(`${import.meta.env.VITE_API_URL}/logout/log-out`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

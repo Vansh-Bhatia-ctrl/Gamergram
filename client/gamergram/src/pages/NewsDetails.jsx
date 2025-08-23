@@ -121,7 +121,7 @@ const NewsDetails = () => {
     const token = localStorage.getItem("token");
     try {
       const response = await fetch(
-        `${process.env.REACT_APP_API_URL}/savecomment/comment`,
+        `${import.meta.env.VITE_API_URL}/savecomment/comment`,
         {
           method: "POST",
           headers: {
@@ -151,7 +151,7 @@ const NewsDetails = () => {
   const getAllComments = async () => {
     try {
       const response = await fetch(
-        `${process.env.REACT_APP_API_URL}/getcomments/get-all-comments`
+        `${import.meta.env.VITE_API_URL}/getcomments/get-all-comments`
       );
 
       const data = await response.json();
