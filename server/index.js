@@ -45,7 +45,14 @@ const io = new Server(server, {
       "http://192.168.29.9:5173",
       "https://gamergram-1.onrender.com",
     ],
-    methods: ["GET", "POST", "PUT", "DELETE"],
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allowedHeaders: [
+      "Content-Type",
+      "Authorization",
+      "X-Requested-With",
+      "Accept",
+      "Origin",
+    ],
     credentials: true,
   },
 });
@@ -82,10 +89,19 @@ const startServer = async () => {
           "http://192.168.29.9:5173",
           "https://gamergram-1.onrender.com",
         ],
-        methods: ["GET", "POST", "PUT", "DELETE"],
+        methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+        allowedHeaders: [
+          "Content-Type",
+          "Authorization",
+          "X-Requested-With",
+          "Accept",
+          "Origin",
+        ],
         credentials: true,
       })
     );
+
+    app.options("*", cors());
 
     // Middleware
     app.use(express.json());
