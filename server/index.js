@@ -40,7 +40,11 @@ const app = express();
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: ["http://localhost:5173", "http://192.168.29.9:5173"],
+    origin: [
+      "http://localhost:5173",
+      "http://192.168.29.9:5173",
+      "https://gamergram-1.onrender.com",
+    ],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   },
@@ -73,7 +77,11 @@ const startServer = async () => {
     // CORS Middleware
     app.use(
       cors({
-        origin: ["http://localhost:5173", "http://192.168.29.9:5173"],
+        origin: [
+          "http://localhost:5173",
+          "http://192.168.29.9:5173",
+          "https://gamergram-1.onrender.com",
+        ],
         methods: ["GET", "POST", "PUT", "DELETE"],
         credentials: true,
       })
