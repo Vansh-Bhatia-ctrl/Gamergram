@@ -56,7 +56,7 @@ const StoryPage = () => {
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-4">
                       <div
-                        className={`text-gray-200 font-bold rounded-full bg-gradient-to-b ${story.color} p-4 flex items-start`}
+                        className={`text-gray-200 font-bold rounded-full bg-gradient-to-b ${story.color} p-4 flex items-start whitespace-nowrap`}
                       >
                         Chapter {story.id}
                       </div>

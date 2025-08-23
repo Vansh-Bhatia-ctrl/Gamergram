@@ -37,7 +37,7 @@ const Header = () => {
 
           <AnimatePresence>
             {sidebarOpen && (
-              <div className="fixed inset-0 bg-black/40">
+              <div className="fixed inset-0 bg-black/40 z-[1001]">
                 <motion.div
                   initial={{ opacity: 0, x: -100 }}
                   whileInView={{ opacity: 1, x: 0 }}
