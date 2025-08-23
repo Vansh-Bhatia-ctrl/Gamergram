@@ -17,7 +17,7 @@ const useLogoutStore = create((set, get) => ({
 
       localStorage.removeItem("token");
       localStorage.removeItem("userId");
-      window.location.href = "/login";
+      window.location.href = "login";
     } catch (error) {
       console.log("Error loggin-out: ", error.message);
     }
