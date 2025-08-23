@@ -8,7 +8,7 @@ import GameBuletien from "./pages/GameBuletien";
 import GameDetails from "./pages/GameDetails";
 import News from "./pages/News";
 import NewsDetails from "./pages/NewsDetails";
-import ProtectedRoute from "./components/ProtectedRoute";
+import ProtectedRoute from "./components/ProtectedRoute ";
 import ProfilePage from "./pages/ProfilePage";
 import SagaPage from "./pages/SagaPage";
 import StoryPage from "./pages/StoryPage";
