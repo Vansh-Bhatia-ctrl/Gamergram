@@ -1,8 +1,8 @@
 const express = require("express");
-const { deleteBookMarks } = require("../controllers/bookmarks");
+const { logOut } = require("../controllers/authController");
 const { validateAuth } = require("../middleware/verifyAuth");
 const router = express.Router();
 
-router.delete("/remove-bookmark/:newsID", validateAuth, deleteBookMarks);
+router.post("/log-out", validateAuth, logOut);
 
 module.exports = router;

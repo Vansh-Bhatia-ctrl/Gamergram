@@ -1,4 +1,5 @@
 const jwt = require("jsonwebtoken");
+const { tokenBlackList } = require("../controllers/authController");
 require("dotenv").config();
 
 const validateAuth = async (req, res, next) => {
@@ -9,6 +10,12 @@ const validateAuth = async (req, res, next) => {
       return res
         .status(401)
         .json({ message: "Unable to authenticate, please try again." });
+    }
+
+    if (tokenBlackList.includes(token)) {
+      return res.status(401).json({
+        message: "Session expired. Please log in again.",
+      });
     }
 
     const payload = jwt.verify(token, process.env.JWT_SECRET);

@@ -4469,5 +4469,268 @@
         }
       }
     ]
+  },
+  {
+    "_id": "68a639f58383ccaa602cc37a",
+    "name": "Raiden",
+    "title": "Raiden: The Thunder God’s Codex",
+    "meta": {
+      "note": "A comprehensive chronicle of Raiden, the God of Thunder, across the *Mortal Kombat* series, from his role as Earthrealm’s protector in the original timeline (*Mortal Kombat* to *Mortal Kombat: Armageddon*) to his redefined journey in the rebooted timeline (*Mortal Kombat 9* to *Mortal Kombat 1*). This codex explores his divine powers, leadership in defending Earthrealm, and battles against threats like Shao Kahn, Shinnok, and Kronika. Each era details his thunderous might, strategic wisdom, and unwavering duty as a protector.",
+      "format": "Array of era objects with id, era, title, Icon (string), color, bgPattern, content { summary, details[] }"
+    },
+    "chapters": [
+      {
+        "id": 1,
+        "era": "Mortal Kombat: The Original Tournament",
+        "title": "Earthrealm’s Guardian",
+        "Icon": "Lightning Bolt",
+        "color": "from-blue-600 to-white-600",
+        "bgPattern": "bg-gradient-to-br from-blue-800 via-white-700 to-black",
+        "content": {
+          "summary": "In *Mortal Kombat* (1992) and its early sequels (*Mortal Kombat II*, *Mortal Kombat 3*), Raiden, the eternal God of Thunder, oversees the Mortal Kombat tournament to protect Earthrealm from Outworld’s invasion. Guiding warriors like Liu Kang, he wields lightning and wisdom to thwart Shao Kahn. This era explores his divine role, his mentorship, and his leadership in the first tournaments.",
+          "details": [
+            "Tournament overseer: Raiden descends to Earthrealm, his lightning bolts smiting foes, his heart devoted to balance, his mind strategizing victory. His codename ‘Thunder God’ echoes, his path a divine duty, his leadership rallying mortals.",
+            "Liu Kang’s mentor: Guiding Liu Kang, Raiden channels his electric fury, his heart trusting in his champion, his mind training him for kombat. His codename a mentor’s vow, his path a shared fight, his leadership forging a hero.",
+            "Shao Kahn’s threat: Facing Outworld’s emperor, Raiden hurls thunderbolts, his heart resolute against tyranny, his mind countering invasion. His codename a protector’s cry, his path a war against Outworld, his leadership defying Kahn.",
+            "Mortal allies: Recruiting Johnny Cage and Sonya Blade, Raiden unites Earthrealm’s fighters, his lightning shielding them, his heart strong in their cause, his mind coordinating their strikes. His codename a unifier’s chant, his path a team effort, his leadership inspiring mortals.",
+            "Shang Tsung’s defeat: Confronting the sorcerer Shang Tsung, Raiden’s storms overwhelm his dark magic, his heart steady in divine power, his mind exposing his treachery. His codename a god’s wrath, his path a tournament victory, his leadership saving Earthrealm.",
+            "Elder Gods’ will: Upholding the Elder Gods’ rules, Raiden enforces tournament laws, his heart bound to cosmic balance, his mind navigating divine politics. His codename a deity’s vow, his path a sacred duty, his leadership enforcing order.",
+            "Outworld’s invasion: As Shao Kahn invades, Raiden teleports to aid fighters, his lightning blasting minions, his heart fierce in defense, his mind planning counterattacks. His codename a guardian’s cry, his path a desperate fight, his leadership holding the line.",
+            "The thunderous protector: Raiden’s stand cements his legend, his heart a storm of resolve, his codename echoing in Earthrealm’s skies. The era ends with him saving the realm, his path a divine fight, his leadership eternal in kombat."
+          ]
+        }
+      },
+      {
+        "id": 2,
+        "era": "Mortal Kombat II & III: Outworld’s War",
+        "title": "The Storm Against Shao Kahn",
+        "Icon": "War Hammer",
+        "color": "from-blue-600 to-red-600",
+        "bgPattern": "bg-gradient-to-br from-blue-800 via-red-700 to-black",
+        "content": {
+          "summary": "In *Mortal Kombat II* (1993) and *Mortal Kombat 3* (1995), Raiden leads Earthrealm’s warriors against Shao Kahn’s Outworld invasion after the sorcerer Shang Tsung’s defeat. Facing Kahn’s armies and the resurrected Sindel, Raiden’s lightning and teleportation skills shine. This era explores his strategic leadership, his divine combat prowess, and his resolve to protect Earthrealm.",
+          "details": [
+            "Outworld’s challenge: As Shao Kahn escalates his conquest, Raiden hurls lightning at Extermination Squads, his heart resolute against invasion, his mind planning defense. His codename a thunder god’s roar, his path a war against Outworld, his leadership rallying warriors.",
+            "Liu Kang’s guidance: Mentoring Liu Kang further, Raiden empowers his fiery kicks, his heart trusting in his champion, his mind honing his skills. His codename a mentor’s vow, his path a shared fight, his leadership forging victory.",
+            "Sindel’s resurrection: Facing Queen Sindel, Raiden counters her sonic screams with electric blasts, his heart steady against her power, his mind exploiting her rage. His codename a god’s wrath, his path a royal showdown, his leadership outsmarting her.",
+            "Kitana’s alliance: Recruiting Princess Kitana, Raiden aids her rebellion against Kahn, his lightning shielding her, his heart aligned with her cause, his mind coordinating her strikes. His codename a unifier’s chant, his path a shared resistance, his leadership inspiring defection.",
+            "Kahn’s arena: Entering Shao Kahn’s coliseum, Raiden battles his generals, his teleportation dodging attacks, his heart fierce in kombat, his mind targeting weak points. His codename a warrior’s cry, his path a gladiatorial fight, his leadership defying tyranny.",
+            "Mortal Kombat’s rules: Enforcing tournament laws, Raiden protects Earthrealm’s fighters, his storms punishing cheaters, his heart bound to balance, his mind upholding divine order. His codename a deity’s vow, his path a sacred fight, his leadership ensuring fairness.",
+            "Earthrealm’s defense: As Kahn merges realms, Raiden leads a counterattack, his lightning blasting portals, his heart resolute in crisis, his mind closing dimensional rifts. His codename a guardian’s roar, his path a desperate stand, his leadership saving the realm.",
+            "The storm’s victory: Raiden’s leadership cements his legend, his heart a tempest of resolve, his codename echoing in Outworld’s ruins. The era ends with Kahn’s retreat, his path a divine war, his leadership eternal in Earthrealm’s salvation."
+          ]
+        }
+      },
+      {
+        "id": 3,
+        "era": "Mortal Kombat 4: Shinnok’s Rebellion",
+        "title": "The Fallen Elder God",
+        "Icon": "Amulet",
+        "color": "from-blue-600 to-purple-600",
+        "bgPattern": "bg-gradient-to-br from-blue-800 via-purple-700 to-black",
+        "content": {
+          "summary": "In *Mortal Kombat 4* (1997), Raiden confronts Shinnok, a fallen Elder God, who seeks to conquer the realms with his Netherrealm army. Leading Liu Kang and new allies like Fujin, Raiden battles to restore cosmic balance. This era explores his divine authority, his combat against celestial threats, and his leadership in a multirealm war.",
+          "details": [
+            "Shinnok’s rise: As Shinnok escapes the Netherrealm, Raiden unleashes thunderstorms, his heart resolute against divine betrayal, his mind countering his sorcery. His codename a thunder god’s wrath, his path a celestial war, his leadership defying a fallen god.",
+            "Fujin’s alliance: Teaming with Fujin, the Wind God, Raiden combines lightning and gales, his heart strengthened by their bond, his mind coordinating their strikes. His codename a brother’s vow, his path a divine partnership, his leadership uniting gods.",
+            "Liu Kang’s resolve: Guiding Liu Kang against Shinnok’s forces, Raiden empowers his champion, his lightning aiding his fists, his heart trusting in his skill, his mind strategizing victory. His codename a mentor’s cry, his path a shared fight, his leadership forging a hero.",
+            "Netherrealm invasion: Entering Shinnok’s fortress, Raiden battles Quan Chi’s sorcery, his teleportation dodging spells, his heart fierce in darkness, his mind exposing treachery. His codename a warrior’s roar, his path a hellish gauntlet, his leadership overwhelming evil.",
+            "Elder Gods’ council: Appealing to the Elder Gods, Raiden seeks their aid, his heart bound to cosmic law, his mind navigating divine politics. His codename a deity’s vow, his path a sacred plea, his leadership enforcing balance.",
+            "Shinnok’s amulet: Seizing Shinnok’s amulet, Raiden neutralizes its power, his lightning shattering its defenses, his heart steady in danger, his mind securing its containment. His codename a guardian’s chant, his path a relic’s capture, his leadership saving realms.",
+            "Realm restoration: Restoring balance, Raiden banishes Shinnok’s forces, his storms cleansing Netherrealm taint, his heart relieved at victory, his mind ensuring stability. His codename a protector’s cry, his path a cosmic fight, his leadership preserving order.",
+            "The divine guardian: Raiden’s stand cements his legend, his heart a storm of resolve, his codename echoing in celestial halls. The era ends with Shinnok’s defeat, his path a divine war, his leadership eternal in kombat."
+          ]
+        }
+      },
+      {
+        "id": 4,
+        "era": "Mortal Kombat: Deadly Alliance & Deception",
+        "title": "The Rise of Onaga",
+        "Icon": "Dragon Medallion",
+        "color": "from-blue-600 to-gold-600",
+        "bgPattern": "bg-gradient-to-br from-blue-800 via-gold-700 to-black",
+        "content": {
+          "summary": "In *Mortal Kombat: Deadly Alliance* (2002) and *Mortal Kombat: Deception* (2004), Raiden faces the Deadly Alliance of Shang Tsung and Quan Chi, followed by the Dragon King Onaga’s resurrection. Leading Earthrealm’s remnants, he sacrifices himself to stop Onaga. This era explores his selflessness, his divine sacrifice, and his leadership in a losing battle.",
+          "details": [
+            "Deadly Alliance: Facing Shang Tsung and Quan Chi, Raiden battles their combined sorcery, his lightning clashing with dark magic, his heart resolute against evil, his mind strategizing resistance. His codename a thunder god’s roar, his path a desperate fight, his leadership rallying survivors.",
+            "Liu Kang’s death: Mourning Liu Kang’s murder, Raiden fights to avenge him, his heart heavy with loss, his mind focusing on retribution. His codename a mentor’s cry, his path a vengeful storm, his leadership honoring his champion.",
+            "Earthrealm’s fall: As the Deadly Alliance conquers, Raiden protects survivors, his teleportation saving allies, his heart fierce in defense, his mind planning counterattacks. His codename a guardian’s vow, his path a crumbling realm, his leadership holding hope.",
+            "Onaga’s rise: Facing the Dragon King Onaga, Raiden confronts his ancient power, his lightning striking his scales, his heart resolute against tyranny, his mind seeking weaknesses. His codename a warrior’s chant, his path a draconic war, his leadership defying resurrection.",
+            "Divine sacrifice: To stop Onaga, Raiden unleashes a catastrophic blast, sacrificing himself, his heart selfless in duty, his mind embracing destruction. His codename a martyr’s cry, his path a divine explosion, his leadership saving realms at cost.",
+            "Netherrealm’s pull: Revived in corruption, Raiden battles dark impulses, his heart fighting for purity, his mind resisting Shinnok’s influence. His codename a fallen god’s roar, his path a redemption struggle, his leadership seeking light.",
+            "Allies’ hope: Inspiring Kung Lao and Kitana, Raiden’s sacrifice fuels their fight, his heart a beacon of resolve, his mind guiding from beyond. His codename a hero’s chant, his path a spectral fight, his leadership rallying mortals.",
+            "The selfless god: Raiden’s sacrifice cements his legend, his heart a storm of duty, his codename echoing in ruined realms. The era ends with his revival, his path a fight for redemption, his leadership eternal in kombat."
+          ]
+        }
+      },
+      {
+        "id": 5,
+        "era": "Mortal Kombat: Armageddon",
+        "title": "The Battle of Armageddon",
+        "Icon": "Blaze Symbol",
+        "color": "from-blue-600 to-red-600",
+        "bgPattern": "bg-gradient-to-br from-blue-800 via-red-700 to-black",
+        "content": {
+          "summary": "In *Mortal Kombat: Armageddon* (2006), Raiden, corrupted by his sacrifice, returns darker, leading Earthrealm’s warriors in a chaotic battle against all realms to prevent Armageddon. Facing Blaze and cosmic collapse, he seeks balance. This era explores his moral struggle, his fierce leadership, and his fight to avert apocalypse.",
+          "details": [
+            "Darkened god: Revived with corrupted power, Raiden wields fierce lightning, his heart torn by darkness, his mind seeking balance. His codename a shadowed thunder, his path a moral struggle, his leadership hardened by sacrifice.",
+            "Blaze’s prophecy: Confronting Blaze, the fire elemental, Raiden battles to stop Armageddon, his storms clashing with flames, his heart resolute in chaos, his mind decoding prophecy. His codename a warrior’s roar, his path a cosmic fight, his leadership defying fate.",
+            "All-realm war: Leading Earthrealm against Outworld and Netherrealm, Raiden unites fighters, his lightning shielding allies, his heart fierce in kombat, his mind strategizing victory. His codename a unifier’s cry, his path a multirealm war, his leadership rallying warriors.",
+            "Shinnok’s shadow: Facing Shinnok’s influence, Raiden resists corruption, his heart fighting for purity, his mind countering Netherrealm’s pull. His codename a god’s vow, his path a redemption fight, his leadership seeking light.",
+            "Taven’s aid: Guiding Taven to defeat Blaze, Raiden shares divine wisdom, his heart trusting in his quest, his mind aligning their goals. His codename a mentor’s chant, his path a shared mission, his leadership forging a hero.",
+            "Cosmic balance: Battling to restore realm stability, Raiden’s lightning seals rifts, his heart steady in crisis, his mind upholding Elder Gods’ will. His codename a guardian’s cry, his path a cosmic struggle, his leadership preserving order.",
+            "Armageddon’s brink: As realms collide, Raiden fights to the end, his heart a storm of resolve, his mind defying collapse. His codename a protector’s roar, his path a final stand, his leadership staving off doom.",
+            "The darkened protector: Raiden’s struggle cements his legend, his heart a tempest of duty, his codename echoing in chaotic skies. The era ends with his fight for balance, his path a war against apocalypse, his leadership eternal in kombat."
+          ]
+        }
+      },
+      {
+        "id": 6,
+        "era": "Mortal Kombat 9: The Rebooted Timeline",
+        "title": "The Time Reset",
+        "Icon": "Hourglass",
+        "color": "from-blue-600 to-purple-600",
+        "bgPattern": "bg-gradient-to-br from-blue-800 via-purple-700 to-black",
+        "content": {
+          "summary": "In *Mortal Kombat 9* (2011), Raiden receives a vision from his future self, altering the timeline to prevent Armageddon. Guiding Earthrealm’s warriors against Shao Kahn, he faces tragic losses. This era explores his foresight, his desperate leadership, and his fight to rewrite fate.",
+          "details": [
+            "Vision of doom: Receiving a cryptic message, Raiden alters history, his lightning guiding events, his heart heavy with prophecy, his mind decoding fate. His codename a seer’s cry, his path a temporal fight, his leadership reshaping time.",
+            "Liu Kang’s tragedy: Mentoring Liu Kang, Raiden’s choices lead to his death, his heart torn by guilt, his mind questioning his vision. His codename a mentor’s sorrow, his path a tragic fight, his leadership faltering in loss.",
+            "Shao Kahn’s invasion: Facing Kahn’s renewed assault, Raiden hurls thunderbolts, his heart resolute against tyranny, his mind countering portals. His codename a thunder god’s roar, his path a realm war, his leadership rallying survivors.",
+            "Sindel’s massacre: As Sindel slaughters Earthrealm’s heroes, Raiden fails to protect them, his lightning too late, his heart breaking in defeat, his mind seeking answers. His codename a guardian’s cry, his path a desperate stand, his leadership stained by loss.",
+            "Elder Gods’ plea: Appealing to the Elder Gods, Raiden seeks their intervention, his heart bound to cosmic law, his mind navigating divine indifference. His codename a deity’s vow, his path a sacred plea, his leadership demanding justice.",
+            "Kahn’s defeat: Empowering Liu Kang’s spirit, Raiden defeats Shao Kahn, his storms shattering his armor, his heart relieved at victory, his mind securing Earthrealm. His codename a protector’s chant, his path a final kombat, his leadership saving the realm.",
+            "Allies’ sacrifice: Mourning fallen warriors, Raiden honors their loss, his heart heavy with their memory, his mind vowing to protect. His codename a survivor’s cry, his path a mournful fight, his leadership rebuilding hope.",
+            "The time-shifted god: Raiden’s vision cements his legend, his heart a storm of resolve, his codename echoing in altered skies. The era ends with a new timeline, his path a fight for fate, his leadership eternal in kombat."
+          ]
+        }
+      },
+      {
+        "id": 7,
+        "era": "Mortal Kombat X: The Next Generation",
+        "title": "The Netherrealm War",
+        "Icon": "Shinnok’s Amulet",
+        "color": "from-blue-600 to-red-600",
+        "bgPattern": "bg-gradient-to-br from-blue-800 via-red-700 to-black",
+        "content": {
+          "summary": "In *Mortal Kombat X* (2015), Raiden defends Earthrealm from Shinnok’s return, mentoring a new generation of fighters like Cassie Cage and Takeda. Facing Netherrealm’s forces, he wields his divine powers. This era explores his role as a veteran god, his mentorship, and his leadership against Shinnok’s corruption.",
+          "details": [
+            "Shinnok’s return: As Shinnok invades with his amulet, Raiden unleashes lightning storms, his heart resolute against corruption, his mind countering Netherrealm’s forces. His codename a thunder god’s roar, his path a divine war, his leadership defying evil.",
+            "Cassie’s mentorship: Guiding Cassie Cage, Raiden empowers her leadership, his lightning aiding her fists, his heart trusting in her spirit, his mind training her team. His codename a mentor’s vow, his path a shared fight, his leadership forging heroes.",
+            "Netherrealm assault: Entering Shinnok’s realm, Raiden battles Quan Chi, his teleportation dodging spells, his heart fierce in darkness, his mind exposing treachery. His codename a warrior’s cry, his path a hellish gauntlet, his leadership overwhelming foes.",
+            "Amulet’s power: Seizing Shinnok’s amulet, Raiden contains its corruption, his storms neutralizing its energy, his heart steady in danger, his mind securing its containment. His codename a guardian’s chant, his path a relic’s capture, his leadership saving realms.",
+            "Johnny’s aid: Supporting Johnny Cage, Raiden protects his family, his lightning shielding them, his heart aligned with their cause, his mind coordinating strikes. His codename a unifier’s cry, his path a family fight, his leadership inspiring mortals.",
+            "Elder Gods’ will: Upholding cosmic balance, Raiden banishes Shinnok, his heart bound to divine law, his mind enforcing order. His codename a deity’s vow, his path a sacred fight, his leadership preserving stability.",
+            "New generation: Training Takeda and Jacqui, Raiden builds Earthrealm’s future, his heart strong in their potential, his mind strategizing their growth. His codename a mentor’s chant, his path a legacy fight, his leadership shaping heroes.",
+            "The veteran god: Raiden’s stand cements his legend, his heart a storm of resolve, his codename echoing in Netherrealm’s ruins. The era ends with Shinnok’s defeat, his path a divine fight, his leadership eternal in kombat."
+          ]
+        }
+      },
+      {
+        "id": 8,
+        "era": "Mortal Kombat 11: The Time Crisis",
+        "title": "Kronika’s Time War",
+        "Icon": "Hourglass",
+        "color": "from-blue-600 to-gold-600",
+        "bgPattern": "bg-gradient-to-br from-blue-800 via-gold-700 to-black",
+        "content": {
+          "summary": "In *Mortal Kombat 11* (2019), Raiden faces Kronika, the Keeper of Time, who seeks to rewrite history. Corrupted by Shinnok’s amulet, he battles his darker self and allies with Liu Kang to stop her. This era explores his struggle with corruption, his redemption, and his leadership in a temporal war.",
+          "details": [
+            "Kronika’s manipulation: As Kronika reshapes time, Raiden battles her forces, his lightning clashing with temporal rifts, his heart resolute against chaos, his mind decoding her plans. His codename a thunder god’s roar, his path a time war, his leadership defying fate.",
+            "Dark Raiden: Corrupted by Shinnok’s amulet, Raiden’s lightning turns ruthless, his heart torn by darkness, his mind fighting for control. His codename a shadowed god, his path a moral struggle, his leadership seeking redemption.",
+            "Liu Kang’s fire: Merging with Liu Kang, Raiden creates Fire God Liu Kang, his storms fueling his flames, his heart trusting in his champion, his mind guiding his ascension. His codename a mentor’s vow, his path a divine fusion, his leadership forging a god.",
+            "Time’s collapse: Battling Kronika’s titans, Raiden navigates her hourglass, his teleportation dodging traps, his heart steady in chaos, his mind countering her schemes. His codename a warrior’s cry, his path a temporal gauntlet, his leadership saving realms.",
+            "Allies’ unity: Uniting Kitana and Kung Lao, Raiden leads a multirealm alliance, his lightning shielding them, his heart strong in their cause, his mind coordinating strikes. His codename a unifier’s chant, his path a shared fight, his leadership rallying heroes.",
+            "Redemption’s path: Cleansing his corruption, Raiden restores his divinity, his heart purified by duty, his mind embracing balance. His codename a redeemed god’s vow, his path a redemptive fight, his leadership restoring order.",
+            "Kronika’s defeat: Supporting Fire God Liu Kang, Raiden helps defeat Kronika, his storms stabilizing time, his heart relieved at victory, his mind shaping a new era. His codename a protector’s cry, his path a temporal victory, his leadership saving existence.",
+            "The time guardian: Raiden’s redemption cements his legend, his heart a storm of resolve, his codename echoing in new timelines. The era ends with a new history, his path a fight for fate, his leadership eternal in kombat."
+          ]
+        }
+      },
+      {
+        "id": 9,
+        "era": "Mortal Kombat 1: The New Era",
+        "title": "Liu Kang’s Universe",
+        "Icon": "Fire Crown",
+        "color": "from-blue-600 to-orange-600",
+        "bgPattern": "bg-gradient-to-br from-blue-800 via-orange-700 to-black",
+        "content": {
+          "summary": "In *Mortal Kombat 1* (2023), Raiden is reimagined as a mortal monk in Liu Kang’s new timeline, chosen as Earthrealm’s champion. Trained by Liu Kang, he faces Outworld’s threats and Titan Shang Tsung. This era explores his mortal heroism, his newfound role, and his leadership as a humble warrior.",
+          "details": [
+            "Mortal champion: As a Shaolin monk, Raiden wields lightning, his heart humble in duty, his mind learning kombat. His codename a mortal’s cry, his path a heroic rise, his leadership forged in training.",
+            "Liu Kang’s guidance: Trained by Fire God Liu Kang, Raiden hones his thunder, his heart trusting in his mentor, his mind mastering techniques. His codename a disciple’s vow, his path a shared fight, his leadership inspired by divinity.",
+            "Outworld’s tournament: Competing in Mortal Kombat, Raiden battles Outworld’s warriors, his lightning striking foes, his heart resolute in honor, his mind reading their moves. His codename a champion’s roar, his path a tournament fight, his leadership proving his worth.",
+            "Titan Shang Tsung: Facing a multiversal Shang Tsung, Raiden confronts his sorcery, his storms clashing with dark magic, his heart fierce against evil, his mind countering his schemes. His codename a hero’s cry, his path a cosmic fight, his leadership defying tyranny.",
+            "Kung Lao’s bond: Fighting alongside Kung Lao, Raiden strengthens their friendship, his lightning aiding his hat, his heart loyal to his brother, his mind coordinating strikes. His codename a partner’s chant, his path a shared kombat, his leadership uniting warriors.",
+            "Earthrealm’s defense: Protecting Liu Kang’s timeline, Raiden battles invaders, his heart steady in defense, his mind upholding peace. His codename a guardian’s vow, his path a realm’s fight, his leadership preserving harmony.",
+            "Multiversal threat: Joining Liu Kang against Titan threats, Raiden fights for reality, his lightning sealing rifts, his heart resolute in chaos, his mind stabilizing time. His codename a protector’s cry, his path a multiversal stand, his leadership saving existence.",
+            "The mortal hero: Raiden’s rise cements his legend, his heart a storm of resolve, his codename echoing in Liu Kang’s era. The era ends with his championship, his path a fight for Earthrealm, his leadership eternal in kombat."
+          ]
+        }
+      },
+      {
+        "id": 10,
+        "era": "The Combat Arsenal",
+        "title": "The Thunderous Might",
+        "Icon": "Thunder Staff",
+        "color": "from-blue-600 to-white-600",
+        "bgPattern": "bg-gradient-to-br from-blue-800 via-white-700 to-black",
+        "content": {
+          "summary": "Across the *Mortal Kombat* series, Raiden’s combat evolves from divine lightning to mortal martial arts, wielding thunderbolts, teleportation, and staff techniques. This era explores his versatile arsenal, his adaptability to threats, and his leadership as a combat master.",
+          "details": [
+            "Lightning bolts: Hurling electric blasts, Raiden fries foes, his heart steady in power, his mind aiming for precision. His codename a thunder god’s roar, his path a stormy gauntlet, his leadership striking with force.",
+            "Teleportation: Vanishing in sparks, Raiden ambushes enemies, his heart agile in movement, his mind exploiting positioning. His codename a phantom’s cry, his path a blinking fight, his leadership outmaneuvering foes.",
+            "Thunder staff: Wielding his staff, Raiden smashes opponents, his heart fierce in melee, his mind timing strikes. His codename a warrior’s chant, his path a close-quarters kombat, his leadership crushing enemies.",
+            "Electric grab: Shocking foes with a charged grip, Raiden paralyzes them, his heart resolute in control, his mind targeting weak points. His codename a grappler’s vow, his path a shocking assault, his leadership dominating kombat.",
+            "Storm flight: Soaring with electric currents, Raiden dives into battle, his heart bold in flight, his mind diving for impact. His codename a sky god’s cry, his path an aerial strike, his leadership overwhelming from above.",
+            "Mortal kombat: In *Mortal Kombat 1*, Raiden’s monk skills blend lightning with kicks, his heart humble in technique, his mind mastering forms. His codename a champion’s roar, his path a martial fight, his leadership proving mortal might.",
+            "Fatalities: Executing thunderous fatalities, Raiden’s storms incinerate foes, his heart fierce in finality, his mind crafting spectacle. His codename a finisher’s chant, his path a brutal end, his leadership immortal in kombat.",
+            "The combat master: Raiden’s arsenal cements his legend, his heart a storm of resolve, his codename echoing in battlegrounds. The era ends with his mastery, his path a fight against all, his leadership eternal in kombat."
+          ]
+        }
+      },
+      {
+        "id": 11,
+        "era": "The Divine Leadership",
+        "title": "The Protector’s Command",
+        "Icon": "Elder Gods’ Crest",
+        "color": "from-blue-600 to-silver-600",
+        "bgPattern": "bg-gradient-to-br from-blue-800 via-silver-700 to-black",
+        "content": {
+          "summary": "Across the *Mortal Kombat* series, Raiden’s leadership unites Earthrealm’s warriors against Outworld, Netherrealm, and multiversal threats. This era explores his strategic command, his divine guidance, and his role as Earthrealm’s eternal protector.",
+          "details": [
+            "Tournament general: Overseeing Mortal Kombat, Raiden leads fighters, his lightning guiding their path, his heart resolute in duty, his mind strategizing victory. His codename a commander’s cry, his path a tournament war, his leadership rallying mortals.",
+            "Liu Kang’s mentor: Shaping Liu Kang into a champion, Raiden trains his spirit, his heart trusting in his growth, his mind forging a hero. His codename a mentor’s vow, his path a shared fight, his leadership inspiring greatness.",
+            "Allies’ unity: Uniting Sonya, Johnny, and Kitana, Raiden forms a coalition, his storms shielding them, his heart strong in their cause, his mind coordinating strikes. His codename a unifier’s chant, his path a team effort, his leadership forging bonds.",
+            "Elder Gods’ envoy: Representing the Elder Gods, Raiden enforces cosmic law, his heart bound to balance, his mind navigating divine politics. His codename a deity’s vow, his path a sacred duty, his leadership upholding order.",
+            "Shao Kahn’s defiance: Leading against Shao Kahn, Raiden counters his tyranny, his lightning blasting armies, his heart fierce in defiance, his mind planning victory. His codename a protector’s roar, his path a realm war, his leadership saving Earthrealm.",
+            "Shinnok’s banishment: Commanding against Shinnok, Raiden seals his amulet, his heart resolute against corruption, his mind securing containment. His codename a guardian’s cry, his path a divine fight, his leadership preserving realms.",
+            "Kronika’s resistance: Facing Kronika, Raiden leads a multiversal alliance, his storms stabilizing time, his heart steady in chaos, his mind countering her schemes. His codename a time god’s chant, his path a temporal war, his leadership saving existence.",
+            "The eternal commander: Raiden’s leadership cements his legend, his heart a storm of resolve, his codename echoing in kombat’s halls. The era ends with his eternal duty, his path a fight for realms, his leadership immortal in protection."
+          ]
+        }
+      },
+      {
+        "id": 12,
+        "era": "The Cultural Icon",
+        "title": "The Thunderous Legacy",
+        "Icon": "Trophy",
+        "color": "from-blue-600 to-gold-600",
+        "bgPattern": "bg-gradient-to-br from-blue-800 via-gold-700 to-black",
+        "content": {
+          "summary": "Raiden’s status as a *Mortal Kombat* icon spans games, films, and media, inspiring fans with his lightning and wisdom. This era explores his cultural impact, his recognition as a divine hero, and his leadership in gaming culture.",
+          "details": [
+            "Gaming legend: As a *Mortal Kombat* staple, Raiden’s lightning defines kombat, his heart inspiring players, his mind shaping gameplay. His codename a gamer’s cry, his path a digital legacy, his leadership uniting fans.",
+            "Film presence: In *Mortal Kombat* (1995) and *Annihilation* (1997), Raiden’s cinematic battles captivate, his storms striking foes, his heart steady on screen, his mind guiding heroes. His codename a cinematic god, his path a filmed fight, his leadership inspiring viewers.",
+            "Animated hero: In *Mortal Kombat: Defenders of the Realm*, Raiden leads animated warriors, his lightning shielding them, his heart resolute in duty, his mind strategizing victory. His codename an animated vow, his path a drawn kombat, his leadership rallying cartoons.",
+            "Fan devotion: Fans cosplay Raiden’s hat and robes, his heart humble in their love, his mind shaping their passion. His codename a community’s chant, his path a shared fandom, his leadership uniting conventions.",
+            "Merchandise star: Raiden’s likeness adorns figures and apparel, his heart a symbol of thunder, his mind inspiring designs. His codename a brand’s cry, his path a cultural legacy, his leadership rallying collectors.",
+            "Crossover cameos: In crossovers like *Injustice*, Raiden battles DC heroes, his lightning shocking foes, his heart steady in new worlds, his mind adapting to threats. His codename a crossover legend, his path a shared fight, his leadership inspiring players.",
+            "Esports and mods: In modding communities, Raiden’s skins dominate, his heart a fan’s creation, his mind shaping custom battles. His codename a modder’s vow, his path a virtual legacy, his leadership inspiring creativity.",
+            "The cultural thunder: Raiden’s influence cements his legend, his heart a storm of resolve, his codename echoing in gaming culture. The era ends with his global impact, his path a legacy of kombat, his leadership immortal in *Mortal Kombat*’s lore."
+          ]
+        }
+      }
+    ]
   }
 ]

@@ -8,7 +8,6 @@ const passport = require("passport");
 
 const connectDB = require("./config/db");
 const authRoute = require("./routes/auth");
-const twitchLiveStream = require("./routes/fetchLiveStream");
 const generatecoverImages = require("./routes/RAWGcover");
 const fetchAllGames = require("./routes/getAllGame");
 const fetchGameData = require("./routes/getGameData");
@@ -19,9 +18,6 @@ const getAllVid = require("./routes/getAllYTVideos");
 const getNewsDets = require("./routes/newsDetails");
 const saveComment = require("./routes/commentRoutes");
 const getComments = require("./routes/getcomments");
-const saveBookmark = require("./routes/savebookamarks");
-const removeBookmarks = require("./routes/deletebookmarks");
-const getBookmarks = require("./routes/getbookmarks");
 const saveAiTodb = require("./routes/savAiProfiles");
 const getProfiles = require("./routes/getAiProfiles");
 const userList = require("./routes/userList");
@@ -33,6 +29,7 @@ const fetchReviewsFromDB = require("./routes/fetchReviews");
 const getQuizes = require("./routes/quizRoute");
 const fetchUserData = require("./routes/fetchUserdetails");
 const saveUserDataToDB = require("./routes/saveUserData");
+const logoutUser = require("./routes/logoutRoute");
 
 const { startNewsCron } = require("./controllers/news/cronjobnews");
 const { runPlaystationCronJob } = require("./jobs/playstationcron");
@@ -87,7 +84,7 @@ const startServer = async () => {
 
     // Routes
     app.use("/users", authRoute);
-    app.use("/twitch", twitchLiveStream);
+
     app.use("/RAWG", generatecoverImages);
     app.use("/games", fetchAllGames);
     app.use("/gamedata", fetchGameData);
@@ -98,9 +95,6 @@ const startServer = async () => {
     app.use("/news", getNewsDets);
     app.use("/savecomment", saveComment);
     app.use("/getcomments", getComments);
-    app.use("/save", saveBookmark);
-    app.use("/remove", removeBookmarks);
-    app.use("/getbookmarks", getBookmarks);
     app.use("/api/ai", saveAiTodb);
     app.use("/aiprofiles", getProfiles);
     app.use("/userlist", userList);
@@ -112,6 +106,7 @@ const startServer = async () => {
     app.use("/getquiz", getQuizes);
     app.use("/getuserdata", fetchUserData);
     app.use("/saveusertodb", saveUserDataToDB);
+    app.use("logout", logoutUser);
 
     startNewsCron();
     runPlaystationCronJob();

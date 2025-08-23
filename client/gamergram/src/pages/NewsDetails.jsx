@@ -1,25 +1,38 @@
 import {
   Calendar,
-  Heart,
   Menu,
   Send,
   MessageCircle,
   Timer,
-  BookmarkIcon,
+  X,
+  LogOut,
 } from "lucide-react";
-import { useParams } from "react-router-dom";
+import { useLocation, useParams, Link } from "react-router-dom";
 import { format, parseISO } from "date-fns";
 import useGameStore from "../store/useGameStore";
 import { useEffect } from "react";
 import useUIStore from "../store/useUIStore";
 import { useState } from "react";
 import useBookmarkStore from "../store/useBookmarkStore";
+import useLogoutStore from "../store/useLogoutStore";
+import { motion, AnimatePresence } from "framer-motion";
 
 const NewsDetails = () => {
   const { newsID } = useParams();
   const [comment, setComment] = useState("");
   const [fetchedComments, setFetchedComments] = useState([]);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
   const [modalIsOpen, setModalIsOpen] = useState(false);
+  const { pages, selectedPage, setSelectedPage } = useUIStore();
+  const location = useLocation();
+  const { logOutUser } = useLogoutStore();
+  useEffect(() => {
+    const currentLocation = pages.find((p) => p.link === location.pathname);
+
+    if (currentLocation) {
+      setSelectedPage(currentLocation.id);
+    }
+  }, [location.pathname, pages, setSelectedPage]);
 
   const { newsDetails, fetchNewsDetails } = useGameStore();
   const { readingProgress, setReadingProgress } = useUIStore();
@@ -174,7 +187,12 @@ const NewsDetails = () => {
           <div className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-neutral-800 via-neutral-700 to-neutral-600" />
           <div className="p-4 flex justify-between items-center  gap-4">
             <div className="flex items-center gap-2 ">
-              <Menu size={19} color="#fff" className="cursor-pointer" />
+              <Menu
+                onClick={() => setSidebarOpen(true)}
+                size={19}
+                color="#fff"
+                className="cursor-pointer"
+              />
               <h1 className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent tracking-widest font-extrabold md:text-lg orbitron lg:text-xl cursor-pointer">
                 GAMERGRAM
               </h1>
@@ -224,14 +242,6 @@ const NewsDetails = () => {
                 >
                   <MessageCircle size={22} />
                   <p>{commentCount.length}</p>
-                </button>
-                <button
-                  onClick={() =>
-                    isBookmark ? removeBookmark(newsID) : saveBookmarks(newsID)
-                  }
-                  className={`text-white flex  items-center gap-2 mt-7 px-4 py-2 bg-neutral-800 rounded-xl cursor-pointer hover:bg-neutral-700 hover:scale-103 transition-all duration-500 ease-in-out`}
-                >
-                  <BookmarkIcon size={18} />
                 </button>
               </div>
 
@@ -330,6 +340,85 @@ const NewsDetails = () => {
             </div>
           </div>
         )}
+
+        <AnimatePresence>
+          {sidebarOpen && (
+            <div className="fixed inset-0 bg-black/40">
+              <motion.div
+                initial={{ opacity: 0, x: -100 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                exit={{ x: -250, opacity: 0 }}
+                transition={{ duration: 0.3, ease: "easeInOut" }}
+                className="min-h-screen w-60 bg-gradient-to-b from-neutral-900 to-neutral-800"
+              >
+                <div className="">
+                  <div>
+                    <div className="flex items-center justify-between border-b border-b-neutral-600 p-3">
+                      <div>
+                        <h1 className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent font-extrabold text-xl tracking-wide">
+                          GAMERGRAM
+                        </h1>
+                        <span className="text-neutral-400 text-sm">
+                          Gaming hub
+                        </span>
+                      </div>
+                      <div>
+                        <button className="px-2 py-1 bg-neutral-700 rounded-lg">
+                          <X
+                            onClick={() => setSidebarOpen(false)}
+                            className="w-4 cursor-pointer"
+                            color="#fff"
+                          />
+                        </button>
+                      </div>
+                    </div>
+
+                    <div className="flex flex-col gap-6 mt-5 p-4 lg:p-6">
+                      {pages.map((page) => {
+                        const IconComponent = page.icon;
+                        return (
+                          <Link
+                            to={page.link}
+                            className={`flex items-center gap-2 ${
+                              selectedPage === page.id
+                                ? "bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"
+                                : "text-white hover:scale-115 transition-all duration-300 ease-in-out hover:bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 hover:bg-clip-text hover:text-transparent"
+                            }`}
+                          >
+                            <IconComponent
+                              size={25}
+                              color="#fff"
+                              className={`cursor-pointer`}
+                            />
+                            <button
+                              onClick={() => setSelectedPage(page.id)}
+                              className={`text-[26px] font-bold cursor-pointer`}
+                            >
+                              {page.label}
+                            </button>
+                          </Link>
+                        );
+                      })}
+                    </div>
+                    <div className="flex items-center gap-2 bg-gradient-to-r bg-clip-text p-4 lg:p-6 text-white hover:scale-115 transition-all duration-300 ease-in-out hover:bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 hover:bg-clip-text hover:text-transparent mt-5">
+                      <LogOut
+                        size={25}
+                        color="#fff"
+                        className={`cursor-pointer`}
+                      />
+                      <button
+                        onClick={logOutUser}
+                        className={`text-[20px] font-bold cursor-pointer`}
+                      >
+                        Log-out
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+          )}
+        </AnimatePresence>
       </div>
     </>
   );

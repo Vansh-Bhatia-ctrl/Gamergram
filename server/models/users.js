@@ -20,13 +20,14 @@ const usersSchema = new mongoose.Schema({
     required: true,
     minlength: 8,
   },
-  bookmarks: [
-    {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "News",
-    },
-  ],
-
+  avatar: {
+    type: String,
+    default: "",
+  },
+  bio: {
+    type: String,
+    required: false,
+  },
   isAI: { type: Boolean, default: false },
 });
 

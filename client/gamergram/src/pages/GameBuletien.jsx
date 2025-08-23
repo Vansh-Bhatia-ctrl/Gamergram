@@ -10,7 +10,7 @@ import { useNavigate } from "react-router-dom";
 
 const GameBuletien = () => {
   const Platforms = ["PlayStation", "Xbox", "PC"];
-  const Filters = ["Relevance", "Release Date", "Popularity"];
+  const Filters = ["Relevance", "Release Date"];
 
   const [filter, setFilter] = useState("Filter");
   const [platform, setPlatform] = useState("Platform");

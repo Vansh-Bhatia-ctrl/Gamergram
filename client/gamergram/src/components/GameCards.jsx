@@ -35,8 +35,6 @@ const GameCards = ({ gameData, platForms, filters, searchTerm }) => {
     filteredGames = [...filteredGames].sort(
       (a, b) => new Date(b.releaseDate) - new Date(a.releaseDate)
     );
-  } else if (filters === "Popularity") {
-    //need to make the follow funtionality, wishlisting functionality, and check which games are comming more in news , uske hisab se popularity filter will work , to jab yeh sab bana lega you need to work on the popularity filter
   }
 
   if (searchTerm && searchTerm.trim() !== "") {
@@ -100,7 +98,6 @@ const GameCards = ({ gameData, platForms, filters, searchTerm }) => {
                     {game.title}
                   </h1>
                 </div>
-
               </div>
             </Link>
           );

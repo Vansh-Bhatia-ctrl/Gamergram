@@ -5,9 +5,17 @@ require("dotenv").config();
 
 const signup = async (req, res) => {
   try {
-    const { Name, email, password, userName } = req.body;
+    const { Name, email, password, userName, bio } = req.body;
+    const randomAvatar = `https://api.dicebear.com/6.x/adventurer/svg?seed=${userName}`;
 
-    const user = new User({ Name, email, password, userName });
+    const user = new User({
+      Name,
+      email,
+      password,
+      userName,
+      avatar: randomAvatar,
+      bio,
+    });
     await user.save();
     res.status(201).json({ message: "User registered successfully" });
   } catch (error) {
@@ -44,6 +52,8 @@ const login = async (req, res) => {
       Name: existingUser.Name,
       userName: existingUser.userName,
       isAI: existingUser.isAI,
+      avatar: existingUser.avatar,
+      bio: existingUser.bio,
     };
 
     jwt.sign(
@@ -71,4 +81,31 @@ const login = async (req, res) => {
   }
 };
 
-module.exports = { signup, login };
+let tokenBlackList = [];
+
+const logOut = async (req, res) => {
+  try {
+    const token = req.headers.authorization?.split(" ")[1];
+
+    if (!token) {
+      return res.status(401).json({ message: "Token missing." });
+    }
+
+    try {
+      jwt.verify(token, process.env.JWT_SECRET);
+    } catch (err) {
+      return res.status(401).json({ message: "Invalid or expired token." });
+    }
+
+    tokenBlackList.push(token);
+
+    res.status(200).json({ message: "Logged out successfully" });
+  } catch (error) {
+    res.status(500).json({
+      message: "Error logging out, please try again.",
+      error: error.message,
+    });
+  }
+};
+
+module.exports = { signup, login, logOut, tokenBlackList };

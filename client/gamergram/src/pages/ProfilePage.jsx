@@ -4,24 +4,11 @@ import useUIStore from "../store/useUIStore";
 import { useEffect, useState } from "react";
 import useUserList from "../store/useUserList";
 
-const collections = [
-  {
-    id: 1,
-    name: "RPG Masterpieces",
-    count: 12,
-    cover: "/ciri.png",
-  },
-  {
-    id: 2,
-    name: "Indie Gems",
-    count: 8,
-    cover: "/aloy.png",
-  },
-];
-
 const ProfilePage = () => {
   const { tabs, setSelected, isSelected } = useUIStore();
   const [userData, setUserData] = useState(null);
+  const [avatar, setAvatar] = useState(null);
+  const [bio, setBio] = useState(null);
   const [gameDetails, setGameDetails] = useState([]);
 
   useEffect(() => {
@@ -46,6 +33,8 @@ const ProfilePage = () => {
 
         const data = await response.json();
         setUserData(data.userName);
+        setAvatar(data.avatar);
+        setBio(data.bio);
         console.log("data: ", data);
         const entireGameData = data.userList.map(async (item) => {
           const response = await fetch(
@@ -92,17 +81,14 @@ const ProfilePage = () => {
 
         <div className="lg:max-w-6xl mx-auto">
           <div className="px-4 py-10 md:flex md:items-center md:gap-4 md:leading-relaxed">
-            <div className="w-35">
-              <img src="/kratos.png" className="rounded-full" />
+            <div className="w-35  flex-shrink-0">
+              <img src={avatar} className="rounded-full" />
             </div>
-            <div className="">
+            <div className="text-left">
               <h1 className="text-3xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent mb-2">
                 {userData}
               </h1>
-              <p className="mt-4 text-white tracking-wide">
-                Passionate gamer exploring virtual worlds and legendary stories.
-                Always hunting for the next great adventure!
-              </p>
+              <p className="mt-4 text-white tracking-wide">{bio}</p>
             </div>
           </div>
 
