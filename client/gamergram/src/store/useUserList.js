@@ -9,7 +9,7 @@ const useUserList = create((set, get) => ({
     try {
       const token = localStorage.getItem("token");
       const response = await fetch(
-        `${process.env.REACT_APP_API_URL}/getlist/get-userlist`,
+        `${import.meta.env.VITE_API_URL}/getlist/get-userlist`,
         {
           method: "GET",
           headers: {
@@ -48,7 +48,7 @@ const useUserList = create((set, get) => ({
     try {
       const token = localStorage.getItem("token");
       const response = await fetch(
-        `${import.meta.env.VITE_APP_API_URL}/userlist/user-list`,
+        `${import.meta.env.VITE_API_URL}/userlist/user-list`,
         {
           method: "POST",
           headers: {
