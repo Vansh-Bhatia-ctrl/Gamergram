@@ -1,4 +1,4 @@
-const Chat = require("../models/aichat");
+const Chat = require("../models/aiChat");
 
 const getAiChat = async (socket, data) => {
   try {
