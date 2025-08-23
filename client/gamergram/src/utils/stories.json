@@ -4732,5 +4732,1226 @@
         }
       }
     ]
+  },
+  {
+    "_id": "68a639f58383ccaa602cc37b",
+    "name": "Jill Valentine",
+    "title": "Jill Valentine: The Survivor’s Codex",
+    "meta": {
+      "note": "A comprehensive chronicle of Jill Valentine’s journey across the *Resident Evil* series, from her role as a S.T.A.R.S. operative in the original *Resident Evil* to her battles against bioterror in *Resident Evil 3*, *Resident Evil 5*, *Resident Evil: Revelations*, *Resident Evil 3 Remake*, and *Resident Evil: Death Island*. This codex explores her resilience, combat expertise, and leadership in confronting Umbrella and global bio-threats. Each era details her evolution, her fight against bio-organic weapons, and her unyielding spirit as a survivor.",
+      "format": "Array of era objects with id, era, title, Icon (string), color, bgPattern, content { summary, details[] }"
+    },
+    "chapters": [
+      {
+        "id": 1,
+        "era": "Resident Evil: The Mansion Incident",
+        "title": "The Arklay Nightmare",
+        "Icon": "S.T.A.R.S. Badge",
+        "color": "from-blue-600 to-green-600",
+        "bgPattern": "bg-gradient-to-br from-blue-800 via-green-700 to-black",
+        "content": {
+          "summary": "In *Resident Evil* (1996) and its *Remake* (2002), Jill Valentine, a S.T.A.R.S. Alpha Team operative, investigates mysterious murders in the Arklay Mountains, uncovering Umbrella’s T-Virus experiments in a mansion filled with zombies and bio-weapons. This era explores her resourcefulness, combat skills, and leadership as she survives the horrors of Umbrella’s first outbreak.",
+          "details": [
+            "Arklay mission: Deployed to the Spencer Mansion, Jill faces zombies, her Beretta firing precise shots, her heart steady in fear, her mind solving deadly traps. Her codename ‘S.T.A.R.S.’ a mark of duty, her path a mansion of terror, her leadership emerging in crisis.",
+            "Chris’ partnership: Teaming with Chris Redfield, Jill battles Cerberus dogs, her grenade launcher blasting mutants, her heart protective of her partner, her mind coordinating their escape. Her codename a comrade’s trust, her path a shared fight, her leadership forged in teamwork.",
+            "Wesker’s betrayal: Uncovering Albert Wesker’s treachery, Jill confronts his Umbrella ties, her pistol aimed at his schemes, her heart resolute against betrayal, her mind exposing his deceit. Her codename a rebel’s cry, her path a fight against corruption, her leadership defying Umbrella.",
+            "Mansion horrors: Navigating booby-trapped halls, Jill battles Hunters, her heart calm under pressure, her mind deciphering puzzles. Her codename a survivor’s vow, her path a labyrinth of death, her leadership guiding allies through danger.",
+            "Tyrant encounter: Facing the T-002 Tyrant, Jill uses a rocket launcher, her heart fierce against bio-weapons, her mind targeting its core. Her codename a warrior’s chant, her path a monstrous showdown, her leadership outsmarting the beast.",
+            "Umbrella’s secrets: Discovering Umbrella’s lab, Jill uncovers T-Virus data, her heart set on justice, her mind linking evidence to corporate crimes. Her codename an investigator’s cry, her path a corporate exposé, her leadership dismantling secrets.",
+            "Escape from Arklay: Escaping the mansion’s destruction, Jill saves Chris, her heart relieved but scarred, her mind vowing to end Umbrella. Her codename a survivor’s chant, her path a narrow escape, her leadership a beacon in the nightmare.",
+            "The mansion survivor: Jill’s survival cements her legend, her heart a fire of resolve, her codename echoing in Arklay’s ruins. The era ends with her vowing justice, her path a fight against bioterror, her leadership born in the mansion’s horrors."
+          ]
+        }
+      },
+      {
+        "id": 2,
+        "era": "Resident Evil 3: Raccoon City’s Fall",
+        "title": "Nemesis’ Pursuit",
+        "Icon": "Nemesis Tracker",
+        "color": "from-blue-600 to-red-600",
+        "bgPattern": "bg-gradient-to-br from-blue-800 via-red-700 to-black",
+        "content": {
+          "summary": "In *Resident Evil 3: Nemesis* (1999) and its *Remake* (2020), Jill battles to escape Raccoon City as it’s consumed by the T-Virus outbreak, hunted by the relentless Nemesis T-Type. Teaming with Carlos Oliveira, she uncovers Umbrella’s crimes. This era explores her survival instincts, combat prowess, and leadership under relentless pursuit.",
+          "details": [
+            "City under siege: Trapped in Raccoon City, Jill faces zombies, her shotgun blasting hordes, her heart steady in chaos, her mind navigating burning streets. Her codename ‘S.T.A.R.S.’ a mark of defiance, her path a city of death, her leadership shining in crisis.",
+            "Nemesis’ hunt: Pursued by Nemesis, Jill dodges its rocket launcher, her heart racing under its gaze, her mind exploiting its patterns. Her codename a hunted survivor, her path a deadly chase, her leadership outsmarting the monster.",
+            "Carlos’ alliance: Teaming with Carlos Oliveira, Jill fights infected, her SMG mowing down enemies, her heart protective of her ally, her mind coordinating their moves. Her codename a partner’s trust, her path a shared fight, her leadership forged in teamwork.",
+            "Umbrella’s hospital: Investigating Raccoon General Hospital, Jill uncovers vaccine research, her heart set on saving lives, her mind exposing Umbrella’s experiments. Her codename an investigator’s cry, her path a medical conspiracy, her leadership seeking hope.",
+            "Nemesis’ mutations: Facing Nemesis’ evolved forms, Jill uses heavy weapons, her heart resolute against its size, her mind targeting weak points. Her codename a warrior’s vow, her path a monstrous gauntlet, her leadership destroying the beast.",
+            "Vaccine mission: Securing a T-Virus vaccine, Jill protects it from Umbrella, her heart fierce in its defense, her mind planning its delivery. Her codename a guardian’s chant, her path a rescue mission, her leadership saving survivors.",
+            "Raccoon’s destruction: Escaping as the city is nuked, Jill saves Carlos, her heart relieved at survival, her mind vowing to end Umbrella. Her codename a survivor’s cry, her path a fiery escape, her leadership a beacon in apocalypse.",
+            "The city’s survivor: Jill’s escape cements her legend, her heart a fire of resolve, her codename echoing in Raccoon’s ashes. The era ends with her survival, her path a fight against bioterror, her leadership eternal in the ruins."
+          ]
+        }
+      },
+      {
+        "id": 3,
+        "era": "Resident Evil 5: The Uroboros Threat",
+        "title": "The African Outbreak",
+        "Icon": "BSAA Emblem",
+        "color": "from-blue-600 to-yellow-600",
+        "bgPattern": "bg-gradient-to-br from-blue-800 via-yellow-700 to-black",
+        "content": {
+          "summary": "In *Resident Evil 5* (2009), Jill, now a BSAA operative, is brainwashed by Wesker but freed by Chris Redfield and Sheva Alomar in Kijuju, Africa. Fighting Uroboros bio-weapons, she battles to stop Wesker’s global infection plan. This era explores her recovery from control, her combat resilience, and her leadership in a bioterror crisis.",
+          "details": [
+            "Wesker’s control: Brainwashed by Wesker, Jill is forced to serve him, her heart trapped by a P30 device, her mind suppressed by his will. Her codename a puppet’s cry, her path a forced betrayal, her leadership dormant in captivity.",
+            "Chris’ rescue: Freed by Chris and Sheva, Jill breaks Wesker’s device, her heart reclaiming freedom, her mind regaining clarity. Her codename a survivor’s vow, her path a redemptive fight, her leadership reborn in liberation.",
+            "Uroboros outbreak: In Kijuju, Jill battles Uroboros mutants, her SMG cutting through infected, her heart steady in chaos, her mind assessing the virus. Her codename a BSAA operative, her path an African siege, her leadership guiding allies.",
+            "Wesker’s showdown: Confronting Wesker, Jill aids Chris, her pistol targeting his schemes, her heart resolute against his tyranny, her mind exposing his plans. Her codename a rebel’s cry, her path a final fight, her leadership defying her former captor.",
+            "BSAA mission: As a BSAA agent, Jill protects civilians, her heart fierce in their defense, her mind planning evacuations. Her codename a guardian’s chant, her path a rescue mission, her leadership saving lives.",
+            "Uroboros containment: Helping destroy Wesker’s Uroboros lab, Jill stops the virus spread, her grenades collapsing facilities, her heart relieved at containment, her mind tracing his network. Her codename a hero’s vow, her path a bioterror strike, her leadership saving the world.",
+            "Team unity: Fighting alongside Chris and Sheva, Jill strengthens their bond, her heart aligned with their cause, her mind coordinating their strikes. Her codename a partner’s trust, her path a shared fight, her leadership uniting BSAA.",
+            "The redeemed survivor: Jill’s freedom cements her legend, her heart a fire of resolve, her codename echoing in Kijuju’s ruins. The era ends with her stopping Wesker, her path a fight against bioterror, her leadership a beacon in recovery."
+          ]
+        }
+      },
+      {
+        "id": 4,
+        "era": "Resident Evil: Revelations",
+        "title": "The Queen Zenobia Crisis",
+        "Icon": "Ship Anchor",
+        "color": "from-blue-600 to-aqua-600",
+        "bgPattern": "bg-gradient-to-br from-blue-800 via-aqua-700 to-black",
+        "content": {
+          "summary": "In *Resident Evil: Revelations* (2012), Jill, now a seasoned BSAA operative, investigates the T-Abyss virus outbreak on the cruise ship Queen Zenobia with Parker Luciani. Facing aquatic mutants and a bioterror plot, she uncovers Veltro’s schemes. This era explores her investigative skills, her combat adaptability, and her leadership in a maritime crisis.",
+          "details": [
+            "Zenobia infiltration: Boarding the Queen Zenobia, Jill faces T-Abyss mutants, her handgun precise against Oozes, her heart steady in confined spaces, her mind navigating flooded decks. Her codename a BSAA agent, her path a ship of horrors, her leadership guiding through chaos.",
+            "Parker’s partnership: Teaming with Parker Luciani, Jill battles infected, her shotgun blasting Globsters, her heart protective of her partner, her mind coordinating their moves. Her codename a comrade’s trust, her path a shared fight, her leadership forged in teamwork.",
+            "Veltro’s plot: Uncovering the terrorist group Veltro, Jill traces their T-Abyss plan, her heart set on stopping bioterror, her mind linking evidence to their schemes. Her codename an investigator’s cry, her path a terrorist hunt, her leadership exposing corruption.",
+            "Aquatic horrors: Facing mutated sea creatures, Jill adapts to underwater combat, her heart calm under pressure, her mind exploiting mutant weaknesses. Her codename a survivor’s vow, her path a watery gauntlet, her leadership outsmarting bio-weapons.",
+            "Norman’s downfall: Confronting Veltro’s leader Raymond Norman, Jill battles his T-Abyss mutation, her rifle piercing his core, her heart resolute against terror, her mind stopping his plan. Her codename a warrior’s chant, her path a boss fight, her leadership ending the threat.",
+            "Ship escape: Escaping the sinking Zenobia, Jill saves Parker, her heart relieved at survival, her mind planning their extraction. Her codename a guardian’s cry, her path a narrow escape, her leadership ensuring safety.",
+            "BSAA coordination: Reporting to BSAA, Jill shares Veltro intel, her heart set on justice, her mind linking their actions to global bioterror. Her codename an agent’s vow, her path a strategic fight, her leadership dismantling networks.",
+            "The maritime survivor: Jill’s mission cements her legend, her heart a fire of resolve, her codename echoing in Zenobia’s wreckage. The era ends with her stopping Veltro, her path a fight against bioterror, her leadership a beacon at sea."
+          ]
+        }
+      },
+      {
+        "id": 5,
+        "era": "Resident Evil: Death Island",
+        "title": "The Alcatraz Outbreak",
+        "Icon": "Prison Cell",
+        "color": "from-blue-600 to-grey-600",
+        "bgPattern": "bg-gradient-to-br from-blue-800 via-grey-700 to-black",
+        "content": {
+          "summary": "In *Resident Evil: Death Island* (2023), a CGI film, Jill joins Chris Redfield, Claire Redfield, Leon Kennedy, and Rebecca Chambers to stop a T-Virus outbreak on Alcatraz Island, orchestrated by Dylan Blake. Facing new mutants, she fights to save San Francisco. This era explores her veteran status, her teamwork with BSAA, and her leadership in a bioterror crisis.",
+          "details": [
+            "Alcatraz mission: Deployed to Alcatraz, Jill faces T-Virus mutants, her assault rifle cutting through infected, her heart steady in confinement, her mind reading bio-weapon patterns. Her codename a BSAA veteran, her path a prison siege, her leadership guiding allies.",
+            "Team reunion: Joining Chris, Claire, Leon, and Rebecca, Jill battles Lickers, her shotgun blasting hordes, her heart strengthened by their bond, her mind coordinating their strikes. Her codename a comrade’s trust, her path a shared fight, her leadership forged in unity.",
+            "Dylan’s vengeance: Confronting Dylan Blake, Jill uncovers his T-Virus plot, her pistol targeting his drones, her heart resolute against his rage, her mind exposing his schemes. Her codename a rebel’s cry, her path a fight against bioterror, her leadership defying his vendetta.",
+            "Mutant onslaught: Facing enhanced Lickers and Tyrants, Jill uses grenades, her heart calm under their size, her mind exploiting weak points. Her codename a warrior’s vow, her path a bio-weapon gauntlet, her leadership outsmarting monstrous foes.",
+            "San Francisco threat: Protecting the city from Dylan’s outbreak, Jill navigates Alcatraz’s tunnels, her heart fierce in defense, her mind planning containment. Her codename a guardian’s chant, her path a rescue mission, her leadership saving civilians.",
+            "T-Virus cure: Aiding Rebecca’s cure research, Jill protects her work, her knife slashing infected, her heart steady in her defense, her mind analyzing data. Her codename a protector’s vow, her path a fight for hope, her leadership ensuring progress.",
+            "Dylan’s defeat: Destroying Dylan’s facility, Jill stops the T-Virus spread, her rocket launcher collapsing labs, her heart relieved at victory, her mind tracing his network. Her codename a hero’s cry, her path a strike against bioterror, her leadership saving the bay.",
+            "The island’s survivor: Jill’s stand cements her legend, her heart a fire of resolve, her codename echoing in Alcatraz’s ruins. The era ends with her stopping Dylan, her path a fight against apocalypse, her leadership a beacon in the dark."
+          ]
+        }
+      },
+      {
+        "id": 6,
+        "era": "The Combat Evolution",
+        "title": "The Arsenal of Survival",
+        "Icon": "Lockpick",
+        "color": "from-blue-600 to-silver-600",
+        "bgPattern": "bg-gradient-to-br from-blue-800 via-silver-700 to-black",
+        "content": {
+          "summary": "Across the *Resident Evil* series, Jill’s combat skills evolve from S.T.A.R.S. training to BSAA expertise, mastering handguns, shotguns, and lockpicking against bio-weapons. This era explores her versatile arsenal, her adaptability to horrors, and her leadership as a combat specialist.",
+          "details": [
+            "Handgun precision: In *Resident Evil*, Jill’s Beretta targets zombie heads, her heart steady in aim, her mind calculating shots. Her codename a marksman’s cry, her path a gunfire gauntlet, her leadership guiding precise strikes.",
+            "Shotgun power: In *Resident Evil 3*, Jill’s shotgun blasts Nemesis, its spread clearing hordes, her heart bold in close combat, her mind timing reloads. Her codename a warrior’s vow, her path a shotgun storm, her leadership overwhelming foes.",
+            "Lockpicking skill: Mastering lockpicks, Jill opens secured areas, her heart calm in tension, her mind solving mechanisms. Her codename a thief’s chant, her path a puzzle’s breach, her leadership unlocking survival.",
+            "Grenade tactics: In *Resident Evil 5*, Jill uses grenades against Uroboros, her heart steady in explosions, her mind timing blasts. Her codename a strategist’s vow, her path a fiery assault, her leadership clearing paths.",
+            "Rocket launcher: Wielding rocket launchers against Tyrants, Jill destroys bio-weapon cores, her heart fierce in destruction, her mind targeting weak points. Her codename a destroyer’s chant, her path a final blow, her leadership ending threats.",
+            "Knife mastery: In *Revelations*, Jill slashes Oozes, her heart agile in melee, her mind exploiting gaps. Her codename a bladesman’s cry, her path a close-quarters fight, her leadership a dance of steel.",
+            "BSAA training: As a BSAA operative, Jill masters SMGs and rifles, her heart resolute in combat, her mind adapting to threats. Her codename an agent’s vow, her path a tactical fight, her leadership crushing bio-weapons.",
+            "The survivor’s arsenal: Jill’s combat skills cement her legend, her heart a fire of resolve, her codename echoing in battlefields. The era ends with her armed for war, her path a fight against biohorrors, her leadership immortal in survival."
+          ]
+        }
+      },
+      {
+        "id": 7,
+        "era": "The Anti-Bioterror Crusade",
+        "title": "The War on Umbrella",
+        "Icon": "Biohazard Symbol",
+        "color": "from-blue-600 to-red-600",
+        "bgPattern": "bg-gradient-to-br from-blue-800 via-red-700 to-black",
+        "content": {
+          "summary": "Across *Resident Evil*, *Resident Evil 3*, *Resident Evil 5*, *Revelations*, and *Death Island*, Jill battles Umbrella, Veltro, and other bioterror groups. This era explores her relentless fight against bio-weapons, her alliances with Chris and Leon, and her leadership in dismantling bioterror networks.",
+          "details": [
+            "Umbrella’s downfall: In *Resident Evil*, Jill exposes Umbrella’s T-Virus crimes, her pistol blasting mutants, her heart resolute against corruption, her mind uncovering labs. Her codename a rebel’s cry, her path a fight against corporate evil, her leadership defying Umbrella.",
+            "Nemesis’ hunt: In *Resident Evil 3*, Jill survives Nemesis, her shotgun destroying its forms, her heart steady under pursuit, her mind exposing Umbrella’s weapons. Her codename a survivor’s vow, her path a city fight, her leadership escaping destruction.",
+            "Wesker’s defeat: In *Resident Evil 5*, Jill helps stop Wesker’s Uroboros, her grenades collapsing labs, her heart free from his control, her mind tracing his network. Her codename a hero’s chant, her path a global strike, her leadership saving the world.",
+            "Veltro’s end: In *Revelations*, Jill dismantles Veltro’s T-Abyss plot, her rifle piercing mutants, her heart set on justice, her mind linking their terrorism. Her codename an investigator’s cry, her path a maritime fight, her leadership stopping bioterror.",
+            "Dylan’s fall: In *Death Island*, Jill stops Dylan Blake’s T-Virus, her rocket launcher crushing his drones, her heart united with allies, her mind exposing his vendetta. Her codename a survivor’s cry, her path a prison fight, her leadership saving San Francisco.",
+            "BSAA alliance: Working with Chris and Leon, Jill coordinates BSAA missions, her heart strengthened by their bond, her mind planning joint strikes. Her codename a partner’s trust, her path a shared fight, her leadership uniting heroes.",
+            "Global networks: Tracing bioterror networks, Jill links Umbrella to Veltro, her heart set on justice, her mind dismantling their ties. Her codename an agent’s vow, her path a worldwide hunt, her leadership ending bioterror.",
+            "The bioterror slayer: Jill’s crusade cements her legend, her heart a fire of resolve, her codename echoing in ruined labs. The era ends with her fighting biohorrors, her path a war on bioterror, her leadership immortal in survival."
+          ]
+        }
+      },
+      {
+        "id": 8,
+        "era": "The Alliances of Jill",
+        "title": "The Bonds of Survival",
+        "Icon": "Handshake",
+        "color": "from-blue-600 to-silver-600",
+        "bgPattern": "bg-gradient-to-br from-blue-800 via-silver-700 to-black",
+        "content": {
+          "summary": "Across the *Resident Evil* series, Jill’s alliances with Chris, Carlos, Leon, and others define her survival, from Raccoon City to global missions. This era explores her partnerships, her trust in allies amidst bioterror, and her leadership in uniting teams against biohorrors.",
+          "details": [
+            "Chris’ bond: In *Resident Evil* and *Resident Evil 5*, Jill teams with Chris, her shotgun aiding his rifle, her heart protective of him, her mind coordinating their moves. Her codename a partner’s trust, her path a shared fight, her leadership forged in teamwork.",
+            "Carlos’ alliance: In *Resident Evil 3*, Jill fights alongside Carlos, her SMG complementing his assault rifle, her heart strengthened by his support, her mind planning their escape. Her codename a comrade’s chant, her path a city fight, her leadership uniting survivors.",
+            "Leon’s teamwork: In *Death Island*, Jill joins Leon, her pistol syncing with his magnum, her heart aligned with his resolve, her mind coordinating BSAA strikes. Her codename a partner’s trust, her path a shared mission, her leadership uniting veterans.",
+            "Parker’s partnership: In *Revelations*, Jill protects Parker, her rifle clearing Oozes, her heart fierce in his defense, her mind navigating the Zenobia. Her codename a guardian’s vow, her path a maritime fight, her leadership ensuring his safety.",
+            "Rebecca’s aid: In *Death Island*, Jill supports Rebecca’s cure research, her knife slashing infected, her heart steady in her defense, her mind analyzing data. Her codename a protector’s cry, her path a scientific fight, her leadership saving lives.",
+            "Claire’s unity: In *Death Island*, Jill fights with Claire, her heart strengthened by their bond, her mind coordinating their strikes. Her codename a sister’s chant, her path a shared fight, her leadership uniting BSAA.",
+            "BSAA coalition: Leading BSAA teams, Jill unites operatives, her heart resolute in their cause, her mind strategizing missions. Her codename an agent’s vow, her path a team effort, her leadership forging alliances.",
+            "The survivor’s bonds: Jill’s alliances cement her legend, her heart a fire of resolve, her codename echoing in teamwork. The era ends with her united with allies, her path a shared fight, her leadership immortal in bonds forged through survival."
+          ]
+        }
+      },
+      {
+        "id": 9,
+        "era": "The Emotional Resilience",
+        "title": "The Heart of a Survivor",
+        "Icon": "Broken Heart",
+        "color": "from-blue-600 to-red-600",
+        "bgPattern": "bg-gradient-to-br from-blue-800 via-red-700 to-black",
+        "content": {
+          "summary": "Across the *Resident Evil* series, Jill’s emotional strength defines her survival, from the trauma of Raccoon City to her brainwashing in *Resident Evil 5*. This era explores her resilience against loss, her recovery from control, and her leadership as a beacon of hope amidst despair.",
+          "details": [
+            "Arklay’s trauma: Surviving the Spencer Mansion, Jill carries scars of betrayal, her heart heavy with Wesker’s deceit, her mind vowing justice. Her codename a survivor’s cry, her path a haunted fight, her leadership rising from fear.",
+            "Raccoon’s despair: Escaping Raccoon City, Jill endures Nemesis’ pursuit, her heart steady under terror, her mind focusing on survival. Her codename a hunted survivor, her path a city of loss, her leadership enduring chaos.",
+            "Wesker’s control: Brainwashed in *Resident Evil 5*, Jill fights to reclaim her will, her heart trapped by P30, her mind breaking free with Chris’ help. Her codename a puppet’s cry, her path a redemptive fight, her leadership reborn in freedom.",
+            "Chris’ trust: Relying on Chris in *Resident Evil* and *Resident Evil 5*, Jill finds strength in their bond, her heart lifted by his loyalty, her mind aligned with his resolve. Her codename a partner’s chant, her path a shared fight, her leadership forged in trust.",
+            "Carlos’ support: In *Resident Evil 3*, Jill draws courage from Carlos, her heart strengthened by his bravery, her mind planning their escape. Her codename a comrade’s vow, her path a city fight, her leadership a light in darkness.",
+            "Team unity: In *Death Island*, Jill’s bonds with Leon and Claire bolster her resolve, her heart united in their cause, her mind coordinating their fight. Her codename a hero’s cry, her path a team effort, her leadership uniting survivors.",
+            "Hope amidst horror: Facing endless biohorrors, Jill’s heart remains unbroken, her mind focused on saving lives. Her codename a beacon’s chant, her path a fight for humanity, her leadership inspiring hope in despair.",
+            "The resilient survivor: Jill’s emotional strength cements her legend, her heart a fire of resolve, her codename echoing in survival tales. The era ends with her enduring loss, her path a fight against despair, her leadership immortal in hope."
+          ]
+        }
+      },
+      {
+        "id": 10,
+        "era": "The Cultural Impact",
+        "title": "The Icon of Resident Evil",
+        "Icon": "Trophy",
+        "color": "from-blue-600 to-gold-600",
+        "bgPattern": "bg-gradient-to-br from-blue-800 via-gold-700 to-black",
+        "content": {
+          "summary": "Jill’s status as a *Resident Evil* icon makes her a fan favorite, appearing in games, films, and crossovers. Her bravery and lockpicking skills inspire players worldwide. This era explores her cultural influence, her recognition as a survival hero, and her leadership as a gaming legend.",
+          "details": [
+            "Gaming icon: As a *Resident Evil* staple, Jill’s Beretta and lockpicks define survival horror, her heart inspiring players, her mind shaping gameplay. Her codename a gamer’s cry, her path a digital legacy, her leadership uniting fans.",
+            "Film presence: In *Resident Evil: Death Island*, Jill’s cinematic battles captivate, her shotgun blasting mutants, her heart steady on screen, her mind guiding allies. Her codename a cinematic hero, her path a filmed fight, her leadership inspiring viewers.",
+            "Comic legacy: In *Resident Evil* comics, Jill’s missions against Umbrella resonate, her knife slashing bio-weapons, her heart resolute in chaos, her mind uncovering plots. Her codename a comic legend, her path a drawn fight, her leadership inspiring inked tales.",
+            "Fan devotion: Fans cosplay Jill’s S.T.A.R.S. uniform and BSAA gear, her heart humble in their love, her mind shaping their passion. Her codename a community’s chant, her path a shared fandom, her leadership uniting conventions.",
+            "Merchandise star: Jill’s likeness adorns figures and apparel, her heart a symbol of survival, her mind inspiring designs. Her codename a brand’s cry, her path a cultural legacy, her leadership rallying collectors.",
+            "Crossover cameos: In crossovers like *Marvel vs. Capcom*, Jill battles with her arsenal, her heart steady in new worlds, her mind adapting to threats. Her codename a crossover legend, her path a shared fight, her leadership inspiring players.",
+            "Esports and mods: In modding communities, Jill’s skins dominate, her heart a fan’s creation, her mind shaping custom missions. Her codename a modder’s vow, her path a virtual legacy, her leadership inspiring creativity.",
+            "The cultural survivor: Jill’s influence cements her legend, her heart a fire of resolve, her codename echoing in gaming culture. The era ends with her global impact, her path a legacy of survival, her leadership immortal in *Resident Evil*’s lore."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "_id": "68a639f58383ccaa602cc37c",
+    "name": "Cloud Strife",
+    "title": "Cloud Strife: The Soldier’s Codex",
+    "meta": {
+      "note": "A comprehensive chronicle of Cloud Strife’s journey across the *Final Fantasy VII* universe, from his role as a former SOLDIER in the original *Final Fantasy VII* (1997) to his redefined arc in the *Final Fantasy VII Remake* trilogy, *Advent Children*, *Dirge of Cerberus*, and related media. This codex explores his struggle with identity, his battles against Shinra and Sephiroth, and his leadership as a reluctant hero. Each era details his evolution, his mastery of the Buster Sword, and his resolve to protect the planet.",
+      "format": "Array of era objects with id, era, title, Icon (string), color, bgPattern, content { summary, details[] }"
+    },
+    "chapters": [
+      {
+        "id": 1,
+        "era": "Final Fantasy VII: The Original Journey",
+        "title": "The Mako Rebellion",
+        "Icon": "Buster Sword",
+        "color": "from-blue-600 to-green-600",
+        "bgPattern": "bg-gradient-to-br from-blue-800 via-green-700 to-black",
+        "content": {
+          "summary": "In *Final Fantasy VII* (1997), Cloud Strife, a mercenary with a clouded past, joins the eco-terrorist group AVALANCHE to fight Shinra’s planet-draining Mako reactors. Uncovering his ties to Sephiroth and Shinra’s experiments, he battles to save the planet from Meteor. This era explores his fractured identity, his swordsmanship, and his leadership in a world on the brink.",
+          "details": [
+            "Midgar mercenary: Hired by AVALANCHE, Cloud storms Shinra’s reactors, his Buster Sword cleaving guards, his heart cold but driven, his mind clouded by memory gaps. His codename ‘Ex-SOLDIER’ a mark of mystery, his path a city of steel, his leadership reluctant but growing.",
+            "Tifa’s bond: Teaming with Tifa Lockhart, Cloud fights alongside her, his sword complementing her fists, his heart warmed by her trust, his mind stirred by childhood memories. His codename a friend’s faith, his path a shared rebellion, his leadership forged in loyalty.",
+            "Sephiroth’s shadow: Encountering Sephiroth’s legacy, Cloud faces his clones, his heart shaken by visions, his mind unraveling his past. His codename a haunted soldier, his path a psychological maze, his leadership tested by doubt.",
+            "Aerith’s light: Protecting Aerith Gainsborough, Cloud guards her from Shinra, his sword slashing Turks, his heart softened by her hope, his mind drawn to her destiny. His codename a protector’s vow, his path a sacred mission, his leadership inspired by her spirit.",
+            "Shinra’s crimes: Uncovering Shinra’s Mako experiments, Cloud battles their machines, his Materia unleashing fire, his heart set on justice, his mind exposing corporate greed. His codename a rebel’s cry, his path a corporate war, his leadership defying Shinra.",
+            "Meteor’s threat: Facing Sephiroth’s plan to summon Meteor, Cloud wields the Buster Sword, his heart resolute against apocalypse, his mind seeking the Lifestream’s power. His codename a hero’s chant, his path a cosmic fight, his leadership rallying AVALANCHE.",
+            "Nibelheim’s truth: Learning his manipulated memories, Cloud confronts his false SOLDIER identity, his heart reclaiming his truth, his mind piecing together his past. His codename a survivor’s vow, his path a journey of self, his leadership reborn in clarity.",
+            "The planet’s savior: Cloud’s stand cements his legend, his heart a fire of resolve, his codename echoing in Midgar’s ruins. The era ends with Sephiroth’s defeat, his path a fight for the planet, his leadership a beacon in despair."
+          ]
+        }
+      },
+      {
+        "id": 2,
+        "era": "Final Fantasy VII: Advent Children",
+        "title": "The Geostigma Crisis",
+        "Icon": "Fusion Swords",
+        "color": "from-blue-600 to-silver-600",
+        "bgPattern": "bg-gradient-to-br from-blue-800 via-silver-700 to-black",
+        "content": {
+          "summary": "In *Final Fantasy VII: Advent Children* (2005), a CGI film, Cloud, haunted by guilt and Geostigma, faces Sephiroth’s remnants—Kadaj, Loz, and Yazoo—who seek to revive him. Rejoining AVALANCHE, he fights to protect Edge City. This era explores his emotional turmoil, his mastery of the Fusion Swords, and his leadership in overcoming despair.",
+          "details": [
+            "Geostigma’s burden: Afflicted by Geostigma, Cloud battles its pain, his Fusion Swords slicing enemies, his heart heavy with guilt, his mind clouded by loss. His codename a broken soldier, his path a city of ruin, his leadership faltering in sorrow.",
+            "Tifa’s support: Reuniting with Tifa, Cloud finds strength, his swords clashing with remnants, his heart lifted by her faith, his mind refocusing on duty. His codename a friend’s trust, his path a shared fight, his leadership reborn in bonds.",
+            "Kadaj’s threat: Facing Kadaj’s gang, Cloud battles their Jenova cells, his Materia unleashing lightning, his heart resolute against Sephiroth’s echo, his mind countering their plans. His codename a warrior’s cry, his path a remnant war, his leadership defying revival.",
+            "Aerith’s spirit: Guided by Aerith’s Lifestream presence, Cloud fights for redemption, his heart warmed by her light, his mind drawing on her hope. His codename a protector’s vow, his path a spiritual fight, his leadership inspired by her memory.",
+            "Sephiroth’s return: Confronting a reborn Sephiroth, Cloud wields the Fusion Swords, his heart fierce against his nemesis, his mind targeting his core. His codename a hero’s chant, his path a climactic duel, his leadership outsmarting the one-winged angel.",
+            "Edge City’s defense: Protecting citizens from Bahamut SIN, Cloud leads AVALANCHE, his swords cleaving summons, his heart steady in chaos, his mind coordinating strikes. His codename a guardian’s cry, his path a city siege, his leadership saving lives.",
+            "Geostigma’s cure: Aided by Aerith’s healing rain, Cloud overcomes Geostigma, his heart relieved at recovery, his mind embracing hope. His codename a survivor’s vow, his path a redemptive fight, his leadership restoring peace.",
+            "The redeemed hero: Cloud’s victory cements his legend, his heart a fire of resolve, his codename echoing in Edge’s skies. The era ends with Sephiroth’s defeat, his path a fight for redemption, his leadership a beacon in healing."
+          ]
+        }
+      },
+      {
+        "id": 3,
+        "era": "Final Fantasy VII: Dirge of Cerberus",
+        "title": "The Deepground Conflict",
+        "Icon": "Mako Crystal",
+        "color": "from-blue-600 to-purple-600",
+        "bgPattern": "bg-gradient-to-br from-blue-800 via-purple-700 to-black",
+        "content": {
+          "summary": "In *Dirge of Cerberus: Final Fantasy VII* (2006), Cloud supports Vincent Valentine against Shinra’s Deepground, a secret SOLDIER faction unleashing Omega Weapon. Wielding his Fusion Swords, he aids in stopping a planetary threat. This era explores his supporting role, his combat prowess, and his leadership in a shadow war.",
+          "details": [
+            "Deepground’s rise: Joining Vincent against Deepground, Cloud battles rogue SOLDIERs, his Fusion Swords slicing through enemies, his heart steady in chaos, his mind assessing the threat. His codename a soldier’s cry, his path an underground war, his leadership aiding allies.",
+            "Vincent’s ally: Supporting Vincent, Cloud fights alongside him, his swords complementing Cerberus’ gunfire, his heart loyal to his friend, his mind coordinating strikes. His codename a comrade’s trust, his path a shared fight, his leadership forged in teamwork.",
+            "Omega’s threat: Facing Deepground’s Omega Weapon, Cloud unleashes Materia blasts, his heart resolute against apocalypse, his mind targeting its core. His codename a warrior’s vow, his path a cosmic fight, his leadership defying destruction.",
+            "Shinra’s remnants: Uncovering Deepground’s ties to Shinra, Cloud exposes their experiments, his heart set on justice, his mind linking their crimes. His codename a rebel’s cry, his path a corporate war, his leadership dismantling secrets.",
+            "AVALANCHE’s unity: Leading AVALANCHE to support Vincent, Cloud coordinates attacks, his swords cleaving machines, his heart strong in their cause, his mind planning victory. His codename a unifier’s chant, his path a team effort, his leadership rallying heroes.",
+            "Chaos’ containment: Helping Vincent control Chaos, Cloud fights to stabilize the planet, his heart steady in crisis, his mind aiding Vincent’s struggle. His codename a guardian’s vow, his path a spiritual fight, his leadership preserving balance.",
+            "Midgar’s defense: Protecting survivors from Deepground’s assault, Cloud holds the line, his swords slashing enemies, his heart fierce in defense, his mind planning evacuation. His codename a protector’s cry, his path a city siege, his leadership saving lives.",
+            "The shadow warrior: Cloud’s support cements his legend, his heart a fire of resolve, his codename echoing in Deepground’s ruins. The era ends with Omega’s defeat, his path a fight for the planet, his leadership a beacon in shadows."
+          ]
+        }
+      },
+      {
+        "id": 4,
+        "era": "Final Fantasy VII Remake: The Reimagined Fate",
+        "title": "The Defiance of Destiny",
+        "Icon": "Fate Whisper",
+        "color": "from-blue-600 to-red-600",
+        "bgPattern": "bg-gradient-to-br from-blue-800 via-red-700 to-black",
+        "content": {
+          "summary": "In *Final Fantasy VII Remake* (2020) and *Rebirth* (2024), Cloud leads AVALANCHE in a reimagined Midgar, battling Shinra and the Whispers of Fate, which enforce the original timeline. Facing Sephiroth’s manipulations, he seeks to defy destiny. This era explores his evolving identity, his enhanced swordsmanship, and his leadership in altering fate.",
+          "details": [
+            "Midgar’s rebellion: Leading AVALANCHE against Shinra, Cloud storms reactors, his Buster Sword cleaving robots, his heart driven by defiance, his mind questioning his past. His codename ‘Ex-SOLDIER’ a mark of resolve, his path a steel city, his leadership uniting rebels.",
+            "Tifa’s trust: Fighting with Tifa, Cloud strengthens their bond, his sword syncing with her kicks, his heart warmed by her faith, his mind stirred by Nibelheim flashes. His codename a friend’s vow, his path a shared fight, his leadership forged in loyalty.",
+            "Aerith’s destiny: Protecting Aerith from Whispers, Cloud battles fate’s enforcers, his Materia unleashing ice, his heart drawn to her mystery, his mind defying cosmic rules. His codename a protector’s chant, his path a fated mission, his leadership inspired by her light.",
+            "Sephiroth’s influence: Facing Sephiroth’s visions, Cloud confronts his nemesis, his sword clashing with Masamune, his heart shaken by manipulation, his mind seeking truth. His codename a haunted warrior, his path a psychological duel, his leadership resisting control.",
+            "Whispers’ defiance: Battling the Whispers, Cloud breaks fate’s chains, his heart resolute against destiny, his mind forging a new path. His codename a rebel’s cry, his path a cosmic rebellion, his leadership altering timelines.",
+            "Shinra’s fall: Storming Shinra HQ, Cloud exposes their Mako crimes, his sword slashing executives, his heart set on justice, his mind uncovering Jenova’s secrets. His codename a revolutionary’s vow, his path a corporate siege, his leadership dismantling power.",
+            "Party’s unity: Leading Barret, Tifa, and Aerith, Cloud coordinates AVALANCHE, his heart strong in their cause, his mind strategizing escapes. His codename a unifier’s chant, his path a team fight, his leadership rallying heroes.",
+            "The fate-breaker: Cloud’s defiance cements his legend, his heart a fire of resolve, his codename echoing in Midgar’s skies. The era ends with a new timeline, his path a fight for freedom, his leadership a beacon in destiny’s shadow."
+          ]
+        }
+      },
+      {
+        "id": 5,
+        "era": "The Combat Arsenal",
+        "title": "The Blade of Resolve",
+        "Icon": "Materia Orb",
+        "color": "from-blue-600 to-silver-600",
+        "bgPattern": "bg-gradient-to-br from-blue-800 via-silver-700 to-black",
+        "content": {
+          "summary": "Across the *Final Fantasy VII* series, Cloud’s combat evolves from raw swordsmanship to mastery of the Buster Sword, Fusion Swords, and Materia magic. This era explores his versatile arsenal, his adaptability to threats, and his leadership as a combat master.",
+          "details": [
+            "Buster Sword: Wielding the iconic Buster Sword, Cloud cleaves enemies, his heart steady in power, his mind timing heavy strikes. His codename a soldier’s cry, his path a blade’s gauntlet, his leadership crushing foes.",
+            "Fusion Swords: In *Advent Children*, Cloud’s six-piece Fusion Swords slice remnants, his heart agile in combat, his mind assembling precise attacks. His codename a swordsman’s vow, his path a multi-blade dance, his leadership overwhelming enemies.",
+            "Materia magic: Mastering Fire, Ice, and Lightning Materia, Cloud unleashes spells, his heart resolute in magic, his mind targeting weaknesses. His codename a mage’s chant, his path a mystical fight, his leadership blending sword and sorcery.",
+            "Limit Breaks: Executing Omnislash, Cloud devastates foes, his heart fierce in climax, his mind chaining combos. His codename a warrior’s roar, his path a finishing strike, his leadership ending battles.",
+            "Gunblade support: In *Remake*, Cloud adapts to ranged enemies, his sword countering Shinra tech, his heart calm under fire, his mind exploiting gaps. His codename a tactician’s vow, his path a versatile fight, his leadership outsmarting machines.",
+            "Team synergy: Coordinating with AVALANCHE, Cloud syncs his sword with Barret’s gun, his heart united in their cause, his mind strategizing combos. His codename a unifier’s cry, his path a team assault, his leadership rallying allies.",
+            "Sephiroth’s duel: Facing Sephiroth, Cloud’s blade meets Masamune, his heart resolute in rivalry, his mind reading his moves. His codename a rival’s chant, his path a climactic duel, his leadership defying his nemesis.",
+            "The combat master: Cloud’s arsenal cements his legend, his heart a fire of resolve, his codename echoing in battlefields. The era ends with his mastery, his path a fight against all, his leadership immortal in combat."
+          ]
+        }
+      },
+      {
+        "id": 6,
+        "era": "The Emotional Journey",
+        "title": "The Heart of a Hero",
+        "Icon": "Broken Locket",
+        "color": "from-blue-600 to-red-600",
+        "bgPattern": "bg-gradient-to-br from-blue-800 via-red-700 to-black",
+        "content": {
+          "summary": "Across the *Final Fantasy VII* series, Cloud’s emotional struggles define his heroism, from his fractured identity in the original game to his guilt in *Advent Children* and his defiance in *Remake*. This era explores his resilience, his bonds with allies, and his leadership as a beacon of hope.",
+          "details": [
+            "Identity crisis: In *Final Fantasy VII*, Cloud grapples with false memories, his heart torn by Sephiroth’s lies, his mind seeking his true self. His codename a lost soldier, his path a psychological maze, his leadership reborn in truth.",
+            "Aerith’s loss: Mourning Aerith’s death, Cloud carries her memory, his heart heavy with guilt, his mind vowing to honor her. His codename a protector’s cry, his path a mournful fight, his leadership inspired by her light.",
+            "Tifa’s anchor: Relying on Tifa’s support, Cloud finds strength, his heart lifted by her loyalty, his mind grounded by her presence. His codename a friend’s vow, his path a shared fight, his leadership forged in trust.",
+            "Geostigma’s despair: In *Advent Children*, Cloud battles guilt and illness, his heart weighed by failure, his mind seeking redemption. His codename a broken hero, his path a redemptive fight, his leadership reborn in hope.",
+            "Sephiroth’s shadow: Facing Sephiroth’s manipulations, Cloud resists his control, his heart resolute against fear, his mind breaking free. His codename a rival’s chant, his path a psychological duel, his leadership defying domination.",
+            "AVALANCHE’s bond: Uniting with Barret and Red XIII, Cloud strengthens their cause, his heart warmed by their trust, his mind coordinating their fight. His codename a unifier’s cry, his path a team effort, his leadership rallying heroes.",
+            "Defying fate: In *Remake*, Cloud challenges the Whispers, his heart bold against destiny, his mind forging a new path. His codename a rebel’s vow, his path a cosmic rebellion, his leadership altering history.",
+            "The resilient hero: Cloud’s emotional journey cements his legend, his heart a fire of resolve, his codename echoing in survival tales. The era ends with his enduring hope, his path a fight against despair, his leadership immortal in courage."
+          ]
+        }
+      },
+      {
+        "id": 7,
+        "era": "The Anti-Shinra Crusade",
+        "title": "The War on Mako",
+        "Icon": "Mako Reactor",
+        "color": "from-blue-600 to-green-600",
+        "bgPattern": "bg-gradient-to-br from-blue-800 via-green-700 to-black",
+        "content": {
+          "summary": "Across *Final Fantasy VII*, *Advent Children*, *Dirge of Cerberus*, and *Remake*, Cloud battles Shinra’s corporate tyranny and Sephiroth’s apocalyptic plans. This era explores his relentless fight against Mako exploitation, his alliances with AVALANCHE, and his leadership in saving the planet.",
+          "details": [
+            "Shinra’s reactors: In *Final Fantasy VII*, Cloud bombs Mako reactors, his Buster Sword cleaving guards, his heart set on rebellion, his mind exposing Shinra’s greed. His codename a rebel’s cry, his path a corporate war, his leadership defying tyranny.",
+            "Sephiroth’s Meteor: Stopping Sephiroth’s Meteor, Cloud wields the Lifestream’s power, his heart resolute against apocalypse, his mind countering his plans. His codename a hero’s chant, his path a cosmic fight, his leadership saving the planet.",
+            "Deepground’s shadow: In *Dirge of Cerberus*, Cloud fights Shinra’s Deepground, his swords slashing SOLDIERs, his heart steady in chaos, his mind aiding Vincent. His codename a warrior’s vow, his path an underground war, his leadership dismantling secrets.",
+            "Remake’s rebellion: In *Remake*, Cloud storms Shinra HQ, his sword cutting through robots, his heart fierce against oppression, his mind uncovering Jenova’s truth. His codename a revolutionary’s cry, his path a corporate siege, his leadership altering fate.",
+            "AVALANCHE’s cause: Leading Barret and Tifa, Cloud unites AVALANCHE, his heart strong in their mission, his mind strategizing strikes. His codename a unifier’s chant, his path a team fight, his leadership rallying rebels.",
+            "Jenova’s legacy: Uncovering Jenova’s role, Cloud battles Sephiroth’s clones, his heart resolute against alien influence, his mind tracing Shinra’s experiments. His codename a survivor’s vow, his path a cosmic war, his leadership defying corruption.",
+            "Whispers’ defiance: In *Remake*, Cloud breaks fate’s chains, his heart bold against Shinra’s destiny, his mind forging a new path. His codename a fate-breaker’s cry, his path a rebellion against time, his leadership saving history.",
+            "The planet’s warrior: Cloud’s crusade cements his legend, his heart a fire of resolve, his codename echoing in Mako’s ruins. The era ends with his fight for the planet, his path a war on tyranny, his leadership immortal in survival."
+          ]
+        }
+      },
+      {
+        "id": 8,
+        "era": "The Alliances of Cloud",
+        "title": "The Bonds of Rebellion",
+        "Icon": "AVALANCHE Symbol",
+        "color": "from-blue-600 to-silver-600",
+        "bgPattern": "bg-gradient-to-br from-blue-800 via-silver-700 to-black",
+        "content": {
+          "summary": "Across the *Final Fantasy VII* series, Cloud’s alliances with Tifa, Aerith, Barret, and others define his journey, from Midgar to the Northern Crater. This era explores his partnerships, his trust in allies amidst Shinra’s oppression, and his leadership in uniting AVALANCHE.",
+          "details": [
+            "Tifa’s loyalty: In *Final Fantasy VII* and *Remake*, Cloud fights with Tifa, his sword syncing with her fists, his heart warmed by her trust, his mind grounded by her presence. His codename a friend’s vow, his path a shared fight, his leadership forged in loyalty.",
+            "Aerith’s hope: Protecting Aerith, Cloud guards her from Shinra, his sword slashing Turks, his heart softened by her light, his mind drawn to her destiny. His codename a protector’s chant, his path a sacred mission, his leadership inspired by her spirit.",
+            "Barret’s fire: Teaming with Barret, Cloud supports AVALANCHE’s cause, his sword complementing his gun, his heart aligned with his passion, his mind coordinating strikes. His codename a comrade’s trust, his path a rebel fight, his leadership uniting warriors.",
+            "Vincent’s shadow: In *Dirge of Cerberus*, Cloud aids Vincent, his swords slashing Deepground, his heart loyal to his ally, his mind supporting his fight. His codename a brother’s vow, his path a shared war, his leadership rallying support.",
+            "Red XIII’s wisdom: Fighting alongside Red XIII, Cloud values his insight, his heart strengthened by his resolve, his mind learning from his knowledge. His codename a unifier’s cry, his path a team effort, his leadership forging bonds.",
+            "Cid’s grit: In *Final Fantasy VII*, Cloud joins Cid Highwind, his sword aiding his spear, his heart bold in their cause, his mind planning aerial strikes. His codename a partner’s chant, his path a shared fight, his leadership uniting rebels.",
+            "Yuffie’s spark: In *Remake Intergrade*, Cloud fights with Yuffie, his sword syncing with her shuriken, his heart steady in her energy, his mind coordinating her agility. His codename a mentor’s vow, his path a team mission, his leadership guiding youth.",
+            "The rebel’s bonds: Cloud’s alliances cement his legend, his heart a fire of resolve, his codename echoing in teamwork. The era ends with his united allies, his path a shared fight, his leadership immortal in bonds forged through rebellion."
+          ]
+        }
+      },
+      {
+        "id": 9,
+        "era": "The Cultural Impact",
+        "title": "The Icon of Final Fantasy",
+        "Icon": "Trophy",
+        "color": "from-blue-600 to-gold-600",
+        "bgPattern": "bg-gradient-to-br from-blue-800 via-gold-700 to-black",
+        "content": {
+          "summary": "Cloud’s status as a *Final Fantasy VII* icon makes him a gaming legend, appearing in games, films, and crossovers. His spiky hair and Buster Sword inspire fans worldwide. This era explores his cultural influence, his recognition as a reluctant hero, and his leadership in gaming culture.",
+          "details": [
+            "Gaming icon: As a *Final Fantasy VII* staple, Cloud’s Buster Sword defines RPGs, his heart inspiring players, his mind shaping gameplay. His codename a gamer’s cry, his path a digital legacy, his leadership uniting fans.",
+            "Film presence: In *Advent Children*, Cloud’s cinematic battles captivate, his Fusion Swords slicing remnants, his heart steady on screen, his mind guiding allies. His codename a cinematic hero, his path a filmed fight, his leadership inspiring viewers.",
+            "Crossover star: In *Kingdom Hearts* and *Super Smash Bros.*, Cloud battles new foes, his sword clashing in new worlds, his heart resolute in chaos, his mind adapting to challenges. His codename a crossover legend, his path a shared fight, his leadership rallying players.",
+            "Fan devotion: Fans cosplay Cloud’s SOLDIER uniform, his heart humble in their love, his mind shaping their passion. His codename a community’s chant, his path a shared fandom, his leadership uniting conventions.",
+            "Merchandise legend: Cloud’s likeness adorns figures and apparel, his heart a symbol of heroism, his mind inspiring designs. His codename a brand’s cry, his path a cultural legacy, his leadership rallying collectors.",
+            "Modding legacy: In modding communities, Cloud’s skins dominate, his heart a fan’s creation, his mind shaping custom battles. His codename a modder’s vow, his path a virtual legacy, his leadership inspiring creativity.",
+            "Remake’s revival: In *Remake*, Cloud’s reimagined journey captivates new fans, his sword defining modern RPGs, his heart resolute in defiance, his mind breaking fate. His codename a rebel’s chant, his path a reborn legacy, his leadership inspiring generations.",
+            "The cultural hero: Cloud’s influence cements his legend, his heart a fire of resolve, his codename echoing in gaming culture. The era ends with his global impact, his path a legacy of heroism, his leadership immortal in *Final Fantasy*’s lore."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "_id": "68a639f58383ccaa602cc37d",
+    "name": "Marcus Fenix",
+    "title": "Marcus Fenix: The Gear’s Codex",
+    "meta": {
+      "note": "A comprehensive chronicle of Marcus Fenix’s journey across the *Gears of War* series, from his role as a disgraced Gear in *Gears of War* (2006) to his leadership in *Gears of War 4* and *Gears 5*. This codex explores his relentless fight against the Locust, Lambent, and Swarm, his loyalty to his squad, and his unyielding resolve to protect humanity on Sera. Each era details his combat prowess, emotional struggles, and leadership as a battle-hardened soldier.",
+      "format": "Array of era objects with id, era, title, Icon (string), color, bgPattern, content { summary, details[] }"
+    },
+    "chapters": [
+      {
+        "id": 1,
+        "era": "Gears of War: The Locust Emergence",
+        "title": "The Prisoner’s Redemption",
+        "Icon": "Lancer Rifle",
+        "color": "from-red-600 to-grey-600",
+        "bgPattern": "bg-gradient-to-br from-red-800 via-grey-700 to-black",
+        "content": {
+          "summary": "In *Gears of War* (2006), Marcus Fenix, a disgraced COG soldier, is released from prison to lead Delta Squad against the Locust Horde after Emergence Day. Wielding the Lancer, he battles to deploy the Lightmass Bomb. This era explores his redemption, his brutal combat skills, and his leadership under impossible odds.",
+          "details": [
+            "Prison breakout: Released from Jacinto’s Slab, Marcus fights Locust, his Lancer’s chainsaw bayonet tearing through grubs, his heart hardened by betrayal, his mind focused on duty. His codename ‘Gear’ a mark of redemption, his path a war-torn prison, his leadership forged in crisis.",
+            "Delta Squad’s bond: Leading Dom Santiago and Delta, Marcus battles Drones, his heart loyal to his brothers, his mind coordinating their strikes. His codename a squad leader’s vow, his path a shared fight, his leadership uniting soldiers.",
+            "Locust onslaught: Facing Wretches and Berserkers, Marcus unloads Hammerburst rounds, his heart steady in chaos, his mind reading enemy tactics. His codename a warrior’s cry, his path an underground gauntlet, his leadership outsmarting the Horde.",
+            "Lightmass mission: Deploying the Lightmass Bomb, Marcus navigates Kryll-infested ruins, his heart resolute against darkness, his mind plotting the bomb’s path. His codename a soldier’s chant, his path a desperate strike, his leadership saving Sera.",
+            "Dom’s trust: Fighting alongside Dom, Marcus protects his best friend, his Lancer covering his flank, his heart fierce in loyalty, his mind syncing their moves. His codename a brother’s vow, his path a personal fight, his leadership forged in trust.",
+            "General RAAM: Confronting RAAM, Marcus battles the Locust general, his grenades blasting Kryll, his heart defiant against tyranny, his mind targeting his weaknesses. His codename a rebel’s cry, his path a brutal duel, his leadership slaying the beast.",
+            "COG’s hope: Rallying Delta to destroy Locust tunnels, Marcus holds the line, his heart set on victory, his mind planning survival. His codename a hero’s chant, his path a crumbling battlefield, his leadership inspiring humanity.",
+            "The redeemed Gear: Marcus’s stand cements his legend, his heart a fire of resolve, his codename echoing in Sera’s ruins. The era ends with the bomb’s detonation, his path a fight for redemption, his leadership a beacon in war."
+          ]
+        }
+      },
+      {
+        "id": 2,
+        "era": "Gears of War 2: The Hollow War",
+        "title": "The Depths of Sera",
+        "Icon": "Hammer of Dawn",
+        "color": "from-red-600 to-blue-600",
+        "bgPattern": "bg-gradient-to-br from-red-800 via-blue-700 to-black",
+        "content": {
+          "summary": "In *Gears of War 2* (2008), Marcus leads Delta Squad into the Locust Hollow to stop their invasion after Jacinto’s fall becomes imminent. Facing new threats like the Riftworm, he seeks to sink the city to flood the enemy. This era explores his relentless leadership, his bond with Dom, and his fight to save humanity.",
+          "details": [
+            "Hollow assault: Storming the Locust Hollow, Marcus battles Corpsers, his Lancer shredding grubs, his heart steady in darkness, his mind mapping tunnels. His codename a Gear’s cry, his path an underground war, his leadership guiding Delta.",
+            "Dom’s grief: Supporting Dom’s search for Maria, Marcus fights alongside him, his heart heavy with his friend’s pain, his mind keeping him focused. His codename a brother’s vow, his path a personal fight, his leadership forged in loyalty.",
+            "Riftworm’s belly: Trapped inside the Riftworm, Marcus cuts through its organs, his chainsaw bayonet slicing flesh, his heart resolute in survival, his mind plotting escape. His codename a survivor’s chant, his path a monstrous gauntlet, his leadership defying death.",
+            "Jacinto’s defense: Planning to sink Jacinto, Marcus targets Locust strongholds, his Hammer of Dawn burning enemies, his heart set on sacrifice, his mind strategizing flooding. His codename a tactician’s cry, his path a city’s fall, his leadership saving survivors.",
+            "Queen Myrrah: Facing the Locust Queen, Marcus defies her rule, his grenades blasting her guards, his heart fierce against tyranny, his mind exposing her plans. His codename a rebel’s vow, his path a royal showdown, his leadership challenging the Horde.",
+            "Baird’s wit: Teaming with Baird, Marcus balances his sarcasm with firepower, his heart steady in their bond, his mind syncing their tactics. His codename a leader’s chant, his path a shared fight, his leadership uniting Delta.",
+            "COG’s last stand: Leading the COG to flood the Hollow, Marcus saves humanity, his heart scarred by losses, his mind planning evacuation. His codename a hero’s cry, his path a desperate fight, his leadership preserving hope.",
+            "The hollow warrior: Marcus’s mission cements his legend, his heart a fire of resolve, his codename echoing in flooded tunnels. The era ends with Jacinto’s fall, his path a fight for survival, his leadership a beacon in despair."
+          ]
+        }
+      },
+      {
+        "id": 3,
+        "era": "Gears of War 3: The Lambent Plague",
+        "title": "The Final Stand",
+        "Icon": "Silverback Mech",
+        "color": "from-red-600 to-yellow-600",
+        "bgPattern": "bg-gradient-to-br from-red-800 via-yellow-700 to-black",
+        "content": {
+          "summary": "In *Gears of War 3* (2011), Marcus leads Delta against the Locust and Lambent as Sera faces collapse. Seeking his father Adam Fenix’s weapon to end the war, he battles Queen Myrrah and the infected. This era explores his sacrifice, his loyalty to Delta, and his leadership in humanity’s darkest hour.",
+          "details": [
+            "Lambent outbreak: Facing mutated Locust, Marcus battles Lambent, his Lancer mowing down infected, his heart steady in chaos, his mind reading their patterns. His codename a Gear’s cry, his path a plagued battlefield, his leadership guiding survivors.",
+            "Adam’s legacy: Searching for his father, Marcus uncovers his anti-Lambent weapon, his heart torn by family, his mind decoding his research. His codename a son’s vow, his path a personal quest, his leadership driven by duty.",
+            "Myrrah’s army: Confronting the Locust Queen, Marcus fights her Tempest, his Hammer of Dawn burning her forces, his heart resolute against tyranny, his mind targeting her mount. His codename a rebel’s chant, his path a royal duel, his leadership ending her reign.",
+            "Dom’s sacrifice: Losing Dom to save Delta, Marcus mourns his brother, his heart broken by grief, his mind pushing forward. His codename a mourner’s cry, his path a painful fight, his leadership honoring his loss.",
+            "Anya’s strength: Fighting with Anya, Marcus protects his partner, his Lancer covering her sniper, his heart warmed by her resolve, his mind syncing their strikes. His codename a lover’s vow, his path a shared fight, his leadership forged in trust.",
+            "Weapon deployment: Activating Adam’s Imulsion weapon, Marcus destroys Locust and Lambent, his heart heavy with its cost, his mind ensuring its success. His codename a hero’s chant, his path a final strike, his leadership saving Sera.",
+            "COG’s remnants: Leading survivors to safety, Marcus rebuilds hope, his heart scarred but resolute, his mind planning recovery. His codename a survivor’s cry, his path a ruined world, his leadership a beacon in ashes.",
+            "The war’s end: Marcus’s victory cements his legend, his heart a fire of resolve, his codename echoing in Sera’s ruins. The era ends with the war’s end, his path a fight for peace, his leadership immortal in sacrifice."
+          ]
+        }
+      },
+      {
+        "id": 4,
+        "era": "Gears of War 4: The Swarm Rises",
+        "title": "The New Threat",
+        "Icon": "COG Tag",
+        "color": "from-red-600 to-blue-600",
+        "bgPattern": "bg-gradient-to-br from-red-800 via-blue-700 to-black",
+        "content": {
+          "summary": "In *Gears of War 4* (2016), Marcus, now a grizzled veteran, aids his son JD Fenix against the Swarm, a new enemy born from Locust remnants. Living as an Outsider, he fights to protect his family and Sera. This era explores his mentorship, his enduring combat skills, and his leadership as a father figure.",
+          "details": [
+            "Outsider life: Living outside COG, Marcus fights Swarm snatchers, his Lancer tearing through pods, his heart protective of his son, his mind wary of new threats. His codename a veteran’s cry, his path a rural war, his leadership guiding JD.",
+            "JD’s rebellion: Mentoring JD, Marcus battles alongside him, his heart proud but cautious, his mind teaching survival. His codename a father’s vow, his path a family fight, his leadership forged in legacy.",
+            "Swarm’s hive: Infiltrating Swarm nests, Marcus faces evolved enemies, his Gnasher blasting husks, his heart steady in darkness, his mind mapping their lairs. His codename a warrior’s chant, his path an organic gauntlet, his leadership outsmarting the hive.",
+            "Kait’s bond: Supporting Kait Diaz, Marcus aids her quest, his Lancer covering her flank, his heart warmed by her grit, his mind syncing their strikes. His codename a mentor’s trust, his path a shared fight, his leadership inspiring youth.",
+            "COG’s return: Facing COG’s robotic DeeBees, Marcus resists their control, his grenades smashing drones, his heart defiant against tyranny, his mind exposing their flaws. His codename a rebel’s cry, his path a tech war, his leadership defying machines.",
+            "Family’s risk: Protecting JD and Kait, Marcus fights to save them, his heart fierce for his kin, his mind planning their escape. His codename a guardian’s vow, his path a desperate stand, his leadership preserving his legacy.",
+            "Swarm’s origin: Uncovering the Swarm’s Locust ties, Marcus links them to Imulsion, his heart set on truth, his mind tracing their evolution. His codename an investigator’s chant, his path a scientific fight, his leadership exposing secrets.",
+            "The veteran Gear: Marcus’s stand cements his legend, his heart a fire of resolve, his codename echoing in Swarm hives. The era ends with his son’s rise, his path a fight for family, his leadership a beacon in a new war."
+          ]
+        }
+      },
+      {
+        "id": 5,
+        "era": "Gears 5: The Swarm’s Legacy",
+        "title": "The Legacy of Sera",
+        "Icon": "Locust Emblem",
+        "color": "from-red-600 to-purple-600",
+        "bgPattern": "bg-gradient-to-br from-red-800 via-purple-700 to-black",
+        "content": {
+          "summary": "In *Gears 5* (2019), Marcus supports Kait Diaz and JD as they uncover Kait’s ties to the Swarm and the Locust Queen. Battling in deserts and frozen wastelands, he fights to stop a new invasion. This era explores his veteran wisdom, his loyalty to Delta, and his leadership in a fractured world.",
+          "details": [
+            "Kait’s quest: Guiding Kait to uncover her Locust origins, Marcus battles Swarm, his Lancer shredding enemies, his heart protective of her, his mind decoding her visions. His codename a mentor’s vow, his path a shared fight, his leadership inspiring truth.",
+            "JD’s redemption: Supporting JD after his mistakes, Marcus fights alongside him, his heart forgiving but firm, his mind teaching resilience. His codename a father’s cry, his path a family war, his leadership rebuilding trust.",
+            "Swarm’s invasion: Facing Swarm hordes, Marcus uses the Hammer of Dawn, his heart steady in chaos, his mind targeting their leaders. His codename a warrior’s chant, his path a global battlefield, his leadership crushing the enemy.",
+            "New Ephyra: Defending the COG capital, Marcus holds the line, his Gnasher blasting Wardens, his heart fierce in defense, his mind planning counterattacks. His codename a guardian’s cry, his path a city siege, his leadership saving survivors.",
+            "Queen Reyna: Confronting Kait’s mother as a Swarm leader, Marcus aids her fight, his heart heavy with her fate, his mind strategizing her defeat. His codename a soldier’s vow, his path a tragic duel, his leadership honoring her choice.",
+            "Desert and ice: Fighting in Vasgar’s deserts and Mount Kadar’s snow, Marcus adapts to harsh terrain, his Lancer cutting through foes, his heart resolute in extremes, his mind mapping survival. His codename a survivor’s chant, his path a brutal trek, his leadership enduring hardship.",
+            "Delta’s unity: Leading Delta with Baird and Cole, Marcus unites the squad, his heart strong in their bond, his mind coordinating their strikes. His codename a unifier’s cry, his path a team fight, his leadership rallying heroes.",
+            "The legacy’s protector: Marcus’s guidance cements his legend, his heart a fire of resolve, his codename echoing in Sera’s wastelands. The era ends with the Swarm’s retreat, his path a fight for legacy, his leadership immortal in duty."
+          ]
+        }
+      },
+      {
+        "id": 6,
+        "era": "The Combat Arsenal",
+        "title": "The Gear’s Firepower",
+        "Icon": "Chainsaw Bayonet",
+        "color": "from-red-600 to-silver-600",
+        "bgPattern": "bg-gradient-to-br from-red-800 via-silver-700 to-black",
+        "content": {
+          "summary": "Across the *Gears of War* series, Marcus’s combat evolves from the Lancer’s chainsaw to heavy weapons like the Hammer of Dawn. This era explores his versatile arsenal, his adaptability to Locust and Swarm threats, and his leadership as a combat master.",
+          "details": [
+            "Lancer chainsaw: Wielding the Lancer, Marcus slices Locust with its bayonet, his heart steady in gore, his mind timing brutal strikes. His codename a soldier’s cry, his path a bloody gauntlet, his leadership crushing enemies.",
+            "Gnasher shotgun: Mastering the Gnasher, Marcus blasts close-range foes, his heart bold in tight spaces, his mind reading enemy moves. His codename a warrior’s vow, his path a shotgun storm, his leadership overwhelming grubs.",
+            "Hammer of Dawn: Using the satellite weapon, Marcus burns Locust and Swarm, his heart resolute in destruction, his mind targeting key points. His codename a destroyer’s chant, his path a fiery strike, his leadership ending hordes.",
+            "Grenades: Throwing Bolo grenades, Marcus clears Locust tunnels, his heart calm in explosions, his mind timing blasts. His codename a tactician’s cry, his path a fiery assault, his leadership collapsing strongholds.",
+            "Silverback mech: Piloting the Silverback, Marcus mows down enemies, his heart fierce in armor, his mind controlling heavy fire. His codename a mech’s vow, his path a mechanical rampage, his leadership dominating battlefields.",
+            "Retro Lancer: In *Gears 3*, Marcus uses the bayonet-charging Retro Lancer, his heart bold in melee, his mind exploiting gaps. His codename a charger’s chant, his path a close-quarters fight, his leadership piercing foes.",
+            "Execution moves: Performing brutal executions, Marcus crushes Locust skulls, his heart fierce in finality, his mind crafting fear. His codename a finisher’s cry, his path a brutal end, his leadership terrifying enemies.",
+            "The combat master: Marcus’s arsenal cements his legend, his heart a fire of resolve, his codename echoing in battlegrounds. The era ends with his mastery, his path a fight against all, his leadership immortal in war."
+          ]
+        }
+      },
+      {
+        "id": 7,
+        "era": "The Emotional Resilience",
+        "title": "The Heart of a Gear",
+        "Icon": "Broken COG Tag",
+        "color": "from-red-600 to-blue-600",
+        "bgPattern": "bg-gradient-to-br from-red-800 via-blue-700 to-black",
+        "content": {
+          "summary": "Across the *Gears of War* series, Marcus’s emotional strength defines his survival, from his imprisonment to losing Dom and facing his son’s rebellion. This era explores his resilience against loss, his loyalty to Delta, and his leadership as a beacon of duty amidst despair.",
+          "details": [
+            "Prison’s shame: In *Gears of War*, Marcus endures the Slab’s isolation, his heart hardened by betrayal, his mind focused on redemption. His codename a prisoner’s cry, his path a fight for freedom, his leadership reborn in war.",
+            "Dom’s loss: Mourning Dom in *Gears 3*, Marcus carries his brother’s sacrifice, his heart broken by grief, his mind pushing forward. His codename a mourner’s vow, his path a painful fight, his leadership honoring his memory.",
+            "Anya’s love: Finding strength in Anya, Marcus fights for their future, his heart warmed by her resolve, his mind grounded by her presence. His codename a lover’s chant, his path a shared fight, his leadership forged in trust.",
+            "JD’s distance: In *Gears 4*, Marcus grapples with JD’s rebellion, his heart torn by family, his mind seeking to guide him. His codename a father’s cry, his path a family war, his leadership rebuilding bonds.",
+            "Kait’s burden: Supporting Kait in *Gears 5*, Marcus shares her pain, his heart steady in her struggle, his mind offering wisdom. His codename a mentor’s vow, his path a shared fight, his leadership inspiring her truth.",
+            "COG’s betrayal: Facing COG’s corruption, Marcus defies their control, his heart resolute against tyranny, his mind exposing their lies. His codename a rebel’s chant, his path a fight for justice, his leadership rallying outsiders.",
+            "Sera’s hope: Carrying Sera’s survival, Marcus endures endless war, his heart a fire of duty, his mind planning humanity’s future. His codename a survivor’s cry, his path a fight for hope, his leadership a beacon in despair.",
+            "The resilient Gear: Marcus’s strength cements his legend, his heart a fire of resolve, his codename echoing in survival tales. The era ends with his enduring duty, his path a fight against loss, his leadership immortal in sacrifice."
+          ]
+        }
+      },
+      {
+        "id": 8,
+        "era": "The Anti-Locust Crusade",
+        "title": "The War on the Horde",
+        "Icon": "Locust Skull",
+        "color": "from-red-600 to-grey-600",
+        "bgPattern": "bg-gradient-to-br from-red-800 via-grey-700 to-black",
+        "content": {
+          "summary": "Across *Gears of War*, *Gears 2*, *Gears 3*, *Gears 4*, and *Gears 5*, Marcus battles the Locust, Lambent, and Swarm to save Sera. This era explores his relentless fight against monstrous threats, his alliances with Delta, and his leadership in humanity’s survival.",
+          "details": [
+            "Locust’s emergence: In *Gears of War*, Marcus deploys the Lightmass Bomb, his Lancer shredding grubs, his heart set on destruction, his mind plotting their end. His codename a warrior’s cry, his path an underground war, his leadership crushing the Horde.",
+            "Hollow’s fall: In *Gears 2*, Marcus floods the Locust tunnels, his Hammer of Dawn burning enemies, his heart resolute in sacrifice, his mind sinking Jacinto. His codename a tactician’s vow, his path a city’s fall, his leadership saving survivors.",
+            "Lambent’s plague: In *Gears 3*, Marcus stops the Lambent with Adam’s weapon, his heart heavy with its cost, his mind ensuring its success. His codename a hero’s chant, his path a final strike, his leadership ending the infection.",
+            "Swarm’s rise: In *Gears 4*, Marcus battles the Swarm, his Gnasher blasting husks, his heart protective of JD, his mind tracing their Locust ties. His codename a veteran’s cry, his path a new war, his leadership guiding the fight.",
+            "Queen Reyna’s threat: In *Gears 5*, Marcus aids Kait against the Swarm Queen, his Lancer covering her, his heart steady in her struggle, his mind strategizing her defeat. His codename a mentor’s vow, his path a tragic fight, his leadership honoring her choice.",
+            "Delta’s unity: Leading Dom, Baird, and Cole, Marcus unites Delta, his heart strong in their bond, his mind coordinating strikes. His codename a unifier’s chant, his path a team fight, his leadership rallying heroes.",
+            "Sera’s defense: Protecting humanity, Marcus holds the line against hordes, his heart fierce in defense, his mind planning survival. His codename a guardian’s cry, his path a world’s fight, his leadership preserving hope.",
+            "The Horde’s slayer: Marcus’s crusade cements his legend, his heart a fire of resolve, his codename echoing in ruined hives. The era ends with his fight for Sera, his path a war on monsters, his leadership immortal in survival."
+          ]
+        }
+      },
+      {
+        "id": 9,
+        "era": "The Alliances of Marcus",
+        "title": "The Bonds of Delta",
+        "Icon": "Delta Squad Emblem",
+        "color": "from-red-600 to-blue-600",
+        "bgPattern": "bg-gradient-to-br from-red-800 via-blue-700 to-black",
+        "content": {
+          "summary": "Across the *Gears of War* series, Marcus’s alliances with Dom, Anya, Baird, and others define his survival, from E-Day to the Swarm war. This era explores his partnerships, his trust in Delta amidst chaos, and his leadership in uniting his squad.",
+          "details": [
+            "Dom’s brotherhood: In *Gears 1-3*, Marcus fights with Dom, his Lancer covering his flank, his heart loyal to his brother, his mind syncing their strikes. His codename a friend’s vow, his path a shared fight, his leadership forged in loyalty.",
+            "Anya’s strength: In *Gears 3*, Marcus protects Anya, his heart warmed by her resolve, his mind coordinating her sniper fire. His codename a lover’s chant, his path a shared war, his leadership united in love.",
+            "Baird’s wit: Teaming with Baird, Marcus balances his tech with firepower, his heart steady in their bond, his mind leveraging his sarcasm. His codename a leader’s cry, his path a team fight, his leadership rallying Delta.",
+            "Cole’s spirit: Fighting with Cole, Marcus matches his energy, his Lancer syncing with his enthusiasm, his heart lifted by his spirit, his mind coordinating strikes. His codename a brother’s vow, his path a shared battle, his leadership inspiring joy.",
+            "JD’s legacy: In *Gears 4-5*, Marcus guides JD, his heart proud but cautious, his mind teaching survival. His codename a father’s chant, his path a family fight, his leadership rebuilding trust.",
+            "Kait’s resolve: Supporting Kait in *Gears 5*, Marcus aids her quest, his Lancer protecting her, his heart steady in her struggle, his mind offering wisdom. His codename a mentor’s vow, his path a shared mission, his leadership inspiring truth.",
+            "COG’s remnants: Leading Delta and COG survivors, Marcus unites fighters, his heart strong in their cause, his mind planning victory. His codename a unifier’s cry, his path a team effort, his leadership rallying humanity.",
+            "The squad’s leader: Marcus’s bonds cement his legend, his heart a fire of resolve, his codename echoing in Delta’s ranks. The era ends with his united squad, his path a shared fight, his leadership immortal in brotherhood."
+          ]
+        }
+      },
+      {
+        "id": 10,
+        "era": "The Cultural Impact",
+        "title": "The Icon of Gears",
+        "Icon": "Trophy",
+        "color": "from-red-600 to-gold-600",
+        "bgPattern": "bg-gradient-to-br from-red-800 via-gold-700 to-black",
+        "content": {
+          "summary": "Marcus’s status as a *Gears of War* icon makes him a gaming legend, appearing in games, comics, and crossovers. His Lancer and gritty resolve inspire fans worldwide. This era explores his cultural influence, his recognition as a war hero, and his leadership in gaming culture.",
+          "details": [
+            "Gaming icon: As a *Gears of War* staple, Marcus’s Lancer defines third-person shooters, his heart inspiring players, his mind shaping gameplay. His codename a gamer’s cry, his path a digital legacy, his leadership uniting fans.",
+            "Comic legacy: In *Gears of War* comics, Marcus’s battles against Locust resonate, his chainsaw bayonet slicing foes, his heart resolute in chaos, his mind leading Delta. His codename a comic legend, his path a drawn fight, his leadership inspiring inked tales.",
+            "Crossover cameos: In crossovers like *Fortnite*, Marcus battles new foes, his Lancer shredding enemies, his heart steady in new worlds, his mind adapting to challenges. His codename a crossover hero, his path a shared fight, his leadership rallying players.",
+            "Fan devotion: Fans cosplay Marcus’s COG armor, his heart humble in their love, his mind shaping their passion. His codename a community’s chant, his path a shared fandom, his leadership uniting conventions.",
+            "Merchandise star: Marcus’s likeness adorns figures and apparel, his heart a symbol of grit, his mind inspiring designs. His codename a brand’s cry, his path a cultural legacy, his leadership rallying collectors.",
+            "Modding legacy: In modding communities, Marcus’s skins dominate, his heart a fan’s creation, his mind shaping custom battles. His codename a modder’s vow, his path a virtual legacy, his leadership inspiring creativity.",
+            "Film potential: With *Gears* film rumors, Marcus’s story captivates, his Lancer ready for the screen, his heart steady in war, his mind leading Delta. His codename a cinematic hero, his path a filmed fight, his leadership inspiring audiences.",
+            "The cultural Gear: Marcus’s influence cements his legend, his heart a fire of resolve, his codename echoing in gaming culture. The era ends with his global impact, his path a legacy of war, his leadership immortal in *Gears of War*’s lore."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "_id": "68a639f58383ccaa602cc37e",
+    "name": "Nathan Drake",
+    "title": "Nathan Drake: The Treasure Hunter’s Codex",
+    "meta": {
+      "note": "A comprehensive chronicle of Nathan Drake’s journey across the *Uncharted* series, from his debut as a roguish treasure hunter in *Uncharted: Drake’s Fortune* (2007) to his final adventure in *Uncharted 4: A Thief’s End* (2016) and *Uncharted: The Lost Legacy* cameo. This codex explores his relentless pursuit of legendary artifacts, his battles against mercenaries and warlords, and his charismatic leadership. Each era details his wit, combat skills, and emotional growth as a modern-day adventurer.",
+      "format": "Array of era objects with id, era, title, Icon (string), color, bgPattern, content { summary, details[] }"
+    },
+    "chapters": [
+      {
+        "id": 1,
+        "era": "Uncharted: Drake’s Fortune",
+        "title": "The Hunt for El Dorado",
+        "Icon": "Golden Idol",
+        "color": "from-blue-600 to-gold-600",
+        "bgPattern": "bg-gradient-to-br from-blue-800 via-gold-700 to-black",
+        "content": {
+          "summary": "In *Uncharted: Drake’s Fortune* (2007), Nathan Drake, a roguish treasure hunter claiming descent from Sir Francis Drake, searches for the lost city of El Dorado with journalist Elena Fisher and mentor Victor Sullivan. Facing mercenaries and cursed creatures, he uncovers a deadly secret. This era explores his early adventuring, quick wit, and leadership in a race for gold.",
+          "details": [
+            "Island expedition: Landing on a Pacific island, Nate hunts for El Dorado, his pistol firing at mercenaries, his heart driven by glory, his mind decoding Drake’s journal. His codename ‘Drake’ a mark of legacy, his path a jungle gauntlet, his leadership born in adventure.",
+            "Sully’s bond: Teaming with Victor Sullivan, Nate climbs ruins, his heart loyal to his mentor, his mind syncing with his cunning. His codename a partner’s trust, his path a shared quest, his leadership forged in camaraderie.",
+            "Elena’s spark: Working with Elena Fisher, Nate navigates traps, his climbing skills dodging spikes, his heart warmed by her grit, his mind valuing her instincts. His codename a rogue’s charm, his path a joint venture, his leadership inspired by her resolve.",
+            "Navarro’s betrayal: Facing Roman and Navarro’s mercenaries, Nate battles for the idol, his AK-47 mowing down foes, his heart defiant against greed, his mind outsmarting their schemes. His codename a rebel’s cry, his path a double-cross, his leadership toppling traitors.",
+            "Cursed Descendants: Discovering El Dorado’s cursed mutants, Nate fights infected Spaniards, his shotgun blasting horrors, his heart steady in fear, his mind unraveling the curse. His codename a survivor’s vow, his path a monstrous fight, his leadership defying death.",
+            "Drake’s journal: Decoding Sir Francis Drake’s clues, Nate maps the island, his heart set on discovery, his mind solving ancient riddles. His codename an explorer’s chant, his path a treasure trail, his leadership charting the unknown.",
+            "Island escape: Saving Elena from Navarro, Nate destroys the idol, his heart relieved at survival, his mind planning their getaway. His codename a hero’s cry, his path a narrow escape, his leadership ensuring their freedom.",
+            "The rogue’s legend: Nate’s adventure cements his legacy, his heart a fire of resolve, his codename echoing in El Dorado’s ruins. The era ends with his first triumph, his path a quest for glory, his leadership a beacon in peril."
+          ]
+        }
+      },
+      {
+        "id": 2,
+        "era": "Uncharted 2: Among Thieves",
+        "title": "The Quest for Shambhala",
+        "Icon": "Phurba Dagger",
+        "color": "from-blue-600 to-green-600",
+        "bgPattern": "bg-gradient-to-br from-blue-800 via-green-700 to-black",
+        "content": {
+          "summary": "In *Uncharted 2: Among Thieves* (2009), Nate pursues the Cintamani Stone in the mythical Shambhala, betrayed by ally Harry Flynn and hunted by warlord Zoran Lazarević. Teaming with Elena and new ally Chloe Frazer, he navigates global ruins. This era explores his daring heists, emotional conflicts, and leadership in a high-stakes treasure hunt.",
+          "details": [
+            "Museum heist: Breaking into an Istanbul museum, Nate steals the Phurba dagger, his stealth dodging guards, his heart racing with thrill, his mind decoding Marco Polo’s clues. His codename a thief’s cry, his path a shadowed caper, his leadership guiding the break-in.",
+            "Chloe’s alliance: Partnering with Chloe Frazer, Nate climbs Nepal’s ruins, his pistol covering her flank, his heart torn by her charm, his mind syncing their moves. His codename a rogue’s trust, his path a shared quest, his leadership forged in chemistry.",
+            "Elena’s reunion: Reuniting with Elena, Nate fights in war-torn Nepal, his heart warmed by her return, his mind valuing her courage. His codename a lover’s vow, his path a joint fight, his leadership strengthened by her presence.",
+            "Lazarević’s army: Facing Lazarević’s mercenaries, Nate battles tanks, his grenade launcher blasting foes, his heart defiant against tyranny, his mind outsmarting his forces. His codename a rebel’s chant, his path a warzone, his leadership toppling a warlord.",
+            "Shambhala’s guardians: Confronting Shambhala’s immortal protectors, Nate fights resin-fueled warriors, his rifle shredding them, his heart steady in terror, his mind unraveling the stone’s power. His codename a survivor’s cry, his path a mythical gauntlet, his leadership defying gods.",
+            "Train escape: Surviving a derailed train in the Himalayas, Nate climbs wreckage, his heart resolute in survival, his mind navigating cliffs. His codename a daredevil’s vow, his path a perilous escape, his leadership enduring disaster.",
+            "Flynn’s betrayal: Outwitting Harry Flynn’s double-cross, Nate saves Chloe, his heart fierce against betrayal, his mind exposing his greed. His codename a hero’s cry, his path a traitor’s end, his leadership protecting allies.",
+            "The Shambhala hero: Nate’s triumph cements his legend, his heart a fire of resolve, his codename echoing in Himalayan peaks. The era ends with Shambhala’s fall, his path a quest for truth, his leadership a beacon in chaos."
+          ]
+        }
+      },
+      {
+        "id": 3,
+        "era": "Uncharted 3: Drake’s Deception",
+        "title": "The Search for Ubar",
+        "Icon": "Ring Necklace",
+        "color": "from-blue-600 to-sand-600",
+        "bgPattern": "bg-gradient-to-br from-blue-800 via-sand-700 to-black",
+        "content": {
+          "summary": "In *Uncharted 3: Drake’s Deception* (2011), Nate hunts for the lost city of Ubar, the ‘Atlantis of the Sands,’ chasing clues tied to Sir Francis Drake. Facing Katherine Marlowe’s cult and her agent Talbot, he teams with Sully and Elena. This era explores his personal history, parkour mastery, and leadership in a global chase.",
+          "details": [
+            "London underworld: Infiltrating Marlowe’s syndicate, Nate fights thugs, his pistol cracking skulls, his heart driven by Drake’s legacy, his mind decoding ancient maps. His codename a scion’s cry, his path a criminal lair, his leadership guiding the heist.",
+            "Sully’s loyalty: Fighting with Sully, Nate navigates Syrian castles, his heart anchored by his mentor, his mind syncing their tactics. His codename a son’s trust, his path a shared quest, his leadership forged in brotherhood.",
+            "Elena’s support: Reuniting with Elena, Nate battles in Yemen, his heart steadied by her strength, his mind valuing her insight. His codename a lover’s vow, his path a joint fight, his leadership bolstered by her resolve.",
+            "Marlowe’s cult: Facing Marlowe’s occult forces, Nate outwits her traps, his grenades blasting mercenaries, his heart defiant against her schemes, his mind unraveling her secrets. His codename a rebel’s chant, his path a cult’s downfall, his leadership toppling fanatics.",
+            "Ubar’s collapse: Discovering Ubar’s cursed waters, Nate fights Djinn hallucinations, his rifle piercing illusions, his heart steady in madness, his mind solving the city’s riddle. His codename a survivor’s cry, his path a desert gauntlet, his leadership defying the sands.",
+            "Desert survival: Escaping a Rub’ al Khali ship graveyard, Nate endures dehydration, his heart resolute in survival, his mind navigating dunes. His codename a wanderer’s vow, his path a scorching trek, his leadership enduring hardship.",
+            "Talbot’s pursuit: Outmaneuvering Talbot, Nate saves Sully, his heart fierce against assassins, his mind exposing their lies. His codename a hero’s cry, his path a deadly chase, his leadership protecting allies.",
+            "The desert rogue: Nate’s journey cements his legend, his heart a fire of resolve, his codename echoing in Ubar’s ruins. The era ends with the city’s fall, his path a quest for truth, his leadership a beacon in the sands."
+          ]
+        }
+      },
+      {
+        "id": 4,
+        "era": "Uncharted 4: A Thief’s End",
+        "title": "The Pirate’s Legacy",
+        "Icon": "Pirate Coin",
+        "color": "from-blue-600 to-teal-600",
+        "bgPattern": "bg-gradient-to-br from-blue-800 via-teal-700 to-black",
+        "content": {
+          "summary": "In *Uncharted 4: A Thief’s End* (2016), Nate, now retired, is pulled back into adventure by his long-lost brother Sam to find Henry Avery’s pirate treasure in Libertalia. Facing Rafe Adler and Nadine Ross, he teams with Elena and Sully. This era explores his family ties, refined skills, and leadership in his final hunt.",
+          "details": [
+            "Sam’s return: Reuniting with brother Sam, Nate hunts Avery’s treasure, his pistol firing at mercenaries, his heart torn by family, his mind decoding pirate clues. His codename a brother’s cry, his path a familial quest, his leadership driven by loyalty.",
+            "Elena’s strain: Reconciling with Elena, Nate fights in Madagascar, his heart strained by lies, his mind valuing her love. His codename a husband’s vow, his path a shared fight, his leadership rebuilt in trust.",
+            "Sully’s wisdom: Teaming with Sully, Nate navigates Scottish ruins, his climbing dodging traps, his heart anchored by his mentor, his mind syncing their moves. His codename a son’s trust, his path a joint venture, his leadership forged in camaraderie.",
+            "Rafe’s rivalry: Facing Rafe Adler’s mercenaries, Nate battles for Libertalia, his rifle blasting foes, his heart defiant against greed, his mind outsmarting his wealth. His codename a rebel’s chant, his path a pirate war, his leadership toppling a tycoon.",
+            "Libertalia’s fall: Discovering Libertalia’s ruined utopia, Nate fights traps and skeletons, his heart steady in decay, his mind unraveling Avery’s betrayal. His codename a survivor’s cry, his path a pirate gauntlet, his leadership defying history.",
+            "Nadine’s mercenaries: Outwitting Nadine Ross, Nate saves Sam, his grenades clearing Shoreline troops, his heart fierce for his brother, his mind exposing her flaws. His codename a hero’s vow, his path a deadly chase, his leadership protecting family.",
+            "Retirement’s call: Choosing family over treasure, Nate escapes with Elena, his heart relieved at peace, his mind embracing a new life. His codename a retiree’s cry, his path a final escape, his leadership finding balance.",
+            "The final rogue: Nate’s journey cements his legend, his heart a fire of resolve, his codename echoing in Libertalia’s ruins. The era ends with his retirement, his path a quest for family, his leadership a beacon in closure."
+          ]
+        }
+      },
+      {
+        "id": 5,
+        "era": "Uncharted: The Lost Legacy",
+        "title": "The Mentor’s Cameo",
+        "Icon": "Tusk of Ganesh",
+        "color": "from-blue-600 to-orange-600",
+        "bgPattern": "bg-gradient-to-br from-blue-800 via-orange-700 to-black",
+        "content": {
+          "summary": "In *Uncharted: The Lost Legacy* (2017), Nate makes a brief appearance, supporting Chloe Frazer and Nadine Ross in their hunt for the Tusk of Ganesh in India’s Western Ghats. This era explores his advisory role, his veteran wisdom, and his leadership as a retired legend.",
+          "details": [
+            "Chloe’s quest: Advising Chloe, Nate aids her search for the Tusk, his heart supportive of her lead, his mind sharing treasure-hunting wisdom. His codename a mentor’s cry, his path a cameo role, his leadership guiding from afar.",
+            "Nadine’s redemption: Supporting Nadine’s alliance with Chloe, Nate offers insight, his heart steady in their cause, his mind valuing their teamwork. His codename a rogue’s trust, his path a shared mission, his leadership inspiring growth.",
+            "Indian ruins: Reflecting on his past, Nate recalls climbing ancient temples, his heart nostalgic for adventure, his mind mapping their dangers. His codename a veteran’s vow, his path a memory’s echo, his leadership advising exploration.",
+            "Asav’s threat: Warning of warlord Asav, Nate shares intel, his heart cautious of his tyranny, his mind analyzing his forces. His codename a strategist’s cry, his path an advisory fight, his leadership aiding the battle.",
+            "Family’s anchor: Staying with Elena, Nate prioritizes family, his heart content in retirement, his mind guiding from home. His codename a husband’s vow, his path a settled life, his leadership grounded in love.",
+            "Chloe’s growth: Encouraging Chloe’s leadership, Nate sees her rise, his heart proud of her grit, his mind trusting her skills. His codename a mentor’s chant, his path a supportive role, his leadership fostering heroes.",
+            "Retired hero: Offering wisdom, Nate ensures the Tusk’s safety, his heart relieved at their success, his mind at peace. His codename a retiree’s cry, his path a mentor’s legacy, his leadership inspiring from the sidelines.",
+            "The mentor’s legend: Nate’s cameo cements his legacy, his heart a fire of resolve, his codename echoing in India’s ruins. The era ends with his guidance, his path a retired life, his leadership immortal in mentorship."
+          ]
+        }
+      },
+      {
+        "id": 6,
+        "era": "The Combat Arsenal",
+        "title": "The Rogue’s Firepower",
+        "Icon": "Pistol Holster",
+        "color": "from-blue-600 to-silver-600",
+        "bgPattern": "bg-gradient-to-br from-blue-800 via-silver-700 to-black",
+        "content": {
+          "summary": "Across the *Uncharted* series, Nate’s combat evolves from pistols and fists to rifles and explosives, blending parkour with gunplay. This era explores his versatile arsenal, his adaptability to mercenaries and traps, and his leadership as a combat rogue.",
+          "details": [
+            "Pistol precision: Wielding the 9mm, Nate targets mercenaries, his heart steady in aim, his mind calculating shots. His codename a marksman’s cry, his path a gunfire gauntlet, his leadership guiding precise strikes.",
+            "AK-47 firepower: In *Uncharted 2*, Nate mows down Lazarević’s troops, his rifle blasting through cover, his heart bold in firefights, his mind timing reloads. His codename a warrior’s vow, his path a warzone storm, his leadership overwhelming foes.",
+            "Grenades: Throwing grenades, Nate clears enemy outposts, his heart calm in explosions, his mind timing blasts. His codename a tactician’s chant, his path a fiery assault, his leadership collapsing strongholds.",
+            "Parkour agility: Climbing ruins, Nate dodges gunfire, his heart agile in movement, his mind mapping ledges. His codename a climber’s cry, his path a vertical gauntlet, his leadership navigating danger.",
+            "Fistfights: Brawling with mercenaries, Nate lands punches, his heart fierce in melee, his mind exploiting gaps. His codename a brawler’s vow, his path a close-quarters fight, his leadership dominating foes.",
+            "Rope swings: In *Uncharted 4*, Nate uses ropes to swing across chasms, his heart bold in motion, his mind timing grapples. His codename a daredevil’s chant, his path an aerial strike, his leadership outmaneuvering enemies.",
+            "Stealth takedowns: Sneaking through camps, Nate chokes out guards, his heart calm in shadows, his mind planning silent kills. His codename a rogue’s cry, his path a stealthy hunt, his leadership clearing paths.",
+            "The combat rogue: Nate’s arsenal cements his legend, his heart a fire of resolve, his codename echoing in battlegrounds. The era ends with his mastery, his path a fight against all, his leadership immortal in adventure."
+          ]
+        }
+      },
+      {
+        "id": 7,
+        "era": "The Emotional Journey",
+        "title": "The Heart of a Rogue",
+        "Icon": "Broken Compass",
+        "color": "from-blue-600 to-red-600",
+        "bgPattern": "bg-gradient-to-br from-blue-800 via-red-700 to-black",
+        "content": {
+          "summary": "Across the *Uncharted* series, Nate’s emotional growth defines his adventures, from his reckless youth to his struggle for family in *Uncharted 4*. This era explores his resilience, his bonds with Sully and Elena, and his leadership as a flawed but heroic figure.",
+          "details": [
+            "Orphan’s drive: In *Uncharted 3*, Nate’s childhood as an orphan fuels his quest, his heart driven by Drake’s legacy, his mind seeking purpose. His codename a scion’s cry, his path a personal quest, his leadership born in loss.",
+            "Sully’s family: Viewing Sully as a father, Nate finds stability, his heart warmed by his guidance, his mind grounded by his wisdom. His codename a son’s vow, his path a shared fight, his leadership forged in trust.",
+            "Elena’s love: Falling for Elena, Nate balances adventure with love, his heart torn by her safety, his mind learning compromise. His codename a lover’s chant, his path a shared life, his leadership rebuilt in devotion.",
+            "Sam’s burden: In *Uncharted 4*, Nate grapples with Sam’s return, his heart torn by guilt, his mind protecting his brother. His codename a brother’s cry, his path a family fight, his leadership driven by loyalty.",
+            "Chloe’s spark: In *Uncharted 2*, Nate navigates his feelings for Chloe, his heart caught in her charm, his mind keeping focus. His codename a rogue’s vow, his path a fleeting romance, his leadership tempered by restraint.",
+            "Betrayal’s sting: Facing Flynn and Navarro’s betrayals, Nate endures loss, his heart hardened by deceit, his mind outsmarting traitors. His codename a survivor’s cry, his path a fight against treachery, his leadership defying greed.",
+            "Retirement’s peace: In *Uncharted 4*, Nate chooses family over treasure, his heart content in love, his mind embracing peace. His codename a retiree’s chant, his path a settled life, his leadership finding balance.",
+            "The resilient rogue: Nate’s journey cements his legend, his heart a fire of resolve, his codename echoing in survival tales. The era ends with his growth, his path a fight for love, his leadership immortal in courage."
+          ]
+        }
+      },
+      {
+        "id": 8,
+        "era": "The Treasure-Hunting Crusade",
+        "title": "The War for Legends",
+        "Icon": "Treasure Map",
+        "color": "from-blue-600 to-gold-600",
+        "bgPattern": "bg-gradient-to-br from-blue-800 via-gold-700 to-black",
+        "content": {
+          "summary": "Across the *Uncharted* series, Nate chases legendary treasures like El Dorado, Shambhala, and Libertalia, battling mercenaries and warlords. This era explores his relentless pursuit of history, his alliances with Sully and Elena, and his leadership in uncovering lost worlds.",
+          "details": [
+            "El Dorado’s curse: In *Drake’s Fortune*, Nate uncovers El Dorado’s secret, his pistol blasting mercenaries, his heart set on discovery, his mind decoding Drake’s clues. His codename an explorer’s cry, his path a jungle quest, his leadership defying greed.",
+            "Shambhala’s stone: In *Among Thieves*, Nate seeks the Cintamani Stone, his rifle mowing down Lazarević’s army, his heart resolute against power, his mind unraveling Marco Polo’s trail. His codename a rogue’s chant, his path a Himalayan war, his leadership saving Shambhala.",
+            "Ubar’s sands: In *Drake’s Deception*, Nate finds the Atlantis of the Sands, his grenades blasting Marlowe’s cult, his heart steady in illusions, his mind solving ancient riddles. His codename a survivor’s vow, his path a desert fight, his leadership collapsing Ubar.",
+            "Libertalia’s utopia: In *A Thief’s End*, Nate discovers Avery’s pirate city, his rifle clearing Shoreline troops, his heart torn by family, his mind exposing betrayal. His codename a brother’s cry, his path a pirate war, his leadership ending the hunt.",
+            "Sully’s guidance: Teaming with Sully, Nate navigates global ruins, his heart anchored by his mentor, his mind syncing their tactics. His codename a partner’s trust, his path a shared quest, his leadership forged in loyalty.",
+            "Elena’s resolve: Fighting with Elena, Nate protects her, his heart steadied by her courage, his mind valuing her insight. His codename a lover’s vow, his path a joint fight, his leadership strengthened by her presence.",
+            "Historical truth: Decoding clues from Drake to Avery, Nate uncovers lost history, his heart driven by legacy, his mind mapping ancient trails. His codename an explorer’s chant, his path a treasure’s truth, his leadership revealing the past.",
+            "The treasure hunter: Nate’s crusade cements his legend, his heart a fire of resolve, his codename echoing in lost cities. The era ends with his discoveries, his path a war for history, his leadership immortal in adventure."
+          ]
+        }
+      },
+      {
+        "id": 9,
+        "era": "The Alliances of Nate",
+        "title": "The Bonds of Adventure",
+        "Icon": "Compass",
+        "color": "from-blue-600 to-silver-600",
+        "bgPattern": "bg-gradient-to-br from-blue-800 via-silver-700 to-black",
+        "content": {
+          "summary": "Across the *Uncharted* series, Nate’s alliances with Sully, Elena, Chloe, and Sam define his adventures, from jungles to deserts. This era explores his partnerships, his trust in allies amidst danger, and his leadership in uniting his crew.",
+          "details": [
+            "Sully’s mentorship: In *Drake’s Fortune* and *Uncharted 3*, Nate relies on Sully, his pistol covering his flank, his heart anchored by his father figure, his mind syncing their moves. His codename a son’s trust, his path a shared quest, his leadership forged in loyalty.",
+            "Elena’s love: Fighting with Elena in *Uncharted 2* and *Uncharted 4*, Nate protects her, his heart steadied by her resolve, his mind valuing her courage. His codename a lover’s vow, his path a joint fight, his leadership strengthened by her presence.",
+            "Chloe’s spark: Teaming with Chloe in *Uncharted 2* and *The Lost Legacy*, Nate matches her cunning, his heart torn by her charm, his mind coordinating her agility. His codename a rogue’s cry, his path a shared heist, his leadership inspiring her lead.",
+            "Sam’s bond: In *Uncharted 4*, Nate fights for Sam, his rifle saving his brother, his heart driven by family, his mind protecting his kin. His codename a brother’s chant, his path a familial quest, his leadership rebuilt in trust.",
+            "Nadine’s alliance: In *Uncharted 4*, Nate outwits Nadine, his heart cautious of her skills, his mind exploiting her flaws. His codename a rival’s vow, his path a tense fight, his leadership outsmarting her forces.",
+            "Charlie’s grit: In *Uncharted 3*, Nate teams with Charlie Cutter, his climbing syncing with his strength, his heart steady in their bond, his mind coordinating strikes. His codename a partner’s trust, his path a shared mission, his leadership uniting allies.",
+            "Crew’s unity: Leading his team through ruins, Nate unites their skills, his heart strong in their cause, his mind strategizing escapes. His codename a unifier’s cry, his path a team effort, his leadership rallying adventurers.",
+            "The adventurer’s bonds: Nate’s alliances cement his legend, his heart a fire of resolve, his codename echoing in teamwork. The era ends with his united crew, his path a shared fight, his leadership immortal in bonds forged through danger."
+          ]
+        }
+      },
+      {
+        "id": 10,
+        "era": "The Cultural Impact",
+        "title": "The Icon of Uncharted",
+        "Icon": "Trophy",
+        "color": "from-blue-600 to-gold-600",
+        "bgPattern": "bg-gradient-to-br from-blue-800 via-gold-700 to-black",
+        "content": {
+          "summary": "Nate’s status as an *Uncharted* icon makes him a gaming legend, appearing in games, the *Uncharted* film, and crossovers. His wit and climbing skills inspire fans worldwide. This era explores his cultural influence, his recognition as a roguish hero, and his leadership in gaming culture.",
+          "details": [
+            "Gaming icon: As an *Uncharted* staple, Nate’s pistol and parkour define action-adventure, his heart inspiring players, his mind shaping gameplay. His codename a gamer’s cry, his path a digital legacy, his leadership uniting fans.",
+            "Film presence: In the *Uncharted* film (2022), Nate’s cinematic heists captivate, his climbing dodging traps, his heart steady on screen, his mind guiding allies. His codename a cinematic rogue, his path a filmed quest, his leadership inspiring audiences.",
+            "Comic legacy: In *Uncharted* comics, Nate’s treasure hunts resonate, his pistol blasting foes, his heart resolute in chaos, his mind decoding clues. His codename a comic legend, his path a drawn adventure, his leadership inspiring inked tales.",
+            "Fan devotion: Fans cosplay Nate’s henley and holster, his heart humble in their love, his mind shaping their passion. His codename a community’s chant, his path a shared fandom, his leadership uniting conventions.",
+            "Merchandise star: Nate’s likeness adorns figures and apparel, his heart a symbol of adventure, his mind inspiring designs. His codename a brand’s cry, his path a cultural legacy, his leadership rallying collectors.",
+            "Crossover cameos: In *PlayStation All-Stars Battle Royale*, Nate battles with his arsenal, his heart steady in new worlds, his mind adapting to foes. His codename a crossover hero, his path a shared fight, his leadership inspiring players.",
+            "Modding legacy: In modding communities, Nate’s skins dominate, his heart a fan’s creation, his mind shaping custom quests. His codename a modder’s vow, his path a virtual legacy, his leadership inspiring creativity.",
+            "The cultural rogue: Nate’s influence cements his legend, his heart a fire of resolve, his codename echoing in gaming culture. The era ends with his global impact, his path a legacy of adventure, his leadership immortal in *Uncharted*’s lore."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "_id": "68a639f58383ccaa602cc37f",
+    "name": "Ellie",
+    "title": "Ellie: The Survivor’s Codex",
+    "meta": {
+      "note": "A comprehensive chronicle of Ellie’s journey across *The Last of Us* series, from her role as a young survivor in *The Last of Us* (2013) and *Left Behind* DLC to her vengeance-driven path in *The Last of Us Part II* (2020). This codex explores her resilience in a post-apocalyptic world, her battles against infected and human threats, and her evolution as a leader forged by loss and hope. Each era details her emotional growth, combat skills, and defiance in a world ravaged by the Cordyceps infection.",
+      "format": "Array of era objects with id, era, title, Icon (string), color, bgPattern, content { summary, details[] }"
+    },
+    "chapters": [
+      {
+        "id": 1,
+        "era": "The Last of Us: The Journey Begins",
+        "title": "The Immune Survivor",
+        "Icon": "Firefly Pendant",
+        "color": "from-green-600 to-grey-600",
+        "bgPattern": "bg-gradient-to-br from-green-800 via-grey-700 to-black",
+        "content": {
+          "summary": "In *The Last of Us* (2013), Ellie, a 14-year-old orphan, discovers her immunity to the Cordyceps infection and embarks on a cross-country journey with smuggler Joel to reach the Fireflies. Facing infected and raiders, she grows from a vulnerable teen to a resilient survivor. This era explores her early courage, bond with Joel, and leadership in a broken world.",
+          "details": [
+            "Boston’s orphan: Living in a quarantine zone, Ellie meets Joel, her switchblade flashing at threats, her heart defiant in oppression, her mind sharp with wit. Her codename ‘Firefly’ a mark of hope, her path a city of decay, her leadership born in survival.",
+            "Joel’s bond: Traveling with Joel, Ellie learns to fight, her pistol shooting infected, her heart warmed by his protection, her mind trusting his grit. Her codename a daughter’s trust, her path a shared journey, her leadership forged in loyalty.",
+            "Infected horrors: Facing Runners and Clickers, Ellie stabs with her blade, her heart steady in terror, her mind learning their patterns. Her codename a survivor’s cry, her path a fungal gauntlet, her leadership defying death.",
+            "Firefly mission: Seeking the Fireflies, Ellie carries her immunity, her heart set on a cure, her mind hoping for salvation. Her codename a rebel’s vow, her path a desperate trek, her leadership inspiring hope.",
+            "Tess’s sacrifice: Witnessing Tess’s death, Ellie hardens, her heart scarred by loss, her mind pushing forward with Joel. Her codename a mourner’s cry, her path a painful fight, her leadership growing in grief.",
+            "Pittsburgh raiders: Outwitting hunters in Pittsburgh, Ellie uses stealth, her heart fierce against cruelty, her mind exploiting their greed. Her codename a rogue’s chant, her path a brutal ambush, her leadership protecting Joel.",
+            "Hospital betrayal: Reaching the Fireflies, Ellie faces their plan to kill her for a cure, her heart unconscious but resolute, her mind unaware of Joel’s choice. Her codename a savior’s cry, her path a tragic twist, her leadership dormant in sacrifice.",
+            "The immune survivor: Ellie’s journey cements her legend, her heart a fire of resolve, her codename echoing in America’s ruins. The era ends with her survival, her path a fight for hope, her leadership a beacon in despair."
+          ]
+        }
+      },
+      {
+        "id": 2,
+        "era": "The Last of Us: Left Behind",
+        "title": "The Bonds of Youth",
+        "Icon": "Comic Book",
+        "color": "from-green-600 to-blue-600",
+        "bgPattern": "bg-gradient-to-br from-green-800 via-blue-700 to-black",
+        "content": {
+          "summary": "In *The Last of Us: Left Behind* (2014), a DLC prequel, Ellie navigates her friendship with Riley in a Boston quarantine zone and later cares for an injured Joel in Colorado. Facing infected and her own vulnerability, she discovers her immunity. This era explores her youthful spirit, her first love, and her leadership in crisis.",
+          "details": [
+            "Riley’s friendship: Sneaking through Boston with Riley, Ellie explores a mall, her heart lifted by her friend, her mind savoring their bond. Her codename a teen’s cry, her path a playful escape, her leadership born in joy.",
+            "Infected ambush: Fighting Clickers in the mall, Ellie wields a pipe, her heart racing in fear, her mind learning to survive. Her codename a fighter’s vow, her path a fungal fight, her leadership emerging in danger.",
+            "Riley’s bite: After both are bitten, Ellie faces Riley’s fate, her heart broken by impending loss, her mind grappling with her immunity. Her codename a mourner’s cry, her path a tragic farewell, her leadership forged in sorrow.",
+            "Joel’s wound: Caring for an injured Joel, Ellie hunts for supplies, her bow striking raiders, her heart fierce in his defense, her mind planning his survival. Her codename a protector’s chant, her path a snowy trek, her leadership saving her guardian.",
+            "Youthful defiance: Stealing from soldiers, Ellie defies the quarantine zone, her heart bold in rebellion, her mind outsmarting patrols. Her codename a rogue’s vow, her path a teen’s fight, her leadership shining in chaos.",
+            "Mall memories: Sharing comics and arcade dreams with Riley, Ellie clings to hope, her heart warmed by their laughter, her mind cherishing their time. Her codename a friend’s trust, her path a fleeting joy, her leadership rooted in love.",
+            "Immunity’s dawn: Discovering her survival after the bite, Ellie carries her secret, her heart heavy with purpose, her mind questioning her role. Her codename a savior’s cry, her path a lonely truth, her leadership growing in resolve.",
+            "The young survivor: Ellie’s story cements her legend, her heart a fire of resolve, her codename echoing in Boston’s ruins. The era ends with her strength, her path a fight for survival, her leadership a beacon in youth."
+          ]
+        }
+      },
+      {
+        "id": 3,
+        "era": "The Last of Us Part II",
+        "title": "The Cycle of Vengeance",
+        "Icon": "Moth Tattoo",
+        "color": "from-green-600 to-red-600",
+        "bgPattern": "bg-gradient-to-br from-green-800 via-red-700 to-black",
+        "content": {
+          "summary": "In *The Last of Us Part II* (2020), Ellie, now 19, seeks revenge against Abby and the Washington Liberation Front (WLF) after a devastating loss in Jackson. Traveling to Seattle and Santa Barbara, she battles infected and enemies while grappling with her trauma. This era explores her rage, moral conflicts, and leadership in a vengeful odyssey.",
+          "details": [
+            "Jackson’s loss: After a brutal tragedy, Ellie vows revenge, her rifle blasting WLF soldiers, her heart consumed by rage, her mind set on Abby. Her codename a avenger’s cry, her path a bloody quest, her leadership driven by grief.",
+            "Dina’s love: Traveling with Dina, Ellie fights through Seattle, her heart warmed by her partner, her mind protecting their bond. Her codename a lover’s vow, her path a shared fight, her leadership forged in devotion.",
+            "Seattle’s war: Facing WLF and Seraphites, Ellie uses stealth and Molotovs, her heart steady in chaos, her mind mapping enemy camps. Her codename a warrior’s chant, her path a urban gauntlet, her leadership outsmarting factions.",
+            "Abby’s pursuit: Hunting Abby, Ellie confronts her past, her knife slashing through foes, her heart torn by vengeance, her mind questioning her path. Her codename a hunter’s cry, her path a moral struggle, her leadership tested by rage.",
+            "Tommy’s plea: Supporting Tommy’s vendetta, Ellie fights for family, her heart loyal to his cause, her mind coordinating their strikes. Her codename a sister’s vow, her path a shared revenge, her leadership honoring his pain.",
+            "Santa Barbara’s end: Tracking Abby to the coast, Ellie faces Rattlers, her bow piercing slavers, her heart weary of bloodshed, her mind seeking closure. Her codename a survivor’s cry, her path a final duel, her leadership sparing her enemy.",
+            "Joel’s memory: Haunted by Joel’s death, Ellie carries his lessons, her heart scarred by loss, her mind finding peace in his guitar. Her codename a daughter’s chant, her path a mournful journey, her leadership rooted in love.",
+            "The vengeful survivor: Ellie’s odyssey cements her legend, her heart a fire of resolve, her codename echoing in Seattle’s ruins. The era ends with her redemption, her path a fight for peace, her leadership a beacon in trauma."
+          ]
+        }
+      },
+      {
+        "id": 4,
+        "era": "The Combat Arsenal",
+        "title": "The Survivor’s Firepower",
+        "Icon": "Switchblade",
+        "color": "from-green-600 to-silver-600",
+        "bgPattern": "bg-gradient-to-br from-green-800 via-silver-700 to-black",
+        "content": {
+          "summary": "Across *The Last of Us* series, Ellie’s combat evolves from a switchblade and bricks to rifles and crafted explosives. This era explores her versatile arsenal, her adaptability to infected and human threats, and her leadership as a deadly survivor.",
+          "details": [
+            "Switchblade: Wielding her iconic blade, Ellie stabs Clickers, her heart steady in melee, her mind timing silent kills. Her codename a rogue’s cry, her path a close-quarters gauntlet, her leadership piercing foes.",
+            "Pistol precision: Using a 9mm, Ellie targets raiders, her heart calm in aim, her mind calculating shots. Her codename a marksman’s vow, her path a gunfire fight, her leadership guiding strikes.",
+            "Bow and arrow: In *Part II*, Ellie snipes with a bow, her heart stealthy in shadows, her mind exploiting enemy gaps. Her codename a hunter’s chant, her path a silent assault, her leadership clearing camps.",
+            "Molotovs: Crafting Molotov cocktails, Ellie burns infected, her heart bold in flames, her mind timing throws. Her codename a pyre’s cry, her path a fiery strike, her leadership collapsing hordes.",
+            "Pipe bombs: Using explosives, Ellie blasts WLF patrols, her heart resolute in chaos, her mind planting traps. Her codename a bomber’s vow, her path a destructive fight, her leadership outsmarting enemies.",
+            "Rifle power: Wielding a hunting rifle, Ellie takes down Seraphites, her heart fierce in range, her mind targeting weak points. Her codename a sniper’s chant, her path a long-range war, her leadership dominating battlefields.",
+            "Stealth mastery: Sneaking through infected zones, Ellie chokes out foes, her heart calm in silence, her mind mapping routes. Her codename a shadow’s cry, her path a stealthy hunt, her leadership evading detection.",
+            "The combat survivor: Ellie’s arsenal cements her legend, her heart a fire of resolve, her codename echoing in battlegrounds. The era ends with her mastery, her path a fight against all, her leadership immortal in survival."
+          ]
+        }
+      },
+      {
+        "id": 5,
+        "era": "The Emotional Journey",
+        "title": "The Heart of a Survivor",
+        "Icon": "Broken Guitar",
+        "color": "from-green-600 to-red-600",
+        "bgPattern": "bg-gradient-to-br from-green-800 via-red-700 to-black",
+        "content": {
+          "summary": "Across *The Last of Us* series, Ellie’s emotional resilience defines her survival, from her orphanhood to her vengeance in *Part II*. This era explores her growth through loss, her bonds with Joel and Dina, and her leadership as a beacon of hope and pain.",
+          "details": [
+            "Orphan’s defiance: In *Left Behind*, Ellie’s lonely childhood fuels her rebellion, her heart bold in oppression, her mind seeking purpose. Her codename a teen’s cry, her path a fight for freedom, her leadership born in hardship.",
+            "Joel’s daughter: Bonding with Joel in *The Last of Us*, Ellie finds family, her heart warmed by his care, her mind trusting his strength. Her codename a daughter’s vow, her path a shared journey, her leadership forged in love.",
+            "Riley’s loss: Mourning Riley, Ellie carries her memory, her heart broken by her fate, her mind clinging to their bond. Her codename a mourner’s cry, her path a tragic farewell, her leadership rooted in sorrow.",
+            "Dina’s love: Falling for Dina in *Part II*, Ellie fights for their future, her heart steadied by her partner, her mind protecting their bond. Her codename a lover’s chant, her path a shared fight, her leadership grounded in devotion.",
+            "Joel’s death: Devastated by Joel’s murder, Ellie seeks vengeance, her heart consumed by rage, her mind driven by grief. Her codename an avenger’s cry, her path a bloody quest, her leadership tested by pain.",
+            "Abby’s conflict: Facing Abby, Ellie grapples with forgiveness, her heart torn by vengeance, her mind seeking peace. Her codename a survivor’s vow, her path a moral struggle, her leadership sparing her foe.",
+            "Trauma’s weight: Carrying PTSD from Seattle, Ellie struggles with guilt, her heart scarred by violence, her mind finding solace in music. Her codename a healer’s cry, her path a journey to peace, her leadership embracing redemption.",
+            "The resilient survivor: Ellie’s journey cements her legend, her heart a fire of resolve, her codename echoing in survival tales. The era ends with her healing, her path a fight for peace, her leadership immortal in courage."
+          ]
+        }
+      },
+      {
+        "id": 6,
+        "era": "The Anti-Infected Crusade",
+        "title": "The War on Cordyceps",
+        "Icon": "Cordyceps Spore",
+        "color": "from-green-600 to-grey-600",
+        "bgPattern": "bg-gradient-to-br from-green-800 via-grey-700 to-black",
+        "content": {
+          "summary": "Across *The Last of Us* series, Ellie battles the Cordyceps-infected, raiders, and factions like the WLF and Seraphites. This era explores her relentless fight for survival, her alliances with Joel and Dina, and her leadership in a post-apocalyptic world.",
+          "details": [
+            "Infected hordes: In *The Last of Us*, Ellie fights Clickers and Bloaters, her switchblade slashing fungal flesh, her heart steady in terror, her mind learning their weaknesses. Her codename a survivor’s cry, her path a fungal war, her leadership defying infection.",
+            "Firefly hope: Carrying immunity, Ellie seeks a cure with the Fireflies, her heart set on salvation, her mind believing in hope. Her codename a savior’s vow, her path a desperate mission, her leadership inspiring humanity.",
+            "WLF’s tyranny: In *Part II*, Ellie battles the Washington Liberation Front, her rifle mowing down soldiers, her heart fierce against oppression, her mind outsmarting their patrols. Her codename a rebel’s chant, her path a Seattle war, her leadership toppling factions.",
+            "Seraphite zealots: Facing the Seraphites, Ellie uses stealth, her bow piercing cultists, her heart resolute against fanaticism, her mind exploiting their rituals. Her codename a hunter’s cry, her path a cult’s downfall, her leadership outwitting zealots.",
+            "Rattlers’ slavery: In Santa Barbara, Ellie fights slavers, her Molotovs burning cages, her heart defiant against cruelty, her mind freeing captives. Her codename a liberator’s vow, her path a coastal fight, her leadership saving lives.",
+            "Joel’s alliance: Fighting with Joel, Ellie protects him, her pistol covering his flank, her heart loyal to her guardian, her mind syncing their strikes. Her codename a daughter’s trust, her path a shared fight, her leadership forged in loyalty.",
+            "Dina’s support: Teaming with Dina, Ellie battles infected, her heart warmed by her partner, her mind coordinating their moves. Her codename a lover’s vow, her path a joint war, her leadership strengthened by love.",
+            "The apocalypse warrior: Ellie’s crusade cements her legend, her heart a fire of resolve, her codename echoing in infected ruins. The era ends with her survival, her path a war on Cordyceps, her leadership immortal in defiance."
+          ]
+        }
+      },
+      {
+        "id": 7,
+        "era": "The Alliances of Ellie",
+        "title": "The Bonds of Survival",
+        "Icon": "Friendship Bracelet",
+        "color": "from-green-600 to-blue-600",
+        "bgPattern": "bg-gradient-to-br from-green-800 via-blue-700 to-black",
+        "content": {
+          "summary": "Across *The Last of Us* series, Ellie’s alliances with Joel, Dina, Riley, and others define her survival, from Boston to Seattle. This era explores her partnerships, her trust in allies amidst chaos, and her leadership in uniting her companions.",
+          "details": [
+            "Joel’s guardianship: In *The Last of Us*, Ellie bonds with Joel, her pistol covering his rifle, her heart warmed by his care, her mind trusting his strength. Her codename a daughter’s vow, her path a shared journey, her leadership forged in loyalty.",
+            "Dina’s love: In *Part II*, Ellie fights with Dina, her bow syncing with her shotgun, her heart steadied by her partner, her mind protecting their bond. Her codename a lover’s chant, her path a joint fight, her leadership grounded in devotion.",
+            "Riley’s bond: In *Left Behind*, Ellie shares joy with Riley, her heart lifted by her friend, her mind cherishing their time. Her codename a friend’s trust, her path a youthful escape, her leadership born in love.",
+            "Tommy’s family: Supporting Tommy in *Part II*, Ellie fights for his cause, her heart loyal to his pain, her mind coordinating their strikes. Her codename a sister’s vow, her path a shared revenge, her leadership honoring his grief.",
+            "Jesse’s courage: Teaming with Jesse in Seattle, Ellie matches his bravery, her rifle aiding his leadership, her heart steady in their bond, her mind syncing their moves. Her codename a comrade’s cry, her path a team fight, her leadership uniting allies.",
+            "Tess’s grit: In *The Last of Us*, Ellie learns from Tess, her heart inspired by her toughness, her mind valuing her sacrifice. Her codename a learner’s vow, her path a shared mission, her leadership growing in respect.",
+            "Survivor’s unity: Leading her allies through ruins, Ellie unites their skills, her heart strong in their cause, her mind strategizing survival. Her codename a unifier’s chant, her path a team effort, her leadership rallying companions.",
+            "The survivor’s bonds: Ellie’s alliances cement her legend, her heart a fire of resolve, her codename echoing in teamwork. The era ends with her united companions, her path a shared fight, her leadership immortal in bonds forged through survival."
+          ]
+        }
+      },
+      {
+        "id": 8,
+        "era": "The Cultural Impact",
+        "title": "The Icon of The Last of Us",
+        "Icon": "Trophy",
+        "color": "from-green-600 to-gold-600",
+        "bgPattern": "bg-gradient-to-br from-green-800 via-gold-700 to-black",
+        "content": {
+          "summary": "Ellie’s status as a *The Last of Us* icon makes her a gaming legend, appearing in games, the HBO series, and fan works. Her switchblade and resilience inspire players worldwide. This era explores her cultural influence, her recognition as a survivor, and her leadership in gaming culture.",
+          "details": [
+            "Gaming icon: As a *The Last of Us* staple, Ellie’s switchblade and bow define survival horror, her heart inspiring players, her mind shaping gameplay. Her codename a gamer’s cry, her path a digital legacy, her leadership uniting fans.",
+            "HBO presence: In *The Last of Us* HBO series (2023), Ellie’s journey captivates, her defiance shining on screen, her heart steady in chaos, her mind guiding allies. Her codename a cinematic survivor, her path a filmed fight, her leadership inspiring audiences.",
+            "Comic legacy: In *The Last of Us: American Dreams*, Ellie’s prequel story resonates, her pipe swinging at foes, her heart resolute in youth, her mind forging bonds. Her codename a comic legend, her path a drawn survival, her leadership inspiring inked tales.",
+            "Fan devotion: Fans cosplay Ellie’s jacket and tattoo, her heart humble in their love, her mind shaping their passion. Her codename a community’s chant, her path a shared fandom, her leadership uniting conventions.",
+            "Merchandise star: Ellie’s likeness adorns figures and apparel, her heart a symbol of grit, her mind inspiring designs. Her codename a brand’s cry, her path a cultural legacy, her leadership rallying collectors.",
+            "Music’s echo: Ellie’s guitar covers, like ‘Take on Me,’ resonate online, her heart a song of hope, her mind crafting emotional chords. Her codename a musician’s vow, her path a melodic legacy, her leadership inspiring creators.",
+            "Modding legacy: In modding communities, Ellie’s skins dominate, her heart a fan’s creation, her mind shaping custom battles. Her codename a modder’s cry, her path a virtual legacy, her leadership inspiring creativity.",
+            "The cultural survivor: Ellie’s influence cements her legend, her heart a fire of resolve, her codename echoing in gaming culture. The era ends with her global impact, her path a legacy of survival, her leadership immortal in *The Last of Us*’s lore."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "_id": "68a639f58383ccaa602cc380",
+    "name": "Bayonetta",
+    "title": "Bayonetta: The Witch’s Codex",
+    "meta": {
+      "note": "A comprehensive chronicle of Bayonetta’s journey across the *Bayonetta* series, from her awakening as an Umbra Witch in *Bayonetta* (2009) to her multiversal battles in *Bayonetta 2* (2014) and *Bayonetta 3* (2022). This codex explores her supernatural prowess, her fight against angelic and demonic forces, and her flamboyant leadership as a timeless witch. Each era details her magical combat, emotional depth, and defiance in a world of divine chaos.",
+      "format": "Array of era objects with id, era, title, Icon (string), color, bgPattern, content { summary, details[] }"
+    },
+    "chapters": [
+      {
+        "id": 1,
+        "era": "Bayonetta: The Witch Awakens",
+        "title": "The Saga of Vigrid",
+        "Icon": "Witch Time Glyph",
+        "color": "from-purple-600 to-black-600",
+        "bgPattern": "bg-gradient-to-br from-purple-800 via-black-700 to-black",
+        "content": {
+          "summary": "In *Bayonetta* (2009), Bayonetta, an Umbra Witch with fragmented memories, awakens after 500 years to uncover her past in Vigrid. Wielding her Scarborough Fair pistols, she battles the angelic forces of Paradiso and faces the schemes of Balder. This era explores her stylish combat, rediscovery of identity, and leadership against celestial foes.",
+          "details": [
+            "Vigrid’s awakening: Emerging in Vigrid, Bayonetta fights angels, her pistols blazing, her heart bold with mystery, her mind piecing together her past. Her codename ‘Witch’ a mark of power, her path a divine battlefield, her leadership born in flair.",
+            "Jeanne’s rivalry: Clashing with rival witch Jeanne, Bayonetta dances through combat, her heart defiant against her equal, her mind reading her moves. Her codename a rival’s cry, her path a witch’s duel, her leadership outmatching her foe.",
+            "Angel slayer: Facing Paradiso’s angels like Beloved, Bayonetta summons Infernal Demons, her heart steady in chaos, her mind mastering Witch Time. Her codename a slayer’s vow, her path a heavenly gauntlet, her leadership crushing divinities.",
+            "Luka’s charm: Teaming with journalist Luka, Bayonetta protects him, her heart amused by his bravado, her mind valuing his clues. Her codename a guardian’s chant, her path a shared quest, her leadership forged in wit.",
+            "Balder’s scheme: Uncovering Balder’s plan to awaken Jubileus, Bayonetta battles his forces, her hair-weapons tearing angels, her heart resolute against betrayal, her mind exposing his lies. Her codename a rebel’s cry, her path a divine conspiracy, her leadership defying gods.",
+            "Cereza’s bond: Protecting a young girl (her younger self), Bayonetta softens, her heart warmed by innocence, her mind guarding her safety. Her codename a protector’s vow, her path a temporal loop, her leadership nurturing hope.",
+            "Jubileus’ fall: Facing the Creator Jubileus, Bayonetta summons Queen Sheba, her heart fierce in cosmic combat, her mind targeting divine weaknesses. Her codename a witch’s chant, her path a godly showdown, her leadership saving the world.",
+            "The awakened witch: Bayonetta’s triumph cements her legend, her heart a fire of resolve, her codename echoing in Vigrid’s ruins. The era ends with her identity reclaimed, her path a fight for truth, her leadership a beacon in chaos."
+          ]
+        }
+      },
+      {
+        "id": 2,
+        "era": "Bayonetta 2: The Gates of Hell",
+        "title": "The Battle for Inferno",
+        "Icon": "Love Is Blue Pistols",
+        "color": "from-purple-600 to-red-600",
+        "bgPattern": "bg-gradient-to-br from-purple-800 via-red-700 to-black",
+        "content": {
+          "summary": "In *Bayonetta 2* (2014), Bayonetta fights to save Jeanne’s soul from Inferno after a demonic summoning goes wrong. Teaming with Loki and facing the sage Loptr, she battles angels and demons across Noatun and beyond. This era explores her deepened combat mastery, loyalty to Jeanne, and leadership in a war between realms.",
+          "details": [
+            "Jeanne’s rescue: Diving into Inferno to save Jeanne, Bayonetta fights demons, her Love Is Blue pistols blazing, her heart fierce for her friend, her mind navigating Hell’s gates. Her codename a sister’s vow, her path a demonic quest, her leadership driven by loyalty.",
+            "Loki’s alliance: Guiding young god Loki, Bayonetta protects him, her heart amused by his quips, her mind unraveling his powers. Her codename a guardian’s chant, her path a divine journey, her leadership shielding a deity.",
+            "Loptr’s ambition: Facing the evil sage Loptr, Bayonetta battles his angelic forces, her whip slashing through ranks, her heart defiant against his tyranny, her mind exposing his plans. Her codename a rebel’s cry, her path a cosmic conspiracy, her leadership defying gods.",
+            "Demon summons: Calling Infernal Demons like Madama Butterfly, Bayonetta crushes angels, her heart bold in chaos, her mind mastering Umbran Climaxes. Her codename a summoner’s vow, her path a demonic gauntlet, her leadership commanding Hell.",
+            "Noatun’s trials: Navigating Noatun’s sacred waters, Bayonetta fights Glamor angels, her heart steady in divine realms, her mind solving ancient seals. Her codename a witch’s chant, her path a mystical battlefield, her leadership conquering trials.",
+            "Balder’s return: Teaming with her father Balder, Bayonetta battles Loptr’s forces, her heart torn by his past, her mind syncing their attacks. Her codename a daughter’s trust, her path a shared fight, her leadership forged in family.",
+            "Aesir’s defeat: Confronting Loptr as Aesir, Bayonetta summons Omne, her heart fierce in cosmic combat, her mind targeting his core. Her codename a slayer’s cry, her path a godly duel, her leadership saving realms.",
+            "The infernal witch: Bayonetta’s victory cements her legend, her heart a fire of resolve, her codename echoing in Inferno’s depths. The era ends with Jeanne’s rescue, her path a fight for balance, her leadership a beacon in Hell."
+          ]
+        }
+      },
+      {
+        "id": 3,
+        "era": "Bayonetta 3: The Multiversal Witch",
+        "title": "The Chaos of Singularity",
+        "Icon": "Demon Masquerade",
+        "color": "from-purple-600 to-blue-600",
+        "bgPattern": "bg-gradient-to-br from-purple-800 via-blue-700 to-black",
+        "content": {
+          "summary": "In *Bayonetta 3* (2022), Bayonetta faces Singularity, a multiversal threat destroying realities, while teaming with new witch Viola and alternate versions of herself. Wielding Demon Masquerade, she battles Homunculi across dimensions. This era explores her multiversal power, her mentorship of Viola, and her leadership in saving existence.",
+          "details": [
+            "Multiverse crisis: Facing Singularity’s Homunculi, Bayonetta fights across realities, her pistols shredding bio-weapons, her heart bold in chaos, her mind navigating dimensions. Her codename a witch’s cry, her path a multiversal war, her leadership defying annihilation.",
+            "Viola’s mentorship: Guiding young witch Viola, Bayonetta protects her, her heart proud of her spirit, her mind teaching her craft. Her codename a mentor’s vow, her path a shared quest, her leadership forging a successor.",
+            "Demon Masquerade: Using Demon Masquerade, Bayonetta merges with demons like Gomorrah, her heart fierce in transformation, her mind controlling feral power. Her codename a summoner’s chant, her path a demonic dance, her leadership commanding beasts.",
+            "Alternate Bayonettas: Teaming with her multiversal selves, Bayonetta battles variants, her heart united with their strength, her mind syncing their styles. Her codename a sister’s trust, her path a mirrored fight, her leadership uniting witches.",
+            "Singularity’s plan: Uncovering Singularity’s reality collapse, Bayonetta fights its avatars, her whip tearing through constructs, her heart resolute against oblivion, her mind exposing its core. Her codename a rebel’s cry, her path a cosmic gauntlet, her leadership saving existence.",
+            "Luka’s love: Fighting alongside Luka, Bayonetta deepens their bond, her heart softened by his loyalty, her mind valuing his courage. Her codename a lover’s vow, her path a shared fight, her leadership strengthened by love.",
+            "Thule’s battle: Defending the multiversal hub Thule, Bayonetta faces Homunculi swarms, her heart steady in apocalyptic war, her mind strategizing victory. Her codename a guardian’s chant, her path a final stand, her leadership preserving realities.",
+            "The multiversal witch: Bayonetta’s stand cements her legend, her heart a fire of resolve, her codename echoing in shattered dimensions. The era ends with Singularity’s defeat, her path a fight for existence, her leadership a beacon in chaos."
+          ]
+        }
+      },
+      {
+        "id": 4,
+        "era": "The Combat Arsenal",
+        "title": "The Witch’s Firepower",
+        "Icon": "Scarborough Fair",
+        "color": "from-purple-600 to-silver-600",
+        "bgPattern": "bg-gradient-to-br from-purple-800 via-silver-700 to-black",
+        "content": {
+          "summary": "Across the *Bayonetta* series, Bayonetta’s combat evolves from her Scarborough Fair pistols to Demon Masquerade and Infernal summons. This era explores her versatile arsenal, her mastery of angelic and demonic foes, and her leadership as a stylish combatant.",
+          "details": [
+            "Scarborough Fair: Wielding four pistols, Bayonetta shoots angels, her heart steady in gunfire, her mind timing Wicked Weaves. Her codename a gunner’s cry, her path a bullet dance, her leadership shredding foes.",
+            "Love Is Blue: In *Bayonetta 2*, Bayonetta’s upgraded pistols blaze through demons, her heart bold in combat, her mind chaining combos. Her codename a shooter’s vow, her path a fiery storm, her leadership overwhelming enemies.",
+            "Demon Masquerade: In *Bayonetta 3*, Bayonetta merges with demons, her heart fierce in transformation, her mind controlling feral strikes. Her codename a summoner’s chant, her path a demonic gauntlet, her leadership commanding beasts.",
+            "Witch Time: Slowing time with perfect dodges, Bayonetta outmaneuvers angels, her heart calm in speed, her mind exploiting gaps. Her codename a witch’s cry, her path a temporal dance, her leadership dominating battlefields.",
+            "Umbran Climax: Unleashing Infernal Demons like Madama Butterfly, Bayonetta crushes foes, her heart resolute in power, her mind mastering summons. Her codename a conjurer’s vow, her path a hellish assault, her leadership summoning chaos.",
+            "Weapon versatility: Switching to whips and katanas, Bayonetta adapts to enemies, her heart agile in combat, her mind blending styles. Her codename a warrior’s chant, her path a versatile fight, her leadership outsmarting threats.",
+            "Hair magic: Using her hair for Wicked Weaves, Bayonetta summons fists, her heart fierce in magic, her mind targeting weak points. Her codename a sorceress’s cry, her path a mystical strike, her leadership crushing divinities.",
+            "The combat witch: Bayonetta’s arsenal cements her legend, her heart a fire of resolve, her codename echoing in battlegrounds. The era ends with her mastery, her path a fight against all, her leadership immortal in style."
+          ]
+        }
+      },
+      {
+        "id": 5,
+        "era": "The Emotional Journey",
+        "title": "The Heart of a Witch",
+        "Icon": "Broken Locket",
+        "color": "from-purple-600 to-red-600",
+        "bgPattern": "bg-gradient-to-br from-purple-800 via-red-700 to-black",
+        "content": {
+          "summary": "Across the *Bayonetta* series, Bayonetta’s emotional depth defines her strength, from her lost memories to her bonds with Jeanne and Luka. This era explores her resilience, her connections with allies, and her leadership as a charismatic yet vulnerable witch.",
+          "details": [
+            "Memory’s fog: In *Bayonetta*, Bayonetta uncovers her past, her heart bold despite amnesia, her mind piecing together truths. Her codename a lost witch’s cry, her path a journey of self, her leadership born in discovery.",
+            "Jeanne’s bond: Rival turned sister in *Bayonetta 2*, Bayonetta fights for Jeanne, her heart loyal to her kin, her mind valuing her strength. Her codename a sister’s vow, her path a shared fight, her leadership forged in trust.",
+            "Luka’s love: Deepening her bond with Luka in *Bayonetta 3*, Bayonetta softens, her heart warmed by his loyalty, her mind cherishing his courage. Her codename a lover’s chant, her path a shared journey, her leadership strengthened by love.",
+            "Cereza’s care: Protecting her younger self, Bayonetta shows tenderness, her heart touched by innocence, her mind guarding her safety. Her codename a mother’s cry, her path a temporal loop, her leadership nurturing hope.",
+            "Balder’s tragedy: Learning of her father Balder, Bayonetta grapples with his sacrifice, her heart torn by family, her mind honoring his loss. Her codename a daughter’s vow, her path a tragic fight, her leadership rooted in legacy.",
+            "Viola’s future: Mentoring Viola in *Bayonetta 3*, Bayonetta passes her legacy, her heart proud of her spirit, her mind teaching her craft. Her codename a mentor’s cry, her path a shared quest, her leadership forging a successor.",
+            "Defiant spirit: Facing gods and demons, Bayonetta remains unbroken, her heart a fire of sass, her mind defying divine will. Her codename a rebel’s chant, her path a fight for freedom, her leadership inspiring defiance.",
+            "The resilient witch: Bayonetta’s journey cements her legend, her heart a fire of resolve, her codename echoing in survival tales. The era ends with her strength, her path a fight for love, her leadership immortal in charisma."
+          ]
+        }
+      },
+      {
+        "id": 6,
+        "era": "The Anti-Divine Crusade",
+        "title": "The War on Paradiso and Inferno",
+        "Icon": "Umbran Watch",
+        "color": "from-purple-600 to-black-600",
+        "bgPattern": "bg-gradient-to-br from-purple-800 via-black-700 to-black",
+        "content": {
+          "summary": "Across the *Bayonetta* series, Bayonetta battles the angelic forces of Paradiso, demons of Inferno, and multiversal threats like Singularity. This era explores her relentless fight against divine powers, her alliances with Jeanne and Viola, and her leadership in balancing realms.",
+          "details": [
+            "Paradiso’s angels: In *Bayonetta*, Bayonetta slays angels like Fortitudo, her pistols shredding wings, her heart defiant against heaven, her mind exploiting their faith. Her codename a slayer’s cry, her path a heavenly war, her leadership crushing divinities.",
+            "Inferno’s demons: In *Bayonetta 2*, Bayonetta battles demonic forces, her summons turning their power, her heart bold in Hell, her mind mastering their chaos. Her codename a conjurer’s vow, her path a demonic gauntlet, her leadership commanding Inferno.",
+            "Singularity’s threat: In *Bayonetta 3*, Bayonetta fights Homunculi, her Demon Masquerade tearing constructs, her heart resolute against oblivion, her mind unraveling its core. Her codename a rebel’s chant, her path a multiversal fight, her leadership saving realities.",
+            "Jeanne’s alliance: Fighting with Jeanne, Bayonetta syncs their magic, her heart loyal to her sister, her mind coordinating their strikes. Her codename a sister’s trust, her path a shared battle, her leadership forged in unity.",
+            "Viola’s rise: Guiding Viola against Singularity, Bayonetta mentors her, her heart proud of her grit, her mind teaching her craft. Her codename a mentor’s vow, her path a shared quest, her leadership forging a successor.",
+            "Balder’s legacy: Teaming with Balder in *Bayonetta 2*, Bayonetta honors his fight, her heart torn by his sacrifice, her mind syncing their power. Her codename a daughter’s cry, her path a family war, her leadership rooted in legacy.",
+            "Cosmic balance: Defying Jubileus and Aesir, Bayonetta restores balance, her heart fierce against gods, her mind outsmarting divine will. Her codename a guardian’s chant, her path a cosmic fight, her leadership preserving realms.",
+            "The divine slayer: Bayonetta’s crusade cements her legend, her heart a fire of resolve, her codename echoing in ruined heavens. The era ends with her triumph, her path a war on gods, her leadership immortal in defiance."
+          ]
+        }
+      },
+      {
+        "id": 7,
+        "era": "The Alliances of Bayonetta",
+        "title": "The Bonds of Witchcraft",
+        "Icon": "Moon Pendant",
+        "color": "from-purple-600 to-blue-600",
+        "bgPattern": "bg-gradient-to-br from-purple-800 via-blue-700 to-black",
+        "content": {
+          "summary": "Across the *Bayonetta* series, Bayonetta’s alliances with Jeanne, Luka, Viola, and others define her journey, from Vigrid to the multiverse. This era explores her partnerships, her trust in allies amidst divine chaos, and her leadership in uniting her companions.",
+          "details": [
+            "Jeanne’s sisterhood: In *Bayonetta* and *Bayonetta 2*, Bayonetta fights with Jeanne, her pistols syncing with her magic, her heart loyal to her kin, her mind valuing her strength. Her codename a sister’s vow, her path a shared fight, her leadership forged in trust.",
+            "Luka’s loyalty: In *Bayonetta 3*, Bayonetta deepens her bond with Luka, her heart warmed by his courage, her mind coordinating his support. Her codename a lover’s chant, her path a joint battle, her leadership strengthened by love.",
+            "Viola’s mentorship: Guiding Viola in *Bayonetta 3*, Bayonetta protects her, her heart proud of her spirit, her mind teaching her craft. Her codename a mentor’s cry, her path a shared quest, her leadership forging a successor.",
+            "Balder’s family: In *Bayonetta 2*, Bayonetta teams with Balder, her heart torn by his past, her mind syncing their attacks. Her codename a daughter’s trust, her path a family fight, her leadership rooted in legacy.",
+            "Cereza’s care: Protecting her younger self in *Bayonetta*, Bayonetta shows tenderness, her heart softened by innocence, her mind guarding her safety. Her codename a protector’s vow, her path a temporal loop, her leadership nurturing hope.",
+            "Rodin’s craft: Relying on Rodin’s weapons, Bayonetta wields his creations, her heart bold in combat, her mind leveraging his arsenal. Her codename a warrior’s cry, her path a shared craft, her leadership enhanced by his forge.",
+            "Team’s unity: Leading her allies through divine wars, Bayonetta unites their skills, her heart strong in their cause, her mind strategizing victory. Her codename a unifier’s chant, her path a team effort, her leadership rallying companions.",
+            "The witch’s bonds: Bayonetta’s alliances cement her legend, her heart a fire of resolve, her codename echoing in teamwork. The era ends with her united companions, her path a shared fight, her leadership immortal in bonds forged through chaos."
+          ]
+        }
+      },
+      {
+        "id": 8,
+        "era": "The Cultural Impact",
+        "title": "The Icon of Bayonetta",
+        "Icon": "Trophy",
+        "color": "from-purple-600 to-gold-600",
+        "bgPattern": "bg-gradient-to-br from-purple-800 via-gold-700 to-black",
+        "content": {
+          "summary": "Bayonetta’s status as a *Bayonetta* icon makes her a gaming legend, appearing in games, crossovers like *Super Smash Bros.*, and fan works. Her stylish combat and confident flair inspire players worldwide. This era explores her cultural influence, her recognition as a witch, and her leadership in gaming culture.",
+          "details": [
+            "Gaming icon: As a *Bayonetta* staple, Bayonetta’s pistols and Witch Time define action games, her heart inspiring players, her mind shaping gameplay. Her codename a gamer’s cry, her path a digital legacy, her leadership uniting fans.",
+            "Crossover star: In *Super Smash Bros. Ultimate*, Bayonetta battles with her arsenal, her hair-weapons tearing foes, her heart bold in new worlds, her mind adapting to challenges. Her codename a crossover legend, her path a shared fight, her leadership inspiring players.",
+            "Anime presence: In *Bayonetta: Bloody Fate*, Bayonetta’s cinematic battles captivate, her pistols blazing on screen, her heart steady in chaos, her mind guiding allies. Her codename a cinematic witch, her path a filmed fight, her leadership inspiring audiences.",
+            "Fan devotion: Fans cosplay Bayonetta’s leather suit and glasses, her heart humble in their love, her mind shaping their passion. Her codename a community’s chant, her path a shared fandom, her leadership uniting conventions.",
+            "Merchandise star: Bayonetta’s likeness adorns figures and apparel, her heart a symbol of flair, her mind inspiring designs. Her codename a brand’s cry, her path a cultural legacy, her leadership rallying collectors.",
+            "Modding legacy: In modding communities, Bayonetta’s skins dominate, her heart a fan’s creation, her mind shaping custom battles. Her codename a modder’s vow, her path a virtual legacy, her leadership inspiring creativity.",
+            "Feminist icon: Celebrated for her confidence, Bayonetta redefines heroines, her heart bold in empowerment, her mind challenging norms. Her codename a rebel’s chant, her path a cultural shift, her leadership inspiring strength.",
+            "The cultural witch: Bayonetta’s influence cements her legend, her heart a fire of resolve, her codename echoing in gaming culture. The era ends with her global impact, her path a legacy of style, her leadership immortal in *Bayonetta*’s lore."
+          ]
+        }
+      }
+    ]
   }
 ]

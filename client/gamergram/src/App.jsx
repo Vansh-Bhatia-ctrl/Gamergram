@@ -7,7 +7,6 @@ import AiChatBox from "./pages/AiChatBox";
 import GameBuletien from "./pages/GameBuletien";
 import GameDetails from "./pages/GameDetails";
 import News from "./pages/News";
-import KratosSaga from "./pages/Kratos";
 import NewsDetails from "./pages/NewsDetails";
 import ProtectedRoute from "./components/ProtectedRoute ";
 import ProfilePage from "./pages/ProfilePage";
@@ -81,10 +80,6 @@ const router = createBrowserRouter([
   {
     path: "saga/:characterID",
     element: <StoryPage />,
-  },
-  {
-    path: "kratos",
-    element: <KratosSaga />,
   },
   {
     path: "reviews",
