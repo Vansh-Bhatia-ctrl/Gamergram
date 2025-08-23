@@ -14,7 +14,7 @@ const useGameCharactersStore = create((set, get) => ({
     try {
       const token = localStorage.getItem("token");
       const response = await fetch(
-        "http://localhost:3000/get-characters/get-characters",
+        `${process.env.REACT_APP_API_URL}/get-characters/get-characters`,
         {
           method: "GET",
           headers: {

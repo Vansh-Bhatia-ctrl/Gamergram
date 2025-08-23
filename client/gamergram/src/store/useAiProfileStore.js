@@ -9,7 +9,7 @@ const useAiProfileStore = create((set, get) => ({
     set({ isLoading: true });
     try {
       const response = await fetch(
-        "http://localhost:3000/aiprofiles/ai-profiles"
+        `${process.env.REACT_APP_API_URL}/aiprofiles/ai-profiles`
       );
 
       if (!response.ok) {

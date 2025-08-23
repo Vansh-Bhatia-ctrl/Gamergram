@@ -17,13 +17,16 @@ const useQuizStore = create((set, get) => ({
       }
 
       set({ token: token });
-      const response = await fetch("http://localhost:3000/getquiz/quizes", {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
-        },
-      });
+      const response = await fetch(
+        `${process.env.REACT_APP_API_URL}/getquiz/quizes`,
+        {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
 
       if (!response.ok) {
         console.log("Error fetching quiz.");
@@ -50,7 +53,7 @@ const useQuizStore = create((set, get) => ({
 
       set({ token: token });
       const response = await fetch(
-        "http://localhost:3000/getuserdata/userdata",
+        `${process.env.REACT_APP_API_URL}/getuserdata/userdata`,
         {
           method: "GET",
           headers: {

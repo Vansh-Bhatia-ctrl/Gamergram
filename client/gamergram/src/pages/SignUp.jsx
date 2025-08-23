@@ -23,7 +23,7 @@ const SignUp = () => {
     setIsLoading(true);
     setError(false);
     try {
-      const req = await fetch("http://localhost:3000/users/signup", {
+      const req = await fetch(`${process.env.REACT_APP_API_URL}/users/signup`, {
         method: "POST",
         headers: { "Content-type": "application/json" },
         body: JSON.stringify({

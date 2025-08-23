@@ -16,7 +16,7 @@ const ReviewsPage = () => {
       const token = localStorage.getItem("token");
       try {
         const response = await fetch(
-          "http://localhost:3000/getreviews/getreviews",
+          `${process.env.REACT_APP_API_URL}/getreviews/getreviews`,
           {
             method: "GET",
             headers: {
@@ -45,18 +45,21 @@ const ReviewsPage = () => {
   const handleAddReview = async () => {
     const token = localStorage.getItem("token");
     try {
-      const response = await fetch("http://localhost:3000/save-to-db/review", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
-        },
-        body: JSON.stringify({
-          gameName: userInput.gameName,
-          rating: userInput.rating,
-          review: userInput.review,
-        }),
-      });
+      const response = await fetch(
+        `${process.env.REACT_APP_API_URL}/save-to-db/review`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+          body: JSON.stringify({
+            gameName: userInput.gameName,
+            rating: userInput.rating,
+            review: userInput.review,
+          }),
+        }
+      );
 
       if (!response.ok) {
         console.log("Error adding review.");

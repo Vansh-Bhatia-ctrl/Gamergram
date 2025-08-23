@@ -2,7 +2,6 @@ import { io } from "socket.io-client";
 
 const userId = localStorage.getItem("userId");
 
-export const socket = io("http://localhost:5000", {
+export const socket = io(`${process.env.REACT_APP_API_URL}`, {
   auth: { userId },
 });
-

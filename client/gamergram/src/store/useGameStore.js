@@ -40,9 +40,12 @@ const useGameStore = create((set, get) => ({
       if (!token) {
         set({ error: "No token found" });
       }
-      const response = await fetch("http://localhost:3000/getnews/getallnews", {
-        headers: { Authorization: `Bearer ${token}` },
-      });
+      const response = await fetch(
+        `${process.env.REACT_APP_API_URL}/getnews/getallnews`,
+        {
+          headers: { Authorization: `Bearer ${token}` },
+        }
+      );
 
       if (!response.ok)
         throw new Error("Failed to fetch news, please try again.");
@@ -107,7 +110,9 @@ const useGameStore = create((set, get) => ({
 
   getYTVideos: async () => {
     try {
-      const response = await fetch("http://localhost:3000/ytvideos/videos");
+      const response = await fetch(
+        `${process.env.REACT_APP_API_URL}/ytvideos/videos`
+      );
       if (!response.ok)
         throw new Error("Failed to fetch videos, please try again.");
 
@@ -170,7 +175,9 @@ const useGameStore = create((set, get) => ({
   fetchNewsDetails: async (newsID) => {
     set({ loading: true, error: null });
     try {
-      const response = await fetch(`http://localhost:3000/news/${newsID}`);
+      const response = await fetch(
+        `${process.env.REACT_APP_API_URL}3000/news/${newsID}`
+      );
       if (!response.ok) {
         throw new Error("Something went wrong, Please try again!");
       }

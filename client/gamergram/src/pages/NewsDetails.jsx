@@ -124,7 +124,7 @@ const NewsDetails = () => {
     const token = localStorage.getItem("token");
     try {
       const response = await fetch(
-        "http://localhost:3000/savecomment/comment",
+        `${process.env.REACT_APP_API_URL}/savecomment/comment`,
         {
           method: "POST",
           headers: {
@@ -154,7 +154,7 @@ const NewsDetails = () => {
   const getAllComments = async () => {
     try {
       const response = await fetch(
-        "http://localhost:3000/getcomments/get-all-comments"
+        `${process.env.REACT_APP_API_URL}/getcomments/get-all-comments`
       );
 
       const data = await response.json();

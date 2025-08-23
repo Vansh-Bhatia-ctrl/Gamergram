@@ -4,40 +4,6 @@ import { Link } from "react-router-dom";
 import useQuizStore from "../store/useQuizStore";
 import { useEffect } from "react";
 
-const quizData = [
-  {
-    id: "won",
-    icon: Trophy,
-    label: "Quizes Won",
-    number: "43",
-    color: "#eab308",
-    class: "text-[#eab308]",
-  },
-  {
-    id: "lost",
-    icon: XCircle,
-    label: "Quizes Lost",
-    number: "18",
-    color: "#EF4444",
-    class: "text-[#EF4444]",
-  },
-  {
-    id: "attempted",
-    icon: Target,
-    label: "Quizes Attempted",
-    number: "60",
-    color: "#3B82F6",
-    class: "text-[#3B82F6]",
-  },
-  {
-    id: "winRate",
-    icon: TrendingUp,
-    label: "Win Rate",
-    number: "70 %",
-    color: "#10B981",
-    class: "text-[#10B981]",
-  },
-];
 const QuizPage = () => {
   const { userData, fetchUserData } = useQuizStore();
   useEffect(() => {

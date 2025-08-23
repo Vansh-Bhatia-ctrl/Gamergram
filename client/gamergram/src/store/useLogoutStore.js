@@ -7,7 +7,7 @@ const useLogoutStore = create((set, get) => ({
       if (!token) {
         console.log("No token found.");
       }
-      await fetch("http://localhost:3000/logout/log-out", {
+      await fetch(`${process.env.REACT_APP_API_URL}/logout/log-out`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

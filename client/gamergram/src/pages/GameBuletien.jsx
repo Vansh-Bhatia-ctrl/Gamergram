@@ -37,7 +37,7 @@ const GameBuletien = () => {
       setIsLoading(true);
       try {
         const response = await fetch(
-          "http://localhost:3000/games/getallgames",
+          `${process.env.REACT_APP_API_URL}/games/getallgames`,
           {
             method: "GET",
             headers: {

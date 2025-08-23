@@ -26,7 +26,7 @@ const GameDetails = () => {
     async function getGameData() {
       try {
         const response = await fetch(
-          `http://localhost:3000/gamedata/${gameID}`,
+          `${process.env.REACT_APP_API_URL}/gamedata/${gameID}`,
           {
             method: "GET",
             headers: { "Content-type": "application/json" },

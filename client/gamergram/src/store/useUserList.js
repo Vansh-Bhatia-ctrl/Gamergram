@@ -9,7 +9,7 @@ const useUserList = create((set, get) => ({
     try {
       const token = localStorage.getItem("token");
       const response = await fetch(
-        "http://localhost:3000/getlist/get-userlist",
+        `${process.env.REACT_APP_API_URL}/getlist/get-userlist`,
         {
           method: "GET",
           headers: {
@@ -47,17 +47,20 @@ const useUserList = create((set, get) => ({
     set({ loading: true });
     try {
       const token = localStorage.getItem("token");
-      const response = await fetch("http://localhost:3000/userlist/user-list", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
-        },
-        body: JSON.stringify({
-          gameID: gameID,
-          addType: addType,
-        }),
-      });
+      const response = await fetch(
+        `${process.env.REACT_APP_API_URL}/userlist/user-list`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+          body: JSON.stringify({
+            gameID: gameID,
+            addType: addType,
+          }),
+        }
+      );
 
       if (!response.ok) {
         console.log("Error adding to list");
