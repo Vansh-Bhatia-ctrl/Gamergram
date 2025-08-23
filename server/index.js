@@ -130,7 +130,7 @@ const startServer = async () => {
     app.use("/getquiz", getQuizes);
     app.use("/getuserdata", fetchUserData);
     app.use("/saveusertodb", saveUserDataToDB);
-    app.use("logout", logoutUser);
+    app.use("/logout", logoutUser);
 
     startNewsCron();
     runPlaystationCronJob();
