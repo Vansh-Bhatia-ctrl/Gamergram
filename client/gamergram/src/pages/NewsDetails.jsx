@@ -13,7 +13,6 @@ import useGameStore from "../store/useGameStore";
 import { useEffect } from "react";
 import useUIStore from "../store/useUIStore";
 import { useState } from "react";
-import useBookmarkStore from "../store/useBookmarkStore";
 import useLogoutStore from "../store/useLogoutStore";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -36,8 +35,6 @@ const NewsDetails = () => {
 
   const { newsDetails, fetchNewsDetails } = useGameStore();
   const { readingProgress, setReadingProgress } = useUIStore();
-  const { bookmarks, saveBookmarks, removeBookmark, isBookmark } =
-    useBookmarkStore();
 
   useEffect(() => {
     fetchNewsDetails(newsID);
