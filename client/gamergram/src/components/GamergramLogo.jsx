@@ -1,6 +1,13 @@
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const GamergramLogo = () => {
+  const navigate = useNavigate();
+
+  const handleNavigate = () => {
+    navigate("/login");
+  };
+
   return (
     <div>
       <div className="flex items-center justify-center mt-5 flex-col">
@@ -24,6 +31,7 @@ const GamergramLogo = () => {
           </div>
           <div className="flex justify-center mt-13">
             <motion.button
+              onClick={handleNavigate}
               whileHover={{
                 scale: 1.08,
                 boxShadow: "0 0 15px #0ff, 0 0 25px #bf00ff, 0 0 35px #ff00c8",
