@@ -28,6 +28,8 @@ export default function LoginPage() {
         body: JSON.stringify({ username, password }),
       });
 
+      console.log("API URL: ", import.meta.env.VITE_API_URL);
+
       const resp = await req.json();
       setIsLoading(false);
 

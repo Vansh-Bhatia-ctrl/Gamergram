@@ -18,7 +18,6 @@ const useUserList = create((set, get) => ({
           },
         }
       );
-
       if (!response.ok) {
         console.log("Error fetching list");
         set({ loading: false });
