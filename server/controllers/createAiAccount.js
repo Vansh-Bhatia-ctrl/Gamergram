@@ -1,6 +1,6 @@
 const User = require("../models/users");
 const { generateAiProfiles } = require("../config/generateAIProfile");
-const bcrypt = require("bcrypt");
+const bcrypt = require("bcryptjs");
 
 const createAiAccounts = async (req, res) => {
   try {
